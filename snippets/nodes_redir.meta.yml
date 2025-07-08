@@ -1,15 +1,21 @@
 proxies:
+- name: _DE_->_US_
+  password: 6gZh2JbfhQ
+  port: 1935
+  server: 104.248.18.1
+  sni: x1-germany-digitalocean-v2.devefun.org
+  type: trojan
 - alterId: 2
   cipher: auto
-  name: _CN_->_CA_
+  name: _CN_->_US_
   network: ws
-  port: 30835
-  server: 111.26.109.79
-  skip-cert-verify: true
-  sni: ''
+  port: 30807
+  server: v7.heduian.link
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   ws-opts:
+    headers:
+      host: v7.heduian.link
     path: /oooo
 - name: _US_->_FR_
   network: ws
@@ -23,3 +29,27 @@ proxies:
     headers:
       host: rrr4.8906004.xyz
     path: /DZxb5QZyWgQPuXTwt
+- cipher: aes-256-cfb
+  name: _GB_->_US_
+  obfs: plain
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  protocol: origin
+  server: 62.100.205.48
+  type: ssr
+- name: _CN_->_FR_
+  password: e668cd78-6892-11eb-a8bf-f23c91cfbbc9
+  port: 31263
+  server: 183.240.179.89
+  skip-cert-verify: false
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: _RU_->_US_
+  network: ws
+  port: 23117
+  server: 185.143.221.140
+  type: vmess
+  uuid: c850f3fc-d494-441c-bd38-83359240bda7
+  ws-opts:
+    path: /
