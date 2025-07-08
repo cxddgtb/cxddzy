@@ -1,4 +1,48 @@
 proxies:
+- alpn:
+  - h3
+  client-fingerprint: random
+  name: CA
+  network: ws
+  port: 443
+  server: 140.238.158.238
+  servername: mk.ylka.dpdns.org
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
+  ws-opts:
+    headers:
+      Host: mk.ylka.dpdns.org
+    path: '%2F%3Fed%3D2560'
+- client-fingerprint: random
+  name: 'CA #1'
+  network: ws
+  port: 443
+  server: 140.238.158.238
+  servername: nk.ylka.dpdns.org
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
+  ws-opts:
+    headers:
+      Host: nk.ylka.dpdns.org
+    path: '%2F%3Fed%3D2560'
+- alterId: 0
+  cipher: auto
+  name: 加拿大(yudou123.top 玉豆免费节点)
+  network: ws
+  port: '30840'
+  server: 111.26.109.79
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  ws-opts:
+    headers:
+      Host: api100-core-quic-lf.amemv.com
+    path: /index
 - name: 'Channel id: @ShadowProxy66🇨🇦'
   password: cfe032e4-1bc3-454f-9d09-301b0aea08ff
   port: 45979
