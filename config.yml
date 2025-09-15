@@ -32,8 +32,7 @@ NoMoreWalls:
     🇸🇪 瑞典节点: Sweden
     🇨🇭 瑞士节点: Switzerland
     🇪🇪 爱沙尼亚节点: Estonia
-    # 全球分流，用于无明确区域划分的代理
-    GLOBAL: [GLOBAL, 国际, OVERALL, Global]
+    GLOBAL: global_category # 已修正：name-map 的值必须是字符串，不能是列表
   categories:
     redir: ["->", 中转, OVERALL]
     JP: [JP, Japan, 日, 🇯🇵, 日本]
@@ -51,7 +50,7 @@ NoMoreWalls:
     SE: [SE, Sweden, 瑞典, 🇸🇪]
     CH: [CH, Switzerland, 瑞士, 🇨🇭]
     EE: [EE, Estonia, 爱沙尼亚, 🇪🇪]
-    GLOBAL: [GLOBAL, 国际, OVERALL, Global]
+    GLOBAL: [GLOBAL, 国际, OVERALL, Global] # 已修正：列表值应放在 categories 中
   categories_disp:
     CN: 🇨🇳 中国大陆
     HK: 🇭🇰 香港
@@ -203,7 +202,7 @@ proxy-groups:
       - ♻ 自动选择
       - 🔰 延迟最低
       - ✅ 手动选择
-      - 🗺️ 选择地区 # 保留此行，用户可以通过“选择代理”进入“选择地区”
+      - 🗺️ 选择地区
       - DIRECT # 兜底直连选项，以防万一
 
   - name: ♻ 自动选择
@@ -265,8 +264,7 @@ proxy-groups:
       - 🇺🇸 美国节点
       - 🇸🇬 新加坡节点
       - 🌍 全球节点 # 兜底选项
-      # - 🚀 选择代理 # <<<<<<<<<<<<<<<< 移除此行，解决循环引用！
-      # 现在，从“选择地区”组中，您只能选择具体的地区节点或“全球节点”，不能再返回到“选择代理”组，从而避免了循环。
+      # - 🚀 选择代理 # 此行已移除，避免与“🚀 选择代理”形成循环引用
 
 
   # ==================== 流媒体分流组 (按需添加，通常根据节点能力和地区) ====================
