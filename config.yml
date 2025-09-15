@@ -32,6 +32,8 @@ NoMoreWalls:
     🇸🇪 瑞典节点: Sweden
     🇨🇭 瑞士节点: Switzerland
     🇪🇪 爱沙尼亚节点: Estonia
+    # 全球分流，用于无明确区域划分的代理
+    GLOBAL: [GLOBAL, 国际, OVERALL, Global]
   categories:
     redir: ["->", 中转, OVERALL]
     JP: [JP, Japan, 日, 🇯🇵, 日本]
@@ -49,8 +51,7 @@ NoMoreWalls:
     SE: [SE, Sweden, 瑞典, 🇸🇪]
     CH: [CH, Switzerland, 瑞士, 🇨🇭]
     EE: [EE, Estonia, 爱沙尼亚, 🇪🇪]
-    # 全球分流，用于无明确区域划分的代理
-    GLOBAL: [GLOBAL, 国际, OVERALL, Global] 
+    GLOBAL: [GLOBAL, 国际, OVERALL, Global]
   categories_disp:
     CN: 🇨🇳 中国大陆
     HK: 🇭🇰 香港
@@ -127,7 +128,7 @@ dns:
   # redir-host: 将被代理的域名解析为代理服务器 IP，提高解析速度，并配合规则使用。
   # fake-ip: 生成虚假 IP，所有流量都走 Clash 内部 DNS，更彻底地防止 DNS 污染。
   # 对于追求极致抗污染和准确性，推荐 fake-ip。此处保持 redir-host，更通用。
-  enhanced-mode: redir-host 
+  enhanced-mode: redir-host
   fake-ip-range: 198.18.0.1/16 # fake-ip 模式下生效，为假 IP 分配一个私有网段
   fake-ip-filter: # fake-ip 模式下，这些域名不会被转换为假 IP，而是真实解析
     - "+.lan"
@@ -165,7 +166,7 @@ dns:
     - 223.5.5.5 # 阿里云公共 DNS
     - 114.114.114.114 # 114DNS
     - system # 使用系统默认 DNS (可能会被污染，通常放在最后或不用)
-  
+
   # 备用 DNS 服务器 (抗 DNS 污染，解析境外域名)
   fallback:
     - 1.1.1.1 # Cloudflare DNS
@@ -202,7 +203,7 @@ proxy-groups:
       - ♻ 自动选择
       - 🔰 延迟最低
       - ✅ 手动选择
-      - 🗺️ 选择地区
+      - 🗺️ 选择地区 # 保留此行，用户可以通过“选择代理”进入“选择地区”
       - DIRECT # 兜底直连选项，以防万一
 
   - name: ♻ 自动选择
@@ -264,7 +265,8 @@ proxy-groups:
       - 🇺🇸 美国节点
       - 🇸🇬 新加坡节点
       - 🌍 全球节点 # 兜底选项
-      - 🚀 选择代理 # 也可以直接选择顶级代理组
+      # - 🚀 选择代理 # <<<<<<<<<<<<<<<< 移除此行，解决循环引用！
+      # 现在，从“选择地区”组中，您只能选择具体的地区节点或“全球节点”，不能再返回到“选择代理”组，从而避免了循环。
 
 
   # ==================== 流媒体分流组 (按需添加，通常根据节点能力和地区) ====================
