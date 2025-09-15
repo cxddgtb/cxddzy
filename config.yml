@@ -17,22 +17,22 @@ NoMoreWalls:
     ❓ 疑似国内: uncertain_cn
     🐟 漏网之鱼: catch_all
     🚨 病毒网站: malware_site
-    🇨🇳 中国大陆: China_Mainland
-    🇭🇰 香港节点: Hong_Kong
-    🇹🇼 台湾节点: Taiwan
-    🇯🇵 日本节点: Japan
-    🇺🇸 美国节点: United_States
-    🇸🇬 新加坡节点: Singapore
-    🇬🇧 英国节点: United_Kingdom
-    🇰🇷 韩国节点: Korea
-    🇩🇪 德国节点: Germany
-    🇫🇷 法国节点: France
-    🇨🇦 加拿大节点: Canada
-    🇷🇺 俄罗斯节点: Russia
-    🇸🇪 瑞典节点: Sweden
-    🇨🇭 瑞士节点: Switzerland
-    🇪🇪 爱沙尼亚节点: Estonia
-    GLOBAL: global_category # 已修正：name-map 的值必须是字符串，不能是列表
+    🇨🇳 中国大陆: China_Mainland_Group # 修正别名，使其与新增的代理组名称对应
+    🇭🇰 香港节点: Hong_Kong_Group
+    🇹🇼 台湾节点: Taiwan_Group
+    🇯🇵 日本节点: Japan_Group
+    🇺🇸 美国节点: United_States_Group
+    🇸🇬 新加坡节点: Singapore_Group
+    🇬🇧 英国节点: United_Kingdom_Group
+    🇰🇷 韩国节点: Korea_Group
+    🇩🇪 德国节点: Germany_Group
+    🇫🇷 法国节点: France_Group
+    🇨🇦 加拿大节点: Canada_Group
+    🇷🇺 俄罗斯节点: Russia_Group
+    🇸🇪 瑞典节点: Sweden_Group
+    🇨🇭 瑞士节点: Switzerland_Group
+    🇪🇪 爱沙尼亚节点: Estonia_Group
+    GLOBAL: global_category
   categories:
     redir: ["->", 中转, OVERALL]
     JP: [JP, Japan, 日, 🇯🇵, 日本]
@@ -50,7 +50,7 @@ NoMoreWalls:
     SE: [SE, Sweden, 瑞典, 🇸🇪]
     CH: [CH, Switzerland, 瑞士, 🇨🇭]
     EE: [EE, Estonia, 爱沙尼亚, 🇪🇪]
-    GLOBAL: [GLOBAL, 国际, OVERALL, Global] # 已修正：列表值应放在 categories 中
+    GLOBAL: [GLOBAL, 国际, OVERALL, Global]
   categories_disp:
     CN: 🇨🇳 中国大陆
     HK: 🇭🇰 香港
@@ -192,7 +192,15 @@ tcp-concurrent: true
 unified-delay: true
 
 # 代理节点列表 (由外部订阅或手动添加)
-proxies: []
+proxies: [] # <<<<<<< 重要：您需要在此处填充您的实际代理节点！
+             # 例如：
+             # - { name: '我的香港节点1', type: ss, server: ..., port: ..., password: ..., cipher: ... }
+             # - { name: '我的美国节点A', type: vmess, server: ..., port: ..., uuid: ..., alterId: ... }
+             # - { name: '我的日本节点X', type: trojan, server: ..., port: ..., password: ... }
+             # - { name: '香港ISP-01', type: ss, server: ..., port: ..., password: ..., cipher: ... }
+             # - { name: '美国ISP-01', type: vmess, server: ..., port: ..., uuid: ..., alterId: ... }
+             # - { name: '日本ISP-01', type: trojan, server: ..., port: ..., password: ... }
+
 
 # ==================== 代理组配置 ====================
 proxy-groups:
@@ -207,64 +215,188 @@ proxy-groups:
 
   - name: ♻ 自动选择
     type: fallback
-    url: https://www.gstatic.com/generate_204 # 常用测速地址，Google 旗下
+    url: https://www.gstatic.com/generate_204
     interval: 300
-    lazy: true # 延迟测试，在需要时才开始测速
-    proxies: [] # 代理节点将由订阅自动填充
+    lazy: true
+    proxies: [] # 代理节点将由订阅自动填充到这里，或者从下面的地区组中选择最佳
 
   - name: 🔰 延迟最低
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
-    tolerance: 50 # 延迟容忍度，单位 ms，可根据实际情况调整
-    proxies: [] # 代理节点将由订阅自动填充
+    tolerance: 50
+    proxies: [] # 代理节点将由订阅自动填充到这里，或者从下面的地区组中选择最佳
 
   - name: ✅ 手动选择
     type: select
-    proxies: [] # 代理节点将由订阅自动填充
+    proxies: [] # 代理节点将由订阅自动填充到这里
 
   - name: 🌐 突破锁区
     type: select
     proxies:
-      - 🚀 选择代理 # 优先走代理
-      - DIRECT # 备用直连
+      - 🚀 选择代理
+      - DIRECT
 
   - name: ❓ 疑似国内
     type: select
     proxies:
-      - DIRECT # 优先直连
-      - 🚀 选择代理 # 备用代理
-      - REJECT # 如果以上都无效，可以考虑拒绝
+      - DIRECT
+      - 🚀 选择代理
+      - REJECT
 
   - name: 🐟 漏网之鱼
     type: select
     proxies:
-      - 🚀 选择代理 # 未匹配规则的流量，优先走代理
-      - DIRECT # 备用直连
+      - 🚀 选择代理
+      - DIRECT
 
   - name: 🚨 病毒网站
     type: select
     proxies:
-      - REJECT # 病毒网站直接拒绝
-      - DIRECT # 备用直连，防止误杀导致正常访问受阻
+      - REJECT
+      - DIRECT
 
   - name: ⛔ 广告拦截
     type: select
     proxies:
-      - REJECT # 广告直接拒绝
-      - DIRECT # 备用直连
+      - REJECT
+      - DIRECT
 
   - name: 🗺️ 选择地区
     type: select
     proxies:
-      - 🇨🇳 中国大陆 # 示例：如果代理节点有 Geo 标签，可以这样分类
+      - 🇨🇳 中国大陆 # 引用具体的地区代理组
       - 🇭🇰 香港节点
       - 🇹🇼 台湾节点
       - 🇯🇵 日本节点
       - 🇺🇸 美国节点
       - 🇸🇬 新加坡节点
-      - 🌍 全球节点 # 兜底选项
-      # - 🚀 选择代理 # 此行已移除，避免与“🚀 选择代理”形成循环引用
+      - 🇬🇧 英国节点
+      - 🇰🇷 韩国节点
+      - 🇩🇪 德国节点
+      - 🇫🇷 法国节点
+      - 🇨🇦 加拿大节点
+      - 🇷🇺 俄罗斯节点
+      - 🇸🇪 瑞典节点
+      - 🇨🇭 瑞士节点
+      - 🇪🇪 爱沙尼亚节点
+      - 🌍 全球节点 # 通用全球节点组
+
+
+  # ==================== 以下是新增的地区分类代理组 ====================
+  # 您需要将您的实际代理节点名称，根据其所在地区，添加到这些组的 'proxies' 列表中
+  # 例如，如果您有一个名为 'MyHKProxy1' 的香港节点，就把它添加到 '🇭🇰 香港节点' 组中
+  - name: 🇨🇳 中国大陆
+    type: select
+    proxies:
+      - DIRECT # 如果有仅限国内使用的代理，可以放这里
+      # - 我的上海节点1 # 示例：请替换为您的实际中国大陆节点名称
+
+  - name: 🇭🇰 香港节点
+    type: select
+    proxies:
+      # - 我的香港节点1 # 示例：请替换为您的实际香港节点名称
+      # - 香港ISP-01
+      - 🚀 选择代理 # 如果当前地区没有可用节点，可以回退到通用选择代理
+      - DIRECT # 备用直连
+
+  - name: 🇹🇼 台湾节点
+    type: select
+    proxies:
+      # - 我的台湾节点A # 示例：请替换为您的实际台湾节点名称
+      - 🚀 选择代理
+      - DIRECT
+
+  - name: 🇯🇵 日本节点
+    type: select
+    proxies:
+      # - 我的日本节点X # 示例：请替换为您的实际日本节点名称
+      - 🚀 选择代理
+      - DIRECT
+
+  - name: 🇺🇸 美国节点
+    type: select
+    proxies:
+      # - 我的美国节点B # 示例：请替换为您的实际美国节点名称
+      - 🚀 选择代理
+      - DIRECT
+
+  - name: 🇸🇬 新加坡节点
+    type: select
+    proxies:
+      # - 我的新加坡节点 # 示例：请替换为您的实际新加坡节点名称
+      - 🚀 选择代理
+      - DIRECT
+
+  - name: 🇬🇧 英国节点
+    type: select
+    proxies:
+      # - 我的英国节点 # 示例：请替换为您的实际英国节点名称
+      - 🚀 选择代理
+      - DIRECT
+
+  - name: 🇰🇷 韩国节点
+    type: select
+    proxies:
+      # - 我的韩国节点 # 示例：请替换为您的实际韩国节点名称
+      - 🚀 选择代理
+      - DIRECT
+
+  - name: 🇩🇪 德国节点
+    type: select
+    proxies:
+      # - 我的德国节点 # 示例：请替换为您的实际德国节点名称
+      - 🚀 选择代理
+      - DIRECT
+
+  - name: 🇫🇷 法国节点
+    type: select
+    proxies:
+      # - 我的法国节点 # 示例：请替换为您的实际法国节点名称
+      - 🚀 选择代理
+      - DIRECT
+
+  - name: 🇨🇦 加拿大节点
+    type: select
+    proxies:
+      # - 我的加拿大节点 # 示例：请替换为您的实际加拿大节点名称
+      - 🚀 选择代理
+      - DIRECT
+
+  - name: 🇷🇺 俄罗斯节点
+    type: select
+    proxies:
+      # - 我的俄罗斯节点 # 示例：请替换为您的实际俄罗斯节点名称
+      - 🚀 选择代理
+      - DIRECT
+
+  - name: 🇸🇪 瑞典节点
+    type: select
+    proxies:
+      # - 我的瑞典节点 # 示例：请替换为您的实际瑞典节点名称
+      - 🚀 选择代理
+      - DIRECT
+
+  - name: 🇨🇭 瑞士节点
+    type: select
+    proxies:
+      # - 我的瑞士节点 # 示例：请替换为您的实际瑞士节点名称
+      - 🚀 选择代理
+      - DIRECT
+
+  - name: 🇪🇪 爱沙尼亚节点
+    type: select
+    proxies:
+      # - 我的爱沙尼亚节点 # 示例：请替换为您的实际爱沙尼亚节点名称
+      - 🚀 选择代理
+      - DIRECT
+
+  - name: 🌍 全球节点
+    type: select
+    proxies:
+      - 🚀 选择代理 # 如果有无特定地区划分的通用代理节点，可以放这里
+      # - 我的通用节点1
+      - DIRECT # 备用直连
 
 
   # ==================== 流媒体分流组 (按需添加，通常根据节点能力和地区) ====================
