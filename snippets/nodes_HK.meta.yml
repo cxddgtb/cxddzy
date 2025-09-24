@@ -9,48 +9,129 @@ proxies:
   type: vmess
   udp: true
   uuid: 029c96ee-0d49-3465-9ac7-9a2729255821
-- name: HK_speednode_0008
-  network: ws
-  port: 2083
-  server: 45.207.158.29
-  servername: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 019931aa-8cba-3a74-6c77-cb288ae52f2a
-  ws-opts:
-    headers:
-      Host: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
-    path: /snippets
-- name: HK_6d85b_0018
-  network: ws
-  port: 2096
-  server: 154.211.8.220
-  servername: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
+- load-password: 80c9752a41
+  load-username: dd247fc262
+  name: HOME-HK-4(https)
+  password: 80c9752a41
+  port: 20443
+  server: home-hkt-4.strongpipe.cloud
   skip-cert-verify: true
+  sni: 106-110-192-225.d.cjjd20.com
+  tags:
+  - 0.1x
+  - netflix
   tls: true
-  type: vless
-  udp: true
-  uuid: 019931aa-8cba-3a74-6c77-cb288ae52f2a
-  ws-opts:
-    headers:
-      Host: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
-    path: /snippets
-- name: HK_6d85b_0020
-  network: ws
-  port: 2083
-  server: 154.211.8.18
-  servername: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
+  type: http
+  username: dd247fc262
+- load-password: 80c9752a41
+  load-username: dd247fc262
+  name: NAT-HK-3(https)
+  password: 80c9752a41
+  port: 20443
+  server: nat-hk-37465.strongpipe.cloud
   skip-cert-verify: true
+  sni: 106-110-192-225.d.cjjd20.com
+  tags:
+  - star
+  - iepl
   tls: true
-  type: vless
-  udp: true
-  uuid: 019931aa-8cba-3a74-6c77-cb288ae52f2a
-  ws-opts:
-    headers:
-      Host: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
-    path: /snippets
+  type: http
+  username: dd247fc262
+- load-password: 80c9752a41
+  load-username: dd247fc262
+  name: WIS-HK-3(https)
+  password: 80c9752a41
+  port: 20443
+  server: wis-hk-38457.strongpipe.cloud
+  skip-cert-verify: true
+  sni: 106-110-192-225.d.cjjd20.com
+  tags:
+  - star
+  - iepl
+  tls: true
+  type: http
+  username: dd247fc262
+- alpn:
+  - h2
+  load-password: 80c9752a41
+  load-username: dd247fc262
+  name: HOME-HK-4(trojan)
+  password: 9cf136d3-d95c-40b8-95a6-830dcf899995
+  port: 29444
+  server: home-hkt-4.strongpipe.cloud
+  skip-cert-verify: true
+  sni: 106-110-192-225.d.cjjd20.com
+  tags:
+  - 0.1x
+  - netflix
+  type: trojan
+- alpn:
+  - h2
+  load-password: 80c9752a41
+  load-username: dd247fc262
+  name: NAT-HK-3(trojan)
+  password: 9cf136d3-d95c-40b8-95a6-830dcf899995
+  port: 29444
+  server: nat-hk-37465.strongpipe.cloud
+  skip-cert-verify: true
+  sni: 106-110-192-225.d.cjjd20.com
+  tags:
+  - star
+  - iepl
+  type: trojan
+- alpn:
+  - h2
+  load-password: 80c9752a41
+  load-username: dd247fc262
+  name: WIS-HK-3(trojan)
+  password: 9cf136d3-d95c-40b8-95a6-830dcf899995
+  port: 29444
+  server: wis-hk-38457.strongpipe.cloud
+  skip-cert-verify: true
+  sni: 106-110-192-225.d.cjjd20.com
+  tags:
+  - star
+  - iepl
+  type: trojan
+- load-password: 80c9752a41
+  load-username: dd247fc262
+  name: HOME-HK-4(hysteria)
+  obfs: salamander
+  obfs-password: ebc80948-b76f-450f-9861-d7fae2043e13
+  password: dd247fc262:80c9752a41
+  port: 21443
+  server: home-hkt-4.strongpipe.cloud
+  skip-cert-verify: true
+  tags:
+  - 0.1x
+  - netflix
+  type: hysteria2
+- load-password: 80c9752a41
+  load-username: dd247fc262
+  name: NAT-HK-3(hysteria)
+  obfs: salamander
+  obfs-password: ebc80948-b76f-450f-9861-d7fae2043e13
+  password: dd247fc262:80c9752a41
+  port: 21443
+  server: nat-hk-37465.strongpipe.cloud
+  skip-cert-verify: true
+  tags:
+  - star
+  - iepl
+  type: hysteria2
+- load-password: 80c9752a41
+  load-username: dd247fc262
+  name: WIS-HK-3(hysteria)
+  obfs: salamander
+  obfs-password: ebc80948-b76f-450f-9861-d7fae2043e13
+  password: dd247fc262:80c9752a41
+  port: 21443
+  server: wis-hk-38457.strongpipe.cloud
+  skip-cert-verify: true
+  tags:
+  - star
+  - iepl
+  type: hysteria2
 - alterId: 0
   cipher: auto
   name: 🇭🇰 香港NO.1
@@ -175,7 +256,7 @@ proxies:
   tls: false
   type: vmess
   uuid: 928408df-3114-4b57-b852-f8d120ce056c
-- name: HK_6d85b_0016
+- name: HK_5bc0d_0016
   network: ws
   port: 2083
   server: 45.207.158.29
@@ -189,7 +270,7 @@ proxies:
     headers:
       Host: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
     path: /snippetssecurity=tls
-- name: HK_6d85b_0017
+- name: HK_5bc0d_0017
   network: ws
   port: 2096
   server: 154.211.8.220
@@ -203,7 +284,21 @@ proxies:
     headers:
       Host: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
     path: /snippetssecurity=tls
-- name: HK_6d85b_0019
+- name: HK_5bc0d_0018
+  network: ws
+  port: 2096
+  server: 154.211.8.220
+  servername: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 019931aa-8cba-3a74-6c77-cb288ae52f2a
+  ws-opts:
+    headers:
+      Host: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
+    path: /snippets
+- name: HK_5bc0d_0019
   network: ws
   port: 2083
   server: 154.211.8.18
@@ -217,3 +312,17 @@ proxies:
     headers:
       Host: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
     path: /snippetssecurity=tls
+- name: HK_5bc0d_0020
+  network: ws
+  port: 2083
+  server: 154.211.8.18
+  servername: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 019931aa-8cba-3a74-6c77-cb288ae52f2a
+  ws-opts:
+    headers:
+      Host: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
+    path: /snippets

@@ -9,15 +9,128 @@ proxies:
   type: vmess
   udp: true
   uuid: 029c96ee-0d49-3465-9ac7-9a2729255821
-- name: TW_6d85b_0052
-  password: exaxgqkKkd0TAMrCxeonWg==
-  port: 1443
-  server: twmoon1-cdn-route.couldflare-cdn.com
-  skip-cert-verify: false
+- load-password: 80c9752a41
+  load-username: dd247fc262
+  name: AW-TW-2(https)
+  password: 80c9752a41
+  port: 20443
+  server: aw-tw-28746.strongpipe.cloud
+  skip-cert-verify: true
+  sni: 106-110-192-225.d.cjjd20.com
+  tags:
+  - star
+  - hop
   tls: true
   type: http
-  udp: true
-  username: mrwdfNTD8M79LCukCieldrqZWqs=
+  username: dd247fc262
+- load-password: 80c9752a41
+  load-username: dd247fc262
+  name: TK-TW-1(https)
+  password: 80c9752a41
+  port: 20443
+  server: tk-tw-18273.strongpipe.cloud
+  skip-cert-verify: true
+  sni: 106-110-192-225.d.cjjd20.com
+  tags:
+  - star
+  - tiktok
+  tls: true
+  type: http
+  username: dd247fc262
+- load-password: 80c9752a41
+  load-username: dd247fc262
+  name: WIS-TW-2(https)
+  password: 80c9752a41
+  port: 20443
+  server: wis-tw-28764.strongpipe.cloud
+  skip-cert-verify: true
+  sni: 106-110-192-225.d.cjjd20.com
+  tags:
+  - star
+  - hop
+  tls: true
+  type: http
+  username: dd247fc262
+- alpn:
+  - h2
+  load-password: 80c9752a41
+  load-username: dd247fc262
+  name: AW-TW-2(trojan)
+  password: 9cf136d3-d95c-40b8-95a6-830dcf899995
+  port: 29444
+  server: aw-tw-28746.strongpipe.cloud
+  skip-cert-verify: true
+  sni: 106-110-192-225.d.cjjd20.com
+  tags:
+  - star
+  - hop
+  type: trojan
+- alpn:
+  - h2
+  load-password: 80c9752a41
+  load-username: dd247fc262
+  name: TK-TW-1(trojan)
+  password: 9cf136d3-d95c-40b8-95a6-830dcf899995
+  port: 29444
+  server: tk-tw-18273.strongpipe.cloud
+  skip-cert-verify: true
+  sni: 106-110-192-225.d.cjjd20.com
+  tags:
+  - star
+  - tiktok
+  type: trojan
+- alpn:
+  - h2
+  load-password: 80c9752a41
+  load-username: dd247fc262
+  name: WIS-TW-2(trojan)
+  password: 9cf136d3-d95c-40b8-95a6-830dcf899995
+  port: 29444
+  server: wis-tw-28764.strongpipe.cloud
+  skip-cert-verify: true
+  sni: 106-110-192-225.d.cjjd20.com
+  tags:
+  - star
+  - hop
+  type: trojan
+- load-password: 80c9752a41
+  load-username: dd247fc262
+  name: MSK-TW-1(hysteria)
+  obfs: salamander
+  obfs-password: ebc80948-b76f-450f-9861-d7fae2043e13
+  password: dd247fc262:80c9752a41
+  port: 21443
+  server: msk-tw-13083.strongpipe.cloud
+  skip-cert-verify: true
+  tags:
+  - direct
+  type: hysteria2
+- load-password: 80c9752a41
+  load-username: dd247fc262
+  name: AW-TW-2(hysteria)
+  obfs: salamander
+  obfs-password: ebc80948-b76f-450f-9861-d7fae2043e13
+  password: dd247fc262:80c9752a41
+  port: 21443
+  server: aw-tw-28746.strongpipe.cloud
+  skip-cert-verify: true
+  tags:
+  - star
+  - hop
+  type: hysteria2
+- load-password: 80c9752a41
+  load-username: dd247fc262
+  name: WIS-TW-2(hysteria)
+  obfs: salamander
+  obfs-password: ebc80948-b76f-450f-9861-d7fae2043e13
+  password: dd247fc262:80c9752a41
+  port: 21443
+  server: wis-tw-28764.strongpipe.cloud
+  skip-cert-verify: true
+  tags:
+  - star
+  - hop
+  type: hysteria2
 - alterId: 0
   cipher: auto
   name: 🇹🇼 台湾1
