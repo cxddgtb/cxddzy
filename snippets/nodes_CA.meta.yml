@@ -1,6 +1,6 @@
 proxies:
 - client-fingerprint: chrome
-  name: CA_6a92a_0004
+  name: CA_5610b_0004
   port: 8080
   reality-opts:
     public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs
@@ -30,17 +30,34 @@ proxies:
   type: vmess
   udp: true
   uuid: 0b2c44d4-7f86-4439-a2ee-03b5ef1db3d3
-- flow: xtls-rprx-vision
-  name: 🇨🇦_加拿大
-  network: tcp
-  port: 56565
-  server: www.vanboss.work
-  servername: www.samsung.com
+- name: 🇨🇦_加拿大_1
+  network: ws
+  port: 2096
+  server: 74.49.215.53
+  servername: abcd.freewarp.eu.org
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vless
   udp: true
-  uuid: cfa392db-7445-4aa6-964f-2a3e20103936
+  uuid: 12345678-1234-1234-1234-123456789123
+  ws-opts:
+    headers:
+      host: abcd.freewarp.eu.org
+    path: /snippets
+- name: 🇨🇦_加拿大_2
+  network: ws
+  port: 2096
+  server: 74.49.214.53
+  servername: abcd.freewarp.eu.org
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 12345678-1234-1234-1234-123456789123
+  ws-opts:
+    headers:
+      host: abcd.freewarp.eu.org
+    path: /snippets&freecodes+@节点狂魔+/?ed=2560
 - alterId: 0
   cipher: auto
   h2-opts: {}
