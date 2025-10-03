@@ -8,95 +8,442 @@ mode: rule
 log-level: info
 ipv6: false
 external-controller: 0.0.0.0:9090
+# 开启流量统计，用于分析使用模式
+profile:
+  store-selected: true
+  store-fake-ip: true
 
-# 通过proxy-providers动态引用你的订阅节点
+# 动态节点管理 - 支持自动更新和健康检查
 proxy-providers:
   freenodes:
     type: http
-    url: "https://raw.githubusercontent.com/free18/v2ray/main/c.yaml"  # 你的订阅链接
-    interval: 86400  # 每天更新一次
+    url: "https://raw.githubusercontent.com/free18/v2ray/main/c.yaml"
+    interval: 43200  # 12小时更新一次
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 1800
+      interval: 600  # 10分钟检查一次
+      timeout: 5000
     path: ./proxy/freenodes.yaml
+    # 节点过滤器 - 自动过滤无效节点
+    filter: "^(?!.*(过期|维护|测试)).*$"
 
-# 策略组定义
+# 增强型策略组 - 更多智能选项
 proxy-groups:
-  - { name: 🚀 手动切换, type: select, proxies: [♻️ 自动选择, 🚀 手动切换, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, DIRECT] }
-  - { name: 🆎 AdBlock, type: select, proxies: [REJECT, DIRECT] }
-  - { name: 🍎 苹果服务, type: select, proxies: [♻️ 自动选择, 🚀 手动切换, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, DIRECT] }
-  - { name: 💬 OpenAI, type: select, proxies: [🇨🇳 台湾节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇰🇷 韩国节点] }
-  - { name: 🆕 BingAI, type: select, proxies: [🇨🇳 台湾节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇰🇷 韩国节点] }
-  - { name: 🤖 BardAI, type: select, proxies: [🇨🇳 台湾节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇰🇷 韩国节点] }
-  - { name: 🌌 谷歌服务, type: select, proxies: [♻️ 自动选择, 🚀 手动切换, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, DIRECT] }
-  - { name: 📢 谷歌FCM, type: select, proxies: [♻️ 自动选择, 🚀 手动切换, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, DIRECT] }
-  - { name: Ⓜ️ 微软服务, type: select, proxies: [♻️ 自动选择, 🚀 手动切换, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, DIRECT] }
-  - { name: 👨🏻‍💻 GitHub, type: select, proxies: [♻️ 自动选择, 🚀 手动切换, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, DIRECT] }
-  - { name: 📟 电报消息, type: select, proxies: [♻️ 自动选择, 🚀 手动切换, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, DIRECT] }
-  - { name: 🐦 推特服务, type: select, proxies: [♻️ 自动选择, 🚀 手动切换, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, DIRECT] }
-  - { name: 🗽 INS服务, type: select, proxies: [♻️ 自动选择, 🚀 手动切换, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, DIRECT] }
-  - { name: 📹 油管视频, type: select, proxies: [♻️ 自动选择, 🚀 手动切换, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, DIRECT] }
-  - { name: 🎥 奈飞视频, type: select, proxies: [♻️ 自动选择, 🚀 手动切换, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, DIRECT] }
-  - { name: 🎬 国际媒体, type: select, proxies: [♻️ 自动选择, 🚀 手动切换, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, DIRECT] }
-  - { name: 📺 哔哩哔哩, type: select, proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点] }
-  - { name: 🌏 全球加速, type: select, proxies: [♻️ 自动选择, 🚀 手动切换, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, DIRECT] }
-  - { name: 🐟 漏网之鱼, type: select, proxies: [♻️ 自动选择, 🚀 手动切换, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, DIRECT] }
-  - { name: ♻️ 自动选择, type: url-test, lazy: true, url: http://www.gstatic.com/generate_204, interval: 900, use: [freenodes] }
-  - { name: 🇭🇰 香港节点, type: url-test, lazy: true, url: http://www.gstatic.com/generate_204, interval: 900, use: [freenodes], filter: "🇭🇰|HK|香港" }
-  - { name: 🇨🇳 台湾节点, type: url-test, lazy: true, url: http://www.gstatic.com/generate_204, interval: 900, use: [freenodes], filter: "🇨🇳|TW|台湾" }
-  - { name: 🇺🇸 美国节点, type: url-test, lazy: true, url: http://www.gstatic.com/generate_204, interval: 900, use: [freenodes], filter: "🇺🇸|US|美国" }
-  - { name: 🇯🇵 日本节点, type: url-test, lazy: true, url: http://www.gstatic.com/generate_204, interval: 900, use: [freenodes], filter: "🇯🇵|JP|日本" }
-  - { name: 🇰🇷 韩国节点, type: url-test, lazy: true, url: http://www.gstatic.com/generate_204, interval: 900, use: [freenodes], filter: "🇰🇷|KR|韩国" }
+  # 主切换组
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🎯 全局直连
+      - 🎯 全局代理
+      - 🚀 手动切换
+      - 📈 负载均衡
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点  
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🇸🇬 新加坡节点
+      - DIRECT
 
-# 规则部分保持不变
-rules:
-  - RULE-SET,Download,DIRECT
-  - RULE-SET,Direct,DIRECT
-  - RULE-SET,Lan,DIRECT
-  - RULE-SET,OpenAI,💬 OpenAI
-  - RULE-SET,BingAI,🆕 BingAI
-  - RULE-SET,BardAI,🤖 BardAI
-  - RULE-SET,Advertising,🆎 AdBlock
-  - RULE-SET,Apple,🍎 苹果服务
-  - RULE-SET,Github,👨🏻‍💻 GitHub
-  - RULE-SET,Microsoft,Ⓜ️ 微软服务
-  - RULE-SET,Google,🌌 谷歌服务
-  - RULE-SET,GoogleFCM,📢 谷歌FCM
-  - RULE-SET,Telegram,📟 电报消息
-  - RULE-SET,Discord,📟 电报消息
-  - RULE-SET,Twitter,🐦 推特服务
-  - RULE-SET,Instagram,🗽 INS服务
-  - RULE-SET,BiliBili,📺 哔哩哔哩
-  - RULE-SET,YouTube,📹 油管视频
-  - RULE-SET,Netflix,🎥 奈飞视频
-  - RULE-SET,GlobalMedia,🎬 国际媒体
-  - RULE-SET,Proxy,🌏 全球加速
-  - RULE-SET,China,DIRECT
-  - GEOIP,CN,DIRECT
-  - MATCH,🐟 漏网之鱼
+  # 智能策略组
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 900
+    tolerance: 150  # 容忍延迟差
+    lazy: true
+    use: [freenodes]
+    disable-udp: false
 
-# 规则提供者部分保持不变
+  - name: 📈 负载均衡
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: 900
+    strategy: consistent-hashing
+    use: [freenodes]
+
+  - name: 🎯 全局直连
+    type: select
+    proxies: [DIRECT]
+
+  - name: 🎯 全局代理
+    type: select
+    proxies: [♻️ 自动选择]
+
+  # 地区节点组 - 自动过滤
+  - name: 🇭🇰 香港节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 900
+    use: [freenodes]
+    filter: "🇭🇰|HK|香港|HONG|HKG"
+
+  - name: 🇨🇳 台湾节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 900
+    use: [freenodes]
+    filter: "🇨🇳|TW|台湾|TAIWAN"
+
+  - name: 🇺🇸 美国节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 900
+    use: [freenodes]
+    filter: "🇺🇸|US|美国|USA|United States"
+
+  - name: 🇯🇵 日本节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 900
+    use: [freenodes]
+    filter: "🇯🇵|JP|日本|JAPAN"
+
+  - name: 🇰🇷 韩国节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 900
+    use: [freenodes]
+    filter: "🇰🇷|KR|韩国|KOREA"
+
+  - name: 🇸🇬 新加坡节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 900
+    use: [freenodes]
+    filter: "🇸🇬|SG|新加坡|SINGAPORE"
+
+  # 广告拦截
+  - name: 🛡️ 广告拦截
+    type: select
+    proxies: [REJECT, DIRECT]
+
+  # AI服务组 - 优化访问
+  - name: 🤖 AI服务
+    type: select
+    proxies:
+      - 🚀 AI专用
+      - 🇺🇸 美国节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - ♻️ 自动选择
+      - DIRECT
+
+  - name: 🚀 AI专用
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300  # 5分钟检查一次，AI服务需要低延迟
+    use: [freenodes]
+    filter: "GPT|AI|专用|优化"
+
+  # 流媒体服务组
+  - name: 🎬 流媒体
+    type: select
+    proxies:
+      - 📺 奈飞专用
+      - 🎥 迪士尼专用
+      - 📹 油管加速
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - ♻️ 自动选择
+
+  - name: 📺 奈飞专用
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use: [freenodes]
+    filter: "NF|NETFLIX|奈飞|解锁"
+
+  - name: 🎥 迪士尼专用
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use: [freenodes]
+    filter: "DISNEY|迪士尼|解锁"
+
+  - name: 📹 油管加速
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use: [freenodes]
+    filter: "YOUTUBE|油管|4K|8K|视频"
+
+  # 游戏加速组
+  - name: 🎮 游戏加速
+    type: select
+    proxies:
+      - 🕹️ 游戏专用
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - ♻️ 自动选择
+
+  - name: 🕹️ 游戏专用
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use: [freenodes]
+    filter: "GAME|游戏|加速|低延迟"
+
+  # 国内服务优化
+  - name: 🇨🇳 国内直连
+    type: select
+    proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点]
+
+  # 其他服务组
+  - name: 🍎 苹果服务
+    type: select
+    proxies: [♻️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇺🇸 美国节点, 🇯🇵 日本节点, DIRECT]
+
+  - name: 🌐 国际网络
+    type: select
+    proxies: [♻️ 自动选择, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点]
+
+  - name: 💬 社交媒体
+    type: select
+    proxies: [♻️ 自动选择, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇭🇰 香港节点]
+
+  - name: ☁️ 开发服务
+    type: select
+    proxies: [♻️ 自动选择, 🇺🇸 美国节点, 🇸🇬 新加坡节点, 🇭🇰 香港节点]
+
+# 增强规则集 - 更多更精准的规则
 rule-providers:
-  Download: { type: http, behavior: classical, interval: 86400, url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Download/Download.yaml", path: ./rule/Download.yaml }
-  Direct: { type: http, behavior: classical, interval: 86400, url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Direct/Direct.yaml", path: ./rule/Direct.yaml }
-  OpenAI: { type: http, behavior: classical, interval: 86400, url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml", path: ./rule/OpenAI.yaml }
-  BingAI: { type: http, behavior: classical, interval: 86400, url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bing/Bing.yaml", path: ./rule/BingAI.yaml }
-  BardAI: { type: http, behavior: classical, interval: 86400, url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BardAI/BardAI.yaml", path: ./rule/BardAI.yaml }
-  Advertising: { type: http, behavior: domain, interval: 86400, url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Advertising/Advertising_Domain.yaml", path: ./rule/Advertising.yaml }
-  Apple: { type: http, behavior: classical, interval: 86400, url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple.yaml", path: ./rule/Apple.yaml }
-  BiliBili: { type: http, behavior: classical, interval: 86400, url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml", path: ./rule/BiliBili.yaml }
-  Discord: { type: http, behavior: classical, interval: 86400, url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Discord/Discord.yaml", path: ./rule/Discord.yaml }
-  GlobalMedia: { type: http, behavior: classical, interval: 86400, url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalMedia/GlobalMedia.yaml", path: ./rule/GlobalMedia.yaml }
-  Github: { type: http, behavior: classical, interval: 86400, url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml", path: ./rule/Github.yaml }
-  Microsoft: { type: http, behavior: classical, interval: 86400, url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml", path: ./rule/Microsoft.yaml }
-  Google: { type: http, behavior: classical, interval: 86400, url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml", path: ./rule/Google.yaml }
-  GoogleFCM: { type: http, behavior: classical, interval: 86400, url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GoogleFCM/GoogleFCM.yaml", path: ./rule/GoogleFCM.yaml }
-  Telegram: { type: http, behavior: classical, interval: 86400, url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml", path: ./rule/Telegram.yaml }
-  Twitter: { type: http, behavior: classical, interval: 86400, url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Twitter/Twitter.yaml", path: ./rule/Twitter.yaml }
-  Instagram: { type: http, behavior: classical, interval: 86400, url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Instagram/Instagram.yaml", path: ./rule/Instagram.yaml }
-  YouTube: { type: http, behavior: classical, interval: 86400, url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml", path: ./rule/YouTube.yaml }
-  Netflix: { type: http, behavior: classical, interval: 86400, url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix.yaml", path: ./rule/Netflix.yaml }
-  China: { type: http, behavior: classical, interval: 86400, url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/China/China_Classical.yaml", path: ./rule/China.list }
-  Proxy: { type: http, behavior: classical, interval: 86400, url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy_Classical.yaml", path: ./rule/Proxy.yaml }
-  Lan: { type: http, behavior: classical, interval: 86400, url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml", path: ./rule/Lan.yaml }
+  # 基础规则
+  reject:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Advertising/Advertising_Domain.yaml"
+    path: ./ruleset/reject.yaml
+    interval: 86400
+
+  apple:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple.yaml"
+    path: ./ruleset/apple.yaml
+    interval: 86400
+
+  microsoft:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml"
+    path: ./ruleset/microsoft.yaml
+    interval: 86400
+
+  google:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml"
+    path: ./ruleset/google.yaml
+    interval: 86400
+
+  github:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml"
+    path: ./ruleset/github.yaml
+    interval: 86400
+
+  # 社交媒体
+  twitter:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Twitter/Twitter.yaml"
+    path: ./ruleset/twitter.yaml
+    interval: 86400
+
+  instagram:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Instagram/Instagram.yaml"
+    path: ./ruleset/instagram.yaml
+    interval: 86400
+
+  telegram:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml"
+    path: ./ruleset/telegram.yaml
+    interval: 86400
+
+  discord:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Discord/Discord.yaml"
+    path: ./ruleset/discord.yaml
+    interval: 86400
+
+  # AI服务
+  openai:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml"
+    path: ./ruleset/openai.yaml
+    interval: 86400
+
+  bing:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bing/Bing.yaml"
+    path: ./ruleset/bing.yaml
+    interval: 86400
+
+  bard:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BardAI/BardAI.yaml"
+    path: ./ruleset/bard.yaml
+    interval: 86400
+
+  # 流媒体
+  netflix:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix.yaml"
+    path: ./ruleset/netflix.yaml
+    interval: 86400
+
+  youtube:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml"
+    path: ./ruleset/youtube.yaml
+    interval: 86400
+
+  disney:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Disney/Disney.yaml"
+    path: ./ruleset/disney.yaml
+    interval: 86400
+
+  spotify:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spotify/Spotify.yaml"
+    path: ./ruleset/spotify.yaml
+    interval: 86400
+
+  # 游戏
+  steam:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Steam/Steam.yaml"
+    path: ./ruleset/steam.yaml
+    interval: 86400
+
+  epic:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Epic/Epic.yaml"
+    path: ./ruleset/epic.yaml
+    interval: 86400
+
+  # 国内服务
+  bilibili:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml"
+    path: ./ruleset/bilibili.yaml
+    interval: 86400
+
+  tencent:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Tencent/Tencent.yaml"
+    path: ./ruleset/tencent.yaml
+    interval: 86400
+
+  alibaba:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Alibaba/Alibaba.yaml"
+    path: ./ruleset/alibaba.yaml
+    interval: 86400
+
+  # 网络基础
+  direct:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Direct/Direct.yaml"
+    path: ./ruleset/direct.yaml
+    interval: 86400
+
+  proxy:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy.yaml"
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+
+  private:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Private/Private.yaml"
+    path: ./ruleset/private.yaml
+    interval: 86400
+
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMax/ChinaMax_IP.yaml"
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml"
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+
+# 智能规则优先级 - 越精确的规则越靠前
+rules:
+  # 基础规则
+  - RULE-SET,reject,🛡️ 广告拦截
+  - RULE-SET,private,DIRECT
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,direct,DIRECT
+  
+  # 国内服务 - 直连优化
+  - RULE-SET,tencent,🇨🇳 国内直连
+  - RULE-SET,alibaba,🇨🇳 国内直连
+  - RULE-SET,bilibili,🇨🇳 国内直连
+  
+  # AI服务 - 优先处理
+  - RULE-SET,openai,🤖 AI服务
+  - RULE-SET,bing,🤖 AI服务
+  - RULE-SET,bard,🤖 AI服务
+  
+  # 流媒体服务
+  - RULE-SET,netflix,🎬 流媒体
+  - RULE-SET,disney,🎬 流媒体
+  - RULE-SET,spotify,🎬 流媒体
+  - RULE-SET,youtube,🎬 流媒体
+  
+  # 游戏服务
+  - RULE-SET,steam,🎮 游戏加速
+  - RULE-SET,epic,🎮 游戏加速
+  
+  # 国际服务
+  - RULE-SET,apple,🍎 苹果服务
+  - RULE-SET,microsoft,☁️ 开发服务
+  - RULE-SET,google,🌐 国际网络
+  - RULE-SET,github,☁️ 开发服务
+  - RULE-SET,twitter,💬 社交媒体
+  - RULE-SET,instagram,💬 社交媒体
+  - RULE-SET,telegram,💬 社交媒体
+  - RULE-SET,discord,💬 社交媒体
+  
+  # 网络基础
+  - RULE-SET,cncidr,DIRECT
+  - RULE-SET,proxy,🌐 国际网络
+  
+  # 最终规则
+  - GEOIP,CN,🇨🇳 国内直连
+  - GEOIP,PRIVATE,DIRECT
+  - MATCH,🚀 节点选择
