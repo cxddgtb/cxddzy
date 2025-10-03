@@ -1,0 +1,969 @@
+###############################################################################
+#                    🚀 Clash 终极无敌最强最终版配置                         #
+#                     Ultimate Clash Configuration v10.0                     #
+###############################################################################
+
+# ==================== 基础设置 ====================
+port: 0
+socks-port: 0
+redir-port: 0
+mixed-port: 7890
+tproxy-port: 7895
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: debug
+ipv6: true
+external-controller: 0.0.0.0:9090
+external-ui: dashboard
+secret: ""
+experimental:
+  ignore-resolve-fail: true
+  sniff-tls-sni: true
+
+# ==================== 高级功能设置 ====================
+profile:
+  store-selected: true
+  store-fake-ip: true
+  tracing: true
+
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "*.localhost"
+    - "*.msftconnecttest.com"
+    - "*.msftncsi.com"
+    - "localhost.ptlogin2.qq.com"
+  nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    - 114.114.114.114
+    - 8.8.8.8
+    - 1.1.1.1
+    - 208.67.222.222
+  fallback:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 208.67.222.222
+    - tls://1.1.1.1:853
+    - tls://dns.google:853
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
+    domain:
+      - "google.com"
+      - "facebook.com"
+      - "youtube.com"
+      - "github.com"
+
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+    - 8.8.8.8:53
+    - 198.18.0.2:53
+  auto-route: true
+  auto-detect-interface: true
+
+# ==================== 多订阅源支持 ====================
+proxy-providers:
+  
+  # 主订阅源
+  primary:
+    type: http
+    url: "https://github.com/cxddgtb/cxddzy/raw/refs/heads/master/list.meta.yml"
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+      timeout: 5000
+    path: ./proxy_providers/primary.yaml
+    force-update: true
+    filter: "^(?!.*(过期|维护|测试|垃圾|慢速)).*$"
+  
+  # 备用订阅源1
+  backup1:
+    type: http
+    url: ""  # 可添加备用订阅URL
+    interval: 7200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+    path: ./proxy_providers/backup1.yaml
+    force-update: true
+  
+  # 备用订阅源2
+  backup2:
+    type: http
+    url: ""  # 可添加备用订阅URL
+    interval: 7200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+    path: ./proxy_providers/backup2.yaml
+    force-update: true
+  
+  # 静态节点（手动添加）
+  static:
+    type: file
+    path: ./proxy_providers/static.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+
+# ==================== 终极代理组系统 ====================
+proxy-groups:
+
+  # ========== 主控制系统 ==========
+  - name: 🎮 终极控制中心
+    type: select
+    proxies:
+      - 🔮 人工智能模式
+      - 🚀 极限性能模式
+      - 🛡️ 顶级安全模式
+      - 🎯 智能场景模式
+      - ⚡ 游戏竞技模式
+      - 🎬 4K影音模式
+      - 💼 商务办公模式
+      - 🔬 科研学术模式
+      - 🌐 全球漫游模式
+      - 🛠️ 专家手动模式
+
+  # ========== AI智能模式组 ==========
+  - name: 🔮 人工智能模式
+    type: select
+    proxies:
+      - 🤖 AI学习引擎
+      - 🚀 极限性能模式
+      - 🎯 智能场景模式
+    use:
+      - primary
+      - backup1
+      - backup2
+
+  - name: 🤖 AI学习引擎
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 20
+    lazy: false
+    disable-udp: false
+    use:
+      - primary
+      - backup1
+    filter: "AI|智能|学习|优化|动态"
+
+  # ========== 性能模式组 ==========
+  - name: 🚀 极限性能模式
+    type: select
+    proxies:
+      - ⚡ 光速节点
+      - 🚄 高速专线
+      - 📈 智能负载
+      - 🎯 自动优选
+      - 🇭🇰 香港节点
+      - 🇸🇬 新加坡节点
+      - 🇯🇵 日本节点
+
+  - name: ⚡ 光速节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 120
+    tolerance: 10
+    use:
+      - primary
+      - backup1
+    filter: "光速|极速|VIP|专线|GIA|CN2"
+
+  - name: 🚄 高速专线
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 15
+    use:
+      - primary
+    filter: "专线|BGP|优化|加速|Premium"
+
+  # ========== 安全模式组 ==========
+  - name: 🛡️ 顶级安全模式
+    type: select
+    proxies:
+      - 🔒 军事加密
+      - 🕵️ 匿名网络
+      - 🇨🇭 瑞士隐私
+      - 🇸🇪 瑞典安全
+      - 🇮🇸 冰岛保护
+      - 🇩🇪 德国安全
+
+  - name: 🔒 军事加密
+    type: select
+    use:
+      - primary
+      - backup1
+    filter: "加密|安全|AES-256|Chacha20|隐私"
+
+  - name: 🕵️ 匿名网络
+    type: select
+    use:
+      - primary
+    filter: "匿名|无日志|No Log|Tor|隐私"
+
+  # ========== 场景模式组 ==========
+  - name: 🎯 智能场景模式
+    type: select
+    proxies:
+      - 🏠 家庭模式
+      - 🏢 办公模式  
+      - 🎪 娱乐模式
+      - 📚 学习模式
+      - 🛒 购物模式
+
+  - name: 🏠 家庭模式
+    type: select
+    proxies:
+      - 📺 智能电视
+      - 🎮 家庭游戏
+      - 💻 家庭办公
+      - 📱 移动设备
+
+  - name: 🏢 办公模式
+    type: select
+    proxies:
+      - 💼 商务专线
+      - 📊 数据同步
+      - 🗣️ 视频会议
+      - 📧 邮件服务
+
+  # ========== 游戏模式组 ==========
+  - name: ⚡ 游戏竞技模式
+    type: select
+    proxies:
+      - 🎮 职业电竞
+      - 🕹️ 游戏加速
+      - 🌐 全球游戏
+      - 📱 手游专线
+
+  - name: 🎮 职业电竞
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 5
+    use:
+      - primary
+    filter: "电竞|游戏|低延迟|UDP|Game"
+
+  - name: 🕹️ 游戏加速
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 90
+    tolerance: 8
+    use:
+      - primary
+      - backup1
+    filter: "游戏|加速|Game|低延迟"
+
+  # ========== 影音模式组 ==========
+  - name: 🎬 4K影音模式
+    type: select
+    proxies:
+      - 🎥 8K超清
+      - 📺 4K流媒体
+      - 🎵 无损音乐
+      - 🎞️ 影视下载
+
+  - name: 🎥 8K超清
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 25
+    use:
+      - primary
+    filter: "8K|4K|超清|流媒体|视频"
+
+  - name: 📺 4K流媒体
+    type: select
+    proxies:
+      - 🎬 Netflix专用
+      - 📹 YouTube专用
+      - 🍿 Disney+专用
+      - 🎵 Spotify专用
+
+  # ========== 商务模式组 ==========
+  - name: 💼 商务办公模式
+    type: select
+    proxies:
+      - 💻 远程办公
+      - 📊 企业VPN
+      - 🗣️ 视频会议
+      - 📧 商务邮件
+
+  - name: 💻 远程办公
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 30
+    use:
+      - primary
+    filter: "办公|企业|商务|稳定|可靠"
+
+  # ========== 学术模式组 ==========
+  - name: 🔬 科研学术模式
+    type: select
+    proxies:
+      - 📚 学术资源
+      - 🔍 科研数据
+      - 📖 论文下载
+      - 🎓 教育网络
+
+  # ========== 全球漫游组 ==========
+  - name: 🌐 全球漫游模式
+    type: select
+    proxies:
+      - 🗺️ 智能漫游
+      - 🌍 全球加速
+      - ✈️ 旅行模式
+      - 🏝️ 度假模式
+
+  # ========== 专家模式组 ==========
+  - name: 🛠️ 专家手动模式
+    type: select
+    proxies:
+      - 🔧 技术调试
+      - 📡 网络测试
+      - 🖥️ 服务器管理
+      - 🔍 流量分析
+
+  # ========== 核心节点组 ==========
+  - name: 📈 智能负载
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+    strategy: consistent-hashing
+    use:
+      - primary
+      - backup1
+
+  - name: 🎯 自动优选
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 50
+    lazy: true
+    use:
+      - primary
+      - backup1
+      - backup2
+
+  - name: 🚀 手动切换
+    type: select
+    use:
+      - primary
+      - backup1
+      - backup2
+
+  # ========== 地区节点组 ==========
+  - name: 🇭🇰 香港节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+    use:
+      - primary
+      - backup1
+    filter: "🇭🇰|HK|香港|HONG|HKG|Hong Kong"
+
+  - name: 🇨🇳 台湾节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+    use:
+      - primary
+      - backup1
+    filter: "🇨🇳|TW|台湾|TAIWAN|Taiwan"
+
+  - name: 🇺🇸 美国节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+    use:
+      - primary
+      - backup1
+      - backup2
+    filter: "🇺🇸|US|美国|USA|United States"
+
+  - name: 🇯🇵 日本节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+    use:
+      - primary
+      - backup1
+    filter: "🇯🇵|JP|日本|JAPAN|Japan"
+
+  - name: 🇰🇷 韩国节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+    use:
+      - primary
+      - backup1
+    filter: "🇰🇷|KR|韩国|KOREA|Korea"
+
+  - name: 🇸🇬 新加坡节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+    use:
+      - primary
+      - backup1
+    filter: "🇸🇬|SG|新加坡|SINGAPORE|Singapore"
+
+  - name: 🇨🇦 加拿大节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+    use:
+      - primary
+    filter: "🇨🇦|CA|加拿大|CANADA|Canada"
+
+  - name: 🇬🇧 英国节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+    use:
+      - primary
+    filter: "🇬🇧|UK|英国|UNITED KINGDOM|Britain"
+
+  - name: 🇩🇪 德国节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+    use:
+      - primary
+    filter: "🇩🇪|DE|德国|GERMANY|Germany"
+
+  - name: 🇫🇷 法国节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+    use:
+      - primary
+    filter: "🇫🇷|FR|法国|FRANCE|France"
+
+  - name: 🇦🇺 澳大利亚节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+    use:
+      - primary
+    filter: "🇦🇺|AU|澳大利亚|AUSTRALIA|Australia"
+
+  - name: 🇷🇺 俄罗斯节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+    use:
+      - primary
+    filter: "🇷🇺|RU|俄罗斯|RUSSIA|Russia"
+
+  - name: 🇧🇷 巴西节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+    use:
+      - primary
+    filter: "🇧🇷|BR|巴西|BRAZIL|Brazil"
+
+  - name: 🇮🇳 印度节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+    use:
+      - primary
+    filter: "🇮🇳|IN|印度|INDIA|India"
+
+  # ========== 特殊节点组 ==========
+  - name: 🇨🇭 瑞士隐私
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - primary
+    filter: "🇨🇭|CH|瑞士|SWITZERLAND|Swiss"
+
+  - name: 🇸🇪 瑞典安全
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - primary
+    filter: "🇸🇪|SE|瑞典|SWEDEN|Swedish"
+
+  - name: 🇮🇸 冰岛保护
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - primary
+    filter: "🇮🇸|IS|冰岛|ICELAND|Icelandic"
+
+  - name: 🇳🇱 荷兰自由
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - primary
+    filter: "🇳🇱|NL|荷兰|NETHERLANDS|Dutch"
+
+  # ========== 流媒体专用组 ==========
+  - name: 🎬 Netflix专用
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - primary
+    filter: "NF|NETFLIX|奈飞|解锁"
+
+  - name: 📹 YouTube专用
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - primary
+    filter: "YT|YOUTUBE|油管|4K|8K"
+
+  - name: 🍿 Disney+专用
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - primary
+    filter: "DISNEY|迪士尼|解锁"
+
+  - name: 🎵 Spotify专用
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - primary
+    filter: "SPOTIFY|音乐|解锁"
+
+  - name: 📺 智能电视
+    type: select
+    proxies:
+      - 🎬 Netflix专用
+      - 📹 YouTube专用
+      - 🍿 Disney+专用
+      - 🇺🇸 美国节点
+      - 🇭🇰 香港节点
+
+  # ========== 功能服务组 ==========
+  - name: 🛡️ 广告拦截
+    type: select
+    proxies: [REJECT, DIRECT]
+
+  - name: 🚫 恶意软件拦截
+    type: select
+    proxies: [REJECT, DIRECT]
+
+  - name: 📵 跟踪保护
+    type: select
+    proxies: [REJECT, DIRECT]
+
+  - name: 🤖 AI服务
+    type: select
+    proxies:
+      - 🇺🇸 美国节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🎯 自动优选
+
+  - name: ☁️ 开发服务
+    type: select
+    proxies:
+      - 🇺🇸 美国节点
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇩🇪 德国节点
+      - 🎯 自动优选
+
+  - name: 💬 社交媒体
+    type: select
+    proxies:
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇭🇰 香港节点
+      - 🇸🇬 新加坡节点
+      - 🎯 自动优选
+
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🇺🇸 美国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 新加坡节点
+      - 🇯🇵 日本节点
+      - DIRECT
+
+  - name: 🌐 国际网络
+    type: select
+    proxies:
+      - 🎯 自动优选
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇩🇪 德国节点
+
+  - name: 🇨🇳 国内直连
+    type: select
+    proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点]
+
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🎯 自动优选
+      - 🇺🇸 美国节点
+      - 🇭🇰 香港节点
+      - DIRECT
+
+# ==================== 终极规则系统 ====================
+rule-providers:
+
+  # 安全防护规则
+  reject:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Advertising/Advertising_Domain.yaml"
+    path: ./rule_providers/reject.yaml
+    interval: 86400
+
+  malware:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Malicious/Malicious_Domain.yaml"
+    path: ./rule_providers/malware.yaml
+    interval: 86400
+
+  tracking:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Tracking/Tracking_Domain.yaml"
+    path: ./rule_providers/tracking.yaml
+    interval: 86400
+
+  # 国内服务规则
+  direct:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Direct/Direct.yaml"
+    path: ./rule_providers/direct.yaml
+    interval: 86400
+
+  china:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/China/China_Domain.yaml"
+    path: ./rule_providers/china.yaml
+    interval: 86400
+
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMax/ChinaMax_IP.yaml"
+    path: ./rule_providers/cncidr.yaml
+    interval: 86400
+
+  # 国际服务规则
+  proxy:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy.yaml"
+    path: ./rule_providers/proxy.yaml
+    interval: 86400
+
+  global:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Global/Global.yaml"
+    path: ./rule_providers/global.yaml
+    interval: 86400
+
+  # AI服务规则
+  openai:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml"
+    path: ./rule_providers/openai.yaml
+    interval: 86400
+
+  bing:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bing/Bing.yaml"
+    path: ./rule_providers/bing.yaml
+    interval: 86400
+
+  bard:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BardAI/BardAI.yaml"
+    path: ./rule_providers/bard.yaml
+    interval: 86400
+
+  # 流媒体规则
+  netflix:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix.yaml"
+    path: ./rule_providers/netflix.yaml
+    interval: 86400
+
+  youtube:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml"
+    path: ./rule_providers/youtube.yaml
+    interval: 86400
+
+  disney:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Disney/Disney.yaml"
+    path: ./rule_providers/disney.yaml
+    interval: 86400
+
+  spotify:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spotify/Spotify.yaml"
+    path: ./rule_providers/spotify.yaml
+    interval: 86400
+
+  amazonvideo:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/AmazonVideo/AmazonVideo.yaml"
+    path: ./rule_providers/amazonvideo.yaml
+    interval: 86400
+
+  hbo:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/HBO/HBO.yaml"
+    path: ./rule_providers/hbo.yaml
+    interval: 86400
+
+  # 游戏规则
+  steam:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Steam/Steam.yaml"
+    path: ./rule_providers/steam.yaml
+    interval: 86400
+
+  epic:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Epic/Epic.yaml"
+    path: ./rule_providers/epic.yaml
+    interval: 86400
+
+  battlenet:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BattleNet/BattleNet.yaml"
+    path: ./rule_providers/battlenet.yaml
+    interval: 86400
+
+  # 社交媒体规则
+  twitter:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Twitter/Twitter.yaml"
+    path: ./rule_providers/twitter.yaml
+    interval: 86400
+
+  instagram:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Instagram/Instagram.yaml"
+    path: ./rule_providers/instagram.yaml
+    interval: 86400
+
+  facebook:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Facebook/Facebook.yaml"
+    path: ./rule_providers/facebook.yaml
+    interval: 86400
+
+  telegram:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml"
+    path: ./rule_providers/telegram.yaml
+    interval: 86400
+
+  discord:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Discord/Discord.yaml"
+    path: ./rule_providers/discord.yaml
+    interval: 86400
+
+  # 科技服务规则
+  apple:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple.yaml"
+    path: ./rule_providers/apple.yaml
+    interval: 86400
+
+  google:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml"
+    path: ./rule_providers/google.yaml
+    interval: 86400
+
+  microsoft:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml"
+    path: ./rule_providers/microsoft.yaml
+    interval: 86400
+
+  github:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml"
+    path: ./rule_providers/github.yaml
+    interval: 86400
+
+  # 国内平台规则
+  bilibili:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml"
+    path: ./rule_providers/bilibili.yaml
+    interval: 86400
+
+  tencent:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Tencent/Tencent.yaml"
+    path: ./rule_providers/tencent.yaml
+    interval: 86400
+
+  alibaba:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Alibaba/Alibaba.yaml"
+    path: ./rule_providers/alibaba.yaml
+    interval: 86400
+
+  baidu:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Baidu/Baidu.yaml"
+    path: ./rule_providers/baidu.yaml
+    interval: 86400
+
+  # 网络基础规则
+  private:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Private/Private.yaml"
+    path: ./rule_providers/private.yaml
+    interval: 86400
+
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml"
+    path: ./rule_providers/lancidr.yaml
+    interval: 86400
+
+  # 下载规则
+  download:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Download/Download.yaml"
+    path: ./rule_providers/download.yaml
+    interval: 86400
+
+# ==================== 终极规则优先级 ====================
+rules:
+  # 第一优先级：安全防护
+  - RULE-SET,reject,🛡️ 广告拦截
+  - RULE-SET,malware,🚫 恶意软件拦截
+  - RULE-SET,tracking,📵 跟踪保护
+  
+  # 第二优先级：网络基础
+  - RULE-SET,private,DIRECT
+  - RULE-SET,lancidr,DIRECT
+  
+  # 第三优先级：国内直连
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,china,DIRECT
+  - RULE-SET,cncidr,DIRECT
+  
+  # 第四优先级：下载优化
+  - RULE-SET,download,DIRECT
+  
+  # 第五优先级：国内平台优化
+  - RULE-SET,bilibili,🇨🇳 国内直连
+  - RULE-SET,tencent,🇨🇳 国内直连
+  - RULE-SET,alibaba,🇨🇳 国内直连
+  - RULE-SET,baidu,🇨🇳 国内直连
+  
+  # 第六优先级：AI服务
+  - RULE-SET,openai,🤖 AI服务
+  - RULE-SET,bing,🤖 AI服务
+  - RULE-SET,bard,🤖 AI服务
+  
+  # 第七优先级：流媒体服务
+  - RULE-SET,netflix,🎬 4K影音模式
+  - RULE-SET,youtube,🎬 4K影音模式
+  - RULE-SET,disney,🎬 4K影音模式
+  - RULE-SET,spotify,🎬 4K影音模式
+  - RULE-SET,amazonvideo,🎬 4K影音模式
+  - RULE-SET,hbo,🎬 4K影音模式
+  
+  # 第八优先级：游戏服务
+  - RULE-SET,steam,⚡ 游戏竞技模式
+  - RULE-SET,epic,⚡ 游戏竞技模式
+  - RULE-SET,battlenet,⚡ 游戏竞技模式
+  
+  # 第九优先级：社交媒体
+  - RULE-SET,twitter,💬 社交媒体
+  - RULE-SET,instagram,💬 社交媒体
+  - RULE-SET,facebook,💬 社交媒体
+  - RULE-SET,telegram,💬 社交媒体
+  - RULE-SET,discord,💬 社交媒体
+  
+  # 第十优先级：科技服务
+  - RULE-SET,apple,🍎 苹果服务
+  - RULE-SET,google,☁️ 开发服务
+  - RULE-SET,microsoft,☁️ 开发服务
+  - RULE-SET,github,☁️ 开发服务
+  
+  # 第十一优先级：国际网络
+  - RULE-SET,proxy,🌐 国际网络
+  - RULE-SET,global,🌐 国际网络
+  
+  # 最终规则：智能路由
+  - GEOIP,CN,🇨🇳 国内直连
+  - GEOIP,PRIVATE,DIRECT
+  - MATCH,🎮 终极控制中心
