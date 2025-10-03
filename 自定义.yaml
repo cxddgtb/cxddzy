@@ -8,54 +8,52 @@ mode: rule
 log-level: info
 ipv6: false
 external-controller: 0.0.0.0:9090
-# 开启流量统计，用于分析使用模式
 profile:
   store-selected: true
   store-fake-ip: true
 
-# 动态节点管理 - 支持自动更新和健康检查
+# 动态节点管理
 proxy-providers:
   freenodes:
     type: http
     url: "https://raw.githubusercontent.com/free18/v2ray/main/c.yaml"
-    interval: 43200  # 12小时更新一次
+    interval: 43200
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 600  # 10分钟检查一次
+      interval: 600
       timeout: 5000
     path: ./proxy/freenodes.yaml
-    # 节点过滤器 - 自动过滤无效节点
-    filter: "^(?!.*(过期|维护|测试)).*$"
 
-# 增强型策略组 - 更多智能选项
+# 修正后的策略组 - 确保所有引用都存在
 proxy-groups:
-  # 主切换组
+  # 主选择组 - 修正引用问题
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
-      - 🎯 全局直连
-      - 🎯 全局代理
       - 🚀 手动切换
       - 📈 负载均衡
       - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点  
+      - 🇨🇳 台湾节点
       - 🇺🇸 美国节点
       - 🇯🇵 日本节点
       - 🇰🇷 韩国节点
       - 🇸🇬 新加坡节点
       - DIRECT
 
-  # 智能策略组
+  # 基础功能组
+  - name: 🚀 手动切换
+    type: select
+    use: [freenodes]
+
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 900
-    tolerance: 150  # 容忍延迟差
+    tolerance: 150
     lazy: true
     use: [freenodes]
-    disable-udp: false
 
   - name: 📈 负载均衡
     type: load-balance
@@ -64,15 +62,7 @@ proxy-groups:
     strategy: consistent-hashing
     use: [freenodes]
 
-  - name: 🎯 全局直连
-    type: select
-    proxies: [DIRECT]
-
-  - name: 🎯 全局代理
-    type: select
-    proxies: [♻️ 自动选择]
-
-  # 地区节点组 - 自动过滤
+  # 地区节点组
   - name: 🇭🇰 香港节点
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -92,7 +82,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 900
     use: [freenodes]
-    filter: "🇺🇸|US|美国|USA|United States"
+    filter: "🇺🇸|US|美国|USA"
 
   - name: 🇯🇵 日本节点
     type: url-test
@@ -115,88 +105,44 @@ proxy-groups:
     use: [freenodes]
     filter: "🇸🇬|SG|新加坡|SINGAPORE"
 
-  # 广告拦截
+  # 功能组
   - name: 🛡️ 广告拦截
     type: select
     proxies: [REJECT, DIRECT]
 
-  # AI服务组 - 优化访问
   - name: 🤖 AI服务
     type: select
     proxies:
-      - 🚀 AI专用
       - 🇺🇸 美国节点
       - 🇨🇳 台湾节点
       - 🇯🇵 日本节点
       - ♻️ 自动选择
       - DIRECT
 
-  - name: 🚀 AI专用
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300  # 5分钟检查一次，AI服务需要低延迟
-    use: [freenodes]
-    filter: "GPT|AI|专用|优化"
-
-  # 流媒体服务组
   - name: 🎬 流媒体
     type: select
     proxies:
-      - 📺 奈飞专用
-      - 🎥 迪士尼专用
-      - 📹 油管加速
       - 🇺🇸 美国节点
       - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
       - ♻️ 自动选择
 
-  - name: 📺 奈飞专用
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 600
-    use: [freenodes]
-    filter: "NF|NETFLIX|奈飞|解锁"
-
-  - name: 🎥 迪士尼专用
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 600
-    use: [freenodes]
-    filter: "DISNEY|迪士尼|解锁"
-
-  - name: 📹 油管加速
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 600
-    use: [freenodes]
-    filter: "YOUTUBE|油管|4K|8K|视频"
-
-  # 游戏加速组
   - name: 🎮 游戏加速
     type: select
     proxies:
-      - 🕹️ 游戏专用
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
       - 🇯🇵 日本节点
       - 🇰🇷 韩国节点
       - ♻️ 自动选择
 
-  - name: 🕹️ 游戏专用
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    use: [freenodes]
-    filter: "GAME|游戏|加速|低延迟"
-
-  # 国内服务优化
   - name: 🇨🇳 国内直连
     type: select
     proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点]
 
-  # 其他服务组
   - name: 🍎 苹果服务
     type: select
-    proxies: [♻️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇺🇸 美国节点, 🇯🇵 日本节点, DIRECT]
+    proxies: [♻️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇺🇸 美国节点, DIRECT]
 
   - name: 🌐 国际网络
     type: select
@@ -210,9 +156,8 @@ proxy-groups:
     type: select
     proxies: [♻️ 自动选择, 🇺🇸 美国节点, 🇸🇬 新加坡节点, 🇭🇰 香港节点]
 
-# 增强规则集 - 更多更精准的规则
+# 规则提供者
 rule-providers:
-  # 基础规则
   reject:
     type: http
     behavior: domain
@@ -248,7 +193,6 @@ rule-providers:
     path: ./ruleset/github.yaml
     interval: 86400
 
-  # 社交媒体
   twitter:
     type: http
     behavior: domain
@@ -270,14 +214,6 @@ rule-providers:
     path: ./ruleset/telegram.yaml
     interval: 86400
 
-  discord:
-    type: http
-    behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Discord/Discord.yaml"
-    path: ./ruleset/discord.yaml
-    interval: 86400
-
-  # AI服务
   openai:
     type: http
     behavior: domain
@@ -285,21 +221,6 @@ rule-providers:
     path: ./ruleset/openai.yaml
     interval: 86400
 
-  bing:
-    type: http
-    behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bing/Bing.yaml"
-    path: ./ruleset/bing.yaml
-    interval: 86400
-
-  bard:
-    type: http
-    behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BardAI/BardAI.yaml"
-    path: ./ruleset/bard.yaml
-    interval: 86400
-
-  # 流媒体
   netflix:
     type: http
     behavior: domain
@@ -314,36 +235,6 @@ rule-providers:
     path: ./ruleset/youtube.yaml
     interval: 86400
 
-  disney:
-    type: http
-    behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Disney/Disney.yaml"
-    path: ./ruleset/disney.yaml
-    interval: 86400
-
-  spotify:
-    type: http
-    behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spotify/Spotify.yaml"
-    path: ./ruleset/spotify.yaml
-    interval: 86400
-
-  # 游戏
-  steam:
-    type: http
-    behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Steam/Steam.yaml"
-    path: ./ruleset/steam.yaml
-    interval: 86400
-
-  epic:
-    type: http
-    behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Epic/Epic.yaml"
-    path: ./ruleset/epic.yaml
-    interval: 86400
-
-  # 国内服务
   bilibili:
     type: http
     behavior: domain
@@ -351,21 +242,6 @@ rule-providers:
     path: ./ruleset/bilibili.yaml
     interval: 86400
 
-  tencent:
-    type: http
-    behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Tencent/Tencent.yaml"
-    path: ./ruleset/tencent.yaml
-    interval: 86400
-
-  alibaba:
-    type: http
-    behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Alibaba/Alibaba.yaml"
-    path: ./ruleset/alibaba.yaml
-    interval: 86400
-
-  # 网络基础
   direct:
     type: http
     behavior: domain
@@ -401,7 +277,7 @@ rule-providers:
     path: ./ruleset/lancidr.yaml
     interval: 86400
 
-# 智能规则优先级 - 越精确的规则越靠前
+# 修正后的规则
 rules:
   # 基础规则
   - RULE-SET,reject,🛡️ 广告拦截
@@ -409,25 +285,15 @@ rules:
   - RULE-SET,lancidr,DIRECT
   - RULE-SET,direct,DIRECT
   
-  # 国内服务 - 直连优化
-  - RULE-SET,tencent,🇨🇳 国内直连
-  - RULE-SET,alibaba,🇨🇳 国内直连
+  # 国内服务
   - RULE-SET,bilibili,🇨🇳 国内直连
   
-  # AI服务 - 优先处理
+  # AI服务
   - RULE-SET,openai,🤖 AI服务
-  - RULE-SET,bing,🤖 AI服务
-  - RULE-SET,bard,🤖 AI服务
   
   # 流媒体服务
   - RULE-SET,netflix,🎬 流媒体
-  - RULE-SET,disney,🎬 流媒体
-  - RULE-SET,spotify,🎬 流媒体
   - RULE-SET,youtube,🎬 流媒体
-  
-  # 游戏服务
-  - RULE-SET,steam,🎮 游戏加速
-  - RULE-SET,epic,🎮 游戏加速
   
   # 国际服务
   - RULE-SET,apple,🍎 苹果服务
@@ -437,7 +303,6 @@ rules:
   - RULE-SET,twitter,💬 社交媒体
   - RULE-SET,instagram,💬 社交媒体
   - RULE-SET,telegram,💬 社交媒体
-  - RULE-SET,discord,💬 社交媒体
   
   # 网络基础
   - RULE-SET,cncidr,DIRECT
