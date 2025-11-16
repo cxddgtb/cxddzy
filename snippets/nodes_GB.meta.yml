@@ -37,17 +37,34 @@ proxies:
   type: vmess
   udp: true
   uuid: 31072ae3-1653-40f8-8fff-aca21b9048a2
-- name: 🇬🇧_英国_1
-  network: ws
-  password: 63b8ce6d-9a30-4122-a00f-fd47f020dc27
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇬🇧_英国_1
+  network: tcp
   port: 443
-  server: 89.28.236.243
-  skip-cert-verify: true
-  sni: joss.dus.biz.id
+  reality-opts:
+    public-key: ckRcueERkPqqjZABwxqni_J_Nbb70Q6k5fEEUAjoImw
+  server: 217.154.218.42
+  servername: azure.com
   tls: true
-  type: trojan
-  ws-opts:
-    path: /
+  type: vless
+  uuid: 0b0b98be-fdaf-40cc-a953-cc4091c838e1
+- alpn:
+  - h2
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: GB_bc316_0002
+  port: 443
+  reality-opts:
+    public-key: ckRcueERkPqqjZABwxqni_J_Nbb70Q6k5fEEUAjoImw
+  server: 217.154.218.42
+  servername: azure.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 0b0b98be-fdaf-40cc-a953-cc4091c838e1
 - alterId: 0
   cipher: auto
   h2-opts: {}
