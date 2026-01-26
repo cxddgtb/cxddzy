@@ -213,11 +213,11 @@ proxies:
   username: Og@193.233.254.7
 - alterId: 0
   cipher: auto
-  name: 🔴🇩🇪[🎬📺🎪🎞️]_github.com/Ruk1ng00...
+  name: US-zipvpn.net-028
   network: ws
   port: 8080
   server: 104.21.69.44
-  skip-cert-verify: true
+  skip-cert-verify: false
   tfo: true
   tls: false
   type: vmess
@@ -229,7 +229,7 @@ proxies:
     path: /nasnet/cdn
 - alterId: 0
   cipher: auto
-  name: US-zipvpn.net-011
+  name: US-zipvpn.net-024
   network: ws
   port: 8080
   server: 172.67.204.84
@@ -440,16 +440,23 @@ proxies:
   xudp: true
 - alterId: 0
   cipher: auto
-  name: DE-zipvpn.net-030
+  name: DE-zipvpn.net-001
   port: 180
   server: 82.198.246.97
   skip-cert-verify: false
   tls: false
   type: vmess
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- name: DE-zipvpn.net-041
+  password: IXoJvZ7SJb
+  port: 44792
+  server: 146.103.42.41
+  skip-cert-verify: false
+  sni: cloudflare.com
+  type: trojan
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: IN3｜机房｜低风险
+  name: RU_speednode_0019
   network: tcp
   port: 443
   reality-opts:
@@ -457,9 +464,10 @@ proxies:
     short-id: '!!str c7e42004e5f024be'
   server: 95.174.92.156
   servername: sun6-21.userapi.com
-  skip-cert-verify: true
-  tls: false
+  skip-cert-verify: false
+  tls: true
   type: vless
+  udp: true
   uuid: cc61ea7c-92f2-4c2d-b272-32cfe8fdf99f
 - name: DE35｜机房｜低风险
   network: ws
@@ -635,3 +643,46 @@ proxies:
   sni: de.eyucdn.xyz
   tls: false
   type: hysteria2
+- http-opts:
+    headers:
+      Host:
+      - www.speedtest.net
+    method: GET
+    path:
+    - /
+  name: DE_speednode_0008
+  network: http
+  port: 443
+  server: 152.53.33.43
+  servername: www.speedtest.net
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 057b649c-54b1-4f68-86b1-90381637a2cf
+- cipher: chacha20-ietf-poly1305
+  name: DE_speednode_0009
+  password: TxUz18504p5egfiVecTQll
+  port: 7048
+  server: 62.133.60.60
+  type: ss
+  udp: true
+- alpn:
+  - h3
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  name: DE_speednode_0010
+  network: ws
+  port: 8443
+  server: 80.66.85.115
+  servername: page.anjue39.qzz.io
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 97e79a62-f686-4b91-87a7-be39c9e57658
+  ws-opts:
+    headers:
+      Host: page.anjue39.qzz.io
+    path: /?ed=2048
