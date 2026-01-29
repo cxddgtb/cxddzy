@@ -1,7 +1,16 @@
 proxies:
 - alterId: 0
-  cipher: chacha20-ietf-poly1305
+  cipher: aes-256-gcm
   name: 🇨🇦CA加拿大
+  password: 8JCsPssfgS8tiRwiMlhARg==
+  port: 12000
+  server: 144.217.164.29
+  skip-cert-verify: true
+  tls: true
+  type: ss
+- alterId: 0
+  cipher: chacha20-ietf-poly1305
+  name: 🇨🇦CA加拿大2
   password: f8f7aCzcPKbsF8p3
   port: 990
   server: 79.127.233.170
@@ -9,18 +18,26 @@ proxies:
   tls: true
   type: ss
 - alterId: 0
-  cipher: aes-256-gcm
-  name: 🇨🇦CA加拿大2
-  password: 8JCsPssfgS8tiRwiMlhARg==
-  port: 12000
-  server: 144.217.164.29
+  name: 🇨🇦CA加拿大3
+  password: cTv.9PDdCt-wybBrG1qlxI5UJuaEj
+  port: 10889
+  server: 167.17.185.228
   skip-cert-verify: true
+  sni: web.max
   tls: true
-  type: ss
-- name: CA-zipvpn.net-116
+  type: trojan
+  udp: true
+- name: CA-zipvpn.net-081
   password: chslToBpxJ
   port: 22086
   server: 209.200.246.248
   skip-cert-verify: false
   sni: www.cloudflare.com
+  type: trojan
+- name: CA-zipvpn.net-209
+  password: 30077070-596e-48ea-9400-14c8ed07bd97
+  port: 443
+  server: tuntro006.instconn.com
+  skip-cert-verify: false
+  sni: torontorm1.686911.xyz
   type: trojan
