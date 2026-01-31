@@ -577,19 +577,24 @@ proxies:
   type: trojan
   udp: true
 - alterId: 0
-  cipher: auto
+  cipher: chacha20-ietf-poly1305
   name: 🇺🇸US美国
-  network: ws
+  password: p78naCf2EfOlRSLTX0wFVx
   port: 443
-  server: 4D41-b510-Fc35f2D7ECd7.664.qzz.io
+  server: 71.19.148.143
   skip-cert-verify: true
   tls: true
-  type: vmess
-  uuid: 0507fbcd-b983-43a7-8e1d-2c561960ad4f
-  ws-opts:
-    headers:
-      host: 4D41-b510-fC35f2d7ecd7.664.qZz.io
-    path: /pyyY4ZVTyJV3vr9noOhn
+  type: ss
+- alterId: 0
+  name: 🇺🇸US美国2
+  password: BxceQaOe
+  port: 1112
+  server: 52.195.175.115
+  skip-cert-verify: true
+  sni: t.me/ripaojiedian
+  tls: true
+  type: trojan
+  udp: true
 - alterId: 0
   name: 美国2|@ripaojiedian
   network: tcp
@@ -602,21 +607,20 @@ proxies:
   type: trojan
   udp: true
 - alterId: 0
-  name: 🇺🇸US美国3
-  password: BxceQaOe
-  port: 1112
-  server: 52.195.175.115
+  cipher: chacha20-ietf-poly1305
+  name: US
+  password: 360e21d21977dc11
+  port: 57456
+  server: 104.167.197.25
   skip-cert-verify: true
-  sni: t.me/ripaojiedian
   tls: true
-  type: trojan
-  udp: true
+  type: ss
 - alterId: 0
   cipher: chacha20-ietf-poly1305
   name: 🇺🇸US美国4
   password: p78naCf2EfOlRSLTX0wFVx
   port: 443
-  server: 71.19.148.143
+  server: pupas-shirting-unsung.freesocks.work
   skip-cert-verify: true
   tls: true
   type: ss
@@ -630,11 +634,11 @@ proxies:
   tls: true
   type: ss
 - alterId: 0
-  cipher: chacha20-ietf-poly1305
+  cipher: aes-256-gcm
   name: 🇺🇸US美国6
-  password: p78naCf2EfOlRSLTX0wFVx
-  port: 443
-  server: pupas-shirting-unsung.freesocks.work
+  password: 8JCsPssfgS8tiRwiMlhARg==
+  port: 12000
+  server: 15.204.247.49
   skip-cert-verify: true
   tls: true
   type: ss
@@ -659,48 +663,19 @@ proxies:
   tls: true
   type: trojan
   udp: true
-- alterId: 0
-  cipher: aes-256-gcm
-  name: 🇺🇸US美国9
-  password: 8JCsPssfgS8tiRwiMlhARg==
-  port: 12000
-  server: 15.204.247.49
-  skip-cert-verify: true
-  tls: true
-  type: ss
-- alterId: 0
-  cipher: chacha20-ietf-poly1305
-  name: US
-  password: 360e21d21977dc11
-  port: 57456
-  server: 104.167.197.25
-  skip-cert-verify: true
-  tls: true
-  type: ss
-- name: US-zipvpn.net-026
+- name: US-zipvpn.net-051
   network: ws
   password: humanity
   port: 443
   server: www.calmlunch.com
   skip-cert-verify: false
+  sni: www.calmlunch.com
   type: trojan
   ws-opts:
-    path: /assignment
-- alterId: 0
-  cipher: auto
-  name: US-zipvpn.net-064
-  network: ws
-  port: 8080
-  server: tgju.org
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
     headers:
-      Host: nasnet-571296497.iranpress.co
-    path: /nasnet/cdn?ed=2560
-- name: US-zipvpn.net-087
+      Host: www.calmlunch.com
+    path: /assignment
+- name: US-zipvpn.net-134
   network: ws
   password: humanity
   port: 443
@@ -712,7 +687,7 @@ proxies:
     headers:
       Host: www.multiplydose.com
     path: /assignment
-- name: US-zipvpn.net-186
+- name: US-zipvpn.net-183
   network: ws
   password: humanity
   port: 443
@@ -724,7 +699,7 @@ proxies:
     headers:
       Host: www.creationlong.org
     path: /assignment
-- name: US-zipvpn.net-189
+- name: US-zipvpn.net-187
   network: ws
   password: humanity
   port: 443
@@ -736,6 +711,21 @@ proxies:
     headers:
       Host: www.creationlong.org
     path: /assignment
+- alterId: 0
+  cipher: auto
+  name: US-zipvpn.net-245
+  network: ws
+  port: 2083
+  server: 8.6.112.0
+  servername: hgtrojan.zabc.net
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: e6395c20-4571-4b34-d6b1-55a5d36e49ea
+  ws-opts:
+    headers:
+      Host: hgtrojan.zabc.net
+    path: /e6395c20
 - name: US166｜机房｜低风险
   network: ws
   password: 32497489-2052-4219-a0b5-43af86bfcd9b
@@ -979,19 +969,3 @@ proxies:
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- name: 12,13|美国3|@ripaojiedian
-  network: tcp
-  password: BxceQaOe
-  port: 1112
-  server: 52.195.175.115
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
-- name: 美国3|@ripaojiedian
-  network: tcp
-  password: BxceQaOe
-  port: 2173
-  server: 95.40.115.216
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
