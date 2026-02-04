@@ -1,10 +1,10 @@
 proxies:
 - alterId: 0
-  cipher: aes-256-gcm
-  name: 🇺🇸US美国
-  password: 8JCsPssfgS8tiRwiMlhARg==
-  port: 12000
-  server: 15.204.247.49
+  cipher: chacha20-ietf-poly1305
+  name: 🇺🇸US美国 11.9MB/s
+  password: e7yQKOelKM4UIJCZYLrzQX
+  port: 59724
+  server: 162.19.214.191
   skip-cert-verify: true
   tls: true
   type: ss
@@ -18,43 +18,29 @@ proxies:
   tls: true
   type: ss
 - alterId: 0
-  cipher: chacha20-ietf-poly1305
+  cipher: auto
   name: 🇺🇸US美国3
-  password: qFvn2fNEvBgM5knffrN96q
-  port: 9483
-  server: 92.118.112.101
+  network: ws
+  port: 8443
+  server: 172.64.152.23
   skip-cert-verify: true
   tls: true
-  type: ss
+  type: vmess
+  uuid: 19e52bf4-1b7d-4bd4-ae66-6ca024436c17
+  ws-opts:
+    headers:
+      host: frsys.fl-dl.com
+    path: /gbt
 - alterId: 0
+  cipher: auto
   name: 🇺🇸US美国4
-  password: humanity
-  port: 443
-  server: 104.21.40.34
-  skip-cert-verify: true
-  sni: www.gossipglove.com
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 0
-  name: 🇺🇸US美国5
-  password: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
-  port: 443
-  server: blackshadow.dpdns.org
-  skip-cert-verify: true
-  sni: blackshadow.dpdns.org
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 0
-  cipher: aes-128-gcm
-  name: 🇺🇸US美国6
-  password: 57bc0c04-8184-48f5-906b-897d095ed445
-  port: 17459
-  server: liubu9.singdns.com
+  network: tcp
+  port: 10010
+  server: 68.167.181.220
   skip-cert-verify: true
   tls: true
-  type: ss
+  type: vmess
+  uuid: b4f7c326-5c4f-4e19-83d5-bfa43b461002
 - alterId: 0
   name: 美国2|@ripaojiedian
   network: tcp
@@ -67,8 +53,18 @@ proxies:
   type: trojan
   udp: true
 - alterId: 0
+  name: 🇺🇸US美国6 64.0MB/s
+  password: c1d83c0c7d57cead4379ba14a82df69b
+  port: 443
+  server: 38.180.137.196
+  skip-cert-verify: true
+  sni: www.nintendogames.net
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
   cipher: chacha20-ietf-poly1305
-  name: 🇺🇸US美国8
+  name: 🇺🇸US美国7
   password: p78naCf2EfOlRSLTX0wFVx
   port: 443
   server: pupas-shirting-unsung.freesocks.work
@@ -76,18 +72,7 @@ proxies:
   tls: true
   type: ss
 - alterId: 0
-  name: 12,13|美国|@ripaojiedian
-  network: tcp
-  password: c1d83c0c7d57cead4379ba14a82df69b
-  port: 443
-  server: 38.180.137.196
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 0
-  name: 🇺🇸US美国10
+  name: 🇺🇸US美国8
   password: 5027e2a4-c4d2-463a-9508-83a2c7d1ad83
   port: 443
   server: 216.24.57.250
@@ -97,7 +82,7 @@ proxies:
   type: trojan
   udp: true
 - alterId: 0
-  name: 🇺🇸US美国11
+  name: 🇺🇸US美国9
   password: BxceQaOe
   port: 1221
   server: 3.112.197.3
@@ -107,15 +92,23 @@ proxies:
   type: trojan
   udp: true
 - alterId: 0
-  name: 🇺🇸US美国12
-  password: '!!str 123456'
-  port: 8443
-  server: bpbg.anguswen.top
+  cipher: aes-256-gcm
+  name: 🇺🇸US美国10
+  password: 8JCsPssfgS8tiRwiMlhARg==
+  port: 12000
+  server: 15.204.247.49
   skip-cert-verify: true
-  sni: BpBg.ANGusWeN.top
   tls: true
-  type: trojan
-  udp: true
+  type: ss
+- alterId: 0
+  cipher: chacha20-ietf-poly1305
+  name: 🇺🇸US美国11
+  password: qFvn2fNEvBgM5knffrN96q
+  port: 9483
+  server: 92.118.112.101
+  skip-cert-verify: true
+  tls: true
+  type: ss
 - name: US-zipvpn.net-009
   network: ws
   password: humanity
@@ -422,14 +415,6 @@ proxies:
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- name: 12,13|美国3|@ripaojiedian
-  network: tcp
-  password: BxceQaOe
-  port: 1221
-  server: 3.112.197.3
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
 - name: 美国3|@ripaojiedian
   network: tcp
   password: BxceQaOe
