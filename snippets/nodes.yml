@@ -93,12 +93,12 @@ proxies:
   name: 'end-gfw.com10@jp89 #1'
   password: 1a17b19d-4896-4531-af79-6e91d8ef8228
   port: 8989
-  server: 52.69.9.235
+  server: 52.197.145.194
   type: ss
 - name: 'end-gfw.com11@jp89 #1'
   password: 1a17b19d-4896-4531-af79-6e91d8ef8228
   port: 6688
-  server: 52.69.9.235
+  server: 52.197.145.194
   skip-cert-verify: true
   sni: baidu.com
   type: trojan
@@ -107,7 +107,7 @@ proxies:
   name: 'end-gfw.com12@jp89 #1'
   network: ws
   port: 8686
-  server: 52.69.9.235
+  server: 52.197.145.194
   servername: baidu.com
   tls: false
   type: vmess
@@ -120,12 +120,12 @@ proxies:
   name: 'end-gfw.com20@kr64 #1'
   password: 1a17b19d-4896-4531-af79-6e91d8ef8228
   port: 8989
-  server: 3.36.133.48
+  server: 13.125.81.137
   type: ss
 - name: 'end-gfw.com21@kr64 #1'
   password: 1a17b19d-4896-4531-af79-6e91d8ef8228
   port: 6688
-  server: 3.36.133.48
+  server: 13.125.81.137
   skip-cert-verify: true
   sni: baidu.com
   type: trojan
@@ -134,7 +134,7 @@ proxies:
   name: 'end-gfw.com22@kr64 #1'
   network: ws
   port: 8686
-  server: 3.36.133.48
+  server: 13.125.81.137
   servername: baidu.com
   tls: false
   type: vmess
@@ -293,7 +293,7 @@ proxies:
   type: trojan
   udp: true
 - alterId: 0
-  name: 日本3|@ripaojiedian
+  name: 12,13|日本3|@ripaojiedian
   network: tcp
   password: c1d83c0c7d57cead4379ba14a82df69b
   port: 443
@@ -470,7 +470,7 @@ proxies:
   type: trojan
   udp: true
 - alterId: 0
-  name: 新加坡2|@ripaojiedian
+  name: 12,13|新加坡2|@ripaojiedian
   network: tcp
   password: c1d83c0c7d57cead4379ba14a82df69b
   port: 443
@@ -481,7 +481,7 @@ proxies:
   type: trojan
   udp: true
 - alterId: 0
-  name: 日本2|@ripaojiedian
+  name: 12,13|日本2|@ripaojiedian
   network: tcp
   password: c1d83c0c7d57cead4379ba14a82df69b
   port: 443
@@ -592,7 +592,7 @@ proxies:
   type: trojan
   udp: true
 - alterId: 0
-  name: 美国|@ripaojiedian
+  name: 12,13|美国|@ripaojiedian
   network: tcp
   password: c1d83c0c7d57cead4379ba14a82df69b
   port: 443
@@ -613,7 +613,7 @@ proxies:
   type: trojan
   udp: true
 - alterId: 0
-  name: IS-zipvpn.net-128
+  name: IS-zipvpn.net-081
   network: tcp
   password: qmBSKnAl6LYi9=z23Rs.Z
   port: 28099
@@ -643,12 +643,12 @@ proxies:
   type: trojan
   udp: true
 - alterId: 0
-  name: 新加坡|@ripaojiedian
+  name: 新加坡2|@ripaojiedian
   network: tcp
   password: c1d83c0c7d57cead4379ba14a82df69b
   port: 443
   server: 152.42.254.150
-  skip-cert-verify: false
+  skip-cert-verify: true
   sni: www.nintendogames.net
   tls: true
   type: trojan
@@ -679,47 +679,123 @@ proxies:
   udp: true
 - alterId: 0
   cipher: auto
-  name: GB-zipvpn.net-007
+  name: GB-zipvpn.net-003
   port: 24804
   server: 130.185.251.109
   skip-cert-verify: false
   tls: false
   type: vmess
   uuid: 8fd82834-1355-4bf0-e393-d2592b4fad50
-- name: CA-zipvpn.net-058
-  password: chslToBpxJ
-  port: 22086
-  server: 209.200.246.248
+- name: US-zipvpn.net-009
+  network: ws
+  password: humanity
+  port: 443
+  server: www.calmlunch.com
   skip-cert-verify: false
-  sni: www.cloudflare.com
+  sni: www.calmlunch.com
   type: trojan
-- name: HK-zipvpn.net-118
-  password: q4oerwN2UA
-  port: 19066
-  server: hk.scpnb.top
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: /assignment
+- name: US-zipvpn.net-034
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.21.40.34
   skip-cert-verify: false
-  sni: www.amazon.com
+  sni: www.gossipglove.com
   type: trojan
-- name: HK-zipvpn.net-126
+  ws-opts:
+    headers:
+      Host: www.gossipglove.com
+    path: /assignment
+- alterId: 0
+  cipher: auto
+  name: US-zipvpn.net-072
+  network: ws
+  port: 8443
+  server: 162.159.152.4
+  servername: frsys.fl-dl.com
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 19e52bf4-1b7d-4bd4-ae66-6ca024436c17
+  ws-opts:
+    headers:
+      Host: frsys.fl-dl.com
+    path: /gbt
+- name: NO-zipvpn.net-076
+  password: wp9IsiY82uQhcmgNC1eoBM
+  port: 12420
+  server: 80.173.231.254
+  skip-cert-verify: false
+  sni: www.semanticstaplegun.click
+  type: trojan
+- name: US-zipvpn.net-117
+  network: ws
+  password: humanity
+  port: 443
+  server: 172.64.152.23
+  skip-cert-verify: false
+  sni: www.creationlong.org
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.creationlong.org
+    path: /assignment
+- name: CH-zipvpn.net-147
+  network: ws
+  password: humanity
+  port: 443
+  server: 185.18.250.245
+  skip-cert-verify: false
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: /assignment
+- name: HK-zipvpn.net-160
+  password: BxceQaOe
+  port: 443
+  server: 58.152.53.45
+  skip-cert-verify: false
+  sni: t.me%252Fripaojiedian
+  type: trojan
+- name: HK181｜家宽｜非常安全
   password: BxceQaOe
   port: 443
   server: 219.76.135.98
-  skip-cert-verify: false
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
   type: trojan
-- name: CA-zipvpn.net-129
+- name: CA-zipvpn.net-164
   password: 63b21d86-a49c-4936-a634-0b5af3e30433
   port: 443
   server: tuntro006.instconn.com
   skip-cert-verify: false
   sni: torontorm1.686911.xyz
   type: trojan
-- name: PH-zipvpn.net-131
-  password: ee38426d-e692-4cb4-9b0b-63c42fac77b4
-  port: 31102
-  server: green2.cdntencentmusic.com
+- name: HK-zipvpn.net-165
+  password: q4oerwN2UA
+  port: 19066
+  server: hk.scpnb.top
   skip-cert-verify: false
-  sni: green2.cdntencentmusic.com
+  sni: www.amazon.com
   type: trojan
+- name: US-zipvpn.net-173
+  network: ws
+  password: T9BpZIVMNv
+  port: 8443
+  server: vip2.kaixincloud.top
+  skip-cert-verify: false
+  sni: sweden.vmaxpanel.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: sweden.vmaxpanel.com
+    path: /amd
 - alterId: 0
   cipher: auto
   name: IN1｜家宽｜非常安全
@@ -769,13 +845,6 @@ proxies:
   server: 58.152.25.130
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
-  type: trojan
-- name: HK181｜家宽｜非常安全
-  password: BxceQaOe
-  port: 443
-  server: 219.76.135.98
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
   type: trojan
 - name: HK144｜家宽｜非常安全
   password: BxceQaOe
@@ -1192,7 +1261,7 @@ proxies:
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- name: 香港4|@ripaojiedian
+- name: 12,13|香港4|@ripaojiedian
   network: tcp
   password: BxceQaOe
   port: 2266
@@ -1200,7 +1269,7 @@ proxies:
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
   type: trojan
-- name: 香港5|@ripaojiedian
+- name: 12,13|香港5|@ripaojiedian
   network: tcp
   password: BxceQaOe
   port: 2266
@@ -1208,7 +1277,7 @@ proxies:
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
   type: trojan
-- name: 日本|@ripaojiedian
+- name: 12,13|日本|@ripaojiedian
   network: tcp
   password: BxceQaOe
   port: 20539
@@ -1216,7 +1285,7 @@ proxies:
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
   type: trojan
-- name: 新加坡3|@ripaojiedian
+- name: 12,13|新加坡3|@ripaojiedian
   network: tcp
   password: BxceQaOe
   port: 1196
@@ -1224,7 +1293,7 @@ proxies:
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
   type: trojan
-- name: 美国3|@ripaojiedian
+- name: 12,13|美国3|@ripaojiedian
   network: tcp
   password: BxceQaOe
   port: 1221
@@ -1233,7 +1302,7 @@ proxies:
   sni: t.me%2Fripaojiedian
   type: trojan
 - cipher: aes-256-cfb
-  name: 🇰🇷 韩国|@ripaojiedian
+  name: 12|🇰🇷 韩国|@ripaojiedian
   password: qwerREWQ@@
   port: 16449
   server: 218.50.149.114
@@ -1256,6 +1325,77 @@ proxies:
   sni: amanm.wsone.icu
   type: trojan
   udp: true
+- name: 香港4|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 2266
+  server: 18.177.138.102
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- name: 香港5|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 443
+  server: 58.152.30.222
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- name: 日本|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 20539
+  server: 43.206.238.87
+  skip-cert-verify: true
+  sni: t.me%252Fripaojiedian
+  type: trojan
+- name: 日本3|@ripaojiedian
+  network: tcp
+  password: c1d83c0c7d57cead4379ba14a82df69b
+  port: 443
+  server: 116.80.60.36
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 新加坡|@ripaojiedian
+  network: tcp
+  password: c1d83c0c7d57cead4379ba14a82df69b
+  port: 390
+  server: 160.16.87.174
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 新加坡3|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 3579
+  server: 18.182.62.89
+  skip-cert-verify: true
+  sni: t.me%252Fripaojiedian
+  type: trojan
+- name: 美国3|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 1221
+  server: 18.182.62.89
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- alterId: 2
+  cipher: auto
+  name: 香港2|@ripaojiedian
+  network: ws
+  port: '80'
+  server: 609a8c34-t9w4g0-thiwul-1gcq2.hkt.gotochinatown.net
+  servername: ''
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 759bf004-6137-11ec-bd7c-f23c913c8d2b
+  ws-opts:
+    headers:
+      Host: broadcastlv.chat.bilibili.com
+    path: /
 - cipher: chacha20-ietf-poly1305
   name: CN_speednode_0002
   password: feafc2ef-d5fd-4f6d-803b-fad4a5cc1f0e
