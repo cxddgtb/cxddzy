@@ -89,6 +89,60 @@ proxies:
   tls: false
   type: vmess
   uuid: 88888888-8888-8888-8888-888888888888
+- cipher: chacha20-ietf-poly1305
+  name: 'end-gfw.com10@jp89 #1'
+  password: 1a17b19d-4896-4531-af79-6e91d8ef8228
+  port: 8989
+  server: 54.249.1.166
+  type: ss
+- name: 'end-gfw.com11@jp89 #1'
+  password: 1a17b19d-4896-4531-af79-6e91d8ef8228
+  port: 6688
+  server: 54.249.1.166
+  skip-cert-verify: true
+  sni: baidu.com
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 'end-gfw.com12@jp89 #1'
+  network: ws
+  port: 8686
+  server: 54.249.1.166
+  servername: baidu.com
+  tls: false
+  type: vmess
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+  ws-opts:
+    headers:
+      Host: end-gfw.com
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 'end-gfw.com20@kr64 #1'
+  password: 1a17b19d-4896-4531-af79-6e91d8ef8228
+  port: 8989
+  server: 3.39.229.18
+  type: ss
+- name: 'end-gfw.com21@kr64 #1'
+  password: 1a17b19d-4896-4531-af79-6e91d8ef8228
+  port: 6688
+  server: 3.39.229.18
+  skip-cert-verify: true
+  sni: baidu.com
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 'end-gfw.com22@kr64 #1'
+  network: ws
+  port: 8686
+  server: 3.39.229.18
+  servername: baidu.com
+  tls: false
+  type: vmess
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+  ws-opts:
+    headers:
+      Host: end-gfw.com
+    path: /
 - alterId: 0
   cipher: chacha20-poly1305
   name: 未知
@@ -441,11 +495,11 @@ proxies:
   type: trojan
   udp: true
 - alterId: 0
-  name: CA-zipvpn.net-210
+  name: 未知16
   password: 63b21d86-a49c-4936-a634-0b5af3e30433
   port: 443
   server: tuntro006.instconn.com
-  skip-cert-verify: false
+  skip-cert-verify: true
   sni: torontorm1.686911.xyz
   tls: true
   type: trojan
@@ -555,18 +609,32 @@ proxies:
   type: trojan
   udp: true
 - alterId: 0
-  name: 未知21
+  name: US-zipvpn.net-151
   password: iWnFtzMiac
   port: 19258
   server: 205.185.115.223
-  skip-cert-verify: true
+  skip-cert-verify: false
   sni: cloudflare.com
   tls: true
   type: trojan
   udp: true
 - alterId: 0
   cipher: auto
-  name: US-zipvpn.net-017
+  name: zipvpn.net-003
+  network: ws
+  port: 8080
+  server: digitalocean.com
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: nasnet-571299667.rahavard365.co
+    path: /NASNET/cdn?ed=2560
+- alterId: 0
+  cipher: auto
+  name: US-zipvpn.net-016
   network: ws
   port: 8080
   server: 172.64.149.182
@@ -580,85 +648,10 @@ proxies:
     path: /nasnet/cdn?ed=2560
 - alterId: 0
   cipher: auto
-  name: US-zipvpn.net-019
+  name: US-zipvpn.net-023
   network: ws
   port: 8080
-  server: digitalocean.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: nasnet-571299667.rahavard365.co
-    path: /NASNET/cdn?ed=2560
-- name: CH-zipvpn.net-036
-  network: ws
-  password: humanity
-  port: 443
-  server: 185.18.250.245
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
-- name: US-zipvpn.net-037
-  network: ws
-  password: '123456'
-  port: 8443
-  server: bpbg.anguswen.top
-  skip-cert-verify: false
-  sni: BpBg.ANGusWeN.top
-  type: trojan
-  ws-opts:
-    headers:
-      Host: BpBg.ANGusWeN.top
-    path: /eyJqdW5rIjoiTUp4VFNoMTRLbSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=?ed=2560
-- alterId: 0
-  cipher: auto
-  name: US-zipvpn.net-038
-  network: ws
-  port: 8080
-  server: 188.114.98.0
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: nasnet-162191099.sharghdaily.co
-    path: /nasnet/cdn?ed=2560/?TELEGRAM--KANAL--JKVPN--JKVPN--JKVPN--JKVPN--JKVPN--JKVPN
-- name: US-zipvpn.net-043
-  network: ws
-  password: humanity
-  port: 443
-  server: www.calmlunch.com
-  skip-cert-verify: false
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: FR-zipvpn.net-055
-  password: telegram-id-privatevpns
-  port: 22222
-  server: 35.181.222.78
-  skip-cert-verify: false
-  sni: trojan.burgerip.co.uk
-  type: trojan
-- name: CA-zipvpn.net-089
-  password: chslToBpxJ
-  port: 22086
-  server: 209.200.246.248
-  skip-cert-verify: false
-  sni: www.cloudflare.com
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: US-zipvpn.net-090
-  network: ws
-  port: 8080
-  server: 104.21.69.44
+  server: 172.67.204.84
   skip-cert-verify: false
   tls: false
   type: vmess
@@ -667,149 +660,91 @@ proxies:
     headers:
       Host: nasnet-511952424.mcitel.co
     path: /nasnet/cdn
-- name: US-zipvpn.net-092
+- name: zipvpn.net-050
   network: ws
-  password: Aimer
-  port: 2053
-  server: 167.68.4.199
+  password: humanity
+  port: 443
+  server: www.calmlunch.com
   skip-cert-verify: false
-  sni: epge.muarua.filegear-sg.me
+  sni: www.calmlunch.com
   type: trojan
   ws-opts:
     headers:
-      Host: epge.muarua.filegear-sg.me
-    path: /
-- name: IS-zipvpn.net-109
+      Host: www.calmlunch.com
+    path: /assignment
+- name: US-zipvpn.net-051
+  network: ws
+  password: '3437698'
+  port: 8443
+  server: 8.35.211.15
+  skip-cert-verify: false
+  sni: rough-violet-b842.heydari-cis64.workers.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: rough-violet-b842.heydari-cis64.workers.dev
+    path: /?ed=2560
+- name: IS-zipvpn.net-098
   password: qmBSKnAl6LYi9=z23Rs.Z
   port: 28099
   server: 37.235.49.209
   skip-cert-verify: false
   sni: celestialcorset.crystalhamster.click
   type: trojan
-- name: NO-zipvpn.net-112
+- name: CA-zipvpn.net-114
+  password: chslToBpxJ
+  port: 22086
+  server: 209.200.246.248
+  skip-cert-verify: false
+  sni: www.cloudflare.com
+  type: trojan
+- name: NO-zipvpn.net-126
   password: wp9IsiY82uQhcmgNC1eoBM
   port: 12420
   server: 80.173.231.254
   skip-cert-verify: false
   sni: www.semanticstaplegun.click
   type: trojan
-- name: TR-zipvpn.net-161
+- name: US-zipvpn.net-129
+  network: ws
+  password: '3437698'
+  port: 2083
+  server: 8.39.125.38
+  skip-cert-verify: false
+  sni: rough-violet-b842.heydari-cis64.workers.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: rough-violet-b842.heydari-cis64.workers.dev
+    path: /?ed=2560
+- alterId: 0
+  cipher: auto
+  name: US-zipvpn.net-152
+  network: ws
+  port: 2053
+  server: nextmi.hajmyab.ir
+  servername: yakxvtfbyk.hajmyab.ir
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 9585636a-54bc-419a-90a1-76c5c6ec74df
+  ws-opts:
+    headers:
+      Host: app.hajmyab.ir
+    path: /
+- name: TR-zipvpn.net-162
   password: tunnel-astrovpn_official_tr
   port: 8441
   server: tr-1.stunnel.cc
   skip-cert-verify: false
   type: trojan
-- name: 日本|@ripaojiedian
-  network: tcp
-  password: BxceQaOe
-  port: 26378
-  server: 18.183.170.92
-  skip-cert-verify: true
-  sni: t.me%252Fripaojiedian
-  type: trojan
-- name: JP-zipvpn.net-206
+- name: JP-zipvpn.net-209
   password: 347ca311-8fc2-499c-8fe1-bd0ecb50f1b3
   port: 43642
   server: 5.34.222.4
   skip-cert-verify: false
   sni: iepl.usq1.cat.bilibili.com
   type: trojan
-- name: 美国3|@ripaojiedian
-  network: tcp
-  password: BxceQaOe
-  port: 4569
-  server: 52.194.248.81
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
-- name: 日本3|@ripaojiedian
-  network: tcp
-  password: 5fb072e0ddd631cf66cf752b09210480
-  port: 3423
-  server: 160.16.214.104
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
-- name: 香港4|@ripaojiedian
-  network: tcp
-  password: BxceQaOe
-  port: 1820
-  server: 13.115.128.246
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
-- name: US-zipvpn.net-224
-  network: ws
-  password: T9BpZIVMNv
-  port: 8443
-  server: v3.dabache.top
-  skip-cert-verify: false
-  sni: sweden.vmaxpanel.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: sweden.vmaxpanel.com
-    path: /amd
-- name: US-zipvpn.net-228
-  network: ws
-  password: T9BpZIVMNv
-  port: 8443
-  server: vip3.kaixincloud.top
-  skip-cert-verify: false
-  sni: sweden.vmaxpanel.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: sweden.vmaxpanel.com
-    path: /amd
-- name: 香港5|@ripaojiedian
-  network: tcp
-  password: BxceQaOe
-  port: 2266
-  server: 52.195.179.165
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: VN-zipvpn.net-232
-  port: 58623
-  server: 160.191.245.48
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 8d74803e-aa74-47ef-e3ae-23eeaa96f89d
-- name: DE-zipvpn.net-235
-  password: 63b21d86-a49c-4936-a634-0b5af3e30433
-  port: 443
-  server: tuntro010.instconn.com
-  skip-cert-verify: false
-  sni: frankfurtrm2.686911.xyz
-  type: trojan
-- name: US-zipvpn.net-238
-  network: ws
-  password: T9BpZIVMNv
-  port: 8443
-  server: vip2.kaixincloud.top
-  skip-cert-verify: false
-  sni: sweden.vmaxpanel.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: sweden.vmaxpanel.com
-    path: /amd
-- name: US-zipvpn.net-240
-  network: ws
-  password: T9BpZIVMNv
-  port: 8443
-  server: vip1.kaixincloud.top
-  skip-cert-verify: false
-  sni: sweden.vmaxpanel.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: sweden.vmaxpanel.com
-    path: /amd
 - alterId: 0
   cipher: auto
   name: IN1｜家宽｜非常安全
@@ -1283,11 +1218,43 @@ proxies:
   skip-cert-verify: true
   sni: www.nintendogames.net
   type: trojan
+- name: 香港4|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 1820
+  server: 13.115.128.246
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- name: 香港5|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 2266
+  server: 52.195.179.165
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- name: 日本|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 26378
+  server: 18.183.170.92
+  skip-cert-verify: true
+  sni: t.me%252Fripaojiedian
+  type: trojan
 - name: 日本2|@ripaojiedian
   network: tcp
   password: 5fb072e0ddd631cf66cf752b09210480
   port: 3423
   server: 202.181.103.246
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 日本3|@ripaojiedian
+  network: tcp
+  password: 5fb072e0ddd631cf66cf752b09210480
+  port: 3423
+  server: 160.16.214.104
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
@@ -1331,6 +1298,14 @@ proxies:
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
+- name: 美国3|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 4569
+  server: 52.194.248.81
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
 - alterId: 2
   cipher: auto
   name: 香港|@ripaojiedian
@@ -1349,60 +1324,6 @@ proxies:
   sni: amanm.wsone.icu
   type: trojan
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: end-gfw.com10@jp89
-  password: 1a17b19d-4896-4531-af79-6e91d8ef8228
-  port: 8989
-  server: 52.199.28.169
-  type: ss
-- name: end-gfw.com11@jp89
-  password: 1a17b19d-4896-4531-af79-6e91d8ef8228
-  port: 6688
-  server: 52.199.28.169
-  skip-cert-verify: true
-  sni: baidu.com
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: end-gfw.com12@jp89
-  network: ws
-  port: 8686
-  server: 52.199.28.169
-  servername: baidu.com
-  tls: false
-  type: vmess
-  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
-  ws-opts:
-    headers:
-      Host: end-gfw.com
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: end-gfw.com20@kr64
-  password: 1a17b19d-4896-4531-af79-6e91d8ef8228
-  port: 8989
-  server: 3.38.105.0
-  type: ss
-- name: end-gfw.com21@kr64
-  password: 1a17b19d-4896-4531-af79-6e91d8ef8228
-  port: 6688
-  server: 3.38.105.0
-  skip-cert-verify: true
-  sni: baidu.com
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: end-gfw.com22@kr64
-  network: ws
-  port: 8686
-  server: 3.38.105.0
-  servername: baidu.com
-  tls: false
-  type: vmess
-  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
-  ws-opts:
-    headers:
-      Host: end-gfw.com
-    path: /
 - cipher: chacha20-ietf-poly1305
   name: CN_speednode_0002
   password: feafc2ef-d5fd-4f6d-803b-fad4a5cc1f0e
