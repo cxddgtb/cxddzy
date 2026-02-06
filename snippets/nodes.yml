@@ -93,12 +93,12 @@ proxies:
   name: 'end-gfw.com10@jp89 #1'
   password: 1a17b19d-4896-4531-af79-6e91d8ef8228
   port: 8989
-  server: 13.231.242.255
+  server: 13.158.140.227
   type: ss
 - name: 'end-gfw.com11@jp89 #1'
   password: 1a17b19d-4896-4531-af79-6e91d8ef8228
   port: 6688
-  server: 13.231.242.255
+  server: 13.158.140.227
   skip-cert-verify: true
   sni: baidu.com
   type: trojan
@@ -107,7 +107,7 @@ proxies:
   name: 'end-gfw.com12@jp89 #1'
   network: ws
   port: 8686
-  server: 13.231.242.255
+  server: 13.158.140.227
   servername: baidu.com
   tls: false
   type: vmess
@@ -120,12 +120,12 @@ proxies:
   name: 'end-gfw.com20@kr64 #1'
   password: 1a17b19d-4896-4531-af79-6e91d8ef8228
   port: 8989
-  server: 43.203.141.86
+  server: 43.202.46.154
   type: ss
 - name: 'end-gfw.com21@kr64 #1'
   password: 1a17b19d-4896-4531-af79-6e91d8ef8228
   port: 6688
-  server: 43.203.141.86
+  server: 43.202.46.154
   skip-cert-verify: true
   sni: baidu.com
   type: trojan
@@ -134,7 +134,7 @@ proxies:
   name: 'end-gfw.com22@kr64 #1'
   network: ws
   port: 8686
-  server: 43.203.141.86
+  server: 43.202.46.154
   servername: baidu.com
   tls: false
   type: vmess
@@ -579,7 +579,7 @@ proxies:
       host: pelang.org
     path: linkvws
 - alterId: 0
-  name: IS-zipvpn.net-248
+  name: IS-zipvpn.net-235
   password: qmBSKnAl6LYi9=z23Rs.Z
   port: 28099
   server: 37.235.49.209
@@ -796,29 +796,43 @@ proxies:
   tls: true
   type: trojan
   udp: true
-- name: US-zipvpn.net-212
-  password: iWnFtzMiac
-  port: 19258
-  server: 205.185.115.223
-  skip-cert-verify: false
-  sni: cloudflare.com
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: US-zipvpn.net-250
+- name: CH-zipvpn.net-031
   network: ws
-  port: 2053
-  server: nextmi.hajmyab.ir
-  servername: yakxvtfbyk.hajmyab.ir
+  password: humanity
+  port: 443
+  server: 185.18.250.245
   skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 9585636a-54bc-419a-90a1-76c5c6ec74df
+  sni: www.calmlunch.com
+  type: trojan
   ws-opts:
     headers:
-      Host: app.hajmyab.ir
-    path: /
-- name: US-zipvpn.net-263
+      Host: www.calmlunch.com
+    path: /assignment
+- name: US-zipvpn.net-039
+  network: ws
+  password: humanity
+  port: 443
+  server: www.calmlunch.com
+  skip-cert-verify: false
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: /assignment
+- name: SC-zipvpn.net-079
+  network: ws
+  password: trojan
+  port: 8443
+  server: 45.192.222.112
+  skip-cert-verify: false
+  sni: store.timimi.dpdns.org
+  type: trojan
+  ws-opts:
+    headers:
+      Host: store.timimi.dpdns.org
+    path: /?ed=2560
+- name: GB-zipvpn.net-268
   network: ws
   password: 87d1bfd4-574e-4c96-ad42-0426f27461ff
   port: 443
@@ -830,15 +844,35 @@ proxies:
     headers:
       Host: _acme-challenge.sb.cloudns.biz
     path: /
-- alterId: 0
-  cipher: auto
-  name: HK-zipvpn.net-285
-  port: 80
-  server: 45.196.235.171
+- name: US-zipvpn.net-270
+  password: iWnFtzMiac
+  port: 19258
+  server: 205.185.115.223
   skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 47eefac2-9767-49e1-c8e6-524e39d8765f
+  sni: cloudflare.com
+  type: trojan
+- name: HK144｜家宽｜非常安全
+  password: BxceQaOe
+  port: 443
+  server: 219.76.135.98
+  skip-cert-verify: true
+  sni: 219.76.135.98
+  type: trojan
+- name: 香港5|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 443
+  server: 112.120.31.36
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- name: DE-zipvpn.net-305
+  password: 63b21d86-a49c-4936-a634-0b5af3e30433
+  port: 443
+  server: tuntro010.instconn.com
+  skip-cert-verify: false
+  sni: frankfurtrm2.686911.xyz
+  type: trojan
 - alterId: 0
   cipher: auto
   name: IN1｜家宽｜非常安全
@@ -888,13 +922,6 @@ proxies:
   server: 58.152.25.130
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
-  type: trojan
-- name: HK144｜家宽｜非常安全
-  password: BxceQaOe
-  port: 443
-  server: 219.76.135.98
-  skip-cert-verify: true
-  sni: 219.76.135.98
   type: trojan
 - name: US166｜机房｜低风险
   network: ws
@@ -1309,14 +1336,6 @@ proxies:
   password: BxceQaOe
   port: 1820
   server: 13.112.171.80
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
-- name: 香港5|@ripaojiedian
-  network: tcp
-  password: BxceQaOe
-  port: 443
-  server: 112.120.31.36
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
   type: trojan
