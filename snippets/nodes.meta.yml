@@ -93,12 +93,12 @@ proxies:
   name: 'end-gfw.com10@jp89 #1'
   password: 1a17b19d-4896-4531-af79-6e91d8ef8228
   port: 8989
-  server: 13.113.95.207
+  server: 52.195.230.145
   type: ss
 - name: 'end-gfw.com11@jp89 #1'
   password: 1a17b19d-4896-4531-af79-6e91d8ef8228
   port: 6688
-  server: 13.113.95.207
+  server: 52.195.230.145
   skip-cert-verify: true
   sni: baidu.com
   type: trojan
@@ -107,7 +107,7 @@ proxies:
   name: 'end-gfw.com12@jp89 #1'
   network: ws
   port: 8686
-  server: 13.113.95.207
+  server: 52.195.230.145
   servername: baidu.com
   tls: false
   type: vmess
@@ -120,12 +120,12 @@ proxies:
   name: 'end-gfw.com20@kr64 #1'
   password: 1a17b19d-4896-4531-af79-6e91d8ef8228
   port: 8989
-  server: 3.34.191.175
+  server: 13.209.12.91
   type: ss
 - name: 'end-gfw.com21@kr64 #1'
   password: 1a17b19d-4896-4531-af79-6e91d8ef8228
   port: 6688
-  server: 3.34.191.175
+  server: 13.209.12.91
   skip-cert-verify: true
   sni: baidu.com
   type: trojan
@@ -134,7 +134,7 @@ proxies:
   name: 'end-gfw.com22@kr64 #1'
   network: ws
   port: 8686
-  server: 3.34.191.175
+  server: 13.209.12.91
   servername: baidu.com
   tls: false
   type: vmess
@@ -147,12 +147,12 @@ proxies:
   name: 'end-gfw.com30@us19 #1'
   password: 1a17b19d-4896-4531-af79-6e91d8ef8228
   port: 8989
-  server: 34.211.253.169
+  server: 44.252.96.154
   type: ss
 - name: 'end-gfw.com31@us19 #1'
   password: 1a17b19d-4896-4531-af79-6e91d8ef8228
   port: 6688
-  server: 34.211.253.169
+  server: 44.252.96.154
   skip-cert-verify: true
   sni: baidu.com
   type: trojan
@@ -161,7 +161,7 @@ proxies:
   name: 'end-gfw.com32@us19 #1'
   network: ws
   port: 8686
-  server: 34.211.253.169
+  server: 44.252.96.154
   servername: baidu.com
   tls: false
   type: vmess
@@ -214,7 +214,7 @@ proxies:
   tls: true
   type: ss
 - alterId: 0
-  name: 香港3|@ripaojiedian
+  name: 10,11|香港3|@ripaojiedian
   network: tcp
   password: f7dbed8b1ca85124e793ba6c0bcfd0db
   port: 443
@@ -609,7 +609,7 @@ proxies:
   type: trojan
   udp: true
 - alterId: 0
-  name: 新加坡2|@ripaojiedian
+  name: 10,11|新加坡2|@ripaojiedian
   network: tcp
   password: f7dbed8b1ca85124e793ba6c0bcfd0db
   port: 4674
@@ -689,7 +689,7 @@ proxies:
   tls: true
   type: ss
 - alterId: 0
-  name: 美国|@ripaojiedian
+  name: 10,11|美国|@ripaojiedian
   network: tcp
   password: f7dbed8b1ca85124e793ba6c0bcfd0db
   port: 4019
@@ -700,7 +700,7 @@ proxies:
   type: trojan
   udp: true
 - alterId: 0
-  name: 美国2|@ripaojiedian
+  name: 10,11|美国2|@ripaojiedian
   network: tcp
   password: f7dbed8b1ca85124e793ba6c0bcfd0db
   port: 4019
@@ -748,7 +748,7 @@ proxies:
   ws-opts:
     path: /vmess/
 - alterId: 0
-  name: 日本3|@ripaojiedian
+  name: 10,11|日本3|@ripaojiedian
   network: tcp
   password: f7dbed8b1ca85124e793ba6c0bcfd0db
   port: 4937
@@ -889,7 +889,7 @@ proxies:
       host: fapeng.org
     path: linkvws
 - alterId: 0
-  name: 新加坡|@ripaojiedian
+  name: 10,11|新加坡|@ripaojiedian
   network: tcp
   password: f7dbed8b1ca85124e793ba6c0bcfd0db
   port: 4674
@@ -914,7 +914,7 @@ proxies:
       host: ous3.dean52.top
     path: /f08369d1-5ee7-4b16-d786-30bce12fc33c
 - alterId: 0
-  name: 日本2|@ripaojiedian
+  name: 10,11|日本2|@ripaojiedian
   network: tcp
   password: f7dbed8b1ca85124e793ba6c0bcfd0db
   port: 34818
@@ -933,6 +933,30 @@ proxies:
   skip-cert-verify: true
   tls: true
   type: ss
+- name: CDN-zipvpn.net-006
+  network: ws
+  password: humanity
+  port: 443
+  server: v1.dabache.top
+  skip-cert-verify: false
+  sni: www.multiplydose.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.multiplydose.com
+    path: /assignment
+- name: CDN-zipvpn.net-008
+  network: ws
+  password: humanity
+  port: 443
+  server: 188.114.96.3
+  skip-cert-verify: false
+  sni: www.gossipglove.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.gossipglove.com
+    path: /assignment
 - name: CDN-zipvpn.net-010
   network: ws
   password: humanity
@@ -945,31 +969,7 @@ proxies:
     headers:
       Host: www.multiplydose.com
     path: /assignment
-- name: CDN-zipvpn.net-017
-  network: ws
-  password: humanity
-  port: 443
-  server: www.multiplydose.com
-  skip-cert-verify: false
-  sni: www.multiplydose.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.multiplydose.com
-    path: /assignment
-- name: CDN-zipvpn.net-022
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.21.40.34
-  skip-cert-verify: false
-  sni: www.gossipglove.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.gossipglove.com
-    path: /assignment
-- name: CH-zipvpn.net-025
+- name: CH-zipvpn.net-011
   network: ws
   password: humanity
   port: 443
@@ -981,19 +981,19 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: /assignment
-- name: CDN-zipvpn.net-027
+- name: CDN-zipvpn.net-012
   network: ws
   password: humanity
   port: 443
-  server: 188.114.96.3
+  server: www.multiplydose.com
   skip-cert-verify: false
-  sni: www.gossipglove.com
+  sni: www.multiplydose.com
   type: trojan
   ws-opts:
     headers:
-      Host: www.gossipglove.com
+      Host: www.multiplydose.com
     path: /assignment
-- name: CDN-zipvpn.net-029
+- name: CDN-zipvpn.net-017
   network: ws
   password: humanity
   port: 443
@@ -1014,7 +1014,7 @@ proxies:
     headers:
       Host: www.gossipglove.com
     path: /assignment
-- name: CDN-zipvpn.net-048
+- name: CDN-zipvpn.net-034
   network: ws
   password: humanity
   port: 443
@@ -1026,28 +1026,19 @@ proxies:
     headers:
       Host: www.multiplydose.com
     path: /assignment
-- name: CH-zipvpn.net-049
+- name: CDN-zipvpn.net-047
   network: ws
   password: humanity
   port: 443
-  server: 185.18.250.252
+  server: 104.21.40.34
   skip-cert-verify: false
-  sni: www.creationlong.org
+  sni: www.gossipglove.com
   type: trojan
   ws-opts:
     headers:
-      Host: www.creationlong.org
+      Host: www.gossipglove.com
     path: /assignment
-- alterId: 0
-  cipher: auto
-  name: DE-zipvpn.net-059
-  port: 180
-  server: 82.198.246.97
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- name: CDN-zipvpn.net-078
+- name: CDN-zipvpn.net-059
   network: ws
   password: humanity
   port: 443
@@ -1061,21 +1052,7 @@ proxies:
     path: '%252Fassignment'
 - alterId: 0
   cipher: auto
-  name: CDN-zipvpn.net-121
-  network: ws
-  port: 443
-  server: nqzkb.cmvvb.online
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 5017f929-00f3-4244-abb6-c7295ebf0ac3
-  ws-opts:
-    headers:
-      Host: nqzkb.cmvvb.online
-    path: /
-- alterId: 0
-  cipher: auto
-  name: CDN-zipvpn.net-125
+  name: CDN-zipvpn.net-061
   network: ws
   port: 8443
   server: 104.17.77.77
@@ -1088,27 +1065,84 @@ proxies:
     headers:
       Host: v2ray1.dozapp.xyz
     path: /lMnsZUN4/
-- name: US-zipvpn.net-128
+- name: GB-zipvpn.net-083
+  password: zp630tdUuD
+  port: 52047
+  server: 194.150.166.151
+  skip-cert-verify: false
+  sni: aws.amazon.com
+  type: trojan
+- name: CH-zipvpn.net-086
+  network: ws
+  password: humanity
+  port: 443
+  server: 185.18.250.252
+  skip-cert-verify: false
+  sni: www.creationlong.org
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.creationlong.org
+    path: /assignment
+- alterId: 0
+  cipher: auto
+  name: CDN-zipvpn.net-104
+  network: ws
+  port: 8443
+  server: kwtgm.cmvvb.online
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: d0a3ebd2-23db-42b3-9823-7c57d1d5591b
+  ws-opts:
+    headers:
+      Host: kwtgm.cmvvb.online
+    path: /
+- alterId: 0
+  cipher: auto
+  name: CDN-zipvpn.net-106
+  network: ws
+  port: 443
+  server: udtzy.cmvvb.online
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: f072a2e5-8093-43e0-830f-a4132f121d52
+  ws-opts:
+    headers:
+      Host: udtzy.cmvvb.online
+    path: /
+- name: US-zipvpn.net-117
   password: RmhZQ47pEm
   port: 18718
   server: 180.131.145.169
   skip-cert-verify: false
   sni: www.tesla.com
   type: trojan
-- alterId: 0
-  cipher: auto
-  name: CDN-zipvpn.net-145
+- name: CDN-zipvpn.net-123
   network: ws
+  password: T9BpZIVMNv
   port: 8443
-  server: t1.620720.xyz
+  server: v1.dabache.top
   skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
+  sni: sweden.vmaxpanel.com
+  type: trojan
   ws-opts:
     headers:
-      Host: t1.620720.xyz
-    path: /
+      Host: sweden.vmaxpanel.com
+    path: /amd
+- name: CDN-zipvpn.net-124
+  network: ws
+  password: T9BpZIVMNv
+  port: 8443
+  server: sweden.vmaxpanel.com
+  skip-cert-verify: false
+  sni: sweden.vmaxpanel.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: sweden.vmaxpanel.com
+    path: /amd
 - name: US1｜机房｜低风险
   network: ws
   port: 443
@@ -5997,6 +6031,14 @@ proxies:
   sni: api.kermanshahi.org
   tls: false
   type: hysteria2
+- name: 8⚛️@oneclickvpnkeys
+  password: ilikecs123!
+  port: 443
+  server: 66.154.127.121
+  skip-cert-verify: true
+  sni: cloudcone.wolfmoss.top
+  tls: false
+  type: hysteria2
 - cipher: aes-256-cfb
   name: tg频道:@ripaojiedian
   password: amazonskr05
@@ -6012,7 +6054,7 @@ proxies:
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- name: 香港4|@ripaojiedian
+- name: 10,11|香港4|@ripaojiedian
   network: tcp
   password: BxceQaOe
   port: 38301
@@ -6020,7 +6062,7 @@ proxies:
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
   type: trojan
-- name: 香港5|@ripaojiedian
+- name: 10,11|香港5|@ripaojiedian
   network: tcp
   password: BxceQaOe
   port: 38301
@@ -6028,7 +6070,7 @@ proxies:
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
   type: trojan
-- name: 日本|@ripaojiedian
+- name: 10,11|日本|@ripaojiedian
   network: tcp
   password: BxceQaOe
   port: 3022
@@ -6036,7 +6078,7 @@ proxies:
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
   type: trojan
-- name: 新加坡3|@ripaojiedian
+- name: 10,11|新加坡3|@ripaojiedian
   network: tcp
   password: BxceQaOe
   port: 1717
@@ -6044,7 +6086,7 @@ proxies:
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
   type: trojan
-- name: 美国3|@ripaojiedian
+- name: 10,11|美国3|@ripaojiedian
   network: tcp
   password: BxceQaOe
   port: 28680
@@ -6062,6 +6104,102 @@ proxies:
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- name: 香港3|@ripaojiedian
+  network: tcp
+  password: f7dbed8b1ca85124e793ba6c0bcfd0db
+  port: 921
+  server: 54.250.4.226
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 香港4|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 388
+  server: 57.180.10.241
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- name: 香港5|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 6313
+  server: 13.112.192.191
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- name: 日本|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 4945
+  server: 57.180.10.241
+  skip-cert-verify: true
+  sni: t.me%252Fripaojiedian
+  type: trojan
+- name: 日本2|@ripaojiedian
+  network: tcp
+  password: f7dbed8b1ca85124e793ba6c0bcfd0db
+  port: 4937
+  server: 153.121.65.107
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 日本3|@ripaojiedian
+  network: tcp
+  password: f7dbed8b1ca85124e793ba6c0bcfd0db
+  port: 34818
+  server: 153.121.65.107
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 新加坡|@ripaojiedian
+  network: tcp
+  password: f7dbed8b1ca85124e793ba6c0bcfd0db
+  port: 3419
+  server: 160.16.124.17
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 新加坡2|@ripaojiedian
+  network: tcp
+  password: f7dbed8b1ca85124e793ba6c0bcfd0db
+  port: 3419
+  server: 153.121.65.107
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 新加坡3|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 52951
+  server: 95.40.88.242
+  skip-cert-verify: true
+  sni: t.me%252Fripaojiedian
+  type: trojan
+- name: 美国|@ripaojiedian
+  network: tcp
+  password: f7dbed8b1ca85124e793ba6c0bcfd0db
+  port: 4920
+  server: 54.199.149.138
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 美国2|@ripaojiedian
+  network: tcp
+  password: f7dbed8b1ca85124e793ba6c0bcfd0db
+  port: 4019
+  server: 160.16.130.21
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 美国3|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 2960
+  server: 43.198.86.230
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
 - client-fingerprint: random
   name: AT_speednode_0001
   network: ws
