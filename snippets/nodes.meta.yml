@@ -93,12 +93,12 @@ proxies:
   name: 'end-gfw.com10@jp89 #1'
   password: 1a17b19d-4896-4531-af79-6e91d8ef8228
   port: 8989
-  server: 13.231.224.229
+  server: 13.230.87.64
   type: ss
 - name: 'end-gfw.com11@jp89 #1'
   password: 1a17b19d-4896-4531-af79-6e91d8ef8228
   port: 6688
-  server: 13.231.224.229
+  server: 13.230.87.64
   skip-cert-verify: true
   sni: baidu.com
   type: trojan
@@ -107,7 +107,7 @@ proxies:
   name: 'end-gfw.com12@jp89 #1'
   network: ws
   port: 8686
-  server: 13.231.224.229
+  server: 13.230.87.64
   servername: baidu.com
   tls: false
   type: vmess
@@ -120,12 +120,12 @@ proxies:
   name: 'end-gfw.com20@kr64 #1'
   password: 1a17b19d-4896-4531-af79-6e91d8ef8228
   port: 8989
-  server: 54.180.229.21
+  server: 43.203.204.90
   type: ss
 - name: 'end-gfw.com21@kr64 #1'
   password: 1a17b19d-4896-4531-af79-6e91d8ef8228
   port: 6688
-  server: 54.180.229.21
+  server: 43.203.204.90
   skip-cert-verify: true
   sni: baidu.com
   type: trojan
@@ -134,7 +134,7 @@ proxies:
   name: 'end-gfw.com22@kr64 #1'
   network: ws
   port: 8686
-  server: 54.180.229.21
+  server: 43.203.204.90
   servername: baidu.com
   tls: false
   type: vmess
@@ -147,12 +147,12 @@ proxies:
   name: 'end-gfw.com30@us19 #1'
   password: 1a17b19d-4896-4531-af79-6e91d8ef8228
   port: 8989
-  server: 35.89.90.103
+  server: 44.243.210.68
   type: ss
 - name: 'end-gfw.com31@us19 #1'
   password: 1a17b19d-4896-4531-af79-6e91d8ef8228
   port: 6688
-  server: 35.89.90.103
+  server: 44.243.210.68
   skip-cert-verify: true
   sni: baidu.com
   type: trojan
@@ -161,7 +161,7 @@ proxies:
   name: 'end-gfw.com32@us19 #1'
   network: ws
   port: 8686
-  server: 35.89.90.103
+  server: 44.243.210.68
   servername: baidu.com
   tls: false
   type: vmess
@@ -911,7 +911,29 @@ proxies:
   tls: true
   type: trojan
   udp: true
-- name: US-zipvpn.net-054
+- alterId: 0
+  cipher: auto
+  name: GB_speednode_0009
+  port: 180
+  server: 82.198.246.97
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- name: ES-zipvpn.net-051
+  network: ws
+  password: trojan
+  port: 8443
+  server: 109.234.211.66
+  skip-cert-verify: false
+  sni: store.timimi.dpdns.org
+  type: trojan
+  ws-opts:
+    headers:
+      Host: store.timimi.dpdns.org
+    path: /
+- name: US-zipvpn.net-063
   network: ws
   password: Nova-Proxy
   port: 8443
@@ -923,16 +945,33 @@ proxies:
     headers:
       Host: small-morning-2668.drusavm.workers.dev
     path: /?ed
-- name: CA-zipvpn.net-077
-  password: YRw2bzmWwl
-  port: 17837
-  server: 209.200.246.105
+- name: US-zipvpn.net-080
+  network: ws
+  password: trojan
+  port: 587
+  server: 38.95.73.40
   skip-cert-verify: false
-  sni: aws.amazon.com
+  sni: jflsjlaf.pages.dev
   type: trojan
+  ws-opts:
+    headers:
+      Host: jflsjlaf.pages.dev
+    path: /
+- name: US-zipvpn.net-083
+  network: ws
+  password: trojan
+  port: 8001
+  server: 178.157.50.221
+  skip-cert-verify: false
+  sni: jflsjlaf.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: jflsjlaf.pages.dev
+    path: /
 - alterId: 0
   cipher: auto
-  name: US-zipvpn.net-080
+  name: US-zipvpn.net-090
   network: ws
   port: 8443
   server: 104.17.77.77
@@ -945,43 +984,39 @@ proxies:
     headers:
       Host: v2ray1.dozapp.xyz
     path: /lMnsZUN4/
-- name: US-zipvpn.net-090
+- name: CA-zipvpn.net-097
+  password: YRw2bzmWwl
+  port: 17837
+  server: 209.200.246.105
+  skip-cert-verify: false
+  sni: aws.amazon.com
+  type: trojan
+- name: ES-zipvpn.net-115
   network: ws
   password: trojan
-  port: 8001
-  server: 178.157.50.221
+  port: 2087
+  server: 109.234.211.66
   skip-cert-verify: false
-  sni: jflsjlaf.pages.dev
+  sni: store.timimi.dpdns.org
   type: trojan
   ws-opts:
     headers:
-      Host: jflsjlaf.pages.dev
+      Host: store.timimi.dpdns.org
     path: /
-- name: CH-zipvpn.net-092
-  network: ws
-  password: humanity
-  port: 443
-  server: 185.18.250.252
+- cipher: chacha20-ietf-poly1305
+  name: NL-zipvpn.net-116
+  password: 2Z9ba3GwDL-rn6DSQ0N-awHNhcuxaHP3
+  port: 4456
+  server: 81.31.209.9
+  type: ss
+- name: JP-zipvpn.net-120
+  password: BxceQaOe
+  port: 3022
+  server: 52.68.96.91
   skip-cert-verify: false
-  sni: www.gossipglove.com
+  sni: t.me%25252Fripaojiedian
   type: trojan
-  ws-opts:
-    headers:
-      Host: www.gossipglove.com
-    path: /assignment
-- name: US-zipvpn.net-099
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.21.40.34
-  skip-cert-verify: false
-  sni: www.gossipglove.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.gossipglove.com
-    path: /assignment
-- name: CH-zipvpn.net-108
+- name: CH-zipvpn.net-123
   network: ws
   password: humanity
   port: 443
@@ -993,14 +1028,7 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: /assignment
-- name: NO-zipvpn.net-115
-  password: wp9IsiY82uQhcmgNC1eoBM
-  port: 12420
-  server: 80.173.231.254
-  skip-cert-verify: false
-  sni: '%F0%9F%94%92%20%5BBy%20EbraSha%5D%20'
-  type: trojan
-- name: US-zipvpn.net-117
+- name: US-zipvpn.net-126
   network: ws
   password: humanity
   port: 443
@@ -1012,17 +1040,11 @@ proxies:
     headers:
       Host: www.multiplydose.com
     path: /assignment
-- cipher: chacha20-ietf-poly1305
-  name: NL-zipvpn.net-121
-  password: 2Z9ba3GwDL-rn6DSQ0N-awHNhcuxaHP3
-  port: 4456
-  server: 81.31.209.9
-  type: ss
-- name: zipvpn.net-124
+- name: US-zipvpn.net-127
   network: ws
   password: humanity
   port: 443
-  server: www.gossipglove.com
+  server: 104.21.40.34
   skip-cert-verify: false
   sni: www.gossipglove.com
   type: trojan
@@ -1030,31 +1052,13 @@ proxies:
     headers:
       Host: www.gossipglove.com
     path: /assignment
-- name: US-zipvpn.net-130
-  network: ws
-  password: humanity
-  port: 443
-  server: www.calmlunch.com
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
-- name: US-zipvpn.net-131
-  network: ws
-  password: humanity
-  port: 443
-  server: 188.114.96.3
-  skip-cert-verify: false
-  sni: www.creationlong.org
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.creationlong.org
-    path: /assignment
-- name: zipvpn.net-134
+- cipher: chacha20-ietf-poly1305
+  name: DE-zipvpn.net-133
+  password: 2Z9ba3GwDL-rn6DSQ0N-awHNhcuxaHP3
+  port: 4467
+  server: 89.144.35.127
+  type: ss
+- name: US-zipvpn.net-141
   network: ws
   password: humanity
   port: 443
@@ -1066,23 +1070,55 @@ proxies:
     headers:
       Host: www.multiplydose.com
     path: /assignment
-- cipher: chacha20-ietf-poly1305
-  name: DE-zipvpn.net-140
-  password: 2Z9ba3GwDL-rn6DSQ0N-awHNhcuxaHP3
-  port: 4461
-  server: 03.germany.ray-vpn.ru
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: PL-zipvpn.net-145
-  password: 2Z9ba3GwDL-rn6DSQ0N-awHNhcuxaHP3
-  port: 4495
-  server: auto.poland.ray-vpn.ru
-  type: ss
-- name: US-zipvpn.net-153
+- name: 日本3|@ripaojiedian
+  network: tcp
+  password: f389ed926e512e15f382dc3804029474
+  port: 4937
+  server: 160.16.214.104
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: CH-zipvpn.net-145
   network: ws
   password: humanity
   port: 443
-  server: www.creationlong.org
+  server: 185.18.250.252
+  skip-cert-verify: false
+  sni: www.gossipglove.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.gossipglove.com
+    path: /assignment
+- name: zipvpn.net-155
+  network: ws
+  password: humanity
+  port: 443
+  server: www.calmlunch.com
+  skip-cert-verify: false
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: /assignment
+- name: zipvpn.net-160
+  network: ws
+  password: humanity
+  port: 443
+  server: www.gossipglove.com
+  skip-cert-verify: false
+  sni: www.gossipglove.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.gossipglove.com
+    path: /assignment
+- name: US-zipvpn.net-162
+  network: ws
+  password: humanity
+  port: 443
+  server: 188.114.96.3
   skip-cert-verify: false
   sni: www.creationlong.org
   type: trojan
@@ -1090,7 +1126,19 @@ proxies:
     headers:
       Host: www.creationlong.org
     path: /assignment
-- name: AT-zipvpn.net-155
+- name: NL-zipvpn.net-165
+  network: ws
+  password: trojan
+  port: 8444
+  server: 152.53.200.232
+  skip-cert-verify: false
+  sni: jflsjlaf.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: jflsjlaf.pages.dev
+    path: /
+- name: AT-zipvpn.net-168
   network: ws
   password: trojan
   port: 8444
@@ -1102,45 +1150,18 @@ proxies:
     headers:
       Host: jflsjlaf.pages.dev
     path: /
-- name: 日本3|@ripaojiedian
-  network: tcp
-  password: f389ed926e512e15f382dc3804029474
-  port: 4937
-  server: 160.16.214.104
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: zipvpn.net-215
+- name: AT-zipvpn.net-170
   network: ws
-  port: 8443
-  server: kwtgm.cmvvb.online
-  servername: kwtgm.cmvvb.online
+  password: trojan
+  port: 8444
+  server: 152.53.200.23
   skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 9fc9b94d-6b44-4029-bc41-09e4ac92e508
+  sni: jflsjlaf.pages.dev
+  type: trojan
   ws-opts:
     headers:
-      Host: kwtgm.cmvvb.online
+      Host: jflsjlaf.pages.dev
     path: /
-- name: 新加坡3|@ripaojiedian
-  network: tcp
-  password: BxceQaOe
-  port: 52951
-  server: 16.162.45.163
-  skip-cert-verify: true
-  sni: t.me%252Fripaojiedian
-  type: trojan
-- name: 香港3|@ripaojiedian
-  network: tcp
-  password: f389ed926e512e15f382dc3804029474
-  port: 921
-  server: 175.41.228.177
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
 - name: 新加坡2|@ripaojiedian
   network: tcp
   password: f389ed926e512e15f382dc3804029474
@@ -1149,29 +1170,78 @@ proxies:
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
-- name: 美国2|@ripaojiedian
-  network: tcp
-  password: f389ed926e512e15f382dc3804029474
-  port: 3057
-  server: 160.16.214.104
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
-- name: zipvpn.net-283
+- name: US-zipvpn.net-179
   network: ws
   password: humanity
   port: 443
-  server: v1.dabache.top
+  server: www.creationlong.org
   skip-cert-verify: false
-  sni: www.multiplydose.com
+  sni: www.creationlong.org
   type: trojan
   ws-opts:
     headers:
-      Host: www.multiplydose.com
+      Host: www.creationlong.org
     path: /assignment
+- name: JP-zipvpn.net-182
+  network: ws
+  password: trojan
+  port: 587
+  server: 217.142.250.195
+  skip-cert-verify: false
+  sni: jflsjlaf.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: jflsjlaf.pages.dev
+    path: /
+- name: NL-zipvpn.net-190
+  network: ws
+  password: trojan
+  port: 8444
+  server: 152.53.104.142
+  skip-cert-verify: false
+  sni: jflsjlaf.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: jflsjlaf.pages.dev
+    path: /
+- name: HK-zipvpn.net-219
+  password: BxceQaOe
+  port: 52951
+  server: 16.162.45.163
+  skip-cert-verify: false
+  sni: t.me%25252Fripaojiedian
+  type: trojan
+- name: KR-zipvpn.net-252
+  network: ws
+  password: trojan
+  port: 29999
+  server: 59.20.121.139
+  skip-cert-verify: false
+  sni: jflsjlaf.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: jflsjlaf.pages.dev
+    path: /
 - alterId: 0
   cipher: auto
-  name: zipvpn.net-287
+  name: US-zipvpn.net-255
+  network: ws
+  port: 8443
+  server: hwtqcp.uhomdex.shop
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: eddebc92-b9f7-4019-8a11-0d733bfe665d
+  ws-opts:
+    headers:
+      Host: hwtqcp.uhomdex.shop
+    path: /
+- alterId: 0
+  cipher: auto
+  name: US-zipvpn.net-256
   network: ws
   port: 443
   server: qvxbtx.uhomdex.shop
@@ -1186,49 +1256,74 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: zipvpn.net-289
+  name: zipvpn.net-257
   network: ws
-  port: 8443
-  server: hwtqcp.uhomdex.shop
+  port: 443
+  server: cxsfvn.uhomdex.shop
+  servername: cxsfvn.uhomdex.shop
   skip-cert-verify: false
   tls: true
   type: vmess
-  uuid: eddebc92-b9f7-4019-8a11-0d733bfe665d
+  uuid: bb6e260e-b80d-4365-b252-9fbe466f1f34
   ws-opts:
     headers:
-      Host: hwtqcp.uhomdex.shop
+      Host: cxsfvn.uhomdex.shop
     path: /
-- cipher: chacha20-ietf-poly1305
-  name: DE-zipvpn.net-293
-  password: 2Z9ba3GwDL-rn6DSQ0N-awHNhcuxaHP3
-  port: 4467
-  server: 89.144.35.127
-  type: ss
-- name: RU-zipvpn.net-301
+- name: KR-zipvpn.net-272
   network: ws
-  password: vpn
-  port: 2025
-  server: 45.82.14.144
+  password: trojan
+  port: 11434
+  server: 220.93.106.4
   skip-cert-verify: false
+  sni: jflsjlaf.pages.dev
   type: trojan
   ws-opts:
+    headers:
+      Host: jflsjlaf.pages.dev
     path: /
-- name: 香港4|@ripaojiedian
-  network: tcp
+- name: HK_speednode_0015
   password: BxceQaOe
-  port: 388
-  server: 13.230.215.64
+  port: 443
+  server: 58.152.25.253
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
   type: trojan
-- name: 美国3|@ripaojiedian
-  network: tcp
-  password: BxceQaOe
-  port: 5390
-  server: 18.163.80.240
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
+  udp: true
+- name: US-zipvpn.net-301
+  network: ws
+  password: humanity
+  port: 443
+  server: v1.dabache.top
+  skip-cert-verify: false
+  sni: www.multiplydose.com
   type: trojan
+  ws-opts:
+    headers:
+      Host: www.multiplydose.com
+    path: /assignment
+- name: 美国2|@ripaojiedian
+  network: tcp
+  password: f389ed926e512e15f382dc3804029474
+  port: 3057
+  server: 160.16.214.104
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: US-zipvpn.net-339
+  network: ws
+  port: 443
+  server: udtzy.cmvvb.online
+  servername: udtzy.cmvvb.online
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 847e9159-9716-4213-97a9-50d5db3fd74a
+  ws-opts:
+    headers:
+      Host: udtzy.cmvvb.online
+    path: /
 - name: US1｜机房｜低风险
   network: ws
   port: 443
@@ -6156,6 +6251,22 @@ proxies:
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- name: 香港3|@ripaojiedian
+  network: tcp
+  password: f389ed926e512e15f382dc3804029474
+  port: 921
+  server: 175.41.228.177
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 香港4|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 388
+  server: 13.230.215.64
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
 - name: 香港5|@ripaojiedian
   network: tcp
   password: BxceQaOe
@@ -6188,6 +6299,22 @@ proxies:
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
+- name: 新加坡3|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 52951
+  server: 16.162.45.163
+  skip-cert-verify: true
+  sni: t.me%252Fripaojiedian
+  type: trojan
+- name: 美国3|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 5390
+  server: 18.163.80.240
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
 - alterId: 2
   cipher: auto
   name: 香港|@ripaojiedian
@@ -6198,14 +6325,6 @@ proxies:
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- name: HK_speednode_0015
-  password: BxceQaOe
-  port: 443
-  server: 58.152.25.253
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
-  udp: true
 - name: KR_speednode_0031
   network: ws
   password: trojan
@@ -6331,16 +6450,6 @@ proxies:
   type: vless
   udp: true
   uuid: d6415904-ebd7-43da-a4a0-26a627aa20fb
-- alterId: 0
-  cipher: auto
-  name: GB_speednode_0009
-  port: 180
-  server: 82.198.246.97
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
 - cipher: chacha20-ietf-poly1305
   name: GB_speednode_0010
   password: W74XFALLLuw6m5IA
