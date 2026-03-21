@@ -2,29 +2,31 @@ proxies:
 - alterId: 0
   name: 🇯🇵JP日本
   password: BxceQaOe
-  port: 16919
-  server: 57.180.252.251
+  port: 4945
+  server: 13.231.224.38
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
   tls: true
   type: trojan
   udp: true
 - alterId: 0
-  name: 🇯🇵JP日本2
+  name: 日本3|@ripaojiedian
+  network: tcp
   password: 86e150eb21c6faee48e81d496d7f61c2
-  port: 34818
-  server: 54.248.3.214
-  skip-cert-verify: true
+  port: 4937
+  server: 153.121.38.213
+  skip-cert-verify: false
   sni: www.nintendogames.net
   tls: true
   type: trojan
   udp: true
 - alterId: 0
-  name: 🇯🇵JP日本3
+  name: 日本2|@ripaojiedian
+  network: tcp
   password: 86e150eb21c6faee48e81d496d7f61c2
   port: 2001
-  server: 57.180.17.175
-  skip-cert-verify: true
+  server: 18.183.166.176
+  skip-cert-verify: false
   sni: www.nintendogames.net
   tls: true
   type: trojan
@@ -80,19 +82,32 @@ proxies:
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
   type: trojan
-- name: 日本2|@ripaojiedian
-  network: tcp
-  password: 86e150eb21c6faee48e81d496d7f61c2
-  port: 2001
-  server: 18.183.166.176
+- client-fingerprint: random
+  name: JP_speednode_0014
+  network: ws
+  port: 39738
+  server: 103.214.168.247
+  servername: snippet.fgfw.de5.net
   skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
-- name: 日本3|@ripaojiedian
-  network: tcp
-  password: 86e150eb21c6faee48e81d496d7f61c2
-  port: 4937
-  server: 153.121.38.213
+  tls: true
+  type: vless
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  ws-opts:
+    headers:
+      Host: snippet.fgfw.de5.net
+    path: /danfeng
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: JP_speednode_0015
+  port: 2443
+  reality-opts:
+    public-key: u8FFKKLif3K14_SqiDEF834Rpp4zETdOYt2mFrrsSnQ
+    short-id: '!!str b15116d00de0'
+  server: 217.142.227.120
+  servername: www.cloudflare.com
   skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48b36b6a-eaa6-4843-9231-0bb8b38b5da5
