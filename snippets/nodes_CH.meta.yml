@@ -1,7 +1,7 @@
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 01
+  name: 🇨🇭 瑞士 | vless | 02
   network: tcp
   port: 10965
   reality-opts:
@@ -12,9 +12,22 @@ proxies:
   tls: false
   type: vless
   uuid: d1209ffb-c159-48d5-b40d-542ce11fc768
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇨🇭 瑞士 | vless | 03
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: nPcUKydxoRI66O3tT9O4QCZpLjOBvkGsiXG7pDX1BBw
+    short-id: '!!str 6ba85179e30d4fc2'
+  server: 95.85.239.225
+  servername: www.google.com
+  tls: false
+  type: vless
+  uuid: c8d1c6d3-388f-48fc-a8f0-ed90d955d096
 - alterId: 0
   cipher: auto
-  name: 🇨🇭 瑞士 | vmess | 03
+  name: 🇨🇭 瑞士 | vmess | 04
   network: ws
   port: 443
   server: 140.238.212.95
@@ -26,3 +39,15 @@ proxies:
     headers:
       Host: e130917c-1b58-4136-b2d9-76dc920e0add.add97ee8-0f14-48a3-b2cd-979c56742e64.loseyourip.com
     path: /
+- name: 🇨🇭 瑞士 | trojan | 05
+  network: ws
+  password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
+  port: 2083
+  server: 95.85.239.225
+  skip-cert-verify: true
+  sni: xo.e0f.cx
+  type: trojan
+  ws-opts:
+    headers:
+      Host: xo.e0f.cx
+    path: /trojan-ws

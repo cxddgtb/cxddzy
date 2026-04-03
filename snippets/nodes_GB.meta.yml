@@ -13,15 +13,19 @@ proxies:
     headers:
       Host: e130917c-1b58-4136-b2d9-76dc920e0add.add97ee8-0f14-48a3-b2cd-979c56742e64.loseyourip.com
     path: /
-- alterId: 0
-  cipher: auto
-  name: 🇬🇧 英国 | vmess | 02
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇬🇧 英国 | vless | 02
   network: tcp
-  port: '22324'
-  server: 66.163.117.58
+  port: 443
+  reality-opts:
+    public-key: iCY6H8CpnIfqmIkEABduJEAeJrnYS089R1-jKEyVp3w
+    short-id: '!!str 5589c1'
+  server: 45.150.65.43
+  servername: us1.frostbot.ru
   tls: false
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  type: vless
+  uuid: fd37be2f-f8d1-47de-97e8-13c28107d31e
 - name: 🇬🇧 英国 | vless | 03
   network: tcp
   port: 4040
@@ -32,7 +36,16 @@ proxies:
   ws-opts:
     headers:
       Host: soft98.ir
-- name: 🇬🇧 英国 | vless | 04
+- alterId: 0
+  cipher: auto
+  name: 🇬🇧 英国 | vmess | 04
+  network: tcp
+  port: '22324'
+  server: 66.163.117.58
+  tls: false
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- name: 🇬🇧 英国 | vless | 05
   network: ws
   port: 17817
   server: 8.208.10.113
@@ -45,32 +58,8 @@ proxies:
     headers:
       Host: sub.mot.ip-ddns.com
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇬🇧 英国 | vless | 05
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: iCY6H8CpnIfqmIkEABduJEAeJrnYS089R1-jKEyVp3w
-    short-id: '!!str 5589c1'
-  server: 45.150.65.43
-  servername: us1.frostbot.ru
-  tls: false
-  type: vless
-  uuid: fd37be2f-f8d1-47de-97e8-13c28107d31e
-- name: 🇬🇧 英国 | vless | 06
-  network: ws
-  port: 80
-  server: 57.129.132.223
-  tls: false
-  type: vless
-  uuid: 9e20b04d-5a81-4e16-b421-01e502f0aac6
-  ws-opts:
-    headers:
-      Host: google.com
-    path: '%2Fvless%2F'
-- client-fingerprint: chrome
   flow: ''
-  name: 🇬🇧 英国 | vless | 29
+  name: 🇬🇧 英国 | vless | 06
   network: tcp
   port: 40721
   reality-opts:
@@ -82,13 +71,37 @@ proxies:
   type: vless
   uuid: bf3e8944-8d26-47de-8748-b9aa74cce974
 - alterId: 0
-  name: 🇬🇧GB英国3 641.7KB/s
-  network: tcp
+  cipher: auto
+  name: 🇬🇧 英国 | vmess | 08
+  network: ws
+  port: 80
+  server: 51.75.160.126
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: b739a204-ea0d-428b-bbf5-a632ec05edcf
+  ws-opts:
+    headers:
+      Host: ''
+    path: /vmess
+- name: 🇬🇧 英国 | vless | 13
+  network: ws
+  port: 80
+  server: 57.129.132.223
+  tls: false
+  type: vless
+  uuid: 9e20b04d-5a81-4e16-b421-01e502f0aac6
+  ws-opts:
+    headers:
+      Host: google.com
+    path: '%2Fvless%2F'
+- alterId: 0
+  name: 🇬🇧GB英国2 646.8KB/s
   password: n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj
   port: 10369
-  server: 82.26.155.199
+  server: 82.26.155.20
   skip-cert-verify: true
-  sni: fra4.chasem2026sud.com
+  sni: fra35.chasem2026sud.com
   tls: true
   type: trojan
   udp: true
@@ -104,20 +117,16 @@ proxies:
   type: trojan
   udp: true
 - alterId: 0
-  name: 🇬🇧GB英国2 646.8KB/s
+  name: 🇬🇧GB英国3 641.7KB/s
+  network: tcp
   password: n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj
   port: 10369
-  server: 82.26.155.20
+  server: 82.26.155.199
   skip-cert-verify: true
-  sni: fra35.chasem2026sud.com
+  sni: fra4.chasem2026sud.com
   tls: true
   type: trojan
   udp: true
-- name: 🇬🇧 英国 | trojan | 34
-  password: dd6dcb10-4683-11f0-ae79-1239d0255272
-  port: 443
-  server: 51.38.65.155
-  type: trojan
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: GB_speednode_0010
@@ -132,33 +141,39 @@ proxies:
   type: vless
   udp: true
   uuid: 4c3fe585-ac09-41df-b284-888818888188
-- alpn:
-  - h2
-  flow: ''
-  name: 🇬🇧 英国 | vless | 36
-  network: tcp
-  port: 8443
-  server: 152.233.28.198
-  servername: uk1.fromblancwithlove.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-- name: 🇬🇧 英国 | vless | 37
+- name: 🇬🇧 英国 | trojan | 37
   network: ws
-  port: 443
-  server: 57.129.137.241
-  servername: sni.111000.v6.navy
+  password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
+  port: 2083
+  server: 5.83.218.19
   skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  sni: xo.e0f.cx
+  type: trojan
   ws-opts:
     headers:
-      Host: sni.111000.v6.navy
+      Host: xo.e0f.cx
+    path: /trojan-ws
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇬🇧 英国 | vless | 38
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: ZpkoOvcRglQoTWJ3B7hiJlmMYTtIu41hJ51FMMdSTDE
+    short-id: '!!str 41427aa565e28984'
+  server: 78.141.199.54
+  servername: www.vodafone.co.uk
+  tls: false
+  type: vless
+  uuid: 43488128-319e-f480-64ea-0acdc712e2a8
+- name: 🇬🇧 英国 | trojan | 39
+  password: 02e653c9-7c93-46a9-999d-11834bd0c577
+  port: 443
+  server: 132.145.51.172
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇬🇧 英国 | vmess | 38
+  name: 🇬🇧 英国 | vmess | 40
   network: ws
   port: 443
   server: 149.7.16.248
@@ -170,36 +185,11 @@ proxies:
     headers:
       Host: 149.7.16.248
     path: /
-- name: 🇬🇧 英国 | trojan | 39
-  password: 8697fe6b-1lWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272
+- name: 🇬🇧 英国 | trojan | 41
+  password: dd6dcb10-4683-11f0-ae79-1239d0255272
   port: 443
-  server: 185.44.76.188
+  server: 51.38.65.155
   type: trojan
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇬🇧 英国 | vless | 40
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: ZpkoOvcRglQoTWJ3B7hiJlmMYTtIu41hJ51FMMdSTDE
-    short-id: '!!str 41427aa565e28984'
-  server: 78.141.199.54
-  servername: www.vodafone.co.uk
-  tls: false
-  type: vless
-  uuid: 43488128-319e-f480-64ea-0acdc712e2a8
-- name: 🇬🇧 英国 | vless | 41
-  network: ws
-  port: 443
-  server: 57.129.137.81
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
 - name: 🇬🇧 英国 | trojan | 42
   password: 30761083-5dcd-49d6-85b5-33756ef1f7ed
   port: 443
@@ -224,19 +214,6 @@ proxies:
   network: tcp
   port: 443
   reality-opts:
-    public-key: 6tORX9bm6UlGJ4dR8L2kzOd21oSrOyzpN7gC6SqGGyc
-    short-id: '!!str d27683580fc15f1e'
-  server: 178.159.10.78
-  servername: www.vodafone.co.uk
-  tls: false
-  type: vless
-  uuid: 43488128-319e-f480-64ea-0acdc712e2a8
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇬🇧 英国 | vless | 45
-  network: tcp
-  port: 443
-  reality-opts:
     public-key: wBrGfTI9PaFf966aN6KaCY0cL6QRLlop4nzNa6bJsiQ
     short-id: '!!str 9f35da6c9412b832'
   server: 5.180.97.139
@@ -244,30 +221,42 @@ proxies:
   tls: false
   type: vless
   uuid: a384c715-aeb5-45e8-859b-f687ca6c083f
-- name: 🇬🇧 英国 | trojan | 46
+- name: 🇬🇧 英国 | vless | 45
   network: ws
-  password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
-  port: 2083
-  server: 5.83.218.19
+  port: 443
+  server: 57.129.137.81
+  servername: sni.111000.v6.navy
   skip-cert-verify: true
-  sni: xo.e0f.cx
-  type: trojan
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   ws-opts:
     headers:
-      Host: xo.e0f.cx
-    path: /trojan-ws
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
+      Host: sni.111000.v6.navy
+- name: 🇬🇧 英国 | vless | 46
+  network: ws
+  port: 443
+  server: 57.129.137.241
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- alpn:
+  - h2
+  flow: ''
   name: 🇬🇧 英国 | vless | 47
   network: tcp
-  port: 443
-  reality-opts:
-    public-key: OeI9d6vCHM799CQYAkxwJZy1G6aqdjyoN9Mw2COCIXQ
-  server: 109.107.168.174
-  servername: google.com
-  tls: false
+  port: 8443
+  server: 152.233.28.198
+  servername: uk1.fromblancwithlove.com
+  skip-cert-verify: true
+  tls: true
   type: vless
-  uuid: 339d14c6-64aa-49fe-bd5d-d692a9d8dca0
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇬🇧 英国 | vless | 48
@@ -281,7 +270,20 @@ proxies:
   tls: false
   type: vless
   uuid: ca05976a-2dea-11f1-9ec5-baabcd4be2cd
-- name: 🇬🇧 英国 | vless | 49
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇬🇧 英国 | vless | 49
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 6tORX9bm6UlGJ4dR8L2kzOd21oSrOyzpN7gC6SqGGyc
+    short-id: '!!str d27683580fc15f1e'
+  server: 178.159.10.78
+  servername: www.vodafone.co.uk
+  tls: false
+  type: vless
+  uuid: 43488128-319e-f480-64ea-0acdc712e2a8
+- name: 🇬🇧 英国 | vless | 51
   network: tcp
   port: 8443
   server: uk1.fromblancwithlove.com
@@ -289,7 +291,7 @@ proxies:
   tls: true
   type: vless
   uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-- name: 🇬🇧 英国 | vless | 51
+- name: 🇬🇧 英国 | vless | 52
   network: tcp
   port: 4040
   server: uk2.sanzone.ir
@@ -299,19 +301,16 @@ proxies:
   ws-opts:
     headers:
       Host: soft98.ir
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇬🇧 英国 | vless | 53
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: j5sQbSLF4SeU7XHU27W56ZuveT-O6HwxX2wi5neM4UM
-    short-id: '!!str abcdef00'
-  server: vleesvpn-app-uk01.gw-vpn.click
-  servername: plus.im
-  tls: false
-  type: vless
-  uuid: b605b776-b676-430e-8957-00f1e0166bee
+- alterId: 0
+  name: 🇬🇧GB英国
+  password: trojan
+  port: 8888
+  server: 152.53.45.251
+  skip-cert-verify: true
+  sni: jflsjlaf.pages.dev
+  tls: true
+  type: trojan
+  udp: true
 - name: GB19｜机房｜低风险
   network: ws
   port: 443
