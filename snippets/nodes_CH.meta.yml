@@ -1,7 +1,7 @@
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 01
+  name: 🇨🇭 瑞士 | vless | 03
   network: tcp
   port: 10965
   reality-opts:
@@ -16,8 +16,19 @@ proxies:
   network: ws
   password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
   port: 2083
-  server: 95.85.239.225
+  server: 95.85.239.4
   skip-cert-verify: true
+  sni: xo.e0f.cx
+  type: trojan
+  ws-opts:
+    headers:
+      Host: xo.e0f.cx
+    path: /trojan-ws
+- name: 🇨🇭 瑞士 | trojan | 05
+  network: ws
+  password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
+  port: 2083
+  server: 95.85.239.225
   sni: xo.e0f.cx
   type: trojan
   ws-opts:
@@ -26,7 +37,20 @@ proxies:
     path: /trojan-ws
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 05
+  name: 🇨🇭 瑞士 | vless | 06
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: nPcUKydxoRI66O3tT9O4QCZpLjOBvkGsiXG7pDX1BBw
+    short-id: '!!str 6ba85179e30d4fc2'
+  server: 95.85.239.4
+  servername: www.google.com
+  tls: false
+  type: vless
+  uuid: c8d1c6d3-388f-48fc-a8f0-ed90d955d096
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇨🇭 瑞士 | vless | 07
   network: tcp
   port: 443
   reality-opts:
@@ -39,7 +63,7 @@ proxies:
   uuid: c8d1c6d3-388f-48fc-a8f0-ed90d955d096
 - alterId: 0
   cipher: auto
-  name: 🇨🇭 瑞士 | vmess | 06
+  name: 🇨🇭 瑞士 | vmess | 08
   network: ws
   port: 443
   server: 140.238.212.95
@@ -53,17 +77,17 @@ proxies:
     path: /
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 07
+  name: 🇨🇭 瑞士 | vless | 09
   network: tcp
   port: 443
   reality-opts:
-    public-key: 7wwQRVkoMP2NGEF_4T1q4sPfwy8_MVcRlDQ21cf3dgs
-    short-id: '!!str 3eb0d908b9fcdbdb'
-  server: 2.59.219.201
-  servername: dell.com
+    public-key: nPcUKydxoRI66O3tT9O4QCZpLjOBvkGsiXG7pDX1BBw
+    short-id: '!!str 6ba85179e30d4fc2'
+  server: 38.180.162.133
+  servername: www.google.com
   tls: false
   type: vless
-  uuid: 27f142d8-4ed4-5608-ac23-d0b47f4ee4cb
+  uuid: c8d1c6d3-388f-48fc-a8f0-ed90d955d096
 - name: CH_speednode_0004
   network: ws
   port: 4433
