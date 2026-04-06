@@ -1,7 +1,7 @@
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 02
+  name: 🇨🇭 瑞士 | vless | 03
   network: tcp
   port: 10965
   reality-opts:
@@ -12,7 +12,32 @@ proxies:
   tls: false
   type: vless
   uuid: d1209ffb-c159-48d5-b40d-542ce11fc768
-- name: 🇨🇭 瑞士 | trojan | 03
+- name: 🇨🇭 瑞士 | trojan | 04
+  network: ws
+  password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
+  port: 2083
+  server: 95.85.239.4
+  skip-cert-verify: true
+  sni: xo.e0f.cx
+  type: trojan
+  ws-opts:
+    headers:
+      Host: xo.e0f.cx
+    path: '%2Ftrojan-ws'
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇨🇭 瑞士 | vless | 05
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: nPcUKydxoRI66O3tT9O4QCZpLjOBvkGsiXG7pDX1BBw
+    short-id: '!!str 6ba85179e30d4fc2'
+  server: 95.85.239.4
+  servername: www.google.com
+  tls: false
+  type: vless
+  uuid: c8d1c6d3-388f-48fc-a8f0-ed90d955d096
+- name: 🇨🇭 瑞士 | trojan | 06
   network: ws
   password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
   port: 2083
@@ -24,52 +49,3 @@ proxies:
     headers:
       Host: xo.e0f.cx
     path: '%2Ftrojan-ws'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 04
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: nPcUKydxoRI66O3tT9O4QCZpLjOBvkGsiXG7pDX1BBw
-    short-id: '!!str 6ba85179e30d4fc2'
-  server: 95.85.239.4
-  servername: www.google.com
-  tls: false
-  type: vless
-  uuid: c8d1c6d3-388f-48fc-a8f0-ed90d955d096
-- name: 🇨🇭 瑞士 | trojan | 05
-  network: ws
-  password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
-  port: 2083
-  server: 95.85.239.4
-  skip-cert-verify: true
-  sni: xo.e0f.cx
-  type: trojan
-  ws-opts:
-    headers:
-      Host: xo.e0f.cx
-    path: '%2Ftrojan-ws'
-- alterId: 0
-  name: 🇨🇭CH瑞士
-  password: hCjWaBe5vTkewfiljOL=9FS9DYg0c09c.t
-  port: 18390
-  server: 81.29.149.201
-  skip-cert-verify: true
-  sni: osl7.solidly.click
-  tls: true
-  type: trojan
-  udp: true
-- name: CH_speednode_0004
-  network: ws
-  port: 4433
-  server: 138.226.240.199
-  servername: sub.mot.ip-ddns.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 00000000-0000-4000-8000-000000000000
-  ws-opts:
-    headers:
-      Host: sub.mot.ip-ddns.com
-    path: /

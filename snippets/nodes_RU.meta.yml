@@ -52,19 +52,33 @@ proxies:
 - alterId: 0
   cipher: auto
   name: 🇷🇺 俄罗斯 | vmess | 06
-  network: tcp
-  port: 39651
+  network: raw
+  port: '39651'
   server: 45.89.52.207
   tls: false
   type: vmess
   uuid: ac4c12c5-45f2-4398-a718-9983941ede2b
-- name: 🇷🇺 俄罗斯 | trojan | 07
+- client-fingerprint: qq
+  grpc-opts:
+    grpc-service-name: UpdateService
+  name: 🇷🇺 俄罗斯 | vless | 07
+  network: grpc
+  port: 7443
+  reality-opts:
+    public-key: 8hdXyv-YBQIaA2xgOfT2nhfna5y5s19qbZD-SpMZ6hg
+    short-id: '!!str dd700a46e27751d1'
+  server: 95.163.208.194
+  servername: ads.x5.ru
+  tls: false
+  type: vless
+  uuid: e11ca047-3e50-469b-aa1a-beb9be0256b2
+- name: 🇷🇺 俄罗斯 | trojan | 08
   password: Aimer
   port: 443
   server: 5.182.84.244
   sni: epme.ambercc.filegear-sg.me
   type: trojan
-- name: 🇷🇺 俄罗斯 | trojan | 08
+- name: 🇷🇺 俄罗斯 | trojan | 09
   network: ws
   password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
   port: 2083
@@ -78,7 +92,7 @@ proxies:
     path: '%2Ftrojan-ws'
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 09
+  name: 🇷🇺 俄罗斯 | vless | 10
   network: tcp
   port: 443
   reality-opts:
@@ -91,7 +105,7 @@ proxies:
 - client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: UpdateService
-  name: 🇷🇺 俄罗斯 | vless | 10
+  name: 🇷🇺 俄罗斯 | vless | 11
   network: grpc
   port: 2083
   reality-opts:
@@ -102,19 +116,6 @@ proxies:
   tls: false
   type: vless
   uuid: 09b81314-7592-4ffb-9773-6351de8a7f74
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 11
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: F14RpPKCKo_qPcW7EFVu1M18JsAT8c04O08cIi0Ghg4
-    short-id: '!!str ab1cd2'
-  server: 5.129.249.134
-  servername: ir.ozone.ru
-  tls: false
-  type: vless
-  uuid: eaca6b0a-9728-5766-8fb0-0be81c1b7c91
 - client-fingerprint: chrome
   name: 🇷🇺 俄罗斯 | vless | 12
   network: tcp
@@ -127,30 +128,22 @@ proxies:
   tls: false
   type: vless
   uuid: d7554bde-44d0-4466-8f87-0d68740e8951
-- name: 🇷🇺 俄罗斯 | vless | 13
-  network: ws
-  port: 15521
-  server: whtk.mooo.com
-  tls: false
-  type: vless
-  uuid: cdcd0159-bb13-4994-bdbb-982d854a72a6
-  ws-opts:
-    path: /
 - client-fingerprint: chrome
-  name: 🇷🇺 俄罗斯 | vless | 14
+  flow: xtls-rprx-vision
+  name: 🇷🇺 俄罗斯 | vless | 13
   network: tcp
   port: 443
   reality-opts:
-    public-key: z_mZq7riCGYKcTsXGCFX3KyhLL5PYgG3ydZ8_wM_ZkU
-    short-id: '!!str 5bfa0c'
-  server: fi1.cyphervpn.pro
-  servername: fi1.cyphervpn.pro
+    public-key: F14RpPKCKo_qPcW7EFVu1M18JsAT8c04O08cIi0Ghg4
+    short-id: '!!str ab1cd2'
+  server: 5.129.249.134
+  servername: ir.ozone.ru
   tls: false
   type: vless
-  uuid: f7bae22e-20ab-11f1-835c-0242ac110002
+  uuid: eaca6b0a-9728-5766-8fb0-0be81c1b7c91
 - alpn:
   - http/1.1
-  name: 🇷🇺 俄罗斯 | vless | 15
+  name: 🇷🇺 俄罗斯 | vless | 14
   network: ws
   port: 443
   server: mci.buzzmuzzpanel.online
@@ -163,6 +156,15 @@ proxies:
     headers:
       Host: 057.electrocellco-cf-057.workers.dev
     path: '%2FeyJqdW5rIjoiSFM1N0lLQmx2UU1qRzlnTiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0%3D'
+- name: 🇷🇺 俄罗斯 | vless | 15
+  network: ws
+  port: 15521
+  server: whtk.mooo.com
+  tls: false
+  type: vless
+  uuid: cdcd0159-bb13-4994-bdbb-982d854a72a6
+  ws-opts:
+    path: /
 - alterId: 0
   cipher: chacha20-ietf-poly1305
   name: 🇷🇺RU俄罗斯
@@ -215,16 +217,3 @@ proxies:
   tls: false
   type: vless
   uuid: 95abaefc-7861-417a-81b7-166cb788ce1a
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: RU_speednode_0063
-  port: 443
-  reality-opts:
-    public-key: FZbK0E3QBK7QslwVEXimX6vmXC8cb6826lSLJUkIEgU
-  server: 217.114.11.246
-  servername: max.ru
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 9768f14f-a790-4c78-b1d9-60cc0e9d99a0
