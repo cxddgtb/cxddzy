@@ -26,8 +26,17 @@ proxies:
     headers:
       Host: 057.electrocellco-cf-057.workers.dev
     path: '%2FeyJqdW5rIjoiSFM1N0lLQmx2UU1qRzlnTiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0%3D'
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 俄罗斯 | vmess | 03
+  network: tcp
+  port: 39651
+  server: 45.89.52.207
+  tls: false
+  type: vmess
+  uuid: ac4c12c5-45f2-4398-a718-9983941ede2b
 - flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 02
+  name: 🇷🇺 俄罗斯 | vless | 04
   network: tcp
   port: 443
   reality-opts:
@@ -37,27 +46,21 @@ proxies:
   tls: false
   type: vless
   uuid: a87bf8a2-17a4-3054-b51e-876b5f1d0f24
-- alterId: 0
-  cipher: auto
-  name: 🇷🇺 俄罗斯 | vmess | 04
-  network: tcp
-  port: 39651
-  server: 45.89.52.207
-  tls: false
-  type: vmess
-  uuid: ac4c12c5-45f2-4398-a718-9983941ede2b
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 05
-  network: tcp
-  port: 4440
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  server: 45.152.113.189
-  servername: files.moscownews24.ru
-  tls: false
+- alpn:
+  - http/1.1
+  name: 🇷🇺 俄罗斯 | vless | 06
+  network: ws
+  port: 443
+  server: mci.buzzmuzzpanel.online
+  servername: 057.ElecTRocElLco-Cf-057.wOrKeRs.dEv
+  skip-cert-verify: true
+  tls: true
   type: vless
-  uuid: f17d4129-ee8b-48f4-baa6-89de1e906b8e
+  uuid: 20e295db-a6af-4006-bfd6-91453f169968
+  ws-opts:
+    headers:
+      Host: 057.electrocellco-cf-057.workers.dev
+    path: '%2FeyJqdW5rIjoiSFM1N0lLQmx2UU1qRzlnTiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0%3D'
 - name: 🇷🇺 俄罗斯 | trojan | 07
   network: ws
   password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
@@ -97,11 +100,11 @@ proxies:
   reality-opts:
     public-key: J6NuOlIq3ypdTFc1TMhDDKmF8BWPnNWZq1EkxD7K-lQ
     short-id: '!!str 6da16b1335651b38'
-  server: 46.149.68.27
+  server: 85.92.111.163
   servername: ir.ozone.ru
   tls: false
   type: vless
-  uuid: e11ca047-3e50-469b-aa1a-beb9be0256b2
+  uuid: 09b81314-7592-4ffb-9773-6351de8a7f74
 - client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: UpdateService
@@ -117,18 +120,19 @@ proxies:
   type: vless
   uuid: 40600c8a-730a-411c-b72b-c3bca115dcf7
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
+  grpc-opts:
+    grpc-service-name: UpdateService
   name: 🇷🇺 俄罗斯 | vless | 12
-  network: tcp
-  port: 443
+  network: grpc
+  port: 2083
   reality-opts:
-    public-key: 7IOtSp0-n2_uNS5nMO9ywZbn2HibMRGy0KbLad3szXc
-    short-id: '!!str 5e6f7a8b'
-  server: 82.97.248.167
-  servername: eh.vk.com
+    public-key: J6NuOlIq3ypdTFc1TMhDDKmF8BWPnNWZq1EkxD7K-lQ
+    short-id: '!!str 6da16b1335651b38'
+  server: 46.149.68.27
+  servername: ir.ozone.ru
   tls: false
   type: vless
-  uuid: a01881a8-3d9b-48bb-9a9c-e96e8b40b2c6
+  uuid: e11ca047-3e50-469b-aa1a-beb9be0256b2
 - name: 🇷🇺 俄罗斯 | vless | 13
   network: ws
   port: 15521
@@ -138,21 +142,18 @@ proxies:
   uuid: cdcd0159-bb13-4994-bdbb-982d854a72a6
   ws-opts:
     path: '%2F'
-- alpn:
-  - http/1.1
+- client-fingerprint: chrome
   name: 🇷🇺 俄罗斯 | vless | 14
-  network: ws
+  network: tcp
   port: 443
-  server: mci.buzzmuzzpanel.online
-  servername: 057.ElecTRocElLco-Cf-057.wOrKeRs.dEv
-  skip-cert-verify: true
-  tls: true
+  reality-opts:
+    public-key: z_mZq7riCGYKcTsXGCFX3KyhLL5PYgG3ydZ8_wM_ZkU
+    short-id: '!!str 5bfa0c'
+  server: fi1.cyphervpn.pro
+  servername: fi1.cyphervpn.pro
+  tls: false
   type: vless
-  uuid: 20e295db-a6af-4006-bfd6-91453f169968
-  ws-opts:
-    headers:
-      Host: 057.electrocellco-cf-057.workers.dev
-    path: '%2FeyJqdW5rIjoiSFM1N0lLQmx2UU1qRzlnTiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0%3D'
+  uuid: f7bae22e-20ab-11f1-835c-0242ac110002
 - alterId: 0
   name: 🇷🇺RU俄罗斯
   password: trojan
