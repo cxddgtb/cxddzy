@@ -26,8 +26,23 @@ proxies:
     headers:
       Host: 057.electrocellco-cf-057.workers.dev
     path: '%2FeyJqdW5rIjoiSFM1N0lLQmx2UU1qRzlnTiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0%3D'
-- flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 02
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 俄罗斯 | vmess | 02
+  network: ws
+  port: 443
+  server: 45.67.215.119
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+  ws-opts:
+    headers:
+      Host: e130917c-1b58-4136-b2d9-76dc920e0add.add97ee8-0f14-48a3-b2cd-979c56742e64.loseyourip.com
+    path: /
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇷🇺 俄罗斯 | vless | 03
   network: tcp
   port: 443
   reality-opts:
@@ -36,23 +51,29 @@ proxies:
   servername: speed.cloudflare.com
   tls: false
   type: vless
-  uuid: a87bf8a2-17a4-3054-b51e-876b5f1d0f24
+  uuid: 8e6acce9-8b56-7190-d491-7d84f8189e26
+- name: 🇷🇺 俄罗斯 | vless | 06
+  port: 23335
+  server: 185.147.26.21
+  tls: false
+  type: vless
+  uuid: e384913f-8863-47b4-8858-a84b68abb4a6
 - alterId: 0
   cipher: auto
-  name: 🇷🇺 俄罗斯 | vmess | 04
+  name: 🇷🇺 俄罗斯 | vmess | 07
   network: tcp
   port: 39651
   server: 45.89.52.207
   tls: false
   type: vmess
   uuid: ac4c12c5-45f2-4398-a718-9983941ede2b
-- name: 🇷🇺 俄罗斯 | vless | 05
-  port: 23335
-  server: 185.147.26.21
-  tls: false
-  type: vless
-  uuid: e384913f-8863-47b4-8858-a84b68abb4a6
-- name: 🇷🇺 俄罗斯 | trojan | 08
+- name: 🇷🇺 俄罗斯 | trojan | 09
+  password: Aimer
+  port: 443
+  server: 5.182.84.244
+  sni: epme.ambercc.filegear-sg.me
+  type: trojan
+- name: 🇷🇺 俄罗斯 | trojan | 10
   network: ws
   password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
   port: 2083
@@ -64,15 +85,9 @@ proxies:
     headers:
       Host: xo.e0f.cx
     path: '%2Ftrojan-ws'
-- name: 🇷🇺 俄罗斯 | trojan | 09
-  password: Aimer
-  port: 443
-  server: 5.182.84.244
-  sni: epme.ambercc.filegear-sg.me
-  type: trojan
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 10
+  name: 🇷🇺 俄罗斯 | vless | 11
   network: tcp
   port: 443
   reality-opts:
@@ -83,9 +98,39 @@ proxies:
   type: vless
   uuid: 6fd9f786-d974-49d0-b5c4-397678de69a2
 - client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇷🇺 俄罗斯 | vless | 12
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: FVL0r87K3-vUP2KXQX1juLMFEHJtvxwKM-nm6_PYllc
+    short-id: '!!str cafe01234567'
+  server: 193.233.253.77
+  servername: www.apple.com
+  tls: false
+  type: vless
+  uuid: 89f8f53c-2ec5-11f1-bffe-46c4782ac1a7
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇷🇺 俄罗斯 | vless | 13
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: FVL0r87K3-vUP2KXQX1juLMFEHJtvxwKM-nm6_PYllc
+    short-id: '!!str deadbeef42'
+  server: 193.233.253.73
+  servername: www.apple.com
+  tls: false
+  type: vless
+  uuid: 4b056394-2f40-11f1-bffe-46c4782ac1a7
+  ws-opts:
+    headers:
+      Host: ''
+    path: ''
+- client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: UpdateService
-  name: 🇷🇺 俄罗斯 | vless | 11
+  name: 🇷🇺 俄罗斯 | vless | 14
   network: grpc
   port: 2083
   reality-opts:
@@ -99,7 +144,7 @@ proxies:
 - client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: UpdateService
-  name: 🇷🇺 俄罗斯 | vless | 12
+  name: 🇷🇺 俄罗斯 | vless | 15
   network: grpc
   port: 2083
   reality-opts:
@@ -110,9 +155,30 @@ proxies:
   tls: false
   type: vless
   uuid: 40600c8a-730a-411c-b72b-c3bca115dcf7
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇷🇺 俄罗斯 | vless | 16
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: FZbK0E3QBK7QslwVEXimX6vmXC8cb6826lSLJUkIEgU
+  server: 217.114.11.246
+  servername: max.ru
+  tls: false
+  type: vless
+  uuid: 9768f14f-a790-4c78-b1d9-60cc0e9d99a0
+- name: 🇷🇺 俄罗斯 | vless | 17
+  network: ws
+  port: 15521
+  server: whtk.mooo.com
+  tls: false
+  type: vless
+  uuid: cdcd0159-bb13-4994-bdbb-982d854a72a6
+  ws-opts:
+    path: '%2F'
 - alpn:
   - http/1.1
-  name: 🇷🇺 俄罗斯 | vless | 13
+  name: 🇷🇺 俄罗斯 | vless | 18
   network: ws
   port: 443
   server: mci.buzzmuzzpanel.online
@@ -125,15 +191,19 @@ proxies:
     headers:
       Host: 057.electrocellco-cf-057.workers.dev
     path: '%2FeyJqdW5rIjoiSFM1N0lLQmx2UU1qRzlnTiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0%3D'
-- name: 🇷🇺 俄罗斯 | vless | 14
-  network: ws
-  port: 15521
-  server: whtk.mooo.com
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇷🇺 俄罗斯 | vless | 19
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: FVL0r87K3-vUP2KXQX1juLMFEHJtvxwKM-nm6_PYllc
+    short-id: '!!str a1b2c3d4e5f6'
+  server: 193.233.253.76
+  servername: www.apple.com
   tls: false
   type: vless
-  uuid: cdcd0159-bb13-4994-bdbb-982d854a72a6
-  ws-opts:
-    path: '%2F'
+  uuid: f3a1017d-1ebf-11f1-8cae-c3845d39d2de
 - alterId: 0
   cipher: chacha20-ietf-poly1305
   name: 🇷🇺RU俄罗斯
