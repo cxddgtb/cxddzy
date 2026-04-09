@@ -4,7 +4,18 @@ proxies:
   name: 🇩🇪 德国 | vmess | 01
   network: tcp
   port: '180'
+  server: 82.198.246.250
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 02
+  network: tcp
+  port: '180'
   server: 82.198.246.46
+  servername: ''
   tls: false
   type: vmess
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
@@ -14,24 +25,16 @@ proxies:
   network: tcp
   port: '180'
   server: 82.198.246.97
-  tls: false
-  type: vmess
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 03
-  network: tcp
-  port: '180'
-  server: 82.198.246.250
+  servername: ''
   tls: false
   type: vmess
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
 - name: 🇩🇪 德国 | vless | 04
   network: ws
-  port: 4001
-  server: 185.94.29.156
+  port: 4002
+  server: 37.114.50.157
   servername: sub.mot.ip-ddns.com
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: false
   type: vless
   uuid: 00000000-0000-4000-8000-000000000000
@@ -39,20 +42,19 @@ proxies:
     headers:
       Host: sub.mot.ip-ddns.com
     path: /security=tls
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 05
-  network: ws
-  port: 80
-  server: 188.40.132.107
-  servername: ''
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 05
+  network: tcp
+  port: 7443
+  reality-opts:
+    public-key: 5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI
+    short-id: '!!str be0ce047'
+  server: 159.195.77.197
+  servername: chat.deepseek.com
   tls: false
-  type: vmess
-  uuid: 4ddd24d6-d901-5e5f-9a7c-080015c2e246
-  ws-opts:
-    headers:
-      Host: ''
-    path: /p3573l6m92h1ham3q23t
+  type: vless
+  uuid: 8f8380ae-9f5d-4cb5-8f5f-0f70fbe054a9
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 06
@@ -68,67 +70,10 @@ proxies:
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
 - name: 🇩🇪 德国 | vless | 07
   network: ws
-  port: 22224
-  server: 51.102.234.18
-  tls: false
-  type: vless
-  uuid: 05519058-d2ac-4f28-9e4a-2b2a1386749e
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 08
-  network: ws
-  port: 80
-  server: 94.130.184.57
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: c5e523e7-da73-40af-a4a9-c638720c30e1
-  ws-opts:
-    headers:
-      Host: ''
-    path: /graphql
-- flow: ''
-  name: 🇩🇪 德国 | vless | 09
-  network: ws
-  port: 43393
-  server: 159.69.162.184
+  port: 4001
+  server: 185.94.29.156
   servername: sub.mot.ip-ddns.com
   skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 00000000-0000-4000-8000-000000000000
-  ws-opts:
-    headers:
-      Host: sub.mot.ip-ddns.com
-    path: '%2F'
-- name: 🇩🇪 德国 | vless | 11
-  network: ws
-  port: 8444
-  server: 49.13.171.76
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇩🇪 德国 | vless | 12
-  network: tcp
-  port: 4040
-  server: 3.125.212.24
-  tls: false
-  type: vless
-  uuid: b738db04-c73c-4551-b6f2-9041e93914d4
-  ws-opts:
-    headers:
-      Host: soft98.ir
-- name: 🇩🇪 德国 | vless | 13
-  network: ws
-  port: 4002
-  server: 37.114.50.157
-  servername: sub.mot.ip-ddns.com
-  skip-cert-verify: false
   tls: false
   type: vless
   uuid: 00000000-0000-4000-8000-000000000000
@@ -137,7 +82,7 @@ proxies:
       Host: sub.mot.ip-ddns.com
     path: /security=tls
 - client-fingerprint: chrome
-  name: 🇩🇪 德国 | vless | 14
+  name: 🇩🇪 德国 | vless | 08
   network: tcp
   port: 38765
   reality-opts:
@@ -148,48 +93,58 @@ proxies:
   tls: false
   type: vless
   uuid: 7a0ae662-eee7-44c0-8998-d575870bd749
-- name: 🇩🇪 德国 | vless | 17
-  network: ws
-  port: 42622
-  server: 159.69.162.184
-  servername: sub.mot.ip-ddns.com
-  tls: true
-  type: vless
-  uuid: 00000000-0000-4000-8000-000000000000
-  ws-opts:
-    headers:
-      Host: sub.mot.ip-ddns.com
-    path: '%2F'
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 18
-  network: ws
-  port: '80'
-  server: 159.89.29.136
-  servername: ''
+- name: 🇩🇪 德国 | vless | 10
+  network: tcp
+  port: 4040
+  server: 3.125.212.24
   tls: false
-  type: vmess
-  uuid: d20d6ede-433c-11ed-b81f-cfd905df9958
+  type: vless
+  uuid: b738db04-c73c-4551-b6f2-9041e93914d4
   ws-opts:
     headers:
-      Host: cx.com
-    path: /vmess
+      Host: soft98.ir
+- alpn:
+  - h2
+  - http/1.1
+  name: 🇩🇪 德国 | trojan | 11
+  network: tcp
+  password: TOwMPNqmZvUobRbEAZxFiN1q
+  port: 37976
+  server: 185.189.58.195
+  sni: 185.189.58.195
+  type: trojan
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 20
+  name: 🇩🇪 德国 | vless | 12
   network: tcp
-  port: 7443
+  port: 23576
   reality-opts:
-    public-key: 5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI
-    short-id: '!!str be0ce047'
-  server: 159.195.77.197
-  servername: chat.deepseek.com
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '!!str 01'
+  server: 57.129.53.182
+  servername: fuck.rkn
   tls: false
   type: vless
-  uuid: 8f8380ae-9f5d-4cb5-8f5f-0f70fbe054a9
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  ws-opts:
+    headers:
+      Host: Join---i10VPN---Join---i10VPN---Join---i10VPN---Join---i10VPN
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 13
+  network: tcp
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '!!str 01'
+  server: 57.129.49.1
+  servername: fuck.rkn
+  tls: false
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 21
+  name: 🇩🇪 德国 | vmess | 14
   network: ws
   port: 80
   server: 162.55.62.193
@@ -203,7 +158,7 @@ proxies:
     path: /telegram-id-@privatevpns
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 22
+  name: 🇩🇪 德国 | vmess | 16
   network: ws
   port: '80'
   server: 142.132.163.200
@@ -215,34 +170,137 @@ proxies:
     headers:
       Host: ''
     path: /graphql
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 24
-  network: tcp
-  port: 19001
-  reality-opts:
-    public-key: S-g0oP36DShii1uPOnZDSEhp_wQghX6h68PgMivOmD4
-  server: 206.189.249.182
-  servername: www.speedtest.net
-  tls: false
+- name: 🇩🇪 德国 | vless | 17
+  network: ws
+  port: 42622
+  server: 159.69.162.184
+  servername: sub.mot.ip-ddns.com
+  tls: true
   type: vless
-  uuid: 12eac926-c4ec-4040-8fb8-f316e9fc0fd6
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 25
-  network: tcp
+  uuid: 00000000-0000-4000-8000-000000000000
+  ws-opts:
+    headers:
+      Host: sub.mot.ip-ddns.com
+    path: '%2F'
+- name: 🇩🇪 德国 | vless | 18
   port: 23576
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '!!str 01'
   server: 57.129.53.181
-  servername: fuck.rkn
   tls: false
   type: vless
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 26
+  name: 🇩🇪 德国 | vmess | 19
+  network: ws
+  port: 80
+  server: 5.75.173.189
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 2aac77de-b3e4-4017-845c-ca1380f2e8d0
+  ws-opts:
+    headers:
+      Host: ''
+    path: /telegram-id-@privatevpns
+- name: 🇩🇪 德国 | vless | 21
+  network: ws
+  port: 8444
+  server: 49.13.171.76
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 22
+  network: ws
+  port: 80
+  server: 167.235.78.112
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 2aac77de-b3e4-4017-845c-ca1380f2e8d0
+  ws-opts:
+    headers:
+      Host: ''
+    path: /telegram-id-@privatevpns
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 23
+  network: ws
+  port: 80
+  server: 94.130.184.57
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: c5e523e7-da73-40af-a4a9-c638720c30e1
+  ws-opts:
+    headers:
+      Host: ''
+    path: /graphql
+- flow: ''
+  name: 🇩🇪 德国 | vless | 24
+  network: ws
+  port: 43393
+  server: 159.69.162.184
+  servername: sub.mot.ip-ddns.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 00000000-0000-4000-8000-000000000000
+  ws-opts:
+    headers:
+      Host: sub.mot.ip-ddns.com
+    path: '%2F'
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 25
+  network: ws
+  port: 80
+  server: 188.40.132.107
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 4ddd24d6-d901-5e5f-9a7c-080015c2e246
+  ws-opts:
+    headers:
+      Host: ''
+    path: /p3573l6m92h1ham3q23t
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 27
+  network: ws
+  port: '80'
+  server: 159.89.29.136
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: d20d6ede-433c-11ed-b81f-cfd905df9958
+  ws-opts:
+    headers:
+      Host: cx.com
+    path: /vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 28
+  network: ws
+  port: 80
+  server: 78.46.129.226
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 2aac77de-b3e4-4017-845c-ca1380f2e8d0
+  ws-opts:
+    headers:
+      Host: ''
+    path: /telegram-id-@privatevpns
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 29
   network: ws
   port: 80
   server: 162.55.174.135
@@ -254,20 +312,7 @@ proxies:
     headers:
       Host: ''
     path: /graphql
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 27
-  network: tcp
-  port: 23576
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '!!str 01'
-  server: 57.129.53.182
-  servername: fuck.rkn
-  tls: false
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- name: 🇩🇪 德国 | vless | 28
+- name: 🇩🇪 德国 | vless | 31
   network: ws
   port: 2006
   server: 89.58.43.93
@@ -282,36 +327,16 @@ proxies:
     path: '%2F%3FTelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3%2540WangCai2%3D'
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 29
+  name: 🇩🇪 德国 | vless | 33
   network: tcp
-  port: 23576
+  port: 443
   reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '!!str 01'
-  server: 57.129.49.1
-  servername: fuck.rkn
+    public-key: BhTJ3phnq-Z-10aFKSsj1lzhA8mULR4L6leE4-0WTAs
+  server: 138.124.186.202
+  servername: www.fh-aachen.de
   tls: false
   type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- alpn:
-  - h2
-  - http/1.1
-  name: 🇩🇪 德国 | trojan | 31
-  network: tcp
-  password: TOwMPNqmZvUobRbEAZxFiN1q
-  port: 37976
-  server: 185.189.58.195
-  sni: 185.189.58.195
-  type: trojan
-- grpc-opts:
-    grpc-service-name: trojangrpc
-  name: 🇩🇪 德国 | trojan | 33
-  network: grpc
-  password: mainssh-ddoejfv14
-  port: 443
-  server: 95.179.254.136
-  sni: frtgrpc.mainssh.xyz
-  type: trojan
+  uuid: e346f220-4ca4-4f69-a66b-52e992b3b625
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 34
@@ -325,27 +350,9 @@ proxies:
   tls: false
   type: vless
   uuid: f3a1017d-1ebf-11f1-8cae-c3845d39d2de
-- name: 🇩🇪 德国 | vless | 38
-  port: 443
-  server: 92.223.124.29
-  tls: false
-  type: vless
-  uuid: e1034c59-c944-4a60-bdba-8f9cea0324b1
-  ws-opts:
-    path: /telegram%3Fed%3D2048
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 39
-  network: http
-  port: 443
-  server: 94.130.25.155
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 40
+  name: 🇩🇪 德国 | vless | 35
   network: tcp
   port: 443
   reality-opts:
@@ -356,21 +363,59 @@ proxies:
   tls: false
   type: vless
   uuid: e346f220-4ca4-4f69-a66b-52e992b3b625
-- name: 🇩🇪 德国 | trojan | 41
-  password: 665c944d-047d-4659-80d5-3eaac70241a9
+- name: 🇩🇪 德国 | vless | 36
   port: 443
-  server: 139.162.158.172
-  sni: de2-full.privateip.net
-  type: trojan
-- name: 🇩🇪 德国 | vless | 43
+  server: 92.223.124.29
+  tls: false
+  type: vless
+  uuid: e1034c59-c944-4a60-bdba-8f9cea0324b1
+  ws-opts:
+    path: /telegram%3Fed%3D2048
+- name: 🇩🇪 德国 | vless | 37
   port: 8443
   server: 62.141.32.238
   tls: false
   type: vless
   uuid: c19fb567-74a9-454f-9757-e612fc4be371
+- name: 🇩🇪 德国 | trojan | 38
+  password: 665c944d-047d-4659-80d5-3eaac70241a9
+  port: 443
+  server: 139.162.158.172
+  sni: de2-full.privateip.net
+  type: trojan
+- name: 🇩🇪 德国 | trojan | 39
+  network: grpc
+  password: Cl150MQWlG
+  port: 443
+  server: 209.250.236.93
+  sni: irancell-ir-4.mmdruby13.store
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 44
+  name: 🇩🇪 德国 | vmess | 40
+  network: ws
+  port: 443
+  server: 57.129.64.163
+  servername: yichueng.org
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: yichueng.org
+    path: linkvws
+- grpc-opts:
+    grpc-service-name: trojangrpc
+  name: 🇩🇪 德国 | trojan | 41
+  network: grpc
+  password: mainssh-ddoejfv14
+  port: 443
+  server: 95.179.254.136
+  sni: frtgrpc.mainssh.xyz
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 43
   network: tcp
   port: '443'
   server: 78.47.186.183
@@ -378,33 +423,33 @@ proxies:
   tls: false
   type: vmess
   uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
-- alpn:
-  - h2
-  flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 45
-  network: tcp
-  port: 443
-  server: 84.21.189.25
-  servername: de-fast.chunkyvpn.shop
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6053689d-39d6-4005-b1bd-c0dce854f429
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 47
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: BhTJ3phnq-Z-10aFKSsj1lzhA8mULR4L6leE4-0WTAs
-  server: 138.124.186.202
-  servername: www.fh-aachen.de
-  tls: false
-  type: vless
-  uuid: e346f220-4ca4-4f69-a66b-52e992b3b625
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 50
+  name: 🇩🇪 德国 | vmess | 44
+  network: http
+  port: 443
+  server: 94.130.25.155
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 45
+  network: ws
+  port: 443
+  server: 57.129.59.194
+  servername: yichueng.org
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: yichueng.org
+    path: linkvws
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 46
   network: tcp
   port: '443'
   server: 168.119.174.229
@@ -412,182 +457,7 @@ proxies:
   tls: false
   type: vmess
   uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
-- grpc-opts:
-    grpc-service-name: trojangrpc
-  name: 🇩🇪 德国 | trojan | 51
-  network: grpc
-  password: mainssh-niwrhf87
-  port: 443
-  server: 108.61.171.167
-  sni: getgrpc.mainssh.xyz
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 52
-  network: http
-  port: 443
-  server: 157.90.20.18
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: Telegram-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers
-  name: 🇩🇪 德国 | vless | 53
-  network: grpc
-  port: 443
-  reality-opts:
-    public-key: UrGT7bAn2UND3kx81QHACf_6qReN8V6_o70kZerONk4
-    short-id: '!!str 1c547814'
-  server: 91.99.168.213
-  servername: miro.com
-  tls: false
-  type: vless
-  uuid: 14eba471-4623-4ed1-b937-f5b2206749bf
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 54
-  network: ws
-  port: 443
-  server: 193.122.58.158
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
-  ws-opts:
-    headers:
-      Host: irvideo.cfd
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 56
-  network: http
-  port: 443
-  server: 167.235.136.155
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
-- name: 🇩🇪 德国 | vless | 57
-  network: ws
-  port: 2087
-  server: 176.96.138.17
-  servername: sni.111000.indevs.in
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-    path: '%2F'
-- name: 🇩🇪 德国 | vless | 58
-  network: ws
-  port: 2053
-  server: 82.117.245.166
-  servername: sni.111000.indevs.in
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-    path: /?Telegram🇨🇳@WangCai2=
-- name: 🇩🇪 德国 | vless | 59
-  network: ws
-  port: 8443
-  server: 57.129.63.149
-  servername: sni.111000.indevs.in
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-    path: '%2F%3FTelegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2%3D'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 61
-  network: tcp
-  port: 10121
-  reality-opts:
-    public-key: 4DdA8dBVn5zB_UTbgBY45YqM0HU8zrjXYdzg3-wz5Rg
-    short-id: '!!str 9c2a7d4e5f18b6a3'
-  server: 1xk7re.by-api-yandex.com
-  servername: apple.com
-  tls: false
-  type: vless
-  uuid: d1209ffb-c159-48d5-b40d-542ce11fc768
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 62
-  network: ws
-  port: 443
-  server: khvwycch.cymlr.xyz
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: db39ef95-4245-418a-84c0-14c202f29bc6
-  ws-opts:
-    headers:
-      Host: khvwycch.cymlr.xyz
-    path: /videnset
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 63
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: 2XHOm5oJ92noxYHfahYv6dABkpp-bdehIA5grPB1X2c
-    short-id: '!!str beba4237'
-  server: 94.156.115.109
-  servername: tunnel.vk-apps.com
-  tls: false
-  type: vless
-  uuid: 9357d31a-97f5-492b-9a9d-24dcb3449fb9
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 64
-  network: ws
-  port: 443
-  server: 57.129.59.201
-  servername: kampong.org
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: kampong.org
-    path: linkvws
-- name: 🇩🇪 德国 | vless | 65
-  network: ws
-  port: 2053
-  server: 57.129.63.154
-  servername: sni.111000.dynv6.net
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.dynv6.net
-    path: '%2F%3FTelegram%E9%A6%83%E5%9A%9A%E9%A6%83%E5%9A%A6+%40WangCai2%3D'
-- client-fingerprint: chrome
-  name: 🇩🇪 德国 | vless | 66
-  network: ws
-  port: 2053
-  server: 82.117.245.125
-  servername: sni.111000.v6.navy
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-    path: '%2F'
-- name: 🇩🇪 德国 | vless | 67
+- name: 🇩🇪 德国 | vless | 49
   network: ws
   port: 443
   server: 159.223.24.65
@@ -600,49 +470,20 @@ proxies:
     headers:
       Host: sni.111000.indevs.in
     path: '%2F%3Fed%3D2560'
-- name: 🇩🇪 德国 | vless | 69
-  network: ws
-  port: 2053
-  server: 57.129.47.11
-  servername: sni.111000.indevs.in
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-    path: '%2F%3FTelegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2%3D'
-- name: 🇩🇪 德国 | trojan | 70
-  password: d86c421f-dbfe-4507-a864-f8f9e29d80e4
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 51
+  network: tcp
   port: 443
-  server: de-full.privateip.net
-  type: trojan
-- name: 🇩🇪 德国 | vless | 71
-  network: ws
-  port: 2053
-  server: 57.129.47.12
-  servername: sni.111000.indevs.in
-  skip-cert-verify: true
-  tls: true
+  reality-opts:
+    public-key: AB6wH4gz73w4F0Fdt8RlJTiNWY9BJKn9NOUwPQPVjg4
+    short-id: '!!str '
+  server: 109.237.97.83
+  servername: www.google.com
+  tls: false
   type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-- name: 🇩🇪 德国 | vless | 72
-  network: ws
-  port: 8443
-  server: 57.129.63.144
-  servername: sni.111000.dynv6.net
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.dynv6.net
-- name: 🇩🇪 德国 | vless | 73
+  uuid: 0bbe589a-620e-47b9-a615-60bda9903f31
+- name: 🇩🇪 德国 | vless | 53
   network: ws
   port: 443
   server: 138.197.183.219
@@ -655,31 +496,7 @@ proxies:
     headers:
       Host: sni.111000.v6.navy
     path: '%2F%3FTelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3%2B%2540WangCai2%3D'
-- name: 🇩🇪 德国 | vless | 74
-  network: ws
-  port: 8443
-  server: 57.129.47.72
-  servername: sni.111000.dynv6.net
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.dynv6.net
-- name: 🇩🇪 德国 | vless | 75
-  network: ws
-  port: 8443
-  server: 57.129.14.56
-  servername: sni.111000.indevs.in
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-- name: 🇩🇪 德国 | vless | 76
+- name: 🇩🇪 德国 | vless | 54
   network: ws
   port: 8443
   server: 57.129.47.67
@@ -691,10 +508,56 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.indevs.in
-- name: 🇩🇪 德国 | vless | 77
+- name: 🇩🇪 德国 | vless | 56
+  network: ws
+  port: 2087
+  server: 176.96.138.17
+  servername: sni.111000.indevs.in
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+    path: '%2F'
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: Telegram-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers-%40HELIX_Servers
+  name: 🇩🇪 德国 | vless | 57
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: UrGT7bAn2UND3kx81QHACf_6qReN8V6_o70kZerONk4
+    short-id: '!!str 1c547814'
+  server: 91.99.168.213
+  servername: miro.com
+  tls: false
+  type: vless
+  uuid: 14eba471-4623-4ed1-b937-f5b2206749bf
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 58
+  network: http
+  port: 443
+  server: 5.75.168.155
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 59
+  network: http
+  port: 443
+  server: 157.90.20.18
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+- name: 🇩🇪 德国 | vless | 62
   network: ws
   port: 2053
-  server: 57.129.47.41
+  server: 57.129.47.12
   servername: sni.111000.indevs.in
   skip-cert-verify: true
   tls: true
@@ -703,7 +566,56 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.indevs.in
-- name: 🇩🇪 德国 | vless | 78
+- name: 🇩🇪 德国 | vless | 63
+  network: ws
+  port: 2053
+  server: 82.117.245.166
+  servername: sni.111000.indevs.in
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+    path: /?Telegram🇨🇳@WangCai2=
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 66
+  network: http
+  port: 443
+  server: 167.235.136.155
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+- name: 🇩🇪 德国 | vless | 67
+  network: ws
+  port: 8443
+  server: 57.129.47.72
+  servername: sni.111000.dynv6.net
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.dynv6.net
+- name: 🇩🇪 德国 | trojan | 68
+  password: 4732adfa16c6450bbef87264e41332db
+  port: 443
+  server: 165.22.74.230
+  type: trojan
+- grpc-opts:
+    grpc-service-name: trojangrpc
+  name: 🇩🇪 德国 | trojan | 69
+  network: grpc
+  password: mainssh-niwrhf87
+  port: 443
+  server: 108.61.171.167
+  sni: getgrpc.mainssh.xyz
+  type: trojan
+- name: 🇩🇪 德国 | vless | 70
   network: ws
   port: 2053
   server: 188.245.108.104
@@ -716,20 +628,7 @@ proxies:
     headers:
       Host: sni.111000.indevs.in
     path: '%2F%3Ftelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3%2540wangcai2%3D'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 79
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: AB6wH4gz73w4F0Fdt8RlJTiNWY9BJKn9NOUwPQPVjg4
-    short-id: '!!str '
-  server: 109.237.97.83
-  servername: www.google.com
-  tls: false
-  type: vless
-  uuid: 0bbe589a-620e-47b9-a615-60bda9903f31
-- name: 🇩🇪 德国 | vless | 80
+- name: 🇩🇪 德国 | vless | 71
   network: ws
   port: 2053
   server: 57.129.47.29
@@ -742,7 +641,69 @@ proxies:
     headers:
       Host: sni.111000.v6.navy
     path: '%2F%3FTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2%3D'
-- name: 🇩🇪 德国 | vless | 81
+- name: 🇩🇪 德国 | vless | 72
+  network: ws
+  port: 2053
+  server: 57.129.63.60
+  servername: sni.111000.indevs.in
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+- name: 🇩🇪 德国 | vless | 73
+  network: ws
+  port: 8443
+  server: 57.129.14.56
+  servername: sni.111000.indevs.in
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+- name: 🇩🇪 德国 | vless | 74
+  network: ws
+  port: 2053
+  server: 57.129.47.41
+  servername: sni.111000.indevs.in
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+- name: 🇩🇪 德国 | vless | 75
+  network: ws
+  port: 2053
+  server: 57.129.47.11
+  servername: sni.111000.indevs.in
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+    path: '%2F%3FTelegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2%3D'
+- name: 🇩🇪 德国 | vless | 76
+  network: ws
+  port: 8443
+  server: 57.129.63.149
+  servername: sni.111000.indevs.in
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+    path: '%2F%3FTelegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2%3D'
+- name: 🇩🇪 德国 | vless | 77
   network: ws
   port: 8443
   server: 57.129.47.59
@@ -754,7 +715,19 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.indevs.in
-- name: 🇩🇪 德国 | vless | 82
+- name: 🇩🇪 德国 | vless | 78
+  network: ws
+  port: 8443
+  server: 57.129.63.144
+  servername: sni.111000.dynv6.net
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.dynv6.net
+- name: 🇩🇪 德国 | vless | 79
   network: ws
   port: 8443
   server: 94.130.132.180
@@ -767,21 +740,22 @@ proxies:
     headers:
       Host: sni.111000.indevs.in
     path: '%2F%3FTelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3%2B%2540app_bedal%3D'
-- name: 🇩🇪 德国 | vless | 83
+- name: 🇩🇪 德国 | vless | 80
   network: ws
   port: 2053
-  server: 57.129.63.60
-  servername: sni.111000.indevs.in
+  server: 57.129.63.154
+  servername: sni.111000.dynv6.net
   skip-cert-verify: true
   tls: true
   type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   ws-opts:
     headers:
-      Host: sni.111000.indevs.in
+      Host: sni.111000.dynv6.net
+    path: '%2F%3FTelegram%E9%A6%83%E5%9A%9A%E9%A6%83%E5%9A%A6+%40WangCai2%3D'
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 84
+  name: 🇩🇪 德国 | vmess | 81
   network: ws
   port: 443
   server: cvywfavasdc.cymlr.xyz
@@ -795,7 +769,21 @@ proxies:
     path: /ksebupo
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 86
+  name: 🇩🇪 德国 | vmess | 83
+  network: ws
+  port: 443
+  server: khvwycch.cymlr.xyz
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: db39ef95-4245-418a-84c0-14c202f29bc6
+  ws-opts:
+    headers:
+      Host: khvwycch.cymlr.xyz
+    path: /videnset
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 85
   network: ws
   port: 443
   server: 23.158.56.227
@@ -807,7 +795,49 @@ proxies:
     headers:
       Host: 23.158.56.227
     path: /
+- name: 🇩🇪 德国 | trojan | 86
+  password: d86c421f-dbfe-4507-a864-f8f9e29d80e4
+  port: 443
+  server: de-full.privateip.net
+  type: trojan
 - name: 🇩🇪 德国 | vless | 87
+  network: tcp
+  port: 4040
+  server: de2.sanzone.ir
+  tls: false
+  type: vless
+  uuid: b738db04-c73c-4551-b6f2-9041e93914d4
+  ws-opts:
+    headers:
+      Host: soft98.ir
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 88
+  network: tcp
+  port: 10121
+  reality-opts:
+    public-key: 4DdA8dBVn5zB_UTbgBY45YqM0HU8zrjXYdzg3-wz5Rg
+    short-id: '!!str 9c2a7d4e5f18b6a3'
+  server: 1xk7re.by-api-yandex.com
+  servername: apple.com
+  tls: false
+  type: vless
+  uuid: d1209ffb-c159-48d5-b40d-542ce11fc768
+- alterId: 1
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 89
+  network: ws
+  port: 443
+  server: 23.158.56.145
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: 23.158.56.145
+    path: linkvws
+- name: 🇩🇪 德国 | vless | 90
   network: ws
   port: 80
   server: nnet.online
@@ -820,41 +850,32 @@ proxies:
     path: '%2Fvless-ntls'
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 88
-  network: tcp
-  port: 19001
-  reality-opts:
-    public-key: S-g0oP36DShii1uPOnZDSEhp_wQghX6h68PgMivOmD4
-  server: fra01.jumperservice.com
-  servername: www.speedtest.net
-  tls: false
-  type: vless
-  uuid: 12eac926-c4ec-4040-8fb8-f316e9fc0fd6
-- alpn:
-  - h2
-  flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 89
+  name: 🇩🇪 德国 | vless | 91
   network: tcp
   port: 443
-  server: de-fast.chunkyvpn.shop
-  servername: de-fast.chunkyvpn.shop
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6053689d-39d6-4005-b1bd-c0dce854f429
-- name: 🇩🇪 德国 | vless | 90
-  network: tcp
-  port: 4040
-  server: de2.sanzone.ir
+  reality-opts:
+    public-key: 2XHOm5oJ92noxYHfahYv6dABkpp-bdehIA5grPB1X2c
+    short-id: '!!str beba4237'
+  server: 94.156.115.109
+  servername: tunnel.vk-apps.com
   tls: false
   type: vless
-  uuid: b738db04-c73c-4551-b6f2-9041e93914d4
+  uuid: 9357d31a-97f5-492b-9a9d-24dcb3449fb9
+- name: 🇩🇪 德国 | vless | 92
+  network: ws
+  port: 2053
+  server: 82.117.245.125
+  servername: sni.111000.v6.navy
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   ws-opts:
     headers:
-      Host: soft98.ir
+      Host: sni.111000.v6.navy
+    path: '%2F'
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 91
+  name: 🇩🇪 德国 | vless | 93
   network: tcp
   port: 443
   reality-opts:
@@ -864,17 +885,6 @@ proxies:
   tls: false
   type: vless
   uuid: 739e1178-7a78-427e-87c3-633882cc8f32
-- client-fingerprint: chrome
-  name: 🇩🇪 德国 | vless | 92
-  network: tcp
-  port: 753
-  reality-opts:
-    public-key: uRuW2K9JNw64jgAVEdV39NMh_udtVD6xxEV-dQFATHY
-  server: free-de.la-la-land.top
-  servername: www.amd.com
-  tls: false
-  type: vless
-  uuid: ff6cb8ef-eed6-0032-9331-cd21ec42a05f
 - alterId: 0
   name: 🇩🇪DE德国
   password: trojan
