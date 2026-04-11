@@ -11,28 +11,7 @@ proxies:
   ws-opts:
     headers:
       Host: sni.jpmj.dev
-- name: 🇫🇷 法国 | vless | 03
-  network: ws
-  port: 22224
-  server: 35.180.106.44
-  tls: false
-  type: vless
-  uuid: 05519058-d2ac-4f28-9e4a-2b2a1386749e
-- name: 🇫🇷 法国 | trojan | 04
-  password: telegram-id-v2rayvpnchannel
-  port: 22223
-  server: 35.180.106.44
-  type: trojan
-- alpn:
-  - http/1.1
-  name: 🇫🇷 法国 | trojan | 06
-  network: tcp
-  password: telegram-id-privatevpns
-  port: 22222
-  server: 35.180.106.44
-  sni: trojan.burgerip.co.uk
-  type: trojan
-- name: 🇫🇷 法国 | vless | 09
+- name: 🇫🇷 法国 | vless | 04
   port: 80
   server: 51.75.30.8
   tls: false
@@ -40,15 +19,23 @@ proxies:
   uuid: 1949f066-bcb0-49be-88e9-74abd940f80e
   ws-opts:
     path: /http
-- name: 🇫🇷 法国 | trojan | 10
-  password: e0d44ae7-cb7d-4acc-a8c0-9861a6f5eaad
-  port: 80
-  server: 51.91.11.29
-  sni: asriran.com
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 11
+  name: 🇫🇷 法国 | vmess | 05
+  network: ws
+  port: 80
+  server: 51.159.2.152
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 43587dc1-34f1-4254-ab90-56507e72d7a8
+  ws-opts:
+    headers:
+      Host: ''
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 06
   network: ws
   port: 80
   server: 51.83.97.167
@@ -60,6 +47,34 @@ proxies:
     headers:
       Host: ''
     path: /vmess
+- name: 🇫🇷 法国 | trojan | 08
+  password: e0d44ae7-cb7d-4acc-a8c0-9861a6f5eaad
+  port: 80
+  server: 51.91.11.29
+  sni: namayesh.com
+  type: trojan
+- alpn:
+  - http/1.1
+  name: 🇫🇷 法国 | trojan | 09
+  network: tcp
+  password: telegram-id-privatevpns
+  port: 22222
+  server: 15.236.102.48
+  sni: trojan.burgerip.co.uk
+  type: trojan
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇫🇷 法国 | vless | 11
+  network: tcp
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '!!str 01'
+  server: 62.210.91.10
+  servername: fuck.rkn
+  tls: false
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
 - name: 🇫🇷 法国 | vless | 12
   network: ws
   port: 80
@@ -71,22 +86,18 @@ proxies:
     headers:
       Host: google.com
     path: '%2Fhttp%23Telegram%40V2ray_Alpha%2F%3Fed%3D2560'
+- alpn:
+  - http/1.1
+  name: 🇫🇷 法国 | trojan | 13
+  network: tcp
+  password: telegram-id-directvpn
+  port: 22223
+  server: 15.236.102.48
+  sni: 'trojan.burgerip.co.uk '
+  type: trojan
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇫🇷 法国 | vless | 14
-  network: tcp
-  port: 23576
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '!!str 01'
-  server: 62.210.91.10
-  servername: fuck.rkn
-  tls: false
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇫🇷 法国 | vless | 16
   network: tcp
   port: 23576
   reality-opts:
@@ -99,7 +110,7 @@ proxies:
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 17
+  name: 🇫🇷 法国 | vmess | 15
   network: ws
   port: 443
   server: 57.128.189.211
@@ -111,6 +122,30 @@ proxies:
     headers:
       Host: yichueng.org
     path: linkvws
+- name: 🇫🇷 法国 | vless | 16
+  network: ws
+  port: 443
+  server: 57.128.183.6
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 17
+  network: ws
+  port: 443
+  server: 57.128.181.14
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
 - name: 🐵15@oneclickvpnkeys
   password: 0d892bc7-41c5-4dc5-90bb-40dfc0043dd5
   port: 443
@@ -120,20 +155,8 @@ proxies:
   type: hysteria2
 - name: 🇫🇷 法国 | vless | 19
   network: ws
-  port: 8443
-  server: 57.128.183.248
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 20
-  network: ws
   port: 443
-  server: 57.128.177.206
+  server: 57.128.183.90
   servername: sni.111000.v6.navy
   skip-cert-verify: true
   tls: true
@@ -142,30 +165,17 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 21
-  network: ws
-  port: 8443
-  server: 57.128.176.82
-  servername: sni.111000.indevs.in
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-    path: '%2F%3Fed'
-- name: 🇫🇷 法国 | trojan | 22
+- name: 🇫🇷 法国 | trojan | 20
   network: tcp
   password: opentunnel.net-english30day
   port: 443
   server: 54.37.18.204
   sni: uplod.ir
   type: trojan
-- name: 🇫🇷 法国 | vless | 23
+- name: 🇫🇷 法国 | vless | 21
   network: ws
   port: 8443
-  server: 57.128.178.79
+  server: 57.128.181.219
   servername: sni.111000.v6.navy
   skip-cert-verify: true
   tls: true
@@ -174,43 +184,7 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 24
-  network: ws
-  port: 8443
-  server: 57.128.183.225
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 25
-  network: ws
-  port: 8443
-  server: 57.128.179.45
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 26
-  network: ws
-  port: 8443
-  server: 57.128.179.10
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 27
+- name: 🇫🇷 法国 | vless | 22
   network: ws
   port: 443
   server: 57.128.178.36
@@ -222,9 +196,105 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 23
+  network: ws
+  port: 8443
+  server: 57.128.179.10
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 24
+  network: ws
+  port: 8443
+  server: 57.128.179.45
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 25
+  network: ws
+  port: 8443
+  server: 57.128.183.225
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 26
+  network: ws
+  port: 443
+  server: 57.128.180.80
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 27
+  network: ws
+  port: 8443
+  server: 57.128.183.248
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 28
+  network: ws
+  port: 443
+  server: 57.128.183.59
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 29
+  network: ws
+  port: 8443
+  server: 57.128.178.79
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 30
+  network: ws
+  port: 443
+  server: 57.128.177.206
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 28
+  name: 🇫🇷 法国 | vmess | 31
   network: ws
   port: 443
   server: 51.77.20.137
@@ -236,12 +306,48 @@ proxies:
     headers:
       Host: tilebani.com
     path: /linkvws
-- name: 🇫🇷 法国 | trojan | 29
+- name: 🇫🇷 法国 | vless | 32
+  network: ws
+  port: 8443
+  server: 57.128.181.18
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 33
+  network: ws
+  port: 8443
+  server: 57.128.176.37
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 34
+  network: ws
+  port: 8443
+  server: 57.128.183.108
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | trojan | 35
   password: 6e3b4240-38f9-4321-9b3c-bc669a34b848
   port: 443
   server: 141.94.76.177
   type: trojan
-- name: 🇫🇷 法国 | vless | 30
+- name: 🇫🇷 法国 | vless | 36
   network: ws
   port: 8443
   server: 31.59.121.227
@@ -253,7 +359,132 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.indevs.in
-- name: 🇫🇷 法国 | vless | 31
+- name: 🇫🇷 法国 | vless | 37
+  network: ws
+  port: 443
+  server: 94.183.186.27
+  servername: sni.111000.v6.navy
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+    path: '%2F%3Fed%3D2560%26telegram%F0%9F%87%A8%F0%9F%87%B3%40wangcai2'
+- name: 🇫🇷 法国 | vless | 38
+  network: ws
+  port: 443
+  server: 51.91.251.37
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | trojan | 40
+  password: b8808043-6566-4923-9195-e66bfb553d57
+  port: 443
+  server: 51.38.99.96
+  sni: ba24.ir
+  type: trojan
+- name: 🇫🇷 法国 | vless | 41
+  network: ws
+  port: 443
+  server: 51.91.255.152
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 42
+  network: ws
+  port: 8443
+  server: 51.210.151.165
+  servername: sni.111000.v6.navy
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+    path: '%2F%3Fed%3D2560'
+- name: 🇫🇷 法国 | vless | 43
+  network: ws
+  port: 8443
+  server: 51.210.150.65
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 44
+  network: ws
+  port: 2053
+  server: 54.36.98.82
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 45
+  network: ws
+  port: 8443
+  server: 146.59.230.8
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 46
+  network: ws
+  port: 2053
+  server: 51.91.102.163
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 47
+  network: ws
+  port: 443
+  server: 51.91.253.60
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 48
+  network: ws
+  port: 2053
+  server: 51.77.214.109
+  servername: sni.111000.indevs.in
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+- name: 🇫🇷 法国 | vless | 49
   network: ws
   port: 8443
   server: 146.59.159.111
@@ -265,19 +496,68 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 32
+- name: 🇫🇷 法国 | vless | 50
   network: ws
-  port: 2053
-  server: 51.38.225.63
-  servername: sni.111000.indevs.in
+  port: 8443
+  server: 54.36.98.76
+  servername: sni.111000.v6.navy
   skip-cert-verify: true
   tls: true
   type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   ws-opts:
     headers:
-      Host: sni.111000.indevs.in
-- name: 🇫🇷 法国 | vless | 33
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 51
+  network: ws
+  port: 2053
+  server: 51.75.16.244
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+    path: '%2F%3FTelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3%2B%2540WangCai2%3D'
+- name: 🇫🇷 法国 | vless | 53
+  network: ws
+  port: 2053
+  server: 51.38.227.155
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 54
+  network: ws
+  port: 443
+  server: 54.37.51.238
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 55
+  network: ws
+  port: 8443
+  server: 51.38.226.4
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 56
   network: ws
   port: 2053
   server: 141.94.77.169
@@ -290,247 +570,10 @@ proxies:
     headers:
       Host: sni.111000.v6.navy
     path: '%2F'
-- name: 🇫🇷 法国 | vless | 34
-  network: ws
-  port: 443
-  server: 57.128.183.90
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 35
-  network: ws
-  port: 8443
-  server: 57.128.181.219
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 36
-  network: ws
-  port: 443
-  server: 57.128.181.14
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 37
-  network: ws
-  port: 8443
-  server: 146.59.230.8
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 38
-  network: ws
-  port: 443
-  server: 51.178.137.248
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 40
-  network: ws
-  port: 443
-  server: 51.91.249.93
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 41
-  network: ws
-  port: 8443
-  server: 51.91.255.121
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 42
-  network: ws
-  port: 8443
-  server: 146.59.229.78
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | trojan | 43
-  password: b8808043-6566-4923-9195-e66bfb553d57
-  port: 443
-  server: 51.38.99.96
-  sni: ba24.ir
-  type: trojan
-- name: 🇫🇷 法国 | vless | 44
-  network: ws
-  port: 443
-  server: 141.94.220.210
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 45
-  network: ws
-  port: 443
-  server: 57.128.183.6
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 46
-  network: ws
-  port: 8443
-  server: 51.75.23.173
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 47
-  network: ws
-  port: 2053
-  server: 51.75.16.244
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-    path: '%2F%3FTelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3%2B%2540WangCai2%3D'
-- name: 🇫🇷 法国 | vless | 48
-  network: ws
-  port: 2053
-  server: 141.95.127.132
-  servername: sni.111000.indevs.in
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-- name: 🇫🇷 法国 | vless | 50
-  network: ws
-  port: 8443
-  server: 62.84.183.222
-  servername: sni.111000.indevs.in
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-- name: 🇫🇷 法国 | vless | 52
-  network: ws
-  port: 2053
-  server: 51.195.118.15
-  servername: sni.111000.indevs.in
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-- name: 🇫🇷 法国 | vless | 53
-  network: ws
-  port: 8443
-  server: 51.210.151.165
-  servername: sni.111000.v6.navy
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-    path: /?ed=2560security=tls
-- name: 🇫🇷 法国 | vless | 54
-  network: ws
-  port: 443
-  server: 57.128.180.80
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 55
-  network: ws
-  port: 8443
-  server: 51.77.140.38
-  servername: sni.111000.indevs.in
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-    path: '%2F%3FTelegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2%3D'
-- name: 🇫🇷 法国 | vless | 56
-  network: ws
-  port: 8443
-  server: 51.77.213.238
-  servername: sni.111000.dynv6.net
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.dynv6.net
 - name: 🇫🇷 法国 | vless | 57
   network: ws
-  port: 443
-  server: 51.91.251.37
+  port: 2053
+  server: 51.91.100.9
   servername: sni.111000.v6.navy
   skip-cert-verify: true
   tls: true
@@ -542,9 +585,8 @@ proxies:
 - name: 🇫🇷 法国 | vless | 58
   network: ws
   port: 2053
-  server: 51.210.151.165
+  server: 141.95.127.132
   servername: sni.111000.indevs.in
-  skip-cert-verify: true
   tls: true
   type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
@@ -554,19 +596,20 @@ proxies:
 - name: 🇫🇷 法国 | vless | 59
   network: ws
   port: 8443
-  server: 51.91.100.159
+  server: 54.36.98.4
   servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
+  skip-cert-verify: false
+  tls: false
   type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   ws-opts:
     headers:
       Host: sni.111000.v6.navy
+    path: /?ed=2560security=tls
 - name: 🇫🇷 法国 | vless | 60
   network: ws
-  port: 8443
-  server: 54.36.98.158
+  port: 443
+  server: 51.178.137.248
   servername: sni.111000.v6.navy
   skip-cert-verify: true
   tls: true
@@ -578,78 +621,6 @@ proxies:
 - name: 🇫🇷 法国 | vless | 61
   network: ws
   port: 8443
-  server: 51.75.19.60
-  servername: sni.111000.indevs.in
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-- name: 🇫🇷 法国 | vless | 62
-  network: ws
-  port: 8443
-  server: 51.38.226.4
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 63
-  network: ws
-  port: 2053
-  server: 51.210.151.193
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 64
-  network: ws
-  port: 8443
-  server: 51.210.150.65
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 65
-  network: ws
-  port: 443
-  server: 51.91.253.60
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 66
-  network: ws
-  port: 443
-  server: 51.91.255.152
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 67
-  network: ws
-  port: 8443
   server: 51.75.16.73
   servername: sni.111000.v6.navy
   skip-cert-verify: true
@@ -659,58 +630,10 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 68
-  network: ws
-  port: 8443
-  server: 51.75.23.189
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 69
-  network: ws
-  port: 8443
-  server: 51.91.251.198
-  servername: sni.111000.indevs.in
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-- name: 🇫🇷 法国 | vless | 70
-  network: ws
-  port: 2053
-  server: 51.38.227.155
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 71
-  network: ws
-  port: 8443
-  server: 51.91.100.128
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 72
+- name: 🇫🇷 法国 | vless | 62
   network: ws
   port: 443
-  server: 51.91.249.154
+  server: 141.94.220.210
   servername: sni.111000.v6.navy
   skip-cert-verify: true
   tls: true
@@ -719,19 +642,7 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 73
-  network: ws
-  port: 443
-  server: 51.91.251.16
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 74
+- name: 🇫🇷 法国 | vless | 63
   network: ws
   port: 443
   server: 51.91.248.253
@@ -743,10 +654,10 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 75
+- name: 🇫🇷 法国 | vless | 64
   network: ws
   port: 8443
-  server: 51.75.16.244
+  server: 51.91.251.43
   servername: sni.111000.v6.navy
   skip-cert-verify: true
   tls: true
@@ -755,7 +666,268 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 65
+  network: ws
+  port: 443
+  server: 51.91.251.16
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 66
+  network: ws
+  port: 8443
+  server: 146.59.229.78
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 67
+  network: ws
+  port: 2053
+  server: 51.195.118.15
+  servername: sni.111000.indevs.in
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+- name: 🇫🇷 法国 | vless | 68
+  network: ws
+  port: 8443
+  server: 62.84.183.222
+  servername: sni.111000.indevs.in
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+- name: 🇫🇷 法国 | vless | 69
+  network: ws
+  port: 8443
+  server: 54.36.99.75
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 70
+  network: ws
+  port: 2053
+  server: 54.36.98.93
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 71
+  network: ws
+  port: 2053
+  server: 54.36.98.199
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 72
+  network: ws
+  port: 2053
+  server: 54.36.98.4
+  servername: sni.111000.indevs.in
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+- name: 🇫🇷 法国 | vless | 73
+  network: ws
+  port: 8443
+  server: 51.91.252.61
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 74
+  network: ws
+  port: 2053
+  server: 54.36.98.189
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | trojan | 75
+  password: 6c64e6f9-a76c-49eb-96d2-bf8b1afee4a3
+  port: 443
+  server: fr-full.privateip.net
+  type: trojan
 - name: 🇫🇷 法国 | vless | 76
+  network: ws
+  port: 443
+  server: 51.91.249.154
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 77
+  network: ws
+  port: 443
+  server: 217.182.76.202
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 2e68015f-a8b2-4893-a7a3-4edb19b178d9
+  ws-opts:
+    headers:
+      Host: ''
+    path: /
+- name: 🇫🇷 法国 | vless | 78
+  network: ws
+  port: 8443
+  server: 51.75.19.60
+  servername: sni.111000.indevs.in
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+- name: 🇫🇷 法国 | vless | 79
+  network: ws
+  port: 2053
+  server: 51.210.151.193
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 80
+  network: ws
+  port: 2053
+  server: 51.75.28.76
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 81
+  network: ws
+  port: 8443
+  server: 51.75.23.173
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 82
+  network: ws
+  port: 2053
+  server: 51.38.225.63
+  servername: sni.111000.indevs.in
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+- name: 🇫🇷 法国 | vless | 83
+  network: ws
+  port: 8443
+  server: 51.91.253.174
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 84
+  network: ws
+  port: 8443
+  server: 57.128.176.82
+  servername: sni.111000.indevs.in
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+    path: '%2F%3Fed'
+- name: 🇫🇷 法国 | vless | 85
+  network: ws
+  port: 443
+  server: 51.195.37.32
+  servername: sni.111000.dynv6.net
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.dynv6.net
+- name: 🇫🇷 法国 | vless | 86
+  network: ws
+  port: 443
+  server: 88.218.78.167
+  servername: sni.111000.indevs.in
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+    path: /
+- name: 🇫🇷 法国 | vless | 87
   network: ws
   port: 8443
   server: 51.75.24.59
@@ -768,34 +940,23 @@ proxies:
     headers:
       Host: sni.111000.v6.navy
     path: '%2F%3FTelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3%2B%2540WangCai2%3D'
-- name: 🇫🇷 法国 | vless | 77
+- name: 🇫🇷 法国 | vless | 88
   network: ws
   port: 8443
-  server: 51.38.224.25
-  servername: sni.111000.v6.navy
+  server: 51.77.140.38
+  servername: sni.111000.indevs.in
   skip-cert-verify: true
   tls: true
   type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   ws-opts:
     headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 78
-  network: ws
-  port: 2053
-  server: 54.36.98.199
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 79
+      Host: sni.111000.indevs.in
+    path: '%2F%3FTelegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2%3D'
+- name: 🇫🇷 法国 | vless | 89
   network: ws
   port: 8443
-  server: 51.91.254.189
+  server: 51.75.16.244
   servername: sni.111000.v6.navy
   skip-cert-verify: true
   tls: true
@@ -804,7 +965,7 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 80
+- name: 🇫🇷 法国 | vless | 90
   network: ws
   port: 8443
   server: 51.91.102.26
@@ -816,22 +977,34 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 81
+- name: 🇫🇷 法国 | vless | 91
   network: ws
-  port: 443
-  server: 51.91.254.78
-  servername: sni.111000.v6.navy
+  port: 2053
+  server: 51.210.151.165
+  servername: sni.111000.indevs.in
   skip-cert-verify: true
   tls: true
   type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   ws-opts:
     headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 82
+      Host: sni.111000.indevs.in
+- name: 🇫🇷 法国 | vless | 92
   network: ws
   port: 8443
-  server: 51.91.248.38
+  server: 51.91.251.198
+  servername: sni.111000.indevs.in
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+- name: 🇫🇷 法国 | vless | 93
+  network: ws
+  port: 8443
+  server: 51.38.224.25
   servername: sni.111000.v6.navy
   skip-cert-verify: true
   tls: true
@@ -840,10 +1013,72 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 83
+- name: 🇫🇷 法国 | vless | 94
+  network: ws
+  port: 8443
+  server: 54.36.98.158
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 95
+  network: ws
+  port: 8443
+  server: 51.91.100.159
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 96
+  network: ws
+  port: 8443
+  server: 51.77.213.238
+  servername: sni.111000.dynv6.net
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.dynv6.net
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 97
   network: ws
   port: 443
-  server: 51.91.251.149
+  server: 57.128.189.241
+  servername: ads.x5.ru
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: ''
+    path: /linkvws
+- name: 🇫🇷 法国 | vless | 98
+  network: ws
+  port: 8443
+  server: 51.91.103.130
+  servername: sni.111000.indevs.in
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+- name: 🇫🇷 法国 | vless | 99
+  network: ws
+  port: 8443
+  server: 51.91.254.50
   servername: sni.111000.v6.navy
   skip-cert-verify: true
   tls: true
@@ -852,7 +1087,7 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 84
+- name: 🇫🇷 法国 | vless | 100
   network: ws
   port: 8443
   server: 51.91.101.216
@@ -864,10 +1099,10 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 85
+- name: 🇫🇷 法国 | vless | 101
   network: ws
   port: 8443
-  server: 51.91.249.22
+  server: 51.91.100.128
   servername: sni.111000.v6.navy
   skip-cert-verify: true
   tls: true
@@ -876,8 +1111,31 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.v6.navy
-    path: '%2F%3FTelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3%2B%2540WangCai2%3D'
-- name: 🇫🇷 法国 | vless | 86
+- name: 🇫🇷 法国 | vless | 102
+  network: ws
+  port: 443
+  server: 51.91.251.149
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 103
+  network: ws
+  port: 443
+  server: 51.91.254.78
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 104
   network: ws
   port: 443
   server: 51.91.249.9
@@ -890,10 +1148,10 @@ proxies:
     headers:
       Host: sni.111000.indevs.in
     path: '%2F%3FTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2%3D'
-- name: 🇫🇷 法国 | vless | 87
+- name: 🇫🇷 法国 | vless | 105
   network: ws
   port: 8443
-  server: 51.91.248.215
+  server: 51.91.248.38
   servername: sni.111000.v6.navy
   skip-cert-verify: true
   tls: true
@@ -902,7 +1160,44 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 88
+- name: 🇫🇷 法国 | vless | 106
+  network: ws
+  port: 8443
+  server: 51.91.249.22
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+    path: '%2F%3FTelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3%2B%2540WangCai2%3D'
+- name: 🇫🇷 法国 | vless | 107
+  network: ws
+  port: 8443
+  server: 51.91.255.121
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 108
+  network: ws
+  port: 443
+  server: 51.91.249.93
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 109
   network: ws
   port: 443
   server: 51.91.250.152
@@ -914,269 +1209,10 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.v6.navy
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 89
-  network: ws
-  port: 443
-  server: 217.182.76.202
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 2e68015f-a8b2-4893-a7a3-4edb19b178d9
-  ws-opts:
-    headers:
-      Host: ''
-    path: /
-- name: 🇫🇷 法国 | vless | 90
-  network: ws
-  port: 2053
-  server: 51.91.102.163
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 91
-  network: ws
-  port: 2053
-  server: 51.75.28.76
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 92
-  network: ws
-  port: 2053
-  server: 54.36.98.82
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 93
-  network: ws
-  port: 2053
-  server: 51.91.100.9
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 94
-  network: ws
-  port: 8443
-  server: 54.36.98.76
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 95
-  network: ws
-  port: 2053
-  server: 54.36.98.4
-  servername: sni.111000.indevs.in
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-- name: 🇫🇷 法国 | vless | 96
-  network: ws
-  port: 8443
-  server: 51.91.251.43
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 97
-  network: ws
-  port: 8443
-  server: 51.91.253.174
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 98
-  network: ws
-  port: 443
-  server: 51.195.37.32
-  servername: sni.111000.dynv6.net
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.dynv6.net
-- name: 🇫🇷 法国 | vless | 99
-  network: ws
-  port: 8443
-  server: 51.91.252.61
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 100
-  network: ws
-  port: 8443
-  server: 57.128.176.37
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 101
-  network: ws
-  port: 2053
-  server: 54.36.98.189
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 102
-  network: ws
-  port: 443
-  server: 77.221.152.21
-  servername: sni.111000.v6.navy
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-    path: '%2F'
-- name: 🇫🇷 法国 | vless | 103
-  network: ws
-  port: 8443
-  server: 51.91.254.50
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 104
-  network: ws
-  port: 2053
-  server: 54.36.98.30
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 105
-  network: ws
-  port: 8443
-  server: 51.91.103.130
-  servername: sni.111000.indevs.in
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 106
-  network: ws
-  port: 443
-  server: 57.128.189.206
-  servername: ads.x5.ru
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: ''
-    path: /linkvws
-- alpn:
-  - h2
-  client-fingerprint: chrome
-  name: 🇫🇷 法国 | vless | 107
-  network: ws
-  port: 443
-  server: mobinhost.com
-  servername: cdn-two.mr-cloud.ir
-  tls: true
-  type: vless
-  uuid: 06d4887e-9e2c-45a3-a0ac-309f4e47f047
-  ws-opts:
-    headers:
-      Host: cdn-two.mr-cloud.ir
-    path: '%2Fao0s41N5cxHj2bMQx1iv8oR'
-- name: 🇫🇷 法国 | vless | 108
-  network: ws
-  port: 8443
-  server: 54.36.99.75
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 109
-  network: ws
-  port: 8443
-  server: 57.128.183.108
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
 - name: 🇫🇷 法国 | vless | 110
   network: ws
-  port: 443
-  server: 57.128.183.59
+  port: 8443
+  server: 51.91.248.215
   servername: sni.111000.v6.navy
   skip-cert-verify: true
   tls: true
@@ -1188,7 +1224,7 @@ proxies:
 - name: 🇫🇷 法国 | vless | 111
   network: ws
   port: 8443
-  server: 57.128.181.18
+  server: 51.75.23.189
   servername: sni.111000.v6.navy
   skip-cert-verify: true
   tls: true
@@ -1211,78 +1247,97 @@ proxies:
     headers:
       Host: kapelleng.com
     path: /linkvws
-- name: 🇫🇷 法国 | vless | 113
-  network: ws
-  port: 443
-  server: 54.37.51.238
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 114
-  network: ws
-  port: 2053
-  server: 54.36.98.93
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 115
+  name: 🇫🇷 法国 | vmess | 113
   network: ws
-  port: 443
-  server: 57.128.189.241
-  servername: ads.x5.ru
-  tls: true
+  port: 16616
+  server: m.cnmjin.net
+  servername: ''
+  tls: false
   type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  uuid: b688ce0f-9201-4e8e-a67a-f3be2c6aa201
   ws-opts:
     headers:
-      Host: ''
-    path: /linkvws
+      Host: 7a297964a2b31dafd3529ef4d14574b9.mobgslb.tbcache.com
+    path: /
+- name: 🇫🇷 法国 | trojan | 114
+  password: a906625d-446c-468f-9e26-1d15981fa0e9
+  port: 443
+  server: nl-full.privateip.net
+  type: trojan
+- name: 🇫🇷 法国 | vless | 115
+  network: ws
+  port: 2053
+  server: 54.36.98.30
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
 - name: 🇫🇷 法国 | vless | 116
   network: ws
+  port: 8443
+  server: 51.91.254.189
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 117
+  network: ws
   port: 443
-  server: 88.218.78.167
-  servername: sni.111000.indevs.in
+  server: 77.221.152.21
+  servername: sni.111000.v6.navy
   skip-cert-verify: false
   tls: true
   type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   ws-opts:
     headers:
-      Host: sni.111000.indevs.in
-    path: /
-- name: 🇫🇷 法国 | trojan | 117
+      Host: sni.111000.v6.navy
+    path: /?ed=2560fp=chrome
+- name: 🇫🇷 法国 | trojan | 118
   password: 973ed2e0-c4d8-4737-a093-71629148086d
   port: 443
   server: 51.77.213.197
   sni: frt2.sshocean.net
   type: trojan
-- name: 🇫🇷 法国 | vless | 118
-  network: ws
-  port: 8443
-  server: 188.130.207.92
-  servername: sni.111000.v6.navy
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-    path: '%2F%3Fed%3D2560%26Telegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2'
-- alterId: 1
+- alterId: 0
   cipher: auto
   name: 🇫🇷 法国 | vmess | 119
+  network: ws
+  port: '16618'
+  server: t.cnmjcn.cyou
+  tls: false
+  type: vmess
+  uuid: b688ce0f-9201-4e8e-a67a-f3be2c6aa201
+  ws-opts:
+    headers:
+      Host: 7a297964a2b31dafd3529ef4d14574b9.mobgslb.tbcache.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 120
+  network: ws
+  port: '16616'
+  server: planb.mojcn.com
+  tls: false
+  type: vmess
+  uuid: bcf337fb-90a6-47df-ad9c-a470ac9cb560
+  ws-opts:
+    headers:
+      Host: 28790d8e336a52df4b9ddda53804d85b.mobgslb.tbcache.com
+    path: '%2F'
+- alterId: 1
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 121
   network: ws
   port: 443
   server: 23.162.152.177
@@ -1294,7 +1349,20 @@ proxies:
     headers:
       Host: 23.162.152.177
     path: linkvws
-- name: 🇫🇷 法国 | vless | 120
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 122
+  network: ws
+  port: '16617'
+  server: planb.mojcn.com
+  tls: false
+  type: vmess
+  uuid: bcf337fb-90a6-47df-ad9c-a470ac9cb560
+  ws-opts:
+    headers:
+      Host: 28790d8e336a52df4b9ddda53804d85b.mobgslb.tbcache.com
+    path: '%2F'
+- name: 🇫🇷 法国 | vless | 123
   network: ws
   port: 443
   server: 62.133.62.104
@@ -1308,71 +1376,7 @@ proxies:
       Host: sni.111000.v6.navy
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 121
-  network: ws
-  port: '16617'
-  server: m.cnmjin.net
-  tls: false
-  type: vmess
-  uuid: b688ce0f-9201-4e8e-a67a-f3be2c6aa201
-  ws-opts:
-    headers:
-      Host: 7a297964a2b31dafd3529ef4d14574b9.mobgslb.tbcache.com
-    path: /
-- name: 🇫🇷 法国 | vless | 122
-  network: ws
-  port: 443
-  server: 94.183.186.27
-  servername: sni.111000.v6.navy
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-    path: '%2F%3Fed%3D2560%26telegram%F0%9F%87%A8%F0%9F%87%B3%40wangcai2'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇫🇷 法国 | vless | 123
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: AYQOZFxjvHN-RIzKYEibwFiFsp03cdlWGdCmyFfuNVc
-    short-id: '!!str 4fa44664f6a566d3'
-  server: fran.scroogethebest.com
-  servername: fran.scroogethebest.com
-  tls: false
-  type: vless
-  uuid: ccedb1b1-35f3-46d1-a85a-c699eef5f3e1
-- alterId: 0
-  cipher: auto
   name: 🇫🇷 法国 | vmess | 124
-  network: ws
-  port: '16618'
-  server: t.cnmjcn.cyou
-  tls: false
-  type: vmess
-  uuid: b688ce0f-9201-4e8e-a67a-f3be2c6aa201
-  ws-opts:
-    headers:
-      Host: 7a297964a2b31dafd3529ef4d14574b9.mobgslb.tbcache.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 125
-  network: ws
-  port: '16617'
-  server: planb.mojcn.com
-  tls: false
-  type: vmess
-  uuid: bcf337fb-90a6-47df-ad9c-a470ac9cb560
-  ws-opts:
-    headers:
-      Host: 28790d8e336a52df4b9ddda53804d85b.mobgslb.tbcache.com
-    path: '%2F'
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 126
   network: ws
   port: '16626'
   server: planb.mojcn.com
@@ -1385,7 +1389,7 @@ proxies:
     path: '%2F'
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 127
+  name: 🇫🇷 法国 | vmess | 125
   network: ws
   port: '16622'
   server: planb.mojcn.com
@@ -1396,6 +1400,71 @@ proxies:
     headers:
       Host: 6a52001e3651ccdc8ef7740494916ad2.mobgslb.tbcache.com
     path: '%2F'
+- name: 🇫🇷 法国 | vless | 126
+  network: ws
+  port: 8443
+  server: 188.130.207.92
+  servername: sni.111000.v6.navy
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+    path: '%2F%3Fed%3D2560%26Telegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2'
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇫🇷 法国 | vless | 127
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: AYQOZFxjvHN-RIzKYEibwFiFsp03cdlWGdCmyFfuNVc
+    short-id: '!!str 4fa44664f6a566d3'
+  server: fran.scroogethebest.com
+  servername: fran.scroogethebest.com
+  tls: false
+  type: vless
+  uuid: ccedb1b1-35f3-46d1-a85a-c699eef5f3e1
+- alpn:
+  - h2
+  client-fingerprint: chrome
+  name: 🇫🇷 法国 | vless | 128
+  network: ws
+  port: 443
+  server: mobinhost.com
+  servername: cdn-two.mr-cloud.ir
+  tls: true
+  type: vless
+  uuid: 06d4887e-9e2c-45a3-a0ac-309f4e47f047
+  ws-opts:
+    headers:
+      Host: cdn-two.mr-cloud.ir
+    path: '%2Fao0s41N5cxHj2bMQx1iv8oR'
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 129
+  network: ws
+  port: '16617'
+  server: m.cnmjin.net
+  tls: false
+  type: vmess
+  uuid: b688ce0f-9201-4e8e-a67a-f3be2c6aa201
+  ws-opts:
+    headers:
+      Host: 7a297964a2b31dafd3529ef4d14574b9.mobgslb.tbcache.com
+    path: /
+- name: 🇫🇷 法国 | vless | 130
+  network: ws
+  port: 2053
+  server: 217.60.252.232
+  servername: sni.111000.v6.navy
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+    path: '%2F%3Fed%3D2560%26telegram%F0%9F%87%A8%F0%9F%87%B3%40wangcai2'
 - client-fingerprint: random
   name: FR1｜商宽｜非常安全
   network: tcp
