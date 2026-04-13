@@ -1,5 +1,36 @@
 proxies:
-- name: 🇸🇪 瑞典 | trojan | 02
+- client-fingerprint: chrome
+  name: 🇸🇪 瑞典 | vless | 01
+  network: tcp
+  port: 2197
+  reality-opts:
+    public-key: ECxm-BdHYhxYK9MtN33NkkrFSdFZXp-OB-yhN8AleRY
+    short-id: '!!str a62d513cd709744a'
+  server: dd.openaccessnode.com
+  servername: api.push.apple.com
+  tls: false
+  type: vless
+  uuid: 75193bef-8d8f-e823-41e0-2dd083dc1399
+- name: 🇸🇪 瑞典 | vless | 04
+  port: 443
+  server: 16.170.148.222
+  tls: false
+  type: vless
+  uuid: fd2c95b1-f48e-4d44-9b53-f5560f2eaae4
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇪 瑞典 | vless | 05
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: nPcUKydxoRI66O3tT9O4QCZpLjOBvkGsiXG7pDX1BBw
+    short-id: '!!str 6ba85179e30d4fc2'
+  server: 188.126.76.159
+  servername: www.google.com
+  tls: false
+  type: vless
+  uuid: c8d1c6d3-388f-48fc-a8f0-ed90d955d096
+- name: 🇸🇪 瑞典 | trojan | 06
   network: ws
   password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
   port: 2083
@@ -11,37 +42,6 @@ proxies:
     headers:
       Host: xo.e0f.cx
     path: '%2Ftrojan-ws'
-- name: 🇸🇪 瑞典 | vless | 03
-  port: 443
-  server: 16.170.148.222
-  tls: false
-  type: vless
-  uuid: fd2c95b1-f48e-4d44-9b53-f5560f2eaae4
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 04
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: nPcUKydxoRI66O3tT9O4QCZpLjOBvkGsiXG7pDX1BBw
-    short-id: '!!str 6ba85179e30d4fc2'
-  server: 188.126.76.159
-  servername: www.google.com
-  tls: false
-  type: vless
-  uuid: c8d1c6d3-388f-48fc-a8f0-ed90d955d096
-- client-fingerprint: chrome
-  name: 🇸🇪 瑞典 | vless | 06
-  network: tcp
-  port: 2197
-  reality-opts:
-    public-key: ECxm-BdHYhxYK9MtN33NkkrFSdFZXp-OB-yhN8AleRY
-    short-id: '!!str a62d513cd709744a'
-  server: dd.openaccessnode.com
-  servername: api.push.apple.com
-  tls: false
-  type: vless
-  uuid: 75193bef-8d8f-e823-41e0-2dd083dc1399
 - grpc-opts:
     grpc-service-name: max.ru
   name: SE1｜机房｜低风险
