@@ -1,4 +1,92 @@
 proxies:
+- name: 'US #3'
+  password: 38428a74-c651-47a5-b2c9-4bec5a1809cf
+  port: 35000
+  server: 208.87.242.77
+  skip-cert-verify: true
+  sni: www.apple.com
+  tls: false
+  type: hysteria2
+- name: '🇺🇸 US | www.apple.com | HYSTER... #1'
+  password: 38428a74-c651-47a5-b2c9-4bec5a1809cf
+  port: 443
+  server: 134.195.101.199
+  skip-cert-verify: true
+  sni: www.apple.com
+  tls: false
+  type: hysteria2
+- flow: xtls-rprx-direct
+  name: 'Vless_TCP_XTLStrojan://1eb9fcd... #1'
+  network: tcp
+  port: 443
+  server: id.artunnel57.host
+  servername: id.artunnel57.host
+  tls: false
+  type: vless
+  uuid: 29281351-acf2-4b08-9dcc-97de24aed5da
+- name: '>>@oneclickvpnkeys::US #4'
+  network: ws
+  port: 2086
+  server: 104.16.72.113
+  tls: false
+  type: vless
+  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
+  ws-opts:
+    headers:
+      Host: index.arcane509.workers.dev
+    path: '%2F9om0kfpk0v09'
+- flow: ''
+  name: '>>@oneclickvpnkeys::US #5'
+  network: ws
+  port: 8443
+  server: 45.131.209.130
+  servername: ovhwuxian.pai50288.uk
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 57ba2ab1-a283-42eb-82ee-dc3561a805b8
+  ws-opts:
+    headers:
+      Host: ovhwuxian.pai50288.uk
+    path: '%2F57ba2ab1'
+- name: '>>@oneclickvpnkeys::US #6'
+  network: ws
+  port: 2083
+  server: 162.159.36.20
+  servername: newwk1.f1w.de5.net
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  ws-opts:
+    headers:
+      Host: newwk1.f1w.de5.net
+    path: '%2F'
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇺🇸 美国 | vless | 48
+  network: tcp
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '!!str 01'
+  server: 15.204.97.216
+  servername: fuck.rkn
+  tls: false
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: ck-US-AWS
+  network: tcp
+  port: 15601
+  reality-opts:
+    public-key: PwQ33xjlQNQDKUstzS5B4MskgPhnPtURf--6U8avdUc
+  server: 173.242.119.66
+  servername: aws.amazon.com
+  tls: false
+  type: vless
+  uuid: 2bf8726c-7d94-4c8c-95f2-d89d1a0a7d18
 - name: 🇦🇲 亚美尼亚 | trojan | 01
   network: ws
   password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
@@ -546,19 +634,6 @@ proxies:
     headers:
       Host: www.60988297.xyz
     path: /
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇺🇸 美国 | vless | 48
-  network: tcp
-  port: 23576
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '!!str 01'
-  server: 15.204.97.216
-  servername: fuck.rkn
-  tls: false
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
 - client-fingerprint: chrome
   name: 🇺🇸 美国 | vless | 49
   network: ws
@@ -1414,7 +1489,7 @@ proxies:
   tls: true
   type: ss
 - alterId: 0
-  name: 美国|@ripaojiedian
+  name: 11,12|美国|@ripaojiedian
   network: tcp
   password: 187dda4498be9ac4f28db939d5940185
   port: 4019
@@ -3891,11 +3966,35 @@ proxies:
     headers:
       Host: snip.zrfs.indevs.in
     path: '%2F%3Fed%3D2560'
-- name: 美国3|@ripaojiedian
+- name: 11,12|美国3|@ripaojiedian
   network: tcp
   password: BxceQaOe
   port: 14919
   server: 16.163.129.49
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- name: 美国|@ripaojiedian
+  network: tcp
+  password: 1a98450e6f743b1b66a8bebfe3ea93e9
+  port: 4019
+  server: 18.183.171.241
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 美国2|@ripaojiedian
+  network: tcp
+  password: 1a98450e6f743b1b66a8bebfe3ea93e9
+  port: 4019
+  server: 13.193.221.106
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 美国3|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 49534
+  server: 18.181.175.112
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
   type: trojan
