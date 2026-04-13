@@ -11,23 +11,9 @@ proxies:
   tls: false
   type: vless
   uuid: 0bc2218a-4449-45a4-844a-29826d3296a9
-- alterId: 0
-  cipher: auto
-  name: 🇷🇺 俄罗斯 | vmess | 01
-  network: ws
-  port: 443
-  server: 45.67.215.119
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
-  ws-opts:
-    headers:
-      Host: e130917c-1b58-4136-b2d9-76dc920e0add.add97ee8-0f14-48a3-b2cd-979c56742e64.loseyourip.com
-    path: /
 - alpn:
   - http/1.1
-  name: 🇷🇺 俄罗斯 | vless | 02
+  name: 🇷🇺 俄罗斯 | vless | 01
   network: ws
   port: 443
   server: 45.67.215.233
@@ -40,6 +26,20 @@ proxies:
     headers:
       Host: 057.electrocellco-cf-057.workers.dev
     path: '%2FeyJqdW5rIjoiSFM1N0lLQmx2UU1qRzlnTiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0%3D'
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 俄罗斯 | vmess | 02
+  network: ws
+  port: 443
+  server: 45.67.215.119
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+  ws-opts:
+    headers:
+      Host: e130917c-1b58-4136-b2d9-76dc920e0add.add97ee8-0f14-48a3-b2cd-979c56742e64.loseyourip.com
+    path: /
 - flow: xtls-rprx-vision
   name: 🇷🇺 俄罗斯 | vless | 04
   network: tcp
@@ -59,34 +59,22 @@ proxies:
   uuid: e384913f-8863-47b4-8858-a84b68abb4a6
 - alterId: 0
   cipher: auto
-  name: 🇷🇺 俄罗斯 | vmess | 08
+  name: 🇷🇺 俄罗斯 | vmess | 07
   network: tcp
   port: 39651
   server: 45.89.52.207
   tls: false
   type: vmess
   uuid: ac4c12c5-45f2-4398-a718-9983941ede2b
-- name: 🇷🇺 俄罗斯 | trojan | 09
+- name: 🇷🇺 俄罗斯 | trojan | 08
   password: Aimer
   port: 443
   server: 5.182.84.244
   sni: epme.ambercc.filegear-sg.me
   type: trojan
-- name: 🇷🇺 俄罗斯 | trojan | 10
-  network: ws
-  password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
-  port: 2083
-  server: 145.249.115.115
-  skip-cert-verify: true
-  sni: xo.e0f.cx
-  type: trojan
-  ws-opts:
-    headers:
-      Host: xo.e0f.cx
-    path: '%2Ftrojan-ws'
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 11
+  name: 🇷🇺 俄罗斯 | vless | 09
   network: tcp
   port: 443
   reality-opts:
@@ -96,6 +84,33 @@ proxies:
   tls: false
   type: vless
   uuid: 6fd9f786-d974-49d0-b5c4-397678de69a2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇷🇺 俄罗斯 | vless | 10
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: FVL0r87K3-vUP2KXQX1juLMFEHJtvxwKM-nm6_PYllc
+    short-id: '!!str deadbeef42'
+  server: 193.233.253.73
+  servername: www.apple.com
+  tls: false
+  type: vless
+  uuid: 4b056394-2f40-11f1-bffe-46c4782ac1a7
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: DE20｜商宽｜非常安全
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: Uwz6QjH6QTonKba4RVv35LNmhJLA6c2kxtI2nXRQWTg
+    short-id: '!!str 2c60d62e1d95c07a'
+  server: 51.250.35.199
+  servername: eh.vk.com
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: 95abaefc-7861-417a-81b7-166cb788ce1a
 - client-fingerprint: chrome
   name: PL3｜原生/疑似家宽｜非常安全
   network: tcp
@@ -112,7 +127,6 @@ proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇷🇺 俄罗斯 | vless | 13
-  network: tcp
   port: 443
   reality-opts:
     public-key: 4woJiVyGtLro6qRQdUcM2EJDHI3CLOeeE-knmSHk8lE
@@ -124,46 +138,19 @@ proxies:
   uuid: 96b1778a-b1e6-43b3-9021-9344ec192398
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: DE20｜商宽｜非常安全
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: Uwz6QjH6QTonKba4RVv35LNmhJLA6c2kxtI2nXRQWTg
-    short-id: '!!str 2c60d62e1d95c07a'
-  server: 51.250.35.199
-  servername: eh.vk.com
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  uuid: 95abaefc-7861-417a-81b7-166cb788ce1a
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 15
-  network: tcp
+  name: 🇷🇺 俄罗斯 | vless | 14
   port: 443
   reality-opts:
     public-key: rDPZZOBMmBb_mNKPEewzp9Uu6zkGrP7XOVpnRzetXDc
+    short-id: '!!str '
   server: 90.156.209.66
   servername: goodcardboard.shop
   tls: false
   type: vless
   uuid: bdc1c53e-7d64-436f-80d6-549c57de7d76
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 16
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: FVL0r87K3-vUP2KXQX1juLMFEHJtvxwKM-nm6_PYllc
-    short-id: '!!str deadbeef42'
-  server: 193.233.253.73
-  servername: www.apple.com
-  tls: false
-  type: vless
-  uuid: 4b056394-2f40-11f1-bffe-46c4782ac1a7
 - alpn:
   - http/1.1
-  name: 🇷🇺 俄罗斯 | vless | 17
+  name: 🇷🇺 俄罗斯 | vless | 15
   network: ws
   port: 443
   server: mci.buzzmuzzpanel.online
@@ -176,34 +163,8 @@ proxies:
     headers:
       Host: 057.electrocellco-cf-057.workers.dev
     path: '%2FeyJqdW5rIjoiSFM1N0lLQmx2UU1qRzlnTiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0%3D'
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 18
-  network: tcp
-  port: 443
-  server: run2.whoshere.site
-  servername: run2.whoshere.site
-  tls: true
-  type: vless
-  uuid: 00c5261b-1ec2-4cac-b795-7324facd4dd2
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 19
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: -tePObR3oZwGAUOb5kqTYkNWl6rtUKl0RFuzuu06wgw
-    short-id: '!!str 50'
-  server: 7qqrbome80g.country-26.de-nfast.com
-  servername: tradingview.com
-  tls: false
-  type: vless
-  uuid: 4b481152-ba7f-4445-8cc0-d33d58546e23
-- client-fingerprint: chrome
-  name: 🇷🇺 俄罗斯 | vless | 20
-  network: tcp
+  name: 🇷🇺 俄罗斯 | vless | 16
   port: 443
   reality-opts:
     public-key: z_mZq7riCGYKcTsXGCFX3KyhLL5PYgG3ydZ8_wM_ZkU
@@ -215,7 +176,7 @@ proxies:
   uuid: f7bae22e-20ab-11f1-835c-0242ac110002
 - alterId: 0
   cipher: chacha20-ietf-poly1305
-  name: 🇷🇺RU俄罗斯2
+  name: 🇷🇺RU俄罗斯
   password: 36ZCHeabUSfKjfQEvJ4HDV
   port: 54170
   server: 185.242.86.156

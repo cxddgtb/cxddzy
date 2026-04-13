@@ -3,7 +3,7 @@ proxies:
   network: ws
   password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
   port: 2083
-  server: 87.236.146.32
+  server: 91.184.250.116
   skip-cert-verify: true
   sni: xo.e0f.cx
   type: trojan
@@ -15,7 +15,7 @@ proxies:
   network: ws
   password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
   port: 2083
-  server: 91.184.250.116
+  server: 87.236.146.32
   skip-cert-verify: true
   sni: xo.e0f.cx
   type: trojan
@@ -23,7 +23,19 @@ proxies:
     headers:
       Host: xo.e0f.cx
     path: '%2Ftrojan-ws'
-- name: 🇪🇪 爱沙尼亚 | trojan | 03
+- name: 🇪🇪 爱沙尼亚 | vless | 03
+  network: ws
+  port: 443
+  server: 89.150.40.152
+  servername: 3-7ny.pages.dev
+  tls: true
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  ws-opts:
+    headers:
+      Host: 3-7ny.pages.dev
+    path: '%2Fproxyip%3DProxyIP.DE.owg.dpdns.org'
+- name: 🇪🇪 爱沙尼亚 | trojan | 04
   network: ws
   password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
   port: 2083
@@ -37,8 +49,7 @@ proxies:
     path: '%2Ftrojan-ws'
 - client-fingerprint: random
   flow: xtls-rprx-vision
-  name: 🇪🇪 爱沙尼亚 | vless | 04
-  network: tcp
+  name: 🇪🇪 爱沙尼亚 | vless | 05
   port: 443
   server: s501.ccgfw.top
   servername: u711541u2c89s501.ccgfw.top
@@ -47,21 +58,31 @@ proxies:
   uuid: 872624ac-aa40-39b1-8232-f7270812c234
 - client-fingerprint: random
   flow: xtls-rprx-vision
-  name: 🇪🇪 爱沙尼亚 | vless | 05
-  network: tcp
-  port: 443
-  server: s348.ccgfw.top
-  servername: u711541u6fa5s348.ccgfw.top
-  tls: true
-  type: vless
-  uuid: 872624ac-aa40-39b1-8232-f7270812c234
-- client-fingerprint: random
-  flow: xtls-rprx-vision
   name: 🇪🇪 爱沙尼亚 | vless | 06
-  network: tcp
   port: 443
   server: s473.ccgfw.top
   servername: u711541uefc5s473.ccgfw.top
   tls: true
   type: vless
   uuid: 872624ac-aa40-39b1-8232-f7270812c234
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: 🇪🇪 爱沙尼亚 | vless | 07
+  port: 443
+  server: s348.ccgfw.top
+  servername: u711541u6fa5s348.ccgfw.top
+  tls: true
+  type: vless
+  uuid: 872624ac-aa40-39b1-8232-f7270812c234
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇪🇪 爱沙尼亚 | vless | 08
+  port: 443
+  reality-opts:
+    public-key: kEhVzEXS_myQF6LPpKPWEI8Ha2-mmNMyLItXoVa8SD4
+    short-id: '!!str '
+  server: in-pl-hn.ray-proxy.ru
+  servername: eh.vk.com
+  tls: false
+  type: vless
+  uuid: 3cb9f2c2-cd60-4616-963e-6a1c5d1c8b02
