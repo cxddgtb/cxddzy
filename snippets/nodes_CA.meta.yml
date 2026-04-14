@@ -1,4 +1,27 @@
 proxies:
+- flow: xtls-rprx-vision
+  name: 🇨🇦_加拿大
+  network: tcp
+  port: 443
+  server: fr01.grani.site
+  servername: spliceflowtech.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 81d82277-c095-4613-ba51-cafd0e413e69
+- alterId: 0
+  cipher: auto
+  name: '🇨🇦 _CA_加拿大 #1'
+  network: ws
+  port: '80'
+  server: 108.181.10.17
+  tls: false
+  type: vmess
+  uuid: 474e8680-701f-11ee-b436-205c6d5f5d78
+  ws-opts:
+    headers:
+      Host: teams.microsoft.com
+    path: /
 - name: 🇨🇦 加拿大_多伦多
   password: NISHIKUITAN222
   port: 443
@@ -128,7 +151,7 @@ proxies:
       Host: telegram-channel-vlessconfig.sohala.uk
     path: /telegram-channel-vlessconfig-ws
 - flow: xtls-rprx-vision
-  name: 🇨🇦 Canada, Montreal [BL]
+  name: 🇨🇦 加拿大 | vless | 12
   network: tcp
   port: 8443
   reality-opts:
@@ -141,7 +164,7 @@ proxies:
   uuid: 0a14c5c8-28b5-41e8-bce9-76e140dbe3ea
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇨🇦 Canada, Montreal [BL] #3'
+  name: 🇨🇦 加拿大 | vless | 19
   network: tcp
   port: 8443
   reality-opts:
@@ -281,7 +304,7 @@ proxies:
     headers:
       Host: ca.adobe-connect.top
     path: '%2F'
-- name: Vepeer_VPN-275🇨🇦🇮🇷
+- name: 🏳️ Fastly | vless | 02
   network: xhttp
   port: 80
   server: 151.101.1.194
@@ -462,7 +485,7 @@ proxies:
     path: '%2F39427%2FNextlife'
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 03
+  name: 🇨🇦 加拿大 | vmess | 05
   network: ws
   port: 80
   server: 137.184.164.233
@@ -493,7 +516,7 @@ proxies:
   name: 🇨🇦 加拿大 | vmess | 08
   network: ws
   port: 443
-  server: 23.162.200.227
+  server: 134.195.198.147
   servername: ''
   tls: true
   type: vmess
@@ -504,10 +527,10 @@ proxies:
     path: /linkvws
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 09
+  name: 🇨🇦 加拿大 | vmess | 13
   network: ws
   port: 443
-  server: 134.195.198.147
+  server: 23.162.200.227
   servername: ''
   tls: true
   type: vmess
@@ -516,27 +539,6 @@ proxies:
     headers:
       Host: ''
     path: /linkvws
-- name: 🇨🇦 加拿大 | trojan | 11
-  password: bc7593fe-0604-4fbe-a70bYWVzLTI1Ni1nY206Q1VuZFNabllzUEtjdTaclWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272
-  port: 443
-  server: ca-trojan.bonds.id
-  type: trojan
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: 🇨🇦 加拿大 | vless | 19
-  network: xhttp
-  port: 443
-  server: xca.soonteam.top
-  servername: xca.soonteam.top
-  tls: true
-  type: vless
-  uuid: 73c8f578-2e1c-4c32-8352-a6eec82338dd
-  ws-opts:
-    headers:
-      Host: xca.soonteam.top
-    path: /Telegram@SoonTeam,Telegram@SoonTeam,Telegram@SoonTeam,Telegram@SoonTeam,Telegram@SoonTeam
 - alterId: 0
   cipher: aes-256-gcm
   name: 🇨🇦CA加拿大
@@ -555,3 +557,17 @@ proxies:
   skip-cert-verify: true
   tls: true
   type: ss
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦_CA_加拿大
+  network: ws
+  port: 80
+  server: 108.181.10.17
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 474e8680-701f-11ee-b436-205c6d5f5d78
+  ws-opts:
+    headers:
+      host: teams.microsoft.com
+    path: /

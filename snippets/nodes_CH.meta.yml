@@ -1,4 +1,27 @@
 proxies:
+- flow: xtls-rprx-vision
+  name: 🇨🇭_瑞士
+  network: tcp
+  port: 443
+  server: 45.148.117.94
+  servername: yandex.ru
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 443fd8ea-3cfd-4286-a4e2-91276e41fe51
+- client-fingerprint: chrome
+  name: 🇨🇾 塞浦路斯 | vless | 05
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: ptB0MNa4af00sliOI07Lvz2yqw_jjay67tDgiDXzcg8
+    short-id: '!!str '
+  server: 45.12.109.68
+  servername: dropbox.com
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: d0436b64-3355-11f1-a772-ee3d4fb45757
 - name: 🇨🇭 瑞士_041315050
   password: 95tguyDtPydNyzAV1HK-2g
   port: 443
@@ -42,7 +65,7 @@ proxies:
   uuid: 0ad27946-8cfb-496d-bd13-5864cbf18aff
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇨🇭 Switzerland, Zurich [BL] #5'
+  name: 🇸🇨 塞舌尔 | vless | 11
   network: tcp
   port: 8443
   reality-opts:
@@ -65,7 +88,7 @@ proxies:
       Host: sourceforge.net
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇨🇭 Швейцария [🏳️LTE] | 🥭🔥  '
+  name: 🇷🇺 俄罗斯 | vless | 101
   network: tcp
   port: 2443
   reality-opts:
@@ -164,29 +187,16 @@ proxies:
   password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
   port: 2083
   server: 95.85.239.225
+  skip-cert-verify: true
   sni: xo.e0f.cx
   type: trojan
   ws-opts:
     headers:
       Host: xo.e0f.cx
-    path: /trojan-ws
+    path: '%2Ftrojan-ws'
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇨🇭 瑞士 | vless | 04
-  network: tcp
-  port: 52000
-  reality-opts:
-    public-key: KXqoXRnGxHCnTT17cRpFRhKNj_3km3DnWEJ5L3FtSwg
-    short-id: '!!str edd8887128ea'
-  server: 45.95.232.229
-  servername: music.yandex.ru
-  tls: false
-  type: vless
-  uuid: fd2bfdd2-68eb-49b0-98ad-ed82f901edde
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 05
-  network: tcp
   port: 443
   reality-opts:
     public-key: nPcUKydxoRI66O3tT9O4QCZpLjOBvkGsiXG7pDX1BBw
@@ -198,14 +208,19 @@ proxies:
   uuid: c8d1c6d3-388f-48fc-a8f0-ed90d955d096
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 06
-  network: tcp
-  port: 443
+  name: 🇨🇭 瑞士 | vless | 05
+  port: 52000
   reality-opts:
-    public-key: gwuAehnMX6e-n1fxIenfjx43j3qXXi7Cb4wfnW5VyBQ
-    short-id: '!!str f04729f65b9ea261'
-  server: nl1.samovargate.com
-  servername: www.microsoft.com
+    public-key: KXqoXRnGxHCnTT17cRpFRhKNj_3km3DnWEJ5L3FtSwg
+    short-id: '!!str edd8887128ea'
+  server: 45.95.232.229
+  servername: music.yandex.ru
   tls: false
   type: vless
-  uuid: 82b5b465-3307-4a25-acef-abd1649bbedf
+  uuid: fd2bfdd2-68eb-49b0-98ad-ed82f901edde
+- cipher: aes-256-cfb
+  name: 🇨🇭_CH_瑞士
+  password: asdKkaskJKfnsa
+  port: 80
+  server: 84.17.53.163
+  type: ss
