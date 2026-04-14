@@ -1,32 +1,4 @@
 proxies:
-- alpn:
-  - h2
-  name: 🇨🇦 GRPC-TLS 📁 @DeamNet_proxy
-  network: grpc
-  port: 443
-  server: 172.67.249.36
-  servername: pqh30v5.carwashipdir.shop
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: e4824193-4f54-453b-d037-88368e85ef0e
-- alpn:
-  - h3
-  - h2
-  client-fingerprint: chrome
-  name: 🇨🇦 WS-TLS 📁 @DeamNet_proxy
-  network: ws
-  port: 443
-  server: s1.db-link.in
-  servername: dabaihk.webn.cc
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 003ef206-46b6-3701-ab77-b03debe7511f
-  ws-opts:
-    headers:
-      Host: dabaihk.webn.cc
-    path: '%2Fdb1024143bf11354'
 - alterId: 0
   cipher: auto
   name: 🇨🇦 加拿大 | vmess | 05
@@ -43,7 +15,21 @@ proxies:
     path: /vmess
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 09
+  name: 🇨🇦 加拿大 | vmess | 12
+  network: ws
+  port: 443
+  server: 134.195.198.147
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: inna.cfd
+    path: /linkvws
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 | vmess | 13
   network: ws
   port: 443
   server: 23.162.200.227
@@ -55,7 +41,21 @@ proxies:
     headers:
       Host: ''
     path: /
-- name: 🇨🇦 加拿大 | trojan | 10
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 | vmess | 14
+  network: ws
+  port: 443
+  server: 158.51.121.63
+  servername: seribus.org
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: seribus.org
+    path: linkvws
+- name: 🇨🇦 加拿大 | trojan | 15
   password: bc7593fe-0604-4fbe-a70bYWVzLTI1Ni1nY206Q1VuZFNabllzUEtjdTaclWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272
   port: 443
   server: ca-trojan.bonds.id
@@ -64,7 +64,7 @@ proxies:
   - h2
   - http/1.1
   client-fingerprint: chrome
-  name: 🇨🇦 加拿大 | vless | 17
+  name: 🇨🇦 加拿大 | vless | 19
   network: xhttp
   port: 443
   server: xca.soonteam.top
@@ -77,20 +77,6 @@ proxies:
       Host: xca.soonteam.top
     path: /Telegram@SoonTeam,Telegram@SoonTeam,Telegram@SoonTeam,Telegram@SoonTeam,Telegram@SoonTeam
 - alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 18
-  network: ws
-  port: '443'
-  server: 158.51.121.63
-  servername: seribus.org
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: seribus.org
-    path: linkvws
-- alterId: 0
   cipher: chacha20-ietf-poly1305
   name: 🇨🇦CA加拿大
   password: f8f7aCzcPKbsF8p3
@@ -100,18 +86,8 @@ proxies:
   tls: true
   type: ss
 - alterId: 0
-  name: 🇨🇦CA加拿大2
-  password: ac246072-3078-4cd2-ba8a-8c91d4eb3570
-  port: 443
-  server: 23.227.38.43
-  skip-cert-verify: true
-  sni: ukmp1pz6n5doe90u.tkgogocsgo.top
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 0
   cipher: aes-256-gcm
-  name: 🇨🇦CA加拿大3
+  name: 🇨🇦CA加拿大2
   password: 8JCsPssfgS8tiRwiMlhARg==
   port: 12000
   server: 144.217.164.29
