@@ -1108,7 +1108,7 @@ def main():
                     FETCH_TIMEOUT = (1, 0)
                     break
                 if not threads[i].is_alive(): break
-                print(f"{50*t}s")
+                print(f"{5*t}s")
             if threads[i].is_alive():
                 print("超时！")
                 continue
