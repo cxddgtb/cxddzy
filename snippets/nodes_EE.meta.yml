@@ -25,7 +25,7 @@ proxies:
     headers:
       Host: edtunnel-eiz.pages.dev
     path: '%2F%3Fed%3D2560%26Telegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2'
-- name: 🇪🇪 爱沙尼亚 | trojan | 01
+- name: 🇪🇪 爱沙尼亚 | trojan | 02
   network: ws
   password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
   port: 2083
@@ -37,23 +37,11 @@ proxies:
     headers:
       Host: xo.e0f.cx
     path: '%2Ftrojan-ws'
-- name: 🇪🇪 爱沙尼亚 | trojan | 02
-  network: ws
-  password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
-  port: 2083
-  server: 87.236.146.32
-  skip-cert-verify: true
-  sni: xo.e0f.cx
-  type: trojan
-  ws-opts:
-    headers:
-      Host: xo.e0f.cx
-    path: '%2Ftrojan-ws'
 - name: 🇪🇪 爱沙尼亚 | trojan | 03
   network: ws
   password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
   port: 2083
-  server: 95.85.243.216
+  server: 87.236.146.32
   skip-cert-verify: true
   sni: xo.e0f.cx
   type: trojan
@@ -74,8 +62,20 @@ proxies:
   tls: false
   type: vless
   uuid: c8d1c6d3-388f-48fc-a8f0-ed90d955d096
+- name: 🇪🇪 爱沙尼亚 | trojan | 06
+  network: ws
+  password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
+  port: 2083
+  server: 95.85.243.216
+  skip-cert-verify: true
+  sni: xo.e0f.cx
+  type: trojan
+  ws-opts:
+    headers:
+      Host: xo.e0f.cx
+    path: '%2Ftrojan-ws'
 - flow: xtls-rprx-vision
-  name: 🇪🇪 爱沙尼亚 | vless | 06
+  name: 🇪🇪 爱沙尼亚 | vless | 07
   port: 443
   server: 95.85.243.216
   servername: www.google.com
@@ -86,6 +86,17 @@ proxies:
 - client-fingerprint: random
   flow: xtls-rprx-vision
   name: 🇪🇪 爱沙尼亚 | vless | 08
+  network: tcp
+  port: 443
+  server: s501.ccgfw.top
+  servername: u711541u2c89s501.ccgfw.top
+  tls: true
+  type: vless
+  uuid: 872624ac-aa40-39b1-8232-f7270812c234
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: 🇪🇪 爱沙尼亚 | vless | 09
+  network: tcp
   port: 443
   server: s348.ccgfw.top
   servername: u711541u6fa5s348.ccgfw.top
@@ -94,7 +105,8 @@ proxies:
   uuid: 872624ac-aa40-39b1-8232-f7270812c234
 - client-fingerprint: random
   flow: xtls-rprx-vision
-  name: 🇪🇪 爱沙尼亚 | vless | 09
+  name: 🇪🇪 爱沙尼亚 | vless | 10
+  network: tcp
   port: 443
   server: s473.ccgfw.top
   servername: u711541uefc5s473.ccgfw.top
@@ -103,7 +115,7 @@ proxies:
   uuid: 872624ac-aa40-39b1-8232-f7270812c234
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇪🇪 爱沙尼亚 | vless | 10
+  name: 🇪🇪 爱沙尼亚 | vless | 11
   port: 443
   reality-opts:
     public-key: 2fgsbEAn-ALVpjnE4ZTPrzaZY70vVplYwldCnslInE0
@@ -113,24 +125,3 @@ proxies:
   tls: false
   type: vless
   uuid: 38c1859d-53d7-4bd4-975a-b45152fea2c5
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: 🇪🇪 爱沙尼亚 | vless | 11
-  port: 443
-  server: s501.ccgfw.top
-  servername: u711541u2c89s501.ccgfw.top
-  tls: true
-  type: vless
-  uuid: 872624ac-aa40-39b1-8232-f7270812c234
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇪🇪 爱沙尼亚 | vless | 12
-  port: 443
-  reality-opts:
-    public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
-    short-id: '!!str 31'
-  server: est01-vlr01.tcp-reset-club.net
-  servername: hls-svod.itunes.apple.com
-  tls: false
-  type: vless
-  uuid: 45e3b7ad-03b6-42fc-b616-1e92bdd0a5b3
