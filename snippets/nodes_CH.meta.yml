@@ -619,15 +619,18 @@ proxies:
   tls: false
   type: vless
   uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
-- grpc-opts:
+- encryption: none
+  grpc-opts:
     grpc-service-name: gprc
-  name: 🇨🇭 瑞士 | vless | 50
+  name: 🇨🇭CH_1|1.1MB/s
   network: grpc
-  port: 30086
+  port: '30086'
   server: 138.124.32.189
   tls: false
   type: vless
+  udp: true
   uuid: 595ae3f9-5a91-4eaa-82a3-28a221cf8f7f
+  xudp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇨🇭 瑞士 | vless | 51
@@ -853,6 +856,21 @@ proxies:
   tls: false
   type: vless
   uuid: 34d8daa1-8de4-4882-bfb3-729728650be1
+- encryption: none
+  name: 🇨🇭CH_2|1.2MB/s
+  network: ws
+  port: '30047'
+  server: 138.124.32.188
+  type: vless
+  udp: true
+  uuid: 595ae3f9-5a91-4eaa-82a3-28a221cf8f7f
+  ws-opts:
+    headers:
+      Host: ''
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/51.0.2704.103 Safari/537.36
+    path: ''
+  xudp: true
 - alterId: 0
   name: 🇨🇭CH瑞士
   password: '!!str 1234567890'
