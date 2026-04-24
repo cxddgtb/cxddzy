@@ -1,6 +1,6 @@
 proxies:
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision-udp443-udp443-udp443
+  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443
   name: 🇨🇳 中国 | vless | 01
   port: 6379
   server: 58.251.139.169
@@ -8,14 +8,58 @@ proxies:
   tls: true
   type: vless
   uuid: 88888888-8888-8888-8888-888888888888
-- name: 🇨🇳 中国 | trojan | 02
+- name: 🇨🇳 中国 | vless | 02
+  network: ws
+  port: 443
+  server: 43.168.16.112
+  servername: sni.111000.dns.army
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.dns.army
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3security=tls'
+- alterId: 1
+  cipher: auto
+  name: 🇨🇳 中国 | vmess | 03
+  network: tcp
+  port: 15267
+  server: h.u.z.4.5.x.k.8.d.hk09-vm5.entry.v51124-4.qpon
+  tls: false
+  type: vmess
+  uuid: d687b024-a5cf-3433-8d06-1c99e2e28821
+- name: 🇨🇳 中国 | vless | 11
+  network: ws
+  port: 443
+  server: turkey.speedwarp.sbs
+  servername: turkey.speedwarp.sbs
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: 9546877c-03b4-4fd9-9a2b-c64834feda4f
+  ws-opts:
+    path: '%2Fjsssecurity=tls'
+- name: 🇨🇳 中国 | vless | 12
+  network: ws
+  port: 443
+  server: germany.speedwarp.sbs
+  servername: germany.speedwarp.sbs
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: 9546877c-03b4-4fd9-9a2b-c64834feda4f
+  ws-opts:
+    path: '%2Fjsssecurity=tls'
+- name: 🇨🇳 中国 | trojan | 13
   password: a13820c547fa34c5c45515c12f0cd576
   port: 10051
   server: zz6.91js.pw
   type: trojan
 - alterId: 1
   cipher: auto
-  name: 🇨🇳 中国 | vmess | 03
+  name: 🇨🇳 中国 | vmess | 14
   network: tcp
   port: 15267
   server: i.h.z.d.q.p.k.8.d.hk09-vm5.entry.v51124-4.qpon
@@ -24,7 +68,7 @@ proxies:
   uuid: d687b024-a5cf-3433-8d06-1c99e2e28821
 - alterId: 1
   cipher: auto
-  name: 🇨🇳 中国 | vmess | 13
+  name: 🇨🇳 中国 | vmess | 22
   network: ws
   port: 577
   server: h.u.7.9.n.x.k.8.d.hk11-vm5.entry.v51124-4.qpon
@@ -37,7 +81,7 @@ proxies:
     path: /tutorial/iphone13.m3u8
 - alterId: 1
   cipher: auto
-  name: 🇨🇳 中国 | vmess | 31
+  name: 🇨🇳 中国 | vmess | 32
   network: tcp
   port: 15267
   server: h.h.a.4.q.p.k.8.d.hk09-vm5.entry.v51124-4.qpon
@@ -46,29 +90,7 @@ proxies:
   uuid: d687b024-a5cf-3433-8d06-1c99e2e28821
 - alterId: 1
   cipher: auto
-  name: 🇨🇳 中国 | vmess | 43
-  network: tcp
-  port: 15267
-  server: o.u.7.4.n.x.k.8.d.hk09-vm5.entry.v51124-4.qpon
-  tls: false
-  type: vmess
-  uuid: d687b024-a5cf-3433-8d06-1c99e2e28821
-- alterId: 1
-  cipher: auto
-  name: 🇨🇳 中国 | vmess | 50
-  network: ws
-  port: 13485
-  server: a.x.4.b.5.p.k.8.d.hk10-vm5.entry.v51124-4.qpon
-  tls: false
-  type: vmess
-  uuid: d687b024-a5cf-3433-8d06-1c99e2e28821
-  ws-opts:
-    headers:
-      Host: speedtest-bgp-01-10.entry-0.chinasnow.net
-    path: /
-- alterId: 1
-  cipher: auto
-  name: 🇨🇳 中国 | vmess | 61
+  name: 🇨🇳 中国 | vmess | 45
   network: ws
   port: 13485
   server: i.h.4.9.b.4.k.8.d.hk10-vm5.entry.v51124-4.qpon
@@ -81,23 +103,10 @@ proxies:
     path: /
 - alterId: 1
   cipher: auto
-  name: 🇨🇳 中国 | vmess | 74
-  network: ws
-  port: 577
-  server: h.u.4.d.b.p.s.8.d.hk11-vm5.entry.v51124-4.qpon
-  tls: false
-  type: vmess
-  uuid: d687b024-a5cf-3433-8d06-1c99e2e28821
-  ws-opts:
-    headers:
-      Host: speedtest-bgp-01-11.entry-0.chinasnow.net
-    path: /tutorial/iphone13.m3u8
-- alterId: 1
-  cipher: auto
-  name: 🇨🇳 中国 | vmess | 80
+  name: 🇨🇳 中国 | vmess | 51
   network: ws
   port: 13485
-  server: i.h.z.9.b.4.j.8.d.hk10-vm5.entry.v51124-4.qpon
+  server: a.x.4.b.5.p.k.8.d.hk10-vm5.entry.v51124-4.qpon
   tls: false
   type: vmess
   uuid: d687b024-a5cf-3433-8d06-1c99e2e28821
@@ -107,7 +116,16 @@ proxies:
     path: /
 - alterId: 1
   cipher: auto
-  name: 🇨🇳 中国 | vmess | 89
+  name: 🇨🇳 中国 | vmess | 54
+  network: tcp
+  port: 15267
+  server: o.u.7.4.n.x.k.8.d.hk09-vm5.entry.v51124-4.qpon
+  tls: false
+  type: vmess
+  uuid: d687b024-a5cf-3433-8d06-1c99e2e28821
+- alterId: 1
+  cipher: auto
+  name: 🇨🇳 中国 | vmess | 77
   network: ws
   port: 577
   server: h.h.a.d.5.x.j.8.d.hk11-vm5.entry.v51124-4.qpon
