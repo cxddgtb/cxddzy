@@ -1,32 +1,58 @@
 proxies:
-- name: '🇷🇺 #58'
+- name: '🇷🇺 #36'
   network: tcp
   password: a612c919-fe63-4da7-86a8-c6c3f824ca57
   port: 443
   server: 109.73.193.81
   sni: www.bing.com
   type: trojan
-- name: '🇷🇺 #9'
-  network: tcp
-  password: 0db8f349-ff46-40cc-8b0d-6d6c4a11db85
+- alpn:
+  - h3
+  name: '🇷🇺 #1'
+  network: ws
+  password: bpb-trojan
   port: 443
-  server: 80.93.60.24
-  sni: www.bing.com
+  server: russia.com
+  sni: bpb.wdgg1979.nyc.mn
   type: trojan
-- name: 122. 🇷🇺 Russia
+  ws-opts:
+    headers:
+      Host: bpb.wdgg1979.nyc.mn
+    path: /tr%3Fed%3D2560
+- name: 118. 🇷🇺 Russia
   network: tcp
   password: d896222d-b446-42de-a0be-6996c6013779
   port: 443
   server: 45.150.64.248
   sni: www.bing.com
   type: trojan
-- name: '🇷🇺 #47'
+- name: '🇷🇺 #17'
+  network: tcp
+  password: 0db8f349-ff46-40cc-8b0d-6d6c4a11db85
+  port: 443
+  server: 80.93.60.24
+  sni: www.bing.com
+  type: trojan
+- name: '🇷🇺 #26'
   network: tcp
   password: 6eea921e-bfe7-4618-ab2c-5576bb984893
   port: 443
   server: 94.103.2.233
   sni: www.bing.com
   type: trojan
+- alpn:
+  - h3
+  name: '🇷🇺 #59'
+  network: ws
+  password: bpb-trojan
+  port: 443
+  server: russia.com
+  sni: 6982410.xyz
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 6982410.xyz
+    path: /tr%3Fed%3D2560
 - name: 🇧🇾 白俄罗斯 | trojan | 06
   password: b7a98e8c-6538-41ee-99d2-2bbc4280062e
   port: 443
@@ -91,6 +117,11 @@ proxies:
   port: 443
   server: 109.73.193.81
   sni: www.bing.com
+  type: trojan
+- name: 🇷🇺 俄罗斯 | trojan | 809
+  password: 76yTlnTIsjCTlmqnUJ5Tzc1rM
+  port: 443
+  server: hl-freedom-0.undef.network
   type: trojan
 - name: 🇷🇺 俄罗斯 | trojan | 832
   password: 3d24a5d2-b734-485d-b78a-ec50d0567efa
