@@ -1,6 +1,6 @@
 proxies:
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443
+  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443
   name: 🇨🇳 中国 | vless | 01
   port: 6379
   server: 58.251.139.169
@@ -8,12 +8,29 @@ proxies:
   tls: true
   type: vless
   uuid: 88888888-8888-8888-8888-888888888888
-- name: 🇨🇳 中国 | trojan | 02
-  password: a13820c547fa34c5c45515c12f0cd576
-  port: 10051
-  server: zz6.91js.pw
-  type: trojan
+- name: 🇨🇳 中国 | vless | 02
+  network: ws
+  port: 443
+  server: turkey.speedwarp.sbs
+  servername: turkey.speedwarp.sbs
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: 9546877c-03b4-4fd9-9a2b-c64834feda4f
+  ws-opts:
+    path: '%2Fjsssecurity=tls'
 - name: 🇨🇳 中国 | vless | 03
+  network: ws
+  port: 443
+  server: germany.speedwarp.sbs
+  servername: germany.speedwarp.sbs
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: 9546877c-03b4-4fd9-9a2b-c64834feda4f
+  ws-opts:
+    path: '%2Fjsssecurity=tls'
+- name: 🇨🇳 中国 | vless | 05
   network: ws
   port: 443
   server: 43.168.16.112
@@ -26,49 +43,9 @@ proxies:
     headers:
       Host: sni.111000.dns.army
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3security=tls'
-- name: 🇨🇳 中国 | vless | 05
-  network: ws
-  port: 443
-  server: turkey.speedwarp.sbs
-  servername: turkey.speedwarp.sbs
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 9546877c-03b4-4fd9-9a2b-c64834feda4f
-  ws-opts:
-    path: '%2Fjsssecurity=tls'
-- name: 🇨🇳 中国 | vless | 06
-  network: ws
-  port: 443
-  server: germany.speedwarp.sbs
-  servername: germany.speedwarp.sbs
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 9546877c-03b4-4fd9-9a2b-c64834feda4f
-  ws-opts:
-    path: '%2Fjsssecurity=tls'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision-udp443-udp443
-  name: 🇨🇳 中国 | vless | 10
-  port: 443
-  server: jp14.aisthegroupa.org
-  servername: www.microsoft.com
-  tls: true
-  type: vless
-  uuid: 1556bb06-3ce6-4dc1-9942-bb742343c987
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision-udp443-udp443
-  name: 🇨🇳 中国 | vless | 11
-  port: 443
-  server: hr04.aisthegroupa.org
-  servername: www.microsoft.com
-  tls: true
-  type: vless
-  uuid: 1556bb06-3ce6-4dc1-9942-bb742343c987
 - alterId: 0
   cipher: auto
-  name: 🇨🇳 中国 | vmess | 12
+  name: 🇨🇳 中国 | vmess | 06
   network: ws
   port: '80'
   server: hn.xn--wlqw1swrj04ju56d.com
@@ -79,6 +56,29 @@ proxies:
     headers:
       Host: tms.dingtalk.com
     path: /
+- name: 🇨🇳 中国 | trojan | 07
+  password: a13820c547fa34c5c45515c12f0cd576
+  port: 10051
+  server: zz6.91js.pw
+  type: trojan
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision-udp443-udp443-udp443
+  name: 🇨🇳 中国 | vless | 10
+  port: 443
+  server: jp14.aisthegroupa.org
+  servername: www.microsoft.com
+  tls: true
+  type: vless
+  uuid: 1556bb06-3ce6-4dc1-9942-bb742343c987
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision-udp443-udp443-udp443
+  name: 🇨🇳 中国 | vless | 13
+  port: 443
+  server: hr04.aisthegroupa.org
+  servername: www.microsoft.com
+  tls: true
+  type: vless
+  uuid: 1556bb06-3ce6-4dc1-9942-bb742343c987
 - alterId: 64
   cipher: auto
   name: CN2｜家宽｜非常安全
