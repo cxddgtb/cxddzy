@@ -6,52 +6,41 @@ proxies:
   server: l.u.q.n.r.h.d.3.b.fr01-ae5.entry.v51124-1.qpon
   type: ss
   udp: true
-- name: 🇫🇷
+- alpn:
+  - http/1.1
+  name: FR TROJAN-49 | free-nodes
+  network: ws
+  password: humanity
+  port: 443
+  server: sourceforge.net
+  skip-cert-verify: false
+  sni: www.calmloud.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmloud.com
+    path: '%2Fassignment'
+- name: '🇺🇸 #49'
   network: tcp
   password: 7e7b60a4-db74-45bf-8a24-11c613d305fc
   port: 443
   server: 2.26.89.142
   sni: www.bing.com
   type: trojan
-- name: '🏳️ #111'
+- alpn:
+  - http/1.1
+  name: FR TROJAN-44 | free-nodes
   network: ws
   password: humanity
   port: 443
-  server: 8.6.112.0
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: '%2Fassignment'
-- name: 181. 🇫🇷 France
-  network: ws
-  password: humanity
-  port: 443
-  server: www.ignitelimit.com
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: '[1596]🎈 🇫🇷 FRA [TR] 🎈 #e31d00'
-  network: ws
-  password: humanity
-  port: 443
-  server: 8.6.112.0
+  server: 8.6.112.6
+  skip-cert-verify: true
   sni: www.calmloud.com
   type: trojan
   ws-opts:
     headers:
       Host: www.calmloud.com
-    path: /assignment
-- name: '[1596]️🌤️ 🇫🇷 FRA [TR] #446062'
-  password: humanity
-  port: 443
-  server: 104.18.32.47
-  type: trojan
-  ws-opts:
-    path: /assignment
+    path: '%2Fassignment'
 - alterId: 0
   cipher: auto
   name: 🇫🇷 法国 | vmess | 19
