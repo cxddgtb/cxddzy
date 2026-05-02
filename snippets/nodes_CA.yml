@@ -33,9 +33,18 @@ proxies:
     headers:
       Host: teams.microsoft.com
     path: /
-- alpn:
-  - http/1.1
-  name: 🇨🇦
+- name: 🇨🇦
+  network: ws
+  password: humanity
+  port: 443
+  server: v3.dabache.top
+  sni: www.gossipglove.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.gossipglove.com
+    path: /assignment
+- name: '🇨🇦 #2'
   network: ws
   password: 6202b230-417c-4d8e-b624-0f71afa9c75d
   port: 443
@@ -43,76 +52,53 @@ proxies:
   sni: sni.111000.dynv6.net
   type: trojan
   ws-opts:
-    headers:
-      Host: sni.111000.dynv6.net
-    path: /%3Fproxyip%3Dip.111000.de5.net%3A443
-- alpn:
-  - 'null'
-  name: '🇨🇦 #1'
+    path: /%3Fed%3D2560%26proxyip%3Dip.111000.de5.net%3A443
+- name: '🇨🇦 #5'
   network: ws
   password: humanity
   port: 443
-  server: www.gossipglove.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- alpn:
-  - http/1.1
-  name: '🇨🇦 #2'
-  network: ws
-  password: humanity
-  port: 443
-  server: www.gossipglove.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: 🇨🇦 WS-TLS | @Express_alaki | s...
-  network: ws
-  password: humanity
-  port: 443
-  server: 172.64.152.23
-  skip-cert-verify: true
+  server: www.multiplydose.com
   sni: www.multiplydose.com
   type: trojan
   ws-opts:
     headers:
       Host: www.multiplydose.com
-    path: '%2Fassignment'
-- name: '🇨🇦 #3'
+    path: /assignment
+- name: '🇨🇦 #4'
   network: ws
   password: humanity
   port: 443
   server: www.gossipglove.com
   type: trojan
   ws-opts:
+    headers:
+      Host: www.gossipglove.com
     path: /assignment
-- name: '🇨🇦 #4'
+- name: '🇨🇦 #6'
   network: ws
   password: humanity
   port: 443
-  server: www.creationlong.org
+  server: v3.dabache.top
+  sni: www.multiplydose.com
   type: trojan
   ws-opts:
     headers:
-      Host: www.creationlong.org
-    path: /assignment
-- alpn:
-  - h2
-  - http/1.1
-  name: '🇨🇦 #5'
+      Host: www.multiplydose.com
+    path: /assignment%23
+- name: '🇨🇦 #7'
   network: ws
   password: humanity
   port: 443
-  server: www.creationlong.org
-  sni: www.creationlong.org
+  server: chatgpt.com
+  sni: www.gossipglove.com
   type: trojan
   ws-opts:
     headers:
-      Host: www.creationlong.org
+      Host: www.gossipglove.com
     path: /assignment
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 11
+  name: 🇨🇦 加拿大 | vmess | 02
   network: ws
   port: 80
   server: 137.184.164.233
@@ -126,27 +112,13 @@ proxies:
     path: /vmess
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 12
+  name: 🇨🇦 加拿大 | vmess | 08
   network: tcp
   port: 18000
   server: 23.162.200.198
   tls: false
   type: vmess
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 21
-  network: ws
-  port: 443
-  server: 23.162.200.227
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: ''
-    path: /
 - alterId: 0
   cipher: auto
   name: 🇨🇦 加拿大 | vmess | 25
@@ -163,7 +135,7 @@ proxies:
     path: linkvws
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 30
+  name: 🇨🇦 加拿大 | vmess | 27
   network: ws
   port: 443
   server: 134.195.198.147
@@ -175,18 +147,33 @@ proxies:
     headers:
       Host: inna.cfd
     path: /linkvws
-- name: 🇨🇦 加拿大 | trojan | 31
-  password: bc7593fe-0604-4fbe-a70bYWVzLTI1Ni1nY206Q1VuZFNabllzUEtjdTaclWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 | vmess | 29
+  network: ws
   port: 443
-  server: ca-trojan.bonds.id
-  type: trojan
-- name: 🇨🇦 加拿大 | trojan | 32
+  server: 23.162.200.227
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: ''
+    path: /linkvws
+- name: 🇨🇦 加拿大 | trojan | 31
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
   server: 23.173.104.209
   sni: Koma-YT.PAGeS.Dev
   type: trojan
-- name: 🇨🇦 加拿大 | trojan | 37
+- name: 🇨🇦 加拿大 | trojan | 34
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 23.173.104.208
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+- name: 🇨🇦 加拿大 | trojan | 38
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
@@ -197,10 +184,9 @@ proxies:
   ws-opts:
     path: /trTelegram🇨🇳+@WangCai2
 - name: 🇨🇦 加拿大 | trojan | 41
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 23.173.104.208
-  sni: Koma-YT.PAGeS.Dev
+  password: bc7593fe-0604-4fbe-a70bYWVzLTI1Ni1nY206Q1VuZFNabllzUEtjdTaclWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272
+  port: 443
+  server: ca-trojan.bonds.id
   type: trojan
 - alterId: 0
   cipher: aes-256-gcm
