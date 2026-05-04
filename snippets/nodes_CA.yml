@@ -1,7 +1,7 @@
 proxies:
 - alterId: 0
   cipher: aes-128-gcm
-  name: 🇨🇦 加拿大 | vmess | 15
+  name: 🇨🇦 加拿大 | vmess | 67
   network: tcp
   port: '18000'
   server: 134.195.196.211
@@ -22,9 +22,30 @@ proxies:
     headers:
       Host: teams.microsoft.com
     path: /
+- name: 🇨🇦
+  network: ws
+  password: humanity
+  port: 443
+  server: www.gossipglove.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.gossipglove.com
+    path: /assignment
+- name: '🇨🇦 #1'
+  network: ws
+  password: humanity
+  port: 443
+  server: www.gossipglove.com
+  sni: www.gossipglove.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.gossipglove.com
+    path: /assignment
 - alpn:
-  - 'null'
-  name: '🇨🇦 #3'
+  - http/1.1
+  name: '🇨🇦 #2'
   network: ws
   password: humanity
   port: 443
@@ -36,25 +57,37 @@ proxies:
   network: ws
   password: humanity
   port: 443
-  server: v1.dabache.top
-  sni: www.multiplydose.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: '🇨🇦 #6'
-  network: ws
-  password: humanity
-  port: 443
-  server: www.gossipglove.com
+  server: chatgpt.com
   sni: www.gossipglove.com
   type: trojan
   ws-opts:
     headers:
       Host: www.gossipglove.com
     path: /assignment
+- alpn:
+  - 'null'
+  name: '🇨🇦 #6'
+  network: ws
+  password: humanity
+  port: 443
+  server: www.gossipglove.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: '🇨🇦 #7'
+  network: ws
+  password: humanity
+  port: 443
+  server: www.multiplydose.com
+  sni: www.multiplydose.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.multiplydose.com
+    path: /assignment
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 17
+  name: 🇨🇦 加拿大 | vmess | 04
   network: tcp
   port: 18000
   server: 23.162.200.198
@@ -63,7 +96,7 @@ proxies:
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 18
+  name: 🇨🇦 加拿大 | vmess | 07
   network: ws
   port: 80
   server: 137.184.164.233
@@ -75,66 +108,7 @@ proxies:
     headers:
       Host: ''
     path: /vmess
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 28
-  network: ws
-  port: 443
-  server: 23.162.200.227
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: ''
-    path: /linkvws
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 34
-  network: ws
-  port: 443
-  server: 158.51.121.63
-  servername: seribus.org
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: seribus.org
-    path: linkvws
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 35
-  network: ws
-  port: 443
-  server: 134.195.198.147
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: inna.cfd
-    path: /linkvws
-- name: 🇨🇦 加拿大 | trojan | 42
-  password: bc7593fe-0604-4fbe-a70bYWVzLTI1Ni1nY206Q1VuZFNabllzUEtjdTaclWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272
-  port: 443
-  server: ca-trojan.bonds.id
-  type: trojan
-- name: 🇨🇦 加拿大 | trojan | 44
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 23.173.104.222
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-- name: 🇨🇦 加拿大 | trojan | 46
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 23.173.104.209
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-- name: 🇨🇦 加拿大 | trojan | 47
+- name: 🇨🇦 加拿大 | trojan | 37
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
@@ -144,10 +118,10 @@ proxies:
   type: trojan
   ws-opts:
     path: /trTelegram🇨🇳+@WangCai2
-- name: 🇨🇦 加拿大 | trojan | 49
+- name: 🇨🇦 加拿大 | trojan | 41
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
-  server: 23.173.104.208
+  server: 23.173.104.222
   sni: Koma-YT.PAGeS.Dev
   type: trojan
 - name: 🇨🇦CA_1|1.0MB/s
@@ -161,6 +135,50 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram🇨🇳+@WangCai2
+- name: 🇨🇦 加拿大 | trojan | 45
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 23.173.104.208
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+- name: 🇨🇦 加拿大 | trojan | 46
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 23.173.104.209
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 | vmess | 54
+  network: ws
+  port: 443
+  server: 158.51.121.63
+  servername: seribus.org
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: seribus.org
+    path: linkvws
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 | vmess | 55
+  network: ws
+  port: 443
+  server: 134.195.198.147
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: inna.cfd
+    path: /linkvws
+- name: 🇨🇦 加拿大 | trojan | 70
+  password: bc7593fe-0604-4fbe-a70bYWVzLTI1Ni1nY206Q1VuZFNabllzUEtjdTaclWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272
+  port: 443
+  server: ca-trojan.bonds.id
+  type: trojan
 - alterId: 0
   cipher: aes-256-gcm
   name: 🇨🇦CA加拿大
