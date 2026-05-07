@@ -496,18 +496,22 @@ proxies:
   server: l.h.q.n.d.h.d.3.b.jp11-ae5.entry.v51124-1.qpon
   type: ss
   udp: true
-- name: 🇯🇵日本高速04-0.1倍
+- alpn:
+  - h3
+  - h2
+  - http/1.1
+  name: 日本-trojan
   network: ws
-  password: 15aa1dfe-99d1-4bbb-bd53-2f5ff032a539
-  port: 443
-  server: 209.46.30.17
-  skip-cert-verify: false
-  sni: 2jp4.pqjc.buzz
+  password: JxKkbGrtBX
+  port: 46006
+  server: 38.207.136.242
+  skip-cert-verify: true
+  sni: www.grlgroup.com
   type: trojan
   ws-opts:
     headers:
-      Host: 2jp4.pqjc.buzz
-    path: /pq/jp4
+      Host: www.grlgroup.com
+    path: '%2Fjp'
 - alterId: 0
   cipher: auto
   name: 🇯🇵 日本 | vmess | 21
@@ -977,12 +981,18 @@ proxies:
     path: /ws
 - alterId: 0
   cipher: auto
-  name: 🇯🇵 日本 | vmess | 205
+  http-opts:
+    method: GET
+    path:
+    - /ABCDE
+  name: TW_speednode_0020
   network: http
-  port: '54291'
+  port: 54291
   server: 103.127.243.66
+  skip-cert-verify: false
   tls: false
   type: vmess
+  udp: true
   uuid: c5856e0b-5ca6-49bf-8525-d02af9c37cf5
 - name: 🇯🇵 日本 | trojan | 206
   password: 8r<[9'l6hAO#8ZQi
@@ -1004,12 +1014,18 @@ proxies:
     path: /trTelegram🇨🇳 @WangCai2
 - alterId: 0
   cipher: auto
-  name: 🇯🇵 日本 | vmess | 212
+  http-opts:
+    method: GET
+    path:
+    - /ABCDE
+  name: TW_speednode_0019
   network: http
-  port: '56738'
+  port: 56738
   server: 103.127.243.59
+  skip-cert-verify: false
   tls: false
   type: vmess
+  udp: true
   uuid: 5f49c80e-7770-4bd1-9c86-43c2068a3a26
 - name: 🇯🇵 日本 | trojan | 215
   network: ws

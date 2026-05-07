@@ -6,9 +6,13 @@ proxies:
   port: '180'
   server: 82.198.246.250
   servername: ''
+  skip-cert-verify: true
   tls: false
   type: vmess
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  ws-headers:
+    Host: 82.198.246.250
+  ws-path: /
 - alterId: 0
   cipher: auto
   name: US【机场推荐：https://a9a.xyz】1
@@ -39,14 +43,18 @@ proxies:
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 01
+  name: 'de|2231|puddincat07@Telegram #1'
   network: tcp
   port: 180
   server: 82.198.246.37
   servername: ''
+  skip-cert-verify: true
   tls: false
   type: vmess
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  ws-headers:
+    Host: 82.198.246.37
+  ws-path: /
 - alterId: 0
   cipher: auto
   name: US【机场推荐：https://a9a.xyz】3
@@ -61,59 +69,41 @@ proxies:
   ws-headers:
     Host: 82.198.246.214
   ws-path: /
-- name: 🇩🇪 德国 | trojan | 454
-  password: '!!str 1234567890'
+- grpc-opts:
+    grpc-service-name: trojangrpc
+  name: 🇩🇪 德国 | trojan | 546
+  network: grpc
+  password: mainssh-niwrhf87
   port: 443
-  server: 64.188.70.233
-  skip-cert-verify: false
-  sni: kfm-bn0.pages.dev
+  server: 95.179.246.122
+  sni: getgrpc.mainssh.xyz
   type: trojan
-- name: 🇩🇪 德国 | trojan | 560
+- name: DE TROJAN-42 | free-nodes
   network: ws
   password: '!!str 1234567890'
   port: 443
-  server: 104.248.23.44
+  server: 159.195.44.151
+  skip-cert-verify: false
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: /?ed=2560
+- name: DE德国(mibei77.com 米贝节点分享)
+  network: ws
+  password: '!!str 1234567890'
+  port: 443
+  server: 46.101.172.79
   sni: kfm-bn0.pages.dev
   type: trojan
   ws-opts:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 🇩🇪 德国 | trojan | 496
-  password: '!!str 1234567890'
-  port: 443
-  server: 93.123.84.194
-  skip-cert-verify: false
-  sni: kfm-bn0.pages.dev
-  type: trojan
-- name: 🇳🇱 荷兰 | trojan | 105
-  network: ws
-  password: trojan
-  port: 8444
-  server: 152.53.200.98
-  sni: jflsjlaf.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: jflsjlaf.pages.dev
-    path: '%25252F%25252F'
-- name: 🇦🇹 奥地利 | trojan | 178
-  password: '!!str 1234567890'
-  port: 443
-  server: 77.110.116.7
-  skip-cert-verify: false
-  sni: kfm-bn0.pages.dev
-  type: trojan
-- name: '[1596]⭐ 🇩🇪 DEU [TR] #c5e132'
-  network: tcp
-  password: 49197da7-4f74-4c34-8229-35561043c113
-  port: 443
-  server: 159.195.6.151
-  sni: www.bing.com
-  type: trojan
 - alpn:
   - http/1.1
-  name: DE TROJAN-52 | free-nodes
+  name: DE TROJAN-57 | free-nodes
   network: ws
   password: mSzFVhUczD
   port: 443
@@ -124,6 +114,61 @@ proxies:
     headers:
       Host: abest.api-tel.xyz
     path: '%2F'
+- name: '🇩🇪 #30'
+  network: ws
+  password: trojan
+  port: 8444
+  server: 152.53.200.98
+  sni: jflsjlaf.pages.dev
+  type: trojan
+  ws-opts:
+    path: //
+- name: 🇩🇪 德国 | trojan | 278
+  password: 665c944d-047d-4659-80d5-3eaac70241a9
+  port: 443
+  server: 139.162.158.172
+  sni: de2-full.privateip.net
+  type: trojan
+- name: 'DE德国(mibei77.com 米贝节点分享) #1'
+  network: ws
+  password: '!!str 1234567890'
+  port: 2083
+  server: 134.209.252.120
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: 🇩🇪 德国 | trojan | 360
+  network: ws
+  password: '!!str 1234567890'
+  port: 443
+  server: 144.31.85.72
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: 🇩🇪 德国 | trojan | 613
+  password: '!!str 1234567890'
+  port: 443
+  server: 91.107.220.103
+  skip-cert-verify: false
+  sni: kfm-bn0.pages.dev
+  type: trojan
+- name: 🇩🇪 德国 | trojan | 431
+  network: ws
+  password: '!!str 1234567890'
+  port: 443
+  server: 217.177.10.223
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
 - name: 🇦🇹 奥地利 | trojan | 145
   network: ws
   password: '!!str 1234567890'
@@ -135,96 +180,64 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 🇳🇱 荷兰 | trojan | 104
-  network: ws
-  password: trojan
-  port: 8444
-  server: 152.53.200.167
-  sni: jflsjlaf.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: jflsjlaf.pages.dev
-    path: '%252F'
-- name: '🇩🇪 #43'
-  network: ws
-  password: trojan
-  port: 8444
-  server: 152.53.200.98
-  sni: jflsjlaf.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: jflsjlaf.pages.dev
-    path: //
-- name: 🇩🇪 德国 | trojan | 278
-  password: 665c944d-047d-4659-80d5-3eaac70241a9
-  port: 443
-  server: 139.162.158.172
-  sni: de2-full.privateip.net
-  type: trojan
-- name: 🇩🇪 德国 | trojan | 319
+- name: 'DE德国(mibei77.com 米贝节点分享) #4'
   network: ws
   password: '!!str 1234567890'
   port: 443
-  server: 178.128.201.202
+  server: 144.31.188.6
   sni: kfm-bn0.pages.dev
   type: trojan
   ws-opts:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 'DE德国(mibei77.com 米贝节点分享) #2'
+- name: '🇩🇪 #60'
+  network: ws
+  password: '!!str 1234567890'
+  port: 2053
+  server: 202.61.226.121
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
+- name: 🇩🇪 德国 | trojan | 411
   network: ws
   password: '!!str 1234567890'
   port: 443
-  server: 185.219.84.221
+  server: 87.251.88.215
   sni: kfm-bn0.pages.dev
   type: trojan
   ws-opts:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 'DE德国(mibei77.com 米贝节点分享) #3'
+- name: 'DE德国(mibei77.com 米贝节点分享) #6'
+  network: ws
+  password: humanity
+  port: 443
+  server: v3.dabache.top
+  sni: www.gossipglove.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.gossipglove.com
+    path: '%2Fassignment'
+- name: '🇩🇪 #66'
   network: ws
   password: '!!str 1234567890'
-  port: 443
-  server: 64.188.70.233
+  port: 8443
+  server: 103.228.171.5
   sni: kfm-bn0.pages.dev
   type: trojan
   ws-opts:
     headers:
       Host: kfm-bn0.pages.dev
-    path: '%2F'
-- name: 🇩🇪 德国 | trojan | 425
-  network: tcp
-  password: d76294c5-a31f-408d-ba0b-89880107cab5
-  port: 443
-  server: 5.75.152.12
-  skip-cert-verify: true
-  type: trojan
-- name: 🇩🇪 德国 | trojan | 688
+- name: '🇩🇪 DE德国(mibei77.com 米贝节点分享) #1'
   password: '!!str 1234567890'
   port: 443
-  server: 64.188.118.193
-  skip-cert-verify: false
-  sni: kfm-bn0.pages.dev
-  type: trojan
-- name: 🇩🇪 德国 | trojan | 421
-  network: ws
-  password: '!!str 1234567890'
-  port: 443
-  server: 164.92.178.103
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 🇩🇪 德国 | trojan | 586
-  password: '!!str 1234567890'
-  port: 443
-  server: 94.125.101.103
+  server: 193.23.218.192
   skip-cert-verify: false
   sni: kfm-bn0.pages.dev
   type: trojan
@@ -435,6 +448,17 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: 🇩🇪 德国 | trojan | 319
+  network: ws
+  password: '!!str 1234567890'
+  port: 443
+  server: 178.128.201.202
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
 - name: 🇩🇪 德国 | trojan | 339
   network: ws
   password: '!!str 1234567890'
@@ -499,17 +523,6 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F'
-- name: 🇩🇪 德国 | trojan | 360
-  network: ws
-  password: '!!str 1234567890'
-  port: 443
-  server: 144.31.85.72
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
 - alterId: 0
   cipher: auto
   name: 🇩🇪 德国 | vmess | 362
@@ -524,6 +537,13 @@ proxies:
     headers:
       Host: beyonddsz.cfd
     path: /linkws
+- name: 🇩🇪 德国 | trojan | 364
+  password: '!!str 1234567890'
+  port: 443
+  server: 144.31.118.170
+  skip-cert-verify: false
+  sni: kfm-bn0.pages.dev
+  type: trojan
 - name: 🇩🇪 德国 | trojan | 365
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -642,17 +662,6 @@ proxies:
   skip-cert-verify: false
   sni: kfm-bn0.pages.dev
   type: trojan
-- name: 🇩🇪 德国 | trojan | 411
-  network: ws
-  password: '!!str 1234567890'
-  port: 443
-  server: 87.251.88.215
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
 - name: 🇩🇪 德国 | trojan | 418
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -674,6 +683,23 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: 🇩🇪 德国 | trojan | 421
+  network: ws
+  password: '!!str 1234567890'
+  port: 443
+  server: 164.92.178.103
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: 🇩🇪 德国 | trojan | 425
+  password: d76294c5-a31f-408d-ba0b-89880107cab5
+  port: 443
+  server: 5.75.152.12
+  skip-cert-verify: true
+  type: trojan
 - alterId: 0
   cipher: auto
   name: 🇩🇪 德国 | vmess | 427
@@ -693,17 +719,6 @@ proxies:
   password: '!!str 1234567890'
   port: 443
   server: 178.128.199.136
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 🇩🇪 德国 | trojan | 431
-  network: ws
-  password: '!!str 1234567890'
-  port: 443
-  server: 217.177.10.223
   sni: kfm-bn0.pages.dev
   type: trojan
   ws-opts:
@@ -804,6 +819,13 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: 🇩🇪 德国 | trojan | 454
+  password: '!!str 1234567890'
+  port: 443
+  server: 64.188.70.233
+  skip-cert-verify: false
+  sni: kfm-bn0.pages.dev
+  type: trojan
 - name: 🇩🇪 德国 | trojan | 455
   password: '!!str 1234567890'
   port: 443
@@ -918,6 +940,13 @@ proxies:
   server: 95.179.254.136
   sni: frtgrpc.mainssh.xyz
   type: trojan
+- name: 🇩🇪 德国 | trojan | 490
+  password: '!!str 1234567890'
+  port: 443
+  server: 77.239.127.77
+  skip-cert-verify: false
+  sni: kfm-bn0.pages.dev
+  type: trojan
 - grpc-opts:
     grpc-service-name: trojangrpc
   name: 🇩🇪 德国 | trojan | 493
@@ -926,6 +955,13 @@ proxies:
   port: 443
   server: 108.61.171.167
   sni: getgrpc.mainssh.xyz
+  type: trojan
+- name: 🇩🇪 德国 | trojan | 496
+  password: '!!str 1234567890'
+  port: 443
+  server: 93.123.84.194
+  skip-cert-verify: false
+  sni: kfm-bn0.pages.dev
   type: trojan
 - name: 🇩🇪 德国 | trojan | 497
   password: '!!str 1234567890'
@@ -1032,6 +1068,18 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: 🇩🇪 德国 | trojan | 533
+  network: ws
+  password: '!!str 1234567890'
+  port: 8443
+  server: 2.27.120.108
+  skip-cert-verify: true
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
 - name: 🇩🇪 德国 | trojan | 537
   network: ws
   password: '!!str 1234567890'
@@ -1081,15 +1129,6 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- grpc-opts:
-    grpc-service-name: trojangrpc
-  name: 🇩🇪 德国 | trojan | 546
-  network: grpc
-  password: mainssh-niwrhf87
-  port: 443
-  server: 95.179.246.122
-  sni: getgrpc.mainssh.xyz
-  type: trojan
 - name: 🇩🇪 德国 | trojan | 547
   network: ws
   password: '!!str 1234567890'
@@ -1147,6 +1186,17 @@ proxies:
   skip-cert-verify: false
   sni: kfm-bn0.pages.dev
   type: trojan
+- name: 🇩🇪 德国 | trojan | 560
+  network: ws
+  password: '!!str 1234567890'
+  port: 443
+  server: 104.248.23.44
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
 - name: 🇩🇪 德国 | trojan | 561
   network: ws
   password: '!!str 1234567890'
@@ -1271,6 +1321,13 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: 🇩🇪 德国 | trojan | 586
+  password: '!!str 1234567890'
+  port: 443
+  server: 94.125.101.103
+  skip-cert-verify: false
+  sni: kfm-bn0.pages.dev
+  type: trojan
 - name: 🇩🇪 德国 | trojan | 591
   network: ws
   password: '!!str 1234567890'
@@ -1282,12 +1339,6 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 🇩🇪 德国 | trojan | 595
-  password: '!!str 1234567890'
-  port: 8443
-  server: 159.195.79.8
-  sni: kfm-bn0.pages.dev
-  type: trojan
 - name: 🇩🇪 德国 | trojan | 596
   network: ws
   password: '!!str 1234567890'
@@ -1357,13 +1408,6 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 🇩🇪 德国 | trojan | 613
-  password: '!!str 1234567890'
-  port: 443
-  server: 91.107.220.103
-  skip-cert-verify: false
-  sni: kfm-bn0.pages.dev
-  type: trojan
 - name: 🇩🇪 德国 | trojan | 614
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -1401,13 +1445,6 @@ proxies:
   password: '!!str 1234567890'
   port: 443
   server: 188.245.161.141
-  skip-cert-verify: false
-  sni: kfm-bn0.pages.dev
-  type: trojan
-- name: 🇩🇪 德国 | trojan | 622
-  password: '!!str 1234567890'
-  port: 443
-  server: 144.31.188.6
   skip-cert-verify: false
   sni: kfm-bn0.pages.dev
   type: trojan
@@ -1553,6 +1590,13 @@ proxies:
   server: 91.199.118.215
   sni: Koma-YT.PAGeS.Dev
   type: trojan
+- name: 🇩🇪 德国 | trojan | 688
+  password: '!!str 1234567890'
+  port: 443
+  server: 64.188.118.193
+  skip-cert-verify: false
+  sni: kfm-bn0.pages.dev
+  type: trojan
 - name: 🇩🇪 德国 | trojan | 690
   password: '!!str 1234567890'
   port: 8443
@@ -1560,6 +1604,28 @@ proxies:
   skip-cert-verify: false
   sni: kfm-bn0.pages.dev
   type: trojan
+- name: 🇩🇪 德国 | trojan | 700
+  network: ws
+  password: '!!str 1234567890'
+  port: 443
+  server: 77.110.117.248
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: 🇩🇪 德国 | trojan | 702
+  network: ws
+  password: '!!str 1234567890'
+  port: 443
+  server: 202.61.195.167
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
 - name: 🇩🇪 德国 | trojan | 705
   network: ws
   password: '!!str 1234567890'
@@ -1714,6 +1780,17 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: /%3Fed%3D2560
+- name: 🇩🇪 德国 | trojan | 920
+  network: ws
+  password: '!!str 1234567890'
+  port: 8443
+  server: 84.200.192.87
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
 - alterId: 0
   cipher: auto
   name: 🇩🇪 德国 | vmess | 927
