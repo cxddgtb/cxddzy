@@ -1,11 +1,14 @@
 proxies:
-- name: 🇯🇵 日本 40
+- alterId: 0
+  name: 🇸🇬SG新加坡
   password: BxceQaOe
   port: 4203
   server: 13.158.32.76
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
+  tls: true
   type: trojan
+  udp: true
 - alterId: 0
   cipher: auto
   name: 🇯🇵 日本 44
@@ -40,38 +43,50 @@ proxies:
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
   type: trojan
-- name: 新加坡2|@ripaojiedian
+- alterId: 0
+  name: 新加坡2|@ripaojiedian
   network: tcp
   password: ba62c023f9bce796ae334fecb20ef7cc
   port: 1180
   server: 54.65.211.149
   skip-cert-verify: true
   sni: www.nintendogames.net
+  tls: true
   type: trojan
-- name: 日本2|@ripaojiedian
+  udp: true
+- alterId: 0
+  name: 日本2|@ripaojiedian
   network: tcp
   password: ba62c023f9bce796ae334fecb20ef7cc
   port: 11541
   server: 52.197.26.190
   skip-cert-verify: true
   sni: www.nintendogames.net
+  tls: true
   type: trojan
-- name: 新加坡|@ripaojiedian
+  udp: true
+- alterId: 0
+  name: 新加坡|@ripaojiedian
   network: tcp
   password: ba62c023f9bce796ae334fecb20ef7cc
   port: 4840
   server: 52.197.26.190
   skip-cert-verify: true
   sni: www.nintendogames.net
+  tls: true
   type: trojan
-- name: 日本3|@ripaojiedian
+  udp: true
+- alterId: 0
+  name: 日本3|@ripaojiedian
   network: tcp
   password: ba62c023f9bce796ae334fecb20ef7cc
   port: 24184
   server: 54.65.211.149
   skip-cert-verify: true
   sni: www.nintendogames.net
+  tls: true
   type: trojan
+  udp: true
 - alterId: 0
   cipher: auto
   name: 🇯🇵 日本 238
@@ -453,12 +468,32 @@ proxies:
   server: zf.sg-iepl.com
   type: ss
   udp: true
-- name: 🇯🇵 日本 | trojan | 148
+- alpn:
+  - h3
+  name: 'C - 🇯🇵 JP 06 TG: @nodpai'
+  network: ws
+  password: bpb-trojan
+  port: 443
+  server: russia.com
+  sni: bpb.wdgg1979.nyc.mn
+  type: trojan
+  ws-opts:
+    headers:
+      Host: bpb.wdgg1979.nyc.mn
+    path: /tr
+- name: 135. 🇯🇵 Japan
   password: BxceQaOe
   port: 443
-  server: 116.80.80.121
+  server: 116.80.61.224
   skip-cert-verify: true
-  sni: t.me%252Fripaojiedian
+  sni: t.me/ripaojiedian
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 131
+  password: 8r<[9'l6hAO#8ZQi
+  port: 443
+  server: 43.207.197.79
+  skip-cert-verify: true
+  sni: Koma-YT.PAGeS.Dev
   type: trojan
 - alpn:
   - h3
@@ -476,30 +511,18 @@ proxies:
     headers:
       Host: www.grlgroup.com
     path: '%2Fjp'
-- name: 🇯🇵JP日本節點丨yoyapai.com
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 443
-  server: 43.207.197.79
-  skip-cert-verify: true
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2'
-- name: 🇯🇵日本高速05-0.1倍
+- name: 🇯🇵日本高速03-0.1倍
   network: ws
   password: 15aa1dfe-99d1-4bbb-bd53-2f5ff032a539
   port: 443
-  server: 188.42.145.182
+  server: 209.46.30.215
   skip-cert-verify: false
-  sni: 3jp5.pqjc.buzz
+  sni: 2jp3.pqjc.buzz
   type: trojan
   ws-opts:
     headers:
-      Host: 3jp5.pqjc.buzz
-    path: /pq/jp5
+      Host: 2jp3.pqjc.buzz
+    path: /pq/jp3
 - name: 🇯🇵 日本 | trojan | 11
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -750,13 +773,6 @@ proxies:
   server: 140.83.34.214
   sni: Koma-YT.PAGeS.Dev
   type: trojan
-- name: 🇯🇵 日本 | trojan | 131
-  password: 8r<[9'l6hAO#8ZQi
-  port: 443
-  server: 43.207.197.79
-  skip-cert-verify: true
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
 - name: 🇯🇵 日本 | trojan | 134
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -811,6 +827,13 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram🇨🇳 @WangCai2
+- name: 🇯🇵 日本 | trojan | 148
+  password: BxceQaOe
+  port: 443
+  server: 116.80.80.121
+  skip-cert-verify: true
+  sni: t.me%252Fripaojiedian
+  type: trojan
 - name: 🇯🇵 日本 | trojan | 150
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -1205,7 +1228,17 @@ proxies:
   type: vmess
   uuid: 87e16b3b-3a7a-35fc-9baf-55df0b05893d
 - alterId: 0
-  name: 🇯🇵JP日本
+  name: 🇯🇵JP日本3
+  password: BxceQaOe
+  port: 2140
+  server: 54.46.123.251
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
+  name: 🇯🇵JP日本4
   password: 8r%3C%5B9%27l6hAO%238ZQi
   port: 443
   server: 153.121.45.101
@@ -1215,42 +1248,12 @@ proxies:
   type: trojan
   udp: true
 - alterId: 0
-  name: 🇯🇵JP日本2
-  password: ba62c023f9bce796ae334fecb20ef7cc
-  port: 11541
-  server: 13.231.106.216
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 0
-  name: 🇯🇵JP日本3
-  password: ba62c023f9bce796ae334fecb20ef7cc
-  port: 8066
-  server: 54.46.50.228
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 0
-  name: 🇯🇵JP日本4
+  name: 🇯🇵JP日本6
   password: 8r%3C%5B9%27l6hAO%238ZQi
   port: 443
   server: 43.207.197.79
   skip-cert-verify: true
   sni: Koma-YT.PAGeS.Dev
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 0
-  name: 🇯🇵JP日本5
-  password: BxceQaOe
-  port: 4099
-  server: 54.248.66.236
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
   tls: true
   type: trojan
   udp: true
