@@ -1,5 +1,18 @@
 proxies:
-- name: 🇨🇳 中国 | vless | 01
+- client-fingerprint: firefox
+  name: 🇨🇳 中国 300
+  network: ws
+  port: 23424
+  server: 116.252.86.4
+  servername: rom.media-cdn-01.chinav.eu.org
+  tls: true
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: rom.media-cdn-01.chinav.eu.org
+    path: '%2Fdanfeng%3Fed%3D2560'
+- name: 🇨🇳 中国 | vless | 02
   network: ws
   port: 443
   server: 43.169.19.179
@@ -11,18 +24,34 @@ proxies:
     headers:
       Host: babayaga-6i7.pages.dev
     path: '%2F'
-- name: 🇨🇳 中国 | vless | 03
+- alpn:
+  - 'http/1.1
+
+    '
+  name: 🇨🇳 中国 | vless | 03
+  network: ws
+  port: 23424
+  server: 116.252.86.4
+  servername: rom.media-cdn-01.chinav.eu.org
+  tls: true
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: rom.media-cdn-01.chinav.eu.org
+    path: /danfeng?ed=2560fp=firefox
+- name: 🇨🇳 中国 | vless | 05
   network: ws
   port: 443
   server: 43.168.16.112
-  servername: sni.111000.dns.army
+  servername: gogo.kmj.qzz.io
   tls: true
   type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
   ws-opts:
     headers:
-      Host: sni.111000.dns.army
-    path: /?ed=2560
+      Host: gogo.kmj.qzz.io
+    path: /socks5=gogo:gogo@185.184.70.120:50088fp=chrome
 - name: 13|SG_speednode_0016
   network: ws
   port: 443
@@ -38,19 +67,6 @@ proxies:
     path: /security=tls
 - alterId: 0
   cipher: auto
-  name: 🇨🇳 中国 | vmess | 06
-  network: ws
-  port: 45503
-  server: pan2511.cylink.bond
-  tls: false
-  type: vmess
-  uuid: 50d42e95-3f75-4bf4-8036-c74c5578e55b
-  ws-opts:
-    headers:
-      Host: www.bing.com
-    path: /jp02-2025
-- alterId: 0
-  cipher: auto
   name: 🇨🇳 中国 | vmess | 07
   network: ws
   port: 45502
@@ -63,6 +79,19 @@ proxies:
     headers:
       Host: www.bing.com
     path: /jp01-2025
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳 中国 | vmess | 08
+  network: ws
+  port: 45503
+  server: pan2511.cylink.bond
+  tls: false
+  type: vmess
+  uuid: 50d42e95-3f75-4bf4-8036-c74c5578e55b
+  ws-opts:
+    headers:
+      Host: www.bing.com
+    path: /jp02-2025
 - alterId: 64
   cipher: auto
   name: CN2｜家宽｜非常安全
