@@ -12,62 +12,45 @@ proxies:
     headers:
       Host: teams.microsoft.com
     path: /
-- name: CA VLESS-90 | free-nodes
-  network: ws
-  port: 2053
-  server: 23.173.104.207
-  servername: babayaga-6i7.pages.dev
-  tls: true
-  type: vless
-  uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
-  ws-opts:
-    headers:
-      Host: babayaga-6i7.pages.dev
-    path: '%2F%3Fed%3D2560%26Telegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2'
-- name: 🇨🇦
-  network: ws
-  password: humanity
-  port: 443
-  server: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    path: /assignment
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡 | vless | 82
+  name: 🇷🇺 俄罗斯 | vless | 1804
   network: tcp
-  port: 8443
+  port: 443
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
     short-id: '!!str '
-  server: 46.149.67.166
+  server: 217.149.25.167
+  servername: kr.sellflow.org
+  tls: false
+  type: vless
+  uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇺🇸 美国 | vless | 1224
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: '!!str '
+  server: 72.56.36.162
   servername: sellflow.org
   tls: false
   type: vless
   uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇳🇱 proxy-abuse-direct-355
+  name: 🇺🇸 美国 | vless | 1238
   network: tcp
-  port: 8443
+  port: 443
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  server: 185.167.234.10
+    short-id: '!!str '
+  server: 72.56.11.76
   servername: sellflow.org
   tls: false
   type: vless
   uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
-- name: '🇨🇦 #1'
-  network: ws
-  port: 8443
-  server: myanmar.visa.com
-  servername: daluan.eu.org
-  tls: true
-  type: vless
-  uuid: fc625795-792d-4d9d-9d38-bffe59467d2d
-  ws-opts:
-    headers:
-      Host: daluan.eu.org
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇨🇦 加拿大 | vless | 08
@@ -81,59 +64,82 @@ proxies:
   tls: false
   type: vless
   uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
-- name: '📡🇨🇦®️Canada©️Toronto🅿️ping:44.... #1'
-  network: ws
-  port: 2083
-  server: 104.20.6.134
-  servername: ultraserverp.ultrascarface.ir
-  skip-cert-verify: false
-  tls: true
+- client-fingerprint: chrome
+  name: '🇨🇦 Canada — #315'
+  network: grpc
+  port: 40443
+  reality-opts:
+    public-key: -tEqI4a3R1KIyY77AjdMf_bTNZjUtiRsputprZ7Zi1A
+    short-id: '!!str cdd712faa31645e6'
+  server: 38.180.126.231
+  servername: apple.com
+  tls: false
   type: vless
-  uuid: e558a01d-cac3-4052-8dc5-51a97f159352
+  uuid: 92bdb6c2-88ab-4e5e-9413-3d22fca48d91
+- name: 🇨🇦
+  network: ws
+  password: humanity
+  port: 443
+  server: chatgpt.com
+  sni: www.gossipglove.com
+  type: trojan
   ws-opts:
     headers:
-      Host: ultraserverh.ultrascarface.ir
-    path: '%2Fhome%3Fed%3D2048'
+      Host: www.gossipglove.com
+    path: /assignment
+- alpn:
+  - http/1.1
+  name: '🇨🇦 #1'
+  network: ws
+  port: 443
+  server: bestcf.030101.xyz
+  servername: sni.111000.dynv6.net
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.dynv6.net
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇦 proxy-abuse-bridge-408
+  name: '🇨🇦 proxy-abuse-bridge-320 #1'
   network: tcp
   port: 443
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  server: 154.127.56.97
+  server: 217.149.25.106
   servername: abuse.sellflow.org
   tls: false
   type: vless
   uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
+- name: 📡🇨🇦®️Canada©️Toronto🅿️ping:54....
+  network: xhttp
+  port: 80
+  server: 104.20.6.134
+  tls: false
+  type: vless
+  uuid: cf1b86c8-a98f-4e1a-8cad-396c25a66131
+  ws-opts:
+    headers:
+      Host: ws.ab841.com.
+    path: '%2F'
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 1726
+  name: 🇷🇺 俄罗斯 | vless | 1132
   network: tcp
   port: 443
   reality-opts:
-    public-key: TZJ9akxNG985EGNVGWj92CAGCLeKdlDDodPs3_UNLxM
-    short-id: '!!str 652e'
-  server: 89.208.231.5
-  servername: max.ru
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: '!!str '
+  server: 83.217.201.28
+  servername: sellflow.org
   tls: false
   type: vless
-  uuid: 762410c2-b17c-4c3d-a6ff-6c1994d22d51
-- name: '🇨🇦 #2'
-  network: ws
-  port: 443
-  server: 92.53.191.40
-  servername: edtunnel-eiz.pages.dev
-  tls: true
-  type: vless
-  uuid: 42add63b-deda-4e71-aa48-ddd288181858
-  ws-opts:
-    headers:
-      Host: edtunnel-eiz.pages.dev
-- name: CA VLESS-91 | free-nodes
+  uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
+- name: CA VLESS-89 | free-nodes
   network: ws
   port: 2053
-  server: 23.173.104.209
+  server: 23.173.104.201
   servername: babayaga-6i7.pages.dev
   tls: true
   type: vless
@@ -142,34 +148,90 @@ proxies:
     headers:
       Host: babayaga-6i7.pages.dev
     path: '%2F%3Fed%3D2560%26Telegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2'
-- alpn:
-  - h3
-  client-fingerprint: chrome
-  name: 🏳️ Fastly | vless | 26
-  network: xhttp
-  port: 443
-  server: 151.101.3.6
-  servername: 2a02%3A26f0%3A5d00%3A138f%3A%3A2a1
-  skip-cert-verify: true
-  tls: true
+- name: 📡🇨🇦®️Canada©️Toronto🅿️ping:51....
+  network: ws
+  port: 80
+  server: 104.20.6.134
+  tls: false
   type: vless
-  uuid: 1280300d-653c-4730-b821-7e839c76cc70
+  uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da
   ws-opts:
     headers:
-      Host: polandk.com
-    path: '%2F'
+      Host: vip.yaml7.ggff.net
+    path: '%2F%20%40ProxyVPN11'
+- client-fingerprint: chrome
+  name: '[1596]⚡ 🇨🇦 CAN ⚡ #445fda'
+  network: ws
+  port: 2096
+  server: 104.17.148.22
+  servername: hetz.x-smm.com
+  tls: true
+  type: vless
+  uuid: 3f0f36f5-f091-45c5-88c9-4bcc545b922c
+  ws-opts:
+    headers:
+      Host: hetz.x-smm.com
+    path: /45.76.183.217%3D49292
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇦 proxy-abuse-bridge-357
+  name: 🇨🇦 加拿大 | vless | 09
   network: tcp
-  port: 4357
+  port: 4320
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: '!!str '
   server: 154.127.56.97
-  servername: files.moscownews24.ru
+  servername: sellflow.org
   tls: false
   type: vless
   uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: UpdateService
+  name: '🇨🇦 Canada — #182'
+  network: grpc
+  port: 2083
+  reality-opts:
+    public-key: J6NuOlIq3ypdTFc1TMhDDKmF8BWPnNWZq1EkxD7K-lQ
+    short-id: '!!str 6da16b1335651b38'
+  server: 45.38.41.157
+  servername: apple.com
+  tls: false
+  type: vless
+  uuid: b345f1db-e3ac-41c2-b1fa-d7f28d3a49c9
+- name: 📡🇨🇦®️Canada©️Toronto🅿️ping:46....
+  network: ws
+  port: 443
+  server: 104.20.6.134
+  servername: y6-3cj.PAgES.DEV
+  tls: true
+  type: vless
+  uuid: a01daac7-1e65-4645-854d-b47d226f6b08
+  ws-opts:
+    headers:
+      Host: y6-3cj.PAgES.DEV
+    path: /
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇨🇦 proxy-abuse-bridge-359
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  server: 217.149.25.43
+  servername: abuse.sellflow.org
+  tls: false
+  type: vless
+  uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
+- name: '🇨🇦 #3'
+  network: ws
+  password: humanity
+  port: 443
+  server: www.multiplydose.com
+  sni: www.multiplydose.com
+  type: trojan
+  ws-opts:
+    path: /assignment
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇨🇦 加拿大 | vless | 03
@@ -208,18 +270,6 @@ proxies:
     headers:
       Host: ''
     path: /vmess
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇨🇦 加拿大 | vless | 09
-  port: 4320
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: '!!str '
-  server: 154.127.56.97
-  servername: sellflow.org
-  tls: false
-  type: vless
-  uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇨🇦 加拿大 | vless | 10
@@ -347,7 +397,7 @@ proxies:
   port: 443
   server: ca-trojan.bonds.id
   type: trojan
-- name: 🇨🇦CA_2|1.3MB/s
+- name: 🇨🇦 加拿大 | trojan | 37
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
@@ -370,7 +420,7 @@ proxies:
   server: 23.173.104.210
   sni: Koma-YT.PAGeS.Dev
   type: trojan
-- name: 🇨🇦CA_4|2.0MB/s
+- name: 🇨🇦 加拿大 | trojan | 40
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
@@ -381,7 +431,7 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram🇨🇳+@WangCai2
-- name: 🇨🇦CA_1|1.1MB/s
+- name: 🇨🇦 加拿大 | trojan | 41
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
@@ -415,7 +465,7 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram🇨🇳+@WangCai2
-- name: 🇨🇦CA_3|1.3MB/s
+- name: 🇨🇦 加拿大 | trojan | 47
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
@@ -444,19 +494,6 @@ proxies:
   server: 23.173.104.231
   sni: Koma-YT.PAGeS.Dev
   type: trojan
-- client-fingerprint: ''
-  flow: xtls-rprx-vision
-  name: 🇨🇦 加拿大 | vless | 53
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: 8vqOvJ5eoG_9oHla4B3Vh1E-o39RrCXW6Wr7OcXZGmI
-    short-id: '!!str dd'
-  server: 209.127.228.114
-  servername: cars.morro-settings.ru
-  tls: false
-  type: vless
-  uuid: 8a563b6d-d66f-4fb7-a994-aa73f3f43514
 - name: 🇨🇦 加拿大 | vless | 54
   network: ws
   port: 2053
@@ -581,21 +618,43 @@ proxies:
     headers:
       Host: ''
     path: /linkvws
+- name: 🇨🇦CA_1|2.0MB/s
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 23.173.104.223
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram🇨🇳+@WangCai2
+- name: 🇨🇦CA_2|1.0MB/s
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 23.173.104.205
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram🇨🇳+@WangCai2
 - alterId: 0
-  cipher: aes-256-gcm
+  cipher: chacha20-ietf-poly1305
   name: 🇨🇦CA加拿大
-  password: 8JCsPssfgS8tiRwiMlhARg==
-  port: 12000
-  server: 144.217.164.29
+  password: f8f7aCzcPKbsF8p3
+  port: 990
+  server: 79.127.233.170
   skip-cert-verify: true
   tls: true
   type: ss
 - alterId: 0
-  cipher: chacha20-ietf-poly1305
+  cipher: aes-256-gcm
   name: 🇨🇦CA加拿大2
-  password: f8f7aCzcPKbsF8p3
-  port: 990
-  server: 79.127.233.170
+  password: 8JCsPssfgS8tiRwiMlhARg==
+  port: 12000
+  server: 144.217.164.29
   skip-cert-verify: true
   tls: true
   type: ss
