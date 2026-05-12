@@ -1,11 +1,21 @@
 proxies:
 - name: 🇫🇷 France, Paris | [BL]
-  network: tcp
   password: 7e7b60a4-db74-45bf-8a24-11c613d305fc
   port: 443
   server: 2.26.89.142
   sni: www.bing.com
   type: trojan
+- alpn:
+  - http/1.1
+  name: 230. 🇫🇷 France
+  network: ws
+  password: humanity
+  port: 443
+  server: www.ignitelimit.com
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
 - name: 🇫🇷 France - NA 🌍 TR-TCP-TLS 4⃣
   network: tcp
   password: 880cc30f-1bd8-40ee-aa1c-edda1c962587
@@ -13,54 +23,42 @@ proxies:
   server: 51.38.99.96
   sni: sourceforge.net
   type: trojan
-- name: '[1596]️🌤️ 🇫🇷 FRA [TR] #6091ee'
-  password: 598c19f3-a48e-47cd-8451-1ba04ea094d0
-  port: 80
-  server: 51.91.11.29
-  type: trojan
-- name: '🇫🇷 France, Paris | [BL] #1'
+- alpn:
+  - http/1.1
+  name: FR TROJAN-55 | free-nodes
   network: ws
   password: humanity
   port: 443
-  server: 8.6.112.6
+  server: sourceforge.net
+  skip-cert-verify: false
   sni: www.calmloud.com
   type: trojan
   ws-opts:
-    path: /assignment
-- name: FR TROJAN-38 | free-nodes
-  network: ws
+    headers:
+      Host: www.calmloud.com
+    path: '%2Fassignment'
+- name: '[1596]️🌤️ 🇫🇷 FRA [TR] #446062'
   password: humanity
   port: 443
-  server: 104.20.6.134
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
+  server: 104.18.32.47
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 法國節點丨yoyapai.com
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 443
+  server: 138.124.81.204
+  skip-cert-verify: true
+  sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
-      Host: www.ignitelimit.com
-    path: /assignment
-- name: 🇫🇷FR(AzadNet.t.me)
-  network: tcp
-  password: 364d3aa0-58fc-11ed-b738-225401db9d57
-  port: 443
-  server: 54.36.191.211
-  skip-cert-verify: true
-  sni: ebank.bmi.ir
-  type: trojan
-- name: 🇫🇷 法国 | trojan | 12
-  password: telegram-id-v2rayvpnchannel
-  port: 22223
-  server: 13.38.154.94
-  type: trojan
-- name: 🇫🇷 法国 | trojan | 23
-  password: e0d44ae7-cb7d-4acc-a8c0-9861a6f5eaad
-  port: 80
-  server: 51.91.11.29
-  sni: softsaaz.ir
-  type: trojan
+      Host: Koma-YT.PAGeS.Dev
+    path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2'
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 24
+  name: 🇫🇷 法国 | vmess | 21
   network: ws
   port: 80
   server: 51.159.2.152
@@ -73,18 +71,8 @@ proxies:
       Host: ''
     path: /
 - alterId: 0
-  cipher: aes-128-gcm
-  name: 🇫🇷 法国 | vmess | 25
-  network: tcp
-  port: '1234'
-  server: 162.19.204.71
-  servername: supervpn.super.com
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 26
+  name: 🇫🇷 法国 | vmess | 24
   network: ws
   port: 80
   server: 51.83.97.167
@@ -96,25 +84,25 @@ proxies:
     headers:
       Host: ''
     path: /vmess
-- alterId: 0
-  cipher: aes-128-gcm
-  name: 🇫🇷 法国 | vmess | 28
-  network: tcp
-  port: '1234'
-  server: 141.95.65.9
-  servername: supervpn.super.com
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- name: 🇫🇷 法国 | trojan | 29
+- name: 🇫🇷 法国 | trojan | 26
   password: 65c3941e-46b9-42f6-9c89-daedf472b6db
   port: 80
   server: 141.94.221.127
   sni: fr1-t.sshmax.xyz
   type: trojan
 - alterId: 0
+  cipher: aes-128-gcm
+  name: 🇫🇷 法国 | vmess | 32
+  network: tcp
+  port: '1234'
+  server: 162.19.204.71
+  servername: supervpn.super.com
+  tls: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 31
+  name: 🇫🇷 法国 | vmess | 33
   network: ws
   port: 80
   server: 162.19.224.175
@@ -126,25 +114,27 @@ proxies:
     headers:
       Host: 162.19.224.175
     path: /vmess
+- name: 🇫🇷 法国 | trojan | 36
+  password: e0d44ae7-cb7d-4acc-a8c0-9861a6f5eaad
+  port: 80
+  server: 51.91.11.29
+  sni: asriran.com
+  type: trojan
 - alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 74
-  network: ws
-  port: 443
-  server: 57.128.189.211
-  servername: yichueng.org
+  cipher: aes-128-gcm
+  name: 🇫🇷 法国 | vmess | 37
+  network: tcp
+  port: '1234'
+  server: 141.95.65.9
+  servername: supervpn.super.com
   tls: true
   type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: yichueng.org
-    path: linkvws
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 81
+  name: 🇫🇷 法国 | vmess | 70
   network: ws
-  port: 16622
+  port: 16616
   server: t.cnmjcn.cyou
   servername: ''
   tls: false
@@ -156,9 +146,62 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 83
+  name: 🇫🇷 法国 | vmess | 79
+  network: ws
+  port: 16622
+  server: m.cnmjin.net
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
+  ws-opts:
+    headers:
+      Host: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 80
   network: ws
   port: 16617
+  server: t.cnmjcn.cyou
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
+  ws-opts:
+    headers:
+      Host: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 90
+  network: ws
+  port: 443
+  server: 57.128.189.211
+  servername: yichueng.org
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: yichueng.org
+    path: linkvws
+- name: 🇫🇷 法国 | trojan | 102
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 57.128.165.222
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram🇨🇳+@WangCai2
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 104
+  network: ws
+  port: 16618
   server: planb.mojcn.com
   servername: ''
   tls: false
@@ -168,7 +211,7 @@ proxies:
     headers:
       Host: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
     path: /
-- name: 🇫🇷 法国 | trojan | 93
+- name: 🇫🇷 法国 | trojan | 106
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
@@ -180,37 +223,28 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2'
-- name: 🇫🇷 法国 | trojan | 95
-  password: 8r<[9'l6hAO#8ZQi
-  port: 443
-  server: 138.124.81.204
-  skip-cert-verify: true
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-- name: 🇫🇷 法国 | trojan | 103
+- name: 🇫🇷 法国 | trojan | 107
   network: tcp
   password: opentunnel.net-english30day
   port: 443
   server: 54.37.18.204
   sni: uplod.ir
   type: trojan
-- name: 🇫🇷 法国 | trojan | 105
+- name: 🇫🇷 法国 | trojan | 116
+  password: 6e3b4240-38f9-4321-9b3c-bc669a34b848
+  port: 443
+  server: 141.94.76.177
+  type: trojan
+- name: 🇫🇷 法国 | trojan | 122
   password: 8r<[9'l6hAO#8ZQi
   port: 443
-  server: 109.61.110.241
+  server: 138.124.81.204
   skip-cert-verify: true
   sni: Koma-YT.PAGeS.Dev
   type: trojan
-- name: 🇫🇷 法国 | trojan | 109
-  password: d2adff89-5143-4d67-921f-3478464de5bb
-  port: 443
-  server: 38.180.240.150
-  skip-cert-verify: true
-  sni: fr.freeguard.org
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 112
+  name: 🇫🇷 法国 | vmess | 138
   network: ws
   port: 443
   server: 51.77.20.137
@@ -222,14 +256,48 @@ proxies:
     headers:
       Host: tilebani.com
     path: /linkvws
-- name: 🇫🇷 法国 | trojan | 124
-  password: 6e3b4240-38f9-4321-9b3c-bc669a34b848
+- name: 🇫🇷 法国 | trojan | 142
+  password: 364d3aa0-58fc-11ed-b738-225401db9d57
   port: 443
-  server: 141.94.76.177
+  server: 54.36.191.211
+  skip-cert-verify: true
+  sni: ebank.bmi.ir
+  type: trojan
+- name: 🇫🇷 法国 | trojan | 146
+  password: 8r<[9'l6hAO#8ZQi
+  port: 443
+  server: 109.61.110.241
+  skip-cert-verify: true
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+- name: 🇫🇷 法国 | trojan | 150
+  password: d2adff89-5143-4d67-921f-3478464de5bb
+  port: 443
+  server: 38.180.240.150
+  skip-cert-verify: true
+  sni: fr.freeguard.org
+  type: trojan
+- name: 🇫🇷 法国 | trojan | 176
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 213.32.20.252
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+- name: 🇫🇷 法国 | trojan | 190
+  password: b8808043-6566-4923-9195-e66bfb553d57
+  port: 443
+  server: 51.38.99.96
+  sni: ba24.ir
+  type: trojan
+- name: 🇫🇷 法国 | trojan | 230
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 78.118.130.148
+  sni: Koma-YT.PAGeS.Dev
   type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 144
+  name: 🇫🇷 法国 | vmess | 231
   network: ws
   port: 443
   server: 144.24.200.164
@@ -241,36 +309,21 @@ proxies:
     headers:
       Host: beyonddsz.cfd
     path: /
-- name: 🇫🇷 法国 | trojan | 149
-  password: b8808043-6566-4923-9195-e66bfb553d57
-  port: 443
-  server: 51.38.99.96
-  sni: ba24.ir
-  type: trojan
-- name: 🇫🇷 法国 | trojan | 152
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 247
   network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 57.128.165.222
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
+  port: 443
+  server: 217.182.76.202
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 2e68015f-a8b2-4893-a7a3-4edb19b178d9
   ws-opts:
     headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram🇨🇳+@WangCai2
-- name: 🇫🇷 法国 | trojan | 170
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 213.32.20.252
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-- name: 🇫🇷 法国 | trojan | 196
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 78.118.130.148
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-- name: 🇫🇷 法国 | trojan | 249
+      Host: ''
+    path: /
+- name: 🇫🇷 法国 | trojan | 253
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
@@ -283,21 +336,7 @@ proxies:
     path: /trTelegram🇨🇳+@WangCai2
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 250
-  network: ws
-  port: 443
-  server: 217.182.76.202
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 2e68015f-a8b2-4893-a7a3-4edb19b178d9
-  ws-opts:
-    headers:
-      Host: ''
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 252
+  name: 🇫🇷 法国 | vmess | 264
   network: ws
   port: 443
   server: 146.59.85.226
@@ -309,16 +348,23 @@ proxies:
     headers:
       Host: pelang.org
     path: /
-- name: 🇫🇷 法国 | trojan | 256
-  password: 4c903e60-fa19-11ed-a488-1239d0255272
-  port: 443
-  server: 51.159.59.186
-  skip-cert-verify: true
-  sni: cdn.appsflyer.com
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 261
+  name: 🇫🇷 法国 | vmess | 267
+  network: ws
+  port: 16618
+  server: m.cnmjin.net
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
+  ws-opts:
+    headers:
+      Host: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 272
   network: ws
   port: 443
   server: 57.128.189.206
@@ -332,63 +378,7 @@ proxies:
     path: /linkvws
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 262
-  network: ws
-  port: 16622
-  server: planb.mojcn.com
-  servername: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
-  tls: false
-  type: vmess
-  uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
-  ws-opts:
-    headers:
-      Host: planb.mojcn.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 263
-  network: ws
-  port: 443
-  server: 57.128.189.253
-  servername: kapelleng.com
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: kapelleng.com
-    path: /linkvws
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 264
-  network: ws
-  port: 16622
-  server: m.cnmjin.net
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
-  ws-opts:
-    headers:
-      Host: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 266
-  network: ws
-  port: 16632
-  server: planb.mojcn.com
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
-  ws-opts:
-    headers:
-      Host: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 267
+  name: 🇫🇷 法国 | vmess | 275
   network: ws
   port: 443
   server: 57.128.189.241
@@ -400,21 +390,137 @@ proxies:
     headers:
       Host: ''
     path: /linkvws
-- name: 🇫🇷 法国 | trojan | 268
-  password: 9498f3a0-2992-11ee-a4c7-1239d0255272
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 277
+  network: ws
+  port: 16626
+  server: planb.mojcn.com
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
+  ws-opts:
+    headers:
+      Host: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 278
+  network: ws
+  port: 16616
+  server: planb.mojcn.com
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
+  ws-opts:
+    headers:
+      Host: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 279
+  network: ws
+  port: 16617
+  server: planb.mojcn.com
+  servername: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
+  tls: false
+  type: vmess
+  uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
+  ws-opts:
+    headers:
+      Host: planb.mojcn.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 280
+  network: ws
+  port: 16632
+  server: m.cnmjin.net
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
+  ws-opts:
+    headers:
+      Host: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 281
+  network: ws
   port: 443
-  server: fr.test3.net
-  sni: zula.ir
+  server: 57.128.189.253
+  servername: kapelleng.com
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: kapelleng.com
+    path: /linkvws
+- name: 🇫🇷 法国 | trojan | 282
+  password: 4c903e60-fa19-11ed-a488-1239d0255272
+  port: 443
+  server: 51.159.59.186
+  skip-cert-verify: true
+  sni: cdn.appsflyer.com
   type: trojan
-- name: 🇫🇷 法国 | trojan | 271
+- name: 🇫🇷 法国 | trojan | 286
   password: 973ed2e0-c4d8-4737-a093-71629148086d
   port: 443
   server: 51.77.213.197
   sni: frt2.sshocean.net
   type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 295
+  network: ws
+  port: '16645'
+  server: planb.mojcn.com
+  tls: false
+  type: vmess
+  uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
+  ws-opts:
+    headers:
+      Host: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
+    path: '%2F'
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 298
+  network: ws
+  port: 16632
+  server: t.cnmjcn.cyou
+  tls: false
+  type: vmess
+  uuid: f05a041d-4fe6-4c1d-807b-1633f234f73d
+  ws-opts:
+    headers:
+      Host: 030cbf05827014581a6bf197a80dd9a0.mobgslb.tbcache.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 299
+  network: ws
+  port: '16648'
+  server: planb.mojcn.com
+  tls: false
+  type: vmess
+  uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
+  ws-opts:
+    headers:
+      Host: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
+    path: '%2F'
+- name: 🇫🇷 法国 | trojan | 303
+  password: 9498f3a0-2992-11ee-a4c7-1239d0255272
+  port: 443
+  server: fr.test3.net
+  sni: zula.ir
+  type: trojan
 - alterId: 1
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 281
+  name: 🇫🇷 法国 | vmess | 304
   network: ws
   port: 443
   server: 23.162.152.177
@@ -428,21 +534,7 @@ proxies:
     path: linkvws
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 282
-  network: ws
-  port: 16616
-  server: t.cnmjcn.cyou
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
-  ws-opts:
-    headers:
-      Host: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 296
+  name: 🇫🇷 法国 | vmess | 305
   network: ws
   port: 16648
   server: t.cnmjcn.cyou
@@ -455,10 +547,10 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 297
+  name: 🇫🇷 法国 | vmess | 312
   network: ws
   port: 16617
-  server: t.cnmjcn.cyou
+  server: m.cnmjin.net
   tls: false
   type: vmess
   uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
@@ -468,10 +560,11 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 299
+  name: 🇫🇷 法国 | vmess | 313
   network: ws
-  port: 16616
+  port: 16622
   server: planb.mojcn.com
+  servername: ''
   tls: false
   type: vmess
   uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
@@ -481,7 +574,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 300
+  name: 🇫🇷 法国 | vmess | 317
   network: ws
   port: 16616
   server: m.cnmjin.net
@@ -495,99 +588,21 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 302
+  name: 🇫🇷 法国 | vmess | 320
   network: ws
-  port: 16617
-  server: m.cnmjin.net
-  tls: false
-  type: vmess
-  uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
-  ws-opts:
-    headers:
-      Host: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 303
-  network: ws
-  port: 16618
-  server: planb.mojcn.com
-  servername: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
-  tls: false
-  type: vmess
-  uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
-  ws-opts:
-    headers:
-      Host: planb.mojcn.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 308
-  network: ws
-  port: '16648'
-  server: planb.mojcn.com
-  tls: false
-  type: vmess
-  uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
-  ws-opts:
-    headers:
-      Host: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
-    path: '%2F'
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 309
-  network: ws
-  port: '16645'
-  server: planb.mojcn.com
-  tls: false
-  type: vmess
-  uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
-  ws-opts:
-    headers:
-      Host: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
-    path: '%2F'
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 310
-  network: ws
-  port: 16626
-  server: planb.mojcn.com
-  tls: false
-  type: vmess
-  uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
-  ws-opts:
-    headers:
-      Host: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 313
-  network: ws
-  port: 16618
-  server: m.cnmjin.net
-  tls: false
-  type: vmess
-  uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
-  ws-opts:
-    headers:
-      Host: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 326
-  network: ws
-  port: 16632
+  port: 16622
   server: t.cnmjcn.cyou
+  servername: ''
   tls: false
   type: vmess
-  uuid: f05a041d-4fe6-4c1d-807b-1633f234f73d
+  uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
   ws-opts:
     headers:
-      Host: 030cbf05827014581a6bf197a80dd9a0.mobgslb.tbcache.com
+      Host: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 331
+  name: 🇫🇷 法国 | vmess | 332
   network: ws
   port: '16641'
   server: planb.mojcn.com
@@ -598,22 +613,19 @@ proxies:
     headers:
       Host: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
     path: '%2F'
-- client-fingerprint: chrome
-  name: 🇫🇷FR_2|1.4MB/s
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 333
   network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: '443'
-  server: 138.124.81.204
-  skip-cert-verify: true
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  udp: true
+  port: '16632'
+  server: planb.mojcn.com
+  tls: false
+  type: vmess
+  uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
   ws-opts:
     headers:
-      Host: Koma-YT.PAGeS.Dev
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/50.0.2661.102 Safari/537.36
-    path: /trTelegram🇨🇳 @WangCai2
+      Host: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
+    path: '%2F'
 - cipher: aes-256-cfb
   name: 🇫🇷_FR_法国
   password: asdKkaskJKfnsa
