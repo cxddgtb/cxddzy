@@ -74,24 +74,31 @@ proxies:
       Host: yastatic.net
 - client-fingerprint: edge
   flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 14
-  port: 22231
+  name: 🇺🇸US_4|2.0MB/s
+  network: tcp
+  port: '22231'
   server: 85.234.114.53
   servername: r1.mizulina.top
   skip-cert-verify: false
   tls: true
   type: vless
+  udp: true
   uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
+  xudp: true
 - client-fingerprint: edge
-  flow: xtls-rprx-vision-udp443
-  name: 🇷🇺 俄罗斯 | vless | 343
-  port: 443
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇺🇸US_6|3.0MB/s
+  network: tcp
+  port: '443'
   server: 85.234.114.53
   servername: r1.mizulina.top
   skip-cert-verify: true
   tls: true
   type: vless
+  udp: true
   uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
+  xudp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇷🇺 俄罗斯 | vless | 1306
@@ -121,18 +128,27 @@ proxies:
   - ''
   client-fingerprint: edge
   flow: xtls-rprx-vision
-  name: 未知 VLESS-781 | free-nodes
+  name: 🇺🇸US_3|2.7MB/s
   network: tcp
-  port: 22231
+  port: '22231'
   server: r1.mizulina.top
   servername: r1.mizulina.top
   skip-cert-verify: false
   tls: true
   type: vless
+  udp: true
   uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
   ws-opts:
     headers:
       Host: r1.mizulina.top
+  xudp: true
+- cipher: aes-256-gcm
+  name: 🔴🇷🇺[📺🔍]_github.com/Ruk1ng001_8...
+  password: c5fcdf7829112cb4
+  port: 30129
+  server: 45.140.169.216
+  type: ss
+  udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: '🇷🇺 FDCservers.net — #27'
@@ -3647,7 +3663,7 @@ proxies:
   encryption: none
   grpc-opts:
     grpc-service-name: /sequre/grpc
-  name: 🇷🇺RU_1|2.1MB/s
+  name: 🇷🇺RU_1|1.5MB/s
   network: grpc
   port: '443'
   server: 185.14.46.20
@@ -9239,6 +9255,24 @@ proxies:
   tls: false
   type: vless
   uuid: e07db34e-b446-42d7-9109-9e00c9c92177
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇷🇺RU_2|1.8MB/s
+  network: xhttp
+  port: '5969'
+  reality-opts:
+    public-key: lPTd0_SulMMhWfRHF4tjsv5iM06hU1bDJv8aPaBipEw
+    short-id: '!!str c19de8fa'
+  server: 37.139.34.63
+  servername: surfvpn24.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 10132cf6-6536-4c45-8d75-c90f91a1c5d6
+  xhttp-opts:
+    mode: stream-up
+    path: /bridge-xhttp
+  xudp: true
 - alterId: 0
   cipher: chacha20-ietf-poly1305
   name: 🇷🇺RU俄罗斯
@@ -9302,7 +9336,7 @@ proxies:
   - h2
   - http/1.1
   client-fingerprint: chrome
-  name: RU【机场推荐：https://a9a.xyz】9
+  name: RU【机场推荐：https://a9a.xyz】12
   network: xhttp
   port: 443
   server: ftatx5g6dt.cdn.twcstorage.ru
@@ -9315,3 +9349,10 @@ proxies:
     headers:
       Host: ftatx5g6dt.cdn.twcstorage.ru
     path: '%2F'
+- name: RU【机场推荐：https://a9a.xyz】16
+  network: ws
+  port: 3443
+  server: 5.188.114.12
+  tls: false
+  type: vless
+  uuid: 2ce70f60-6145-4730-97e1-a38cb5dd2afc
