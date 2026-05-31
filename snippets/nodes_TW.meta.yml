@@ -1,7 +1,6 @@
 proxies:
 - alterId: 0
-  name: 'tw|854c|puddincat07@Telegram #1'
-  network: tcp
+  name: 'tw|b87c|puddincat07@Telegram #1'
   password: gcuCpQfaiVeDBdWG
   port: 19128
   server: 211.76.176.98
@@ -22,6 +21,7 @@ proxies:
   uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
 - alterId: 0
   name: 🇹🇼TW台湾2
+  network: raw
   password: gcuCpQfaiVeDBdWG
   port: 19128
   server: jpbgp.netvigor.cc
@@ -696,18 +696,17 @@ proxies:
   sni: l1gew9.yytls.top
   type: anytls
   udp: true
-- name: 🇹🇼TW(AzadNet.t.me)
-  network: tcp
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 8443
-  server: 60.248.240.223
+- alpn:
+  - h2
+  grpc-opts:
+    grpc-service-name: db
+  name: 🇹🇼 台湾 | trojan | 19
+  network: grpc
+  password: 0a9f1f5a397bd427
+  port: 443
+  server: 125.227.86.45
   skip-cert-verify: true
-  sni: official.taipeicitygovernment.cn.ua
-  type: trojan
-- name: 🇹🇼 台湾 | trojan | 12
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 8443
-  server: official.taipeicitygovernment.dp.ua
+  sni: TG.freecodes
   type: trojan
 - name: 🇹🇼 台湾 | trojan | 02
   password: gcuCpQfaiVeDBdWG
@@ -743,6 +742,11 @@ proxies:
   port: 8443
   server: official.taipeicitygovernment.org.ua
   type: trojan
+- name: 🇹🇼 台湾 | trojan | 12
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.dp.ua
+  type: trojan
 - name: 🇹🇼 台湾 | trojan | 13
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
@@ -767,18 +771,6 @@ proxies:
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
   server: official.taipeicitygovernment.net.ua
-  type: trojan
-- alpn:
-  - h2
-  grpc-opts:
-    grpc-service-name: db
-  name: 🇹🇼 台湾 | trojan | 19
-  network: grpc
-  password: 0a9f1f5a397bd427
-  port: 443
-  server: 125.227.86.45
-  skip-cert-verify: true
-  sni: TG.freecodes
   type: trojan
 - name: 🇹🇼 台湾 | trojan | 20
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
@@ -898,6 +890,18 @@ proxies:
   tls: true
   type: vless
   uuid: 231a569a-55f0-4d31-94ac-dbe4bed3efdb
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼 台湾 | vless | 45
+  port: 443
+  reality-opts:
+    public-key: q42m1wg11kZLyRtjaKus8T-NNl1vriRG3V1eVTL6ICc
+    short-id: '!!str 37e6f3e4339e'
+  server: 46.249.109.128
+  servername: www.microsoft.com
+  tls: false
+  type: vless
+  uuid: 9f1b677f-aeea-43a9-9927-12188cdc1249
 - client-fingerprint: chrome
   name: TW4｜商宽｜非常安全
   network: tcp
