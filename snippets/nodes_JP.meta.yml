@@ -71,7 +71,6 @@ proxies:
       Host: ojpb.zjf2610.top
     path: '%2Fojpb'
 - name: 🇯🇵 日本 | trojan | 190
-  network: tcp
   password: IbezlLAYfrLRwFn9.mHn5FDwk1asLi599U
   port: 443
   server: 130.94.65.52
@@ -4097,19 +4096,16 @@ proxies:
   type: vmess
   udp: true
   uuid: 2ce005b4-e57a-3670-be88-60eeeb078bb7
-- name: JP日本(mibei77.com 米贝节点分享)
+- name: 🇯🇵 日本 | vless | 99
   network: ws
-  port: 443
-  server: 166.62.105.42
-  servername: snippet.danfeng.rr.kg
-  tls: true
+  port: 25242
+  server: 47.79.144.103
+  tls: false
   type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  uuid: a12b0d31-f599-498e-b76e-8558a14b766b
   ws-opts:
-    headers:
-      Host: snippet.danfeng.rr.kg
-    path: '%2Fdanfeng'
-- name: 'JP日本(mibei77.com 米贝节点分享) #1'
+    path: /a12b0d31
+- name: JP日本(mibei77.com 米贝节点分享)
   network: ws
   password: GKHWMe2R4qwNcNxu6l3KMkdd
   port: 20770
@@ -4120,44 +4116,17 @@ proxies:
     headers:
       Host: vpn1.rnmcnm.com
     path: '%2Ftrj-ws'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 625
-  port: 13102
-  reality-opts:
-    public-key: epgveXEcUs0sbs4jV_1KldTkZGnWUHfMKcs0XNyP41Y
-    short-id: '!!str a1b2c3d4'
-  server: zzjp1.ainivp.com
-  servername: www.microsoft.com
-  tls: false
-  type: vless
-  uuid: 9204afcd-026e-781f-1abc-c03efabd1344
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 1280
-  network: tcp
+- name: 🇯🇵
+  network: ws
   port: 443
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: '!!str '
-  server: 217.149.25.185
-  servername: abuse.sellflow.org
-  tls: false
+  server: 54.95.94.250
+  servername: sni.111000.indevs.in
+  tls: true
   type: vless
-  uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 431
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: 6bKr3dHLP8VjrlVFBNTAM3Bj0j0iGubvzTDPTmK08FI
-    short-id: '!!str ecf07d87f0521a0e'
-  server: 212.135.211.105
-  servername: www.cloudflare.com
-  tls: false
-  type: vless
-  uuid: 99e50b7b-e551-46b3-b74f-d39806835b10
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
 - name: 新加坡3|@ripaojiedian
   network: tcp
   password: BxceQaOe
@@ -4166,18 +4135,49 @@ proxies:
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
   type: trojan
-- name: 'JP日本(mibei77.com 米贝节点分享) #2'
-  network: ws
+- alpn:
+  - h3
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  name: '🇯🇵 #1'
+  network: xhttp
   port: 443
-  server: 160.153.168.42
-  servername: snippet.danfeng.rr.kg
+  server: 151.101.109.223
+  servername: biography.com
+  skip-cert-verify: true
   tls: true
   type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  uuid: 1a11b439-c256-4afb-b789-be1647d15c44
   ws-opts:
     headers:
-      Host: snippet.danfeng.rr.kg
-    path: '%2Fdanfeng'
+      Host: italymm.global.ssl.fastly.net
+    path: '%2F'
+- name: JP VLESS-93 | free-nodes
+  network: ws
+  port: 443
+  server: dongjing4.zqjsqapi.com
+  servername: dongjing4.zqjsqapi.com
+  tls: true
+  type: vless
+  uuid: 8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19
+  ws-opts:
+    path: /proxy
+- alpn:
+  - h3
+  client-fingerprint: chrome
+  name: '[🇯🇵]t.me/ConfigsHub #1'
+  network: xhttp
+  port: 443
+  server: 151.101.109.57
+  servername: 127.0.0.1
+  tls: true
+  type: vless
+  uuid: 43997da9-3c70-447f-8c76-d5a57b6e8134
+  ws-opts:
+    headers:
+      Host: ovh13.global.ssl.fastly.net
+    path: '%2F'
 - name: 🇯🇵 日本 | vless | 01
   network: ws
   port: 24443
@@ -5343,15 +5343,6 @@ proxies:
   tls: true
   type: vless
   uuid: 15b84012-d261-4b4c-807a-061bb4a901fd
-- name: 🇯🇵 日本 | vless | 99
-  network: ws
-  port: 25242
-  server: 47.79.144.103
-  tls: false
-  type: vless
-  uuid: a12b0d31-f599-498e-b76e-8558a14b766b
-  ws-opts:
-    path: /a12b0d31
 - name: 🇯🇵 日本 | vless | 100
   network: ws
   port: 39835
@@ -5661,6 +5652,13 @@ proxies:
     headers:
       Host: imafake.locker
     path: /speedtest
+- name: 🇯🇵 日本 | trojan | 137
+  password: E_hUHrn0+6VeZO=v9=fLgoPDXZWGfcrejg
+  port: 443
+  server: 172.238.19.11
+  skip-cert-verify: true
+  sni: 172.238.19.11
+  type: trojan
 - alterId: 1
   cipher: auto
   name: 🇯🇵 日本 | vmess | 138
@@ -5737,17 +5735,6 @@ proxies:
     headers:
       Host: ioioioi.pages.dev
     path: /?ed=2560fp=randomsecurity=tls
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 147
-  port: 443
-  reality-opts:
-    public-key: y167aJhpgWWjltY4UCir_uu8Mj__Hkc1W4etD0QXYH4
-    short-id: '!!str 860705e716cbe6ed'
-  server: 47.245.38.111
-  servername: www.autodesk.com
-  tls: false
-  type: vless
-  uuid: 86b414b6-966e-4f6d-ab16-32049ef732d3
 - alterId: 1
   cipher: auto
   name: 🇯🇵 日本 | vmess | 149
@@ -5766,7 +5753,7 @@ proxies:
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
 - alterId: 0
   cipher: auto
-  name: 未知4 1.3MB/s
+  name: 未知4 645.3KB/s
   network: tcp
   port: 22324
   server: 172.104.80.66
@@ -8089,6 +8076,18 @@ proxies:
   tls: true
   type: vmess
   uuid: 2ce005b4-e57a-3670-be88-60eeeb078bb7
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | vless | 431
+  port: 443
+  reality-opts:
+    public-key: 6bKr3dHLP8VjrlVFBNTAM3Bj0j0iGubvzTDPTmK08FI
+    short-id: '!!str ecf07d87f0521a0e'
+  server: 212.135.211.105
+  servername: www.cloudflare.com
+  tls: false
+  type: vless
+  uuid: 99e50b7b-e551-46b3-b74f-d39806835b10
 - alterId: 1
   cipher: auto
   name: 🇯🇵 日本 | vmess | 432
@@ -9492,7 +9491,7 @@ proxies:
   uuid: d687b024-a5cf-3433-8d06-1c99e2e28821
 - alterId: 0
   cipher: auto
-  name: 🇯🇵 日本 | JPN
+  name: 🇯🇵 日本 | vmess | 589
   network: http
   port: '53229'
   server: 103.127.243.54
@@ -9830,6 +9829,18 @@ proxies:
       Host: imafake.locker
     path: /speedtest
 - client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | vless | 625
+  port: 13102
+  reality-opts:
+    public-key: epgveXEcUs0sbs4jV_1KldTkZGnWUHfMKcs0XNyP41Y
+    short-id: '!!str a1b2c3d4'
+  server: zzjp1.ainivp.com
+  servername: www.microsoft.com
+  tls: false
+  type: vless
+  uuid: 9204afcd-026e-781f-1abc-c03efabd1344
+- client-fingerprint: chrome
   flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443
   name: 🇯🇵 日本 | vless | 626
   port: 13413
@@ -9864,6 +9875,16 @@ proxies:
   tls: false
   type: vmess
   uuid: 7a6cb59b-fbcd-3f50-b5f2-a2534326c4c8
+- name: 🇯🇵 日本 | trojan | 631
+  network: ws
+  password: 362dfc91-1e4e-4147-a8eb-05c3b38b9043
+  port: 32209
+  server: 9kyx32pgmo7mhua6rfd1.b.karyl.top
+  skip-cert-verify: true
+  sni: s1.hdslb.com
+  type: trojan
+  ws-opts:
+    path: '%2F'
 - alterId: 0
   cipher: auto
   name: 🇯🇵 日本 | vmess | 633
@@ -9931,18 +9952,6 @@ proxies:
   tls: false
   type: vmess
   uuid: 7a6cb59b-fbcd-3f50-b5f2-a2534326c4c8
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 646
-  port: 443
-  reality-opts:
-    public-key: X2Sb6CKcI_yEV4gu9KUAmL9mcL-xpC1Ngks06NYIaxw
-    short-id: '!!str f129f93e'
-  server: ru.astrocore.cloud
-  servername: ru.astrocore.cloud
-  tls: false
-  type: vless
-  uuid: ed8ba85c-fa44-4d55-8ab9-229e942db60f
 - alterId: 0
   cipher: auto
   name: JP2｜原生/疑似家宽｜非常安全
@@ -9994,41 +10003,17 @@ proxies:
     headers:
       Host: jp01.a0a.xyz
     path: /
-- client-fingerprint: chrome
-  name: 🇯🇵JP_3|2.1MB/s
+- name: 🇯🇵 日本 | trojan | 652
   password: q6UYkw9nUn6MYZz8Sp
-  port: '443'
+  port: 443
   server: ty-2.tr202604.com
   skip-cert-verify: false
   type: trojan
-  udp: true
 - name: 🇯🇵 日本 | trojan | 653
   password: FDIypSwe64a3DA7un2R8DFjYXZO3NS05gKZTTOC8SxO0Fy3cqYg3EaFDA3ABaEYKNx39D
   port: 443
   server: kuame.missionsec.us
   type: trojan
-- down: ''
-  fingerprint: ''
-  name: 🇯🇵JP_2|1.0MB/s
-  obfs: salamander
-  obfs-password: xK9mN2pLq5vR8wB3
-  password: 09213C69-2971-449A-8DC6-6C3B738E9D77
-  port: 20577
-  server: jp3.dexlos.com
-  skip-cert-verify: false
-  sni: jp3.dexlos.com
-  type: hysteria2
-  up: ''
-- alterId: 0
-  name: 🇯🇵JP日本
-  password: BxceQaOe
-  port: 47655
-  server: 43.199.61.178
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  tls: true
-  type: trojan
-  udp: true
 - alterId: 0
   name: 日本3|@ripaojiedian
   network: tcp
@@ -10037,6 +10022,16 @@ proxies:
   server: 13.115.175.169
   skip-cert-verify: true
   sni: www.nintendogames.net
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
+  name: 🇯🇵JP日本2
+  password: BxceQaOe
+  port: 47655
+  server: 43.199.61.178
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
   tls: true
   type: trojan
   udp: true
