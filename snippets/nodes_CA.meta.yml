@@ -66,7 +66,7 @@ proxies:
     headers:
       Host: ovhwuxian.pai50288.uk
     path: /57ba2ab1
-- name: 🇫🇮 芬兰 | trojan | 92
+- name: 🇫🇮 芬兰 | trojan | 120
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
@@ -99,7 +99,7 @@ proxies:
     path: /trTelegram%20%40WangCai2
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 670
+  name: 🇷🇺 俄罗斯 | vless | 677
   network: tcp
   port: 443
   reality-opts:
@@ -703,33 +703,22 @@ proxies:
     headers:
       Host: cf.afrcloudnet1.dpdns.org
     path: /%3Fed%3D2560%26Telegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
-- flow: xtls-rprx-vision
-  name: 🇨🇦 加拿大 | vless | 03
-  port: 51072
-  reality-opts:
-    public-key: 5KJ1tLErCUEfqxc3IsnY_49p_gWe0mPB8eXJ3MLucgU
-    short-id: '!!str 0675732ab101'
-  server: 35.182.252.92
-  servername: www.sony.com
-  tls: false
-  type: vless
-  uuid: b6b2c827-4ac1-4e2c-af28-dfa7edbfeb81
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇨🇦 加拿大 | vless | 05
-  port: 41087
-  reality-opts:
-    public-key: aoGL5vNnsEuKoBXQFXyHTxjvcdAn3SxT4qUgV6aJxnw
-    short-id: '!!str 190d259bbd40d4c3'
-  server: 15.223.121.250
-  servername: www.tesla.com
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  uuid: 57d94cf7-ca36-4c2a-bec5-90cf38588cda
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 06
+  name: 🇨🇦 加拿大 | vmess | 01
+  network: ws
+  port: '48060'
+  server: 66.154.106.185
+  tls: false
+  type: vmess
+  uuid: f60ecc88-d704-489c-e3b9-082805317e7b
+  ws-opts:
+    headers:
+      Host: ''
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 | vmess | 02
   network: ws
   port: 80
   server: 137.184.164.233
@@ -743,17 +732,7 @@ proxies:
     path: /vmess
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 07
-  network: tcp
-  port: 18000
-  server: 23.162.200.198
-  servername: null
-  tls: false
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 08
+  name: 🇨🇦 加拿大 | vmess | 04
   network: tcp
   port: 18000
   server: 134.195.196.211
@@ -761,46 +740,55 @@ proxies:
   tls: false
   type: vmess
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- name: 🇨🇦 加拿大 | vless | 09
-  network: ws
-  port: 8443
-  server: 148.113.196.75
-  servername: 148.113.196.75
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 | vmess | 05
+  network: tcp
+  port: 18000
+  server: 23.162.200.198
+  servername: null
+  tls: false
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇨🇦 加拿大 | vless | 06
+  port: 41087
+  reality-opts:
+    public-key: aoGL5vNnsEuKoBXQFXyHTxjvcdAn3SxT4qUgV6aJxnw
+    short-id: '!!str 190d259bbd40d4c3'
+  server: 15.223.121.250
+  servername: www.tesla.com
   skip-cert-verify: true
   tls: false
   type: vless
-  uuid: 08f96221-9b7b-4e6f-8ffe-aee8b9c9b504
-  ws-opts:
-    path: '%2Fvless%2Fsecurity=tls'
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 10
-  network: ws
-  port: '48060'
-  server: 66.154.106.185
+  uuid: 57d94cf7-ca36-4c2a-bec5-90cf38588cda
+- flow: xtls-rprx-vision
+  name: 🇨🇦 加拿大 | vless | 13
+  port: 51072
+  reality-opts:
+    public-key: 5KJ1tLErCUEfqxc3IsnY_49p_gWe0mPB8eXJ3MLucgU
+    short-id: '!!str 0675732ab101'
+  server: 35.182.252.92
+  servername: www.sony.com
   tls: false
-  type: vmess
-  uuid: f60ecc88-d704-489c-e3b9-082805317e7b
-  ws-opts:
-    headers:
-      Host: ''
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 13
-  network: ws
+  type: vless
+  uuid: b6b2c827-4ac1-4e2c-af28-dfa7edbfeb81
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇨🇦 加拿大 | vless | 17
   port: 443
-  server: 134.195.198.147
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: inna.cfd
-    path: /linkvws
+  reality-opts:
+    public-key: Nbo573uk1nUiarXxtqQKPr0HGE9WerLF_eHHMsRrnEI
+    short-id: '!!str 0f4dacf62221e05f'
+  server: 184.107.178.251
+  servername: ca.api-yandex.net
+  tls: false
+  type: vless
+  uuid: 959b4df5-15bc-4eb8-8b93-95f6af50cd80
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 14
+  name: 🇨🇦 加拿大 | vmess | 19
   network: ws
   port: 443
   server: 158.51.121.63
@@ -812,6 +800,61 @@ proxies:
     headers:
       Host: seribus.org
     path: linkvws
+- name: 🇨🇦 加拿大 | trojan | 20
+  password: bc7593fe-0604-4fbe-a70bYWVzLTI1Ni1nY206Q1VuZFNabllzUEtjdTaclWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272
+  port: 443
+  server: ca-trojan.bonds.id
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 | vmess | 21
+  network: ws
+  port: 443
+  server: 23.162.200.227
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: ''
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 | vmess | 22
+  network: ws
+  port: 443
+  server: 134.195.198.147
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: inna.cfd
+    path: /linkvws
+- name: 🇨🇦 加拿大 | trojan | 23
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 207.90.192.164
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇨🇦 加拿大 | vless | 24
+  network: ws
+  port: 8443
+  server: 148.113.196.75
+  servername: 148.113.196.75
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: 08f96221-9b7b-4e6f-8ffe-aee8b9c9b504
+  ws-opts:
+    path: '%2Fvless%2Fsecurity=tls'
 - name: 🇨🇦 加拿大 | trojan | 25
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -827,37 +870,14 @@ proxies:
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
-  server: 23.173.104.229
+  server: 23.173.104.217
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇨🇦 加拿大 | vless | 27
-  network: ws
-  port: 2053
-  server: 23.173.104.207
-  servername: babayaga-6i7.pages.dev
-  tls: false
-  type: vless
-  uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
-  ws-opts:
-    headers:
-      Host: babayaga-6i7.pages.dev
-    path: '%2F%3Fed%3D2560%26Telegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2security=tls'
 - name: 🇨🇦 加拿大 | trojan | 28
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 23.173.104.235
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇨🇦 加拿大 | trojan | 29
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
@@ -868,9 +888,66 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2
+- name: 🇨🇦 加拿大 | trojan | 29
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 23.173.104.235
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇨🇦 加拿大 | vless | 30
+  network: ws
+  port: 2053
+  server: 23.173.104.207
+  servername: babayaga-6i7.pages.dev
+  tls: false
+  type: vless
+  uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
+  ws-opts:
+    headers:
+      Host: babayaga-6i7.pages.dev
+    path: /%3Fed%3D2560%26Telegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2security=tls
+- name: 🇨🇦 加拿大 | trojan | 32
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 23.173.104.229
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇨🇦 加拿大 | trojan | 35
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 44.32.224.197
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇦 加拿大 | vless | 31
+  name: 🇨🇦 加拿大 | vless | 38
+  port: 443
+  reality-opts:
+    public-key: 8vqOvJ5eoG_9oHla4B3Vh1E-o39RrCXW6Wr7OcXZGmI
+    short-id: '!!str dd'
+  server: 209.127.228.114
+  servername: cars.morro-settings.ru
+  tls: false
+  type: vless
+  uuid: 8a563b6d-d66f-4fb7-a994-aa73f3f43514
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇨🇦 加拿大 | vless | 39
   port: 443
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
@@ -882,31 +959,7 @@ proxies:
   uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 32
-  network: ws
-  port: 443
-  server: 23.162.200.227
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: ''
-    path: /linkvws
-- name: 🇨🇦 加拿大 | trojan | 36
-  password: 71ab3866-4c8b-4a0b-a4bd-a64f110afe0b
-  port: 443
-  server: ca-full.privateip.net
-  skip-cert-verify: true
-  type: trojan
-- name: 🇨🇦 加拿大 | trojan | 37
-  password: bc7593fe-0604-4fbe-a70bYWVzLTI1Ni1nY206Q1VuZFNabllzUEtjdTaclWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272
-  port: 443
-  server: ca-trojan.bonds.id
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 38
+  name: 🇨🇦 加拿大 | vmess | 42
   network: tcp
   port: '2053'
   server: ca.connfull.org
@@ -914,43 +967,12 @@ proxies:
   tls: true
   type: vmess
   uuid: 2d2c6ee7-9f79-4b24-af32-ae2ccad45628
-- client-fingerprint: chrome
-  name: 🇨🇦 加拿大 | vless | 39
-  network: tcp
-  port: 4020
-  reality-opts:
-    public-key: cw3LrGmQw06DWa3o5nRTZKzXjA2zPbRQ69FvKmv0nxg
-    short-id: '!!str 3bec2937ffa88b18'
-  server: ca2.iranmomas.de
-  servername: play.google.com
-  tls: false
-  type: vless
-  uuid: a3aa193c-59d8-443a-a8fa-4c627933b9a9
-  ws-opts:
-    headers:
-      Host: ''
-    path: ''
-- name: 🇨🇦 加拿大 | vless | 40
-  network: ws
-  port: 8443
-  server: ov-canada1.09vpn.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 08f96221-9b7b-4e6f-8ffe-aee8b9c9b504
-  ws-opts:
-    path: /vless/
-- name: 🇨🇦 加拿大 | vless | 41
-  network: ws
-  port: 80
-  server: ca1.niekotin.de
-  tls: false
-  type: vless
-  uuid: fceaec68-0a47-4a83-9dc3-41a8cc7f1aa1
-  ws-opts:
-    headers:
-      Host: ca1.niekotin.de
-    path: /vless
+- name: 🇨🇦 加拿大 | trojan | 45
+  password: 71ab3866-4c8b-4a0b-a4bd-a64f110afe0b
+  port: 443
+  server: ca-full.privateip.net
+  skip-cert-verify: true
+  type: trojan
 - alterId: 0
   cipher: chacha20-ietf-poly1305
   name: 🇨🇦CA加拿大
