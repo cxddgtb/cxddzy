@@ -40,7 +40,7 @@ proxies:
   type: ss
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 454
+  name: 🇫🇷 法国 | vmess | 389
   network: ws
   port: 16632
   server: planb.mojcn.com
@@ -63,7 +63,7 @@ proxies:
   udp: true
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 433
+  name: 🇫🇷 法国 | vmess | 399
   network: ws
   port: 16622
   server: m.cnmjin.net
@@ -79,7 +79,7 @@ proxies:
   xudp: true
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 436
+  name: 🇫🇷 法国 | vmess | 398
   network: ws
   port: 16632
   server: m.cnmjin.net
@@ -107,7 +107,7 @@ proxies:
   xudp: true
 - alterId: 0
   cipher: auto
-  name: 🇬🇧 英国 | vmess | 235
+  name: 🇬🇧 英国 | vmess | 228
   network: ws
   port: '10049'
   server: 6654c734ccab8f440ff0825eb443dc7f.qos.onl
@@ -133,18 +133,6 @@ proxies:
     headers:
       Host: cloudflare-proxy-1jk.pages.dev
     path: '%2F%3Fed%3D2560'
-- name: 🇭🇰 香港 | trojan | 01
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 48697
-  server: 103.177.136.41
-  sni: gh.01.naiun.bilibili.com
-  type: trojan
-- name: 🇭🇰 香港 | trojan | 02
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 45553
-  server: 103.177.136.41
-  sni: ch.01.naiun.bilibili.com
-  type: trojan
 - alterId: 0
   cipher: auto
   name: WSS-隐蔽
@@ -162,6 +150,16 @@ proxies:
     path: /vmesswss
 - alterId: 0
   cipher: auto
+  name: 🇭🇰 香港 | vmess | 03
+  network: tcp
+  port: 28384
+  server: 103.143.238.196
+  servername: www.cloudflare.com
+  tls: true
+  type: vmess
+  uuid: 1e1a6b3b-14b2-4ae4-9aa9-880ba5dff6fa
+- alterId: 0
+  cipher: auto
   name: WS-穿透
   network: ws
   port: 36548
@@ -173,26 +171,21 @@ proxies:
     headers:
       Host: www.cloudflare.com
     path: /vmessws
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰 香港 | vmess | 06
-  network: tcp
-  port: 28384
-  server: 103.143.238.196
-  servername: www.cloudflare.com
-  tls: true
-  type: vmess
-  uuid: 1e1a6b3b-14b2-4ae4-9aa9-880ba5dff6fa
-- name: 🇭🇰 香港 | trojan | 22
-  password: 2f653ecd-c290-451e-a848-f8f525bc5a21
-  port: 321
-  server: 103.188.235.3
-  skip-cert-verify: true
-  sni: data.sub-zrj.com
+- name: 🇭🇰 香港 | trojan | 05
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 48697
+  server: 103.177.136.41
+  sni: gh.01.naiun.bilibili.com
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 06
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 45553
+  server: 103.177.136.41
+  sni: ch.01.naiun.bilibili.com
   type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇭🇰 香港 | vmess | 24
+  name: 🇭🇰 香港 | vmess | 14
   network: ws
   port: 44867
   server: 47.244.120.197
@@ -203,10 +196,26 @@ proxies:
   ws-opts:
     headers:
       Host: ''
-    path: /
+    path: /arki?ed=2048
+- name: 🇭🇰 香港 | trojan | 18
+  password: 2f653ecd-c290-451e-a848-f8f525bc5a21
+  port: 321
+  server: 103.188.235.3
+  skip-cert-verify: true
+  sni: data.sub-zrj.com
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇭🇰 香港 | vmess | 28
+  name: 🇭🇰 香港 | vmess | 53
+  network: tcp
+  port: '22324'
+  server: 213.156.141.52
+  tls: false
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰 香港 | vmess | 58
   network: ws
   port: 36703
   server: 47.244.120.197
@@ -217,84 +226,28 @@ proxies:
   ws-opts:
     headers:
       Host: 47.244.120.197
-    path: /arki?ed=2048
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰 香港 | vmess | 42
-  network: tcp
-  port: '22324'
-  server: 213.156.141.52
-  tls: false
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- name: 🇭🇰 香港 | trojan | 49
-  password: 8r<[9'l6hAO#8ZQi
-  port: 443
-  server: 213.176.92.138
-  skip-cert-verify: true
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-- name: 🇭🇰 香港 | trojan | 51
+    path: /
+- name: 🇭🇰 香港 | trojan | 63
   password: 6557bf4a-852b-4a69-ad35-d53293386a13
   port: 443
   server: 13.75.126.104
   sni: tr.mjt000.com
   type: trojan
-- name: 🇭🇰 香港 | trojan | 52
+- name: 🇭🇰 香港 | trojan | 71
+  network: tcp
+  password: e5c22f63-e473-496a-beff-fdc5655008c1
+  port: 2096
+  server: hkt.lajichang.xyz
+  skip-cert-verify: true
+  sni: bing.com
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 76
   password: b26e31e5-eac1-45b0-9069-83830bd69521
   port: 443
   server: 20.187.85.198
   sni: hkt.iamnotagoodman.com
   type: trojan
-- name: 🇭🇰 香港 | trojan | 60
-  network: ws
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  port: 8443
-  server: 154.3.32.164
-  sni: dxy1h.twiladaphne.ndjp.net
-  type: trojan
-  ws-opts:
-    headers:
-      Host: dxy1h.twiladaphne.ndjp.net
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- name: 🇭🇰 香港 | trojan | 67
-  network: ws
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  port: 443
-  server: 47.239.4.246
-  sni: dxy1h.twiladaphne.ndjp.net
-  type: trojan
-  ws-opts:
-    headers:
-      Host: dxy1h.twiladaphne.ndjp.net
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰 香港 | vmess | 77
-  network: ws
-  port: 443
-  server: hk2.lrzdx.uk
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: db69d5bc-d36c-4903-f471-74b98c5cefe5
-  ws-opts:
-    headers:
-      Host: hk2.lrzdx.uk
-    path: /
-- name: 🇭🇰 香港 | trojan | 78
-  network: ws
-  password: '!!str 162534'
-  port: 8443
-  server: 217.60.248.94
-  skip-cert-verify: true
-  sni: cchh2.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: cchh2.pages.dev
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 🇭🇰 香港 | trojan | 81
+- name: 🇭🇰 香港 | trojan | 91
   network: ws
   password: '!!str 162534'
   port: 2053
@@ -306,29 +259,94 @@ proxies:
     headers:
       Host: cchh2.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 🇭🇰 香港 | trojan | 82
+- name: 🇭🇰 香港 | trojan | 97
   network: ws
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  password: '!!str 162534'
   port: 8443
-  server: 47.83.14.42
-  sni: dxy1h.twiladaphne.ndjp.net
+  server: 217.60.248.94
+  skip-cert-verify: true
+  sni: cchh2.pages.dev
   type: trojan
   ws-opts:
     headers:
-      Host: dxy1h.twiladaphne.ndjp.net
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
+      Host: cchh2.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: 🇭🇰 香港 | trojan | 105
+  password: WF42809561
+  port: 443
+  server: top-goshawk.rooster465.autos
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 110
+  password: IL37892054
+  port: 443
+  server: just-alpaca.rooster465.autos
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 124
+  password: 8r<[9'l6hAO#8ZQi
+  port: 443
+  server: 213.176.92.138
+  skip-cert-verify: true
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 127
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.odessa.ua
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 128
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.kherson.ua
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 129
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.kyiv.ua
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇭🇰 香港 | vmess | 93
-  network: tcp
-  port: '7754'
-  server: efan.dnsefan04881.com
-  tls: false
+  name: 🇭🇰 香港 | vmess | 130
+  network: ws
+  port: 443
+  server: fullaccesstohongkongnet.azurewebsites.net
+  servername: fullaccesstohongkongnet.azurewebsites.net
+  tls: true
   type: vmess
-  uuid: 009e558d-3cf4-49d8-b5e4-82c9e14fe1a4
+  uuid: 274f11c6-f69b-40b9-8966-f39e06e97be7
+  ws-opts:
+    headers:
+      Host: fullaccesstohongkongnet.azurewebsites.net
+    path: /ws
+- name: 🇭🇰 香港 | trojan | 131
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.kharkov.ua
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 132
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.kiev.ua
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 134
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.ivano-frankivsk.ua
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 135
+  password: 72d8e820-7926-4ce3-a87c-b6969f425c79
+  port: 443
+  server: 103.235.46.40
+  skip-cert-verify: true
+  sni: www.baidu.com
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 136
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.chernigov.ua
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇭🇰 香港 | vmess | 97
+  name: 🇭🇰 香港 | vmess | 137
   network: ws
   port: 25228
   server: cu.awslcn.info
@@ -340,39 +358,38 @@ proxies:
     headers:
       Host: cu.awslcn.info
     path: /
-- name: 🇭🇰 香港 | trojan | 98
-  password: IL37892054
-  port: 443
-  server: just-alpaca.rooster465.autos
-  type: trojan
-- name: 🇭🇰 香港 | trojan | 102
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 2053
-  server: official.tokyometropolis.odessa.ua
-  type: trojan
-- name: 🇭🇰 香港 | trojan | 103
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 2053
-  server: official.tokyometropolis.kiev.ua
-  type: trojan
-- name: 🇭🇰 香港 | trojan | 104
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰 香港 | vmess | 148
   network: tcp
-  password: e5c22f63-e473-496a-beff-fdc5655008c1
-  port: 2096
-  server: hkt.lajichang.xyz
-  skip-cert-verify: true
-  sni: bing.com
+  port: 2512
+  server: world.t.51guangtaobao.com
+  tls: false
+  type: vmess
+  uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e
+- name: 🇭🇰 香港 | trojan | 153
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.odesa.ua
   type: trojan
-- name: 🇭🇰 香港 | trojan | 107
-  password: 72d8e820-7926-4ce3-a87c-b6969f425c79
+- name: 🇭🇰 香港 | trojan | 159
+  password: de7d6444-a7a8-4b3a-bf26-bc6939bb0279
   port: 443
-  server: 103.235.46.40
-  skip-cert-verify: true
-  sni: www.baidu.com
+  server: n1.chateditimage.com
+  sni: n1.chateditimage.com
   type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇭🇰 香港 | vmess | 111
+  name: 🇭🇰 香港 | vmess | 160
+  network: tcp
+  port: '7754'
+  server: efan.dnsefan04881.com
+  tls: false
+  type: vmess
+  uuid: 009e558d-3cf4-49d8-b5e4-82c9e14fe1a4
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰 香港 | vmess | 161
   network: ws
   port: 80
   server: cfhk.oppo.quest
@@ -386,41 +403,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇭🇰 香港 | vmess | 112
-  network: ws
-  port: 443
-  server: fullaccesstohongkongnet.azurewebsites.net
-  servername: fullaccesstohongkongnet.azurewebsites.net
-  tls: true
-  type: vmess
-  uuid: 274f11c6-f69b-40b9-8966-f39e06e97be7
-  ws-opts:
-    headers:
-      Host: fullaccesstohongkongnet.azurewebsites.net
-    path: /ws
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰 香港 | vmess | 118
-  network: tcp
-  port: 2510
-  server: world.t.51guangtaobao.com
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e
-- name: 🇭🇰 香港 | trojan | 131
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 2053
-  server: official.tokyometropolis.ivano-frankivsk.ua
-  type: trojan
-- name: 🇭🇰 香港 | trojan | 143
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 2053
-  server: official.tokyometropolis.kharkov.ua
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰 香港 | vmess | 145
+  name: 🇭🇰 香港 | vmess | 162
   network: ws
   port: 80
   server: ee.oppo.quest
@@ -432,36 +415,28 @@ proxies:
     headers:
       Host: ee.oppo.quest
     path: /
-- name: 🇭🇰 香港 | trojan | 149
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 2053
-  server: official.tokyometropolis.kyiv.ua
-  type: trojan
-- name: 🇭🇰 香港 | trojan | 152
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 2053
-  server: official.tokyometropolis.kherson.ua
-  type: trojan
-- name: 🇭🇰 香港 | trojan | 153
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 2053
-  server: official.tokyometropolis.chernigov.ua
-  type: trojan
-- name: 🇭🇰 香港 | trojan | 154
-  password: de7d6444-a7a8-4b3a-bf26-bc6939bb0279
-  port: 443
-  server: n1.chateditimage.com
-  sni: n1.chateditimage.com
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇭🇰 香港 | vmess | 161
+  name: 🇭🇰 香港 | vmess | 163
   network: tcp
-  port: 2512
+  port: 2510
   server: world.t.51guangtaobao.com
+  servername: ''
   tls: false
   type: vmess
   uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰 香港 | vmess | 164
+  network: ws
+  port: 443
+  server: hk2.lrzdx.uk
+  servername: hk2.lrzdx.uk
+  tls: true
+  type: vmess
+  uuid: db69d5bc-d36c-4903-f471-74b98c5cefe5
+  ws-opts:
+    path: /register
 - alterId: 0
   name: 香港3|@ripaojiedian
   network: tcp
