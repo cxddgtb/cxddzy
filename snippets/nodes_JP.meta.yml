@@ -15,14 +15,15 @@ proxies:
   uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
 - alterId: 2
   cipher: auto
-  name: 🇮🇩 印尼 | vmess | 08
+  name: 🇮🇩 印尼 | vmess | 07
   network: tcp
   port: 30806
   server: v6.hdacd.com
+  servername: ''
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- name: '日本 #1'
+- name: '[🇳🇱'
   network: ws
   port: 443
   server: 151.101.108.223
@@ -59,8 +60,8 @@ proxies:
       Host: jookeji.global.ssl.fastly.net
     path: '%2F'
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 29
+  flow: xtls-rprx-vision-udp443
+  name: 🇯🇵 日本 | vless | 42
   network: tcp
   port: 1443
   reality-opts:
@@ -138,7 +139,7 @@ proxies:
   xudp: true
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 482
+  name: 🇫🇷 法国 | vmess | 479
   network: ws
   port: 16617
   server: planb.mojcn.com
@@ -433,7 +434,7 @@ proxies:
   username: 3bd247a8-993e-11ec-a8bf-f23c91cfbbc9
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 493
+  name: 🇫🇷 法国 | vmess | 485
   network: ws
   port: 16617
   server: t.cnmjcn.cyou
@@ -489,10 +490,11 @@ proxies:
   username: 336501b6-51d2-11ee-a993-f23c9164ca5d
 - alterId: 0
   cipher: auto
-  name: '🟢🇯🇵[🎬🤖📺🔍]_github.com/Ruk1ng001... #12'
+  name: 🇫🇷 法国 | vmess | 490
   network: ws
   port: 16617
   server: m.cnmjin.net
+  tls: false
   type: vmess
   uuid: cef172fc-87b0-4db7-9ffc-52b5aca91014
   ws-opts:
@@ -506,27 +508,73 @@ proxies:
   tls: true
   type: http
   username: c870fe5a-0729-11f0-8cf9-f23c93136cb3
-- alpn:
-  - ''
-  client-fingerprint: random
-  flow: ''
-  grpc-opts:
-    grpc-service-name: ''
-  name: 🇯🇵 日本 | vless | 72
-  network: h2
-  port: 443
-  server: 149.28.21.16
-  servername: u723829us518.csgfw.top
-  tls: true
+- client-fingerprint: chrome
+  name: 🇨🇿 捷克 | vless | 52
+  network: tcp
+  port: 2053
+  reality-opts:
+    public-key: aFsY-EZjSNTomlAFShKwQIQMJ5pHiZQXXJpWvcz8WkQ
+    short-id: '!!str 0858af97f4e7324d'
+  server: web.sapochi.ru
+  servername: web.sapochi.ru
+  tls: false
   type: vless
-  uuid: 1c65bee4-bc54-364c-8988-6a5912fda891
-  ws-opts:
-    headers:
-      Host: s518.csgfw.top
-    path: ssp-xhttp
+  uuid: 5570943f-6cc3-4a8a-bee3-d15a2b2f53a0
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 171
+  name: 🇺🇸 美国 | vless | 920
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: '!!str '
+  server: 72.56.36.162
+  servername: sellflow.org
+  tls: false
+  type: vless
+  uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
+- name: '未知 VLESS-674 | free-nodes #1'
+  network: ws
+  port: 443
+  server: dongjing4.zqjsqapi.com
+  servername: dongjing4.zqjsqapi.com
+  tls: true
+  type: vless
+  uuid: 8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19
+  ws-opts:
+    path: '%2Fproxy'
+- name: JP日本(mibei77.com 米贝节点分享)
+  network: ws
+  port: 16957
+  server: 150.230.214.172
+  servername: ynwta9.api-edge.fgfw.qzz.io
+  tls: true
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: ynwta9.api-edge.fgfw.qzz.io
+    path: '%2Fdanfeng%3Fed%3D2560fp%3Dchrome'
+- name: JP TROJAN-45 | free-nodes
+  password: 6a3b39df-d881-4554-af8f-c6f46402f8b8
+  port: 50000
+  server: jp200m.jiasu.asia
+  sni: jp200m.jiasu.asia
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 52
+  network: ws
+  password: GKHWMe2R4qwNcNxu6l3KMkdd
+  port: 20770
+  server: 219.103.68.164
+  sni: vpn1.rnmcnm.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: vpn1.rnmcnm.com
+    path: '%2Ftrj-ws'
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | vless | 149
   network: tcp
   port: 443
   reality-opts:
@@ -537,77 +585,21 @@ proxies:
   tls: false
   type: vless
   uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: gun
-  name: 🇯🇵 Japan | 🌐 | [BL]
-  network: grpc
-  port: 443
-  reality-opts:
-    public-key: QJW15WZWLNjA8KEpe4GqSdOe4rfW8KgqjjVmKxPk-ng
-    short-id: '!!str 3fa234ea9feaa048'
-  server: antix.ubuntuhosting.host
-  servername: antix.ubuntuhosting.host
-  tls: false
-  type: vless
-  uuid: 9cab10a8-7936-457f-bf1f-b9842439f494
-- alpn:
-  - ''
-  client-fingerprint: chrome
+- client-fingerprint: edge
   flow: xtls-rprx-vision
-  grpc-opts:
-    grpc-service-name: ''
-  name: 🇯🇵 日本 | vless | 103
-  network: tcp
-  port: 443
-  server: 64.176.41.201
-  servername: u723829us1474.csgfw.top
-  tls: true
-  type: vless
-  uuid: 1c65bee4-bc54-364c-8988-6a5912fda891
-  ws-opts:
-    headers:
-      Host: s162.csgfw.top
-    path: ''
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇨 塞舌尔 | vless | 79
+  name: 🇯🇵 Japan cfea | SNI - jp.s3-cl...
   network: tcp
   port: 443
   reality-opts:
-    public-key: 127zCnB9vtae6HnpowaSW8eFqflCAaBV0iM1oKHBWwY
-    short-id: '!!str a1ab5a56bc42'
-  server: sw1tzerl4nd.gxcore.net
-  servername: sw1tzerl4nd.gxcore.net
-  skip-cert-verify: false
+    public-key: QVkd5uoSbUA7rHVLtIoJB4iRp4l0zuw0H9qzQBh3lHs
+    short-id: '!!str 7a3f9e2b1c8d4f6a'
+  server: 31.76.91.21
+  servername: jp.s3-cloud.org
   tls: false
   type: vless
-  uuid: b6ce8a51-19b9-4979-91ba-b4298c26d5fc
-- name: 11|🇯🇵 JP-3 | Mix
-  network: ws
-  port: 3389
-  server: 203.168.131.105
-  servername: q40ivxuck.danfeng.qzz.io
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  ws-opts:
-    headers:
-      Host: q40ivxuck.danfeng.qzz.io
-    path: /danfeng?ed=2560fp=chrome
-- name: 🇯🇵 日本 | vless | 134
-  network: ws
-  port: 443
-  server: 64.176.44.23
-  servername: 3-7v4.pages.dev
-  tls: true
-  type: vless
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-  ws-opts:
-    headers:
-      Host: 3-7v4.pages.dev
-- name: JP VLESS-85 | free-nodes
+  uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
+- client-fingerprint: chrome
+  name: 🇯🇵 日本 | vless | 54
   network: ws
   port: 25242
   server: 47.79.144.103
@@ -616,38 +608,17 @@ proxies:
   uuid: a12b0d31-f599-498e-b76e-8558a14b766b
   ws-opts:
     path: /a12b0d31
-- name: '🇯🇵 #1'
+- name: '🇯🇵 #2'
   network: ws
   port: 443
-  server: dongjing4.zqjsqapi.com
-  servername: dongjing4.zqjsqapi.com
+  server: 54.95.94.250
+  servername: sni.111000.indevs.in
   tls: true
   type: vless
-  uuid: 8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19
-  ws-opts:
-    path: /proxy
-- alpn:
-  - h3
-  name: JP HY2-150 | free-nodes
-  password: 1c65bee4-bc54-364c-8988-6a5912fda891
-  port: 443
-  server: 108.160.134.123
-  sni: u723829us1364.csgfw.top
-  tls: false
-  type: hysteria2
-- name: '[🇯🇵]t.me/ConfigsHub'
-  network: ws
-  port: 443
-  server: 151.101.110.219
-  servername: speedtest.net
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: ae5a910d-b6d0-43aa-80fb-1a70f0078ce8
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   ws-opts:
     headers:
-      Host: nleiyajji.global.ssl.fastly.neT.
-    path: '%2F'
+      Host: sni.111000.indevs.in
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇯🇵 日本 | vless | 01
@@ -662,17 +633,72 @@ proxies:
   tls: false
   type: vless
   uuid: 6ca8ea5b-e47f-4c19-adee-365456e1e87c
-- name: 🇯🇵 日本 | trojan | 03
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵 日本 | vmess | 03
   network: ws
-  password: HutaoCloud
-  port: 11543
-  server: 185.220.238.77
-  skip-cert-verify: true
-  sni: 185.220.238.77
-  type: trojan
+  port: '11655'
+  server: 131.186.63.89
+  servername: hk.nbee.pp.ua
+  tls: true
+  type: vmess
+  uuid: 4bf075f5-4d5e-4d39-f5ab-b32a86250f0e
   ws-opts:
-    path: '%2Fapi'
-- name: 🇯🇵 日本 | vless | 04
+    headers:
+      Host: hk.nbee.pp.ua
+    path: /aa
+- name: 🇯🇵 日本 | vless | 05
+  network: ws
+  port: 27365
+  server: 158.101.137.177
+  servername: guslef2w8oz12wv.ymj.xx.kg
+  tls: false
+  type: vless
+  uuid: 00000000-0000-4000-8000-000000000000
+  ws-opts:
+    headers:
+      Host: guslef2w8oz12wv.ymj.xx.kg
+    path: /@Marisa_kristifp=chromesecurity=tls
+- alpn:
+  - http/1.1
+  name: 🇯🇵 日本 | vless | 06
+  network: ws
+  port: 37572
+  server: 155.117.155.253
+  servername: snippet.danfeng.rr.kg
+  tls: true
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: snippet.danfeng.rr.kg
+    path: '%2Fdanfengfp=chrome'
+- name: 🇯🇵 日本 | vless | 09
+  network: ws
+  port: 52675
+  server: 142.248.151.249
+  servername: vfn-6o8h-kht7rpd.zipgd3vx91o.ddns-ip.net
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: 00000000-0000-4000-8000-000000000000
+  ws-opts:
+    headers:
+      Host: vfn-6o8h-kht7rpd.zipgd3vx91o.ddns-ip.net
+    path: /@Marisa_kristifp=chromesecurity=tls
+- name: 🇯🇵 日本 | vless | 10
+  network: ws
+  port: 39085
+  server: 142.248.151.249
+  servername: x.2.q.9.a.v.3.m.8.c.t.y.1.k.f.z.7.b.h.6.w.b.1.j.danfeng.com.cfd
+  tls: true
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: x.2.q.9.a.v.3.m.8.c.t.y.1.k.f.z.7.b.h.6.w.b.1.j.danfeng.com.cfd
+    path: '%2Fdanfengfp=chrome'
+- name: 🇯🇵 日本 | vless | 11
   network: ws
   port: 48740
   server: 172.237.12.208
@@ -684,6 +710,347 @@ proxies:
     headers:
       Host: nisav2de2t0ai8p-hd0.misa.cc.cd
     path: /@Marisa_kristifp=chrome
+- name: 🇯🇵 日本 | vless | 12
+  network: ws
+  port: 53557
+  server: 82.40.33.241
+  servername: nkeeiqgua2zzvt44excprl17zrg1.ovtc.xx.kg
+  tls: false
+  type: vless
+  uuid: 00000000-0000-4000-8000-000000000000
+  ws-opts:
+    headers:
+      Host: nkeeiqgua2zzvt44excprl17zrg1.ovtc.xx.kg
+    path: /%40Marisa_kristifp%3Dchromefp=chromesecurity=tls
+- name: 🇯🇵 日本 | vless | 14
+  network: ws
+  port: 30000
+  server: 142.248.150.69
+  servername: rolaqoubhqt.bpd67081tsq.ddns-ip.net
+  tls: false
+  type: vless
+  uuid: 00000000-0000-4000-8000-000000000000
+  ws-opts:
+    headers:
+      Host: rolaqoubhqt.bpd67081tsq.ddns-ip.net
+    path: /%40Marisa_kristifp%3Dchromesecurity=tls
+- name: 🇯🇵 日本 | vless | 15
+  network: ws
+  port: 56788
+  server: 212.135.210.133
+  servername: ufo4dxyv6255yk8eh1ejyxgxc.worker.ddns-ip.net
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 00000000-0000-4000-8000-000000000000
+  ws-opts:
+    headers:
+      Host: ufo4dxyv6255yk8eh1ejyxgxc.worker.ddns-ip.net
+    path: /@Marisa_kristifp=chrome
+- alpn:
+  - http/1.1
+  name: 🇯🇵 日本 | vless | 16
+  network: ws
+  port: 8606
+  server: 31.57.172.25
+  servername: snippet.gfw.qzz.io
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: snippet.gfw.qzz.io
+    path: /danfeng?ed=2560fp=chromesecurity=tls
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | vless | 20
+  port: 54055
+  reality-opts:
+    public-key: OzoYp8homkMDMozggbwqswuBiWRykfmmszFpu2_YM1g
+    short-id: '!!str f0b670194e8d2401'
+  server: 3.112.126.206
+  servername: www.icloud.com
+  tls: false
+  type: vless
+  uuid: a6b071ef-0d82-4f46-b04b-3310b8d6ca82
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵 日本 | vmess | 21
+  network: tcp
+  port: '49803'
+  server: 153.121.73.175
+  tls: false
+  type: vmess
+  uuid: cd3dacbc-2b7b-4718-83ad-ab870f87e12e
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵 日本 | vmess | 22
+  network: tcp
+  port: '22324'
+  server: 172.104.80.66
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- name: 🇯🇵 日本 | vless | 23
+  network: ws
+  port: 33940
+  server: 140.238.33.0
+  servername: guslef2w8oz12wv.ymj.xx.kg
+  tls: false
+  type: vless
+  uuid: 00000000-0000-4000-8000-000000000000
+  ws-opts:
+    headers:
+      Host: guslef2w8oz12wv.ymj.xx.kg
+    path: /@Marisa_kristifp=chromesecurity=tls
+- alpn:
+  - http/1.1
+  name: 🇯🇵 日本 | vless | 25
+  network: ws
+  port: 56871
+  server: 156.231.115.49
+  servername: snippet.fgfw.loc.cc
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: snippet.fgfw.loc.cc
+    path: /danfeng?ed=2560fp=chromesecurity=tls
+- name: 🇯🇵 日本 | vless | 26
+  network: ws
+  port: 9871
+  server: 172.105.233.248
+  servername: 7xbq35vdydie5sgv.cctg.xx.kg
+  tls: true
+  type: vless
+  uuid: 00000000-0000-4000-8000-000000000000
+  ws-opts:
+    headers:
+      Host: 7xbq35vdydie5sgv.cctg.xx.kg
+    path: /@Marisa_kristifp=chrome
+- name: 🇯🇵 日本 | vless | 27
+  network: ws
+  port: 42841
+  server: 43.165.134.106
+  servername: rolaqoubhqt.bpd67081tsq.ddns-ip.net
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 00000000-0000-4000-8000-000000000000
+  ws-opts:
+    headers:
+      Host: rolaqoubhqt.bpd67081tsq.ddns-ip.net
+    path: /@Marisa_kristifp=chrome
+- name: 🇯🇵 日本 | vless | 28
+  network: ws
+  port: 18836
+  server: 172.237.12.208
+  servername: 57vanjkxjo3kejbf4o2iul6z4o.gike.dpdns.org
+  tls: true
+  type: vless
+  uuid: 00000000-0000-4000-8000-000000000000
+  ws-opts:
+    headers:
+      Host: 57vanjkxjo3kejbf4o2iul6z4o.gike.dpdns.org
+    path: /@Marisa_kristifp=chrome
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵 日本 | vmess | 29
+  network: ws
+  port: '25686'
+  server: 140.83.51.161
+  tls: false
+  type: vmess
+  uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9
+  ws-opts:
+    headers:
+      Host: jp02.a0a.xyz
+    path: /
+- name: 🇯🇵 日本 | vless | 32
+  network: ws
+  port: 10086
+  server: 217.142.236.75
+  servername: sni.111000.dns.army
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.dns.army
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3security=tls'
+- name: 🇯🇵 日本 | vless | 33
+  network: ws
+  port: 39835
+  server: 103.232.213.245
+  servername: t39sed.gateway-api.sh21.eu.org
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: t39sed.gateway-api.sh21.eu.org
+    path: /danfeng?ed=2560fp=firefoxsecurity=tls
+- alpn:
+  - h3
+  - h2
+  - http/1.1
+  name: 🇯🇵 日本 | trojan | 34
+  network: ws
+  password: JxKkbGrtBX
+  port: 46006
+  server: 38.207.136.242
+  skip-cert-verify: true
+  sni: www.grlgroup.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.grlgroup.com
+    path: '%2Fjp'
+- name: 🇯🇵 日本 | vless | 35
+  network: ws
+  port: 4443
+  server: 54.178.110.17
+  servername: nn9jdg-k7yewrrk.acg.xx.kg
+  tls: false
+  type: vless
+  uuid: 00000000-0000-4000-8000-000000000000
+  ws-opts:
+    path: '%2F%40Marisa_kristifp=chromesecurity=tls'
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | vless | 38
+  port: 38388
+  reality-opts:
+    public-key: xHaPe5SLprSSqGccSor5d3tCRuwyowBwFeYrVXoSz3w
+    short-id: '!!str 6ba85179e30d4fc2'
+  server: 47.79.149.248
+  servername: itunes.apple.com
+  tls: false
+  type: vless
+  uuid: 45c8d20e-0222-4b16-8d21-37318456b980
+- client-fingerprint: chrome
+  name: 🇯🇵 日本 | vless | 40
+  port: 29745
+  reality-opts:
+    public-key: zSOPQOHAiacl2VMETsLXTE_Gln5ECllb6YKy1oyv1V0
+    short-id: '!!str c3'
+  server: 96.62.214.87
+  servername: www.google.com
+  tls: false
+  type: vless
+  uuid: f6f44df3-d229-4dd8-a944-e7bc3a4c6b94
+- name: 🇯🇵 日本 | trojan | 41
+  network: ws
+  password: HutaoCloud
+  port: 11543
+  server: 185.220.238.77
+  skip-cert-verify: true
+  sni: 185.220.238.77
+  type: trojan
+  ws-opts:
+    path: '%2Fapi'
+- name: 🇯🇵 日本 | vless | 43
+  network: ws
+  port: 39545
+  server: 156.246.91.248
+  servername: 49ax00d7kmg3ijp3vbkua090bws.majusti.dpdns.org
+  tls: false
+  type: vless
+  uuid: 00000000-0000-4000-8000-000000000000
+  ws-opts:
+    headers:
+      Host: 49ax00d7kmg3ijp3vbkua090bws.majusti.dpdns.org
+    path: /%40Marisa_kristifp%3Dchromesecurity=tls
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | vless | 47
+  port: 44073
+  reality-opts:
+    public-key: Z3ZGnAOdKkzJ07gR_7_0k9_iTTFP6paDOrqx1rN2LU4
+    short-id: '!!str '
+  server: 138.2.50.155
+  servername: www.icloud.com
+  tls: false
+  type: vless
+  uuid: 11d29ec6-be66-4f59-97c6-7cff836ea318
+- name: 🇯🇵 日本 | vless | 48
+  network: ws
+  port: 51055
+  server: 45.12.89.124
+  servername: ufo4dxyv6255yk8eh1ejyxgxc.worker.ddns-ip.net
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: 00000000-0000-4000-8000-000000000000
+  ws-opts:
+    headers:
+      Host: ufo4dxyv6255yk8eh1ejyxgxc.worker.ddns-ip.net
+    path: /@Marisa_kristifp=chromesecurity=tls
+- name: 🇯🇵 日本 | vless | 49
+  network: ws
+  port: 25809
+  server: 8.211.161.124
+  servername: adv2m5gy-wrhiahph85c.ovtc.qzz.io
+  tls: false
+  type: vless
+  uuid: 00000000-0000-4000-8000-000000000000
+  ws-opts:
+    headers:
+      Host: adv2m5gy-wrhiahph85c.ovtc.qzz.io
+    path: /%40Marisa_kristifp%3Dchromefp=chromesecurity=tls
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵 日本 | vmess | 50
+  network: ws
+  port: 80
+  server: 168.138.43.75
+  tls: false
+  type: vmess
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  ws-opts:
+    headers:
+      Host: jp01.a0a.xyz
+    path: /cctv13.m3u8
+- name: 🇯🇵 日本 | vless | 53
+  network: ws
+  port: 16090
+  server: 210.156.180.102
+  servername: dcsrzh.ccwu.cc
+  tls: false
+  type: vless
+  uuid: 73bcd72f-9545-4cb8-8daf-7d004501880d
+  ws-opts:
+    headers:
+      Host: dcsrzh.ccwu.cc
+    path: '%2Fsecurity=tls'
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵 日本 | vmess | 57
+  network: http
+  port: '53229'
+  server: 103.127.243.54
+  tls: false
+  type: vmess
+  uuid: 2f50f5ef-1a3a-4585-a3c9-3a860d37b134
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵 日本 | vmess | 58
+  network: ws
+  port: 80
+  server: 172.111.146.64
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
+  ws-opts:
+    headers:
+      Host: ''
+    path: /
 - name: 13|NN_speednode_0020
   network: ws
   port: 17512
@@ -697,78 +1064,7 @@ proxies:
     headers:
       Host: qi4rysu2u-e8j2zzhk.bsld.de5.net
     path: /@Marisa_kristifp=chrome
-- name: 🇯🇵 日本 | vless | 06
-  network: ws
-  port: 18836
-  server: 172.237.12.208
-  servername: 57vanjkxjo3kejbf4o2iul6z4o.gike.dpdns.org
-  tls: true
-  type: vless
-  uuid: 00000000-0000-4000-8000-000000000000
-  ws-opts:
-    headers:
-      Host: 57vanjkxjo3kejbf4o2iul6z4o.gike.dpdns.org
-    path: /@Marisa_kristifp=chrome
-- name: 🇯🇵 日本 | vless | 07
-  network: ws
-  port: 9871
-  server: 172.105.233.248
-  servername: 7xbq35vdydie5sgv.cctg.xx.kg
-  tls: true
-  type: vless
-  uuid: 00000000-0000-4000-8000-000000000000
-  ws-opts:
-    headers:
-      Host: 7xbq35vdydie5sgv.cctg.xx.kg
-    path: /@Marisa_kristifp=chrome
-- name: 🇯🇵 日本 | vless | 08
-  network: ws
-  port: 27365
-  server: 158.101.137.177
-  servername: guslef2w8oz12wv.ymj.xx.kg
-  tls: false
-  type: vless
-  uuid: 00000000-0000-4000-8000-000000000000
-  ws-opts:
-    headers:
-      Host: guslef2w8oz12wv.ymj.xx.kg
-    path: /@Marisa_kristifp=chromesecurity=tls
-- name: 🇯🇵 日本 | vless | 09
-  network: ws
-  port: 56788
-  server: 212.135.210.133
-  servername: ufo4dxyv6255yk8eh1ejyxgxc.worker.ddns-ip.net
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 00000000-0000-4000-8000-000000000000
-  ws-opts:
-    headers:
-      Host: ufo4dxyv6255yk8eh1ejyxgxc.worker.ddns-ip.net
-    path: /@Marisa_kristifp=chrome
-- name: 🇯🇵 日本 | vless | 10
-  network: ws
-  port: 30000
-  server: 142.248.150.69
-  servername: rolaqoubhqt.bpd67081tsq.ddns-ip.net
-  tls: false
-  type: vless
-  uuid: 00000000-0000-4000-8000-000000000000
-  ws-opts:
-    headers:
-      Host: rolaqoubhqt.bpd67081tsq.ddns-ip.net
-    path: /%40Marisa_kristifp%3Dchromesecurity=tls
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 日本 | vmess | 11
-  network: tcp
-  port: '22324'
-  server: 172.104.80.66
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- name: 🇯🇵 日本 | vless | 12
+- name: 🇯🇵 日本 | vless | 61
   network: ws
   port: 80
   server: 172.111.146.64
@@ -777,375 +1073,9 @@ proxies:
   uuid: 904f8ffa-4652-4076-8f2f-e586807840ec
   ws-opts:
     path: '%2Fvless%2F'
-- name: 🇯🇵 日本 | vless | 13
-  network: ws
-  port: 39085
-  server: 142.248.151.249
-  servername: rvbtoc55o588ipfx2qieoygyk0hur.saghv.filegear-sg.me
-  tls: false
-  type: vless
-  uuid: 00000000-0000-4000-8000-000000000000
-  ws-opts:
-    headers:
-      Host: rvbtoc55o588ipfx2qieoygyk0hur.saghv.filegear-sg.me
-    path: /@Marisa_kristifp=chromesecurity=tls
-- name: 🇯🇵 日本 | vless | 16
-  network: ws
-  port: 52675
-  server: 142.248.151.249
-  servername: vfn-6o8h-kht7rpd.zipgd3vx91o.ddns-ip.net
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 00000000-0000-4000-8000-000000000000
-  ws-opts:
-    headers:
-      Host: vfn-6o8h-kht7rpd.zipgd3vx91o.ddns-ip.net
-    path: /@Marisa_kristifp=chromesecurity=tls
-- name: 🇯🇵 日本 | vless | 17
-  network: ws
-  port: 33940
-  server: 140.238.33.0
-  servername: guslef2w8oz12wv.ymj.xx.kg
-  tls: false
-  type: vless
-  uuid: 00000000-0000-4000-8000-000000000000
-  ws-opts:
-    headers:
-      Host: guslef2w8oz12wv.ymj.xx.kg
-    path: /@Marisa_kristifp=chromesecurity=tls
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 日本 | vmess | 18
-  network: ws
-  port: '11655'
-  server: 131.186.63.89
-  servername: hk.nbee.pp.ua
-  tls: true
-  type: vmess
-  uuid: 4bf075f5-4d5e-4d39-f5ab-b32a86250f0e
-  ws-opts:
-    headers:
-      Host: hk.nbee.pp.ua
-    path: /aa
-- name: 🇯🇵 日本 | vless | 19
-  network: ws
-  port: 39835
-  server: 103.232.213.245
-  servername: t39sed.gateway-api.sh21.eu.org
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  ws-opts:
-    headers:
-      Host: t39sed.gateway-api.sh21.eu.org
-    path: /danfeng?ed=2560fp=firefoxsecurity=tls
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 21
-  port: 54055
-  reality-opts:
-    public-key: OzoYp8homkMDMozggbwqswuBiWRykfmmszFpu2_YM1g
-    short-id: '!!str f0b670194e8d2401'
-  server: 3.112.126.206
-  servername: www.icloud.com
-  tls: false
-  type: vless
-  uuid: a6b071ef-0d82-4f46-b04b-3310b8d6ca82
-- name: 🇯🇵 日本 | vless | 22
-  network: ws
-  port: 4443
-  server: 54.178.110.17
-  servername: nn9jdg-k7yewrrk.acg.xx.kg
-  tls: false
-  type: vless
-  uuid: 00000000-0000-4000-8000-000000000000
-  ws-opts:
-    path: '%2F%40Marisa_kristifp=chromesecurity=tls'
-- name: 🇯🇵 日本 | vless | 23
-  network: ws
-  port: 53557
-  server: 82.40.33.241
-  servername: nkeeiqgua2zzvt44excprl17zrg1.ovtc.xx.kg
-  tls: false
-  type: vless
-  uuid: 00000000-0000-4000-8000-000000000000
-  ws-opts:
-    headers:
-      Host: nkeeiqgua2zzvt44excprl17zrg1.ovtc.xx.kg
-    path: /%40Marisa_kristifp%3Dchromefp=chromesecurity=tls
-- alpn:
-  - h3
-  - h2
-  - http/1.1
-  name: 🇯🇵 日本 | trojan | 24
-  network: ws
-  password: JxKkbGrtBX
-  port: 46006
-  server: 38.207.136.242
-  skip-cert-verify: true
-  sni: www.grlgroup.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.grlgroup.com
-    path: '%2Fjp'
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 27
-  port: 38388
-  reality-opts:
-    public-key: xHaPe5SLprSSqGccSor5d3tCRuwyowBwFeYrVXoSz3w
-    short-id: '!!str 6ba85179e30d4fc2'
-  server: 47.79.149.248
-  servername: itunes.apple.com
-  tls: false
-  type: vless
-  uuid: 45c8d20e-0222-4b16-8d21-37318456b980
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 33
-  port: 44073
-  reality-opts:
-    public-key: Z3ZGnAOdKkzJ07gR_7_0k9_iTTFP6paDOrqx1rN2LU4
-    short-id: '!!str '
-  server: 138.2.50.155
-  servername: www.icloud.com
-  tls: false
-  type: vless
-  uuid: 11d29ec6-be66-4f59-97c6-7cff836ea318
-- name: 🇯🇵 日本 | vless | 34
-  network: ws
-  port: 25809
-  server: 8.211.161.124
-  servername: adv2m5gy-wrhiahph85c.ovtc.qzz.io
-  tls: false
-  type: vless
-  uuid: 00000000-0000-4000-8000-000000000000
-  ws-opts:
-    headers:
-      Host: adv2m5gy-wrhiahph85c.ovtc.qzz.io
-    path: /%40Marisa_kristifp%3Dchromefp=chromesecurity=tls
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 35
-  port: 29745
-  reality-opts:
-    public-key: zSOPQOHAiacl2VMETsLXTE_Gln5ECllb6YKy1oyv1V0
-    short-id: '!!str c3'
-  server: 96.62.214.87
-  servername: www.google.com
-  tls: false
-  type: vless
-  uuid: f6f44df3-d229-4dd8-a944-e7bc3a4c6b94
-- name: 🇯🇵 日本 | vless | 40
-  network: ws
-  port: 42841
-  server: 43.165.134.106
-  servername: rolaqoubhqt.bpd67081tsq.ddns-ip.net
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 00000000-0000-4000-8000-000000000000
-  ws-opts:
-    headers:
-      Host: rolaqoubhqt.bpd67081tsq.ddns-ip.net
-    path: /@Marisa_kristifp=chrome
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 日本 | vmess | 41
-  network: ws
-  port: 80
-  server: 168.138.43.75
-  tls: false
-  type: vmess
-  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
-  ws-opts:
-    headers:
-      Host: jp01.a0a.xyz
-    path: /cctv13.m3u8
-- name: 🇯🇵 日本 | vless | 42
-  network: ws
-  port: 10086
-  server: 217.142.236.75
-  servername: sni.111000.dns.army
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.dns.army
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3security=tls'
-- alpn:
-  - http/1.1
-  name: 🇯🇵 日本 | vless | 43
-  network: ws
-  port: 56871
-  server: 156.231.115.49
-  servername: snippet.fgfw.loc.cc
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  ws-opts:
-    headers:
-      Host: snippet.fgfw.loc.cc
-    path: /danfeng?ed=2560fp=chromesecurity=tls
-- alpn:
-  - http/1.1
-  name: 🇯🇵 日本 | vless | 44
-  network: ws
-  port: 8606
-  server: 31.57.172.25
-  servername: snippet.gfw.qzz.io
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  ws-opts:
-    headers:
-      Host: snippet.gfw.qzz.io
-    path: /danfeng?ed=2560fp=chromesecurity=tls
-- alpn:
-  - http/1.1
-  name: 🇯🇵 日本 | vless | 46
-  network: ws
-  port: 37572
-  server: 155.117.155.253
-  servername: snippet.danfeng.rr.kg
-  tls: false
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  ws-opts:
-    headers:
-      Host: snippet.danfeng.rr.kg
-    path: '%2Fdanfengfp=chromesecurity=tls'
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 日本 | vmess | 48
-  network: ws
-  port: '25686'
-  server: 140.83.51.161
-  tls: false
-  type: vmess
-  uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9
-  ws-opts:
-    headers:
-      Host: jp02.a0a.xyz
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 日本 | vmess | 49
-  network: tcp
-  port: '49803'
-  server: 153.121.73.175
-  tls: false
-  type: vmess
-  uuid: cd3dacbc-2b7b-4718-83ad-ab870f87e12e
-- name: 🇯🇵 日本 | vless | 50
-  network: ws
-  port: 39545
-  server: 156.246.91.248
-  servername: 49ax00d7kmg3ijp3vbkua090bws.majusti.dpdns.org
-  tls: false
-  type: vless
-  uuid: 00000000-0000-4000-8000-000000000000
-  ws-opts:
-    headers:
-      Host: 49ax00d7kmg3ijp3vbkua090bws.majusti.dpdns.org
-    path: /%40Marisa_kristifp%3Dchromesecurity=tls
-- name: 🇯🇵 日本 | vless | 51
-  network: ws
-  port: 16090
-  server: 210.156.180.102
-  servername: dcsrzh.ccwu.cc
-  tls: false
-  type: vless
-  uuid: 73bcd72f-9545-4cb8-8daf-7d004501880d
-  ws-opts:
-    headers:
-      Host: dcsrzh.ccwu.cc
-    path: '%2Fsecurity=tls'
-- name: 🇯🇵 日本 | vless | 52
-  network: ws
-  port: 51055
-  server: 45.12.89.124
-  servername: ufo4dxyv6255yk8eh1ejyxgxc.worker.ddns-ip.net
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 00000000-0000-4000-8000-000000000000
-  ws-opts:
-    headers:
-      Host: ufo4dxyv6255yk8eh1ejyxgxc.worker.ddns-ip.net
-    path: /@Marisa_kristifp=chromesecurity=tls
-- name: 🇯🇵 日本 | trojan | 53
-  network: ws
-  password: GKHWMe2R4qwNcNxu6l3KMkdd
-  port: 20770
-  server: 219.103.68.164
-  sni: vpn1.rnmcnm.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: vpn1.rnmcnm.com
-    path: '%2Ftrj-ws'
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 日本 | vmess | 55
-  network: ws
-  port: 80
-  server: 172.111.146.64
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
-  ws-opts:
-    headers:
-      Host: ''
-    path: /
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 59
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: QVkd5uoSbUA7rHVLtIoJB4iRp4l0zuw0H9qzQBh3lHs
-    short-id: '!!str 7a3f9e2b1c8d4f6a'
-  server: 31.76.91.17
-  servername: jp.s3-cloud.org
-  tls: false
-  type: vless
-  uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 60
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: QVkd5uoSbUA7rHVLtIoJB4iRp4l0zuw0H9qzQBh3lHs
-    short-id: '!!str 7a3f9e2b1c8d4f6a'
-  server: 31.76.91.24
-  servername: jp.s3-cloud.org
-  tls: false
-  type: vless
-  uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 61
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: QVkd5uoSbUA7rHVLtIoJB4iRp4l0zuw0H9qzQBh3lHs
-    short-id: '!!str 7a3f9e2b1c8d4f6a'
-  server: 31.76.91.7
-  servername: jp.s3-cloud.org
-  tls: false
-  type: vless
-  uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 62
+  name: 🇯🇵 日本 | vless | 64
   network: tcp
   port: 443
   reality-opts:
@@ -1158,26 +1088,13 @@ proxies:
   uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 63
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: QVkd5uoSbUA7rHVLtIoJB4iRp4l0zuw0H9qzQBh3lHs
-    short-id: '!!str 7a3f9e2b1c8d4f6a'
-  server: 31.76.91.30
-  servername: jp.s3-cloud.org
-  tls: false
-  type: vless
-  uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
   name: 🇯🇵 日本 | vless | 65
   network: tcp
   port: 443
   reality-opts:
     public-key: QVkd5uoSbUA7rHVLtIoJB4iRp4l0zuw0H9qzQBh3lHs
     short-id: '!!str 7a3f9e2b1c8d4f6a'
-  server: 31.76.91.12
+  server: 31.76.91.24
   servername: jp.s3-cloud.org
   tls: false
   type: vless
@@ -1190,20 +1107,20 @@ proxies:
   reality-opts:
     public-key: QVkd5uoSbUA7rHVLtIoJB4iRp4l0zuw0H9qzQBh3lHs
     short-id: '!!str 7a3f9e2b1c8d4f6a'
-  server: 31.76.91.36
+  server: 31.76.91.12
   servername: jp.s3-cloud.org
   tls: false
   type: vless
   uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 68
+  name: 🇯🇵 日本 | vless | 67
   network: tcp
   port: 443
   reality-opts:
     public-key: QVkd5uoSbUA7rHVLtIoJB4iRp4l0zuw0H9qzQBh3lHs
     short-id: '!!str 7a3f9e2b1c8d4f6a'
-  server: 31.76.91.33
+  server: 31.76.91.30
   servername: jp.s3-cloud.org
   tls: false
   type: vless
@@ -1220,27 +1137,70 @@ proxies:
   tls: false
   type: vless
   uuid: 6432bbec-c4c0-4837-9aa3-82e79def5017
-- name: 🇯🇵 日本 | vless | 70
-  network: ws
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | vless | 71
+  network: tcp
   port: 443
-  server: 45.137.180.197
-  servername: mug.support.gfw.hidns.co
+  reality-opts:
+    public-key: QVkd5uoSbUA7rHVLtIoJB4iRp4l0zuw0H9qzQBh3lHs
+    short-id: '!!str 7a3f9e2b1c8d4f6a'
+  server: 31.76.91.17
+  servername: jp.s3-cloud.org
   tls: false
   type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  ws-opts:
-    headers:
-      Host: mug.support.gfw.hidns.co
-    path: /danfeng?ed=2560fp=chromesecurity=tls
-- name: 🇯🇵 日本 | trojan | 73
-  password: E_hUHrn0+6VeZO=v9=fLgoPDXZWGfcrejg
-  port: 443
-  server: 172.238.19.11
-  sni: 172.238.19.11
-  type: trojan
+  uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | vless | 72
+  port: 8443
+  reality-opts:
+    public-key: CwOLLTLuQN1SPzvenr_B_ErYYoOB_ScSvGvH-iYOtF8
+    short-id: '!!str 83780413c2ad3eaa'
+  server: 5.253.41.208
+  servername: tradingview.com
+  tls: false
+  type: vless
+  uuid: 6432bbec-c4c0-4837-9aa3-82e79def5017
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇯🇵 日本 | vless | 74
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: QVkd5uoSbUA7rHVLtIoJB4iRp4l0zuw0H9qzQBh3lHs
+    short-id: '!!str 7a3f9e2b1c8d4f6a'
+  server: 31.76.91.7
+  servername: jp.s3-cloud.org
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
+- name: 🇯🇵 日本 | hy2 | 76
+  password: 1c65bee4-bc54-364c-8988-6a5912fda891
+  port: 443
+  server: 108.160.134.123
+  sni: u723829us1364.csgfw.top
+  tls: false
+  type: hysteria2
+- client-fingerprint: random
+  name: 🇯🇵 日本 | vless | 77
+  network: h2
+  port: 443
+  server: 149.28.21.16
+  servername: u723829us518.csgfw.top
+  tls: true
+  type: vless
+  uuid: 1c65bee4-bc54-364c-8988-6a5912fda891
+- name: 🇯🇵 日本 | trojan | 79
+  password: 842b5f9dd11e458d8613c907c4cc5723
+  port: 443
+  server: 38.207.136.202
+  sni: www.gpt123.one
+  type: trojan
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | vless | 80
   network: tcp
   port: 443
   server: 108.160.143.158
@@ -1248,11 +1208,10 @@ proxies:
   tls: true
   type: vless
   uuid: 1c65bee4-bc54-364c-8988-6a5912fda891
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 75
+- name: 🇯🇵 日本 | vless | 84
   network: ws
   port: 443
-  server: 154.31.113.248
+  server: 3.112.132.156
   servername: vl.hhll.qqs.me
   tls: true
   type: vless
@@ -1260,14 +1219,91 @@ proxies:
   ws-opts:
     headers:
       Host: vl.hhll.qqs.me
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- name: 🇯🇵 日本 | trojan | 76
-  password: 842b5f9dd11e458d8613c907c4cc5723
+    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226fp=chrome
+- name: 🇯🇵 日本 | vless | 86
+  network: ws
   port: 443
-  server: 38.207.136.202
-  sni: www.gpt123.one
+  server: 154.31.113.22
+  servername: vl.hhll.qqs.me
+  tls: true
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  ws-opts:
+    headers:
+      Host: vl.hhll.qqs.me
+    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226fp=chrome
+- name: 🇯🇵 日本 | vless | 87
+  network: ws
+  port: 443
+  server: 18.183.224.152
+  servername: vl.hhll.qqs.me
+  tls: true
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  ws-opts:
+    headers:
+      Host: vl.hhll.qqs.me
+    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226fp=chrome
+- name: 🇯🇵 日本 | vless | 88
+  network: ws
+  port: 443
+  server: 18.179.140.180
+  servername: vl.hhll.qqs.me
+  tls: true
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  ws-opts:
+    headers:
+      Host: vl.hhll.qqs.me
+    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226fp=chrome
+- name: 🇯🇵 日本 | trojan | 89
+  network: ws
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  port: 443
+  server: 13.192.183.132
+  sni: tj.hhll.qqs.me
   type: trojan
-- name: 🇯🇵 日本 | vless | 77
+  ws-opts:
+    headers:
+      Host: tj.hhll.qqs.me
+    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | vless | 91
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: QVkd5uoSbUA7rHVLtIoJB4iRp4l0zuw0H9qzQBh3lHs
+    short-id: '!!str 7a3f9e2b1c8d4f6a'
+  server: 31.76.91.36
+  servername: jp.s3-cloud.org
+  tls: false
+  type: vless
+  uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
+- name: 🇯🇵 日本 | vless | 92
+  network: ws
+  port: 443
+  server: 35.74.74.6
+  servername: vl.hhll.qqs.me
+  tls: true
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  ws-opts:
+    headers:
+      Host: vl.hhll.qqs.me
+    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226fp=chrome
+- name: 🇯🇵 日本 | trojan | 93
+  network: ws
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  port: 443
+  server: 18.178.41.33
+  sni: tj.hhll.qqs.me
+  type: trojan
+  ws-opts:
+    headers:
+      Host: tj.hhll.qqs.me
+    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
+- name: 🇯🇵 日本 | vless | 94
   network: ws
   port: 8443
   server: 167.179.110.68
@@ -1279,11 +1315,17 @@ proxies:
     headers:
       Host: cf.afrcloudnet1.dpdns.org
     path: /?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 78
+- name: 🇯🇵 日本 | hy2 | 95
+  password: 1c65bee4-bc54-364c-8988-6a5912fda891
+  port: 443
+  server: 108.160.143.158
+  sni: u723829us1571.csgfw.top
+  tls: false
+  type: hysteria2
+- name: 🇯🇵 日本 | vless | 97
   network: ws
   port: 443
-  server: 154.31.113.22
+  server: 3.115.100.16
   servername: vl.hhll.qqs.me
   tls: true
   type: vless
@@ -1291,35 +1333,32 @@ proxies:
   ws-opts:
     headers:
       Host: vl.hhll.qqs.me
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- name: 🇯🇵 日本 | hy2 | 79
-  password: 1c65bee4-bc54-364c-8988-6a5912fda891
+    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226fp=chrome
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | vless | 98
+  network: tcp
   port: 443
-  server: 108.160.134.123
-  sni: u723829us1364.csgfw.top
-  tls: false
-  type: hysteria2
-- name: 🇯🇵 日本 | trojan | 83
-  password: IL37892054
-  port: 443
-  server: engaging-toucan.rooster465.autos
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 84
+  server: 64.176.41.201
+  servername: u723829us1474.csgfw.top
+  tls: true
+  type: vless
+  uuid: 1c65bee4-bc54-364c-8988-6a5912fda891
+- name: 🇯🇵 日本 | trojan | 99
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
-  server: 18.178.41.33
+  server: 47.79.87.167
   sni: tj.hhll.qqs.me
   type: trojan
   ws-opts:
     headers:
       Host: tj.hhll.qqs.me
     path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 85
+- name: 🇯🇵 日本 | vless | 100
   network: ws
   port: 443
-  server: 54.199.215.134
+  server: 54.65.58.58
   servername: vl.hhll.qqs.me
   tls: true
   type: vless
@@ -1327,8 +1366,45 @@ proxies:
   ws-opts:
     headers:
       Host: vl.hhll.qqs.me
+    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226fp=chrome
+- name: 🇯🇵 日本 | trojan | 101
+  password: 18844@zxcvbn
+  port: 443
+  server: 49.212.204.123
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 102
+  network: ws
+  password: '!!str 162534'
+  port: 443
+  server: 142.91.108.54
+  sni: cchh2.pages.dev
+  type: trojan
+  ws-opts:
+    path: '%2F%3Fed%3D2560'
+- name: 🇯🇵 日本 | vless | 103
+  network: ws
+  port: 443
+  server: 47.79.39.45
+  servername: vl.hhll.qqs.me
+  tls: true
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  ws-opts:
+    headers:
+      Host: vl.hhll.qqs.me
+    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226fp=chrome
+- name: 🇯🇵 日本 | trojan | 104
+  network: ws
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  port: 443
+  server: 35.72.81.216
+  sni: tj.hhll.qqs.me
+  type: trojan
+  ws-opts:
+    headers:
+      Host: tj.hhll.qqs.me
     path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- name: 🇯🇵 日本 | trojan | 88
+- name: 🇯🇵 日本 | trojan | 105
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
@@ -1340,221 +1416,16 @@ proxies:
       Host: tj.hhll.qqs.me
     path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
 - client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 89
-  network: ws
-  port: 443
-  server: 54.65.58.58
-  servername: vl.hhll.qqs.me
-  tls: true
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  ws-opts:
-    headers:
-      Host: vl.hhll.qqs.me
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- name: 🇯🇵 日本 | trojan | 90
-  network: ws
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  port: 443
-  server: 35.72.81.216
-  sni: tj.hhll.qqs.me
-  type: trojan
-  ws-opts:
-    headers:
-      Host: tj.hhll.qqs.me
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- name: 🇯🇵 日本 | trojan | 94
-  network: ws
-  password: '!!str 162534'
-  port: 443
-  server: 198.13.37.176
-  sni: cchh2.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: cchh2.pages.dev
-    path: '%2F'
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 95
-  network: ws
-  port: 8443
-  server: 47.245.62.4
-  servername: vl.hhll.qqs.me
-  tls: true
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  ws-opts:
-    headers:
-      Host: vl.hhll.qqs.me
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 97
-  network: ws
-  port: 443
-  server: 47.79.39.45
-  servername: vl.hhll.qqs.me
-  tls: true
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  ws-opts:
-    headers:
-      Host: vl.hhll.qqs.me
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 100
-  network: ws
-  port: 443
-  server: 3.115.100.16
-  servername: vl.hhll.qqs.me
-  tls: true
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  ws-opts:
-    headers:
-      Host: vl.hhll.qqs.me
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 104
+  name: 🇯🇵 日本 | vless | 107
   network: tcp
   port: 443
-  server: 64.176.48.181
-  servername: u723829us1575.csgfw.top
+  server: 38.54.56.26
+  servername: u723829us1446.csgfw.top
   tls: true
   type: vless
   uuid: 1c65bee4-bc54-364c-8988-6a5912fda891
-- name: 🇯🇵 日本 | trojan | 105
-  password: 18844@zxcvbn
-  port: 443
-  server: 49.212.204.123
-  type: trojan
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 106
-  network: ws
-  port: 443
-  server: 47.79.87.167
-  servername: vl.hhll.qqs.me
-  tls: true
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  ws-opts:
-    headers:
-      Host: vl.hhll.qqs.me
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 107
-  network: ws
-  port: 443
-  server: 18.179.140.180
-  servername: vl.hhll.qqs.me
-  tls: true
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  ws-opts:
-    headers:
-      Host: vl.hhll.qqs.me
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- name: 🇯🇵 日本 | trojan | 109
-  network: ws
-  password: '!!str 162534'
-  port: 443
-  server: 142.91.108.54
-  sni: cchh2.pages.dev
-  type: trojan
-  ws-opts:
-    path: '%2F%3Fed%3D2560'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 111
-  port: 443
-  reality-opts:
-    public-key: JxwG7rAbNCd_C82p9K69AZDWh51fri2nm3wLHHrfyiw
-    short-id: '!!str 7755e972daf8eec8'
-  server: 88.216.193.56
-  servername: video.intfreed.ru
-  tls: false
-  type: vless
-  uuid: 1cbfb9ea-2a50-4c25-adea-3fd8065e21bc
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 113
-  network: ws
-  port: 443
-  server: 8.216.5.125
-  servername: vl.hhll.qqs.me
-  tls: true
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  ws-opts:
-    headers:
-      Host: vl.hhll.qqs.me
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 116
-  network: ws
-  port: 443
-  server: 18.183.224.152
-  servername: vl.hhll.qqs.me
-  tls: true
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  ws-opts:
-    headers:
-      Host: vl.hhll.qqs.me
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- name: 🇯🇵 日本 | trojan | 120
-  network: ws
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  port: 443
-  server: 13.192.183.132
-  sni: tj.hhll.qqs.me
-  type: trojan
-  ws-opts:
-    headers:
-      Host: tj.hhll.qqs.me
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- client-fingerprint: random
-  name: 🇯🇵 日本 | vless | 121
-  network: h2
-  port: 443
-  server: 108.160.134.123
-  servername: u723829us1347.csgfw.top
-  tls: true
-  type: vless
-  uuid: 1c65bee4-bc54-364c-8988-6a5912fda891
-- name: 🇯🇵 日本 | vless | 122
-  network: ws
-  port: 443
-  server: 8.209.231.3
-  servername: et.seaspirit.dpdns.org
-  tls: false
-  type: vless
-  uuid: 1c731995-761b-41b3-96d1-5ef5734ad909
-  ws-opts:
-    headers:
-      Host: et.seaspirit.dpdns.org
-    path: /fp=chromesecurity=tls
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 123
-  network: ws
-  port: 443
-  server: 18.176.37.44
-  servername: vl.hhll.qqs.me
-  tls: true
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  ws-opts:
-    headers:
-      Host: vl.hhll.qqs.me
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- name: 🇯🇵 日本 | hy2 | 124
-  password: 1c65bee4-bc54-364c-8988-6a5912fda891
-  port: 443
-  server: 108.160.143.158
-  sni: u723829us1571.csgfw.top
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 125
+- name: 🇯🇵 日本 | vless | 108
   network: ws
   port: 443
   server: 57.182.89.177
@@ -1565,12 +1436,11 @@ proxies:
   ws-opts:
     headers:
       Host: vl.hhll.qqs.me
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 126
+    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226fp=chrome
+- name: 🇯🇵 日本 | vless | 109
   network: ws
   port: 443
-  server: 13.230.219.216
+  server: 47.79.87.167
   servername: vl.hhll.qqs.me
   tls: true
   type: vless
@@ -1578,8 +1448,20 @@ proxies:
   ws-opts:
     headers:
       Host: vl.hhll.qqs.me
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- name: 🇯🇵 日本 | trojan | 128
+    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226fp=chrome
+- name: 🇯🇵 日本 | vless | 111
+  network: ws
+  port: 443
+  server: 45.137.180.197
+  servername: mug.support.gfw.hidns.co
+  tls: false
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: mug.support.gfw.hidns.co
+    path: /danfeng?ed=2560fp=chromesecurity=tls
+- name: 🇯🇵 日本 | trojan | 112
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
@@ -1590,32 +1472,48 @@ proxies:
     headers:
       Host: tj.hhll.qqs.me
     path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- name: 🇯🇵 日本 | trojan | 130
+- name: 🇯🇵 日本 | trojan | 113
   network: ws
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  password: '!!str 162534'
   port: 443
-  server: 47.79.87.167
-  sni: tj.hhll.qqs.me
+  server: 198.13.37.176
+  sni: cchh2.pages.dev
   type: trojan
   ws-opts:
     headers:
-      Host: tj.hhll.qqs.me
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 132
-  network: ws
+      Host: cchh2.pages.dev
+    path: '%2F'
+- client-fingerprint: random
+  name: 🇯🇵 日本 | vless | 114
+  network: h2
   port: 443
-  server: 35.74.74.6
-  servername: vl.hhll.qqs.me
+  server: 108.160.134.123
+  servername: u723829us1347.csgfw.top
   tls: true
   type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  uuid: 1c65bee4-bc54-364c-8988-6a5912fda891
+- name: 🇯🇵 日本 | vless | 115
+  network: ws
+  port: 443
+  server: 151.245.104.182
+  servername: dongjing4.zqjsqapi.com
+  tls: false
+  type: vless
+  uuid: 8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19
+  ws-opts:
+    path: '%2Fproxysecurity=tls'
+- name: 🇯🇵 日本 | vless | 116
+  network: ws
+  port: 443
+  server: 64.176.44.23
+  servername: 3-7v4.pages.dev
+  tls: true
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
   ws-opts:
     headers:
-      Host: vl.hhll.qqs.me
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 135
+      Host: 3-7v4.pages.dev
+- name: 🇯🇵 日本 | vless | 119
   network: ws
   port: 443
   server: 13.192.183.132
@@ -1626,60 +1524,8 @@ proxies:
   ws-opts:
     headers:
       Host: vl.hhll.qqs.me
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- name: 🇯🇵 日本 | vless | 137
-  network: ws
-  port: 443
-  server: 151.245.104.182
-  servername: dongjing4.zqjsqapi.com
-  tls: false
-  type: vless
-  uuid: 8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19
-  ws-opts:
-    path: '%2Fproxysecurity=tls'
-- client-fingerprint: random
-  name: 🇯🇵 日本 | vless | 138
-  network: h2
-  port: 443
-  server: 64.176.61.186
-  servername: u723829us1505.csgfw.top
-  tls: true
-  type: vless
-  uuid: 1c65bee4-bc54-364c-8988-6a5912fda891
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 140
-  network: ws
-  port: 443
-  server: 3.112.132.156
-  servername: vl.hhll.qqs.me
-  tls: true
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  ws-opts:
-    headers:
-      Host: vl.hhll.qqs.me
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- name: 🇯🇵 日本 | hy2 | 142
-  password: 1c65bee4-bc54-364c-8988-6a5912fda891
-  port: 443
-  server: 64.176.41.201
-  sni: u723829us1475.csgfw.top
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 143
-  network: ws
-  port: 443
-  server: 18.183.213.182
-  servername: vl.hhll.qqs.me
-  tls: true
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  ws-opts:
-    headers:
-      Host: vl.hhll.qqs.me
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- name: 🇯🇵 日本 | vless | 144
+    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226fp=chrome
+- name: 🇯🇵 日本 | vless | 120
   network: ws
   port: 2083
   server: 64.176.38.23
@@ -1692,20 +1538,16 @@ proxies:
     headers:
       Host: q40ivxuck.danfeng.qzz.io
     path: /danfeng?ed=2560fp=chromesecurity=tls
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 146
-  port: 8443
-  reality-opts:
-    public-key: CwOLLTLuQN1SPzvenr_B_ErYYoOB_ScSvGvH-iYOtF8
-    short-id: '!!str 83780413c2ad3eaa'
-  server: 5.253.41.208
-  servername: tradingview.com
-  tls: false
+- client-fingerprint: random
+  name: 🇯🇵 日本 | vless | 121
+  network: h2
+  port: 443
+  server: 64.176.61.186
+  servername: u723829us1505.csgfw.top
+  tls: true
   type: vless
-  uuid: 6432bbec-c4c0-4837-9aa3-82e79def5017
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 147
+  uuid: 1c65bee4-bc54-364c-8988-6a5912fda891
+- name: 🇯🇵 日本 | vless | 123
   network: ws
   port: 443
   server: 18.178.41.33
@@ -1716,18 +1558,51 @@ proxies:
   ws-opts:
     headers:
       Host: vl.hhll.qqs.me
-    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226
-- name: 🇯🇵 日本 | hy2 | 148
-  password: 9d0f6021-e1e3-47cd-a18e-722dd7f1c2ee
+    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226fp=chrome
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | vless | 124
+  network: tcp
   port: 443
-  server: 154.85.18.134
-  skip-cert-verify: true
-  sni: www.bing.com
+  server: 64.176.48.181
+  servername: u723829us1575.csgfw.top
+  tls: true
+  type: vless
+  uuid: 1c65bee4-bc54-364c-8988-6a5912fda891
+- name: 🇯🇵 日本 | vless | 125
+  network: ws
+  port: 443
+  server: 18.176.37.44
+  servername: vl.hhll.qqs.me
+  tls: true
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  ws-opts:
+    headers:
+      Host: vl.hhll.qqs.me
+    path: /proxyip=104.168.132.123,172.104.53.198,85.121.50.16,151.242.125.226fp=chrome
+- name: 🇯🇵 日本 | vless | 126
+  network: ws
+  port: 443
+  server: 8.209.231.3
+  servername: et.seaspirit.dpdns.org
+  tls: false
+  type: vless
+  uuid: 1c731995-761b-41b3-96d1-5ef5734ad909
+  ws-opts:
+    headers:
+      Host: et.seaspirit.dpdns.org
+    path: /fp=chromesecurity=tls
+- name: 🇯🇵 日本 | hy2 | 127
+  password: 1c65bee4-bc54-364c-8988-6a5912fda891
+  port: 443
+  server: 64.176.41.201
+  sni: u723829us1475.csgfw.top
   tls: false
   type: hysteria2
 - alterId: 0
   cipher: auto
-  name: 🇯🇵 日本 | vmess | 151
+  name: 🇯🇵 日本 | vmess | 133
   network: ws
   port: 80
   server: jp01.a0a.xyz
@@ -1739,55 +1614,25 @@ proxies:
     headers:
       Host: jp01.a0a.xyz
     path: /cctv13.m3u8
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 154
-  network: tcp
+- name: 🇯🇵 日本 | trojan | 134
+  password: IL37892054
   port: 443
-  server: 38.54.56.26
-  servername: u723829us1446.csgfw.top
-  tls: true
-  type: vless
-  uuid: 1c65bee4-bc54-364c-8988-6a5912fda891
-- name: 🇯🇵 日本 | trojan | 158
+  server: engaging-toucan.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | hy2 | 136
+  password: 9d0f6021-e1e3-47cd-a18e-722dd7f1c2ee
+  port: 443
+  server: 154.85.18.134
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
+- name: 🇯🇵 日本 | trojan | 138
   password: IL37892054
   port: 443
   server: upright-rhino.rooster465.autos
   type: trojan
-- name: 🇯🇵 日本 | trojan | 159
-  password: 9995cc0e-2e9d-4c80-8c81-4fdbb6322a3a
-  port: 443
-  server: 20.89.130.227
-  sni: fscus.fscloud123456789.com
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 日本 | vmess | 161
-  network: ws
-  port: 443
-  server: fullaccesstojapannetsubnode1.azurewebsites.net
-  servername: fullaccesstojapannetsubnode1.azurewebsites.net
-  tls: true
-  type: vmess
-  uuid: 274f11c6-f69b-40b9-8966-f39e06e97be7
-  ws-opts:
-    headers:
-      Host: fullaccesstojapannetsubnode1.azurewebsites.net
-    path: /ws
-- name: 🇯🇵 日本 | vless | 165
-  network: ws
-  port: 8443
-  server: 38.207.130.231
-  servername: q40ivxuck.danfeng.qzz.io
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  ws-opts:
-    headers:
-      Host: q40ivxuck.danfeng.qzz.io
-    path: /danfeng?ed=2560fp=chromesecurity=tls
-- name: 🇯🇵 日本 | vless | 170
+- name: 🇯🇵 日本 | vless | 139
   network: ws
   port: 30000
   server: 45.129.8.65
@@ -1800,102 +1645,60 @@ proxies:
     headers:
       Host: fx.222395.xyz
     path: '%2Fsecurity=tls'
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 日本 | vmess | 172
-  network: http
-  port: '53229'
-  server: 103.127.243.54
-  tls: false
-  type: vmess
-  uuid: 2f50f5ef-1a3a-4585-a3c9-3a860d37b134
-- name: 🇯🇵 日本 | trojan | 177
-  password: tsuchiya
+- name: 🇯🇵 日本 | trojan | 140
+  password: 9995cc0e-2e9d-4c80-8c81-4fdbb6322a3a
   port: 443
-  server: aa.ccmusic.jp
-  skip-cert-verify: true
-  sni: aa.ccmusic.jp
+  server: 20.89.130.227
+  sni: fscus.fscloud123456789.com
   type: trojan
-- client-fingerprint: ios
-  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443
-  name: 🇯🇵 日本 | vless | 178
-  port: 36699
-  server: direct-jp-xtom-01.inetsnode.de
-  servername: swdist.apple.com
-  tls: true
-  type: vless
-  uuid: 852e7dda-15f5-4e76-b01b-ba5267c64cad
-- client-fingerprint: ios
-  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443
-  name: 🇯🇵 日本 | vless | 179
-  port: 36699
-  server: direct-jpr-01.inetsnode.de
-  servername: swdist.apple.com
-  tls: true
-  type: vless
-  uuid: 852e7dda-15f5-4e76-b01b-ba5267c64cad
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 180
-  port: 48864
-  server: vps-orange-jpn.maze-maker.com
-  servername: www.sony.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: a49c8cf5-21b7-4dcb-bac9-6f6d3448187f
-- client-fingerprint: ios
-  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443
-  name: 🇯🇵 日本 | vless | 182
-  port: 36699
-  server: direct-jp-01.inetsnode.de
-  servername: swdist.apple.com
-  tls: true
-  type: vless
-  uuid: 852e7dda-15f5-4e76-b01b-ba5267c64cad
 - alterId: 0
   cipher: auto
-  name: 🇯🇵 日本 | vmess | 185
+  name: 🇯🇵 日本 | vmess | 142
   network: ws
-  port: '25686'
-  server: jp02.a0a.xyz
-  tls: false
+  port: 443
+  server: fullaccesstojapannetsubnode1.azurewebsites.net
+  servername: fullaccesstojapannetsubnode1.azurewebsites.net
+  tls: true
   type: vmess
-  uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9
+  uuid: 274f11c6-f69b-40b9-8966-f39e06e97be7
   ws-opts:
     headers:
-      Host: jp02.a0a.xyz
-    path: /cctv13.m3u8
+      Host: fullaccesstojapannetsubnode1.azurewebsites.net
+    path: /ws
+- name: 🇯🇵 日本 | vless | 147
+  network: ws
+  port: 8443
+  server: 38.207.130.231
+  servername: q40ivxuck.danfeng.qzz.io
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: q40ivxuck.danfeng.qzz.io
+    path: /danfeng?ed=2560fp=chromesecurity=tls
 - client-fingerprint: ios
-  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443
-  name: 🇯🇵 日本 | vless | 186
+  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443
+  name: 🇯🇵 日本 | vless | 151
   port: 36699
-  server: direct-jp-gmm-01.inetsnode.de
+  server: direct-jp-neb-01.inetsnode.de
   servername: swdist.apple.com
   tls: true
   type: vless
   uuid: 852e7dda-15f5-4e76-b01b-ba5267c64cad
-- client-fingerprint: ios
-  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443
-  name: 🇯🇵 日本 | vless | 187
-  port: 36699
-  server: direct-jpc-01.inetsnode.de
-  servername: swdist.apple.com
-  tls: true
-  type: vless
-  uuid: 852e7dda-15f5-4e76-b01b-ba5267c64cad
-- client-fingerprint: ios
-  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443
-  name: 🇯🇵 日本 | vless | 188
-  port: 37799
-  server: direct-jpr-02.inetsnode.de
-  servername: swdist.apple.com
-  tls: true
-  type: vless
-  uuid: 852e7dda-15f5-4e76-b01b-ba5267c64cad
+- name: 🇯🇵 日本 | trojan | 155
+  network: ws
+  password: 5a81db08-7af3-49a4-b089-b7a5b2c24c38
+  port: 20230
+  server: jp007.421421.xyz
+  skip-cert-verify: true
+  sni: www.alibaba.com
+  type: trojan
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 190
-  port: 13403
+  name: 🇯🇵 日本 | vless | 157
+  port: 13413
   reality-opts:
     public-key: epgveXEcUs0sbs4jV_1KldTkZGnWUHfMKcs0XNyP41Y
     short-id: '!!str a1b2c3d4'
@@ -1904,19 +1707,23 @@ proxies:
   tls: false
   type: vless
   uuid: 9204afcd-026e-781f-1abc-c03efabd1344
-- name: 🇯🇵 日本 | trojan | 194
-  network: ws
-  password: 362dfc91-1e4e-4147-a8eb-05c3b38b9043
-  port: 32209
-  server: 9kyx32pgmo7mhua6rfd1.b.karyl.top
-  skip-cert-verify: true
-  sni: s1.hdslb.com
-  type: trojan
-  ws-opts:
-    path: '%2F'
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: gun
+  name: 🇯🇵 日本 | vless | 158
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: QJW15WZWLNjA8KEpe4GqSdOe4rfW8KgqjjVmKxPk-ng
+    short-id: '!!str 3fa234ea9feaa048'
+  server: antix.ubuntuhosting.host
+  servername: antix.ubuntuhosting.host
+  tls: false
+  type: vless
+  uuid: 9cab10a8-7936-457f-bf1f-b9842439f494
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 195
+  name: 🇯🇵 日本 | vless | 165
   port: 443
   reality-opts:
     public-key: d3yQvdpwFHpLkl0ZbTnMH4uihCTKn4CAHy0W6so0VTI
@@ -1927,53 +1734,99 @@ proxies:
   type: vless
   uuid: ab27403b-7de0-4fe3-8b57-7ab3cb583c32
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443
-  name: 🇯🇵 日本 | vless | 198
+  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443
+  name: 🇯🇵 日本 | vless | 166
   port: 443
   server: t13.qifei.app
   servername: www.amazon.com
   tls: true
   type: vless
   uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
-- alterId: 0
-  cipher: auto
-  name: SG6｜原生/疑似家宽｜非常安全
-  network: tcp
-  port: '37086'
-  server: tunnel1.qqa678.com
-  tls: false
-  type: vmess
-  uuid: 0863424a-f6e8-4486-b85a-a7144ee89ddc
-- alterId: 0
-  cipher: auto
-  name: JP2｜原生/疑似家宽｜非常安全
-  network: tcp
-  port: '47083'
-  server: tunnel1.qqa678.com
-  tls: false
-  type: vmess
-  uuid: 0863424a-f6e8-4486-b85a-a7144ee89ddc
+- client-fingerprint: ios
+  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443
+  name: 🇯🇵 日本 | vless | 169
+  port: 37799
+  server: direct-jpr-02.inetsnode.de
+  servername: swdist.apple.com
+  tls: true
+  type: vless
+  uuid: 852e7dda-15f5-4e76-b01b-ba5267c64cad
+- client-fingerprint: ios
+  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443
+  name: 🇯🇵 日本 | vless | 171
+  port: 36699
+  server: direct-jpr-01.inetsnode.de
+  servername: swdist.apple.com
+  tls: true
+  type: vless
+  uuid: 852e7dda-15f5-4e76-b01b-ba5267c64cad
+- client-fingerprint: ios
+  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443
+  name: 🇯🇵 日本 | vless | 174
+  port: 36699
+  server: direct-jpc-01.inetsnode.de
+  servername: swdist.apple.com
+  tls: true
+  type: vless
+  uuid: 852e7dda-15f5-4e76-b01b-ba5267c64cad
+- client-fingerprint: ios
+  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443
+  name: 🇯🇵 日本 | vless | 176
+  port: 36699
+  server: direct-jp-gmm-01.inetsnode.de
+  servername: swdist.apple.com
+  tls: true
+  type: vless
+  uuid: 852e7dda-15f5-4e76-b01b-ba5267c64cad
+- client-fingerprint: ios
+  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443
+  name: 🇯🇵 日本 | vless | 177
+  port: 36699
+  server: direct-jp-xtom-01.inetsnode.de
+  servername: swdist.apple.com
+  tls: true
+  type: vless
+  uuid: 852e7dda-15f5-4e76-b01b-ba5267c64cad
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 206
-  port: 443
+  name: 🇯🇵 日本 | vless | 178
+  port: 13403
   reality-opts:
-    public-key: QVkd5uoSbUA7rHVLtIoJB4iRp4l0zuw0H9qzQBh3lHs
-    short-id: '!!str 7a3f9e2b1c8d4f6a'
-  server: jp.s3-cloud.org
-  servername: jp.s3-cloud.org
+    public-key: epgveXEcUs0sbs4jV_1KldTkZGnWUHfMKcs0XNyP41Y
+    short-id: '!!str a1b2c3d4'
+  server: zzjp1.ainivp.com
+  servername: www.microsoft.com
   tls: false
   type: vless
-  uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-- alterId: 0
-  cipher: auto
-  name: US297｜原生/疑似家宽｜非常安全
-  network: tcp
-  port: '47084'
-  server: tunnel2.qqa678.com
-  tls: false
-  type: vmess
-  uuid: 9f8c122d-5b86-4c19-af87-64f458a88223
+  uuid: 9204afcd-026e-781f-1abc-c03efabd1344
+- client-fingerprint: chrome
+  name: 🇯🇵 日本 | vless | 180
+  port: 48864
+  server: vps-orange-jpn.maze-maker.com
+  servername: www.sony.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: a49c8cf5-21b7-4dcb-bac9-6f6d3448187f
+- client-fingerprint: ios
+  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443
+  name: 🇯🇵 日本 | vless | 181
+  port: 36699
+  server: direct-jp-01.inetsnode.de
+  servername: swdist.apple.com
+  tls: true
+  type: vless
+  uuid: 852e7dda-15f5-4e76-b01b-ba5267c64cad
+- name: 🇯🇵 日本 | trojan | 183
+  network: ws
+  password: 362dfc91-1e4e-4147-a8eb-05c3b38b9043
+  port: 32209
+  server: 9kyx32pgmo7mhua6rfd1.b.karyl.top
+  skip-cert-verify: true
+  sni: s1.hdslb.com
+  type: trojan
+  ws-opts:
+    path: '%2F'
 - name: 🇯🇵JP_1|1.3MB/s
   password: C6TpRY6HyT
   port: 37749
@@ -1983,10 +1836,11 @@ proxies:
   tfo: false
   type: hysteria2
 - alterId: 0
-  name: 🇯🇵JP日本
+  name: 日本3|@ripaojiedian
+  network: tcp
   password: d84665c37878196ecf983cf6910e3b44
   port: 37973
-  server: 43.198.226.205
+  server: 43.199.189.134
   skip-cert-verify: true
   sni: www.nintendogames.net
   tls: true
@@ -1994,24 +1848,23 @@ proxies:
   udp: true
 - alterId: 0
   name: 🇯🇵JP日本2
-  password: d84665c37878196ecf983cf6910e3b44
-  port: 5701
-  server: 18.167.42.231
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 0
-  name: 🇯🇵JP日本3
   password: BxceQaOe
-  port: 4099
-  server: 18.176.57.129
+  port: 9731
+  server: 43.199.65.125
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
   tls: true
   type: trojan
   udp: true
+- alterId: 0
+  cipher: auto
+  name: JP2｜原生/疑似家宽｜非常安全
+  network: tcp
+  port: '47083'
+  server: tunnel1.qqa678.com
+  tls: false
+  type: vmess
+  uuid: 0863424a-f6e8-4486-b85a-a7144ee89ddc
 - name: JP3｜机房｜低风险
   password: 30077070-596e-48ea-9400-14c8ed07bd97
   port: 443
@@ -2068,12 +1921,4 @@ proxies:
   server: 43.199.65.125
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
-  type: trojan
-- name: 日本3|@ripaojiedian
-  network: tcp
-  password: d84665c37878196ecf983cf6910e3b44
-  port: 37973
-  server: 43.199.189.134
-  skip-cert-verify: true
-  sni: www.nintendogames.net
   type: trojan
