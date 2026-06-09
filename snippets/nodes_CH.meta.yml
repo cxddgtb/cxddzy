@@ -116,19 +116,22 @@ proxies:
   tls: false
   type: vless
   uuid: 8ea09611-4e24-49f9-8b2a-25974d8ebf8c
-- client-fingerprint: ''
+- client-fingerprint: chrome
+  encryption: none
   flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 11
+  name: 🇩🇪DE_2|2.3MB/s
   network: tcp
-  port: 443
+  port: '443'
   reality-opts:
     public-key: _M0MBe7f2r36dqtjltSRSOOBlclR2q7uY3Rje5r_mgY
     short-id: '!!str 73'
   server: 2.26.135.131
   servername: lada.mycdn-me.ru
-  tls: false
+  tls: true
   type: vless
+  udp: true
   uuid: 0a963275-4865-452b-8d65-ac67344f913a
+  xudp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇨🇭 瑞士 | vless | 12
@@ -356,23 +359,14 @@ proxies:
   type: vless
   uuid: 5f46e04e-b903-4a59-a419-d580bd4a343f
 - client-fingerprint: firefox
-  name: 🇨🇭CH_1|3.8MB/s
-  network: xhttp
-  packet-encoding: xudp
+  name: 🇨🇭 瑞士 | vless | 53
   port: 443
-  reality-opts:
-    public-key: F2MKDw5CCtP1oXIej2EgNxB01k3eyNu7tKCFfucgnRA
-    short-id: '!!str 6ba85179e30d4fc3'
   server: l10-1.l-itx.info
   servername: yandex.by
   skip-cert-verify: false
   tls: true
   type: vless
-  udp: true
   uuid: f1a44ae4-20f9-4dd7-b60e-b4f2acecfdb4
-  xhttp-opts:
-    mode: stream-up
-    path: /xh
 - client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: xyz
@@ -460,20 +454,22 @@ proxies:
   tls: false
   type: vless
   uuid: 92d41509-4228-43da-aebb-70b1d8d68f04
-- client-fingerprint: chrome
-  name: 🇨🇭CH_2|1.6MB/s
-  network: xhttp
-  port: '443'
-  server: ch-xh-01.hpdata.click
-  servername: ch-xh-01.hpdata.click
-  tls: true
+- encryption: none
+  name: 🇨🇭CH_2|1.7MB/s
+  network: ws
+  packet-encoding: xudp
+  port: 8880
+  server: m.exon-software.ir
+  skip-cert-verify: false
+  tls: false
   type: vless
   udp: true
-  uuid: 1014818b-5c5c-46b1-98fe-eaf8d5eba642
-  xhttp-opts:
-    mode: packet-up
-    path: /vk
-  xudp: true
+  uuid: 4788ff67-57af-425a-9b47-5a63b20e2f57
+  ws-opts:
+    headers:
+      Host: m.mobile-unix.ir
+    path: /?ed
+    v2ray-http-upgrade: true
 - cipher: aes-256-cfb
   name: 🇨🇭_CH_瑞士
   password: asdKkaskJKfnsa
