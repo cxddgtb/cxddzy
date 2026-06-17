@@ -8,8 +8,8 @@ proxies:
   udp: true
 - client-fingerprint: chrome
   encryption: none
-  flow: xtls-rprx-vision-udp443-udp443
-  name: 🇭🇰 香港 | vless | 165
+  flow: xtls-rprx-vision-udp443-udp443-udp443
+  name: 🇭🇰 香港 | vless | 192
   network: tcp
   port: 54387
   reality-opts:
@@ -50,7 +50,7 @@ proxies:
   username: mrwdfNTD8M79LCukCieldrqZWqs=
 - alterId: 0
   cipher: auto
-  name: 🇸🇬 新加坡 | vmess | 182
+  name: 🇸🇬 新加坡 | vmess | 232
   network: ws
   port: 10055
   server: 6654c734ccab8f440ff0825eb443dc7f.qos.onl
@@ -93,26 +93,12 @@ proxies:
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   xudp: true
-- name: TW VLESS-915 | free-nodes
-  network: ws
+- name: 🇹🇼 台湾 | trojan | 08
+  password: 3ac6a6ca99f74941b1eaf892818e2ddb
   port: 443
-  server: www.visa.com.tw
-  servername: pagescm.freen32.cc.cd
-  tls: true
-  type: vless
-  uuid: ae0dd58e-e222-40bf-84ae-365a97532737
-  ws-opts:
-    headers:
-      Host: pagescm.freen32.cc.cd
-    path: /play/settings
-- name: 🇹🇼 台湾 | trojan | 02
-  password: 736cd94d-7b94-3e44-8106-3419f64eaf09
-  port: 3462
-  server: 60.250.152.229
-  skip-cert-verify: true
-  sni: a12.taipeicitygovernment.org.ua
+  server: 85.237.207.189
   type: trojan
-- name: 🇹🇼 台湾 | vless | 04
+- name: 🇹🇼 台湾 | vless | 01
   network: ws
   port: 17009
   server: 141.11.86.65
@@ -125,9 +111,23 @@ proxies:
     headers:
       Host: q40ivxuck.danfeng.qzz.io
     path: /danfeng?ed=2560fp=chromesecurity=tls
+- name: 🇹🇼 台湾 | vless | 03
+  network: tcp
+  port: 10000
+  server: 211.76.176.149
+  tls: false
+  type: vless
+  uuid: d26598cf-2cdf-4219-80d0-94646dff160d
+- name: 🇹🇼 台湾 | trojan | 04
+  password: 736cd94d-7b94-3e44-8106-3419f64eaf09
+  port: 3462
+  server: 60.250.152.229
+  skip-cert-verify: true
+  sni: a12.taipeicitygovernment.org.ua
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇹🇼 台湾 | vmess | 05
+  name: 🇹🇼 台湾 | vmess | 06
   network: tcp
   port: 35034
   server: 165.154.195.38
@@ -135,7 +135,7 @@ proxies:
   tls: false
   type: vmess
   uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
-- name: 🇹🇼 台湾 | trojan | 08
+- name: 🇹🇼 台湾 | trojan | 09
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
   server: official.taipeicitygovernment.com.ua
@@ -143,34 +143,122 @@ proxies:
 - name: 🇹🇼 台湾 | trojan | 10
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
-  server: official.taipeicitygovernment.chernovtsy.ua
+  server: official.taipeicitygovernment.net.ua
   type: trojan
-- name: 🇹🇼 台湾 | trojan | 11
-  password: 3ac6a6ca99f74941b1eaf892818e2ddb
+- alpn:
+  - h2
+  grpc-opts:
+    grpc-service-name: db
+  name: 🇹🇼 台湾 | trojan | 11
+  network: grpc
+  password: 3f5bc61547b1f0d9
   port: 443
-  server: 85.237.207.189
+  server: 125.227.86.46
+  skip-cert-verify: true
+  sni: TG.freecodes
   type: trojan
 - name: 🇹🇼 台湾 | trojan | 12
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
-  server: official.taipeicitygovernment.ivano-frankivsk.ua
+  server: official.taipeicitygovernment.chernovtsy.ua
   type: trojan
 - name: 🇹🇼 台湾 | trojan | 13
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
   server: official.taipeicitygovernment.cn.ua
   type: trojan
-- name: 🇹🇼 台湾 | trojan | 14
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443
+  name: 🇹🇼 台湾 | vless | 14
+  port: 443
+  server: 220.130.75.217
+  servername: peer.pan.baidu.com
+  tls: true
+  type: vless
+  uuid: 88888888-8888-8888-8888-888888888888
+- name: 🇹🇼 台湾 | trojan | 15
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: 60.250.152.209
+  skip-cert-verify: true
+  sni: official.taipeicitygovernment.net.ua
+  type: trojan
+- name: 🇹🇼 台湾 | trojan | 16
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.co.ua
+  type: trojan
+- name: 🇹🇼 台湾 | trojan | 17
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.if.ua
+  type: trojan
+- name: 🇹🇼 台湾 | trojan | 18
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
   server: official.taipeicitygovernment.org.ua
   type: trojan
-- name: 🇹🇼 台湾 | trojan | 15
+- name: 🇹🇼 台湾 | trojan | 20
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
-  server: official.taipeicitygovernment.net.ua
+  server: official.taipeicitygovernment.ivano-frankivsk.ua
   type: trojan
-- name: 🇹🇼 台湾 | vless | 18
+- name: 🇹🇼 台湾 | trojan | 21
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.kiev.ua
+  type: trojan
+- name: 🇹🇼 台湾 | trojan | 22
+  password: 3ac6a6ca99f74941b1eaf892818e2ddb
+  port: 443
+  server: 85.237.206.249
+  type: trojan
+- name: 🇹🇼 台湾 | trojan | 23
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.kyiv.ua
+  type: trojan
+- name: 🇹🇼 台湾 | trojan | 24
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.dp.ua
+  type: trojan
+- alpn:
+  - h2
+  grpc-opts:
+    grpc-service-name: db
+  name: 🇹🇼 台湾 | trojan | 25
+  network: grpc
+  password: 0a9f1f5a397bd427
+  port: 443
+  server: 125.227.86.45
+  skip-cert-verify: true
+  sni: TG.freecodes
+  type: trojan
+- name: 🇹🇼 台湾 | vless | 27
+  network: ws
+  port: 443
+  server: 213.210.4.131
+  servername: 3-85q.pages.dev
+  tls: true
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  ws-opts:
+    headers:
+      Host: 3-85q.pages.dev
+- client-fingerprint: chrome
+  name: 🇹🇼 台湾 | vless | 29
+  network: ws
+  port: 443
+  server: 211.75.210.33
+  servername: gogo11.kmj.qzz.io
+  tls: true
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  ws-opts:
+    headers:
+      Host: gogo11.kmj.qzz.io
+- name: 🇹🇼 台湾 | vless | 30
   network: ws
   port: 443
   server: 125.228.236.138
@@ -183,41 +271,7 @@ proxies:
     headers:
       Host: gogo.onetap.qzz.io
     path: /fp=chromesecurity=tls
-- name: 🇹🇼 台湾 | trojan | 20
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 8443
-  server: official.taipeicitygovernment.co.ua
-  type: trojan
-- name: 🇹🇼 台湾 | trojan | 21
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 8443
-  server: official.taipeicitygovernment.if.ua
-  type: trojan
-- name: 🇹🇼 台湾 | trojan | 22
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 8443
-  server: official.taipeicitygovernment.dp.ua
-  type: trojan
-- name: 🇹🇼 台湾 | trojan | 23
-  password: d7e8275e-c1d1-4a64-997c-d5e730eb6f4d
-  port: 443
-  server: 211.22.180.227
-  skip-cert-verify: true
-  sni: tls.microsoft-orgwly.vip
-  type: trojan
-- alpn:
-  - h2
-  grpc-opts:
-    grpc-service-name: db
-  name: 🇹🇼 台湾 | trojan | 24
-  network: grpc
-  password: 3f5bc61547b1f0d9
-  port: 443
-  server: 125.227.86.46
-  skip-cert-verify: true
-  sni: TG.freecodes
-  type: trojan
-- name: 🇹🇼 台湾 | vless | 25
+- name: 🇹🇼 台湾 | vless | 31
   network: ws
   port: 443
   server: 60.249.21.29
@@ -229,63 +283,16 @@ proxies:
     headers:
       Host: gogo4.kmj.qzz.io
     path: /fp=chromesecurity=tls
-- client-fingerprint: chrome
-  name: 🇹🇼 台湾 | vless | 26
-  network: ws
+- name: 🇹🇼 台湾 | trojan | 32
+  password: d7e8275e-c1d1-4a64-997c-d5e730eb6f4d
   port: 443
-  server: 211.75.210.33
-  servername: gogo11.kmj.qzz.io
-  tls: true
-  type: vless
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-  ws-opts:
-    headers:
-      Host: gogo11.kmj.qzz.io
-- name: 🇹🇼 台湾 | trojan | 27
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 8443
-  server: official.taipeicitygovernment.kiev.ua
-  type: trojan
-- name: 🇹🇼 台湾 | vless | 28
-  network: ws
-  port: 443
-  server: 213.210.4.131
-  servername: 3-85q.pages.dev
-  tls: true
-  type: vless
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-  ws-opts:
-    headers:
-      Host: 3-85q.pages.dev
-- name: 🇹🇼 台湾 | trojan | 29
-  password: 3ac6a6ca99f74941b1eaf892818e2ddb
-  port: 443
-  server: 85.237.206.249
-  type: trojan
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443
-  name: 🇹🇼 台湾 | vless | 30
-  port: 443
-  server: 220.130.75.217
-  servername: peer.pan.baidu.com
-  tls: true
-  type: vless
-  uuid: 88888888-8888-8888-8888-888888888888
-- alpn:
-  - h2
-  grpc-opts:
-    grpc-service-name: db
-  name: 🇹🇼 台湾 | trojan | 31
-  network: grpc
-  password: 0a9f1f5a397bd427
-  port: 443
-  server: 125.227.86.45
+  server: 211.22.180.227
   skip-cert-verify: true
-  sni: TG.freecodes
+  sni: tls.microsoft-orgwly.vip
   type: trojan
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇹🇼 台湾 | vless | 32
+  name: 🇹🇼 台湾 | vless | 33
   port: 443
   reality-opts:
     public-key: jLx1Lb-doJBxM8wJUnIglx4t4pGrIW0EcLGfUnMK1TQ
@@ -295,56 +302,14 @@ proxies:
   tls: false
   type: vless
   uuid: c7475750-f104-4c07-b63b-06a4a2b9c476
-- name: 🇹🇼 台湾 | trojan | 33
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 8443
-  server: 60.250.152.209
-  skip-cert-verify: true
-  sni: official.taipeicitygovernment.net.ua
-  type: trojan
-- name: 🇹🇼 台湾 | trojan | 37
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 8443
-  server: official.taipeicitygovernment.kyiv.ua
-  type: trojan
-- name: 🇹🇼 台湾 | trojan | 38
+- name: 🇹🇼 台湾 | trojan | 36
   password: 736cd94d-7b94-3e44-8106-3419f64eaf09
   port: 3462
   server: a12.taipeicitygovernment.org.ua
   type: trojan
-- name: 🇹🇼 台湾 | trojan | 39
-  password: cd7239af-77ad-4628-a871-00acfa219f02
-  port: 56385
-  server: ip0axv1bbsu02k7-tr.1ytnode.com
-  skip-cert-verify: true
-  type: trojan
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇹🇼 台湾 | vless | 40
-  port: 443
-  reality-opts:
-    public-key: uhgb6lTTsq8Oh-hDFaYG-vKs5nCsmhRuWfldUEO9GGs
-    short-id: '!!str ff6d9b3d'
-  server: 130.94.36.85
-  servername: www.microsoft.com
-  tls: false
-  type: vless
-  uuid: 21c898c8-8cab-46bf-9482-9cfb23321bd9
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇹🇼 台湾 | vless | 42
-  port: 443
-  reality-opts:
-    public-key: q42m1wg11kZLyRtjaKus8T-NNl1vriRG3V1eVTL6ICc
-    short-id: '!!str 1b8d2fb1eec1'
-  server: download.riferoser.icu
-  servername: www.tradingview.com
-  tls: false
-  type: vless
-  uuid: 6ec6da0f-008b-43fa-899d-d5cf147fe13a
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇹🇼 台湾 | vless | 45
+  name: 🇹🇼 台湾 | vless | 37
   port: 8443
   reality-opts:
     public-key: 2a0ONLRiBeHJdr9qCruq5tPVf8_3c4fmZsg7YQorFSE
@@ -354,6 +319,56 @@ proxies:
   tls: false
   type: vless
   uuid: 10f02d23-1d74-4b6e-b830-815be053281d
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇹🇼 台湾 | vless | 39
+  port: 443
+  reality-opts:
+    public-key: uhgb6lTTsq8Oh-hDFaYG-vKs5nCsmhRuWfldUEO9GGs
+    short-id: '!!str ff6d9b3d'
+  server: 130.94.36.85
+  servername: www.microsoft.com
+  tls: false
+  type: vless
+  uuid: 21c898c8-8cab-46bf-9482-9cfb23321bd9
+- flow: xtls-rprx-vision-udp443
+  name: 🇹🇼 台湾 | vless | 43
+  port: 443
+  server: taipei1.ap221.com
+  tls: true
+  type: vless
+  uuid: 74988350-8b14-4924-b8a2-c3aac967bf28
+- name: 🇹🇼 台湾 | trojan | 45
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.biz.ua
+  type: trojan
+- name: 🇹🇼 台湾 | hy2 | 46
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 12401
+  server: starlink-tw1.mfa.cat
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇹🇼TW_1|1.5MB/s
+  network: ws
+  port: '443'
+  server: 188.253.6.249
+  servername: s5.868001.xyz
+  tls: true
+  type: vless
+  udp: true
+  uuid: 23cb9aa7-9756-459f-aa84-3a27bdf6ad64
+  ws-opts:
+    headers:
+      Host: s5.868001.xyz
+      User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)
+        Chrome/55.0.2883.87 Safari/537.36
+    path: /proxyip=ProxyIP.CMLiussss.net
+  xudp: true
 - client-fingerprint: chrome
   name: TW4｜商宽｜非常安全
   network: tcp
