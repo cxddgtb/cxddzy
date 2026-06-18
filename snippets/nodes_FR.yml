@@ -1,6 +1,6 @@
 proxies:
 - client-fingerprint: chrome
-  name: 🇸🇬 新加坡 | trojan | 33
+  name: 🇸🇬 新加坡 | trojan | 16
   network: tcp
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   port: 45619
@@ -10,12 +10,12 @@ proxies:
   type: trojan
   udp: true
 - client-fingerprint: chrome
-  name: 🇭🇰 香港 | trojan | 12
+  name: 🇭🇰 香港 | trojan | 13
   network: tcp
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   port: 45619
   server: 103.177.136.42
-  skip-cert-verify: true
+  skip-cert-verify: false
   sni: fr.01.naiun.bilibili.com
   type: trojan
   udp: true
@@ -33,7 +33,7 @@ proxies:
     path: /assignment
 - alterId: 2
   cipher: auto
-  name: 🇲🇾 马来西亚 | vmess | 12
+  name: 🇮🇩 印尼 | vmess | 13
   network: tcp
   port: '30835'
   server: v35.hdacd.com
@@ -43,40 +43,124 @@ proxies:
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   xudp: true
-- name: FR TROJAN-51 | free-nodes
+- name: 🇫🇷FR(AzadNet.t.me)
+  network: tcp
+  password: e4f288433b
+  port: 443
+  server: 54.36.173.159
+  sni: pol1.connecton.surf
+  type: trojan
+- alpn:
+  - http/1.1
+  name: 未知 TROJAN-182 | free-nodes
   network: ws
   password: humanity
   port: 443
   server: 104.20.6.134
-  sni: www.ignitelimit.com
+  skip-cert-verify: false
+  sni: www.calmloud.com
   type: trojan
   ws-opts:
     headers:
-      Host: www.ignitelimit.com
+      Host: www.calmloud.com
+    path: '%2Fassignment'
+- name: FR TROJAN-49 | free-nodes
+  network: ws
+  password: humanity
+  port: 443
+  server: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- name: 🇦🇹 奥地利 | trojan | 15
+  network: ws
+  password: humanity
+  port: 443
+  server: 212.183.88.136
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
     path: /assignment
-- name: 🇫🇷 法国 | trojan | 12
+- alpn:
+  - http/1.1
+  name: '[1596]⭐ 🇫🇷 FRA [TR] #cc44ac'
+  network: ws
+  password: humanity
+  port: 443
+  server: 8.6.112.6
+  skip-cert-verify: true
+  sni: www.calmloud.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmloud.com
+    path: /assignment
+- name: '[1596]🎈 🇫🇷 FRA [TR] 🎈 #225dbf'
+  network: ws
+  password: humanity
+  port: 443
+  server: 185.18.250.245
+  skip-cert-verify: true
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: /assignment
+- alpn:
+  - http/1.1
+  name: FR TROJAN-51 | free-nodes
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.20.6.134
+  sni: www.calmloud.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmloud.com
+    path: /assignment
+- name: 🇫🇷 法国 | trojan | 11
+  network: ws
+  password: humanity
+  port: 443
+  server: 81.255.155.10
+  skip-cert-verify: false
+  sni: www.creationlong.org
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.creationlong.org
+    path: /assignment
+- name: 🇫🇷 法国 | trojan | 17
   password: 65c3941e-46b9-42f6-9c89-daedf472b6db
   port: 80
   server: 141.94.221.127
   sni: fr1-t.sshmax.xyz
   type: trojan
+- alpn:
+  - http/1.1
+  name: 🇫🇷 法国 | trojan | 24
+  network: tcp
+  password: telegram-id-directvpn
+  port: 22223
+  server: 13.36.49.219
+  sni: trojan.burgerip.co.uk
+  type: trojan
+- alpn:
+  - http/1.1
+  name: 🇫🇷 法国 | trojan | 27
+  network: tcp
+  password: telegram-id-privatevpns
+  port: 22222
+  server: 13.36.49.219
+  sni: trojan.burgerip.co.uk
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 13
-  network: ws
-  port: 80
-  server: 51.159.2.152
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 43587dc1-34f1-4254-ab90-56507e72d7a8
-  ws-opts:
-    headers:
-      Host: ''
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 36
+  name: 🇫🇷 法国 | vmess | 32
   network: ws
   port: '80'
   server: 51.254.133.152
@@ -90,27 +174,7 @@ proxies:
     path: /vmess
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 37
-  network: ws
-  port: 80
-  server: 162.19.224.175
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 42ba278d-65e0-4743-8707-e18ed98cfed5
-  ws-opts:
-    headers:
-      Host: 162.19.224.175
-    path: /vmess
-- name: 🇫🇷 法国 | trojan | 41
-  password: e0d44ae7-cb7d-4acc-a8c0-9861a6f5eaad
-  port: 80
-  server: 51.91.11.29
-  sni: softsaaz.ir
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 43
+  name: 🇫🇷 法国 | vmess | 47
   network: ws
   port: 80
   server: 51.83.97.167
@@ -122,10 +186,58 @@ proxies:
     headers:
       Host: ''
     path: /vmess
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 48
+  network: ws
+  port: 80
+  server: 51.159.2.152
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 43587dc1-34f1-4254-ab90-56507e72d7a8
+  ws-opts:
+    headers:
+      Host: ''
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 53
+  network: ws
+  port: 80
+  server: 162.19.224.175
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 42ba278d-65e0-4743-8707-e18ed98cfed5
+  ws-opts:
+    headers:
+      Host: 162.19.224.175
+    path: /vmess
+- name: 🇫🇷 法国 | trojan | 60
+  password: e0d44ae7-cb7d-4acc-a8c0-9861a6f5eaad
+  port: 80
+  server: 51.91.11.29
+  sni: softsaaz.ir
+  type: trojan
 - alpn:
   - h2
   - http/1.1
-  name: 🇫🇷 法国 | trojan | 66
+  name: 🇫🇷 法国 | trojan | 69
+  network: ws
+  password: Tel
+  port: 14456
+  server: 45.154.96.35
+  sni: oof.acp.us.ci
+  type: trojan
+  ws-opts:
+    headers:
+      Host: oof.acp.us.ci
+    path: /jdjsjeje
+- alpn:
+  - h2
+  - http/1.1
+  name: 🇫🇷 法国 | trojan | 70
   password: Tel=Arshiacomplus
   port: 58035
   server: 45.154.96.35
@@ -134,7 +246,103 @@ proxies:
   type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 68
+  name: 🇫🇷 法国 | vmess | 71
+  network: tcp
+  port: '2052'
+  server: 51.195.235.71
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 59e28f78-c31b-4613-9d9f-1e6732a31f46
+- name: 🇫🇷 法国 | trojan | 72
+  network: tcp
+  password: opentunnel.net-english30day
+  port: 443
+  server: 54.37.18.204
+  sni: uplod.ir
+  type: trojan
+- alterId: 0
+  cipher: auto
+  grpc-opts:
+    grpc-service-name: api
+  name: 🇫🇷 法国 | vmess | 73
+  network: grpc
+  port: '2096'
+  server: 57.128.174.124
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: ae91113b-915f-4a56-b998-e52d8a12da39
+- name: 🇫🇷 法国 | trojan | 96
+  password: 6e3b4240-38f9-4321-9b3c-bc669a34b848
+  port: 443
+  server: 141.94.76.177
+  type: trojan
+- name: 🇫🇷 法国 | trojan | 105
+  password: d2adff89-5143-4d67-921f-3478464de5bb
+  port: 443
+  server: 38.180.240.150
+  skip-cert-verify: true
+  sni: fr.freeguard.org
+  type: trojan
+- name: 🇫🇷 法国 | trojan | 130
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 95.182.98.140
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 137
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 217.60.37.28
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 140
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 45.84.88.204
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 149
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 31.56.228.210
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 151
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 31.58.76.50
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 158
   network: ws
   port: 443
   server: 45.145.165.113
@@ -146,55 +354,7 @@ proxies:
     headers:
       Host: hms19.best-tizi.top
     path: /linkws
-- name: 🇫🇷 法国 | trojan | 78
-  network: tcp
-  password: opentunnel.net-english30day
-  port: 443
-  server: 54.37.18.204
-  sni: uplod.ir
-  type: trojan
-- name: 🇫🇷 法国 | trojan | 82
-  password: d2adff89-5143-4d67-921f-3478464de5bb
-  port: 443
-  server: 38.180.240.150
-  skip-cert-verify: true
-  sni: fr.freeguard.org
-  type: trojan
-- name: 🇫🇷 法国 | trojan | 88
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 31.56.228.210
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 93
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 46.8.225.115
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- alterId: 0
-  cipher: auto
-  grpc-opts:
-    grpc-service-name: api
-  name: 🇫🇷 法国 | vmess | 96
-  network: grpc
-  port: '2096'
-  server: 57.128.174.124
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: ae91113b-915f-4a56-b998-e52d8a12da39
-- name: 🇫🇷 法国 | trojan | 116
+- name: 🇫🇷 法国 | trojan | 165
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
@@ -205,7 +365,27 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 118
+- name: 🇫🇷 法国 | trojan | 176
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 31.57.108.170
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 177
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 146.19.168.188
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    path: /trTelegram+@WangCai2
+- name: 🇫🇷 法国 | trojan | 183
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
@@ -216,79 +396,40 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 121
+- name: 🇫🇷 法国 | trojan | 185
   network: ws
   password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 31.59.103.95
+  port: 8443
+  server: 46.8.225.115
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 135
+- name: 🇫🇷 法国 | trojan | 193
   network: ws
   password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 45.84.88.204
+  port: 8443
+  server: 31.58.76.27
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 147
-  network: tcp
-  port: '2052'
-  server: 51.195.235.71
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 59e28f78-c31b-4613-9d9f-1e6732a31f46
-- name: 🇫🇷 法国 | trojan | 155
+- name: 🇫🇷 法国 | trojan | 194
   network: ws
   password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 31.59.121.223
+  port: 8443
+  server: 31.59.120.179
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 157
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 31.58.76.50
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 162
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 31.59.105.119
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2
-- name: 🇫🇷 法国 | trojan | 164
-  password: 364d3aa0-58fc-11ed-b738-225401db9d57
-  port: 443
-  server: 54.36.191.211
-  skip-cert-verify: true
-  sni: ebank.bmi.ir
-  type: trojan
-- name: 🇫🇷 法国 | trojan | 165
+- name: 🇫🇷 法国 | trojan | 203
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
@@ -299,7 +440,7 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 167
+- name: 🇫🇷 法国 | trojan | 204
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
@@ -311,25 +452,51 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2'
-- name: 🇫🇷 法国 | trojan | 174
+- name: 🇫🇷 法国 | trojan | 213
+  password: 364d3aa0-58fc-11ed-b738-225401db9d57
+  port: 443
+  server: 54.36.191.211
+  skip-cert-verify: true
+  sni: ebank.bmi.ir
+  type: trojan
+- name: 🇫🇷 法国 | trojan | 216
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
-  server: 95.182.98.140
+  server: 31.59.103.95
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 182
-  password: 6e3b4240-38f9-4321-9b3c-bc669a34b848
+- name: 🇫🇷 法国 | trojan | 223
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 31.59.121.223
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 227
+  password: b8808043-6566-4923-9195-e66bfb553d57
   port: 443
-  server: 141.94.76.177
+  server: 51.38.99.96
+  sni: ba24.ir
+  type: trojan
+- name: 🇫🇷 法国 | trojan | 250
+  password: hCunaKqdEJDBO+3jCrJUSMevXOw9Q_r4Ey
+  port: 443
+  server: 38.60.136.156
+  skip-cert-verify: true
+  sni: 38.60.136.156
   type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 210
+  name: 🇫🇷 法国 | vmess | 254
   network: tcp
   port: '2053'
   server: 141.227.188.221
@@ -337,145 +504,18 @@ proxies:
   tls: true
   type: vmess
   uuid: 29b68204-4954-4130-b479-abde091a6e11
-- name: 🇫🇷 法国 | trojan | 214
-  password: hCunaKqdEJDBO+3jCrJUSMevXOw9Q_r4Ey
-  port: 443
-  server: 38.60.136.156
-  skip-cert-verify: true
-  sni: 38.60.136.156
-  type: trojan
-- name: 🇫🇷 法国 | trojan | 216
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 217.60.37.28
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 225
-  password: b8808043-6566-4923-9195-e66bfb553d57
-  port: 443
-  server: 51.38.99.96
-  sni: ba24.ir
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 245
-  network: ws
-  port: 443
-  server: 217.182.76.202
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 2e68015f-a8b2-4893-a7a3-4edb19b178d9
-  ws-opts:
-    headers:
-      Host: ''
-    path: /
-- name: 🇫🇷 法国 | trojan | 249
+- name: 🇫🇷 法国 | trojan | 258
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
-  server: 77.221.152.22
+  server: 95.182.97.46
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 252
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 77.110.106.91
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
-- name: 🇫🇷 法国 | trojan | 257
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 193.42.61.121
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 263
-  network: ws
-  port: 443
-  server: 146.59.85.226
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: pelang.org
-    path: /
-- name: 🇫🇷 法国 | trojan | 269
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 46.226.167.115
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 270
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 31.59.120.179
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 272
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2096
-  server: 88.218.78.20
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
-- name: 🇫🇷 法国 | trojan | 273
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 62.60.157.104
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 274
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 62.60.157.104
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 279
+- name: 🇫🇷 法国 | trojan | 261
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
@@ -488,41 +528,83 @@ proxies:
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 284
+  name: 🇫🇷 法国 | vmess | 267
   network: ws
   port: 443
-  server: 57.128.189.241
-  servername: ads.x5.ru
+  server: 217.182.76.202
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 2e68015f-a8b2-4893-a7a3-4edb19b178d9
+  ws-opts:
+    headers:
+      Host: ''
+    path: /
+- name: 🇫🇷 法国 | trojan | 270
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 92.119.127.156
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 279
+  network: ws
+  port: 443
+  server: 146.59.85.226
+  servername: ''
   tls: true
   type: vmess
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   ws-opts:
     headers:
-      Host: ''
-    path: /linkvws
+      Host: pelang.org
+    path: /
+- name: 🇫🇷 法国 | trojan | 281
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2096
+  server: 88.218.78.20
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
+- name: 🇫🇷 法国 | trojan | 282
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 193.42.61.121
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
 - name: 🇫🇷 法国 | trojan | 285
   password: 9498f3a0-2992-11ee-a4c7-1239d0255272
   port: 443
   server: fr.test3.net
   sni: zula.ir
   type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 286
+- name: 🇫🇷 法国 | trojan | 288
   network: ws
-  port: 443
-  server: 57.128.189.206
-  servername: ads.x5.ru
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 77.110.106.91
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
   ws-opts:
-    headers:
-      Host: ''
-    path: /linkvws
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 288
+  name: 🇫🇷 法国 | vmess | 296
   network: ws
   port: 443
   server: 57.128.189.253
@@ -534,65 +616,46 @@ proxies:
     headers:
       Host: kapelleng.com
     path: /linkvws
-- name: 🇫🇷 法国 | trojan | 291
-  password: 973ed2e0-c4d8-4737-a093-71629148086d
-  port: 443
-  server: 51.77.213.197
-  sni: frt2.sshocean.net
-  type: trojan
-- alterId: 1
+- alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 295
+  name: 🇫🇷 法国 | vmess | 297
   network: ws
   port: 443
-  server: 23.162.152.177
-  servername: 23.162.152.177
+  server: 57.128.189.206
+  servername: ads.x5.ru
   tls: true
   type: vmess
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   ws-opts:
     headers:
-      Host: 23.162.152.177
-    path: linkvws
-- alpn:
-  - h2
-  - http/1.1
-  name: 🇫🇷 法国 | trojan | 321
+      Host: ''
+    path: /linkvws
+- name: 🇫🇷 法国 | trojan | 299
   network: ws
-  password: Tel
-  port: 14456
-  server: 45.154.96.35
-  sni: oof.acp.us.ci
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 77.221.152.22
+  sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
-      Host: oof.acp.us.ci
-    path: /jdjsjeje
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 325
-  network: tcp
-  port: '2053'
-  server: de5.taskflowhub.org
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: ca58b165-0f7d-49aa-9fae-a017e8a0f884
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 328
+  name: 🇫🇷 法国 | vmess | 302
   network: ws
-  port: '2087'
-  server: fr5.taskflowhub.org
-  servername: ''
+  port: 443
+  server: 57.128.189.241
+  servername: ads.x5.ru
   tls: true
   type: vmess
-  uuid: b8e590a8-4870-414b-967b-d2f43d01305a
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   ws-opts:
     headers:
-      Host: fr5.taskflowhub.org
-    path: /realtime
-- name: 🇫🇷 法国 | trojan | 333
+      Host: ''
+    path: /linkvws
+- name: 🇫🇷 法国 | trojan | 303
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
@@ -605,17 +668,7 @@ proxies:
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 338
-  network: tcp
-  port: '2053'
-  server: uk5.taskflowhub.org
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 89371dfc-2618-40d7-a558-693ff4f7f1eb
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 341
+  name: 🇫🇷 法国 | vmess | 305
   network: ws
   port: 16616
   server: planb.mojcn.com
@@ -626,8 +679,73 @@ proxies:
     headers:
       Host: 1a7b4b2d69cfc3485134b5ca9cc738f6.mobgslb.tbcache.com
     path: /
+- name: 🇫🇷 法国 | trojan | 306
+  password: 973ed2e0-c4d8-4737-a093-71629148086d
+  port: 443
+  server: 51.77.213.197
+  sni: frt2.sshocean.net
+  type: trojan
+- alterId: 1
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 309
+  network: ws
+  port: 443
+  server: 23.162.152.177
+  servername: 23.162.152.177
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: 23.162.152.177
+    path: linkvws
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 310
+  network: tcp
+  port: '2053'
+  server: de5.taskflowhub.org
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: ca58b165-0f7d-49aa-9fae-a017e8a0f884
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 314
+  network: ws
+  port: '2087'
+  server: fr5.taskflowhub.org
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: b8e590a8-4870-414b-967b-d2f43d01305a
+  ws-opts:
+    headers:
+      Host: fr5.taskflowhub.org
+    path: /realtime
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 322
+  network: tcp
+  port: '2053'
+  server: uk5.taskflowhub.org
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 89371dfc-2618-40d7-a558-693ff4f7f1eb
+- name: 🇫🇷 法国 | trojan | 334
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 46.226.167.115
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - cipher: aes-256-cfb
-  name: '🇫🇷_FR_法国 #1'
+  name: '🇫🇷_FR_法国 #2'
   password: asdKkaskJKfnsa
   port: 443
   server: 51.158.54.209
