@@ -1,6 +1,6 @@
 proxies:
 - client-fingerprint: chrome
-  name: 🇫🇷 法国 | vless | 323
+  name: 🇫🇷 法国 | vless | 366
   port: 443
   reality-opts:
     public-key: i4Mx_tDND0Xxac3WyA7HgT9rvXdZlXpm5m1EGiQF-Uk
@@ -12,7 +12,7 @@ proxies:
   udp: true
   uuid: 4706d9c3-eec0-4666-9d84-e608a200e872
 - client-fingerprint: chrome
-  name: 🇸🇬 新加坡 | trojan | 16
+  name: 🇸🇬 新加坡 | trojan | 22
   network: tcp
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   port: 45619
@@ -22,12 +22,12 @@ proxies:
   type: trojan
   udp: true
 - client-fingerprint: chrome
-  name: 🇭🇰 香港 | trojan | 13
+  name: 🇭🇰 香港 | trojan | 08
   network: tcp
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   port: 45619
   server: 103.177.136.42
-  skip-cert-verify: false
+  skip-cert-verify: true
   sni: fr.01.naiun.bilibili.com
   type: trojan
   udp: true
@@ -45,7 +45,7 @@ proxies:
     path: /assignment
 - alterId: 2
   cipher: auto
-  name: 🇮🇩 印尼 | vmess | 13
+  name: 🇲🇾 马来西亚 | vmess | 18
   network: tcp
   port: '30835'
   server: v35.hdacd.com
@@ -55,10 +55,45 @@ proxies:
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   xudp: true
-- name: 🇫🇷 法国 | vless | 115
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇫🇷
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww
+    short-id: '!!str ed7b9bdfedb9b8e5'
+  server: nl.go-vpn.club
+  servername: gateway.icloud.com
+  tls: false
+  type: vless
+  uuid: 40de6299-d792-4868-8a82-411ead0aa943
+- client-fingerprint: chrome
+  name: '[1596]⭐ 🇫🇷 FRA ⭐ 📑 #5f3d18'
+  network: xhttp
+  port: 443
+  server: 155.212.165.172
+  servername: ru-vk-3.1001notes.ru
+  tls: true
+  type: vless
+  uuid: 1014818b-5c5c-46b1-98fe-eaf8d5eba642
+  ws-opts:
+    path: /vk
+- name: '[1596]🎈 🇫🇷 FRA 🎈 #5e8c42'
+  network: xhttp
+  port: 80
+  server: 151.101.193.57
+  tls: false
+  type: vless
+  uuid: 96eec36e-2c44-5b09-898e-6f0f0526e57f
+  ws-opts:
+    headers:
+      Host: shangulin.global.ssl.fastly.net
+    path: /login
+- name: '>>@oneclickvpnkeys::FR'
   network: ws
   port: 8443
-  server: 51.91.253.174
+  server: 51.75.24.59
   servername: sni.111000.v6.navy
   skip-cert-verify: true
   tls: true
@@ -67,296 +102,73 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.v6.navy
-- name: '>>@oneclickvpnkeys::FR #1'
+    path: '%2F%3FTelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3%2B%2540WangCai2%3D'
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: api-maps.yandex.ru
+  name: 🌐 Anycast-IP | 🇫🇷 [*CIDR] VK
+  network: grpc
+  port: 4443
+  reality-opts:
+    public-key: TeLKwBR2dLcbcY-G8jySuzhC25-OOMLyjy-BkKAa1SY
+    short-id: '!!str aaaa'
+  server: ru.cleanersaz.help
+  servername: api-maps.yandex.ru
+  tls: false
+  type: vless
+  uuid: 9beef3b2-5749-4529-a91a-29af1c043d6b
+- client-fingerprint: chrome
+  name: '[🇫🇷]t.me/ConfigsHub'
   network: ws
-  port: 8443
-  server: 51.91.251.198
+  port: 443
+  server: 01-qq.com
+  servername: 2-1ng.pages.dev
+  tls: true
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  ws-opts:
+    headers:
+      Host: 2-1ng.pages.dev
+    path: '%2F'
+- client-fingerprint: qq
+  name: '[1596]⭐ 🇫🇷 FRA ⭐ 📑 🗺️ #f65170'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: NsPdlzraIawCLwtIUGk5demmtYJcBedeR_3qA2kvMF0
+    short-id: '!!str eacc9f154bc36612'
+  server: ru3.sipipro.su
+  servername: ya.ru
+  tls: false
+  type: vless
+  uuid: db62e9f2-49a3-4e9d-a59b-0bf77f102420
+- client-fingerprint: chrome
+  name: '🇫🇷 #1'
+  network: ws
+  port: 2096
+  server: 185.193.29.138
   servername: sni.111000.indevs.in
-  skip-cert-verify: true
   tls: true
   type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   ws-opts:
     headers:
       Host: sni.111000.indevs.in
-- name: '🇫🇷_FR_法国 #1'
-  network: ws
-  port: 8443
-  server: 146.59.230.8
-  servername: sni.111000.v6.navy
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷FR(AzadNet.t.me)
-  network: tcp
-  password: e4f288433b
-  port: 443
-  server: 54.36.173.159
-  sni: pol1.connecton.surf
-  type: trojan
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇺🇸 美国 | vless | 1030
-  network: tcp
-  port: 443
+  name: '🇫🇷 France — #299 (6836b8)'
+  network: xhttp
+  port: 3001
   reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: '!!str '
-  server: 72.56.32.211
-  servername: sellflow.org
+    public-key: XQR4nMq5aBnJ4h1RTCRRJdkdtO0Mtitt1cDtY0whkBI
+    short-id: '!!str 52d25a9b6eef53fc'
+  server: 84.201.177.246
+  servername: cdnv-img.perekrestok.ru
   tls: false
   type: vless
-  uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
-- name: 🇫🇷 法国 | vless | 123
-  network: ws
-  port: 443
-  server: 51.91.251.16
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: FR VLESS-51 | free-nodes
-  network: ws
-  port: 80
-  server: 213.136.69.8
-  tls: false
-  type: vless
-  uuid: 15cbab96-197e-46a5-9042-073b3980c798
-  ws-opts:
-    headers:
-      Host: fsdns.ectunnelvpn.me
-    path: /vless
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  name: '🇫🇷 #4'
-  network: xhttp
-  port: 42652
-  server: 185.171.202.76
-  servername: yahoo.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: omm.kotlet.org
-    path: '%2Fskkwkqknsjejejwj'
-- name: '[1596]🎈 🇫🇷 FRA 🎈 #cfe9c8'
-  network: xhttp
-  port: 80
-  server: 151.101.193.57
-  tls: false
-  type: vless
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: InternetAzadRobot55yy182.global.ssl.fastly.net
-    path: /
-- name: '🇫🇷 #1'
-  network: xhttp
-  port: 80
-  server: 151.101.129.57
-  tls: false
-  type: vless
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: InternetAzadRobot07gt745.global.ssl.fastly.net
-    path: /
-- alpn:
-  - http/1.1
-  name: 未知 TROJAN-182 | free-nodes
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.20.6.134
-  skip-cert-verify: false
-  sni: www.calmloud.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmloud.com
-    path: '%2Fassignment'
-- name: FR TROJAN-49 | free-nodes
-  network: ws
-  password: humanity
-  port: 443
-  server: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-- name: '🇫🇷 #2'
-  network: xhttp
-  port: 80
-  server: 151.101.65.57
-  tls: false
-  type: vless
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: InternetAzadRobot07gt745.global.ssl.fastly.net
-    path: '%2F'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇫🇷 法国 | vless | 280
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: nUl4-UbSlrf8sCY4QNCKF3dMmgWLWJbgeziVqwfklhU
-    short-id: '!!str ad3c6641d540b4e1'
-  server: 51.158.62.94
-  servername: www.laposte.fr
-  tls: false
-  type: vless
-  uuid: 43488128-319e-f480-64ea-0acdc712e2a8
-- name: '[1596]🎈 🇫🇷 FRA 🎈 #ab65ea'
-  network: xhttp
-  port: 2052
-  server: 88.216.67.230
-  tls: false
-  type: vless
-  uuid: 42e0d02c-b75c-4b9d-bc15-773aa3cbe6bc
-  ws-opts:
-    headers:
-      Host: u2.pabloping.cloud
-    path: /pabloping
-- alpn:
-  - h3
-  client-fingerprint: chrome
-  name: 🇫🇷 France | 🌐 | [IPv6] | [BL]
-  network: xhttp
-  port: 443
-  server: 151.101.111.120
-  servername: 127.0.0.1
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 74cb04cf-4c73-4270-bb27-3d7c5565e746
-  ws-opts:
-    headers:
-      Host: ovh13.global.ssl.fastly.net
-    path: '%2F'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇫🇷 proxy-youtube-461
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  server: 72.56.6.44
-  servername: sellflow.org
-  tls: false
-  type: vless
-  uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
-- client-fingerprint: chrome
-  name: '[1596]🎈 🇫🇷 FRA 🎈 #ebc655'
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: dp4zdTaX89_Ls34gM_x8BSBTx50p4X7asR3H1q_jIn4
-    short-id: '!!str b00e098b'
-  server: 172.65.183.98
-  servername: microsoft.com
-  tls: false
-  type: vless
-  uuid: a1fbffe9-8e5a-5a0e-9333-045d32eccd59
-- name: 🇦🇹 奥地利 | trojan | 15
-  network: ws
-  password: humanity
-  port: 443
-  server: 212.183.88.136
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
+  uuid: 2ef0ba3d-2658-425a-bfa6-4d7a8d6836b8
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: FR VLESS-65 | free-nodes
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: 3mzvB6oezGe8hhBCVkXs4HIH1nkiPc3QCMurERaB_Ro
-    short-id: '!!str b87063a35aaa942e'
-  server: 51.159.99.137
-  servername: www.cdiscount.com
-  tls: false
-  type: vless
-  uuid: 43488128-319e-f480-64ea-0acdc712e2a8
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: '🇫🇷 #3'
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: W-zf_ncm9sYALF5EqvUsxqTkYGdAw-tQczT2SqwVMGE
-    short-id: '!!str ff776ff77be48b88'
-  server: fr1.helper-internet.com
-  servername: fr1.helper-internet.com
-  tls: false
-  type: vless
-  uuid: 2003b2e8-0f93-47d7-8290-9df2321ef62a
-- client-fingerprint: safari
-  name: 🇫🇷 France b1c4 | SNI - eda.yan...
-  network: tcp
-  port: 3000
-  reality-opts:
-    public-key: XQR4nMq5aBnJ4h1RTCRRJdkdtO0Mtitt1cDtY0whkBI
-    short-id: '!!str a13c4184c8e60ccb'
-  server: 84.201.177.246
-  servername: eda.yandex.ru
-  tls: false
-  type: vless
-  uuid: 4a46e8ec-1932-4404-9a9d-5544ef03136c
-- alpn:
-  - http/1.1
-  name: '[1596]⭐ 🇫🇷 FRA [TR] #cc44ac'
-  network: ws
-  password: humanity
-  port: 443
-  server: 8.6.112.6
-  skip-cert-verify: true
-  sni: www.calmloud.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmloud.com
-    path: /assignment
-- name: '🇫🇷 #5'
-  network: xhttp
-  port: 80
-  server: 151.101.65.57
-  tls: false
-  type: vless
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: InternetAzadRobot07gt745.global.ssl.fastly.net
-    path: '%2F'
-- name: '🇫🇷 #6'
-  network: ws
-  port: 8443
-  server: 51.77.213.238
-  servername: sni.111000.dynv6.net
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.dynv6.net
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇫🇷 法国 | vless | 173
   network: tcp
   port: 443
   reality-opts:
@@ -367,103 +179,45 @@ proxies:
   tls: false
   type: vless
   uuid: 43488128-319e-f480-64ea-0acdc712e2a8
-- name: '[1596]🎈 🇫🇷 FRA [TR] 🎈 #225dbf'
-  network: ws
-  password: humanity
-  port: 443
-  server: 185.18.250.245
-  skip-cert-verify: true
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
-- name: 🇫🇷 法国 | vless | 62
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: '🇫🇷 #2'
   network: tcp
-  port: 52859
-  server: 45.155.169.91
+  port: 443
+  reality-opts:
+    public-key: oqRus6Z_Q1jqJaTEPu7ENbRL0-XKOw54K0jwCCGLtEk
+    short-id: '!!str a9c4f17e3b62d8'
+  server: 46.8.209.183
+  servername: max.ru
   tls: false
   type: vless
-  uuid: 200309bc-7f3d-4db1-9492-d01295c84319
-- alpn:
-  - http/1.1
-  name: FR TROJAN-51 | free-nodes
+  uuid: 462b89da-1114-4bc9-89ff-22696e1f14a3
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: '[1596]⭐ 🇫🇷 FRA ⭐ 📑 [VK] #0c74f...'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: pgG2grngQEtOFJImLfz0AEm-O2IodM2jCY4aMCYQI1U
+    short-id: '!!str 6aa2d2e950441a9a'
+  server: 109.120.183.222
+  servername: yandex.ru
+  tls: false
+  type: vless
+  uuid: b23f8cd5-3492-4881-8514-5d3110c5d2a5
+- name: FR TROJAN-49 | free-nodes
   network: ws
   password: humanity
   port: 443
   server: 104.20.6.134
-  sni: www.calmloud.com
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
   type: trojan
   ws-opts:
     headers:
-      Host: www.calmloud.com
+      Host: www.ignitelimit.com
     path: /assignment
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '🇫🇷 #7'
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: kG6zs_B1ZlZ5kjeC0WWPSz4B60vk_VeWj_WYsl2mGBw
-    short-id: '!!str 8a0b9c6d'
-  server: 185.248.33.149
-  servername: www.amd.com
-  tls: false
-  type: vless
-  uuid: a6e26ac0-644f-45da-8035-e2be0c93ffbb
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: '[🇫🇷]t.me/ConfigsHub #3'
-  network: tcp
-  port: 8444
-  reality-opts:
-    public-key: 7s3AzWmzy2xxeDJqW739FncGCZRyfvKTDisXYNqhH30
-    short-id: '!!str abcd1234ef567890'
-  server: 147.45.68.152
-  servername: www.google.com
-  tls: false
-  type: vless
-  uuid: e48a3f88-8a19-4e2c-8a02-59dbc68e6788
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: api-maps.yandex.ru
-  name: '[1596]⭐ 🇫🇷 FRA ⭐ 📑 [VK] #99f13...'
-  network: grpc
-  port: 9443
-  reality-opts:
-    public-key: 1Ft21vrEzdxBXrTvxvxetfMqBrb-FtuSG1PDDhfCh2A
-    short-id: '!!str aaaa'
-  server: ru.cleanersaz.help
-  servername: api-maps.yandex.ru
-  tls: false
-  type: vless
-  uuid: e90662c3-968e-4c6d-a6c3-500d2e8a6c63
-- name: 🇫🇷 法国 | vless | 118
-  network: ws
-  port: 443
-  server: 51.91.249.126
-  servername: sni.111000.v6.navy
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 529
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: '!!str '
-  server: 77.223.120.222
-  servername: sellflow.org
-  tls: false
-  type: vless
-  uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
-- name: '[1596]🎈 🇫🇷 FRA 🎈 #5107b7'
+- name: 🏳️ Fastly | vless | 30
   network: xhttp
   port: 80
   server: 151.101.128.223
@@ -472,13 +226,206 @@ proxies:
   uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
     headers:
-      Host: shangulin.global.ssl.fastly.net
-    path: /login
+      Host: tignaltofan.global.ssl.fastly.net
+    path: /TignaliSWithYou
+- name: FR法国(mibei77.com 米贝节点分享)
+  network: tcp
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 48697
+  server: 188.253.12.94
+  skip-cert-verify: true
+  sni: gh.01.naiun.bilibili.com
+  type: trojan
+- name: 🇫🇷 法国 | vless | 174
+  network: ws
+  port: 8443
+  server: 51.91.252.61
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 188
+  network: tcp
+  port: 8443
+  server: 79.127.196.11
+  servername: cdg-1.fromblancwithlove.com
+  tls: true
+  type: vless
+  uuid: 55f7d143-a594-4a91-b030-f227039f85ef
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇫🇷 proxy-abuse-bridge-356
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  server: 194.26.229.161
+  servername: abuse.sellflow.org
+  tls: false
+  type: vless
+  uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
+- grpc-opts:
+    grpc-service-name: vk
+  name: '[1596]⭐ 🇫🇷 FRA ⭐ 📑 #d6e9fb'
+  network: grpc
+  port: 443
+  server: 80.87.200.175
+  servername: ru-vk-2.1001notes.ru
+  tls: true
+  type: vless
+  uuid: 1014818b-5c5c-46b1-98fe-eaf8d5eba642
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: 🇫🇷 法国 | vless | 328
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: d3yQvdpwFHpLkl0ZbTnMH4uihCTKn4CAHy0W6so0VTI
+    short-id: '!!str 6a0f1cd94b762e98'
+  server: fr.plus-hit.ru
+  servername: fr.plus-hit.ru
+  tls: false
+  type: vless
+  uuid: 2c78c246-5556-47bf-9a22-0ed5d6237389
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '🇫🇷 #4'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 3mzvB6oezGe8hhBCVkXs4HIH1nkiPc3QCMurERaB_Ro
+    short-id: '!!str b87063a35aaa942e'
+  server: 51.159.99.137
+  servername: www.cdiscount.com
+  tls: false
+  type: vless
+  uuid: 43488128-319e-f480-64ea-0acdc712e2a8
+- client-fingerprint: chrome
+  name: '🇫🇷 #5'
+  network: ws
+  port: 2096
+  server: 185.16.110.238
+  servername: sni.jpmj.dev
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.jpmj.dev
+    path: '%2F%3Fed%3D2560'
+- alpn:
+  - h3
+  - h2
+  client-fingerprint: chrome
+  name: 🇫🇷 WS-Reality 📁 @DeamNet_proxy
+  network: ws
+  port: 443
+  server: s1.db-link.in
+  servername: dabaihk.webn.cc
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 621a845a-48ea-35f0-9b9a-ca499c647ade
+  ws-opts:
+    headers:
+      Host: dabaihk.webn.cc
+    path: '%2Fdb1024e9df2f990b'
+- name: '[1596]🎈 🇫🇷 FRA [TR] 🎈 #038ca8'
+  network: ws
+  password: humanity
+  port: 443
+  server: 188.114.98.0
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: /assignment
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: '[1596]✴️ 🇫🇷 FRA ✴️ #a6683f'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI
+    short-id: '!!str 8ec792bfd725be8a'
+  server: 51.250.24.222
+  servername: cdp.x5.ru
+  tls: false
+  type: vless
+  uuid: a69d3804-b95f-4ea7-8b06-b544c1b49438
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇫🇷 France, Paris | [BL]
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: r77nilacD34SeLmghmchRKuNiUL0xzh-pK87Ux58dzI
+    short-id: '!!str d0a1665d1b96515e'
+  server: 205.237.104.67
+  servername: fr.kosmosapp.ru
+  tls: false
+  type: vless
+  uuid: 132160b1-214f-41f3-9442-eeeb32250df1
+- name: '>>@oneclickvpnkeys::FR #2'
+  network: ws
+  port: 2053
+  server: 54.36.98.199
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇫🇷 法国 | vless | 144
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: ZnlCl_Jc2dV5-KK_ymmMcEDoe5lPyZ-5z_LGMRoiNTU
+    short-id: '!!str b87063a35aaa942e'
+  server: 51.255.71.16
+  servername: www.booking.com
+  tls: false
+  type: vless
+  uuid: 43488128-319e-f480-64ea-0acdc712e2a8
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇫🇷 法国 | vless | 21
+  network: tcp
+  port: 44520
+  reality-opts:
+    public-key: MrLRcU_2S2CpUc7VT3ajIavX5NYUiQdP6J5QTDFNGFU
+    short-id: '!!str 8897c56a495b26cc'
+  server: 51.44.25.250
+  servername: yahoo.com
+  tls: false
+  type: vless
+  uuid: acd726d3-0128-44d8-a575-21013ff7740a
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇫🇷 proxy-vless-reality-469
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  server: 95.163.152.178
+  servername: fr.sellflow.org
+  tls: false
+  type: vless
+  uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
 - alpn:
   - h2
   - http/1.1
   client-fingerprint: chrome
-  name: KJ(TL-X)Paris🇫🇷-For Shadmehr
+  name: KJ(TL-X)Paris🇫🇷-For Annie
   network: xhttp
   port: 2053
   server: 104.16.174.36
@@ -486,55 +433,43 @@ proxies:
   skip-cert-verify: false
   tls: true
   type: vless
-  uuid: 22163079-f078-4667-a019-f10e7b8681c4
+  uuid: b8ec6f3d-f973-4b6e-a080-bdc0454b35a6
   ws-opts:
     headers:
       Host: panel.karljohnson.ir
     path: '%2Fsefo'
-- name: 🇫🇷 法国 | vless | 04
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇫🇷 France 7c2a | SNI - storage...
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: 1oUeBtHH4DskTM_jCh-6enWRkFMDX9l1OU5kWYl4kxA
+    short-id: '!!str 364994a6f61fc955'
+  server: 45.196.224.176
+  servername: storage.yandex.net
+  tls: false
+  type: vless
+  uuid: ac2d70ef-eceb-4f98-9477-f0f27a18aad0
+- name: 🇫🇷 法国 | vless | 03
   port: 2082
   server: 185.16.110.45
   tls: false
   type: vless
   uuid: 3fa3261f-8f6b-4f5a-8f75-eb39911a0798
-- name: 🇫🇷 法国 | vless | 05
+- name: 🇫🇷 法国 | vless | 04
   port: 2082
   server: 185.16.110.60
   tls: false
   type: vless
   uuid: 3fa3261f-8f6b-4f5a-8f75-eb39911a0798
-- name: 🇫🇷 法国 | vless | 06
+- name: 🇫🇷 法国 | vless | 05
   port: 2082
   server: 185.16.110.78
   tls: false
   type: vless
   uuid: 3fa3261f-8f6b-4f5a-8f75-eb39911a0798
-- name: 🇫🇷 法国 | vless | 07
-  network: ws
-  port: 443
-  server: 185.16.110.238
-  servername: sni.jpmj.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.jpmj.dev
 - name: 🇫🇷 法国 | vless | 09
-  network: ws
-  port: 443
-  server: 81.255.155.10
-  servername: jp.aniua.qzz.io
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: e258977b-e413-4718-a3af-02d75492c349
-  ws-opts:
-    headers:
-      Host: jp.aniua.qzz.io
-    path: /security=tls
-- name: 🇫🇷 法国 | vless | 10
   network: ws
   port: 443
   server: 185.16.110.42
@@ -546,19 +481,19 @@ proxies:
     headers:
       Host: snippet.danfeng.rr.kg
     path: '%2Fdanfengsecurity=tls'
-- name: 🇫🇷 法国 | trojan | 11
+- name: 🇫🇷 法国 | vless | 10
   network: ws
-  password: humanity
   port: 443
-  server: 81.255.155.10
-  skip-cert-verify: false
-  sni: www.creationlong.org
-  type: trojan
+  server: 185.16.110.238
+  servername: sni.jpmj.dev
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   ws-opts:
     headers:
-      Host: www.creationlong.org
-    path: /assignment
-- name: 🇫🇷 法国 | vless | 15
+      Host: sni.jpmj.dev
+- name: 🇫🇷 法国 | vless | 12
   network: ws
   port: 443
   server: 185.16.110.40
@@ -569,128 +504,35 @@ proxies:
   ws-opts:
     headers:
       Host: edtunnel-eiz.pages.dev
-- name: 🇫🇷 法国 | vless | 16
-  network: ws
-  port: 80
-  server: 152.228.162.19
-  tls: false
-  type: vless
-  uuid: 5ce84688-f535-46ad-a512-37b17becf6ea
-  ws-opts:
-    headers:
-      Host: akamaized.net
-    path: /vless/
-- name: 🇫🇷 法国 | trojan | 17
-  password: 65c3941e-46b9-42f6-9c89-daedf472b6db
-  port: 80
-  server: 141.94.221.127
-  sni: fr1-t.sshmax.xyz
-  type: trojan
-- name: 🇫🇷 法国 | vless | 19
-  network: ws
-  port: 80
-  server: 51.210.100.154
-  tls: false
-  type: vless
-  uuid: 07187a48-6d47-4086-a0cf-11edc0b1f629
-  ws-opts:
-    path: /vless/security=tls
-- name: 🇫🇷 法国 | vless | 20
-  network: ws
-  port: 80
-  server: 72.61.161.219
-  tls: false
-  type: vless
-  uuid: b5920b52-504c-4835-978c-fbc4110d5840
-  ws-opts:
-    headers:
-      Host: france-paris.hostinger.kcartik-vps.com
-    path: '%2Fvless'
-- name: 🇫🇷 法国 | hy2 | 22
-  password: dongtaiwang.com
-  port: 22000
-  server: 62.210.124.146
-  skip-cert-verify: true
-  sni: www.microsoft.com
-  tls: false
-  type: hysteria2
 - alpn:
   - http/1.1
-  name: 🇫🇷 法国 | trojan | 24
-  network: tcp
-  password: telegram-id-directvpn
-  port: 22223
-  server: 13.36.49.219
-  sni: trojan.burgerip.co.uk
-  type: trojan
-- alpn:
-  - h2
-  - http/1.1
-  name: 🇫🇷 法国 | vless | 25
+  name: 🇫🇷 法国 | vless | 16
   network: ws
-  port: 9443
-  server: 141.227.152.129
+  port: 443
+  server: 81.255.155.10
+  servername: a1.shahinir.store
+  skip-cert-verify: false
   tls: true
   type: vless
-  uuid: 5e070527-8a6e-4701-8b34-4ca4054e50e4
+  uuid: 6df80c02-2f09-45aa-adbd-f6566a8010f7
   ws-opts:
     headers:
-      Host: nl.connfull.org
-    path: '%2Fstreamfp=chrome'
-- alpn:
-  - http/1.1
-  name: 🇫🇷 法国 | trojan | 27
-  network: tcp
-  password: telegram-id-privatevpns
-  port: 22222
-  server: 13.36.49.219
-  sni: trojan.burgerip.co.uk
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 32
-  network: ws
-  port: '80'
-  server: 51.254.133.152
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: ac8bcf5e-bb58-4e8b-b4e4-5fdea010a6c6
-  ws-opts:
-    headers:
-      Host: fr5.niekotin.de
-    path: /vmess
-- name: 🇫🇷 法国 | vless | 33
-  network: ws
-  port: 30001
-  server: 213.199.39.156
-  tls: false
-  type: vless
-  uuid: 3e5da4f6-93c4-4701-911b-1a5091d2430f
-  ws-opts:
-    path: '%2Fws'
-- name: 🇫🇷 法国 | vless | 34
-  port: 80
-  server: 51.75.30.8
-  tls: false
-  type: vless
-  uuid: 1949f066-bcb0-49be-88e9-74abd940f80e
-  ws-opts:
-    path: /http
+      Host: a1.shahinir.store
+    path: '%40IranianMindsfp=chrome'
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇫🇷 法国 | vless | 40
-  port: 23576
+  name: 🇫🇷 法国 | vless | 17
+  network: tcp
+  port: 31413
   reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '!!str 01'
-  server: 62.210.91.2
-  servername: fuck.rkn
-  skip-cert-verify: true
+    public-key: nMlxwhP34_5wFPscbso_hOfRDmsj9DonMpDSXUrnJR8
+    short-id: '!!str ead3d6f82a9d'
+  server: 51.44.16.107
+  servername: yahoo.com
   tls: false
   type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- name: 🇫🇷 法国 | vless | 45
+  uuid: 5454343b-541b-4c96-8c2a-52e81079d124
+- name: 🇫🇷 法国 | vless | 19
   network: ws
   port: 20304
   server: 82.64.152.55
@@ -702,23 +544,21 @@ proxies:
     headers:
       Host: sni.111000.v6.navy
     path: '%2Fsecurity=tls'
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 47
-  network: ws
-  port: 80
-  server: 51.83.97.167
-  servername: ''
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇫🇷 法国 | vless | 25
+  port: 12453
+  reality-opts:
+    public-key: 7Bp5RgrAqaiXOsiKaWnu6uliLDG8Eey2gA0coU9oay0
+    short-id: '!!str 52f510cea0a0a5ef'
+  server: 52.47.86.31
+  servername: yahoo.com
   tls: false
-  type: vmess
-  uuid: 6e7ef21f-4736-480e-93aa-1f7d54f28089
-  ws-opts:
-    headers:
-      Host: ''
-    path: /vmess
+  type: vless
+  uuid: c9f0224c-c509-427e-b314-cef6cab20646
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 48
+  name: 🇫🇷 法国 | vmess | 26
   network: ws
   port: 80
   server: 51.159.2.152
@@ -730,19 +570,163 @@ proxies:
     headers:
       Host: ''
     path: /
-- name: 🇫🇷 法国 | vless | 50
-  network: ws
-  port: 22224
-  server: 13.36.49.219
-  servername: trojan.burgerip.co.uk
-  tls: true
-  type: vless
-  uuid: 05519058-d2ac-4f28-9e4a-2b2a1386749e
-  ws-opts:
-    path: /telegram-channel-vlessconfig
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 53
+  name: 🇫🇷 法国 | vmess | 28
+  network: tcp
+  port: '2052'
+  server: 51.195.235.71
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 59e28f78-c31b-4613-9d9f-1e6732a31f46
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 30
+  network: ws
+  port: '80'
+  server: 51.254.133.152
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: ac8bcf5e-bb58-4e8b-b4e4-5fdea010a6c6
+  ws-opts:
+    headers:
+      Host: fr5.niekotin.de
+    path: /vmess
+- name: 🇫🇷 法国 | hy2 | 33
+  password: dongtaiwang.com
+  port: 22000
+  server: 62.210.124.146
+  skip-cert-verify: true
+  sni: www.microsoft.com
+  tls: false
+  type: hysteria2
+- name: 🇫🇷 法国 | vless | 35
+  network: ws
+  port: 80
+  server: 51.210.100.154
+  tls: false
+  type: vless
+  uuid: 07187a48-6d47-4086-a0cf-11edc0b1f629
+  ws-opts:
+    path: /vless/security=tls
+- name: 🇫🇷 法国 | vless | 38
+  port: 52859
+  server: 45.155.169.91
+  tls: false
+  type: vless
+  uuid: 200309bc-7f3d-4db1-9492-d01295c84319
+- name: 🇫🇷 法国 | trojan | 39
+  password: 65c3941e-46b9-42f6-9c89-daedf472b6db
+  port: 80
+  server: 141.94.221.127
+  sni: fr1-t.sshmax.xyz
+  type: trojan
+- name: 🇫🇷 法国 | vless | 41
+  network: ws
+  port: 80
+  server: 162.19.228.119
+  tls: false
+  type: vless
+  uuid: dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51
+  ws-opts:
+    headers:
+      Host: de.vpnbase.net
+    path: /http
+- name: 🇫🇷 法国 | vless | 44
+  network: ws
+  port: 80
+  server: 213.136.69.8
+  tls: false
+  type: vless
+  uuid: 15cbab96-197e-46a5-9042-073b3980c798
+  ws-opts:
+    headers:
+      Host: fsdns.ectunnelvpn.me
+    path: /vless
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443
+  name: 🇫🇷 法国 | vless | 48
+  port: 54809
+  reality-opts:
+    public-key: 06rvKjC9dE_Ndd-dw6B-0zAyEpn-jUs7mcNFAPQ_1G8
+    short-id: '!!str b4b3'
+  server: 5.196.51.152
+  servername: dash.cloudflare.com
+  tls: false
+  type: vless
+  uuid: 87e60810-bb71-41ea-a2a6-f05c8ab903ef
+- name: 🇫🇷 法国 | vless | 49
+  network: ws
+  port: 80
+  server: 92.222.217.16
+  tls: false
+  type: vless
+  uuid: 111db1d5-0c3d-43c3-8c05-de4c3bd77604
+  ws-opts:
+    headers:
+      Host: fr2.v2vless.xyz
+    path: /vless
+- alpn:
+  - h2
+  - http/1.1
+  name: 🇫🇷 法国 | vless | 50
+  network: ws
+  port: 9443
+  server: 141.227.152.129
+  tls: false
+  type: vless
+  uuid: 5e070527-8a6e-4701-8b34-4ca4054e50e4
+  ws-opts:
+    headers:
+      Host: nl.connfull.org
+    path: '%2Fstreamfp=chromesecurity=tls'
+- name: 🇫🇷 法国 | trojan | 52
+  password: e0d44ae7-cb7d-4acc-a8c0-9861a6f5eaad
+  port: 80
+  server: 51.91.11.29
+  sni: namayesh.com
+  type: trojan
+- name: 🇫🇷 法国 | vless | 53
+  network: ws
+  port: 80
+  server: 72.61.161.219
+  tls: false
+  type: vless
+  uuid: b5920b52-504c-4835-978c-fbc4110d5840
+  ws-opts:
+    headers:
+      Host: france-paris.hostinger.kcartik-vps.com
+    path: '%2Fvless'
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 54
+  network: ws
+  port: 80
+  server: 51.83.97.167
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 6e7ef21f-4736-480e-93aa-1f7d54f28089
+  ws-opts:
+    headers:
+      Host: ''
+    path: /vmess
+- name: 🇫🇷 法国 | vless | 57
+  network: ws
+  port: 80
+  server: 135.125.207.34
+  tls: false
+  type: vless
+  uuid: 13585423-5690-4f4f-837d-b9fab7872846
+  ws-opts:
+    headers:
+      Host: de1.v2vless.xyz
+    path: /vless
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 58
   network: ws
   port: 80
   server: 162.19.224.175
@@ -754,35 +738,27 @@ proxies:
     headers:
       Host: 162.19.224.175
     path: /vmess
-- name: 🇫🇷 法国 | vless | 57
-  network: ws
+- name: 🇫🇷 法国 | vless | 59
   port: 80
-  server: 92.222.217.16
+  server: 51.75.30.8
   tls: false
   type: vless
-  uuid: 111db1d5-0c3d-43c3-8c05-de4c3bd77604
+  uuid: 1949f066-bcb0-49be-88e9-74abd940f80e
   ws-opts:
-    headers:
-      Host: fr2.v2vless.xyz
-    path: /vless
-- name: 🇫🇷 法国 | vless | 58
-  network: ws
-  port: 80
-  server: 162.19.228.119
-  tls: false
-  type: vless
-  uuid: dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51
-  ws-opts:
-    headers:
-      Host: de.vpnbase.net
     path: /http
-- name: 🇫🇷 法国 | trojan | 60
-  password: e0d44ae7-cb7d-4acc-a8c0-9861a6f5eaad
-  port: 80
-  server: 51.91.11.29
-  sni: softsaaz.ir
-  type: trojan
-- name: 🇫🇷 法国 | vless | 64
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇫🇷 法国 | vless | 62
+  port: 8444
+  reality-opts:
+    public-key: 7s3AzWmzy2xxeDJqW739FncGCZRyfvKTDisXYNqhH30
+    short-id: '!!str abcd1234ef567890'
+  server: 147.45.68.152
+  servername: www.google.com
+  tls: false
+  type: vless
+  uuid: e48a3f88-8a19-4e2c-8a02-59dbc68e6788
+- name: 🇫🇷 法国 | vless | 63
   network: ws
   port: 17071
   server: 213.165.48.180
@@ -793,7 +769,7 @@ proxies:
   ws-opts:
     path: /%40Marisa_kristifp=chromesecurity=tls
 - client-fingerprint: chrome
-  name: 🇫🇷 法国 | vless | 65
+  name: 🇫🇷 法国 | vless | 64
   port: 65535
   reality-opts:
     public-key: aF6fxF58LZaoZlo1q855KSCjk1GyTWUeNAib5Q-Q6jI
@@ -803,6 +779,28 @@ proxies:
   tls: false
   type: vless
   uuid: bad35fb7-e058-4ea3-8087-8b35f756513e
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇫🇷 法国 | vless | 65
+  port: 42652
+  server: 185.171.202.76
+  servername: yahoo.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 88888888-8888-8888-8888-888888888888
+- alpn:
+  - h2
+  - http/1.1
+  name: 🇫🇷 法国 | trojan | 68
+  password: Tel=Arshiacomplus
+  port: 58035
+  server: 45.154.96.35
+  skip-cert-verify: true
+  sni: oof.acp.us.ci
+  type: trojan
 - alpn:
   - h2
   - http/1.1
@@ -817,69 +815,285 @@ proxies:
     headers:
       Host: oof.acp.us.ci
     path: /jdjsjeje
-- alpn:
-  - h2
-  - http/1.1
-  name: 🇫🇷 法国 | trojan | 70
-  password: Tel=Arshiacomplus
-  port: 58035
-  server: 45.154.96.35
-  skip-cert-verify: true
-  sni: oof.acp.us.ci
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 71
-  network: tcp
-  port: '2052'
-  server: 51.195.235.71
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 59e28f78-c31b-4613-9d9f-1e6732a31f46
-- name: 🇫🇷 法国 | trojan | 72
-  network: tcp
-  password: opentunnel.net-english30day
-  port: 443
-  server: 54.37.18.204
-  sni: uplod.ir
-  type: trojan
-- alterId: 0
-  cipher: auto
-  grpc-opts:
-    grpc-service-name: api
-  name: 🇫🇷 法国 | vmess | 73
-  network: grpc
-  port: '2096'
-  server: 57.128.174.124
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: ae91113b-915f-4a56-b998-e52d8a12da39
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: 🇫🇷 法国 | vless | 75
-  port: 8443
-  server: 57.128.174.124
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 407f838f-5fae-47b4-81eb-ec6af7da480e
-- name: 🇫🇷 法国 | vless | 77
+- name: 🇫🇷 法国 | vless | 71
   network: ws
+  port: 719
+  server: blit33.hamrahcore.ir
+  tls: false
+  type: vless
+  uuid: 26def452-b87f-42f5-92f6-e7ba0711ce69
+  ws-opts:
+    headers:
+      Host: play.google.com
+    path: /api/v2/xtrnwqjbkr?ed=2560
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇫🇷 法国 | vless | 79
+  port: 443
+  reality-opts:
+    public-key: W-zf_ncm9sYALF5EqvUsxqTkYGdAw-tQczT2SqwVMGE
+    short-id: '!!str ff776ff77be48b88'
+  server: 185.171.202.179
+  servername: fr2.helper-internet.com
+  tls: false
+  type: vless
+  uuid: 9f5ce1f6-d223-4f80-b848-72b7d662f189
+- name: 🇫🇷 法国 | vless | 80
+  port: 6805
+  server: faranse.duravex.net
+  tls: false
+  type: vless
+  uuid: 4c0c49ab-28f1-4411-bf90-5d073caf56ed
+- name: 🇫🇷 法国 | trojan | 81
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
   port: 8443
-  server: 57.128.181.18
-  servername: sni.111000.v6.navy
+  server: 217.60.37.28
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 83
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 95.182.98.140
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 84
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 31.59.121.223
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 87
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 31.59.120.179
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 88
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 31.59.105.119
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇫🇷 法国 | vless | 89
+  port: 443
+  reality-opts:
+    public-key: FurqA-2jJHS4vNj92Ya5i2ZTxf0sWSjUTaz5Y_KMBgk
+    short-id: '!!str 57cc65bfd5ef7465'
+  server: 185.212.117.34
+  servername: www.scaleway.com
+  tls: false
+  type: vless
+  uuid: bb2b0112-577f-4862-886a-3c2ee004ca23
+- alpn:
+  - http/1.1
+  name: 🇫🇷 法国 | vless | 90
+  network: ws
+  port: 443
+  server: 20.33.23.66
+  servername: coNFIghayE.moKhaBeraTebInZON.workErS.deV
+  tls: false
+  type: vless
+  uuid: 79863d42-9f1c-4e8e-a65b-1003090871c1
+  ws-opts:
+    headers:
+      Host: confighaye.mokhaberatebinzon.workers.dev
+    path: '%2FeyJqdW5rIjoiUHVXcXFjYTJGVGI3IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIl19%3Fed%3D2560flow=fp=chromesecurity=tls'
+- name: 🇫🇷 法国 | trojan | 92
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 31.57.108.170
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 94
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 46.8.225.115
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 96
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 46.8.224.102
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇫🇷 法国 | vless | 97
+  port: 443
+  reality-opts:
+    public-key: 2rjzbqQ49m-jpfzhiuBNb8Izwwjw0dIg5JAKdv-B2kE
+    short-id: '!!str d1d42381ba35'
+  server: 185.120.59.165
+  servername: apple.com
+  tls: false
+  type: vless
+  uuid: 88888888-8888-8888-8888-888888888888
+- name: 🇫🇷 法国 | trojan | 98
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 31.59.103.152
   skip-cert-verify: true
-  tls: true
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2'
+- name: 🇫🇷 法国 | trojan | 99
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 31.58.76.27
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 100
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 95.182.97.46
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 101
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 45.84.88.204
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 102
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 46.8.224.102
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 103
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 45.84.88.232
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 104
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 31.59.103.95
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 106
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 31.56.228.210
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | vless | 107
+  network: ws
+  port: 2053
+  server: 31.56.176.37
+  servername: sni.latonyamadeline.ndjp.net
+  skip-cert-verify: true
+  tls: false
   type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   ws-opts:
     headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 78
+      Host: sni.latonyamadeline.ndjp.net
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3security=tls'
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 108
+  network: ws
+  port: 443
+  server: 45.145.165.113
+  servername: hms19.best-tizi.top
+  tls: true
+  type: vmess
+  uuid: 62aa5f80-0328-4004-a375-7f5a59df4022
+  ws-opts:
+    headers:
+      Host: hms19.best-tizi.top
+    path: /linkws
+- name: 🇫🇷 法国 | trojan | 109
+  password: hCunaKqdEJDBO+3jCrJUSMevXOw9Q_r4Ey
+  port: 443
+  server: 38.60.136.156
+  skip-cert-verify: true
+  sni: 38.60.136.156
+  type: trojan
+- name: 🇫🇷 法国 | vless | 114
   network: ws
   port: 8443
   server: 57.128.183.225
@@ -892,10 +1106,17 @@ proxies:
     headers:
       Host: sni.111000.v6.navy
     path: '%2F%3Ftelegramsecurity=tls'
-- name: 🇫🇷 法国 | vless | 81
+- name: 🇫🇷 法国 | trojan | 115
+  password: d2adff89-5143-4d67-921f-3478464de5bb
+  port: 443
+  server: 38.180.240.150
+  skip-cert-verify: true
+  sni: fr.freeguard.org
+  type: trojan
+- name: 🇫🇷 法国 | vless | 116
   network: ws
   port: 8443
-  server: 57.128.183.108
+  server: 57.128.181.18
   servername: sni.111000.v6.navy
   skip-cert-verify: true
   tls: true
@@ -904,18 +1125,108 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 83
+- name: 🇫🇷 法国 | trojan | 118
+  network: tcp
+  password: opentunnel.net-english30day
+  port: 443
+  server: 54.37.18.204
+  sni: uplod.ir
+  type: trojan
+- alterId: 0
+  cipher: auto
+  grpc-opts:
+    grpc-service-name: api
+  name: 🇫🇷 法国 | vmess | 120
+  network: grpc
+  port: '2096'
+  server: 57.128.174.124
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: ae91113b-915f-4a56-b998-e52d8a12da39
+- name: 🇫🇷 法国 | trojan | 121
   network: ws
-  port: 8443
-  server: 57.128.181.247
-  servername: sni.111000.indevs.in
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 95.182.97.46
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇫🇷 法国 | vless | 122
+  port: 443
+  reality-opts:
+    public-key: kG6zs_B1ZlZ5kjeC0WWPSz4B60vk_VeWj_WYsl2mGBw
+    short-id: '!!str 8a0b9c6d'
+  server: 185.248.33.149
+  servername: www.amd.com
+  tls: false
+  type: vless
+  uuid: a6e26ac0-644f-45da-8035-e2be0c93ffbb
+- name: 🇫🇷 法国 | vless | 123
+  network: ws
+  port: 443
+  server: 57.128.178.36
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+    path: '%2Fsecurity=tls'
+- name: 🇫🇷 法国 | vless | 128
+  network: ws
+  port: 443
+  server: 57.128.183.90
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
   tls: true
   type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   ws-opts:
     headers:
-      Host: sni.111000.indevs.in
-- name: 🇫🇷 法国 | vless | 84
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 129
+  network: ws
+  port: 8443
+  server: 57.128.183.138
+  servername: sni.111000.v6.navy
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  name: 🇫🇷 法国 | vless | 130
+  port: 8443
+  server: 57.128.174.124
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 407f838f-5fae-47b4-81eb-ec6af7da480e
+- name: 🇫🇷 法国 | vless | 131
+  network: ws
+  port: 8443
+  server: 57.128.179.45
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 133
   network: ws
   port: 8443
   server: 57.128.176.82
@@ -928,7 +1239,216 @@ proxies:
     headers:
       Host: sni.111000.indevs.in
     path: '%2F%3Fedfp=chromesecurity=tls'
-- name: 🇫🇷 法国 | vless | 86
+- client-fingerprint: chrome
+  name: 🇫🇷 法国 | vless | 135
+  port: 2053
+  reality-opts:
+    public-key: UmuWuDYPJjleCvDEUV66fhrd422Uw5lMlO7xqmouUkc
+    short-id: '!!str 12345678'
+  server: 51.195.232.24
+  servername: www.microsoft.com
+  tls: false
+  type: vless
+  uuid: 4694d9fd-3863-4287-a663-9455cc18731d
+- alpn:
+  - http/1.1
+  name: 🇫🇷 法国 | vless | 138
+  network: ws
+  port: 8443
+  server: 57.128.180.133
+  servername: us2.wxgqlfx.xyz
+  tls: false
+  type: vless
+  uuid: b4a10cb3-9835-4027-a5d5-9404ec7b1e4e
+  ws-opts:
+    headers:
+      Host: us2.wxgqlfx.xyz
+    path: '%2FTG%40wxgqlfxfp=chromesecurity=tls'
+- name: 🇫🇷 法国 | vless | 139
+  network: ws
+  port: 8443
+  server: 57.128.181.247
+  servername: sni.111000.indevs.in
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+- alpn:
+  - http/1.1
+  name: 🇫🇷 法国 | vless | 140
+  network: ws
+  port: 443
+  server: 57.128.183.13
+  servername: us2.wxgqlfx.xyz
+  tls: false
+  type: vless
+  uuid: 60d06568-b005-48bf-ba28-bac13b3a12ce
+  ws-opts:
+    headers:
+      Host: us2.wxgqlfx.xyz
+    path: '%2FTG%40wxgqlfxfp=chromesecurity=tls'
+- name: 🇫🇷 法国 | vless | 145
+  network: ws
+  port: 8443
+  server: 162.19.79.57
+  servername: sni.111000.v6.navy
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    path: '%2F%3Fed%3D2560%26Telegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2security=tls'
+- name: 🇫🇷 法国 | vless | 146
+  network: ws
+  port: 8443
+  server: 146.59.159.111
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 147
+  network: ws
+  port: 443
+  server: 51.91.251.16
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 149
+  network: ws
+  port: 8443
+  server: 146.59.228.27
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+    path: '%2F%3FTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2%3Dsecurity=tls'
+- name: 🇫🇷 法国 | vless | 154
+  network: ws
+  port: 8443
+  server: 57.128.183.108
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 155
+  network: ws
+  port: 8443
+  server: 37.59.97.139
+  servername: sni.111000.v6.navy
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+    path: '%2F%3FTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2%3Dsecurity=tls'
+- name: 🇫🇷 法国 | vless | 157
+  network: ws
+  port: 443
+  server: 51.91.251.149
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 160
+  network: ws
+  port: 8443
+  server: 146.59.230.8
+  servername: sni.111000.v6.navy
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 162
+  network: ws
+  port: 443
+  server: 152.228.216.146
+  servername: sni.111000.indevs.in
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+    path: '%2F%3Fed%3D2560%26telegram%F0%9F%87%A8%F0%9F%87%B3%2B%40wangcai2security=tls'
+- name: 🇫🇷 法国 | vless | 163
+  network: ws
+  port: 443
+  server: 51.91.248.251
+  servername: sni.111000.indevs.in
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+    path: '%2F%3Fed%3D2560security=tls'
+- alpn:
+  - http/1.1
+  name: 🇫🇷 法国 | vless | 164
+  network: ws
+  port: 8443
+  server: 57.128.176.147
+  servername: us2.wxgqlfx.xyz
+  tls: false
+  type: vless
+  uuid: 60d06568-b005-48bf-ba28-bac13b3a12ce
+  ws-opts:
+    headers:
+      Host: us2.wxgqlfx.xyz
+    path: '%2FTG%40wxgqlfxfp=chromesecurity=tls'
+- name: 🇫🇷 法国 | vless | 165
+  network: ws
+  port: 2053
+  server: 162.19.243.106
+  servername: sni.111000.indevs.in
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+- alpn:
+  - http/1.1
+  name: 🇫🇷 法国 | vless | 169
+  network: ws
+  port: 8443
+  server: 51.91.250.33
+  servername: us2.wxgqlfx.xyz
+  tls: false
+  type: vless
+  uuid: 60d06568-b005-48bf-ba28-bac13b3a12ce
+  ws-opts:
+    headers:
+      Host: us2.wxgqlfx.xyz
+    path: '%2FTG%40wxgqlfxfp=chromesecurity=tls'
+- name: 🇫🇷 法国 | vless | 170
   network: ws
   port: 8443
   server: 57.128.177.176
@@ -943,451 +1463,7 @@ proxies:
     path: /?telegramsecurity=tls
 - alpn:
   - http/1.1
-  name: 🇫🇷 法国 | vless | 87
-  network: ws
-  port: 8443
-  server: 57.128.176.147
-  servername: us2.wxgqlfx.xyz
-  tls: false
-  type: vless
-  uuid: 60d06568-b005-48bf-ba28-bac13b3a12ce
-  ws-opts:
-    headers:
-      Host: us2.wxgqlfx.xyz
-    path: '%2FTG%40wxgqlfxfp=chromesecurity=tls'
-- alpn:
-  - http/1.1
-  name: 🇫🇷 法国 | vless | 88
-  network: ws
-  port: 443
-  server: 57.128.183.13
-  servername: us2.wxgqlfx.xyz
-  tls: false
-  type: vless
-  uuid: 60d06568-b005-48bf-ba28-bac13b3a12ce
-  ws-opts:
-    headers:
-      Host: us2.wxgqlfx.xyz
-    path: '%2FTG%40wxgqlfxfp=chromesecurity=tls'
-- client-fingerprint: chrome
-  name: 🇫🇷 法国 | vless | 92
-  port: 2053
-  reality-opts:
-    public-key: UmuWuDYPJjleCvDEUV66fhrd422Uw5lMlO7xqmouUkc
-    short-id: '!!str 12345678'
-  server: 51.195.232.24
-  servername: www.microsoft.com
-  tls: false
-  type: vless
-  uuid: 4694d9fd-3863-4287-a663-9455cc18731d
-- name: 🇫🇷 法国 | trojan | 96
-  password: 6e3b4240-38f9-4321-9b3c-bc669a34b848
-  port: 443
-  server: 141.94.76.177
-  type: trojan
-- name: 🇫🇷 法国 | vless | 99
-  network: ws
-  port: 8443
-  server: 57.128.179.10
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 100
-  network: ws
-  port: 8443
-  server: 57.128.183.138
-  servername: sni.111000.v6.navy
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 101
-  network: ws
-  port: 443
-  server: 57.128.178.36
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-    path: '%2Fsecurity=tls'
-- name: 🇫🇷 法国 | vless | 102
-  network: ws
-  port: 8443
-  server: 57.128.176.37
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | trojan | 105
-  password: d2adff89-5143-4d67-921f-3478464de5bb
-  port: 443
-  server: 38.180.240.150
-  skip-cert-verify: true
-  sni: fr.freeguard.org
-  type: trojan
-- name: 🇫🇷 法国 | vless | 109
-  network: ws
-  port: 8443
-  server: 57.128.179.45
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇫🇷 法国 | vless | 112
-  port: 443
-  reality-opts:
-    public-key: 2rjzbqQ49m-jpfzhiuBNb8Izwwjw0dIg5JAKdv-B2kE
-    short-id: '!!str d1d42381ba35'
-  server: 185.120.59.165
-  servername: apple.com
-  tls: false
-  type: vless
-  uuid: 88888888-8888-8888-8888-888888888888
-- client-fingerprint: ''
-  name: 🇫🇷 法国 | vless | 113
-  port: 443
-  reality-opts:
-    public-key: fXdtB8vImCUJMQBLcCNK7p1v3rVzx6HllaDLk8Vc4EU
-    short-id: '!!str 239dcd11'
-  server: 57.128.81.193
-  servername: www.samsung.com
-  tls: false
-  type: vless
-  uuid: 53821f3c-5b03-456a-89f3-f8379f130752
-- alpn:
-  - http/1.1
-  name: 🇫🇷 法国 | vless | 114
-  network: ws
-  port: 8443
-  server: 57.128.180.133
-  servername: us2.wxgqlfx.xyz
-  tls: false
-  type: vless
-  uuid: b4a10cb3-9835-4027-a5d5-9404ec7b1e4e
-  ws-opts:
-    headers:
-      Host: us2.wxgqlfx.xyz
-    path: '%2FTG%40wxgqlfxfp=chromesecurity=tls'
-- name: 🇫🇷 法国 | vless | 117
-  network: ws
-  port: 8443
-  server: 51.91.254.50
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 119
-  network: ws
-  port: 443
-  server: 57.128.183.90
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 120
-  network: ws
-  port: 8443
-  server: 37.59.97.139
-  servername: sni.111000.v6.navy
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-    path: '%2F%3FTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2%3Dsecurity=tls'
-- name: 🇫🇷 法国 | vless | 122
-  network: ws
-  port: 8443
-  server: 146.59.228.153
-  servername: sni.111000.v6.navy
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-    path: '%2F%3FTelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3%2B%2540WangCai2%3Dsecurity=tls'
-- name: 🇫🇷 法国 | vless | 125
-  network: ws
-  port: 443
-  server: 37.59.96.47
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 128
-  network: ws
-  port: 8443
-  server: 51.75.24.59
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 129
-  network: ws
-  port: 443
-  server: 51.91.249.9
-  servername: sni.111000.indevs.in
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-    path: '%2F%3FTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2%3Dsecurity=tls'
-- name: 🇫🇷 法国 | trojan | 130
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 95.182.98.140
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | vless | 131
-  network: ws
-  port: 8443
-  server: 162.19.79.211
-  servername: sni.111000.v6.navy
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-    path: '%2F%3FTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2%3Dsecurity=tls'
-- name: 🇫🇷 法国 | vless | 132
-  port: 2053
-  server: 54.36.98.93
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-- alpn:
-  - http/1.1
-  name: 🇫🇷 法国 | vless | 133
-  network: ws
-  port: 443
-  server: 20.33.23.66
-  servername: coNFIghayE.moKhaBeraTebInZON.workErS.deV
-  tls: false
-  type: vless
-  uuid: 79863d42-9f1c-4e8e-a65b-1003090871c1
-  ws-opts:
-    headers:
-      Host: confighaye.mokhaberatebinzon.workers.dev
-    path: '%2FeyJqdW5rIjoiUHVXcXFjYTJGVGI3IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIl19%3Fed%3D2560flow=fp=chromesecurity=tls'
-- name: 🇫🇷 法国 | vless | 136
-  network: ws
-  port: 443
-  server: 54.37.51.238
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | trojan | 137
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 217.60.37.28
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | vless | 138
-  network: ws
-  port: 443
-  server: 51.91.251.37
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | trojan | 140
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 45.84.88.204
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | vless | 143
-  network: ws
-  port: 443
-  server: 51.91.254.78
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | trojan | 149
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 31.56.228.210
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 151
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 31.58.76.50
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇫🇷 法国 | vless | 152
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: ZnlCl_Jc2dV5-KK_ymmMcEDoe5lPyZ-5z_LGMRoiNTU
-    short-id: '!!str b87063a35aaa942e'
-  server: 51.255.71.16
-  servername: www.booking.com
-  tls: false
-  type: vless
-  uuid: 43488128-319e-f480-64ea-0acdc712e2a8
-- name: 🇫🇷 法国 | vless | 156
-  network: ws
-  port: 443
-  server: 152.228.216.146
-  servername: sni.111000.indevs.in
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-    path: '%2F%3Fed%3D2560%26telegram%F0%9F%87%A8%F0%9F%87%B3%2B%40wangcai2security=tls'
-- name: 🇫🇷 法国 | vless | 157
-  network: ws
-  port: 8443
-  server: 146.59.228.27
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-    path: '%2F%3FTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2%3Dsecurity=tls'
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 158
-  network: ws
-  port: 443
-  server: 45.145.165.113
-  servername: hms19.best-tizi.top
-  tls: true
-  type: vmess
-  uuid: 62aa5f80-0328-4004-a375-7f5a59df4022
-  ws-opts:
-    headers:
-      Host: hms19.best-tizi.top
-    path: /linkws
-- name: 🇫🇷 法国 | vless | 164
-  network: ws
-  port: 2053
-  server: 54.36.98.82
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | trojan | 165
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 31.59.121.223
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | vless | 168
-  network: ws
-  port: 2053
-  server: 141.94.77.169
-  servername: sni.111000.v6.navy
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-    path: '%2F%3Fed%3D2560security=tls'
-- alpn:
-  - http/1.1
-  name: 🇫🇷 法国 | vless | 172
+  name: 🇫🇷 法国 | vless | 171
   network: ws
   port: 8443
   server: 37.59.97.133
@@ -1399,42 +1475,59 @@ proxies:
     headers:
       Host: us2.wxgqlfx.xyz
     path: /TG@wxgqlfxfp=chromesecurity=tls
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇫🇷 法国 | vless | 174
-  port: 443
-  reality-opts:
-    public-key: W-zf_ncm9sYALF5EqvUsxqTkYGdAw-tQczT2SqwVMGE
-    short-id: '!!str ff776ff77be48b88'
-  server: 185.171.202.179
-  servername: fr2.helper-internet.com
-  tls: false
-  type: vless
-  uuid: 9f5ce1f6-d223-4f80-b848-72b7d662f189
-- name: 🇫🇷 法国 | trojan | 176
+- name: 🇫🇷 法国 | vless | 172
   network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 31.57.108.170
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
+  port: 8443
+  server: 51.75.16.73
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   ws-opts:
     headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 177
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 173
   network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 146.19.168.188
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
+  port: 2053
+  server: 51.75.16.73
+  servername: sni.111000.v6.navy
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   ws-opts:
-    path: /trTelegram+@WangCai2
+    headers:
+      Host: sni.111000.v6.navy
+    path: '%2F%3Fed%3D2560security=tls'
+- name: 🇫🇷 法国 | trojan | 177
+  password: 6e3b4240-38f9-4321-9b3c-bc669a34b848
+  port: 443
+  server: 141.94.76.177
+  type: trojan
+- name: 🇫🇷 法国 | vless | 178
+  network: ws
+  port: 8443
+  server: 57.128.179.10
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇫🇷 法国 | vless | 180
+  port: 443
+  server: fr155.mechvpn.online
+  tls: true
+  type: vless
+  uuid: a12ac1e4-c6dd-47e6-89c5-7de02dc096d8
 - name: 🇫🇷 法国 | vless | 181
   network: ws
   port: 8443
-  server: 51.91.248.38
+  server: 51.75.24.59
   servername: sni.111000.v6.navy
   skip-cert-verify: true
   tls: true
@@ -1443,46 +1536,10 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | trojan | 183
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 45.84.88.232
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 185
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 46.8.225.115
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- client-fingerprint: chrome
-  name: 🇫🇷 法国 | vless | 186
-  network: ws
-  port: 443
-  server: 149.202.58.99
-  servername: bab-6.site
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3
-  ws-opts:
-    headers:
-      Host: bab-6.site
-    path: /vws/
-- name: 🇫🇷 法国 | vless | 187
+- name: 🇫🇷 法国 | vless | 184
   network: ws
   port: 8443
-  server: 51.91.252.61
+  server: 51.91.254.50
   servername: sni.111000.v6.navy
   skip-cert-verify: true
   tls: true
@@ -1491,373 +1548,13 @@ proxies:
   ws-opts:
     headers:
       Host: sni.111000.v6.navy
-- alpn:
-  - http/1.1
-  name: 🇫🇷 法国 | vless | 191
-  network: ws
-  port: 8443
-  server: 51.91.250.33
-  servername: us2.wxgqlfx.xyz
-  tls: false
-  type: vless
-  uuid: 60d06568-b005-48bf-ba28-bac13b3a12ce
-  ws-opts:
-    headers:
-      Host: us2.wxgqlfx.xyz
-    path: '%2FTG%40wxgqlfxfp=chromesecurity=tls'
-- name: 🇫🇷 法国 | vless | 192
-  network: ws
-  port: 8443
-  server: 51.91.254.189
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | trojan | 193
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 31.58.76.27
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 194
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 31.59.120.179
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | vless | 195
-  network: ws
-  port: 8443
-  server: 146.59.225.19
-  servername: sni.111000.v6.navy
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-    path: '%2F%3Fed%3D2560security=tls'
-- name: 🇫🇷 法国 | vless | 196
-  network: ws
-  port: 443
-  server: 51.91.249.154
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 197
-  network: ws
-  port: 443
-  server: 51.91.248.253
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-    path: /?Telegram+@WangCai2=security=tls
-- name: 🇫🇷 法国 | vless | 198
+- name: 🇫🇷 法国 | vless | 185
   port: 2053
-  server: 162.19.78.179
+  server: 54.36.98.93
   tls: false
   type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-- name: 🇫🇷 法国 | vless | 199
-  network: ws
-  port: 8443
-  server: 162.19.79.57
-  servername: sni.111000.v6.navy
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    path: '%2F%3Fed%3D2560%26Telegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2security=tls'
-- name: 🇫🇷 法国 | trojan | 203
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 46.8.224.102
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 204
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 31.59.103.152
-  skip-cert-verify: true
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2'
-- name: 🇫🇷 法国 | vless | 205
-  network: ws
-  port: 8443
-  server: 51.77.213.238
-  servername: sni.111000.dynv6.net
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.dynv6.net
-    path: '%2F%3FTelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3%2B%2540WangCai2%3Dflow=security=tls'
-- name: 🇫🇷 法国 | vless | 206
-  network: ws
-  port: 443
-  server: 51.91.255.152
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 207
-  network: ws
-  port: 8443
-  server: 51.75.16.73
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 209
-  network: ws
-  port: 2053
-  server: 51.77.214.109
-  servername: sni.111000.indevs.in
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-- name: 🇫🇷 法国 | vless | 210
-  network: ws
-  port: 2053
-  server: 162.19.243.8
-  servername: sni.111000.indevs.in
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-    path: '%2F%3FTelegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2%3Dsecurity=tls'
-- name: 🇫🇷 法国 | vless | 212
-  network: ws
-  port: 8443
-  server: 146.59.159.111
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | trojan | 213
-  password: 364d3aa0-58fc-11ed-b738-225401db9d57
-  port: 443
-  server: 54.36.191.211
-  skip-cert-verify: true
-  sni: ebank.bmi.ir
-  type: trojan
-- name: 🇫🇷 法国 | vless | 214
-  network: ws
-  port: 80
-  server: de5.niekotin.de
-  tls: false
-  type: vless
-  uuid: 44d0f473-3135-4d25-a318-c981a65d7c0f
-  ws-opts:
-    headers:
-      Host: ''
-    path: '%2Fvless'
-- name: 🇫🇷 法国 | trojan | 216
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 31.59.103.95
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | vless | 217
-  network: ws
-  port: 2053
-  server: 51.75.16.73
-  servername: sni.111000.v6.navy
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-    path: '%2F%3Fed%3D2560security=tls'
-- name: 🇫🇷 法国 | vless | 218
-  network: ws
-  port: 8443
-  server: 135.125.191.89
-  servername: sni.111000.indevs.in
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-- name: 🇫🇷 法国 | vless | 220
-  network: ws
-  port: 8443
-  server: 51.91.100.9
-  servername: sni.111000.v6.navy
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-    path: '%2F%3Fed%3D2560%26Telegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2security=tls'
-- name: 🇫🇷 法国 | vless | 221
-  network: ws
-  port: 2053
-  server: 51.75.28.76
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 222
-  network: ws
-  port: 8443
-  server: 51.210.150.65
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-    path: '%2F%3FTelegram%E9%A6%83%E5%9A%9A%E9%A6%83%E5%9A%A6+%40WangCai2%3Dsecurity=tls'
-- name: 🇫🇷 法国 | trojan | 223
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 31.59.121.223
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | vless | 226
-  network: ws
-  port: 8443
-  server: 51.91.251.43
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | trojan | 227
-  password: b8808043-6566-4923-9195-e66bfb553d57
-  port: 443
-  server: 51.38.99.96
-  sni: ba24.ir
-  type: trojan
-- name: 🇫🇷 法国 | vless | 229
-  network: ws
-  port: 2053
-  server: 152.228.135.238
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-    path: '%2F%3FTelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3%2B%2540WangCai2%3Dsecurity=tls'
-- name: 🇫🇷 法国 | vless | 230
-  network: ws
-  port: 8443
-  server: 162.19.79.101
-  servername: sni.111000.indevs.in
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-    path: '%2Fsecurity=tls'
-- name: 🇫🇷 法国 | vless | 231
-  network: ws
-  port: 8443
-  server: 146.59.229.78
-  servername: sni.111000.v6.navy
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-    path: '%2F%3FTelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3%2B%2540WangCai2%3Dsecurity=tls'
-- name: 🇫🇷 法国 | vless | 232
-  network: ws
-  port: 8443
-  server: 51.75.19.60
-  servername: sni.111000.indevs.in
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-- name: 🇫🇷 法国 | vless | 234
+- name: 🇫🇷 法国 | vless | 186
   network: ws
   port: 8443
   server: 51.91.249.22
@@ -1870,7 +1567,119 @@ proxies:
     headers:
       Host: sni.111000.v6.navy
     path: '%2F%3FTelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3%2B%2540WangCai2%3Dsecurity=tls'
-- name: 🇫🇷 法国 | vless | 235
+- name: 🇫🇷 法国 | vless | 187
+  port: 2053
+  server: 162.19.78.179
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+- name: 🇫🇷 法国 | vless | 189
+  network: ws
+  port: 443
+  server: 51.91.249.154
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 191
+  network: ws
+  port: 2053
+  server: 51.210.151.165
+  servername: sni.111000.indevs.in
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+- name: 🇫🇷 法国 | vless | 192
+  network: ws
+  port: 8443
+  server: 57.128.176.37
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 193
+  network: ws
+  port: 8443
+  server: 146.59.228.153
+  servername: sni.111000.v6.navy
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+    path: '%2F%3FTelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3%2B%2540WangCai2%3Dsecurity=tls'
+- name: 🇫🇷 法国 | vless | 194
+  network: ws
+  port: 2053
+  server: 54.36.98.82
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | trojan | 195
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 146.19.168.188
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    path: /trTelegram+@WangCai2
+- name: 🇫🇷 法国 | vless | 198
+  network: ws
+  port: 443
+  server: 51.91.255.152
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 200
+  network: ws
+  port: 2053
+  server: 141.94.77.169
+  servername: sni.111000.v6.navy
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+    path: '%2F%3Fed%3D2560security=tls'
+- name: 🇫🇷 法国 | vless | 202
+  network: ws
+  port: 8443
+  server: 162.19.79.101
+  servername: sni.111000.indevs.in
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+    path: '%2Fsecurity=tls'
+- name: 🇫🇷 法国 | vless | 203
   network: ws
   port: 2053
   server: 146.59.231.117
@@ -1883,312 +1692,13 @@ proxies:
     headers:
       Host: sni.111000.indevs.in
     path: /Telegram@V2rayAlpha/?ed=2560security=tls
-- name: 🇫🇷 法国 | vless | 238
-  network: ws
-  port: 2053
-  server: 31.56.176.37
-  servername: sni.latonyamadeline.ndjp.net
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.latonyamadeline.ndjp.net
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3security=tls'
-- name: 🇫🇷 法国 | vless | 239
-  network: ws
-  port: 8443
-  server: 51.75.23.189
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 240
-  network: ws
+- name: 🇫🇷 法国 | trojan | 206
+  password: b8808043-6566-4923-9195-e66bfb553d57
   port: 443
-  server: 51.91.248.251
-  servername: sni.111000.indevs.in
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-    path: '%2F%3Fed%3D2560security=tls'
-- name: 🇫🇷 法国 | vless | 242
-  network: ws
-  port: 2053
-  server: 51.91.100.9
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 243
-  network: ws
-  port: 2053
-  server: 51.210.151.165
-  servername: sni.111000.indevs.in
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-- alpn:
-  - http/1.1
-  name: 🇫🇷 法国 | vless | 244
-  network: ws
-  port: 8443
-  server: 152.228.134.216
-  servername: us2.wxgqlfx.xyz
-  tls: true
-  type: vless
-  uuid: 60d06568-b005-48bf-ba28-bac13b3a12ce
-  ws-opts:
-    headers:
-      Host: us2.wxgqlfx.xyz
-    path: '%2FTG%40wxgqlfxfp=chrome'
-- name: 🇫🇷 法国 | vless | 246
-  network: ws
-  port: 443
-  server: 51.77.140.254
-  servername: sni.111000.indevs.in
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-- name: 🇫🇷 法国 | trojan | 250
-  password: hCunaKqdEJDBO+3jCrJUSMevXOw9Q_r4Ey
-  port: 443
-  server: 38.60.136.156
-  skip-cert-verify: true
-  sni: 38.60.136.156
+  server: 51.38.99.96
+  sni: ba24.ir
   type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 254
-  network: tcp
-  port: '2053'
-  server: 141.227.188.221
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 29b68204-4954-4130-b479-abde091a6e11
-- name: 🇫🇷 法国 | vless | 256
-  network: ws
-  port: 8443
-  server: 51.77.140.38
-  servername: sni.111000.indevs.in
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-    path: '%2F%3FTelegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2%3Dsecurity=tls'
-- name: 🇫🇷 法国 | vless | 257
-  network: ws
-  port: 443
-  server: 51.91.251.149
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | trojan | 258
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 95.182.97.46
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 261
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 46.8.224.102
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- client-fingerprint: chrome
-  name: 🇫🇷 法国 | vless | 262
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: -yocQKQaxMZCMFI1drVJWLhXrJk7R5M252tbYTpRW2A
-    short-id: '!!str 9242fd8c012f'
-  server: 51.254.21.65
-  servername: www.microsoft.com
-  tls: false
-  type: vless
-  uuid: ca4173e8-aac1-4d59-8be8-f4881dc88683
-- name: 🇫🇷 法国 | vless | 263
-  network: ws
-  port: 2053
-  server: 162.19.243.106
-  servername: sni.111000.indevs.in
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.indevs.in
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 267
-  network: ws
-  port: 443
-  server: 217.182.76.202
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 2e68015f-a8b2-4893-a7a3-4edb19b178d9
-  ws-opts:
-    headers:
-      Host: ''
-    path: /
-- alpn:
-  - http/1.1
-  name: 🇫🇷 法国 | vless | 269
-  network: ws
-  port: 443
-  server: 51.91.40.26
-  servername: us2.wxgqlfx.xyz
-  tls: false
-  type: vless
-  uuid: a1bb5fa0-3b1e-4fbc-f1b6-686a35796849
-  ws-opts:
-    headers:
-      Host: us2.wxgqlfx.xyz
-    path: /TG@wxgqlfxfp=chromesecurity=tls
-- name: 🇫🇷 法国 | trojan | 270
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 92.119.127.156
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | vless | 272
-  network: ws
-  port: 8443
-  server: 51.91.101.216
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- name: 🇫🇷 法国 | vless | 274
-  network: ws
-  port: 443
-  server: 193.42.60.51
-  servername: sni.111000.dns.army
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.dns.army
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3security=tls'
-- name: 🇫🇷 法国 | vless | 276
-  network: ws
-  port: 8443
-  server: 51.91.100.128
-  servername: sni.111000.v6.navy
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: xyz
-  name: 🇫🇷 法国 | vless | 278
-  network: grpc
-  port: 2053
-  reality-opts:
-    public-key: r44-29dhInxzD-1JIMYuQMrbhieWsLm00BEHXn-6ggg
-    short-id: '!!str 6ba85179e30d4fc2'
-  server: 185.8.51.20
-  servername: play.google.com
-  tls: false
-  type: vless
-  uuid: 765e996f-f70e-4619-8506-d0f164bee67b
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 279
-  network: ws
-  port: 443
-  server: 146.59.85.226
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: pelang.org
-    path: /
-- name: 🇫🇷 法国 | trojan | 281
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2096
-  server: 88.218.78.20
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
-- name: 🇫🇷 法国 | trojan | 282
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 193.42.61.121
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
-- name: 🇫🇷 法国 | trojan | 285
-  password: 9498f3a0-2992-11ee-a4c7-1239d0255272
-  port: 443
-  server: fr.test3.net
-  sni: zula.ir
-  type: trojan
-- name: 🇫🇷 法国 | vless | 286
+- name: 🇫🇷 法国 | vless | 209
   network: ws
   port: 443
   server: 207.180.252.131
@@ -2201,7 +1711,425 @@ proxies:
     headers:
       Host: linek.perry.us.kg
     path: '%2Ftopicsfp=chromesecurity=tls'
-- name: 🇫🇷 法国 | trojan | 288
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 210
+  network: tcp
+  port: '2053'
+  server: 141.227.188.221
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 29b68204-4954-4130-b479-abde091a6e11
+- name: 🇫🇷 法国 | vless | 213
+  network: ws
+  port: 443
+  server: 51.91.251.37
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 214
+  network: ws
+  port: 443
+  server: 51.91.249.9
+  servername: sni.111000.indevs.in
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+    path: '%2F%3FTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2%3Dsecurity=tls'
+- name: 🇫🇷 法国 | vless | 220
+  network: ws
+  port: 443
+  server: 51.91.254.78
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 222
+  network: ws
+  port: 8443
+  server: 51.91.253.174
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 223
+  network: ws
+  port: 8443
+  server: 51.75.19.60
+  servername: sni.111000.indevs.in
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+- name: 🇫🇷 法国 | vless | 224
+  network: ws
+  port: 8443
+  server: 162.19.79.211
+  servername: sni.111000.v6.navy
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+    path: '%2F%3FTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2%3Dsecurity=tls'
+- name: 🇫🇷 法国 | vless | 225
+  network: ws
+  port: 8443
+  server: 146.59.229.78
+  servername: sni.111000.v6.navy
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+    path: '%2F%3FTelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3%2B%2540WangCai2%3Dsecurity=tls'
+- name: 🇫🇷 法国 | trojan | 227
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 193.42.61.121
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
+- name: 🇫🇷 法国 | vless | 228
+  network: ws
+  port: 8443
+  server: 51.91.254.189
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 232
+  network: ws
+  port: 8443
+  server: 51.91.251.43
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 236
+  network: ws
+  port: 8443
+  server: 51.91.251.198
+  servername: sni.111000.indevs.in
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+- name: 🇫🇷 法国 | vless | 238
+  network: ws
+  port: 2053
+  server: 51.75.28.76
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 239
+  network: ws
+  port: 443
+  server: 51.91.249.126
+  servername: sni.111000.v6.navy
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 242
+  network: ws
+  port: 443
+  server: 37.59.96.47
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 243
+  network: ws
+  port: 8443
+  server: 51.91.248.38
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | trojan | 245
+  password: 364d3aa0-58fc-11ed-b738-225401db9d57
+  port: 443
+  server: 54.36.191.211
+  skip-cert-verify: true
+  sni: ebank.bmi.ir
+  type: trojan
+- name: 🇫🇷 法国 | vless | 252
+  network: ws
+  port: 2053
+  server: 162.19.243.8
+  servername: sni.111000.indevs.in
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+    path: '%2F%3FTelegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2%3Dsecurity=tls'
+- name: 🇫🇷 法国 | vless | 259
+  network: ws
+  port: 8443
+  server: 51.75.23.189
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 262
+  network: ws
+  port: 8443
+  server: 146.59.225.19
+  servername: sni.111000.v6.navy
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+    path: '%2F%3Fed%3D2560security=tls'
+- name: 🇫🇷 法国 | vless | 263
+  network: ws
+  port: 8443
+  server: 51.91.100.128
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 265
+  network: ws
+  port: 2053
+  server: 152.228.135.238
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+    path: '%2F%3FTelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3%2B%2540WangCai2%3Dsecurity=tls'
+- name: 🇫🇷 法国 | vless | 266
+  network: ws
+  port: 2053
+  server: 51.91.100.9
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 267
+  network: ws
+  port: 443
+  server: 51.77.140.254
+  servername: sni.111000.indevs.in
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+- alpn:
+  - http/1.1
+  name: 🇫🇷 法国 | vless | 268
+  network: ws
+  port: 443
+  server: 51.91.40.26
+  servername: us2.wxgqlfx.xyz
+  tls: false
+  type: vless
+  uuid: a1bb5fa0-3b1e-4fbc-f1b6-686a35796849
+  ws-opts:
+    headers:
+      Host: us2.wxgqlfx.xyz
+    path: /TG@wxgqlfxfp=chromesecurity=tls
+- name: 🇫🇷 法国 | vless | 270
+  network: ws
+  port: 443
+  server: 51.91.248.253
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+    path: /?Telegram+@WangCai2=security=tls
+- name: 🇫🇷 法国 | vless | 273
+  network: ws
+  port: 8443
+  server: 51.210.150.65
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+    path: '%2F%3FTelegram%E9%A6%83%E5%9A%9A%E9%A6%83%E5%9A%A6+%40WangCai2%3Dsecurity=tls'
+- name: 🇫🇷 法国 | vless | 274
+  network: ws
+  port: 8443
+  server: 51.77.213.238
+  servername: sni.111000.dynv6.net
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.dynv6.net
+- client-fingerprint: chrome
+  name: 🇫🇷 法国 | vless | 275
+  network: ws
+  port: 443
+  server: 149.202.58.99
+  servername: bab-6.site
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3
+  ws-opts:
+    headers:
+      Host: bab-6.site
+    path: /vws/
+- name: 🇫🇷 法国 | vless | 278
+  network: ws
+  port: 8443
+  server: 135.125.191.89
+  servername: sni.111000.indevs.in
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+- alpn:
+  - http/1.1
+  name: 🇫🇷 法国 | vless | 279
+  network: ws
+  port: 8443
+  server: 152.228.134.216
+  servername: us2.wxgqlfx.xyz
+  tls: false
+  type: vless
+  uuid: 60d06568-b005-48bf-ba28-bac13b3a12ce
+  ws-opts:
+    headers:
+      Host: us2.wxgqlfx.xyz
+    path: '%2FTG%40wxgqlfxfp=chromesecurity=tls'
+- name: 🇫🇷 法国 | vless | 280
+  network: ws
+  port: 2053
+  server: 51.77.214.109
+  servername: sni.111000.indevs.in
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+- name: 🇫🇷 法国 | vless | 281
+  network: ws
+  port: 8443
+  server: 51.91.101.216
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | vless | 282
+  network: ws
+  port: 8443
+  server: 51.77.140.38
+  servername: sni.111000.indevs.in
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.indevs.in
+    path: '%2F%3FTelegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2%3Dsecurity=tls'
+- name: 🇫🇷 法国 | trojan | 283
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 92.119.127.156
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 284
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
@@ -2210,7 +2138,187 @@ proxies:
   type: trojan
   ws-opts:
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
+- name: 🇫🇷 法国 | vless | 285
+  network: ws
+  port: 8443
+  server: 51.91.100.9
+  servername: sni.111000.v6.navy
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+    path: '%2F%3Fed%3D2560%26Telegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2security=tls'
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 288
+  network: ws
+  port: 443
+  server: 217.182.76.202
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 2e68015f-a8b2-4893-a7a3-4edb19b178d9
+  ws-opts:
+    headers:
+      Host: ''
+    path: /
+- client-fingerprint: chrome
+  name: 🇫🇷 法国 | vless | 292
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: -yocQKQaxMZCMFI1drVJWLhXrJk7R5M252tbYTpRW2A
+    short-id: '!!str 9242fd8c012f'
+  server: 51.254.21.65
+  servername: www.microsoft.com
+  tls: false
+  type: vless
+  uuid: ca4173e8-aac1-4d59-8be8-f4881dc88683
 - name: 🇫🇷 法国 | vless | 294
+  network: ws
+  port: 443
+  server: 193.42.60.51
+  servername: sni.111000.dns.army
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.dns.army
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3security=tls'
+- name: 🇫🇷 法国 | trojan | 297
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2096
+  server: 88.218.78.20
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
+- name: 🇫🇷 法国 | trojan | 299
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 62.60.157.104
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 300
+  network: ws
+  port: 443
+  server: 146.59.85.226
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: pelang.org
+    path: /
+- name: 🇫🇷 法国 | trojan | 302
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 77.221.152.22
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 303
+  password: e4f288433b
+  port: 443
+  server: 54.36.173.159
+  sni: pol1.connecton.surf
+  type: trojan
+- name: 🇫🇷 法国 | trojan | 304
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 46.226.167.115
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: 🇫🇷 法国 | vless | 305
+  port: 443
+  reality-opts:
+    public-key: Icm1TWywIJz1OVINqBXHYeQr1yxDoT-t3R9DDi-CD2U
+    short-id: '!!str 71b1677c130233d7'
+  server: fr-01.slnode.cc
+  servername: fr-01.slnode.cc
+  tls: false
+  type: vless
+  uuid: f00297b0-a501-4982-9a8e-2cf2df5b4f84
+- name: 🇫🇷 法国 | trojan | 306
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 46.226.167.115
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇫🇷 法国 | vless | 307
+  port: 8443
+  reality-opts:
+    public-key: 14isAyQkkB_jdJ_uBtTGESevP2jjflqiBA1k_3SXyCo
+    short-id: '!!str '
+  server: 195.216.169.124
+  servername: stats.vk-portal.net
+  tls: false
+  type: vless
+  uuid: 4efaf684-3e7b-47a6-9193-d8d8f3481210
+- name: 🇫🇷 法国 | vless | 308
+  network: ws
+  port: 443
+  server: bab-6.site
+  servername: bab-6.site
+  tls: false
+  type: vless
+  uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3
+  ws-opts:
+    headers:
+      Host: bab-6.site
+    path: /vws/fp=chromesecurity=tls
+- name: 🇫🇷 法国 | vless | 311
+  network: ws
+  port: 443
+  server: 54.37.51.238
+  servername: sni.111000.v6.navy
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🇫🇷 法国 | trojan | 313
+  password: 9498f3a0-2992-11ee-a4c7-1239d0255272
+  port: 443
+  server: fr.test3.net
+  sni: zula.ir
+  type: trojan
+- name: 🇫🇷 法国 | vless | 315
   network: ws
   port: 443
   server: 194.32.76.242
@@ -2225,169 +2333,7 @@ proxies:
     path: '%2Ftravelsecurity=tls'
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 296
-  network: ws
-  port: 443
-  server: 57.128.189.253
-  servername: kapelleng.com
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: kapelleng.com
-    path: /linkvws
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 297
-  network: ws
-  port: 443
-  server: 57.128.189.206
-  servername: ads.x5.ru
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: ''
-    path: /linkvws
-- name: 🇫🇷 法国 | trojan | 299
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 77.221.152.22
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇫🇷 法国 | vless | 301
-  port: 8443
-  reality-opts:
-    public-key: 14isAyQkkB_jdJ_uBtTGESevP2jjflqiBA1k_3SXyCo
-    short-id: '!!str '
-  server: 195.216.169.124
-  servername: stats.vk-portal.net
-  tls: false
-  type: vless
-  uuid: 4efaf684-3e7b-47a6-9193-d8d8f3481210
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 302
-  network: ws
-  port: 443
-  server: 57.128.189.241
-  servername: ads.x5.ru
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: ''
-    path: /linkvws
-- name: 🇫🇷 法国 | trojan | 303
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 46.226.167.115
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 305
-  network: ws
-  port: 16616
-  server: planb.mojcn.com
-  tls: false
-  type: vmess
-  uuid: 2a2645fe-34b6-4b0b-87bb-241cd17bb71f
-  ws-opts:
-    headers:
-      Host: 1a7b4b2d69cfc3485134b5ca9cc738f6.mobgslb.tbcache.com
-    path: /
-- name: 🇫🇷 法国 | trojan | 306
-  password: 973ed2e0-c4d8-4737-a093-71629148086d
-  port: 443
-  server: 51.77.213.197
-  sni: frt2.sshocean.net
-  type: trojan
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇫🇷 法国 | vless | 307
-  port: 443
-  server: fr155.mechvpn.online
-  tls: true
-  type: vless
-  uuid: a12ac1e4-c6dd-47e6-89c5-7de02dc096d8
-- name: 🇫🇷 法国 | vless | 308
-  network: ws
-  port: 443
-  server: bab-6.site
-  servername: bab-6.site
-  tls: false
-  type: vless
-  uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3
-  ws-opts:
-    headers:
-      Host: bab-6.site
-    path: /vws/fp=chromesecurity=tls
-- alterId: 1
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 309
-  network: ws
-  port: 443
-  server: 23.162.152.177
-  servername: 23.162.152.177
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: 23.162.152.177
-    path: linkvws
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 310
-  network: tcp
-  port: '2053'
-  server: de5.taskflowhub.org
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: ca58b165-0f7d-49aa-9fae-a017e8a0f884
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: 🇫🇷 法国 | vless | 312
-  port: 443
-  reality-opts:
-    public-key: Icm1TWywIJz1OVINqBXHYeQr1yxDoT-t3R9DDi-CD2U
-    short-id: '!!str 71b1677c130233d7'
-  server: fr-01.slnode.cc
-  servername: fr-01.slnode.cc
-  tls: false
-  type: vless
-  uuid: f00297b0-a501-4982-9a8e-2cf2df5b4f84
-- name: 🇫🇷 法国 | vless | 313
-  network: ws
-  port: 719
-  server: blit33.hamrahcore.ir
-  tls: false
-  type: vless
-  uuid: 26def452-b87f-42f5-92f6-e7ba0711ce69
-  ws-opts:
-    headers:
-      Host: play.google.com
-    path: /api/v2/xtrnwqjbkr?ed=2560
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷 法国 | vmess | 314
+  name: 🇫🇷 法国 | vmess | 316
   network: ws
   port: '2087'
   server: fr5.taskflowhub.org
@@ -2400,19 +2346,140 @@ proxies:
       Host: fr5.taskflowhub.org
     path: /realtime
 - client-fingerprint: chrome
-  name: 🇫🇷 法国 | vless | 315
-  port: 8443
+  grpc-opts:
+    grpc-service-name: xyz
+  name: 🇫🇷 法国 | vless | 317
+  network: grpc
+  port: 2053
   reality-opts:
-    public-key: zJ2Zy8TDKJU0usrZ061Jbjn1jpatD-uAqkUdbtCVMlQ
-    short-id: '!!str '
-  server: 45.95.233.8
-  servername: 01.img.avito.st
+    public-key: r44-29dhInxzD-1JIMYuQMrbhieWsLm00BEHXn-6ggg
+    short-id: '!!str 6ba85179e30d4fc2'
+  server: 185.8.51.20
+  servername: play.google.com
   tls: false
   type: vless
-  uuid: 7e91dc87-4881-4332-8316-14ed26451bd7
+  uuid: 765e996f-f70e-4619-8506-d0f164bee67b
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇫🇷 法国 | vless | 316
+  name: 🇫🇷 法国 | vless | 319
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: OhHt4eEk9pZVzDpt37apm_7DRM0qP6_D4yJBCK0n02A
+    short-id: '!!str 5701e710c025b4b8'
+  server: 89.208.97.95
+  servername: amazon.fr
+  tls: false
+  type: vless
+  uuid: e96ffcc1-5acf-4e24-9b67-1b736a2f1c24
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 320
+  network: tcp
+  port: '2053'
+  server: uk5.taskflowhub.org
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 89371dfc-2618-40d7-a558-693ff4f7f1eb
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇫🇷 法国 | vless | 324
+  port: 443
+  reality-opts:
+    public-key: 6eN2NciEaZis5J4muRRqpfLQ1OglI3A8lNSTmAGo6Do
+    short-id: '!!str 3c6fc84d'
+  server: 194.226.169.189
+  servername: stats.vk-portal.net
+  tls: false
+  type: vless
+  uuid: 8ef19221-6d5e-4bce-baa1-7c043eae3309
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 325
+  network: ws
+  port: 443
+  server: 57.128.189.206
+  servername: ads.x5.ru
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: ''
+    path: /linkvws
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 326
+  network: ws
+  port: 443
+  server: 57.128.189.241
+  servername: ads.x5.ru
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: ''
+    path: /linkvws
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 327
+  network: ws
+  port: 443
+  server: 57.128.189.253
+  servername: kapelleng.com
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: kapelleng.com
+    path: /linkvws
+- name: 🇫🇷 法国 | trojan | 330
+  password: 973ed2e0-c4d8-4737-a093-71629148086d
+  port: 443
+  server: 51.77.213.197
+  sni: frt2.sshocean.net
+  type: trojan
+- name: 🇫🇷 法国 | vless | 331
+  network: ws
+  port: 80
+  server: de5.niekotin.de
+  tls: false
+  type: vless
+  uuid: 44d0f473-3135-4d25-a318-c981a65d7c0f
+  ws-opts:
+    headers:
+      Host: ''
+    path: '%2Fvless'
+- client-fingerprint: chrome
+  name: 🇫🇷 法国 | vless | 332
+  port: 24283
+  reality-opts:
+    public-key: o_o1PS9FBTa1BoUZnBfL5UxQ7ArehI7DtySEXFqQPjU
+    short-id: '!!str d18ac7'
+  server: argoovpn.imanaghapour.ir
+  servername: www.yahoo.com
+  tls: false
+  type: vless
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 333
+  network: ws
+  port: 16616
+  server: planb.mojcn.com
+  tls: false
+  type: vmess
+  uuid: 2a2645fe-34b6-4b0b-87bb-241cd17bb71f
+  ws-opts:
+    headers:
+      Host: 1a7b4b2d69cfc3485134b5ca9cc738f6.mobgslb.tbcache.com
+    path: /
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇫🇷 法国 | vless | 334
   port: 443
   reality-opts:
     public-key: XoJMrCB2aP6YCHbW4vsCoDF2h_d8eGZs3u_UAddWBBA
@@ -2422,36 +2489,68 @@ proxies:
   tls: false
   type: vless
   uuid: c5bbdac7-6ff5-4762-87bf-870f55a03581
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: 🇫🇷 法国 | vless | 317
-  port: 443
-  reality-opts:
-    public-key: d3yQvdpwFHpLkl0ZbTnMH4uihCTKn4CAHy0W6so0VTI
-    short-id: '!!str 6a0f1cd94b762e98'
-  server: fr.plus-hit.ru
-  servername: fr.plus-hit.ru
-  tls: false
-  type: vless
-  uuid: 2c78c246-5556-47bf-9a22-0ed5d6237389
-- alterId: 0
+- alterId: 1
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 322
-  network: tcp
-  port: '2053'
-  server: uk5.taskflowhub.org
-  servername: ''
+  name: 🇫🇷 法国 | vmess | 335
+  network: ws
+  port: 443
+  server: 23.162.152.177
+  servername: 23.162.152.177
   tls: true
   type: vmess
-  uuid: 89371dfc-2618-40d7-a558-693ff4f7f1eb
-- name: FR【机场推荐：https://a9a.xyz】7
-  port: 6805
-  server: faranse.duravex.net
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: 23.162.152.177
+    path: linkvws
+- alpn:
+  - h2
+  client-fingerprint: chrome
+  name: 🇫🇷 法国 | vless | 336
+  port: 443
+  server: fr.1323.world
+  servername: b12a6eea4807ca4e.1323.world
+  tls: true
+  type: vless
+  uuid: 0e90f352-e9bc-4834-8ff6-49ba887eded4
+- client-fingerprint: chrome
+  name: 🇫🇷 法国 | vless | 338
+  port: 8443
+  reality-opts:
+    public-key: zJ2Zy8TDKJU0usrZ061Jbjn1jpatD-uAqkUdbtCVMlQ
+    short-id: '!!str '
+  server: 45.95.233.8
+  servername: 01.img.avito.st
   tls: false
   type: vless
-  uuid: 4c0c49ab-28f1-4411-bf90-5d073caf56ed
+  uuid: 7e91dc87-4881-4332-8316-14ed26451bd7
+- name: 🇫🇷 法国 | vless | 341
+  network: ws
+  port: 719
+  server: blit333.hamrahcore.ir
+  tls: false
+  type: vless
+  uuid: 70a719c5-663e-4186-a32d-29a3f6361a72
+  ws-opts:
+    headers:
+      Host: play.google.com
+    path: '%2Fapi%2Fv2%2Fxtrnwqjbkr%3Fed%3D2560'
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇫🇷 法国 | vless | 343
+  port: 443
+  reality-opts:
+    public-key: sZC9oiKs5pDEmHJbv-lgo_zGhL54KBns_Prep67Tn1M
+    short-id: '!!str 187f4dbb139ff170'
+  server: 217.179.6.163
+  servername: play.google.com
+  tls: false
+  type: vless
+  uuid: 5c1246a7-c871-42eb-aa6e-e514d433aa69
 - client-fingerprint: chrome
-  name: 🇫🇷 法国 | vless | 325
+  name: 🇫🇷 法国 | vless | 344
   network: tcp
   port: 443
   reality-opts:
@@ -2466,45 +2565,8 @@ proxies:
     headers:
       Host: www.play.google.com
 - client-fingerprint: chrome
-  name: 🇫🇷 法国 | vless | 326
-  port: 24283
-  reality-opts:
-    public-key: o_o1PS9FBTa1BoUZnBfL5UxQ7ArehI7DtySEXFqQPjU
-    short-id: '!!str d18ac7'
-  server: argoovpn.imanaghapour.ir
-  servername: www.yahoo.com
-  tls: false
-  type: vless
-  uuid: 88888888-8888-8888-8888-888888888888
-- client-fingerprint: chrome
-  name: 🇫🇷 法国 | vless | 327
-  network: xhttp
-  port: 443
-  reality-opts:
-    public-key: U0tKM7B_2ec1YPaQOaBq1J-WRoJY7qNr3QNJ0VamRAQ
-    short-id: '!!str 882655'
-  server: 185.156.72.59
-  servername: amazon.com
-  tls: false
-  type: vless
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: amazon.com
-    path: /biQ-5UZ0Xd7lO5JpP
-- alpn:
-  - h2
-  client-fingerprint: chrome
-  name: 🇫🇷 法国 | vless | 329
-  port: 443
-  server: fr.1323.world
-  servername: b12a6eea4807ca4e.1323.world
-  tls: true
-  type: vless
-  uuid: 0e90f352-e9bc-4834-8ff6-49ba887eded4
-- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇫🇷 法国 | vless | 330
+  name: 🇫🇷 法国 | vless | 346
   port: 443
   reality-opts:
     public-key: SAw2LG0CxynFfpOpX9-5PZOxlz7eQloRLSnbQh9pRUs
@@ -2514,20 +2576,41 @@ proxies:
   tls: false
   type: vless
   uuid: 050fb692-dba7-4b69-b1fd-182c8e1c53eb
-- name: 🇫🇷 法国 | trojan | 334
+- name: 🇫🇷 法国 | vless | 353
   network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 46.226.167.115
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
+  port: 80
+  server: france-paris.hostinger.kcartik-vps.com
+  tls: false
+  type: vless
+  uuid: b5920b52-504c-4835-978c-fbc4110d5840
   ws-opts:
     headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+      Host: france-paris.hostinger.kcartik-vps.com
+    path: '%2Fvless'
+- name: 🇫🇷 法国 | vless | 367
+  network: tcp
+  port: 8086
+  server: fr.eorqen.ir
+  tls: false
+  type: vless
+  uuid: 18323cf8-8def-4456-9ac7-ec5cb7cceae1
+  ws-opts:
+    headers:
+      Host: snapp.ir
+- name: 🇫🇷 法国 | vless | 370
+  network: ws
+  port: 719
+  server: about.downloadnova.live
+  tls: false
+  type: vless
+  uuid: 373209d7-c464-4ad3-9027-07e94afad7d5
+  ws-opts:
+    headers:
+      Host: play.google.com
+    path: /api/v2/xtrnwqjbkr?ed=2560
 - client-fingerprint: random
   flow: xtls-rprx-vision
-  name: 🇫🇷 法国 | vless | 337
+  name: 🇫🇷 法国 | vless | 371
   port: 443
   reality-opts:
     public-key: W-zf_ncm9sYALF5EqvUsxqTkYGdAw-tQczT2SqwVMGE
@@ -2536,64 +2619,7 @@ proxies:
   servername: fr1.helper-internet.com
   tls: false
   type: vless
-  uuid: c1d2e359-5652-40c2-bd0b-22263af6e5f4
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇫🇷 法国 | vless | 338
-  port: 443
-  reality-opts:
-    public-key: 6eN2NciEaZis5J4muRRqpfLQ1OglI3A8lNSTmAGo6Do
-    short-id: '!!str 3c6fc84d'
-  server: 194.226.169.189
-  servername: stats.vk-portal.net
-  tls: false
-  type: vless
-  uuid: 8ef19221-6d5e-4bce-baa1-7c043eae3309
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇫🇷 法国 | vless | 344
-  port: 443
-  reality-opts:
-    public-key: FurqA-2jJHS4vNj92Ya5i2ZTxf0sWSjUTaz5Y_KMBgk
-    short-id: '!!str 57cc65bfd5ef7465'
-  server: 185.212.117.34
-  servername: www.scaleway.com
-  tls: false
-  type: vless
-  uuid: bb2b0112-577f-4862-886a-3c2ee004ca23
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: 🇫🇷 法国 | vless | 358
-  port: 42652
-  server: 185.171.202.76
-  servername: yahoo.com
-  tls: true
-  type: vless
-  uuid: 4e783787-4de7-51de-ae32-01ce7203b838
-- name: 🇫🇷 法国 | vless | 364
-  network: ws
-  port: 719
-  server: blit333.hamrahcore.ir
-  tls: false
-  type: vless
-  uuid: 70a719c5-663e-4186-a32d-29a3f6361a72
-  ws-opts:
-    headers:
-      Host: play.google.com
-    path: '%2Fapi%2Fv2%2Fxtrnwqjbkr%3Fed%3D2560'
-- name: 🇫🇷 法国 | vless | 369
-  network: tcp
-  port: 8086
-  server: fr.eorqen.ir
-  tls: false
-  type: vless
-  uuid: 765e996f-f70e-4619-8506-d0f164bee67b
-  ws-opts:
-    headers:
-      Host: snapp.ir
-    path: /
+  uuid: 2003b2e8-0f93-47d7-8290-9df2321ef62a
 - client-fingerprint: random
   name: FR1｜商宽｜非常安全
   network: tcp
@@ -2608,7 +2634,7 @@ proxies:
   type: vless
   uuid: 3bc9c90e-dd6c-400d-bfb0-1d06b13fe46c
 - cipher: aes-256-cfb
-  name: '🇫🇷_FR_法国 #2'
+  name: '🇫🇷_FR_法国 #1'
   password: asdKkaskJKfnsa
   port: 443
   server: 51.158.54.209
