@@ -241,7 +241,7 @@ proxies:
     path: '%2Fassignment'
 - alpn:
   - http/1.1
-  name: '未知 TROJAN-182 | free-nodes #2'
+  name: 未知 TROJAN-170 | free-nodes
   network: ws
   password: humanity
   port: 443
@@ -318,7 +318,7 @@ proxies:
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   port: 46424
   server: 103.177.136.42
-  skip-cert-verify: false
+  skip-cert-verify: true
   sni: de.01.naiun.bilibili.com
   type: trojan
   udp: true
@@ -632,15 +632,6 @@ proxies:
   uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
   ws-opts:
     path: /arki?ed=2048
-- alterId: 0
-  cipher: chacha20-ietf-poly1305
-  name: 'xx|e2b9|puddincat07@Telegram #1'
-  password: hbGrpfvNrJsUmKmPbR3iY2
-  port: 443
-  server: tinkered-pennies-puppies.freesocks.work
-  skip-cert-verify: true
-  tls: true
-  type: ss
 - name: 新加坡3|@ripaojiedian
   network: tcp
   password: BxceQaOe
@@ -649,16 +640,20 @@ proxies:
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
   type: trojan
-- alterId: 0
-  cipher: chacha20-ietf-poly1305
-  name: 'gb|e046|puddincat07@Telegram #1'
-  password: UlY3BdJmpmWdy9RJmgxfaA
-  port: 1080
-  server: 217.179.5.162
-  skip-cert-verify: true
-  tls: true
-  type: ss
+- name: 'hk|c86f|puddincat07@Telegram #1'
+  network: ws
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  port: '8443'
+  server: 83.229.121.78
+  skip-cert-verify: false
+  sni: hhcm.hhxaf.cc.cd
+  type: trojan
   udp: true
+  ws-opts:
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/50.0.2661.102 Safari/537.36
+    path: /
 - name: 'us|cf25|puddincat07@Telegram #1'
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
@@ -683,33 +678,6 @@ proxies:
     headers:
       Host: hhcm.hhxaf.cc.cd
     path: /
-- alpn:
-  - h2
-  - http/1.1
-  - h3
-  name: 'ch|9800|puddincat07@Telegram #1'
-  network: tcp
-  password: SoftNetConnect
-  port: '42549'
-  server: 83.228.230.226
-  skip-cert-verify: true
-  sni: www.speedtest.net
-  type: trojan
-  udp: true
-- name: 'hk|c86f|puddincat07@Telegram #1'
-  network: ws
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  port: '8443'
-  server: 83.229.121.78
-  skip-cert-verify: false
-  sni: hhcm.hhxaf.cc.cd
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/50.0.2661.102 Safari/537.36
-    path: /
 - name: US_speednode_0070
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
@@ -723,63 +691,85 @@ proxies:
     headers:
       Host: tjsp.hhxaf.cc.cd
     path: /
-- name: KR_speednode_0004
+- cipher: chacha20-ietf-poly1305
+  name: 'nl|0cb9|puddincat07@Telegram #1'
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 193.29.139.235
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 'nl|42be|puddincat07@Telegram #1'
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 193.29.139.151
+  type: ss
+- cipher: aes-256-gcm
+  name: 'de|d8af|puddincat07@Telegram #1'
+  password: RexnBgU7EV5ADxG
+  port: 7001
+  server: 213.202.208.199
+  type: ss
+- alpn:
+  - h2
+  - http/1.1
+  - h3
+  name: 'ch|9800|puddincat07@Telegram #1'
+  network: tcp
+  password: SoftNetConnect
+  port: '42549'
+  server: 83.228.230.226
+  skip-cert-verify: true
+  sni: www.speedtest.net
+  type: trojan
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 'nl|9e7b|puddincat07@Telegram #1'
+  password: CJmTCCx7Ltud
+  port: 8388
+  server: 108.181.126.122
+  type: ss
+- name: 'fr|06f7|puddincat07@Telegram #1'
+  password: telegram-id-privatevpns
+  port: 22222
+  server: 13.37.6.138
+  skip-cert-verify: true
+  sni: trojan.burgerip.co.uk
+  type: trojan
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 'cn|becb|puddincat07@Telegram #1'
+  password: 2be0c954-4291-45ea-b47d-ca713180550b
+  port: 52612
+  server: 111.29.57.125
+  tfo: false
+  type: ss
+- cipher: aes-128-gcm
+  name: 'us|f284|puddincat07@Telegram #1'
+  password: Yc2CtrIz8L
+  port: 16899
+  server: 75.102.51.45
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 'us|9262|puddincat07@Telegram #1'
+  password: kDWvXYZoTBcGkC4
+  port: 8882
+  server: 38.121.43.248
+  type: ss
+  udp: true
+- name: 'us|dcb7|puddincat07@Telegram #1'
   network: ws
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  password: 71409d3e488548e8bb076d229778f008
   port: 443
-  server: 129.154.50.159
-  skip-cert-verify: false
-  sni: tjsp.hhxaf.cc.cd
+  server: 104.17.147.77
+  skip-cert-verify: true
+  sni: bangladeshipatri.com
   type: trojan
   udp: true
   ws-opts:
     headers:
-      Host: tjsp.hhxaf.cc.cd
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 'nl|cc19|puddincat07@Telegram #1'
-  password: QCXDxuDlTTMD7jtgHUjIoj
-  port: 8080
-  server: 193.29.139.233
-  type: ss
-- cipher: rc4-md5
-  name: 'ca|4230|puddincat07@Telegram #1'
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 137.184.174.93
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 'us|904d|puddincat07@Telegram #1'
-  password: Ll6cYfXM5DzQbdtMMb72A_jqVnNljU3yqe
-  port: 21273
-  server: 149.104.109.74
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 'gb|99d3|puddincat07@Telegram #1'
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.2
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 'us|85f8|puddincat07@Telegram #1'
-  network: ws
-  port: 20086
-  server: 137.175.124.167
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: b4bce500-11fe-4f8f-a344-01ac247af9bd
-  ws-opts:
-    headers:
-      host: ''
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 'ca|c79a|puddincat07@Telegram #1'
-  password: JIhN6rBKkaEboLNXVSv5rq
-  port: 80
-  server: 142.4.216.225
-  type: ss
+      Host: bangladeshipatri.com
+    path: 6b777a91
 - cipher: aes-256-gcm
   name: 🟢🇨🇳_github.com/Ruk1ng001_6607b...
   password: '123'
@@ -996,6 +986,16 @@ proxies:
   password: VJeAjiJ40F2Il17Elv285W
   port: 8388
   server: 141.227.152.129
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: chacha20-ietf-poly1305
+  name: 🇬🇧GB英国 509.9KB/s
+  password: UlY3BdJmpmWdy9RJmgxfaA
+  port: 1080
+  server: 217.179.5.162
+  skip-cert-verify: true
+  tls: true
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
@@ -1644,46 +1644,54 @@ proxies:
   server: 91.198.166.110
   type: ss
   udp: true
-- name: 🇩🇪 德国 | trojan | 774
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 91.220.8.170
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    path: /trTelegram+@WangCai2
-- name: 未知 TROJAN-189 | free-nodes
-  network: ws
-  password: humanity
+- name: 🇺🇸US(AzadNet.t.me)
+  network: tcp
+  password: 654a309b-fdaa-3263-9bed-74a7e1532fd9
   port: 443
-  server: 188.114.96.3
-  skip-cert-verify: true
-  sni: www.gossipglove.com
+  server: 103.224.182.213
+  sni: az05feiy.kuli888.xyz
   type: trojan
-  ws-opts:
-    headers:
-      Host: www.gossipglove.com
-    path: '%2Fassignment'
-- name: 未知 TROJAN-194 | free-nodes
-  network: ws
-  password: humanity
-  port: 443
-  server: 188.114.96.3
+- name: 🇩🇪 德国 | trojan | 1214
+  network: tcp
+  password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu
+  port: 9443
+  server: de-1.hysteria.ltd
   skip-cert-verify: false
-  sni: www.creationlong.org
+  sni: de-1.hysteria.ltd
+  type: trojan
+- name: 🇦🇹 奥地利 | trojan | 12
+  network: ws
+  password: humanity
+  port: 443
+  server: 212.183.88.136
+  skip-cert-verify: false
+  sni: www.calmlunch.com
   type: trojan
   ws-opts:
     headers:
-      Host: www.creationlong.org
-    path: '%2Fassignment'
+      Host: www.calmlunch.com
+    path: /assignment
 - alpn:
   - http/1.1
-  name: 🇺🇸 美国 | trojan | 516
+  name: 未知 TROJAN-111 | free-nodes
+  network: ws
+  password: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  port: 8443
+  server: 104.18.12.149
+  skip-cert-verify: true
+  sni: sni.111000.dynv6.net
+  type: trojan
+  ws-opts:
+    headers:
+      Host: sni.111000.dynv6.net
+    path: '%2F'
+- alpn:
+  - http/1.1
+  name: 未知 TROJAN-181 | free-nodes
   network: ws
   password: Mitivpn
   port: 443
-  server: 216.24.57.251
+  server: 216.24.57.6
   skip-cert-verify: true
   sni: dash.hitgram.ir
   type: trojan
@@ -1691,498 +1699,118 @@ proxies:
     headers:
       Host: dash.hitgram.ir
     path: '%2F%3Fed%3D2048'
-- name: 未知 TROJAN-192 | free-nodes
-  network: ws
-  password: humanity
-  port: 443
-  server: 188.114.98.0
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: '%2Fassignment'
-- alpn:
-  - http/1.1
-  name: trojan 614 - 2393
-  network: ws
-  password: '|??i_JKOEo!rcur2'
-  port: 443
-  server: 190.93.246.12
-  sni: Flat-WOod-1B6a.mahdIhesINE3.worKErs.dEv
-  type: trojan
-  ws-opts:
-    path: '%2FeyJqdW5rIjoiQjJ4ZVlETFIiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119%3Fed%3D2560'
-- name: 'By #16'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.152.97
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: '%2Fassignment'
-- name: '[🇨🇦]t.me/ConfigsHub #2'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.17.121.71
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: '%2Fassignment'
-- name: 'By #20'
-  network: ws
-  password: humanity
-  port: 443
-  server: 216.24.57.6
-  skip-cert-verify: false
-  sni: www.calmloud.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: 🇰🇷KR韩国16
-  password: '1234567890'
-  port: 30005
-  server: 220.87.152.138
-  sni: kfm-bn0.pages.dev
-  type: trojan
-- alterId: 0
-  name: 🇺🇸US美国5
+- name: 🇸🇬 新加坡 | trojan | 70
   network: tcp
-  password: lhvfOzkRQqNd9cLDwpryrAkFGgqzlZR9Fi
-  port: 443
-  server: 38.54.13.189
-  skip-cert-verify: true
-  sni: 38.54.13.189
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇸🇬 新加坡 | trojan | 78
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   port: 45619
-  server: 188.253.12.98
+  server: 188.253.12.92
   skip-cert-verify: true
   sni: fr.01.naiun.bilibili.com
   type: trojan
-- name: 🇫🇷 法国 | trojan | 209
+- name: '未命名 #1'
+  network: ws
+  password: humanity
+  port: 443
+  server: www.calmlunch.com
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- name: 🇸🇬 新加坡 | trojan | 15
   network: tcp
-  password: d2adff89-5143-4d67-921f-3478464de5bb
-  port: 443
-  server: 38.180.240.150
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 41943
+  server: 188.253.12.99
   skip-cert-verify: true
-  sni: fr.freeguard.org
+  sni: az.01.naiun.bilibili.com
   type: trojan
-- name: '🏳️ #4'
-  network: ws
-  password: '1710442808'
-  port: 443
-  server: 104.18.12.149
-  skip-cert-verify: true
-  sni: subb.nrshop198.workers.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: subb.nrshop198.workers.dev
-    path: '%2F'
-- name: 🌐 Anycast-IP | [IPv6] | [BL]
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 95.181.167.26
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: US美国(mibei77.com 米贝节点分享)
-  network: ws
-  password: '1234567890'
-  port: 443
-  server: 77.239.127.77
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
 - alpn:
   - http/1.1
-  name: 'By #33'
-  network: ws
-  password: MiTiVPN
-  port: 443
-  server: 45.131.4.118
-  sni: linkkon-w.ir
-  type: trojan
-  ws-opts:
-    headers:
-      Host: linkkon-w.ir
-    path: '%2Fed%3Dmitivpn'
-- alpn:
-  - http/1.1
-  name: 'By #36'
+  name: '[🇨🇦]t.me/ConfigsHub #1'
   network: ws
   password: mitivpn
   port: 443
   server: 188.114.97.6
-  skip-cert-verify: false
-  sni: 2.1.mitivpn.dee.srfsl.gleobal.fastl3y.n3et.mitivpn.site
-  type: trojan
-  ws-opts:
-    path: https%3A%2F%2Fchatgpt.com
-- name: CA加拿大(mibei77.com 米贝节点分享)
-  network: ws
-  password: 4c3164ee-abcf-4091-abea-d1cd4937a68d
-  port: 443
-  server: store.ubi.com
-  skip-cert-verify: true
-  sni: jy.hhllfly.kdns.fr
+  sni: cdn.linkman1.ir
   type: trojan
   ws-opts:
     headers:
-      Host: jy.hhllfly.kdns.fr
-    path: '%2F%3Fed%3D2048'
-- alpn:
-  - http/1.1
-  name: 'By #42'
-  network: ws
-  password: MiTiVPN
-  port: 443
-  server: 104.19.199.34
-  skip-cert-verify: false
-  sni: linkkon-w.ir
-  type: trojan
-  ws-opts:
-    headers:
-      Host: linkkon-w.ir
-    path: '%2Fed%3Dmitivpn'
-- name: '🏳️ #7'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.9.83
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
-- name: 未知 TROJAN-207 | free-nodes
-  network: ws
-  password: r137979f
-  port: 2087
-  server: 162.159.153.212
-  sni: sheleqaz.emotionreza.workers.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: sheleqaz.emotionreza.workers.dev
-    path: '%2F'
-- alpn:
-  - http/1.1
-  name: 🇩🇪[By
-  network: ws
-  password: mSzFVhUczD
-  port: 443
-  server: 104.20.5.134
-  sni: abest.api-tel.xyz
-  type: trojan
-  ws-opts:
-    headers:
-      Host: abest.api-tel.xyz
-    path: '%2F'
-- name: 美国+3
-  password: 414dff55-922a-4dc8-b5d3-b6517942b25a
-  port: 15003
-  server: east.eeeeeef998.buzz
-  skip-cert-verify: true
-  type: trojan
-- name: 'By #51'
-  network: ws
-  password: humanity
-  port: 443
-  server: 188.114.97.4
-  skip-cert-verify: false
-  sni: www.calmloud.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-- name: 'By #56'
-  network: ws
-  password: 5a2c16f9
-  port: 443
-  server: 104.19.220.22
-  sni: snippets.kkii.eu.org
-  type: trojan
-  ws-opts:
-    headers:
-      Host: snippets.kkii.eu.org
-    path: //
-- name: 🇩🇪 德国 | trojan | 349
+      Host: cdn.linkman1.ir
+    path: '%2F720f09dba195249b423f771661162528%2Fworkers%2Fservices%2Fview%2Fmitivpn%2Fproduction%2Fsettings'
+- name: '[1596]🎈 🇷🇺 RUS [TR] 🎈 🗺️ #d858...'
   network: ws
   password: 8r<[9'l6hAO#8ZQi
-  port: 2087
-  server: 77.221.157.251
+  port: 8443
+  server: 217.19.4.99
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: trojan 418 - 2197
-  password: cd7fa4a0-4684-11f0-a8d1-1239d0255272
-  port: 443
-  server: 15.204.234.166
-  skip-cert-verify: true
-  sni: usa.test3.net
-  type: trojan
-- alpn:
-  - http/1.1
-  name: 'By #66'
-  network: ws
-  password: v2ray_vpn_ir
-  port: 443
-  server: 188.114.97.6
-  skip-cert-verify: true
-  sni: sadszdx.global.ssl.fastly.net.b5r.ir
-  type: trojan
-  ws-opts:
-    path: https://chatgpt.com
-- name: 未知 TROJAN-142 | free-nodes
-  network: tcp
-  password: 8800c518-e68a-4441-a45c-cd67855784c8
-  port: 443
-  server: kr1.sanfen001.pics
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 125
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 47.82.155.79
-  skip-cert-verify: true
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-- alpn:
-  - http/1.1
-  name: 'By #70'
-  network: ws
-  password: ''
-  port: 443
-  server: 199.232.78.160
-  skip-cert-verify: true
-  sni: speedtest.net
-  type: trojan
-  ws-opts:
-    headers:
-      Host: .global.ssl.fastly.net
-    path: '%2F720f09dba195249b423f771661162528%2Fworkers%2Fservices%2Fview%2F%2Fproduction%2Fsettings'
-- name: trojan 153 - 1932
-  network: ws
-  password: Nova-Proxy
-  port: 8443
-  server: 104.16.226.33
-  skip-cert-verify: true
-  sni: clv2.mr-afzoni.workers.dev
-  type: trojan
-  ws-opts:
-    path: '%2F%3Fed%3D2560'
-- name: 🇸🇬 新加坡 | trojan | 80
-  network: tcp
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 45619
-  server: 188.253.12.91
-  skip-cert-verify: true
-  sni: fr.01.naiun.bilibili.com
-  type: trojan
-- name: 🇬🇬
-  network: ws
-  password: 7LBbob9IutFObLxLf9Svc1HaV
-  port: 443
-  server: hl-freedom-1.undef.network
-  sni: hl-freedom-1.undef.network
-  type: trojan
-  ws-opts:
-    headers:
-      Host: hl-freedom-1.undef.network
-    path: /f2fc2a1f
-- name: 'By #82'
+- name: '[🇸🇨]t.me/ConfigsHub'
   network: ws
   password: humanity
   port: 443
-  server: 185.18.250.252
+  server: 45.130.125.96
   skip-cert-verify: false
+  sni: www.calmloud.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmloud.com
+    path: '%2Fassignment'
+- name: 🇳🇱 荷兰 | trojan | 695
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 77.246.102.229
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇳🇱[By
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.32.47
+  skip-cert-verify: true
   sni: www.multiplydose.com
   type: trojan
   ws-opts:
     headers:
       Host: www.multiplydose.com
     path: '%2Fassignment'
-- alpn:
-  - http/1.1
-  name: 未知 TROJAN-141 | free-nodes
-  network: ws
-  password: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  port: 443
-  server: 104.17.101.139
-  skip-cert-verify: true
-  sni: sni.111000.dynv6.net
-  type: trojan
-  ws-opts:
-    headers:
-      Host: sni.111000.dynv6.net
-    path: '%2F%3Fproxyip%3Dip.111000.de5.net%253A443'
-- name: 🇩🇪 德国 | trojan | 739
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 171.22.31.116
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
-- name: 🇽🇽XX(AzadNet.t.me)
-  network: tcp
-  password: YwuvGJk36B
-  port: 2053
-  server: creativecommons.org
-  type: trojan
-- name: '🏳️ #11'
+- name: '🏳️ #9'
   network: ws
   password: humanity
   port: 443
-  server: 172.64.152.23
-  sni: www.multiplydose.com
+  server: 104.18.12.149
+  sni: www.ignitelimit.com
   type: trojan
   ws-opts:
+    headers:
+      Host: www.ignitelimit.com
     path: /assignment
-- name: 🇳🇱 荷兰 | trojan | 260
+- name: 'By #15'
   network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 82.115.7.135
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: US TROJAN-180 | free-nodes
-  network: tcp
-  password: FDIypSwe64a3DA7un2R8DFjYXZO3NS05gKZTTOC8SxO0Fy3cqYg3EaFDA3ABaEYKNx39D
+  password: f922fa0f-3311-4368-85ff-cf65e727c854
   port: 443
-  server: kuame.missionsec.us
-  sni: kuame.missionsec.us
-  type: trojan
-- name: 'By #85'
-  network: ws
-  password: x5cDfADabj
-  port: 443
-  server: 45.130.125.75
+  server: 141.193.213.30
   skip-cert-verify: false
-  sni: a.aananas.ir
+  sni: space.byu.id.yxls.eu.cc
   type: trojan
   ws-opts:
     headers:
-      Host: a.aananas.ir
-    path: '%2F%3Fed%3D2048'
-- name: 未知 TROJAN-21 | free-nodes
-  password: BxceQaOe
-  port: 443
-  server: 119.246.1.143
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
-- alpn:
-  - h2
-  - http/1.1
-  name: 未知 TROJAN-180 | free-nodes
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.7.147
-  sni: www.creationlong.org
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-- name: 未知 TROJAN-241 | free-nodes
-  network: ws
-  password: trojan
-  port: 2087
-  server: 22b.net
-  sni: store.timimi.dpdns.org
-  type: trojan
-  ws-opts:
-    path: '%2F%3FBIA_TELEGRAM%20%28%40AZARBAYJAB1%29%20TM%20%28%40AZARBAYJAB1%29%20TM%20%28%40AZARBAYJAB1%29%20TM%20%28%40AZARBAYJAB1%29%20TM%20%28%40AZARBAYJAB1%29%20TM%20%28%40AZARBAYJAB1%29'
-- name: trojan 879 - 2658
-  password: 8800c518-e68a-4441-a45c-cd67855784c8
-  port: 443
-  server: jp2.sanfen001.pics
-  sni: jp1.sanfen001.pics
-  type: trojan
-- name: trojan 810 - 2589
-  network: ws
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  port: 8443
-  server: 64.186.240.9
-  sni: dxy1h.twiladaphne.ndjp.net
-  type: trojan
-  ws-opts:
-    path: '%2Fproxyip%3D104.168.132.123%2C172.104.53.198%2C85.121.50.16%2C151.242.125.226'
-- name: 🇫🇮 芬兰 | trojan | 152
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 94.183.190.229
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 'By #100'
-  network: ws
-  password: 8f635e20-71c9-11ef-aaf7-1239d0255272
-  port: 443
-  server: www.speedtest.net
-  sni: usa.test3.net
-  type: trojan
-  ws-opts:
-    headers:
-      Host: usa.test3.net
-    path: '%2Fhowdy'
-- name: '🌐 Anycast-IP | [IPv6] | [BL] #1'
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 23.173.104.229
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: trojan 96 - 1875
-  network: ws
-  password: Watashi_VPN
-  port: 443
-  server: 104.17.148.22
-  sni: t-watashi-r-jacket-o-people-jan.watashi-java.ir
-  type: trojan
-  ws-opts:
-    path: '%2F'
-- name: 🇷🇺 俄罗斯 | trojan | 405
+      Host: space.byu.id.yxls.eu.cc
+    path: '%2Fbr-orcl'
+- name: 🇭🇰 香港 | trojan | 141
   network: ws
   password: '162534'
   port: 8443
-  server: 130.49.178.104
+  server: 103.118.42.16
   skip-cert-verify: true
   sni: cchh2.pages.dev
   type: trojan
@@ -2190,736 +1818,79 @@ proxies:
     headers:
       Host: cchh2.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: trojan 31 - 1810
-  password: '1111'
-  port: 2096
-  server: v2ngfast-v2ngfast-v2ngfast-v2ngfast.jakec78925.workers.dev
-  sni: v2ngfast-v2ngfast-v2ngfast-v2ngfast.jakec78925.workers.dev
-  type: trojan
-- name: 🇳🇱 荷兰 | trojan | 338
+- name: '🏳️ #10'
   network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 89.125.78.74
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: '@rxv2ray'
-  password: e2e3b171-33a8-4c8f-9e5f-ae6e92299e40
+  password: 931d70c1-8644-433a-9e8a-e09e10f5e7f5
   port: 443
-  server: ivory.qzz.io
-  type: trojan
-  ws-opts:
-    path: '%2F46.232.122.240%3A8000'
-- name: trojan 319 - 2098
-  network: ws
-  password: Telegram-Config0plus
-  port: 443
-  server: 45.130.125.2
-  sni: media-sin6-3.cdn.whatsapp.net.cyylr.eu.cc
-  type: trojan
-  ws-opts:
-    path: '%2Fin-pdr'
-- name: 未知 TROJAN-256 | free-nodes
-  network: ws
-  password: humanity
-  port: 443
-  server: chatgpt.com
-  sni: www.gossipglove.com
+  server: yg8.ygkkk.dpdns.org
+  sni: v.vivia.cc.cd
   type: trojan
   ws-opts:
     headers:
-      Host: www.gossipglove.com
-    path: '%2Fassignment'
-- name: 'By #122'
-  password: humanity
-  port: 443
-  server: 104.18.152.233
-  sni: www.calmloud.com
-  type: trojan
-- name: 🇵🇱 波兰 | trojan | 93
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 443
-  server: 82.118.21.88
-  skip-cert-verify: true
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram🇨🇳
-- name: 🇸🇪 瑞典 | trojan | 210
-  password: '1234567890'
-  port: 443
-  server: 138.124.34.36
-  skip-cert-verify: false
-  sni: kfm-bn0.pages.dev
-  type: trojan
-- alpn:
-  - h2
-  - http/1.1
-  name: 'By #131'
-  network: ws
-  password: 7p52vhn9vs4naimm
-  port: 443
-  server: freealireza3.nscl.ir
-  skip-cert-verify: false
-  sni: freealireza3.nscl.ir
-  type: trojan
-  ws-opts:
-    path: /dashboard
-- name: '🏳️ #36'
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2096
-  server: 172.64.149.54
-  skip-cert-verify: true
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: '%2Ftr'
-- name: 🇺🇸US美国54
-  password: '1234567890'
-  port: 443
-  server: 109.120.134.104
-  sni: kfm-bn0.pages.dev
-  type: trojan
-- name: 🇬🇧 英国 | trojan | 208
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 109.120.186.137
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 'By #134'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.16.174.44
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: '%2Fassignment'
-- name: 未知 TROJAN-197 | free-nodes
-  network: ws
-  password: humanity
-  port: 443
-  server: 188.114.96.3
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: '%2Fassignment'
-- name: 未知 TROJAN-182 | free-nodes
-  network: ws
-  password: humanity
-  port: 443
-  server: 188.114.96.3
-  skip-cert-verify: false
-  sni: www.multiplydose.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.multiplydose.com
-    path: '%2Fassignment'
-- name: trojan 993 - 2772
-  network: ws
-  password: bb45f73f-795b-4a05-a8e0-ba717bce87e3
-  port: 443
-  server: 104.19.229.21
-  sni: api24-normal.tiktokv.com.cyylr.eu.cc
-  type: trojan
-  ws-opts:
-    path: '%2Fid-tksi'
-- name: 未知 TROJAN-176 | free-nodes
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.21.40.34
-  skip-cert-verify: true
-  sni: www.gossipglove.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.gossipglove.com
-    path: '%2Fassignment'
-- name: trojan 514 - 2293
-  password: iCfh96DEJn3=QRbzF.Tdl
-  port: 18069
-  server: 212.192.214.46
-  sni: www.vk.com
-  type: trojan
-- name: 未知 TROJAN-271 | free-nodes
-  network: ws
-  password: humanity
-  port: 443
-  server: www.multiplydose.com
-  skip-cert-verify: true
-  sni: www.multiplydose.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-- name: 'US美国(mibei77.com 米贝节点分享) #3'
-  network: ws
-  password: 4c3164ee-abcf-4091-abea-d1cd4937a68d
-  port: 443
-  server: 154.26.186.47
-  skip-cert-verify: true
-  sni: jy.hhllfly.kdns.fr
-  type: trojan
-  ws-opts:
-    headers:
-      Host: jy.hhllfly.kdns.fr
-    path: '%2F%3Fed%3D2048'
-- name: NODE2-VPN-1A
-  password: d4d7a8df-eafc-4693-8680-1cc998822aa0
-  port: 443
-  server: node2-vpn.hrzy.me
-  skip-cert-verify: false
-  type: trojan
-- name: 🇨🇿 捷克 | trojan | 20
-  network: ws
-  password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
-  port: 2083
-  server: 91.184.250.116
-  sni: xo.e0f.cx
-  type: trojan
-  ws-opts:
-    headers:
-      Host: xo.e0f.cx
-    path: /trojan-ws
-- alpn:
-  - h2
-  - http/1.1
-  name: 🇫🇷 法国 | trojan | 73
-  network: xhttp
-  password: Tel=Arshiacomplus
-  port: 58035
-  server: 45.154.96.35
-  skip-cert-verify: true
-  sni: oof.acp.us.ci
-  type: trojan
-  ws-opts:
-    headers:
-      Host: oof.acp.us.ci
-    path: '%2Ffkcidiekei'
-- name: v2ray_configs_pool-40
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.152.225
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: '%2Fassignment'
-- alpn:
-  - http/1.1
-  name: 未知 TROJAN-148 | free-nodes
-  network: ws
-  password: humanity
-  port: 443
-  server: 8.6.112.6
-  skip-cert-verify: false
-  sni: www.calmloud.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmloud.com
-    path: '%2Fassignment'
-- name: '🏳️ #20'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.13.149
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: /assignment
-- name: 🇸🇪 瑞典 | trojan | 216
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 89.22.234.0
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: Telegram:Config0plus🚀
-  network: ws
-  password: Config0plus
-  port: 443
-  server: 104.17.121.71
-  skip-cert-verify: false
-  sni: api24-normal.tiktokv.com.cyylr.eu.cc
-  type: trojan
-  ws-opts:
-    headers:
-      Host: api24-normal.tiktokv.com.cyylr.eu.cc
-    path: '%2Fid-tksi'
-- name: 未知 TROJAN-161 | free-nodes
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.11.110
-  skip-cert-verify: true
-  sni: www.multiplydose.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.multiplydose.com
-    path: '%2Fassignment'
-- name: '[🏁]t.me/ConfigsHub #24'
-  network: ws
-  password: humanity
-  port: 443
-  server: 216.24.57.7
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: '%2Fassignment'
-- name: 'By #277'
-  network: ws
-  password: humanity
-  port: 443
-  server: 172.67.180.92
-  skip-cert-verify: true
-  sni: www.multiplydose.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.multiplydose.com
-    path: '%2Fassignment'
-- name: 'By #162'
-  network: ws
-  password: 3c976c6e-2b94-323b-1e75-68e4877f4283
-  port: 2096
-  server: 135.84.67.77
-  skip-cert-verify: false
-  sni: pmoiran.qzz.io
-  type: trojan
-  ws-opts:
-    headers:
-      Host: pmoiran.qzz.io
-    path: '%2Fpmo'
-- name: 🇳🇱 荷兰 | trojan | 385
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 144.31.13.96
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: '🌐 Anycast-IP | [IPv6] | [BL] #7'
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 31.57.92.211
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇨🇿 捷克 | trojan | 23
-  password: '1234567890'
-  port: 443
-  server: 95.85.232.148
-  sni: kfm-bn0.pages.dev
-  type: trojan
-- name: '🏳️ #24'
-  network: ws
-  password: humanity
-  port: 443
-  server: 172.64.152.23
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
-- alpn:
-  - http/1.1
-  name: 'By #186'
-  network: ws
-  password: VteMHBfEcTMf40]Y
-  port: 443
-  server: 162.159.232.210
-  sni: icy-DARknESs-8Ff1.faRZAmBiA12Mo.wOrKeRS.DeV
-  type: trojan
-  ws-opts:
-    headers:
-      Host: icy-darkness-8ff1.farzambia12mo.workers.dev
-    path: '%2FeyJqdW5rIjoiYWVodWV5S2IiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iXX0%3D%3Fed%3D2560'
-- alpn:
-  - http/1.1
-  name: 'By #191'
-  network: ws
-  password: VteMHBfEcTMf40]Y
-  port: 8443
-  server: 162.159.81.174
-  sni: ICy-dArKNesS-8FF1.farZambIA12MO.WorKeRs.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: icy-darkness-8ff1.farzambia12mo.workers.dev
-    path: '%2FeyJqdW5rIjoidzVxMzJkRmEiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iXX0%3D%3Fed%3D2560'
-- alpn:
-  - h2
-  - http/1.1
-  name: 未知 TROJAN-179 | free-nodes
-  network: ws
-  password: humanity
-  port: 443
-  server: 188.114.96.3
-  sni: www.creationlong.org
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.creationlong.org
-    path: '%2Fassignment'
-- name: 🇸🇬 新加坡 | trojan | 26
-  network: tcp
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 45553
-  server: 188.253.12.15
-  skip-cert-verify: true
-  sni: ch.01.naiun.bilibili.com
-  type: trojan
-- name: '[1596]⭐ 🇨🇦 CAN [TR] ⭐ 📑 🗺️ #33...'
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 109.71.240.207
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 'By #198'
-  network: ws
-  password: humanity
-  port: 443
-  server: 188.114.96.3
-  sni: www.multiplydose.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-- name: 未知 TROJAN-55 | free-nodes
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 46424
-  server: 188.253.12.96
-  sni: de.01.naiun.bilibili.com
-  type: trojan
-- name: 🌐 Anycast-IP | 🇨🇦 🇩🇪 🇮🇪 | [BL]
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 104.194.156.228
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    path: /trTelegram🇨🇳+@WangCai2
-- alpn:
-  - http/1.1
-  name: 🏳️ Jafar | 🛡️🔥 155ms
-  network: ws
-  password: humanity
-  port: 443
-  server: 45.130.125.69
-  skip-cert-verify: true
-  sni: www.calmloud.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmloud.com
-    path: /assignment
-- name: 🇮🇷 伊朗 | trojan | 174
-  network: ws
-  password: M75et5r7GU
-  port: 2052
-  server: 185.143.234.122
-  type: trojan
-  ws-opts:
-    headers:
-      Host: arzoon.cloudy-cloud.ir
+      Host: v.vivia.cc.cd
     path: /
-- name: 'By #217'
-  network: tcp
-  password: 87d1bfd4-574e-4c96-ad42-0426f27461ff
-  port: 443
-  server: mfa.gov.ua
+- grpc-opts:
+    grpc-service-name: cestbon
+  name: 🇺🇸 美国 | trojan | 413
+  network: grpc
+  password: '740628'
+  port: 8000
+  server: 136.175.177.136
+  sni: sj.cestbon.work
   type: trojan
 - alpn:
   - http/1.1
-  name: 'By #219'
-  network: ws
-  password: MiTiVPN
-  port: 443
-  server: 104.24.17.0
-  skip-cert-verify: true
-  sni: linkkon-w.ir
-  type: trojan
-  ws-opts:
-    headers:
-      Host: linkkon-w.ir
-    path: '%2Fed%3Dmitivpn'
-- alpn:
-  - http/1.1
-  name: trojan 883 - 2662
-  network: ws
-  password: '|??i_JKOEo!rcur2'
-  port: 443
-  server: 162.159.143.245
-  sni: Flat-WOod-1B6a.mahdIhesINE3.worKErs.dEv
-  type: trojan
-  ws-opts:
-    path: '%2FeyJqdW5rIjoiQjJ4ZVlETFIiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119%3Fed%3D2560'
-- alpn:
-  - h2
-  - http/1.1
-  name: 'By #227'
-  network: xhttp
-  password: Sg11afdb3c058cf8211956
-  port: 443
-  server: ip1.hostparsa.ir
-  sni: x2-dpim9mztudx78ieloo1t.parsiclouds.ir
-  type: trojan
-  ws-opts:
-    headers:
-      Host: x2-dpim9mztudx78ieloo1t.parsiclouds.ir
-    path: '%2Fdownload'
-- name: 🌐 Anycast-IP | [BL]
-  network: ws
-  password: humanity
-  port: 443
-  server: srv1.khatibirepair.ir
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-- alterId: 0
-  name: 未知77
-  network: tcp
-  password: s75Gtmy56sptTA39hmBH965YYx4ZgfQR_I
-  port: 443
-  server: 103.125.219.70
-  skip-cert-verify: true
-  sni: 103.125.219.70
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇰🇷 韩国 | trojan | 19
-  network: ws
-  password: '1234567890'
-  port: 19530
-  server: 222.116.195.135
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
-- name: trojan 979 - 2758
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.152.219
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-- alpn:
-  - h2
-  - http/1.1
-  name: '@V2ray_confiig'
-  network: ws
-  password: humanity
-  port: 443
-  server: 172.64.152.23
-  skip-cert-verify: false
-  sni: www.creationlong.org
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.creationlong.org
-    path: '%2Fassignment'
-- alterId: 0
-  name: 🇺🇸US美国11
-  network: tcp
-  password: BhNAljna1sXjsY.Nqdl0ksXJ1VsGRqXz1V
-  port: 443
-  server: 130.94.114.217
-  skip-cert-verify: true
-  sni: 130.94.114.217
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇸🇪 瑞典 | trojan | 32
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 91.108.242.148
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- alpn:
-  - http/1.1
-  name: '[1596]🎈 🇨🇦 CAN [TR] 🎈 🗺️ #4ff6...'
-  network: ws
-  password: MiTiVPN
-  port: 443
-  server: 45.131.4.118
-  skip-cert-verify: false
-  sni: linkkon-w.ir
-  type: trojan
-  ws-opts:
-    headers:
-      Host: linkkon-w.ir
-    path: /ed%3Dmitivpn
-- name: 🇮🇶 伊拉克 | trojan | 06
-  network: ws
-  password: '1234567890'
-  port: 443
-  server: 178.17.48.78
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 'By #271'
-  network: ws
-  password: humanity
-  port: 443
-  server: 172.64.147.166
-  skip-cert-verify: false
-  sni: www.multiplydose.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-- name: '\ud83c\udff3\ufe0f #3'
-  network: ws
-  password: humanity
-  port: 443
-  server: 172.64.152.23
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: '%2Fassignment'
-- alpn:
-  - http/1.1
-  name: 'By #274'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.13.149
-  skip-cert-verify: true
-  sni: www.calmloud.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmloud.com
-    path: '%2Fassignment'
-- name: '🏳️ #32'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.32.47
-  sni: www.gossipglove.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.gossipglove.com
-    path: /assignment
-- name: 🌐 Anycast-IP | 🇨🇦 🇫🇷 🇮🇶 | [BL]
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 188.130.207.30
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- alpn:
-  - http/1.1
-  name: '[🇸🇨]t.me/ConfigsHub #5'
+  name: '[1596]⭐ 🇨🇦 CAN [TR] ⭐ 📑 🗺️ #d7...'
   network: ws
   password: mitivpn
   port: 443
-  server: 45.130.125.76
-  skip-cert-verify: true
-  sni: www.app-cloud.ir
-  type: trojan
-  ws-opts:
-    path: '%2F%3Fed'
-- name: '🌐 Anycast-IP | [IPv6] | [BL] #11'
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 94.183.188.139
-  sni: Koma-YT.PAGeS.Dev
+  server: 216.24.57.246
+  skip-cert-verify: false
+  sni: gamingdll.ir
   type: trojan
   ws-opts:
     headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: '🏳️ #34'
-  network: ws
-  password: qRpUIwWmlKxuKxl4a1bY2A
-  port: 443
-  server: 216.105.168.58
+      Host: gamingdll.ir
+    path: /index.php/ed%3Dmitivpn
+- name: 未知 TROJAN-58 | free-nodes
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 45619
+  server: 188.253.12.90
+  sni: fr.01.naiun.bilibili.com
   type: trojan
-  ws-opts:
-    headers:
-      Host: telegram.org
-    path: '%2F'
-- name: '[🏁]t.me/ConfigsHub #17'
+- name: 未知 TROJAN-199 | free-nodes
   network: ws
   password: humanity
   port: 443
-  server: 216.24.57.7
-  skip-cert-verify: false
+  server: www.gossipglove.com
+  skip-cert-verify: true
+  sni: www.gossipglove.com
   type: trojan
   ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: '%2Fassignment'
+    path: '%252Fassignment'
+- name: 🇽🇽XX(AzadNet.t.me)
+  network: tcp
+  password: bpb-trojan
+  port: 443
+  server: 188.114.96.245
+  sni: fcspring.ggff.net
+  type: trojan
+- name: 未知 TROJAN-218 | free-nodes
+  network: tcp
+  password: psycho
+  port: 443
+  server: 104.21.80.1
+  sni: PSYchO.SueX12.Ir
+  type: trojan
+- name: trojan 295 - 2074
+  network: ws
+  password: '1111'
+  port: 8443
+  server: v2ngfast-v2ngfast-v2ngfast-v2ngfast.cagakow937.workers.dev
+  sni: v2ngfast-v2ngfast-v2ngfast-v2ngfast.cagakow937.workers.dev
+  type: trojan
+  ws-opts:
+    path: '%2F%3Fed%3D2560'
 - name: 🇸🇪 瑞典 | trojan | 189
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -2931,375 +1902,75 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: trojan 38 - 1817
-  network: ws
-  password: Nova-Proxy
-  port: 443
-  server: 190.93.246.32
-  skip-cert-verify: true
-  sni: clv2.mr-afzoni.workers.dev
-  type: trojan
-  ws-opts:
-    path: '%2F%3Fed%3D2560'
-- name: 🇺🇸 美国 | trojan | 611
-  network: ws
-  password: 3c976c6e-2b94-323b-1e75-68e4877f4283
-  port: 2096
-  server: 135.84.67.77
-  skip-cert-verify: false
-  sni: pmoiran.qzz.io
-  type: trojan
-  ws-opts:
-    headers:
-      Host: pmoiran.qzz.io
-    path: /pmo
-- name: '[🇨🇦]t.me/ConfigsHub #16'
-  password: trojan
-  port: 8443
-  server: 162.159.152.4
-  skip-cert-verify: false
-  type: trojan
-  ws-opts:
-    headers:
-      Host: azadnet-
-    path: '%2F%3Fed'
-- alpn:
-  - http/1.1
-  name: t.me/v2ray_reality_new
-  network: ws
-  password: d8fd35e7-25f7-452d-852a-6ad1cfb3c9b8
-  port: 443
-  server: 45.131.4.240
-  sni: sftp.pardazesh.tech
-  type: trojan
-  ws-opts:
-    headers:
-      Host: sftp.pardazesh.tech
-    path: '%2F1C1eEyrBbGr0r2HZ1tSkA'
-- alpn:
-  - http/1.1
-  grpc-opts:
-    grpc-service-name: '---Telegram@V2rayNGcloud------Telegram@V2rayNGcloud-----Telegram@V2rayNGcloud-----Telegram@V2rayNGcloud-----Telegram@V2rayNGcloud-----Telegram@V2rayNGcloud-----Telegram@V2rayNGcloud-----Telegram@V2rayNGcloud---'
-  name: 'By #306'
-  network: ws
-  password: mitivpn
-  port: 443
-  server: 188.114.97.6
-  skip-cert-verify: false
-  sni: s2.%6D%69%74%69%76%70%6E.nl.ssl.global.fastly.dev.iranpoems.ir
-  type: trojan
-  ws-opts:
-    headers:
-      Host: s2.%6D%69%74%69%76%70%6E.nl.ssl.global.fastly.ir.iranpoems.ir
-    path: '%2F%3F%6D%69%74%69%76%70%6E'
-- name: '[🏁]t.me/ConfigsHub #19'
-  network: ws
-  password: Y(Z^&|dg}eW$WCjF
-  port: 2052
-  server: small-resonance-1353.mrlolyeradbn.workers.dev
-  type: trojan
-  ws-opts:
-    path: '%2FeyJqdW5rIjoiNk9oTllzV2EiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJuaW1hLm5zY2wuaXIiXX0%3D'
-- alpn:
-  - http/1.1
-  name: 'By #311'
-  network: ws
-  password: mitivpn
-  port: 443
-  server: 188.114.97.6
-  sni: cdn.linkman1.ir
-  type: trojan
-  ws-opts:
-    headers:
-      Host: cdn.linkman1.ir
-    path: '%2F720f09dba195249b423f%2Fservices%2Fview%2Fmitivpn%2Fproduction%2Fsettings'
-- name: 'By #319'
-  network: tcp
-  password: 升级订阅解锁全部节点
-  port: 10120
-  server: z-eu1.mfa.cat
-  skip-cert-verify: true
-  sni: www.cloudflare.com
-  type: trojan
-- name: '[1596]🎈 🇷🇺 RUS [TR] 🎈 🗺️ #e331...'
+- name: 🇳🇱 荷兰 | trojan | 633
   network: ws
   password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 77.81.65.9
+  port: 8443
+  server: 77.221.155.230
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🌐 Anycast-IP | 🇨🇦 🇸🇪 | [BL]
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 91.108.189.152
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇨🇱 智利 | trojan | 06
+  password: Mzp+sTklU5g1c_TH17Vl5np7HSQnAd7E-Q
+  port: 443
+  server: 130.94.104.148
+  skip-cert-verify: true
+  sni: 130.94.104.148
+  type: trojan
 - alpn:
   - h2
   - http/1.1
-  name: '[1596]🎈 🇫🇷 FRA [TR] 🎈 #20246a'
-  network: xhttp
-  password: Du6929ec1f5adbb5db82f3
-  port: 443
-  server: ip1.hostparsa.ir
-  sni: vip1.vipdatanetwork.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: vip1.vipdatanetwork.com
-    path: /download
-- name: 🇮🇷 伊朗 | trojan | 274
-  password: $Iu_sL4k*u,9
-  port: 2096
-  server: 185.143.235.201
-  skip-cert-verify: true
-  sni: anten.ir
-  type: trojan
-- alpn:
-  - http/1.1
-  name: 'By #325'
+  name: 🇺🇸 美国 | trojan | 557
   network: ws
-  password: mitivpn
-  port: 443
-  server: 188.114.97.6
-  skip-cert-verify: false
-  sni: weqwdf.fll.mitivpn.dsech.ss.ssandfdsgx.gloteefghedcalasd.ssl.fastly.net.b5r.ir
-  type: trojan
-  ws-opts:
-    path: https%3A%2F%2Fchatgpt.com
-- name: 未知 TROJAN-254 | free-nodes
-  network: ws
-  password: humanity
-  port: 443
-  server: 188.114.98.0
-  sni: www.creationlong.org
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.creationlong.org
-    path: /assignment
-- name: 🇳🇱 荷兰 | trojan | 550
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
+  password: ShabrangVPN
   port: 8443
-  server: 185.125.100.208
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇰🇷 韩国 | trojan | 09
-  network: ws
-  password: GKHWMe2R4qwNcNxu6l3KMkdd
-  port: 11371
-  server: 125.141.32.222
-  sni: vpn1.rnmcnm.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: vpn1.rnmcnm.com
-    path: '%2Ftrj-ws'
-- name: 🇸🇬 新加坡 | trojan | 254
-  network: ws
-  password: ac590e89-ba43-49a1-a8b2-38ec70dc7907
-  port: 20230
-  server: sg008.421421.xyz
-  skip-cert-verify: true
-  sni: www.alibaba.com
-  type: trojan
-- name: 'US美国(mibei77.com 米贝节点分享) #10'
-  network: ws
-  password: '1234567890'
-  port: 443
-  server: 86.110.36.87
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 🇭🇰 香港 | trojan | 14
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 46424
-  server: 103.177.136.44
-  skip-cert-verify: true
-  sni: de.01.naiun.bilibili.com
-  type: trojan
-- name: 4Kian-3808
-  network: tcp
-  password: 4d706727-996f-4427-930d-60f3bd414cf9
-  port: 443
-  server: 203.28.8.28
-  skip-cert-verify: true
-  sni: c2mk.ciscocdn1.live
-  type: trojan
-- name: 未知 TROJAN-173 | free-nodes
-  network: ws
-  password: fR3rpMTHT7
-  port: 443
-  server: 172.64.155.209
-  sni: main.thepouria.xyz
-  type: trojan
-  ws-opts:
-    path: '%2Fdalaposh'
-- name: '🌐 Anycast-IP | [IPv6] | [BL] #15'
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 31.58.137.132
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: '[🇨🇦]t.me/ConfigsHub #17'
-  network: ws
-  password: auto
-  port: 443
-  server: 172.67.174.252
-  sni: esetsecuritylicense1.vowexa5791.workers.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: esetsecuritylicense1.vowexa5791.workers.dev
-    path: /
-- name: 🇩🇪 德国 | trojan | 895
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 18.194.183.74
+  server: 165.215.250.16
   skip-cert-verify: false
-  sni: Koma-YT.PAGeS.Dev
+  sni: shabrang.varfeno.sbs
   type: trojan
   ws-opts:
     headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2'
-- alpn:
-  - http/1.1
-  name: 'By #348'
-  network: ws
-  password: c:Cg8)U+foGS
-  port: 443
-  server: chatgpt.com
-  skip-cert-verify: false
-  sni: 4QOkoKYk1-6t91632pXos28qzEJRuaLU.MahDIjOJO324.WoRkeRS.dEV
-  type: trojan
-  ws-opts:
-    path: '%2FeyJqdW5rIjoiQ29yRDBUbXhnRiIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0%3D%3Fed%3D2560'
-- name: 🇪🇪 爱沙尼亚 | trojan | 33
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 144.31.170.231
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇸🇬 新加坡 | trojan | 29
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 45553
-  server: 188.253.12.96
-  sni: ch.01.naiun.bilibili.com
-  type: trojan
-- name: 'By #351'
-  network: ws
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  port: 443
-  server: 45.77.21.104
-  skip-cert-verify: false
-  sni: tjsp.hhxaf.cc.cd
-  type: trojan
-  ws-opts:
-    headers:
-      Host: tjsp.hhxaf.cc.cd
+      Host: shabrang.varfeno.sbs
     path: '%2F'
-- name: 'By #353'
-  network: ws
-  password: UG9A2ezcCN
+- name: 'By #33'
+  password: '1111'
+  port: 2096
+  server: 108.162.198.164
+  sni: v2ngfast-v2ngfast-v2ngfast-v2ngfast.pijoh30899.workers.dev
+  type: trojan
+- name: 🇺🇸 美国 得克萨斯州达拉斯Cloudflare Warp节...
+  password: humanity
   port: 443
-  server: 188.114.97.6
+  server: 8.6.112.0
   skip-cert-verify: false
-  sni: dd.aananas.ir.
+  sni: www.multiplydose.com
   type: trojan
-  ws-opts:
-    path: '%2F%3Fed%3D2048'
-- name: JP TROJAN-44 | free-nodes
-  password: fa850c23-457a-4819-9604-c5c315198a20
-  port: 50000
-  server: jp200m.jiasu.asia
-  sni: jp200m.jiasu.asia
-  type: trojan
-- name: 'By #354'
-  network: ws
-  password: humanity
+- name: '🇽🇽XX(AzadNet.t.me) #1'
+  network: tcp
+  password: bpb-trojan
   port: 443
-  server: 141.101.90.101
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
+  server: 104.17.51.115
+  sni: fcspring.ggff.net
   type: trojan
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: '%2Fassignment'
-- alpn:
-  - http/1.1
-  name: 'By #355'
-  network: ws
-  password: humanity
-  port: 443
-  server: 199.181.197.228
-  skip-cert-verify: true
-  sni: www.calmloud.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmloud.com
-    path: '%2Fassignment'
-- name: '未知 TROJAN-254 | free-nodes #1'
-  network: ws
-  password: humanity
-  port: 443
-  server: 188.114.98.0
-  sni: www.gossipglove.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-- alpn:
-  - http/1.1
-  name: 'By #360'
-  network: ws
-  password: MiTiVPN
-  port: 443
-  server: 104.25.253.129
-  skip-cert-verify: false
-  sni: linkkon-w.ir
-  type: trojan
-  ws-opts:
-    headers:
-      Host: linkkon-w.ir
-    path: '%2Fed%3Dmitivpn'
-- alpn:
-  - http/1.1
-  name: '[1596]⭐ 🇫🇷 FRA [TR] ⭐ 📑 #7b0b3...'
-  network: ws
-  password: humanity
-  port: 443
-  server: 66.81.247.155
-  skip-cert-verify: true
-  sni: www.calmloud.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmloud.com
-    path: /assignment
-- name: 🇳🇱NL荷蘭丨yoyapai.com
+- name: 🇰🇷KR韓國丨yoyapai.com
   network: ws
   password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 152.53.200.164
+  port: 32768
+  server: 121.170.1.188
   skip-cert-verify: true
   sni: Koma-YT.PAGeS.Dev
   type: trojan
@@ -3307,197 +1978,151 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2'
-- name: '\ud83c\udff3\ufe0f #6'
+- name: 未知 TROJAN-174 | free-nodes
   network: ws
   password: humanity
   port: 443
-  server: 104.18.12.149
+  server: 172.67.180.92
+  skip-cert-verify: true
   sni: www.multiplydose.com
   type: trojan
   ws-opts:
     headers:
       Host: www.multiplydose.com
     path: '%2Fassignment'
-- name: 🇰🇷 韩国 | trojan | 58
+- name: '\ud83c\udff3\ufe0f #1'
   network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 12345
-  server: 59.12.232.18
+  password: '1710442808'
+  port: 443
+  server: 104.18.12.149
   skip-cert-verify: true
-  sni: Koma-YT.PAGeS.Dev
+  sni: subb.nrshop198.workers.dev
   type: trojan
   ws-opts:
     headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2'
-- name: '未知 TROJAN-182 | free-nodes #1'
+      Host: subb.nrshop198.workers.dev
+    path: '%2F'
+- name: 未知 TROJAN-33 | free-nodes
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 41943
+  server: 188.253.12.90
+  sni: az.01.naiun.bilibili.com
+  type: trojan
+- alpn:
+  - http/1.1
+  name: trojan 670 - 2449
+  network: ws
+  password: '|??i_JKOEo!rcur2'
+  port: 443
+  server: 198.41.214.220
+  sni: Flat-WOod-1B6a.mahdIhesINE3.worKErs.dEv
+  type: trojan
+  ws-opts:
+    path: '%2FeyJqdW5rIjoiQjJ4ZVlETFIiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119%3Fed%3D2560'
+- name: 未知 TROJAN-240 | free-nodes
   network: tcp
   password: humanity
   port: 443
   server: 185.18.250.245
   sni: www.calmlunch.com
   type: trojan
-- name: trojan 257 - 2036
-  password: 8800c518-e68a-4441-a45c-cd67855784c8
-  port: 443
-  server: 172.67.215.250
-  sni: jp1.sanfen001.pics
-  type: trojan
-- name: 'US美国(mibei77.com 米贝节点分享) #11'
-  network: ws
-  password: '1234567890'
-  port: 443
-  server: 152.53.118.28
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: '%2F'
-- name: '[🇪🇸]t.me/ConfigsHub'
-  network: ws
-  password: humanity
-  port: 443
-  server: 185.18.250.252
-  skip-cert-verify: true
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: '%2Fassignment'
-- name: trojan 224 - 2003
-  password: d0298536-d670-4045-bbb1-ddd5ea68683e
-  port: 2087
-  server: 104.25.254.4
-  type: trojan
-- name: 🇸🇪 瑞典 | trojan | 217
-  network: ws
-  password: '1234567890'
-  port: 443
-  server: 213.21.252.159
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- alpn:
-  - h2
-  - http/1.1
-  name: 未知 TROJAN-200 | free-nodes
-  network: ws
-  password: humanity
-  port: 443
-  server: 188.114.98.0
-  skip-cert-verify: false
-  sni: www.creationlong.org
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.creationlong.org
-    path: '%2Fassignment'
-- name: '🇽🇽XX(AzadNet.t.me) #1'
+- name: '🇽🇽XX(AzadNet.t.me) #2'
   network: tcp
-  password: NISHIKUITAN111
+  password: cd0e795a-4f26-4f8c-9981-ed8b7dcb6126
   port: 443
-  server: 190.93.247.7
-  skip-cert-verify: true
+  server: 172.67.163.102
+  sni: sDFgHU.931.pP.ua
   type: trojan
-- name: '🌐 Anycast-IP | [IPv6] | [BL] #17'
+- alpn:
+  - http/1.1
+  name: '🇽🇽XX(AzadNet.t.me) #3'
+  network: ws
+  password: 5cccb4da-8aee-4b01-be84-2056265e52dc
+  port: 443
+  server: 172.64.80.1
+  sni: nMk.288288.sHOP
+  type: trojan
+  ws-opts:
+    headers:
+      Host: nMk.288288.sHOP
+    path: '%2FhV829BTVzg35A6ueyyZnWd'
+- name: 🇩🇪 德国 | trojan | 356
   network: ws
   password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 185.169.107.52
+  port: 2083
+  server: 77.221.157.251
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- alpn:
-  - http/1.1
-  name: 'By #409'
-  network: ws
-  password: MiTiVPN
+- name: 🇩🇪 DE德国(mibei77.com 米贝节点分享)
+  password: '1234567890'
   port: 443
-  server: 103.31.4.213
+  server: 185.219.84.221
   skip-cert-verify: false
-  sni: linkkon-w.ir
+  sni: kfm-bn0.pages.dev
   type: trojan
-  ws-opts:
-    headers:
-      Host: linkkon-w.ir
-    path: '%2Fed%3Dmitivpn'
-- name: '🏳️ #59'
+- name: 4Kian-3635
+  password: 241f01b9-8dfc-474f-8342-3fbd5c46417e
+  port: 2087
+  server: 104.21.51.242
+  skip-cert-verify: false
+  sni: grpcfr.arminhadadi.site
+  type: trojan
+- name: 'By #59'
   network: ws
   password: humanity
   port: 443
   server: 172.64.152.23
+  skip-cert-verify: false
+  sni: www.calmlunch.com¬e=@FreeOnlineVPN
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: /assignment
+- name: 🇺🇸 US美国(mibei77.com 米贝节点分享)
+  password: '1234567890'
+  port: 443
+  server: 93.123.84.194
+  skip-cert-verify: false
+  sni: kfm-bn0.pages.dev
+  type: trojan
+- alpn:
+  - http/1.1
+  name: رایگان
+  network: ws
+  password: dd3b2971-2e5e-49c4-8de9-62aca12ff466
+  port: 443
+  server: 193.227.99.55
+  sni: cdn.miladfaryad.cf
+  type: trojan
+  ws-opts:
+    headers:
+      Host: cdn.miladfaryad.cf
+    path: /RGikK8PMHRUZInjQYjx
+- name: 'By #65'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.12.149
+  skip-cert-verify: false
   sni: www.multiplydose.com
   type: trojan
   ws-opts:
     headers:
       Host: www.multiplydose.com
-    path: /assignment
-- name: 🇭🇰 香港 | trojan | 19
-  network: tcp
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 46424
-  server: 103.177.136.43
-  skip-cert-verify: true
-  sni: de.01.naiun.bilibili.com
-  type: trojan
-- name: 捷克(mibei77.com 米贝节点分享)
-  network: ws
-  password: '1234567890'
-  port: 443
-  server: 95.85.233.44
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 'By #424'
-  network: ws
-  password: jetv2raye
-  port: 443
-  server: 188.114.97.6
-  skip-cert-verify: false
-  sni: www.creationlong.org
-  type: trojan
-  ws-opts:
     path: '%2Fassignment'
-- alpn:
-  - http/1.1
-  name: 'By #428'
-  network: ws
-  password: humanity
+- name: 🇺🇸 美国 | trojan | 926
+  password: GTCCjtvCtuy03-aV1mwF0OkG2q6yL+Fc5K
   port: 443
-  server: 141.193.213.30
-  skip-cert-verify: true
-  sni: www.calmloud.com
+  server: 198.52.244.10
+  sni: 198.52.244.10
   type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmloud.com
-    path: '%2Fassignment'
-- name: 未知 TROJAN-198 | free-nodes
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.17.121.71
-  skip-cert-verify: false
-  sni: www.creationlong.org
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.creationlong.org
-    path: '%2Fassignment'
 - alterId: 0
   name: 🇷🇴RO罗马尼亚 2.9MB/s
-  network: tcp
   password: fFj7MAGy1VlAWmB_gMBG_27oPYTSHvV6MX
   port: 443
   server: 185.137.157.59
@@ -3506,19 +2131,38 @@ proxies:
   tls: true
   type: trojan
   udp: true
-- name: 4Kian-3803
-  network: tcp
-  password: 4d706727-996f-4427-930d-60f3bd414cf9
+- name: '[1596]🎈 🇨🇦 CAN [TR] 🎈 🗺️ #bfb9...'
+  network: ws
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
-  server: 104.24.20.194
-  skip-cert-verify: true
-  sni: c2mt.ciscocdn1.live
+  server: 167.254.240.12
+  sni: tjsp.hhxaf.cc.cd
   type: trojan
-- name: 🇩🇪 德国 | trojan | 386
+  ws-opts:
+    path: /
+- name: 'By #70'
+  network: ws
+  password: Config0plus
+  port: 443
+  server: 45.130.125.0
+  sni: api24-normal.tiktokv.com.cyylr.eu.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: api24-normal.tiktokv.com.cyylr.eu.cc
+    path: '%2Fid-tksi'
+- name: 🇺🇸 美国 | trojan | 1120
+  password: 8r<[9'l6hAO#8ZQi
+  port: 443
+  server: 64.188.98.29
+  skip-cert-verify: true
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+- name: '🌐 Anycast-IP | [IPv6] | [BL] #8'
   network: ws
   password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 195.58.38.221
+  port: 2053
+  server: 205.172.57.218
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
@@ -3534,99 +2178,287 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇸🇬 新加坡 | trojan | 86
-  network: tcp
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 48697
-  server: 188.253.12.97
-  skip-cert-verify: true
-  sni: gh.01.naiun.bilibili.com
+- name: 🇩🇪 德国 | trojan | 946
+  network: ws
+  password: '1234567890'
+  port: 8443
+  server: 103.228.171.5
+  sni: kfm-bn0.pages.dev
   type: trojan
-- name: 🇺🇸 美国 | trojan | 501
-  password: 8r<[9'l6hAO#8ZQi
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+- name: 🇰🇷 韩国 | trojan | 152
+  password: WF42809561
   port: 443
-  server: 50.62.89.253
-  skip-cert-verify: true
+  server: outgoing-cockatoo.rooster465.autos
+  type: trojan
+- name: 未知 TROJAN-118 | free-nodes
+  network: tcp
+  password: 87d1bfd4-574e-4c96-ad42-0426f27461ff
+  port: 443
+  server: mfa.gov.ua
+  type: trojan
+- name: 🇩🇪 德国 | trojan | 397
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 37.114.46.24
   sni: Koma-YT.PAGeS.Dev
   type: trojan
-- name: 🇸🇬 新加坡 | trojan | 15
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 41943
-  server: 188.253.12.99
-  sni: az.01.naiun.bilibili.com
-  type: trojan
-- name: 'By #444'
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 未知 TROJAN-169 | free-nodes
   network: ws
   password: humanity
   port: 443
-  server: 188.114.97.6
+  server: 172.64.152.23
+  skip-cert-verify: false
+  sni: www.multiplydose.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.multiplydose.com
+    path: '%2Fassignment'
+- name: 🇫🇷 法国 | trojan | 231
+  network: tcp
+  password: 364d3aa0-58fc-11ed-b738-225401db9d57
+  port: 443
+  server: 54.36.191.211
+  skip-cert-verify: true
+  sni: ebank.bmi.ir
+  type: trojan
+- name: '🇽🇽XX(AzadNet.t.me) #4'
+  network: tcp
+  password: NISHIKUITAN111
+  port: 443
+  server: 104.18.198.40
+  skip-cert-verify: true
+  type: trojan
+- name: 'By #96'
+  network: ws
+  password: humanity
+  port: 443
+  server: 185.18.250.252
+  skip-cert-verify: true
   sni: www.calmlunch.com
   type: trojan
   ws-opts:
     headers:
       Host: www.calmlunch.com
     path: '%2Fassignment'
-- alpn:
-  - http/1.1
-  name: 🌐 Anycast-IP | 🇨🇦 🇸🇪 🇸🇬 | [BL]
-  network: ws
-  password: mitivpn
-  port: 443
-  server: 14.102.228.76
-  skip-cert-verify: true
-  sni: www.app-cloud.ir
-  type: trojan
-  ws-opts:
-    path: /?ed=2048
-- name: 🇫🇷 法国 | trojan | 237
+- name: 🌐 Anycast-IP | 🇨🇦 🇩🇪 🇸🇪 | [BL]
   network: ws
   password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 31.59.105.119
+  port: 8443
+  server: 31.56.227.49
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
       Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2
-- name: 🇫🇮 芬兰 | trojan | 185
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: '🇽🇽XX(AzadNet.t.me) #5'
+  network: tcp
+  password: 669d0ac7b5b64ebbb1abb75d5d540a5c
+  port: 443
+  server: 104.19.171.36
+  sni: jobscareertoday.com
+  type: trojan
+- name: 未知 TROJAN-242 | free-nodes
+  network: ws
+  password: humanity
+  port: 443
+  server: 188.114.96.3
+  skip-cert-verify: true
+  sni: www.gossipglove.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.gossipglove.com
+    path: '%2Fassignment'
+- alpn:
+  - h2
+  - http/1.1
+  name: '[🇨🇦]t.me/ConfigsHub #9'
+  network: ws
+  password: Mitivpn
+  port: 443
+  server: 104.17.121.71
+  skip-cert-verify: true
+  sni: panel.hitgram.ir
+  type: trojan
+  ws-opts:
+    headers:
+      Host: panel.hitgram.ir
+    path: /
+- name: '🇺🇸 US美国(mibei77.com 米贝节点分享) #1'
+  password: '1234567890'
+  port: 443
+  server: 64.188.115.82
+  skip-cert-verify: false
+  sni: kfm-bn0.pages.dev
+  type: trojan
+- name: 🇺🇸 美国 | trojan | 1372
+  network: tcp
+  password: 02f0b784-1577-3d22-998a-23f372330b75
+  port: 14555
+  server: ikuai.bot.nu
+  sni: windows11.dpdns.org
+  type: trojan
+- name: 未知 TROJAN-157 | free-nodes
+  network: ws
+  password: r137979f
+  port: 2087
+  server: 162.159.153.212
+  sni: sheleqaz.emotionreza.workers.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: sheleqaz.emotionreza.workers.dev
+    path: '%2F'
+- name: 🇩🇪 德国 | trojan | 752
+  network: ws
+  password: '1234567890'
+  port: 2053
+  server: 37.1.194.237
+  skip-cert-verify: true
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
+- name: '🏳️ #96'
+  network: ws
+  password: humanity
+  port: 443
+  server: 172.64.152.23
+  sni: www.gossipglove.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.gossipglove.com
+    path: /assignment
+- name: '未知 TROJAN-197 | free-nodes #1'
+  network: ws
+  password: humanity
+  port: 443
+  server: chatgpt.com
+  sni: www.gossipglove.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.gossipglove.com
+    path: '%2Fassignment'
+- name: 🇸🇬 新加坡 | trojan | 31
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 41943
+  server: 188.253.12.94
+  skip-cert-verify: true
+  sni: az.01.naiun.bilibili.com
+  type: trojan
+- name: '🌐 Anycast-IP | [IPv6] | [BL] #10'
   network: ws
   password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 217.145.79.218
+  port: 2053
+  server: 77.232.143.39
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
-    path: /trTelegram
-- name: 'By #451'
-  network: ws
-  password: 8205bee049104962
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇺🇸 United States, Nashville | ...
+  network: tcp
+  password: Bt-qzyomC7g37TaHwvPSV0.YrNSxFmlvIP
   port: 443
-  server: www.speedtest.net
+  server: 130.94.107.242
+  skip-cert-verify: true
+  sni: 130.94.107.242
+  type: trojan
+- name: SHΞЯVIN™
+  network: tcp
+  password: 79770a32-9607-4919-9483-0f1794559390
+  port: 443
+  server: 188.114.97.3
+  sni: nika3hdfy2.foriran.trade
+  type: trojan
+- name: 未知 TROJAN-86 | free-nodes
+  network: tcp
+  password: GTCCjtvCtuy03-aV1mwF0OkG2q6yL+Fc5K
+  port: 443
+  server: 207.126.167.241
+  skip-cert-verify: true
+  sni: 207.126.167.241
+  type: trojan
+- name: 'By #126'
+  network: ws
+  password: humanity
+  port: 443
+  server: 188.114.97.6
+  sni: www.calmloud.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- name: 🇫🇮 芬兰 | trojan | 177
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 94.183.191.228
+  sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
-      Host: ezaccess-project-d309e2.ez-8bb74b.workers.dev
-    path: '%2FeyJqdW5rIjoiTGZyV2IwUmNjdk5zeCIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0%3D%3Fed%3D2560'
-- name: 🇩🇪 德国 | trojan | 664
-  password: '1234567890'
-  port: 443
-  server: 202.61.195.167
-  sni: kfm-bn0.pages.dev
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇸🇬 新加坡 | trojan | 85
+  network: tcp
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 46424
+  server: 188.253.12.90
+  skip-cert-verify: true
+  sni: de.01.naiun.bilibili.com
   type: trojan
-- name: '🏳️ #68'
-  network: ws
-  password: L09QoSz67CraOrksoUU65g
-  port: 443
-  server: 66.23.207.68
-  type: trojan
-  ws-opts:
-    headers:
-      Host: telegram.org
-    path: '%2F'
 - alpn:
   - http/1.1
-  name: 'By #457'
+  name: 'By #134'
+  network: ws
+  password: humanity
+  port: 443
+  server: 188.114.96.4
+  skip-cert-verify: true
+  sni: www.calmloud.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- alpn:
+  - http/1.1
+  name: trojan 940 - 2719
+  network: ws
+  password: '|??i_JKOEo!rcur2'
+  port: 443
+  server: 198.41.209.228
+  sni: Flat-WOod-1B6a.mahdIhesINE3.worKErs.dEv
+  type: trojan
+  ws-opts:
+    path: '%2FeyJqdW5rIjoiQjJ4ZVlETFIiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119%3Fed%3D2560'
+- name: 🇮🇷 伊朗 | trojan | 287
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 62.60.217.70
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- alpn:
+  - http/1.1
+  name: 'By #141'
   network: ws
   password: mitivpn
   port: 443
@@ -3638,58 +2470,83 @@ proxies:
     headers:
       Host: mitivpn.de.ssl.global.fastly.co.mitivpn.site
     path: https%3A%2F%2Fchatgpt.com
-- name: '🌐 Anycast-IP | [BL] #1'
+- name: 🇸🇬 新加坡 | trojan | 12
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 45553
+  server: 188.253.12.90
+  skip-cert-verify: true
+  sni: ch.01.naiun.bilibili.com
+  type: trojan
+- name: '[1596]⭐ 🇨🇦 CAN [TR] ⭐ 📑 🗺️ #19...'
   network: ws
-  password: humanity
-  port: 443
-  server: 8.6.112.6
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 109.248.168.196
+  sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
-      Host: www.ignitelimit.com
-    path: /assignment
-- name: '🇽🇽XX(AzadNet.t.me) #2'
-  network: tcp
-  password: bpb-trojan
-  port: 443
-  server: 172.66.44.156
-  sni: BPB-wOrkeR-pANel1-E4P.pageS.DeV
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: '🌐 Anycast-IP | [IPv6] | [BL] #11'
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 95.140.157.183
+  sni: Koma-YT.PAGeS.Dev
   type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇳🇱NL(AzadNet.t.me)
+  network: tcp
+  password: 4863e1b2-ec2f-4c71-b862-ce533028e57e
+  port: 443
+  server: 82.192.82.226
+  skip-cert-verify: true
+  sni: trus.moonfree.top
+  type: trojan
+- name: 'US美国(mibei77.com 米贝节点分享) #2'
+  network: ws
+  password: Aimer
+  port: 2053
+  server: 167.68.4.199
+  sni: epge.muarua.filegear-sg.me
+  type: trojan
+  ws-opts:
+    headers:
+      Host: epge.muarua.filegear-sg.me
+    path: '%2F'
+- name: '🌐 Anycast-IP | [IPv6] | [BL] #13'
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 46.8.236.51
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - alpn:
   - http/1.1
-  name: 'By #465'
+  name: trojan 481 - 2260
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.20.42.250
+  sni: www.calmloud.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- alpn:
+  - http/1.1
+  name: 'By #162'
   network: ws
   password: humanity
   port: 443
   server: 188.114.97.6
-  skip-cert-verify: true
-  sni: www.creationlong.org
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.creationlong.org
-    path: '%2Fassignment'
-- name: 🌐 Anycast-IP | 🇨🇦 🇫🇮 🇺🇸 [*CIDR...
-  network: ws
-  password: Telegram-Config0plus-983ced63-fcf0-4d15-b81b-432e32e9b932
-  port: 443
-  server: 141.193.213.11
-  skip-cert-verify: false
-  sni: api24-normal.tiktokv.com.r3xxe.eu.cc
-  type: trojan
-  ws-opts:
-    headers:
-      Host: api24-normal.tiktokv.com.r3xxe.eu.cc
-    path: '%2Fus-gllc'
-- alpn:
-  - http/1.1
-  name: 未知 TROJAN-233 | free-nodes
-  network: ws
-  password: humanity
-  port: 443
-  server: 45.130.125.69
   skip-cert-verify: true
   sni: www.calmloud.com
   type: trojan
@@ -3697,39 +2554,1143 @@ proxies:
     headers:
       Host: www.calmloud.com
     path: '%2Fassignment'
-- alterId: 0
-  name: 🇭🇰HK香港4
-  network: tcp
-  password: 825929f4-c702-35ce-9124-00d3f95b8c32
-  port: 34436
-  server: adak.sonofthewinds.com
-  skip-cert-verify: true
-  sni: hh4.sonofthewinds.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 未知 TROJAN-278 | free-nodes
-  network: tcp
-  password: trojan
-  port: 8443
-  server: ip.sb
-  type: trojan
-- name: '🇬🇬 #3'
-  password: 7LBbob9IutFObLxLf9Svc1HaV
+- name: '未知 TROJAN-212 | free-nodes #1'
+  network: ws
+  password: humanity
   port: 443
-  server: hl-freedom-1.undef.network
+  server: www.multiplydose.com
+  skip-cert-verify: true
+  sni: www.multiplydose.com
   type: trojan
-- name: '[1596]🎈 🇨🇦 CAN [TR] 🎈 🗺️ #f370...'
+  ws-opts:
+    path: '%2Fassignment'
+- name: '[🇨🇦]t.me/ConfigsHub #10'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.97
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.ignitelimit.com
+    path: '%2Fassignment'
+- name: trojan 344 - 2123
+  network: ws
+  password: humanity
+  port: 443
+  server: 45.80.111.7
+  type: trojan
+- name: 🇵🇱 波兰 | trojan | 81
   network: ws
   password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 195.135.252.148
+  port: 8443
+  server: 178.17.59.32
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 未知 TROJAN-197 | free-nodes
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.17.121.71
+  skip-cert-verify: false
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: '%2Fassignment'
+- alpn:
+  - http/1.1
+  name: 'By #173'
+  network: ws
+  password: mitivpn
+  port: 443
+  server: 188.114.97.202
+  sni: gamingdll.ir
+  type: trojan
+  ws-opts:
+    headers:
+      Host: d.gamingdll.ir
+    path: '%2Fed%3Dmitivpn'
+- name: 🇫🇮 芬兰 | trojan | 231
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 31.57.26.227
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: '未知 TROJAN-157 | free-nodes #1'
+  network: ws
+  password: d0298536-d670-4045-bbb1-ddd5ea68683e
+  port: 443
+  server: www.digitalocean.com
+  sni: azadnet-5vk.pages.dev
+  type: trojan
+  ws-opts:
+    path: '%2Fazadnet-5vk.pages.dev%2F%3Fed%3D2560%26PROT_TYPE%3Dtrojan'
+- alpn:
+  - http/1.1
+  name: 'By #177'
+  network: ws
+  password: MiTiVPN
+  port: 443
+  server: 172.67.210.215
+  sni: linkkon-w.ir
+  type: trojan
+  ws-opts:
+    headers:
+      Host: linkkon-w.ir
+    path: '%2Fed%3Dmitivpn'
+- name: '🌐 Anycast-IP | [IPv6] | [BL] #14'
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 95.140.157.183
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- alpn:
+  - http/1.1
+  name: FR TROJAN-42 | free-nodes
+  network: ws
+  password: humanity
+  port: 443
+  server: 8.6.112.6
+  skip-cert-verify: false
+  sni: www.calmloud.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmloud.com
+    path: '%2Fassignment'
+- alpn:
+  - h2
+  - http/1.1
+  name: '未知 TROJAN-164 | free-nodes #1'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.7.147
+  sni: www.creationlong.org
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- name: trojan 499 - 2278
+  network: ws
+  password: your_password
+  port: 443
+  server: 104.21.7.241
+  skip-cert-verify: true
+  sni: aws-ca-central-1.f1cflineb.com
+  type: trojan
+  ws-opts:
+    path: '%2Ff1rocket'
+- name: 未知 TROJAN-253 | free-nodes
+  network: ws
+  password: vpn
+  port: 2025
+  server: 45.82.14.144
+  sni: www.bing.com
+  type: trojan
+- name: 🇸🇪 瑞典 | trojan | 39
+  network: ws
+  password: '162534'
+  port: 8443
+  server: 84.32.49.95
+  skip-cert-verify: true
+  sni: cchh2.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: cchh2.pages.dev
+    path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
+- name: 🇫🇮 芬兰 | trojan | 207
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 95.182.115.48
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇳🇱 荷兰 | trojan | 681
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 77.246.110.179
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- alpn:
+  - http/1.1
+  name: 'By #263'
+  network: ws
+  password: humanity
+  port: 443
+  server: 141.193.213.21
+  skip-cert-verify: false
+  sni: www.calmloud.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmloud.com
+    path: '%2Fassignment'
+- name: 🇳🇱 荷兰 | trojan | 634
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 213.165.38.7
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇳🇱 荷兰 | trojan | 692
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 152.53.200.174
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇸🇬 新加坡 | trojan | 108
+  password: 7522e2c27233459aab8d0f1d715828d0
+  port: 443
+  server: 185.151.146.211
+  skip-cert-verify: true
+  sni: www.gpt123.one
+  type: trojan
+- name: 🇳🇱 荷兰 | trojan | 538
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 5.255.113.38
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇰🇷 韩国 | trojan | 47
+  password: '1234567890'
+  port: 10995
+  server: 220.122.42.198
+  skip-cert-verify: false
+  sni: kfm-bn0.pages.dev
+  type: trojan
+- name: 🇩🇪 德国 | trojan | 249
+  network: tcp
+  password: SoftNetConnect
+  port: 42549
+  server: 194.5.193.150
+  skip-cert-verify: true
+  sni: www.speedtest.net
+  type: trojan
+- name: '🏳️ #48'
+  network: ws
+  password: humanity
+  port: 443
+  server: 81.255.155.10
+  sni: www.creationlong.org
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: '🌐 Anycast-IP | [IPv6] | [BL] #18'
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 147.45.197.233
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 未知 TROJAN-180 | free-nodes
+  network: tcp
+  password: trojan
+  port: 8443
+  server: ip.sb
+  type: trojan
+- name: '🌐 Anycast-IP | [IPv6] | [BL] #19'
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 45.84.88.232
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: NODE1-VPN-1A
+  password: d4d7a8df-eafc-4693-8680-1cc998822aa0
+  port: 443
+  server: node1-vpn.hrzy.me
+  skip-cert-verify: false
+  type: trojan
+- name: 🇭🇰 Hong Kong - Hong Kong 🌏 TR-...
+  network: tcp
+  password: 1de78101-cc31-45eb-a8ac-41bd77578314
+  port: 443
+  server: 20.187.91.165
+  sni: data-hk.efyunpan.com
+  type: trojan
+- name: 未知 TROJAN-179 | free-nodes
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.11.110
+  skip-cert-verify: true
+  sni: www.multiplydose.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.multiplydose.com
+    path: '%2Fassignment'
+- alpn:
+  - http/1.1
+  name: 'By #226'
+  network: ws
+  password: humanity
+  port: 443
+  server: 45.130.125.76
+  skip-cert-verify: false
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: '%2Fassignment'
+- name: DE TROJAN-44 | free-nodes
+  network: ws
+  password: '1234567890'
+  port: 443
+  server: 202.61.195.167
+  skip-cert-verify: false
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: /?ed=2560
+- name: 未知 TROJAN-78 | free-nodes
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 47909
+  server: 188.253.12.96
+  sni: is.01.naiun.bilibili.com
+  type: trojan
+- name: 'By #235'
+  network: ws
+  password: humanity
+  port: 443
+  server: 188.114.98.0
+  sni: www.calmloud.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmloud.com
+    path: '%2Fassignment'
+- name: 🇷🇺 俄罗斯 | trojan | 827
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 443
+  server: 95.213.226.60
+  skip-cert-verify: true
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2'
+- name: '🏳️ #53'
+  network: ws
+  password: r137979f
+  port: 2087
+  server: 162.159.153.212
+  sni: sheleqaz.emotionreza.workers.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: sheleqaz.emotionreza.workers.dev
+    path: /
+- name: '[1596]🎈 🇦🇷 RUS [TR] 🎈 🗺️ #ba5e...'
+  network: ws
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  port: 443
+  server: 154.17.6.184
+  sni: tjsp.hhxaf.cc.cd
+  type: trojan
+  ws-opts:
+    headers:
+      Host: tjsp.hhxaf.cc.cd
+    path: /
+- name: '🏳️ #56'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.32.37
+  sni: www.gossipglove.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇦🇹 奥地利 | trojan | 31
+  network: tcp
+  password: BSs5IAVMQdYuykvDsOYZoa6gNPSGBjAbLL
+  port: 443
+  server: 185.126.236.44
+  skip-cert-verify: true
+  sni: www.mesaly.click
+  type: trojan
+- alpn:
+  - h2
+  - http/1.1
+  name: '[1596]🎈 🇫🇷 FRA [TR] 🎈 #20246a'
+  network: xhttp
+  password: Du6929ec1f5adbb5db82f3
+  port: 443
+  server: ip1.hostparsa.ir
+  sni: vip1.vipdatanetwork.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: vip1.vipdatanetwork.com
+    path: /download
+- name: trojan 840 - 2619
+  network: ws
+  password: u2k1jh0og5vn
+  port: 8443
+  server: 104.17.162.123
+  sni: oq788320mz7kfruyec7b0q1l4bojfire1bp9lmu7.zjde5.de5.net
+  type: trojan
+- name: 'By #256'
+  network: ws
+  password: YZSfMMqKIC
+  port: 443
+  server: 188.114.97.6
+  skip-cert-verify: false
+  sni: dd.aananas.ir.
+  type: trojan
+  ws-opts:
+    path: '%2F%3Fed'
+- name: 🇫🇮 芬兰 | trojan | 243
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2087
+  server: 193.23.201.155
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- alpn:
+  - h2
+  grpc-opts:
+    grpc-service-name: db
+  name: 🇹🇼 台湾 | trojan | 26
+  network: grpc
+  password: 0a9f1f5a397bd427
+  port: 443
+  server: 125.227.86.45
+  skip-cert-verify: true
+  sni: TG.freecodes
+  type: trojan
+- name: 🇨🇦 加拿大 | trojan | 18
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 44.32.224.207
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: '🇽🇽XX(AzadNet.t.me) #6'
+  network: tcp
+  password: 2cba4104747d49d18319e5ade1b93ab5
+  port: 443
+  server: 104.17.215.8
+  sni: jobscareertoday.com
+  type: trojan
+- name: '[1596]️🌤️ 🇷🇺 RUS [TR] #9c948e'
+  password: c7f9b8f0-bfdb-11ee-a15c-1239d0255272
+  port: 443
+  server: chatbuzzteambhm.chatbuzzt7150.workers.dev
+  type: trojan
+- name: '[1596]🎈 🇷🇺 RUS [TR] 🎈 🗺️ #06a1...'
+  network: ws
+  password: trojan
+  port: 8888
+  server: 152.53.45.251
+  skip-cert-verify: false
+  sni: jflsjlaf.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: jflsjlaf.pages.dev
+    path: /
+- alterId: 0
+  name: 🇺🇸US美国6 194.4KB/s
+  network: tcp
+  password: PoSQBShqwNV9wKX4WHxDoLxbvp4eQYnD8v
+  port: 443
+  server: 130.94.78.17
+  skip-cert-verify: true
+  tls: true
+  type: trojan
+  udp: true
+- alpn:
+  - http/1.1
+  name: '[1596]⭐ 🇨🇦 CAN [TR] ⭐ 📑 🗺️ #ba...'
+  network: ws
+  password: mitivpn
+  port: 443
+  server: 216.24.57.210
+  skip-cert-verify: false
+  sni: gamingdll.ir
+  type: trojan
+  ws-opts:
+    headers:
+      Host: gamingdll.ir
+    path: /ed%3Dmitivpn/index.php
+- name: '[1596]🎈 🇷🇺 RUS [TR] 🎈 🗺️ #e31d...'
+  network: ws
+  password: humanity
+  port: 443
+  server: 8.6.112.0
+  sni: www.calmloud.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmloud.com
+    path: /assignment
+- name: '[🇨🇦]t.me/ConfigsHub #17'
+  network: ws
+  password: humanity
+  port: 443
+  server: www.multiplydose.com
+  skip-cert-verify: true
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.multiplydose.com
+    path: '%2F%2Fassignment'
+- name: 🇫🇮 芬兰 | trojan | 190
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 77.110.98.16
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 'By #284'
+  network: ws
+  password: humanity
+  port: 443
+  server: 172.64.146.143
+  skip-cert-verify: false
+  sni: www.multiplydose.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- name: 🇸🇬 新加坡 | trojan | 91
+  password: 16bcc187-a1a0-4b8a-8b69-627f38b7cc0d
+  port: 80
+  server: 15.235.197.4
+  sni: 15.235.197.4
+  type: trojan
+- name: '[1596]⭐ 🇮🇪 RUS [TR] ⭐ 📑 🗺️ #16...'
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 5.255.118.107
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: '[1596]🎈 🇨🇦 CAN [TR] 🎈 🗺️ #0dcd...'
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 77.239.98.192
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
+- name: 🇫🇷 法国 | trojan | 124
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 31.59.103.95
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇸🇬 新加坡 | trojan | 88
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 41943
+  server: 188.253.12.93
+  sni: az.01.naiun.bilibili.com
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 76
+  network: tcp
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 45553
+  server: 188.253.12.97
+  skip-cert-verify: true
+  sni: ch.01.naiun.bilibili.com
+  type: trojan
+- alpn:
+  - http/1.1
+  name: 'By #295'
+  network: ws
+  password: mitivpn
+  port: 443
+  server: 188.114.97.6
+  skip-cert-verify: true
+  sni: mitivpn.dsech.ss.ssandfdsgx.gloteefghedcal.ssl.fastly.net.b5r.ir
+  type: trojan
+  ws-opts:
+    headers:
+      Host: nl.e-mitivpn.global.ssl.b5r.ir
+    path: https%3A%2F%2Fchatgpt.com
+- name: 🇩🇪 德国 | trojan | 233
+  network: tcp
+  password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu
+  port: 9443
+  server: 94.103.173.70
+  skip-cert-verify: false
+  sni: de-1.hysteria.ltd
+  type: trojan
+- name: 🇰🇷 韩国 | trojan | 09
+  network: ws
+  password: GKHWMe2R4qwNcNxu6l3KMkdd
+  port: 11371
+  server: 125.141.32.222
+  sni: vpn1.rnmcnm.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: vpn1.rnmcnm.com
+    path: '%2Ftrj-ws'
+- name: 🇳🇱 荷兰 | trojan | 684
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 138.124.89.211
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 未知 TROJAN-226 | free-nodes
+  network: tcp
+  password: dreDeMpIQpnv
+  port: 2053
+  server: 104.21.44.185
+  sni: aryanews.onetwothree123.ir
+  type: trojan
+- name: 'HK香港(mibei77.com 米贝节点分享) #1'
+  network: ws
+  password: 5dc15e15-f285-4a9d-959b-0e4fbdd77b63
+  port: 443
+  server: cf.877774.xyz
+  sni: cloudflare-proxy-1jk.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: cloudflare-proxy-1jk.pages.dev
+    path: '%2F%3Fed%3D2560'
+- name: 🌐 Anycast-IP | 🇦🇷 🇨🇦 🇯🇵 | [BL]
+  network: ws
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  port: 443
+  server: 188.253.118.174
+  sni: hhcm.hhxaf.cc.cd
+  type: trojan
+  ws-opts:
+    headers:
+      Host: hhcm.hhxaf.cc.cd
+    path: '%2F'
+- name: '🇨🇦 #1'
+  network: ws
+  password: humanity
+  port: 443
+  server: v3.dabache.top
+  sni: www.multiplydose.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.multiplydose.com
+    path: /assignment
+- name: 'US美国(mibei77.com 米贝节点分享) #4'
+  network: ws
+  password: '1234567890'
+  port: 443
+  server: 213.176.77.231
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- alpn:
+  - http/1.1
+  name: 'By #315'
+  network: ws
+  password: humanity
+  port: 443
+  server: 45.130.125.76
+  skip-cert-verify: true
+  sni: www.calmloud.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmloud.com
+    path: /assignment
+- name: 🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇷 🇮🇪 | [...
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 188.130.207.119
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: '🌐 Anycast-IP | [IPv6] | [BL] #21'
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 109.248.162.61
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 'By #318'
+  network: ws
+  password: k2CQ2JboS7
+  port: 443
+  server: 188.114.97.6
+  skip-cert-verify: false
+  sni: s6.aananas.ir
+  type: trojan
+  ws-opts:
+    headers:
+      Host: s6.aananas.ir
+    path: '%2F%3Fed%3D2048'
+- name: '未知 TROJAN-189 | free-nodes #1'
+  network: ws
+  password: humanity
+  port: 443
+  server: 188.114.98.0
+  sni: www.multiplydose.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- alpn:
+  - http/1.1
+  name: 🌐 Anycast-IP | 🇫🇷 [*CIDR]
+  network: ws
+  password: humanity
+  port: 443
+  server: 216.24.57.6
+  skip-cert-verify: true
+  sni: www.calmloud.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmloud.com
+    path: /assignment
+- name: '🌐 Anycast-IP | [IPv6] | [BL] #22'
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 77.239.98.141
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: '[1596]🎈 🇦🇷 RUS [TR] 🎈 🗺️ #af5d...'
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 185.252.177.115
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
+- name: 🇸🇪 瑞典 | trojan | 210
+  password: '1234567890'
+  port: 443
+  server: 138.124.34.36
+  skip-cert-verify: false
+  sni: kfm-bn0.pages.dev
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 14
+  network: tcp
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 46424
+  server: 103.177.136.44
+  skip-cert-verify: true
+  sni: de.01.naiun.bilibili.com
+  type: trojan
+- name: '[🇨🇦]t.me/ConfigsHub #21'
+  network: ws
+  password: humanity
+  port: 443
+  server: 188.114.97.6
+  sni: www.calmloud.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmloud.com
+    path: '%2Fassignment'
+- name: 🇳🇱 荷兰 | trojan | 628
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 31.15.18.58
+  skip-cert-verify: true
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2'
+- name: 未知 TROJAN-190 | free-nodes
+  network: ws
+  password: Nova-Proxy
+  port: 2083
+  server: 8.39.125.191
+  skip-cert-verify: true
+  sni: spring-queen-a95f.cewon19053.workers.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: spring-queen-a95f.cewon19053.workers.dev
+    path: '%2F'
+- alpn:
+  - h2
+  - http/1.1
+  name: 🇫🇷 法国 | trojan | 73
+  network: xhttp
+  password: Tel=Arshiacomplus
+  port: 58035
+  server: 45.154.96.35
+  skip-cert-verify: true
+  sni: oof.acp.us.ci
+  type: trojan
+  ws-opts:
+    headers:
+      Host: oof.acp.us.ci
+    path: '%2Ffkcidiekei'
+- name: '🇺🇸US(AzadNet.t.me) #1'
+  network: ws
+  password: 519d06a5-f3a5-41bd-8f95-519ab65e20ed
+  port: 443
+  server: 141.193.213.107
+  sni: yss2o9nzv7hsgw2z.sggogo202510.top
+  type: trojan
+  ws-opts:
+    headers:
+      Host: yss2o9nzv7hsgw2z.sggogo202510.top
+    path: '%2Fimages'
+- name: '🏳️ #74'
+  network: ws
+  password: J6aPcSiRDB
+  port: 8443
+  server: 188.114.98.0
+  skip-cert-verify: false
+  sni: login.salar40040.ir
+  type: trojan
+  ws-opts:
+    headers:
+      Host: login.salar40040.ir
+    path: '%2F'
+- name: 'By #362'
+  network: ws
+  password: humanity
+  port: 443
+  server: 172.66.44.211
+  skip-cert-verify: false
+  sni: www.multiplydose.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- name: 未知 TROJAN-205 | free-nodes
+  network: ws
+  password: humanity
+  port: 443
+  server: 188.114.98.0
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: '%2Fassignment'
+- name: 🇹🇼 台湾 | trojan | 13
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.kyiv.ua
+  type: trojan
+- name: 未知 TROJAN-234 | free-nodes
+  password: humanity
+  port: 443
+  server: 8.6.112.6
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- alpn:
+  - http/1.1
+  name: '🌐 Anycast-IP | 🇨🇦 🇸🇪 | [BL] #1'
+  network: ws
+  password: MiTiVPN
+  port: 443
+  server: 151.101.110.219
+  skip-cert-verify: true
+  sni: global.fastly.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: mitivpn.global.ssl.fastly.net
+    path: /ed=mitivpn
+- name: '未知 TROJAN-165 | free-nodes #1'
+  network: ws
+  password: bpb-trojan
+  port: 443
+  server: vless.herogoing.top
+  sni: vless.herogoing.top
+  type: trojan
+  ws-opts:
+    headers:
+      Host: vless.herogoing.top
+    path: '%2Ftr%3Fed%3D2560'
+- name: 未知 TROJAN-70 | free-nodes
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 41943
+  server: 188.253.12.96
+  sni: az.01.naiun.bilibili.com
+  type: trojan
+- name: 🇨🇿 捷克 | trojan | 20
+  network: ws
+  password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
+  port: 2083
+  server: 91.184.250.116
+  sni: xo.e0f.cx
+  type: trojan
+  ws-opts:
+    headers:
+      Host: xo.e0f.cx
+    path: /trojan-ws
+- name: 'By #367'
+  network: tcp
+  password: humanity
+  port: 443
+  server: 104.16.174.117
+  sni: www.ignitelimit.com
+  type: trojan
+- name: '🌐 Anycast-IP | [IPv6] | [BL] #23'
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 77.239.98.191
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇨🇦 加拿大 | trojan | 57
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 23.173.104.208
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    path: /trTelegram🇨🇳+@WangCai2
+- alterId: 0
+  name: 未知77
+  network: tcp
+  password: s75Gtmy56sptTA39hmBH965YYx4ZgfQR_I
+  port: 443
+  server: 103.125.219.70
+  skip-cert-verify: true
+  sni: 103.125.219.70
+  tls: true
+  type: trojan
+  udp: true
+- name: '🌐 Anycast-IP | [IPv6] | [BL] #25'
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 77.37.65.221
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇮 芬兰 | trojan | 197
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 77.110.108.196
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 'DE德国(mibei77.com 米贝节点分享) #2'
+  network: ws
+  password: humanity
+  port: 443
+  server: www.multiplydose.com
+  sni: www.multiplydose.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.multiplydose.com
+    path: '%2Fassignment'
+- alpn:
+  - http/1.1
+  name: '未知 TROJAN-190 | free-nodes #1'
+  network: ws
+  password: Mitivpn
+  port: 2053
+  server: 104.17.121.71
+  skip-cert-verify: true
+  sni: dash.hitgram.ir
+  type: trojan
+  ws-opts:
+    headers:
+      Host: dash.hitgram.ir
+    path: '%2F'
+- name: trojan 791 - 2570
+  network: ws
+  password: Nova-Proxy
+  port: 8443
+  server: 198.41.200.202
+  skip-cert-verify: true
+  sni: clv2.mr-afzoni.workers.dev
+  type: trojan
+  ws-opts:
+    path: '%2F%3Fed%3D2560'
+- name: 🇺🇸 美国 | trojan | 1140
+  network: ws
+  password: '1234567890'
+  port: 8443
+  server: 144.31.246.245
+  skip-cert-verify: true
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
+- name: 🇩🇪 德国 | trojan | 419
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 172.86.68.95
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- alpn:
+  - http/1.1
+  name: 未知 TROJAN-156 | free-nodes
+  network: ws
+  password: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  port: 443
+  server: 162.159.153.2
+  skip-cert-verify: true
+  sni: sni.111000.dynv6.net
+  type: trojan
+  ws-opts:
+    headers:
+      Host: sni.111000.dynv6.net
+    path: '%2F%3Fproxyip%3Dip.111000.de5.net%253A443'
+- name: 未知 TROJAN-22 | free-nodes
+  password: BxceQaOe
+  port: 443
+  server: 119.246.1.143
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- alpn:
+  - http/1.1
+  name: 'By #388'
+  network: ws
+  password: humanity
+  port: 443
+  server: 66.81.247.155
+  skip-cert-verify: false
+  sni: www.calmloud.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmloud.com
+    path: '%2Fassignment'
+- name: '@ProxyFn+/+@nimPRO+🇫🇷'
+  password: 598c19f3-a48e-47cd-8451-1ba04ea094d0
+  port: 80
+  server: 51.91.11.29
+  type: trojan
+- name: 'US美国(mibei77.com 米贝节点分享) #8'
+  network: ws
+  password: '1234567890'
+  port: 443
+  server: 95.85.234.43
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
 - alpn:
   - http/1.1
   name: 🇺🇸 美国 | trojan | 663
@@ -3744,136 +3705,544 @@ proxies:
     headers:
       Host: gamingdll.ir
     path: '%2Fed%3Dmitivpn%2Findex.php'
-- name: '[1596]🎈 🇷🇺 RUS [TR] 🎈 🗺️ #e049...'
+- name: 🇬🇧 英国 | trojan | 213
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
-  server: 46.8.236.51
+  server: 46.226.162.201
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: trojan 313 - 2092
-  password: ac8ae2c29cd149eb85cae990572f0d59
-  port: 9443
-  server: 195.162.69.238
-  sni: apple.com
-  type: trojan
-- name: 🇪🇸 西班牙 | trojan | 08
-  password: 842b5f9dd11e458d8613c907c4cc5723
-  port: 443
-  server: 65.20.102.54
-  skip-cert-verify: true
-  sni: www.gpt123.one
-  type: trojan
-- name: '🌐 Anycast-IP | [IPv6] | [BL] #22'
+- name: 未知 TROJAN-150 | free-nodes
   network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 147.45.196.240
-  sni: Koma-YT.PAGeS.Dev
+  password: Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q
+  port: 443
+  server: 188.114.97.3
+  sni: mfyousheng.nl.eu.org
   type: trojan
   ws-opts:
     headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: '[1596]️🌤️ 🇷🇺 RUS [TR] #800719'
+      Host: mfyousheng.nl.eu.org
+    path: '%2FtjwsLhx0SFASG4l9FERJ1g'
+- name: 🇩🇪 德国 | trojan | 519
+  network: ws
+  password: '1234567890'
+  port: 443
+  server: 77.239.104.229
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: '🇽🇽XX(AzadNet.t.me) #8'
+  network: tcp
+  password: NISHIKUITAN111
+  port: 443
+  server: 104.16.104.42
+  skip-cert-verify: true
+  type: trojan
+- name: 'By #410'
+  network: ws
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  port: 443
+  server: 45.77.21.104
+  sni: tjsp.hhxaf.cc.cd
+  type: trojan
+  ws-opts:
+    headers:
+      Host: tjsp.hhxaf.cc.cd
+    path: '%2F'
+- name: 🇳🇱 荷兰 | trojan | 112
+  network: ws
+  password: trojan
+  port: 8444
+  server: 152.53.200.98
+  skip-cert-verify: false
+  sni: jflsjlaf.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: jflsjlaf.pages.dev
+    path: '%2F'
+- alpn:
+  - h2
+  - http/1.1
+  name: 未知 TROJAN-187 | free-nodes
+  network: ws
   password: humanity
   port: 443
-  server: www.gossipglove.com
+  server: 188.114.98.0
+  skip-cert-verify: false
+  sni: www.creationlong.org
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.creationlong.org
+    path: '%2Fassignment'
+- name: '未知 TROJAN-170 | free-nodes #1'
+  network: ws
+  password: VPNCUSTOMIZE
+  port: 443
+  server: 45.81.58.159
+  skip-cert-verify: false
+  sni: www.godaddy.cc.cd
+  type: trojan
+  ws-opts:
+    path: '%2Flousyrestateme%3Fed%3D2048'
+- name: '[1596]🎈 🇷🇺 RUS [TR] 🎈 🗺️ #310e...'
+  network: ws
+  password: humanity
+  port: 443
+  server: srv1.khatibirepair.ir
+  skip-cert-verify: false
+  sni: www.calmlunch.com
   type: trojan
   ws-opts:
     path: /assignment
-- name: 🇫🇮 芬兰 | trojan | 173
+- name: '🇽🇽XX(AzadNet.t.me) #9'
+  network: tcp
+  password: g8h9i0j1-2345-5bcd-abc1-4567890abcde
+  port: 443
+  server: 104.21.25.67
+  sni: trojan.workers.dev
+  type: trojan
+- name: '[1596]🎈 🇷🇺 RUS [TR] 🎈 🗺️ #c45c...'
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
-  server: 151.242.43.44
+  server: 85.193.91.193
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇺🇸 US美国(mibei77.com 米贝节点分享)
-  password: '1234567890'
-  port: 8443
-  server: 194.164.198.156
-  skip-cert-verify: false
-  sni: kfm-bn0.pages.dev
-  type: trojan
-- name: '🏳️ #70'
+- name: 未知 TROJAN-248 | free-nodes
   network: ws
   password: humanity
   port: 443
-  server: 104.17.131.88
+  server: 188.114.96.3
+  skip-cert-verify: true
+  sni: www.gossipglove.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- alpn:
+  - http/1.1
+  name: 'By #426'
+  network: ws
+  password: MiTiVPN
+  port: 443
+  server: 45.131.4.118
+  sni: linkkon-w.ir
+  type: trojan
+  ws-opts:
+    headers:
+      Host: linkkon-w.ir
+    path: '%2Fed%3Dmitivpn'
+- name: 'By #449'
+  network: ws
+  password: 6c862415-30d2-4813-8e49-42e99a0bd415
+  port: 443
+  server: 188.164.248.122
+  skip-cert-verify: false
+  sni: space.byu.id.yxls.eu.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: space.byu.id.yxls.eu.cc
+    path: '%2Fus-gllc'
+- name: 'DE德国(mibei77.com 米贝节点分享) #4'
+  network: ws
+  password: '1234567890'
+  port: 443
+  server: 148.253.208.19
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: '%2F'
+- name: trojan 396 - 2175
+  network: ws
+  password: Mojtaba-shieldheart
+  port: 2087
+  server: 104.24.145.86
+  sni: broken-bread-6ba6.shieldheart4.workers.dev
+  type: trojan
+- name: 'TR TROJAN-43 | free-nodes #1'
+  password: JaFKnqNcvnBT63t3rquidGsln
+  port: 443
+  server: hl-freedom-1.undef.network
+  sni: HL-FREEDOM-1.UNDEF.NETWORK
+  type: trojan
+- name: '[1596]⭐ 🇷🇺 RUS [TR] ⭐ 📑 🗺️ #fb...'
+  network: ws
+  password: '162534'
+  port: 8443
+  server: 84.32.49.95
+  sni: cchh2.pages.dev
+  type: trojan
+  ws-opts:
+    path: /
+- name: 'US美国(mibei77.com 米贝节点分享) #11'
+  network: ws
+  password: humanity
+  port: 443
+  server: 172.64.152.23
+  skip-cert-verify: false
+  sni: www.creationlong.org
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.creationlong.org
+    path: '%2Fassignment'
+- alpn:
+  - http/1.1
+  name: 'By #433'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.229
+  skip-cert-verify: false
+  sni: www.calmloud.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmloud.com
+    path: '%2Fassignment'
+- name: trojan 857 - 2636
+  network: ws
+  password: Nova-Proxy
+  port: 443
+  server: 104.16.132.173
+  skip-cert-verify: true
+  sni: clv2.mr-afzoni.workers.dev
+  type: trojan
+  ws-opts:
+    path: '%2F%3Fed%3D2560'
+- name: 未知 TROJAN-204 | free-nodes
+  network: ws
+  password: humanity
+  port: 443
+  server: www.multiplydose.com
+  skip-cert-verify: true
+  sni: www.multiplydose.com
+  type: trojan
+  ws-opts:
+    path: '%252Fassignment'
+- alpn:
+  - http/1.1
+  name: 未知 TROJAN-146 | free-nodes
+  network: ws
+  password: A4u^p(_UR*F6
+  port: 443
+  server: irancell.buzzmuzzpanel.online
+  sni: 027.eLECTROcelLCO-cf-027.WorKerS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 027.electrocellco-cf-027.workers.dev
+    path: '%2FeyJqdW5rIjoidDJ0UDljR2ZIaVBQakg2byIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0%3D'
+- alpn:
+  - h2
+  - http/1.1
+  name: 'By #483'
+  network: ws
+  password: Mitivpn
+  port: 443
+  server: 104.17.121.8
+  skip-cert-verify: true
+  sni: panel.hitgram.ir
+  type: trojan
+  ws-opts:
+    headers:
+      Host: panel.hitgram.ir
+    path: /?ed=mitivpn
+- alpn:
+  - http/1.1
+  name: 'By #453'
+  network: ws
+  password: mitivpn
+  port: 443
+  server: 188.114.97.6
+  sni: mitivpn.sdde.ssdl.globdal.fastdly.net.mitivpn.site
+  type: trojan
+  ws-opts:
+    headers:
+      Host: mitivpn.de.ssl.global.fastly.co.mitivpn.site
+    path: https%3A%2F%2Fchatgpt.com
+- alpn:
+  - http/1.1
+  name: 'By #454'
+  network: ws
+  password: humanity
+  port: 443
+  server: 45.130.125.72
+  skip-cert-verify: true
+  sni: www.calmloud.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmloud.com
+    path: '%2Fassignment'
+- name: 未知 TROJAN-208 | free-nodes
+  network: ws
+  password: humanity
+  port: 443
+  server: 188.114.98.0
+  sni: www.creationlong.org
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.creationlong.org
+    path: /assignment
+- name: 'By #457'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.21.40.34
+  skip-cert-verify: true
   sni: www.gossipglove.com
   type: trojan
   ws-opts:
     headers:
       Host: www.gossipglove.com
-    path: /assignment
-- name: 🇩🇪 德国 | trojan | 665
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 91.220.8.170
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    path: /trTelegram
-- name: 未知 TROJAN-249 | free-nodes
-  network: ws
-  password: humanity
-  port: 443
-  server: 188.114.98.0
-  sni: www.multiplydose.com
-  type: trojan
-  ws-opts:
     path: '%2Fassignment'
-- name: 未知 TROJAN-139 | free-nodes
+- name: trojan 770 - 2549
   network: ws
-  password: '1710442808'
-  port: 443
-  server: 188.114.98.0
-  sni: subb.nrshop198.workers.dev
+  password: Nova-Proxy
+  port: 8443
+  server: 104.17.207.205
+  skip-cert-verify: true
+  sni: clv2.mr-afzoni.workers.dev
   type: trojan
   ws-opts:
-    headers:
-      Host: subb.nrshop198.workers.dev
-    path: '%2F'
-- name: 🇺🇸 美国 CCZZUU.TOP
-  password: 8r<[9'l6hAO#8ZQi
-  port: 443
-  server: 149.104.110.97
-  skip-cert-verify: true
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-- name: 🇫🇷FR法國丨yoyapai.com
+    path: '%2F%3Fed%3D2560'
+- name: 🇫🇮 芬兰 | trojan | 180
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
-  server: 31.59.120.161
-  skip-cert-verify: true
+  server: 94.183.191.228
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    path: /trTelegram🇨🇳+@WangCai2
+- name: 🇫🇷 法国 | trojan | 155
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 31.56.48.63
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
       Host: Koma-YT.PAGeS.Dev
-    path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2'
-- name: 'GB英国(mibei77.com 米贝节点分享) #2'
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2
+- alpn:
+  - h2
+  - http/1.1
+  name: '[🇨🇦]t.me/ConfigsHub #31'
   network: ws
-  password: GKHWMe2R4qwNcNxu6l3KMkdd
-  port: 10912
-  server: 218.150.34.228
-  sni: vpn1.rnmcnm.com
+  password: rQZjCMGZEN
+  port: 443
+  server: 188.114.97.6
+  sni: cloud.magicservice.top
   type: trojan
   ws-opts:
     headers:
-      Host: vpn1.rnmcnm.com
-    path: '%2Ftrj-ws'
+      Host: cloud.magicservice.top
+    path: '%2F'
+- name: 'US美国(mibei77.com 米贝节点分享) #12'
+  network: ws
+  password: 4c3164ee-abcf-4091-abea-d1cd4937a68d
+  port: 443
+  server: 154.17.14.241
+  skip-cert-verify: true
+  sni: jy.hhllfly.kdns.fr
+  type: trojan
+  ws-opts:
+    headers:
+      Host: jy.hhllfly.kdns.fr
+    path: '%2F%3Fed%3D2048'
+- name: '[🇨🇦]t.me/ConfigsHub #33'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.7.147
+  skip-cert-verify: false
+  sni: www.creationlong.org
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- name: 🇩🇪 德国 | trojan | 383
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 77.221.157.251
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 'By #465'
+  network: ws
+  password: 926b26e0-6774-11f1-a61d-1239d0255272
+  port: 443
+  server: news.microsoft.com
+  skip-cert-verify: false
+  sni: uk1.test3.net
+  type: trojan
+  ws-opts:
+    headers:
+      Host: uk1.test3.net
+    path: '%2Fhowdy'
+- alpn:
+  - http/1.1
+  name: 'By #466'
+  network: ws
+  password: humanity
+  port: 443
+  server: 45.130.125.0
+  skip-cert-verify: true
+  sni: www.calmloud.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmloud.com
+    path: '%2Fassignment'
+- name: 'By #467'
+  network: ws
+  password: humanity
+  port: 443
+  server: 165.215.250.14
+  sni: www.creationlong.org
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- name: '🏳️ #99'
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 185.252.177.115
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: '🌐 Anycast-IP | [IPv6] | [BL] #34'
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 80.66.85.52
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 'By #480'
+  network: ws
+  password: humanity
+  port: 443
+  server: 216.24.57.6
+  skip-cert-verify: false
+  sni: www.calmloud.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- alpn:
+  - http/1.1
+  name: 'By #482'
+  network: ws
+  password: humanity
+  port: 443
+  server: 141.193.213.30
+  skip-cert-verify: false
+  sni: www.calmloud.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmloud.com
+    path: '%2Fassignment'
+- name: '🌐 Anycast-IP | [IPv6] | [BL] #35'
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 217.60.39.139
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇳🇱 荷兰 | trojan | 669
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 152.53.200.71
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: '🇽🇽XX(AzadNet.t.me) #10'
+  network: tcp
+  password: 91d237a0-8a03-11ee-b32f-1239d0255272
+  port: 443
+  server: 104.18.23.136
+  sni: de1.test3.net
+  type: trojan
+- name: '🌐 Anycast-IP | [IPv6] | [BL] #37'
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 94.156.180.215
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: '[1596]⭐ 🇷🇺 RUS [TR] ⭐ 📑 🗺️ #98...'
+  network: ws
+  password: '162534'
+  port: 2053
+  server: 195.123.209.7
+  skip-cert-verify: true
+  sni: cchh2.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: cchh2.pages.dev
+    path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
+- name: 🏁RELAY-172.67.215.250-3953
+  password: 8800c518-e68a-4441-a45c-cd67855784c8
+  port: 443
+  server: hk1.sanfen001.pics
+  sni: hk1.sanfen001.pics
+  type: trojan
+- alpn:
+  - http/1.1
+  name: 'By #504'
+  network: ws
+  password: ''
+  port: 443
+  server: 188.114.97.6
+  skip-cert-verify: false
+  sni: s2.mitivpn.nl.ssl.global.fastly.dev.iranpoems.ir
+  type: trojan
+  ws-opts:
+    headers:
+      Host: s2.mitivpn.nl.ssl.global.fastly.ir.iranpoems.ir
+    path: '%2F%3Fmitivpn'
 - name: 🇦🇪 阿联酋 | trojan | 08
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -3885,75 +4254,6 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: '🌐 Anycast-IP | 🇨🇦 🇩🇪 🇮🇪 | [BL] #1'
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 77.239.98.141
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇩🇪 德国 | trojan | 676
-  network: ws
-  password: '1234567890'
-  port: 8443
-  server: 87.106.142.32
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
-- name: '[🇨🇦]t.me/ConfigsHub #29'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.19.229.21
-  sni: www.gossipglove.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment%3FTELEGRAM--KANAL--UnNurmal--UnNurmal--UnNurmal--UnNurmal--UnNurmal--UnNurmal'
-- alpn:
-  - h2
-  - h3
-  - http/1.1
-  name: 'By #544'
-  network: ws
-  password: humanity
-  port: 443
-  server: www.ignitelimit.com
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: 🇩🇪 德国 | trojan | 354
-  network: grpc
-  password: Cl150MQWlG
-  port: 443
-  server: 209.250.236.93
-  sni: irancell-ir-4.mmdruby13.store
-  type: trojan
-- name: '🇺🇸 #18'
-  network: ws
-  password: humanity
-  port: 443
-  server: 8.6.112.6
-  sni: www.calmloud.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmloud.com
-    path: /assignment
-- name: 🇭🇰 香港 | trojan | 11
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 48697
-  server: 103.177.136.41
-  sni: gh.01.naiun.bilibili.com
-  type: trojan
 - name: 🇦🇪 阿联酋 | trojan | 09
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -4060,17 +4360,6 @@ proxies:
     headers:
       Host: tru.ccnnx.ir
     path: /@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia--@v2raydia
-- name: 🇦🇹 奥地利 | trojan | 12
-  network: ws
-  password: humanity
-  port: 443
-  server: 212.183.88.136
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
 - name: 🇦🇹 奥地利 | trojan | 18
   password: trojan
   port: 8888
@@ -4087,13 +4376,6 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 🇦🇹 奥地利 | trojan | 31
-  password: BSs5IAVMQdYuykvDsOYZoa6gNPSGBjAbLL
-  port: 443
-  server: 185.126.236.44
-  skip-cert-verify: true
-  sni: www.mesaly.click
-  type: trojan
 - name: 🇦🇹 奥地利 | trojan | 32
   network: tcp
   password: VGBzLm49=M_i02Az30tIeonkQw180t-edg
@@ -4235,17 +4517,6 @@ proxies:
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
   server: 23.173.104.215
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇨🇦 加拿大 | trojan | 18
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 44.32.224.207
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
@@ -4514,15 +4785,6 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇨🇦 加拿大 | trojan | 57
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 23.173.104.208
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    path: /trTelegram🇨🇳+@WangCai2
 - name: 🇨🇦 加拿大 | trojan | 58
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -4554,6 +4816,16 @@ proxies:
   skip-cert-verify: true
   sni: ca-full.privateip.net
   type: trojan
+- alterId: 0
+  name: 🇺🇸US美国11
+  password: BhNAljna1sXjsY.Nqdl0ksXJ1VsGRqXz1V
+  port: 443
+  server: 130.94.114.217
+  skip-cert-verify: true
+  sni: 130.94.114.217
+  tls: true
+  type: trojan
+  udp: true
 - alterId: 0
   cipher: auto
   name: 🇨🇦 加拿大 | vmess | 67
@@ -4655,13 +4927,6 @@ proxies:
   port: 8443
   server: 83.228.230.226
   sni: www.bing.com
-  type: trojan
-- name: 🇨🇱 智利 | trojan | 06
-  password: Mzp+sTklU5g1c_TH17Vl5np7HSQnAd7E-Q
-  port: 443
-  server: 130.94.104.148
-  skip-cert-verify: true
-  sni: 130.94.104.148
   type: trojan
 - alterId: 0
   cipher: auto
@@ -4885,6 +5150,12 @@ proxies:
   password: '1234567890'
   port: 443
   server: 95.85.233.44
+  sni: kfm-bn0.pages.dev
+  type: trojan
+- name: 🇨🇿 捷克 | trojan | 23
+  password: '1234567890'
+  port: 443
+  server: 95.85.232.148
   sni: kfm-bn0.pages.dev
   type: trojan
 - name: 🇨🇿 捷克 | trojan | 29
@@ -5168,21 +5439,6 @@ proxies:
   server: 185.189.58.195
   sni: 185.189.58.195
   type: trojan
-- name: 🇩🇪 德国 | trojan | 233
-  network: tcp
-  password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu
-  port: 9443
-  server: 94.103.173.70
-  skip-cert-verify: false
-  sni: de-1.hysteria.ltd
-  type: trojan
-- name: 🇩🇪 德国 | trojan | 249
-  password: SoftNetConnect
-  port: 42549
-  server: 194.5.193.150
-  skip-cert-verify: true
-  sni: www.speedtest.net
-  type: trojan
 - name: 🇩🇪 德国 | trojan | 278
   network: tcp
   password: 9CrA8NokUfh4ND6tREVkDIhp8svpcMyZyY8ykw1xa+k=
@@ -5320,10 +5576,10 @@ proxies:
   skip-cert-verify: true
   sni: download.xn--mes358a9urctx.com
   type: trojan
-- name: 🇩🇪 德国 | trojan | 356
+- name: 🇩🇪 德国 | trojan | 349
   network: ws
   password: 8r<[9'l6hAO#8ZQi
-  port: 2083
+  port: 2087
   server: 77.221.157.251
   sni: Koma-YT.PAGeS.Dev
   type: trojan
@@ -5331,6 +5587,13 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇩🇪 德国 | trojan | 354
+  network: grpc
+  password: Cl150MQWlG
+  port: 443
+  server: 209.250.236.93
+  sni: irancell-ir-4.mmdruby13.store
+  type: trojan
 - name: 🇩🇪 德国 | trojan | 361
   network: ws
   password: '1234567890'
@@ -5388,23 +5651,21 @@ proxies:
   skip-cert-verify: false
   sni: kfm-bn0.pages.dev
   type: trojan
-- name: 🇩🇪 德国 | trojan | 383
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 77.221.157.251
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - name: 🇩🇪 德国 | trojan | 385
   password: n-S5Kuz58YgwljisuLEJltip2OWf1ourWz
   port: 443
   server: 185.137.157.154
   sni: fra154.clientfirewall.click
   type: trojan
+- name: 🇩🇪 德国 | trojan | 386
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 195.58.38.221
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    path: /trTelegram🇨🇳+@WangCai2
 - name: 🇩🇪 德国 | trojan | 392
   network: ws
   password: '1234567890'
@@ -5425,17 +5686,6 @@ proxies:
   type: trojan
   ws-opts:
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3
-- name: 🇩🇪 德国 | trojan | 397
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 37.114.46.24
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - name: 🇩🇪 德国 | trojan | 403
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -5469,17 +5719,6 @@ proxies:
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
   server: 147.45.197.78
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇩🇪 德国 | trojan | 419
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 172.86.68.95
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
@@ -5696,17 +5935,6 @@ proxies:
   port: 8443
   server: 5.187.6.30
   skip-cert-verify: true
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 🇩🇪 德国 | trojan | 519
-  network: ws
-  password: '1234567890'
-  port: 443
-  server: 77.239.104.229
   sni: kfm-bn0.pages.dev
   type: trojan
   ws-opts:
@@ -6032,6 +6260,21 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: 🇩🇪 德国 | trojan | 664
+  password: '1234567890'
+  port: 443
+  server: 202.61.195.167
+  sni: kfm-bn0.pages.dev
+  type: trojan
+- name: 🇩🇪 德国 | trojan | 665
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 91.220.8.170
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    path: /trTelegram
 - name: 🇩🇪 德国 | trojan | 671
   network: ws
   password: '1234567890'
@@ -6043,6 +6286,17 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: 🇩🇪 德国 | trojan | 676
+  network: ws
+  password: '1234567890'
+  port: 8443
+  server: 87.106.142.32
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
 - name: 🇩🇪 德国 | trojan | 677
   network: ws
   password: '1234567890'
@@ -6178,6 +6432,17 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: 🇩🇪 德国 | trojan | 739
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 171.22.31.116
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
 - name: 🇩🇪 德国 | trojan | 740
   password: '1234567890'
   port: 443
@@ -6196,18 +6461,6 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 🇩🇪 德国 | trojan | 752
-  network: ws
-  password: '1234567890'
-  port: 2053
-  server: 37.1.194.237
-  skip-cert-verify: true
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
 - name: 🇩🇪 德国 | trojan | 759
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -6252,6 +6505,15 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: 🇩🇪 德国 | trojan | 774
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 91.220.8.170
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    path: /trTelegram+@WangCai2
 - name: 🇩🇪 德国 | trojan | 793
   network: ws
   password: '1234567890'
@@ -6351,6 +6613,18 @@ proxies:
   skip-cert-verify: false
   sni: kfm-bn0.pages.dev
   type: trojan
+- name: 🇩🇪 德国 | trojan | 895
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 18.194.183.74
+  skip-cert-verify: false
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2'
 - alterId: 0
   cipher: auto
   name: 🇩🇪 德国 | vmess | 901
@@ -6418,16 +6692,6 @@ proxies:
     headers:
       Host: 23.158.56.227
     path: /
-- name: 🇩🇪 德国 | trojan | 946
-  network: ws
-  password: '1234567890'
-  port: 8443
-  server: 103.228.171.5
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
 - alterId: 0
   cipher: auto
   name: 🇩🇪 德国 | vmess | 948
@@ -6625,12 +6889,6 @@ proxies:
   skip-cert-verify: true
   sni: www.cloudflare.com
   type: trojan
-- name: 🇩🇪 德国 | trojan | 1214
-  password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu
-  port: 9443
-  server: de-1.hysteria.ltd
-  sni: de-1.hysteria.ltd
-  type: trojan
 - alterId: 0
   cipher: auto
   name: 🇩🇪 德国 | vmess | 1215
@@ -6699,6 +6957,17 @@ proxies:
   type: trojan
   ws-opts:
     path: /trTelegram%20%40WangCai2
+- name: 🇪🇪 爱沙尼亚 | trojan | 33
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 144.31.170.231
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - alterId: 0
   cipher: auto
   name: 🇪🇸 西班牙 | vmess | 07
@@ -6709,6 +6978,13 @@ proxies:
   tls: false
   type: vmess
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- name: 🇪🇸 西班牙 | trojan | 08
+  password: 842b5f9dd11e458d8613c907c4cc5723
+  port: 443
+  server: 65.20.102.54
+  skip-cert-verify: true
+  sni: www.gpt123.one
+  type: trojan
 - alterId: 0
   name: 未知78
   password: rYuChHcwQZskq9E0zdoR
@@ -7057,6 +7333,17 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2
+- name: 🇫🇮 芬兰 | trojan | 152
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 94.183.190.229
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - name: 🇫🇮 芬兰 | trojan | 153
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -7189,6 +7476,17 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
+- name: 🇫🇮 芬兰 | trojan | 173
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 151.242.43.44
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - name: 🇫🇮 芬兰 | trojan | 174
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -7211,17 +7509,6 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇮 芬兰 | trojan | 177
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 94.183.191.228
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - name: 🇫🇮 芬兰 | trojan | 179
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -7233,15 +7520,6 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇮 芬兰 | trojan | 180
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 94.183.191.228
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    path: /trTelegram🇨🇳+@WangCai2
 - name: 🇫🇮 芬兰 | trojan | 181
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -7275,6 +7553,15 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇮 芬兰 | trojan | 185
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 217.145.79.218
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    path: /trTelegram
 - name: 🇫🇮 芬兰 | trojan | 186
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -7300,17 +7587,6 @@ proxies:
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
   server: 45.38.143.54
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇮 芬兰 | trojan | 190
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 77.110.98.16
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
@@ -7344,17 +7620,6 @@ proxies:
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
   server: 31.56.227.49
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇮 芬兰 | trojan | 197
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 77.110.108.196
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
@@ -7410,17 +7675,6 @@ proxies:
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
   server: 94.183.235.247
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇮 芬兰 | trojan | 207
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 95.182.115.48
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
@@ -7537,17 +7791,6 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇮 芬兰 | trojan | 231
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 31.57.26.227
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - name: 🇫🇮 芬兰 | trojan | 232
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -7588,17 +7831,6 @@ proxies:
   type: trojan
   ws-opts:
     path: /trTelegram+@WangCai2
-- name: 🇫🇮 芬兰 | trojan | 243
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2087
-  server: 193.23.201.155
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - alterId: 0
   cipher: auto
   name: 🇫🇮 芬兰 | vmess | 247
@@ -7841,17 +8073,6 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 124
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 31.59.103.95
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - name: 🇫🇷 法国 | trojan | 126
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -7968,17 +8189,6 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 155
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 31.56.48.63
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2
 - name: 🇫🇷 法国 | trojan | 157
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -8028,13 +8238,24 @@ proxies:
   port: 443
   server: 141.94.76.177
   type: trojan
-- name: 🇫🇷 法国 | trojan | 231
-  password: 364d3aa0-58fc-11ed-b738-225401db9d57
+- name: 🇫🇷 法国 | trojan | 209
+  password: d2adff89-5143-4d67-921f-3478464de5bb
   port: 443
-  server: 54.36.191.211
+  server: 38.180.240.150
   skip-cert-verify: true
-  sni: ebank.bmi.ir
+  sni: fr.freeguard.org
   type: trojan
+- name: 🇫🇷 法国 | trojan | 237
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 31.59.105.119
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2
 - name: 🇫🇷 法国 | trojan | 238
   password: hCunaKqdEJDBO+3jCrJUSMevXOw9Q_r4Ey
   port: 443
@@ -8482,15 +8703,6 @@ proxies:
   port: 443
   server: 185.44.76.188
   type: trojan
-- alterId: 0
-  name: 🇺🇸US美国6 194.4KB/s
-  password: PoSQBShqwNV9wKX4WHxDoLxbvp4eQYnD8v
-  port: 443
-  server: 130.94.78.17
-  skip-cert-verify: true
-  tls: true
-  type: trojan
-  udp: true
 - name: 🇬🇧 英国 | trojan | 200
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -8502,11 +8714,11 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇬🇧 英国 | trojan | 213
+- name: 🇬🇧 英国 | trojan | 208
   network: ws
   password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 46.226.162.201
+  port: 2053
+  server: 109.120.186.137
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
@@ -8647,6 +8859,12 @@ proxies:
   skip-cert-verify: true
   sni: is.01.naiun.bilibili.com
   type: trojan
+- name: 🇭🇰 香港 | trojan | 11
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 48697
+  server: 103.177.136.41
+  sni: gh.01.naiun.bilibili.com
+  type: trojan
 - name: 🇭🇰 香港 | trojan | 12
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   port: 41943
@@ -8664,6 +8882,13 @@ proxies:
   server: 103.177.136.43
   skip-cert-verify: true
   sni: az.01.naiun.bilibili.com
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 19
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 46424
+  server: 103.177.136.43
+  skip-cert-verify: true
+  sni: de.01.naiun.bilibili.com
   type: trojan
 - name: 🇭🇰 香港 | trojan | 20
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
@@ -8859,18 +9084,6 @@ proxies:
   server: 119.246.1.143
   sni: t.me/ripaojiedian
   type: trojan
-- name: 🇭🇰 香港 | trojan | 141
-  network: ws
-  password: '162534'
-  port: 8443
-  server: 103.118.42.16
-  skip-cert-verify: true
-  sni: cchh2.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: cchh2.pages.dev
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
 - name: 🇭🇰 香港 | trojan | 144
   password: WF42809561
   port: 443
@@ -9116,6 +9329,17 @@ proxies:
   skip-cert-verify: false
   sni: kfm-bn0.pages.dev
   type: trojan
+- name: 🇮🇶 伊拉克 | trojan | 06
+  network: ws
+  password: '1234567890'
+  port: 443
+  server: 178.17.48.78
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
 - name: 🇮🇶 伊拉克 | trojan | 08
   password: bNpSPq25FqLYblE9xl_Zpaq43o1iEmrcOW
   port: 443
@@ -9136,6 +9360,22 @@ proxies:
     headers:
       Host: 214.zirogame-79.site
     path: /
+- name: 🇮🇷 伊朗 | trojan | 174
+  network: ws
+  password: M75et5r7GU
+  port: 2052
+  server: 185.143.234.122
+  type: trojan
+  ws-opts:
+    headers:
+      Host: arzoon.cloudy-cloud.ir
+    path: /
+- name: 🇮🇷 伊朗 | trojan | 274
+  password: $Iu_sL4k*u,9
+  port: 2096
+  server: 185.143.235.201
+  sni: anten.ir
+  type: trojan
 - name: 🇮🇷 伊朗 | trojan | 275
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -9163,17 +9403,6 @@ proxies:
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
   server: 62.60.244.195
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇮🇷 伊朗 | trojan | 287
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 62.60.217.70
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
@@ -9857,6 +10086,17 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
+- name: 🇰🇷 韩国 | trojan | 19
+  network: ws
+  password: '1234567890'
+  port: 19530
+  server: 222.116.195.135
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
 - name: 🇰🇷 韩国 | trojan | 25
   network: ws
   password: '1234567890'
@@ -9913,13 +10153,6 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2'
-- name: 🇰🇷 韩国 | trojan | 47
-  password: '1234567890'
-  port: 10995
-  server: 220.122.42.198
-  skip-cert-verify: false
-  sni: kfm-bn0.pages.dev
-  type: trojan
 - name: 🇰🇷 韩国 | trojan | 51
   password: '1234567890'
   port: 16992
@@ -9938,6 +10171,18 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
+- name: 🇰🇷 韩国 | trojan | 58
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 12345
+  server: 59.12.232.18
+  skip-cert-verify: true
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2'
 - name: 🇰🇷 韩国 | trojan | 62
   password: '1234567890'
   port: 14265
@@ -10059,6 +10304,19 @@ proxies:
   port: 2053
   server: official.seoulcityhall.com.ua
   type: trojan
+- name: KR_speednode_0004
+  network: ws
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  port: 443
+  server: 129.154.50.159
+  skip-cert-verify: false
+  sni: tjsp.hhxaf.cc.cd
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: tjsp.hhxaf.cc.cd
+    path: /
 - name: 🇰🇷 韩国 | trojan | 132
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
@@ -10161,11 +10419,6 @@ proxies:
   password: ZY07256934
   port: 443
   server: closing-crow.rooster465.autos
-  type: trojan
-- name: 🇰🇷 韩国 | trojan | 152
-  password: WF42809561
-  port: 443
-  server: outgoing-cockatoo.rooster465.autos
   type: trojan
 - name: 🇰🇷 韩国 | trojan | 154
   password: IL37892054
@@ -10529,17 +10782,6 @@ proxies:
     headers:
       Host: ''
     path: /V2RayyNGvpn
-- name: 🇳🇱 荷兰 | trojan | 112
-  network: ws
-  password: trojan
-  port: 8444
-  server: 152.53.200.98
-  sni: jflsjlaf.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: jflsjlaf.pages.dev
-    path: '%2F'
 - alterId: 0
   cipher: auto
   name: 🇳🇱 荷兰 | vmess | 149
@@ -10596,6 +10838,17 @@ proxies:
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
   server: 178.173.255.14
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇳🇱 荷兰 | trojan | 260
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 82.115.7.135
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
@@ -10765,6 +11018,17 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇳🇱 荷兰 | trojan | 338
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 89.125.78.74
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - name: 🇳🇱 荷兰 | trojan | 341
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -10825,6 +11089,17 @@ proxies:
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
   server: 185.18.52.77
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇳🇱 荷兰 | trojan | 385
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 144.31.13.96
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
@@ -11156,17 +11431,6 @@ proxies:
   type: trojan
   ws-opts:
     path: /trTelegram+@WangCai2
-- name: 🇳🇱 荷兰 | trojan | 538
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 5.255.113.38
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - name: 🇳🇱 荷兰 | trojan | 539
   password: 8r<[9'l6hAO#8ZQi
   port: 443
@@ -11207,6 +11471,17 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2
+- name: 🇳🇱 荷兰 | trojan | 550
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 185.125.100.208
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - name: 🇳🇱 荷兰 | trojan | 552
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -11314,45 +11589,11 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇳🇱 荷兰 | trojan | 628
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 31.15.18.58
-  skip-cert-verify: true
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2'
 - name: 🇳🇱 荷兰 | trojan | 632
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
   server: 79.137.199.237
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇳🇱 荷兰 | trojan | 633
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 77.221.155.230
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇳🇱 荷兰 | trojan | 634
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 213.165.38.7
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
@@ -11458,17 +11699,6 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇳🇱 荷兰 | trojan | 669
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 152.53.200.71
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - name: 🇳🇱 荷兰 | trojan | 670
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -11538,17 +11768,6 @@ proxies:
   type: trojan
   ws-opts:
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
-- name: 🇳🇱 荷兰 | trojan | 681
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 77.246.110.179
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - name: 🇳🇱 荷兰 | trojan | 682
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -11565,17 +11784,6 @@ proxies:
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
   server: 85.192.26.210
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇳🇱 荷兰 | trojan | 684
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 138.124.89.211
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
@@ -11638,28 +11846,6 @@ proxies:
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
   server: 46.149.78.144
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇳🇱 荷兰 | trojan | 692
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 152.53.200.174
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇳🇱 荷兰 | trojan | 695
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 77.246.102.229
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
@@ -11982,17 +12168,6 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇵🇱 波兰 | trojan | 81
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 178.17.59.32
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - name: 🇵🇱 波兰 | trojan | 85
   password: 555034c8-6420-45d0-893c-905c02342150
   port: 443
@@ -12021,6 +12196,18 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇵🇱 波兰 | trojan | 93
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 443
+  server: 82.118.21.88
+  skip-cert-verify: true
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram🇨🇳
 - name: 🇵🇱 波兰 | trojan | 104
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -12286,6 +12473,18 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇷🇺 俄罗斯 | trojan | 405
+  network: ws
+  password: '162534'
+  port: 8443
+  server: 130.49.178.104
+  skip-cert-verify: true
+  sni: cchh2.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: cchh2.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
 - name: 🇷🇺 俄罗斯 | trojan | 412
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -12309,18 +12508,6 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 🇷🇺 俄罗斯 | trojan | 827
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 443
-  server: 95.213.226.60
-  skip-cert-verify: true
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2'
 - name: 🇷🇺 俄罗斯 | trojan | 852
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -12528,18 +12715,17 @@ proxies:
   server: 194.59.250.54
   sni: ads.x5.ru
   type: trojan
-- name: 🇸🇪 瑞典 | trojan | 39
+- name: 🇸🇪 瑞典 | trojan | 32
   network: ws
-  password: '162534'
-  port: 8443
-  server: 84.32.49.95
-  skip-cert-verify: true
-  sni: cchh2.pages.dev
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 91.108.242.148
+  sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
-      Host: cchh2.pages.dev
-    path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - name: 🇸🇪 瑞典 | trojan | 121
   password: 2ee85121-31de-4581-a492-eb00f606e392
   port: 443
@@ -12696,6 +12882,28 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: 🇸🇪 瑞典 | trojan | 216
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 89.22.234.0
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇸🇪 瑞典 | trojan | 217
+  network: ws
+  password: '1234567890'
+  port: 443
+  server: 213.21.252.159
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
 - name: 🇸🇪 瑞典 | trojan | 220
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -12772,13 +12980,6 @@ proxies:
     headers:
       Host: ''
     path: /
-- name: 🇸🇬 新加坡 | trojan | 12
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 45553
-  server: 188.253.12.90
-  skip-cert-verify: true
-  sni: ch.01.naiun.bilibili.com
-  type: trojan
 - name: 🇸🇬 新加坡 | trojan | 13
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   port: 41943
@@ -12850,6 +13051,13 @@ proxies:
   skip-cert-verify: true
   sni: az.01.naiun.bilibili.com
   type: trojan
+- name: 🇸🇬 新加坡 | trojan | 26
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 45553
+  server: 188.253.12.15
+  skip-cert-verify: true
+  sni: ch.01.naiun.bilibili.com
+  type: trojan
 - name: 🇸🇬 新加坡 | trojan | 27
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   port: 47909
@@ -12857,17 +13065,16 @@ proxies:
   skip-cert-verify: true
   sni: is.01.naiun.bilibili.com
   type: trojan
+- name: 🇸🇬 新加坡 | trojan | 29
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 45553
+  server: 188.253.12.96
+  sni: ch.01.naiun.bilibili.com
+  type: trojan
 - name: 🇸🇬 新加坡 | trojan | 30
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   port: 46424
   server: 188.253.12.96
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 31
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 41943
-  server: 188.253.12.94
-  skip-cert-verify: true
-  sni: az.01.naiun.bilibili.com
   type: trojan
 - name: 🇸🇬 新加坡 | trojan | 33
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
@@ -13019,13 +13226,6 @@ proxies:
     headers:
       Host: ''
     path: /2TokGE9A/
-- name: 🇸🇬 新加坡 | trojan | 70
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 45619
-  server: 188.253.12.92
-  skip-cert-verify: true
-  sni: fr.01.naiun.bilibili.com
-  type: trojan
 - name: 🇸🇬 新加坡 | trojan | 71
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   port: 47909
@@ -13052,18 +13252,25 @@ proxies:
   skip-cert-verify: true
   sni: de.01.naiun.bilibili.com
   type: trojan
-- name: 🇸🇬 新加坡 | trojan | 76
+- name: 🇸🇬 新加坡 | trojan | 78
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 45553
-  server: 188.253.12.97
+  port: 45619
+  server: 188.253.12.98
   skip-cert-verify: true
-  sni: ch.01.naiun.bilibili.com
+  sni: fr.01.naiun.bilibili.com
   type: trojan
 - name: 🇸🇬 新加坡 | trojan | 79
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   port: 47909
   server: 188.253.12.93
   sni: is.01.naiun.bilibili.com
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 80
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 45619
+  server: 188.253.12.91
+  skip-cert-verify: true
+  sni: fr.01.naiun.bilibili.com
   type: trojan
 - name: 🇸🇬 新加坡 | trojan | 81
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
@@ -13079,23 +13286,17 @@ proxies:
   skip-cert-verify: true
   sni: gh.01.naiun.bilibili.com
   type: trojan
-- name: 🇸🇬 新加坡 | trojan | 85
+- name: 🇸🇬 新加坡 | trojan | 86
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 46424
-  server: 188.253.12.90
+  port: 48697
+  server: 188.253.12.97
   skip-cert-verify: true
-  sni: de.01.naiun.bilibili.com
+  sni: gh.01.naiun.bilibili.com
   type: trojan
 - name: 🇸🇬 新加坡 | trojan | 87
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   port: 48697
   server: 188.253.12.96
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 88
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 41943
-  server: 188.253.12.93
-  sni: az.01.naiun.bilibili.com
   type: trojan
 - alterId: 64
   cipher: auto
@@ -13116,12 +13317,6 @@ proxies:
   port: 45553
   server: 188.253.12.99
   sni: ch.01.naiun.bilibili.com
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 91
-  password: 16bcc187-a1a0-4b8a-8b69-627f38b7cc0d
-  port: 80
-  server: 15.235.197.4
-  sni: 15.235.197.4
   type: trojan
 - alterId: 0
   cipher: auto
@@ -13172,13 +13367,6 @@ proxies:
     headers:
       Host: ''
     path: /path/243535322906
-- name: 🇸🇬 新加坡 | trojan | 108
-  password: 7522e2c27233459aab8d0f1d715828d0
-  port: 443
-  server: 185.151.146.211
-  skip-cert-verify: true
-  sni: www.gpt123.one
-  type: trojan
 - name: 🇸🇬 新加坡 | trojan | 109
   password: 842b5f9dd11e458d8613c907c4cc5723
   port: 443
@@ -13208,6 +13396,13 @@ proxies:
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
   server: 45.77.241.64
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 125
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 47.82.155.79
+  skip-cert-verify: true
+  sni: Koma-YT.PAGeS.Dev
   type: trojan
 - alterId: 0
   cipher: auto
@@ -13515,6 +13710,14 @@ proxies:
     headers:
       Host: v2pr9feoh0z86anj2gz9onnjg9viuev0j.mobgslb.tbcache.com
     path: /
+- name: 🇸🇬 新加坡 | trojan | 254
+  network: ws
+  password: ac590e89-ba43-49a1-a8b2-38ec70dc7907
+  port: 20230
+  server: sg008.421421.xyz
+  skip-cert-verify: true
+  sni: www.alibaba.com
+  type: trojan
 - alterId: 0
   cipher: auto
   name: 🇸🇬 新加坡 | vmess | 255
@@ -13730,11 +13933,6 @@ proxies:
   port: 8443
   server: official.taipeicitygovernment.org.ua
   type: trojan
-- name: 🇹🇼 台湾 | trojan | 13
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 8443
-  server: official.taipeicitygovernment.kyiv.ua
-  type: trojan
 - name: 🇹🇼 台湾 | trojan | 14
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
@@ -13790,18 +13988,6 @@ proxies:
   password: 3ac6a6ca99f74941b1eaf892818e2ddb
   port: 443
   server: 85.237.206.249
-  type: trojan
-- alpn:
-  - h2
-  grpc-opts:
-    grpc-service-name: db
-  name: 🇹🇼 台湾 | trojan | 26
-  network: grpc
-  password: 0a9f1f5a397bd427
-  port: 443
-  server: 125.227.86.45
-  skip-cert-verify: true
-  sni: TG.freecodes
   type: trojan
 - alpn:
   - h2
@@ -14187,15 +14373,6 @@ proxies:
     headers:
       Host: www.38530229.xyz
     path: /
-- grpc-opts:
-    grpc-service-name: cestbon
-  name: 🇺🇸 美国 | trojan | 413
-  network: grpc
-  password: '740628'
-  port: 8000
-  server: 136.175.177.136
-  sni: sj.cestbon.work
-  type: trojan
 - name: 🇺🇸 美国 | trojan | 415
   password: harz989mzcktd92m1vlf
   port: 59125
@@ -14398,6 +14575,13 @@ proxies:
   tls: false
   type: vmess
   uuid: d4603cc2-e0ee-4651-83f5-1db5b7168177
+- name: 🇺🇸 美国 | trojan | 501
+  password: 8r<[9'l6hAO#8ZQi
+  port: 443
+  server: 50.62.89.253
+  skip-cert-verify: true
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
 - alterId: 233
   cipher: auto
   name: 🇺🇸 美国 | vmess | 503
@@ -14419,6 +14603,20 @@ proxies:
   skip-cert-verify: true
   sni: nearby-muskrat.rooster465.autos
   type: trojan
+- alpn:
+  - http/1.1
+  name: 🇺🇸 美国 | trojan | 516
+  network: ws
+  password: Mitivpn
+  port: 443
+  server: 216.24.57.251
+  skip-cert-verify: true
+  sni: dash.hitgram.ir
+  type: trojan
+  ws-opts:
+    headers:
+      Host: dash.hitgram.ir
+    path: '%2F%3Fed%3D2048'
 - name: 🇺🇸 美国 | trojan | 533
   password: kkzh2prsyr2ik47as615
   port: 57142
@@ -14438,21 +14636,6 @@ proxies:
     headers:
       Host: 161.35.229.94
     path: /
-- alpn:
-  - h2
-  - http/1.1
-  name: 🇺🇸 美国 | trojan | 557
-  network: ws
-  password: ShabrangVPN
-  port: 8443
-  server: 165.215.250.16
-  skip-cert-verify: false
-  sni: shabrang.varfeno.sbs
-  type: trojan
-  ws-opts:
-    headers:
-      Host: shabrang.varfeno.sbs
-    path: '%2F'
 - alterId: 64
   cipher: auto
   name: 🇺🇸 美国 | vmess | 590
@@ -14498,6 +14681,18 @@ proxies:
     headers:
       Host: e130917c-1b58-4136-b2d9-76dc920e0add.add97ee8-0f14-48a3-b2cd-979c56742e64.loseyourip.com
     path: /
+- name: 🇺🇸 美国 | trojan | 611
+  network: ws
+  password: 3c976c6e-2b94-323b-1e75-68e4877f4283
+  port: 2096
+  server: 135.84.67.77
+  skip-cert-verify: false
+  sni: pmoiran.qzz.io
+  type: trojan
+  ws-opts:
+    headers:
+      Host: pmoiran.qzz.io
+    path: /pmo
 - name: 🇺🇸 美国 | trojan | 613
   network: ws
   password: mitivpn
@@ -15045,12 +15240,6 @@ proxies:
   type: trojan
   ws-opts:
     path: '%2F%3Fed%3D2048'
-- name: 🇺🇸 美国 | trojan | 926
-  password: GTCCjtvCtuy03-aV1mwF0OkG2q6yL+Fc5K
-  port: 443
-  server: 198.52.244.10
-  sni: 198.52.244.10
-  type: trojan
 - alterId: 2
   cipher: auto
   name: 🇺🇸 美国 | vmess | 931
@@ -15393,13 +15582,6 @@ proxies:
   server: 144.31.51.34
   sni: kfm-bn0.pages.dev
   type: trojan
-- name: 🇺🇸 美国 | trojan | 1120
-  password: 8r<[9'l6hAO#8ZQi
-  port: 443
-  server: 64.188.98.29
-  skip-cert-verify: true
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
 - name: 🇺🇸 美国 | trojan | 1134
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -15423,18 +15605,6 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 🇺🇸 美国 | trojan | 1140
-  network: ws
-  password: '1234567890'
-  port: 8443
-  server: 144.31.246.245
-  skip-cert-verify: true
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
 - name: 🇺🇸 美国 | trojan | 1141
   network: ws
   password: '1234567890'
@@ -15650,12 +15820,6 @@ proxies:
   type: trojan
   ws-opts:
     path: /
-- name: 🇺🇸 美国 | trojan | 1372
-  password: 02f0b784-1577-3d22-998a-23f372330b75
-  port: 14555
-  server: ikuai.bot.nu
-  sni: windows11.dpdns.org
-  type: trojan
 - alterId: 0
   cipher: auto
   name: 🇺🇸 美国 | vmess | 1402
@@ -16107,6 +16271,16 @@ proxies:
   port: 443
   server: au-4.tr202605.com
   skip-cert-verify: true
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
+  name: 🇺🇸US美国5
+  password: lhvfOzkRQqNd9cLDwpryrAkFGgqzlZR9Fi
+  port: 443
+  server: 38.54.13.189
+  skip-cert-verify: true
+  sni: 38.54.13.189
   tls: true
   type: trojan
   udp: true
@@ -16923,6 +17097,16 @@ proxies:
   tls: true
   type: vmess
   uuid: 715d383d-4443-4f6a-a187-a68b8ae74df3
+- alterId: 0
+  name: 🇭🇰HK香港4
+  password: 825929f4-c702-35ce-9124-00d3f95b8c32
+  port: 34436
+  server: adak.sonofthewinds.com
+  skip-cert-verify: true
+  sni: hh4.sonofthewinds.com
+  tls: true
+  type: trojan
+  udp: true
 - alterId: 0
   cipher: auto
   name: 未知84

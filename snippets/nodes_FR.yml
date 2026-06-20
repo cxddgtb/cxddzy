@@ -43,22 +43,48 @@ proxies:
   sni: fr.01.naiun.bilibili.com
   type: trojan
   udp: true
-- name: 🇫🇷 法国 | trojan | 209
-  network: tcp
-  password: d2adff89-5143-4d67-921f-3478464de5bb
+- name: 🇦🇹 奥地利 | trojan | 12
+  network: ws
+  password: humanity
   port: 443
-  server: 38.180.240.150
-  skip-cert-verify: true
-  sni: fr.freeguard.org
+  server: 212.183.88.136
+  skip-cert-verify: false
+  sni: www.calmlunch.com
   type: trojan
-- name: 🇸🇬 新加坡 | trojan | 80
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: /assignment
+- name: 🇸🇬 新加坡 | trojan | 70
   network: tcp
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   port: 45619
-  server: 188.253.12.91
+  server: 188.253.12.92
   skip-cert-verify: true
   sni: fr.01.naiun.bilibili.com
   type: trojan
+- name: 🇫🇷 法国 | trojan | 231
+  network: tcp
+  password: 364d3aa0-58fc-11ed-b738-225401db9d57
+  port: 443
+  server: 54.36.191.211
+  skip-cert-verify: true
+  sni: ebank.bmi.ir
+  type: trojan
+- alpn:
+  - http/1.1
+  name: FR TROJAN-42 | free-nodes
+  network: ws
+  password: humanity
+  port: 443
+  server: 8.6.112.6
+  skip-cert-verify: false
+  sni: www.calmloud.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmloud.com
+    path: '%2Fassignment'
 - alpn:
   - h2
   - http/1.1
@@ -75,11 +101,11 @@ proxies:
     path: /download
 - alpn:
   - http/1.1
-  name: '[1596]⭐ 🇫🇷 FRA [TR] ⭐ 📑 #7b0b3...'
+  name: 🌐 Anycast-IP | 🇫🇷 [*CIDR]
   network: ws
   password: humanity
   port: 443
-  server: 66.81.247.155
+  server: 216.24.57.6
   skip-cert-verify: true
   sni: www.calmloud.com
   type: trojan
@@ -87,18 +113,11 @@ proxies:
     headers:
       Host: www.calmloud.com
     path: /assignment
-- name: 🇫🇷FR法國丨yoyapai.com
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 31.59.120.161
-  skip-cert-verify: true
-  sni: Koma-YT.PAGeS.Dev
+- name: '@ProxyFn+/+@nimPRO+🇫🇷'
+  password: 598c19f3-a48e-47cd-8451-1ba04ea094d0
+  port: 80
+  server: 51.91.11.29
   type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2'
 - name: 🇫🇷 法国 | trojan | 08
   network: ws
   password: humanity
@@ -321,17 +340,6 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 124
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 31.59.103.95
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - name: 🇫🇷 法国 | trojan | 126
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -448,17 +456,6 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 155
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 31.56.48.63
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2
 - name: 🇫🇷 法国 | trojan | 157
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -508,13 +505,24 @@ proxies:
   port: 443
   server: 141.94.76.177
   type: trojan
-- name: 🇫🇷 法国 | trojan | 231
-  password: 364d3aa0-58fc-11ed-b738-225401db9d57
+- name: 🇫🇷 法国 | trojan | 209
+  password: d2adff89-5143-4d67-921f-3478464de5bb
   port: 443
-  server: 54.36.191.211
+  server: 38.180.240.150
   skip-cert-verify: true
-  sni: ebank.bmi.ir
+  sni: fr.freeguard.org
   type: trojan
+- name: 🇫🇷 法国 | trojan | 237
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 31.59.105.119
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2
 - name: 🇫🇷 法国 | trojan | 238
   password: hCunaKqdEJDBO+3jCrJUSMevXOw9Q_r4Ey
   port: 443
