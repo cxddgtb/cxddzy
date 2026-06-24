@@ -555,41 +555,47 @@ proxies:
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
   type: trojan
-- alterId: 0
-  name: '美国 039 #1'
+- name: '美国 039 #1'
   network: tcp
   password: 2009158055b4d37156cee7082c50ffde
   port: 5701
   server: 18.163.125.35
   skip-cert-verify: true
   sni: www.nintendogames.net
-  tls: true
   type: trojan
-  udp: true
-- name: 日本2|@ripaojiedian
+- alterId: 0
+  name: 日本2|@ripaojiedian
   network: tcp
   password: ba5b6f1d3a9da87096165da523fb4375
   port: 37973
   server: 16.163.95.104
   skip-cert-verify: true
   sni: www.nintendogames.net
+  tls: true
   type: trojan
-- name: 新加坡|@ripaojiedian
+  udp: true
+- alterId: 0
+  name: 新加坡|@ripaojiedian
   network: tcp
   password: ba5b6f1d3a9da87096165da523fb4375
   port: 6357
   server: 16.163.95.104
   skip-cert-verify: true
   sni: www.nintendogames.net
+  tls: true
   type: trojan
-- name: 新加坡2|@ripaojiedian
+  udp: true
+- alterId: 0
+  name: 新加坡2|@ripaojiedian
   network: tcp
   password: ba5b6f1d3a9da87096165da523fb4375
   port: 6357
   server: 16.162.120.149
   skip-cert-verify: true
   sni: www.nintendogames.net
+  tls: true
   type: trojan
+  udp: true
 - name: 新加坡3|@ripaojiedian
   network: tcp
   password: BxceQaOe
@@ -598,14 +604,17 @@ proxies:
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
   type: trojan
-- name: 美国|@ripaojiedian
+- alterId: 0
+  name: 美国|@ripaojiedian
   network: tcp
   password: ba5b6f1d3a9da87096165da523fb4375
   port: 17005
   server: 16.162.120.149
   skip-cert-verify: true
   sni: www.nintendogames.net
+  tls: true
   type: trojan
+  udp: true
 - alterId: 0
   cipher: auto
   client-fingerprint: chrome
@@ -766,6 +775,7 @@ proxies:
   port: 2086
   server: 104.19.38.62
   skip-cert-verify: true
+  tls: false
   type: vmess
   uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
   ws-opts:
@@ -1284,7 +1294,6 @@ proxies:
   port: 2086
   server: 104.19.46.17
   skip-cert-verify: true
-  tls: false
   type: vmess
   uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
   ws-opts:
@@ -1375,9 +1384,7 @@ proxies:
   network: ws
   port: 2086
   server: 104.19.21.63
-  servername: ''
   skip-cert-verify: true
-  tls: false
   type: vmess
   uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
   ws-opts:
@@ -1486,6 +1493,7 @@ proxies:
   network: ws
   port: 443
   server: 134.195.198.147
+  servername: ''
   skip-cert-verify: false
   tls: true
   type: vmess
@@ -1494,7 +1502,9 @@ proxies:
     headers:
       Host: inna.cfd
     path: /
-- alterId: 0
+- alpn:
+  - ''
+  alterId: 0
   cipher: auto
   name: 节点日期：2026-06-24
   network: ws
@@ -1504,11 +1514,13 @@ proxies:
   skip-cert-verify: false
   tls: false
   type: vmess
+  udp: true
   uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
   ws-opts:
     headers:
       Host: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
     path: /
+  xudp: true
 - alterId: 0
   cipher: auto
   name: '美国 284 #1'
@@ -3640,6 +3652,7 @@ proxies:
   network: ws
   port: 443
   server: 158.51.121.63
+  servername: seribus.org
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -3743,6 +3756,7 @@ proxies:
   network: tcp
   port: 52080
   server: 154.37.223.105
+  servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -4581,6 +4595,7 @@ proxies:
   port: 18000
   server: 38.110.1.246
   skip-cert-verify: true
+  tls: false
   type: vmess
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
 - alterId: 0
@@ -4590,6 +4605,7 @@ proxies:
   port: 48111
   server: 129.146.143.80
   skip-cert-verify: true
+  tls: false
   type: vmess
   uuid: d4603cc2-e0ee-4651-83f5-1db5b7168177
 - alterId: 0
@@ -4744,9 +4760,7 @@ proxies:
   network: ws
   port: 80
   server: ee.oppo.quest
-  servername: ''
   skip-cert-verify: true
-  tls: false
   type: vmess
   uuid: f9247df4-02d5-4b31-acc5-4022652c5953
   ws-opts:
@@ -5558,7 +5572,6 @@ proxies:
   network: ws
   port: 443
   server: cvywfavasdc.cymlr.xyz
-  servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -5906,7 +5919,6 @@ proxies:
   network: ws
   port: 443
   server: khvwycch.cymlr.xyz
-  servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -6929,7 +6941,6 @@ proxies:
   network: ws
   port: 443
   server: xr-1.herokuapp.com
-  servername: xr-1.herokuapp.com
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -7706,9 +7717,7 @@ proxies:
   network: ws
   port: 80
   server: 104.17.139.69
-  servername: ''
   skip-cert-verify: true
-  tls: false
   type: vmess
   uuid: 4bf074f4-7e9c-4e4b-a10d-156e26199729
   ws-opts:
@@ -9108,9 +9117,7 @@ proxies:
   network: ws
   port: 2052
   server: 104.16.67.38
-  servername: ''
   skip-cert-verify: true
-  tls: false
   type: vmess
   uuid: a1655f51-1e20-4a92-8a11-b7ca30a7a353
   ws-opts:
@@ -9208,6 +9215,7 @@ proxies:
   port: 2052
   server: 104.16.61.8
   skip-cert-verify: true
+  tls: false
   type: vmess
   uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
   ws-opts:
@@ -10356,7 +10364,6 @@ proxies:
   port: 1516
   server: sinavip3.cnavippanel.com
   skip-cert-verify: true
-  tls: false
   type: vmess
   uuid: 0aca35ee-b845-45d7-9b52-379a2984378a
 - alterId: 64
@@ -11163,24 +11170,53 @@ proxies:
   skip-cert-verify: true
   type: vmess
   uuid: 593b8525-0c48-4b0f-d9af-2d73a9148973
-- name: ' 美国 #2'
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_美国_23
+  network: tcp
+  port: 10002
+  server: 155.103.67.111
+  tls: false
+  type: vmess
+  uuid: 6aad7b92-2c2b-4ba6-a331-05cb6603884c
+- name: 🇺🇸_美国_94
+  network: ws
+  password: humanity
+  port: 443
+  server: 165.215.250.14
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: '%2Fassignment'
+- name: 🇺🇸_美国_104
   network: ws
   password: '!!str 114514'
   port: 443
-  server: 140.82.19.127
-  skip-cert-verify: true
+  server: 154.17.14.241
   sni: tjaaa.hhllfly.kdns.fr
   type: trojan
   ws-opts:
     headers:
       Host: tjaaa.hhllfly.kdns.fr
     path: '%2F'
-- name: ' 美国 #3'
+- name: 🇺🇸_美国_106
   network: ws
   password: '!!str 114514'
   port: 443
-  server: 104.207.152.96
-  skip-cert-verify: true
+  server: 72.249.204.157
+  sni: tjaaa.hhllfly.kdns.fr
+  type: trojan
+  ws-opts:
+    headers:
+      Host: tjaaa.hhllfly.kdns.fr
+    path: '%2F'
+- name: 🇺🇸_美国_285
+  network: ws
+  password: '!!str 114514'
+  port: 443
+  server: 68.64.178.42
   sni: tjaaa.hhllfly.kdns.fr
   type: trojan
   ws-opts:
@@ -11228,7 +11264,7 @@ proxies:
   uuid: a8bcce43-abda-315b-8e81-e3e65bcb3d07
 - alterId: 2
   cipher: auto
-  name: 🔴🇺🇸[📺🔍]_github.com/Ruk1ng001_9...
+  name: 🇺🇸 美国 | vmess | 1220
   network: ws
   port: 49362
   server: us6.ifastcdncache.com
@@ -11243,7 +11279,29 @@ proxies:
     path: /
   ws-path: /
 - cipher: chacha20-ietf-poly1305
-  name: 🟢🇺🇸[🎬📺🎭🎪]_github.com/Ruk1ng001...
+  name: 🟢🇺🇸[🎬🤖📺🎭]_github.com/Ruk1ng001...
+  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
+  plugin: obfs
+  plugin-opts:
+    host: 817aa69.default.nintendo.com:112719
+    mode: tls
+  port: 2377
+  server: 134.195.101.125
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: '🟢🇺🇸[🎬🤖📺🎭]_github.com/Ruk1ng001... #1'
+  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
+  plugin: obfs
+  plugin-opts:
+    host: 817aa69.default.nintendo.com:112719
+    mode: tls
+  port: 2377
+  server: 134.195.101.119
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: '🟢🇺🇸[🎬🤖📺🎭]_github.com/Ruk1ng001... #2'
   password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
   plugin: obfs
   plugin-opts:
@@ -11253,36 +11311,10 @@ proxies:
   server: 134.195.101.118
   type: ss
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🟢🇺🇸[🎬🤖📺🎭]_github.com/Ruk1ng001...
-  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
-  plugin: obfs
-  plugin-opts:
-    host: 817aa69.default.nintendo.com:112719
-    mode: tls
-  port: 2377
-  server: 134.195.101.127
-  type: ss
-  udp: true
-- client-fingerprint: chrome
-  name: 🔴🇺🇸[📺🔍]_github.com/Ruk1ng001_0...
-  network: ws
-  password: 74480619-b6a8-4ab8-94e1-1132fc18b2fa
-  port: 443
-  server: 185.18.250.252
-  skip-cert-verify: false
-  sni: unnes.ac.id.r3xxe.eu.cc
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Linux; Android 8.0.0; WAS-LX3 Build/HUAWEIWAS-LX3)
-        AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
-    path: /au-mt
 - alterId: 2
   cipher: auto
   client-fingerprint: chrome
-  name: 🏳️ Google | vmess | 06
+  name: 🏳️ Google | vmess | 15
   network: tcp
   port: '30808'
   server: v8.hdacd.com
@@ -11302,11 +11334,22 @@ proxies:
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- cipher: chacha20-ietf-poly1305
+  name: '🟢🇺🇸[🎬🤖📺🎭]_github.com/Ruk1ng001... #3'
+  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
+  plugin: obfs
+  plugin-opts:
+    host: 817aa69.default.nintendo.com:112719
+    mode: tls
+  port: 2377
+  server: 134.195.101.116
+  type: ss
+  udp: true
 - alterId: 2
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 🏳️ Google | vmess | 08
+  name: 🏳️ Google | vmess | 07
   network: tcp
   port: 30804
   server: v4.hdacd.com
@@ -11316,7 +11359,7 @@ proxies:
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - cipher: chacha20-ietf-poly1305
-  name: '🟢🇺🇸[🎬🤖📺🎭]_github.com/Ruk1ng001... #1'
+  name: '🟢🇺🇸[🎬🤖📺🎭]_github.com/Ruk1ng001... #4'
   password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
   plugin: obfs
   plugin-opts:
@@ -11327,7 +11370,7 @@ proxies:
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
-  name: '🟢🇺🇸[🎬🤖📺🎭]_github.com/Ruk1ng001... #2'
+  name: '🟢🇺🇸[🎬🤖📺🎭]_github.com/Ruk1ng001... #5'
   password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
   plugin: obfs
   plugin-opts:
@@ -11337,67 +11380,109 @@ proxies:
   server: 134.195.101.117
   type: ss
   udp: true
-- alpn:
-  - ''
-  alterId: 2
-  cipher: auto
-  name: 🏳️ Google | vmess | 11
-  network: tcp
-  port: '30829'
-  server: v29.hdacd.com
-  servername: ''
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  xudp: true
-- alpn:
-  - ''
-  alterId: '0'
-  cipher: auto
-  name: 🔴🇺🇸_github.com/Ruk1ng001_be3a3...
-  network: ws
+- name: 🇺🇸US美国25
+  password: '!!str 1234567890'
   port: 443
-  server: 104.16.0.0
-  servername: gongyilm.dpdns.org
+  server: 213.176.77.231
   skip-cert-verify: false
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 95d2c461-61f5-4dae-bc74-4d10ce1f6236
+  sni: kfm-bn0.pages.dev
+  type: trojan
+- name: '[1596]🎈 🇺🇸 USA [TR] 🎈 #eb550f'
+  network: ws
+  password: tJoNvS4RJAAgHwMPO_FOTQ
+  port: 443
+  server: 216.105.168.58
+  type: trojan
   ws-opts:
     headers:
-      Host: gongyilm.dpdns.org
-    path: /ws-gongyi
-  xudp: true
-- name: '[1596]🎈 🇷🇺 RUS [TR] 🎈 🗺️ #9db3...'
+      Host: telegram.org
+    path: /
+- name: 🇸🇪 瑞典 | trojan | 23
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
-  server: 45.144.234.149
+  server: 91.108.242.148
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
       Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
-- name: 🇸🇬 新加坡 | trojan | 26
-  network: tcp
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 47909
-  server: 188.253.12.94
-  skip-cert-verify: true
-  sni: is.01.naiun.bilibili.com
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇸🇪 🇺🇸 [*C...
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 77.110.104.41
+  sni: Koma-YT.PAGeS.Dev
   type: trojan
-- name: 🇺🇸 US美国(mibei77.com 米贝节点分享)
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 'US美国(mibei77.com 米贝节点分享) #2'
+  network: ws
+  password: 4c3164ee-abcf-4091-abea-d1cd4937a68d
+  port: 443
+  server: 64.186.232.121
+  skip-cert-verify: true
+  sni: jy.hhllfly.kdns.fr
+  type: trojan
+  ws-opts:
+    headers:
+      Host: jy.hhllfly.kdns.fr
+    path: '%2F%3Fed%3D2048'
+- name: 🌐 Anycast-IP | 🇨🇦 🇳🇱 🇺🇸 | [BL]
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 195.123.217.37
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🌐 Anycast-IP | 🇨🇦 🇺🇸 | [BL]
+  network: ws
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  port: 443
+  server: 67.230.161.170
+  sni: hhcm.hhxaf.cc.cd
+  type: trojan
+  ws-opts:
+    path: /
+- name: '[1596]⭐ 🇺🇸 USA [TR] ⭐ 📑 #cac97...'
+  network: ws
+  password: 072ea850-6776-11f1-98d3-1239d0255272
+  port: 443
+  server: news.microsoft.com
+  skip-cert-verify: false
+  sni: usa.test3.net
+  type: trojan
+  ws-opts:
+    headers:
+      Host: usa.test3.net
+    path: /howdy
+- name: 'US美国(mibei77.com 米贝节点分享) #3'
+  network: ws
   password: '!!str 1234567890'
   port: 443
-  server: 178.17.48.170
-  skip-cert-verify: false
+  server: 95.85.234.43
   sni: kfm-bn0.pages.dev
   type: trojan
-- name: 🇸🇪 瑞典 | trojan | 36
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: 🇺🇸US(AzadNet.t.me)
+  network: tcp
+  password: 5c777277-17f2-4272-ae65-7bd00fa4fbaa
+  port: 443
+  server: 18.65.190.65
+  skip-cert-verify: true
+  sni: wel-jp.optage.moe
+  type: trojan
+- name: 🇸🇪 瑞典 | trojan | 24
   network: ws
   password: '!!str 162534'
   port: 8443
@@ -11409,143 +11494,29 @@ proxies:
     headers:
       Host: cchh2.pages.dev
     path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
-- name: 'US美国(mibei77.com 米贝节点分享) #2'
+- name: 🌐 Anycast-IP | 🇦🇷 🇺🇸 | [BL]
   network: ws
-  password: '!!str 1234567890'
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
-  server: 138.124.28.173
-  sni: kfm-bn0.pages.dev
+  server: 67.230.161.170
+  sni: tjsp.hhxaf.cc.cd
   type: trojan
   ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: '🇺🇸 US美国(mibei77.com 米贝节点分享) #1'
-  password: '!!str 1234567890'
-  port: 443
-  server: 213.176.77.30
-  skip-cert-verify: false
-  sni: kfm-bn0.pages.dev
-  type: trojan
-- name: 🇺🇸US美国17
-  password: '!!str 1234567890'
-  port: 2053
-  server: 202.61.226.121
-  sni: kfm-bn0.pages.dev
-  type: trojan
-- name: '[1596]🎈 🇷🇺 RUS [TR] 🎈 🗺️ #c9ab...'
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 213.232.204.28
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇺🇸 美国 | trojan | 911
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 37.46.19.79
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 'US美国(mibei77.com 米贝节点分享) #4'
-  network: ws
-  password: '!!str 1234567890'
-  port: 443
-  server: 159.195.44.151
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: '[1596]🎈 🇷🇺 RUS [TR] 🎈 🗺️ #6c13...'
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 195.123.218.46
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇺🇸_US_547
-  network: tcp
-  password: 2a9abeb7-6f97-4d33-9069-f6e009d88455
-  port: 443
-  server: 162.159.134.105
-  skip-cert-verify: true
-  sni: jp4.pqjc.buzz
-  type: trojan
-- name: '[1596]🎈 🇷🇺 RUS [TR] 🎈 🗺️ #0715...'
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 217.19.4.177
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: '[1596]️🌤️ 🇷🇺 RUS [TR] #3fdf06'
-  password: humanity
-  port: 443
-  server: sourceforge.net
-  skip-cert-verify: true
-  type: trojan
-- name: 🌐 Anycast-IP | 🇦🇷 🇺🇸 [*CIDR]
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 104.167.196.91
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🌐 Anycast-IP | 🇨🇦 🇩🇪 🇺🇸 | [BL]
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 193.42.61.121
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2
-- name: 🇫🇮 芬兰 | trojan | 155
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 185.236.24.10
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: '[1596]🎈 🇺🇸 USA [TR] 🎈 #612c50'
-  network: ws
-  password: XZLCAYsPOGYjaapG2oGIHQ
-  port: 443
-  server: 66.23.207.68
-  type: trojan
-  ws-opts:
-    headers:
-      Host: telegram.org
     path: /
-- name: 🇦🇲 亚美尼亚 | trojan | 09
+- name: 🇺🇸 美国 CCZZUU.TOP 3
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 129.158.241.2
+  skip-cert-verify: true
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+- name: 🇺🇸US美国68
+  password: '!!str 1234567890'
+  port: 443
+  server: 138.124.32.121
+  sni: kfm-bn0.pages.dev
+  type: trojan
+- name: 🇦🇲 亚美尼亚 | trojan | 12
   network: ws
   password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
   port: 2083
@@ -11560,30 +11531,20 @@ proxies:
 - alterId: 0
   cipher: auto
   name: 🇺🇸 美国 | vmess | 62
-  network: tcp
-  port: '13581'
-  server: 104.233.214.176
+  network: ws
+  port: 80
+  server: 47.88.89.106
   servername: ''
   tls: false
   type: vmess
-  uuid: d4d715a6-0a2e-4304-df2f-d5efd85a5a5d
-- alterId: 0
-  cipher: auto
-  name: 🇺🇸 美国 | vmess | 65
-  network: ws
-  port: 80
-  server: 146.190.114.190
-  servername: tms.dingtalk.com
-  tls: false
-  type: vmess
-  uuid: db8f8bbe-c589-4316-8063-49baaf0fd858
+  uuid: 86f8f25d-9d26-41a6-a75b-e0ef992cc74a
   ws-opts:
     headers:
       Host: ''
-    path: /
+    path: /rxrsOUmNbuTJCk4izFEHWrb9qm
 - alterId: 0
   cipher: auto
-  name: 🇺🇸 美国 | vmess | 73
+  name: 🇺🇸 美国 | vmess | 72
   network: ws
   port: 80
   server: 47.254.17.235
@@ -11595,6 +11556,20 @@ proxies:
     headers:
       Host: ''
     path: /Ogl9djGbo2NTAt3Ovj1NvwjJ
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸 美国 | vmess | 78
+  network: ws
+  port: 80
+  server: 47.88.104.186
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: e9dc5466-3768-4d45-8fd0-f1181139bb4e
+  ws-opts:
+    headers:
+      Host: ''
+    path: /4DJIP58JF6JTq4HIG0yr
 - alterId: 0
   cipher: auto
   name: 🇺🇸 美国 | vmess | 79
@@ -11611,21 +11586,32 @@ proxies:
     path: /mePGXW6SFZZw2QyAqaYK
 - alterId: 0
   cipher: auto
-  name: 🇺🇸 美国 | vmess | 84
+  name: 🇺🇸 美国 | vmess | 95
   network: ws
   port: 80
-  server: 47.88.104.186
+  server: 47.254.121.68
   servername: ''
   tls: false
   type: vmess
-  uuid: e9dc5466-3768-4d45-8fd0-f1181139bb4e
+  uuid: c778fc8d-ce2f-4cd3-a949-1b99091c41da
   ws-opts:
     headers:
       Host: ''
-    path: /4DJIP58JF6JTq4HIG0yr
+    path: /OFglbcWQ8P3dJUA7yf
 - alterId: 0
   cipher: auto
-  name: 🇺🇸 美国 | vmess | 108
+  name: US2 11.2MB/s
+  network: tcp
+  port: 13581
+  server: 104.233.214.176
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: d4d715a6-0a2e-4304-df2f-d5efd85a5a5d
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸 美国 | vmess | 111
   network: ws
   port: 80
   server: 47.254.89.211
@@ -11639,68 +11625,45 @@ proxies:
     path: /GSoTl9ZoYG5V2R0k4tUTGI8k
 - alterId: 0
   cipher: auto
-  name: 🇺🇸 美国 | vmess | 114
-  network: ws
-  port: 80
-  server: 47.88.89.106
-  servername: ''
+  name: 🇺🇸 美国 | vmess | 126
+  network: tcp
+  port: 22324
+  server: 216.106.185.141
+  servername: null
   tls: false
   type: vmess
-  uuid: 86f8f25d-9d26-41a6-a75b-e0ef992cc74a
-  ws-opts:
-    headers:
-      Host: ''
-    path: /rxrsOUmNbuTJCk4izFEHWrb9qm
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
 - alterId: 0
-  cipher: auto
-  name: 🇺🇸 美国 | vmess | 118
-  network: ws
-  port: 80
-  server: 47.254.121.68
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: c778fc8d-ce2f-4cd3-a949-1b99091c41da
-  ws-opts:
-    headers:
-      Host: ''
-    path: /OFglbcWQ8P3dJUA7yf
-- name: 🇺🇸 美国 | trojan | 141
+  name: 🇺🇸US北美
+  password: humanity
+  port: 443
+  server: 198.62.62.23
+  skip-cert-verify: true
+  sni: www.calmlunch.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇺🇸 美国 | trojan | 201
   network: ws
   password: humanity
   port: 443
-  server: 208.103.161.110
-  skip-cert-verify: true
-  sni: www.creationlong.org
+  server: 165.215.250.14
+  sni: www.ignitelimit.com
   type: trojan
   ws-opts:
-    headers:
-      Host: www.creationlong.org
-    path: /assignment
+    path: '%2Fassignment'
+- grpc-opts:
+    grpc-service-name: cestbon
+  name: 🇺🇸 美国 | trojan | 203
+  network: grpc
+  password: '!!str 740628'
+  port: 8000
+  server: 136.175.177.136
+  sni: sj.cestbon.work
+  type: trojan
 - alpn:
   - http/1.1
-  name: 🇺🇸 美国 | trojan | 147
-  network: ws
-  password: Mitivpn
-  port: 443
-  server: 208.103.161.1
-  skip-cert-verify: true
-  sni: dash.hitgram.ir
-  type: trojan
-  ws-opts:
-    path: '%2F'
-- name: 🇺🇸 美国 | trojan | 283
-  network: ws
-  password: humanity
-  port: 443
-  server: 208.103.161.101
-  sni: www.creationlong.org
-  type: trojan
-  ws-opts:
-    path: /assignment
-- alpn:
-  - http/1.1
-  name: 🇺🇸 美国 | trojan | 314
+  name: 🇺🇸 美国 | trojan | 280
   network: ws
   password: humanity
   port: 443
@@ -11712,60 +11675,84 @@ proxies:
       Host: www.ignitelimit.com
     path: '%2Fassignment'
 - alpn:
+  - h2
   - http/1.1
-  name: 🇺🇸 美国 | trojan | 315
+  name: 🇺🇸 美国 | trojan | 311
   network: ws
-  password: humanity
-  port: 443
-  server: 208.103.161.170
+  password: ShabrangVPN
+  port: 8443
+  server: 165.215.250.16
   skip-cert-verify: false
-  sni: www.calmloud.com
+  sni: shabrang.varfeno.sbs
   type: trojan
   ws-opts:
     headers:
-      Host: www.calmloud.com
-    path: /assignment
-- alterId: 64
-  cipher: auto
-  name: 🇺🇸 美国 | vmess | 320
+      Host: shabrang.varfeno.sbs
+    path: '%2F'
+- name: 🇺🇸 美国 | trojan | 338
   network: ws
-  port: 38005
-  server: 137.175.41.105
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  password: mitivpn
+  port: 443
+  server: 208.103.161.33
+  skip-cert-verify: true
+  sni: ir-sub.ir
+  type: trojan
   ws-opts:
     headers:
-      Host: ''
-    path: /
+      Host: ir-sub.ir
+    path: '%2F'
+- name: 🇺🇸 美国 | trojan | 372
+  network: ws
+  password: humanity
+  port: 443
+  server: 208.103.161.101
+  sni: www.creationlong.org
+  type: trojan
+  ws-opts:
+    path: /assignment
 - alterId: 0
   cipher: auto
-  name: 🇺🇸 美国 | vmess | 355
-  network: tcp
-  port: 22324
-  server: 216.106.185.141
-  servername: null
+  name: 🇺🇸 美国 | vmess | 395
+  network: ws
+  port: 80
+  server: 51.81.220.195
+  servername: ''
   tls: false
   type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- alterId: 64
-  cipher: auto
-  name: 🇺🇸 美国 | vmess | 371
-  network: ws
-  port: 38005
-  server: 198.2.195.9
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  uuid: 6fea1649-425b-4092-bf53-29792152c925
   ws-opts:
     headers:
       Host: ''
-    path: /
+    path: /sshkit/Uvuwbwb/6373b77a048a6/
 - alterId: 0
   cipher: auto
-  name: 🇺🇸 美国 | vmess | 389
+  name: 🇺🇸 美国 | vmess | 397
+  network: ws
+  port: '80'
+  server: 15.204.8.218
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 7df2ed79-59a7-46e0-959a-b5cb367d6f08
+  ws-opts:
+    headers:
+      Host: us2.v2rayserv.com
+    path: /sshocean
+- alpn:
+  - http/1.1
+  name: 🇺🇸 美国 | trojan | 399
+  network: ws
+  password: Mitivpn
+  port: 443
+  server: 208.103.161.1
+  skip-cert-verify: true
+  sni: dash.hitgram.ir
+  type: trojan
+  ws-opts:
+    path: '%2F'
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸 美国 | vmess | 402
   network: ws
   port: 80
   server: 51.81.220.34
@@ -11779,35 +11766,7 @@ proxies:
     path: /vmess
 - alterId: 0
   cipher: auto
-  name: 🇺🇸 美国 | vmess | 390
-  network: ws
-  port: 80
-  server: 51.81.220.195
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 6fea1649-425b-4092-bf53-29792152c925
-  ws-opts:
-    headers:
-      Host: ''
-    path: /sshkit/Variu88/634dab7abadf1/
-- alpn:
-  - http/1.1
-  name: 🇺🇸 美国 | trojan | 391
-  network: ws
-  password: humanity
-  port: 443
-  server: 216.24.57.6
-  skip-cert-verify: false
-  sni: www.creationlong.org
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.creationlong.org
-    path: /assignment
-- alterId: 0
-  cipher: auto
-  name: 🇺🇸 美国 | vmess | 395
+  name: 🇺🇸 美国 | vmess | 414
   network: ws
   port: '39495'
   server: 129.146.77.248
@@ -11821,7 +11780,7 @@ proxies:
     path: /cctv13.m3u8
 - alterId: 0
   cipher: auto
-  name: 🇺🇸 美国 | vmess | 413
+  name: 🇺🇸 美国 | vmess | 420
   network: tcp
   port: 18000
   server: 84.17.41.2
@@ -11829,38 +11788,26 @@ proxies:
   tls: false
   type: vmess
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- alterId: 64
-  cipher: auto
-  name: 🇺🇸 美国 | vmess | 424
+- alpn:
+  - http/1.1
+  name: 🇺🇸 美国 | trojan | 432
   network: ws
-  port: 38005
-  server: 107.148.203.99
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  password: humanity
+  port: 443
+  server: 216.24.57.6
+  skip-cert-verify: false
+  sni: www.creationlong.org
+  type: trojan
   ws-opts:
     headers:
-      Host: ''
-    path: /
-- name: 🇺🇸 美国 | trojan | 427
+      Host: www.creationlong.org
+    path: /assignment
+- name: 🇺🇸 美国 | trojan | 433
   password: 3ac6a6ca99f74941b1eaf892818e2ddb
   port: 443
   server: 77.247.126.137
   type: trojan
-- name: 🇺🇸 美国 | trojan | 432
-  network: ws
-  password: humanity
-  port: 443
-  server: 198.62.62.23
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: //assignment
-- name: 🇺🇸 美国 | trojan | 433
+- name: 🇺🇸 美国 | trojan | 435
   network: ws
   password: humanity
   port: 443
@@ -11870,48 +11817,47 @@ proxies:
   type: trojan
   ws-opts:
     path: /assignment
-- name: 🇺🇸 美国 | trojan | 448
+- name: 🇺🇸 美国 | trojan | 438
   network: ws
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  password: humanity
   port: 443
-  server: 154.17.28.152
-  sni: hhcm.hhxaf.cc.cd
+  server: 208.103.161.110
+  skip-cert-verify: true
+  sni: www.creationlong.org
   type: trojan
   ws-opts:
     headers:
-      Host: hhcm.hhxaf.cc.cd
-    path: '%2F'
-- alterId: 0
-  name: 🇺🇸US美国19
-  password: '!!str 114514'
-  port: 443
-  server: 140.82.19.127
-  skip-cert-verify: true
-  sni: tjaaa.hhllfly.kdns.fr
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 美国 | trojan | 465
+      Host: www.creationlong.org
+    path: /assignment
+- alpn:
+  - http/1.1
+  name: 🇺🇸 美国 | trojan | 440
   network: ws
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  port: 2053
-  server: 154.17.4.159
+  password: humanity
+  port: 443
+  server: 208.103.161.170
   skip-cert-verify: false
-  sni: hhcm.hhxaf.cc.cd
+  sni: www.calmloud.com
   type: trojan
   ws-opts:
-    path: /
-- alterId: 0
-  name: 🇺🇸US美国20 38.3MB/s
-  password: O4O8.Ew+ujFX6GJBQ=xQr.heGwux0GYHqk
-  port: 443
-  server: 45.61.52.243
-  skip-cert-verify: true
-  sni: 45.61.52.243
+    headers:
+      Host: www.calmloud.com
+    path: /assignment
+- alterId: 64
+  cipher: auto
+  name: 🇺🇸 美国 | vmess | 463
+  network: ws
+  port: 38005
+  server: 198.2.195.9
+  servername: ''
   tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 美国 | trojan | 474
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: ''
+    path: /
+- name: 🇺🇸 美国 | trojan | 471
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
@@ -11922,8 +11868,37 @@ proxies:
     headers:
       Host: hhcm.hhxaf.cc.cd
     path: '%2F'
+- name: 🇺🇸 美国 | trojan | 479
+  network: ws
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  port: 443
+  server: 154.17.28.152
+  sni: hhcm.hhxaf.cc.cd
+  type: trojan
+  ws-opts:
+    headers:
+      Host: hhcm.hhxaf.cc.cd
+    path: '%2F'
+- name: 🇺🇸 美国 | trojan | 485
+  network: ws
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  port: 2053
+  server: 154.17.4.159
+  skip-cert-verify: false
+  sni: hhcm.hhxaf.cc.cd
+  type: trojan
+  ws-opts:
+    path: /
+- name: 🇺🇸 美国 | trojan | 491
+  network: tcp
+  password: GTCCjtvCtuy03-aV1mwF0OkG2q6yL+Fc5K
+  port: 443
+  server: 207.126.167.241
+  skip-cert-verify: true
+  sni: 207.126.167.241
+  type: trojan
 - alterId: 0
-  name: 🇺🇸US美国14
+  name: 🇺🇸US美国17
   password: '!!str 114514'
   port: 443
   server: 154.26.187.69
@@ -11932,34 +11907,38 @@ proxies:
   tls: true
   type: trojan
   udp: true
-- name: 🇺🇸 美国 | trojan | 478
+- alterId: 0
+  name: 🇨🇦CA加拿大2 190.2KB/s
   network: tcp
   password: GTCCjtvCtuy03-aV1mwF0OkG2q6yL+Fc5K
   port: 443
-  server: 207.126.167.241
+  server: 198.52.244.10
   skip-cert-verify: true
-  sni: 207.126.167.241
+  tls: true
   type: trojan
-- name: 🇺🇸 美国 | trojan | 481
-  password: 8r<[9'l6hAO#8ZQi
+  udp: true
+- name: 🇺🇸 美国 | trojan | 509
+  password: GTCCjtvCtuy03-aV1mwF0OkG2q6yL+Fc5K
   port: 443
-  server: 50.62.89.253
-  skip-cert-verify: true
-  sni: Koma-YT.PAGeS.Dev
+  server: 207.126.167.162
   type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇺🇸 美国 | vmess | 515
-  network: tcp
-  port: 18000
-  server: 169.197.142.22
-  servername: null
-  tls: false
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
 - alterId: 64
   cipher: auto
-  name: 🇺🇸 美国 | vmess | 519
+  name: 🇺🇸 美国 | vmess | 536
+  network: ws
+  port: 38005
+  server: 137.175.41.105
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: ''
+    path: /
+- alterId: 64
+  cipher: auto
+  name: 🇺🇸 美国 | vmess | 537
   network: ws
   port: 443
   server: 172.247.148.93
@@ -11971,20 +11950,30 @@ proxies:
     headers:
       Host: ''
     path: /
-- alterId: 0
+- name: 🇺🇸 美国 | trojan | 559
+  password: kkzh2prsyr2ik47as615
+  port: 57142
+  server: 64.94.95.118
+  skip-cert-verify: true
+  type: trojan
+- alterId: 2
   cipher: auto
-  name: 🇺🇸 美国 | vmess | 520
-  network: tcp
-  port: 6004
-  server: 155.254.126.249
-  servername: null
-  tls: false
+  name: 🇺🇸 美国 | vmess | 564
+  network: ws
+  port: 80
+  server: 527hk2.fans8.xyz
+  servername: ''
+  tls: true
   type: vmess
-  uuid: a030842a-d29a-4ea9-a776-14fc4b9e102d
+  uuid: 7f4ff2e1-c08f-35bd-afe7-4a6a386907aa
+  ws-opts:
+    headers:
+      Host: 527hk2.fans8.xyz
+    path: /
 - alpn:
   - h2
   - http/1.1
-  name: 🇺🇸 美国 | trojan | 557
+  name: 🇺🇸 美国 | trojan | 570
   network: ws
   password: Mitivpn
   port: 443
@@ -11996,7 +11985,14 @@ proxies:
     headers:
       Host: panel.hitgram.ir
     path: '%2F%3Fed%3Dmitivpn'
-- name: 🇺🇸 美国 | trojan | 570
+- name: 🇺🇸 美国 | trojan | 618
+  password: WF42809561
+  port: 443
+  server: 54.184.22.123
+  skip-cert-verify: true
+  sni: nearby-muskrat.rooster465.autos
+  type: trojan
+- name: 🇺🇸 美国 | trojan | 624
   network: ws
   password: ec797c83-0b8d-4d5c-b556-1d786ca074c3
   port: 443
@@ -12007,180 +12003,9 @@ proxies:
     headers:
       Host: r-production-260d.up.railway.app
     path: /tj
-- name: 🇺🇸 美国 | trojan | 592
-  network: ws
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  port: 443
-  server: 67.230.161.170
-  sni: hhcm.hhxaf.cc.cd
-  type: trojan
-  ws-opts:
-    headers:
-      Host: hhcm.hhxaf.cc.cd
-    path: '%2F'
-- name: 🇺🇸 美国 | trojan | 593
-  network: ws
-  password: 4c3164ee-abcf-4091-abea-d1cd4937a68d
-  port: 443
-  server: 64.186.241.154
-  skip-cert-verify: true
-  sni: jy.hhllfly.kdns.fr
-  type: trojan
-  ws-opts:
-    headers:
-      Host: jy.hhllfly.kdns.fr
-    path: '%2F%3Fed%3D2048'
-- name: 🇺🇸 美国 | trojan | 594
-  network: ws
-  password: 4c3164ee-abcf-4091-abea-d1cd4937a68d
-  port: 443
-  server: 174.136.205.75
-  skip-cert-verify: true
-  sni: jy.hhllfly.kdns.fr
-  type: trojan
-  ws-opts:
-    headers:
-      Host: jy.hhllfly.kdns.fr
-    path: '%2F%3Fed%3D2048'
-- name: 🇺🇸 美国 | trojan | 596
-  network: ws
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  port: 443
-  server: 154.17.225.54
-  skip-cert-verify: true
-  sni: hhcm.hhxaf.cc.cd
-  type: trojan
-  ws-opts:
-    path: /
-- name: 🇺🇸 美国 | trojan | 599
-  network: ws
-  password: 4c3164ee-abcf-4091-abea-d1cd4937a68d
-  port: 443
-  server: 64.186.240.48
-  skip-cert-verify: true
-  sni: jy.hhllfly.kdns.fr
-  type: trojan
-  ws-opts:
-    headers:
-      Host: jy.hhllfly.kdns.fr
-    path: '%2F%3Fed%3D2048'
-- alterId: 1
-  cipher: auto
-  name: 🇺🇸 美国 | vmess | 609
-  network: ws
-  port: 443
-  server: kampong.org
-  servername: kampong.org
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: kampong.org
-    path: /
-- name: 🇺🇸 美国 | trojan | 614
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 31.58.226.196
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - alterId: 0
   cipher: auto
-  name: 🇺🇸 美国 | vmess | 617
-  network: ws
-  port: 80
-  server: 147.135.112.248
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 973c2639-c9c2-484d-ae9b-3d68b2f30d9e
-  ws-opts:
-    headers:
-      Host: ''
-    path: /
-- name: 🇺🇸 美国 | trojan | 625
-  password: '!!str 745654'
-  port: 443
-  server: 89.117.158.245
-  skip-cert-verify: true
-  sni: esla.cestbon.work
-  type: trojan
-- name: 🇺🇸 美国 | trojan | 629
-  password: O4O8.Ew+ujFX6GJBQ=xQr.heGwux0GYHqk
-  port: 443
-  server: 207.126.167.150
-  skip-cert-verify: true
-  sni: 207.126.167.150
-  type: trojan
-- name: 🇺🇸 美国 | trojan | 632
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 31.58.50.23
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇺🇸 美国 | trojan | 633
-  password: c0fde6ac-a07c-4f60-84ae-e7ed4da78a6f
-  port: 80
-  server: 15.204.210.176
-  sni: 15.204.210.176
-  type: trojan
-- name: 🇺🇸 美国 | trojan | 634
-  password: 800eb26c-cd0c-4269-aae7-e63d75de4edd
-  port: 80
-  server: 135.148.148.4
-  sni: us3.trojanvh.xyz
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: US6 17.0MB/s
-  network: ws
-  port: 6666
-  server: 107.173.27.219
-  servername: 107.173.27.219
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: f0a2fbe5-29bf-468c-ddc1-b524552d1a23
-  ws-opts:
-    path: /youtube
-- alpn:
-  - http/1.1
-  name: 🇺🇸 美国 | trojan | 650
-  network: ws
-  password: mitivpn
-  port: 443
-  server: 216.24.57.246
-  skip-cert-verify: false
-  sni: gamingdll.ir
-  type: trojan
-  ws-opts:
-    headers:
-      Host: gamingdll.ir
-    path: /index.php/ed=mitivpn
-- name: 🇺🇸 美国 | trojan | 692
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 95.182.101.74
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- alterId: 0
-  cipher: auto
-  name: 🇺🇸 美国 | vmess | 704
+  name: 🇺🇸 美国 | vmess | 643
   network: ws
   port: 443
   server: xcf037.facai2024.com
@@ -12194,7 +12019,64 @@ proxies:
     path: /d9863037
 - alterId: 0
   cipher: auto
-  name: 🇺🇸 美国 | vmess | 715
+  name: 🇺🇸 美国 | vmess | 655
+  network: tcp
+  port: 18000
+  server: 169.197.142.22
+  servername: null
+  tls: false
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+- name: 🇺🇸 美国 | trojan | 657
+  password: c0fde6ac-a07c-4f60-84ae-e7ed4da78a6f
+  port: 80
+  server: 15.204.210.176
+  sni: 15.204.210.176
+  type: trojan
+- name: 🇺🇸 美国 | trojan | 670
+  password: 800eb26c-cd0c-4269-aae7-e63d75de4edd
+  port: 80
+  server: 135.148.148.4
+  sni: us3.trojanvh.xyz
+  type: trojan
+- name: 🇺🇸 美国 | trojan | 671
+  network: ws
+  password: 4c3164ee-abcf-4091-abea-d1cd4937a68d
+  port: 443
+  server: 64.186.240.48
+  skip-cert-verify: true
+  sni: jy.hhllfly.kdns.fr
+  type: trojan
+  ws-opts:
+    headers:
+      Host: jy.hhllfly.kdns.fr
+    path: '%2F%3Fed%3D2048'
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸 美国 | vmess | 674
+  network: tcp
+  port: 6004
+  server: 155.254.126.249
+  servername: null
+  tls: false
+  type: vmess
+  uuid: a030842a-d29a-4ea9-a776-14fc4b9e102d
+- alterId: 0
+  cipher: auto
+  name: US6
+  network: ws
+  port: 6666
+  server: 107.173.27.219
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: f0a2fbe5-29bf-468c-ddc1-b524552d1a23
+  ws-opts:
+    path: /youtube
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸 美国 | vmess | 706
   network: tcp
   port: 22324
   server: 67.220.72.237
@@ -12202,7 +12084,128 @@ proxies:
   tls: false
   type: vmess
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- name: 🇺🇸 美国 | trojan | 720
+- name: 🇺🇸 美国 | trojan | 709
+  network: ws
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  port: 443
+  server: 67.230.161.170
+  sni: hhcm.hhxaf.cc.cd
+  type: trojan
+  ws-opts:
+    headers:
+      Host: hhcm.hhxaf.cc.cd
+    path: '%2F'
+- name: 🇺🇸 美国 | trojan | 713
+  network: ws
+  password: 4c3164ee-abcf-4091-abea-d1cd4937a68d
+  port: 443
+  server: 64.186.241.154
+  skip-cert-verify: true
+  sni: jy.hhllfly.kdns.fr
+  type: trojan
+  ws-opts:
+    headers:
+      Host: jy.hhllfly.kdns.fr
+    path: '%2F%3Fed%3D2048'
+- name: 🇺🇸 美国 | trojan | 726
+  network: ws
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  port: 443
+  server: 154.17.225.54
+  skip-cert-verify: true
+  sni: hhcm.hhxaf.cc.cd
+  type: trojan
+  ws-opts:
+    path: /
+- alpn:
+  - http/1.1
+  name: 🇺🇸 美国 | trojan | 727
+  network: ws
+  password: mitivpn
+  port: 443
+  server: 216.24.57.246
+  skip-cert-verify: false
+  sni: gamingdll.ir
+  type: trojan
+  ws-opts:
+    headers:
+      Host: gamingdll.ir
+    path: /index.php/ed=mitivpn
+- name: 🇺🇸 美国 | trojan | 733
+  password: 8r<[9'l6hAO#8ZQi
+  port: 443
+  server: 50.62.89.253
+  skip-cert-verify: true
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+- name: 🇺🇸 美国 | trojan | 744
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 31.58.226.196
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇺🇸 美国 | trojan | 749
+  password: O4O8.Ew+ujFX6GJBQ=xQr.heGwux0GYHqk
+  port: 443
+  server: 207.126.167.150
+  skip-cert-verify: true
+  sni: 207.126.167.150
+  type: trojan
+- name: 🇺🇸 美国 | trojan | 752
+  network: ws
+  password: 4c3164ee-abcf-4091-abea-d1cd4937a68d
+  port: 443
+  server: 174.136.205.75
+  skip-cert-verify: true
+  sni: jy.hhllfly.kdns.fr
+  type: trojan
+  ws-opts:
+    headers:
+      Host: jy.hhllfly.kdns.fr
+    path: '%2F%3Fed%3D2048'
+- alterId: 16
+  cipher: auto
+  name: 🇺🇸 美国 | vmess | 753
+  network: ws
+  port: '80'
+  server: usv-4.openv2ray.com
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
+  ws-opts:
+    headers:
+      Host: usv-4.openv2ray.com
+    path: /opentunnel?user=opentunnel.net-arty98
+- name: 🇺🇸 美国 | trojan | 756
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 95.182.101.74
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇺🇸 美国 | trojan | 766
+  password: WF42809561
+  port: 443
+  server: nearby-muskrat.rooster465.autos
+  type: trojan
+- name: 🇺🇸 美国 | trojan | 769
+  password: '!!str 745654'
+  port: 443
+  server: 89.117.158.245
+  skip-cert-verify: true
+  sni: esla.cestbon.work
+  type: trojan
+- name: 🇺🇸 美国 | trojan | 787
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
@@ -12211,9 +12214,36 @@ proxies:
   type: trojan
   ws-opts:
     path: /
+- name: 🇺🇸 美国 | trojan | 788
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2083
+  server: 31.172.79.138
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇺🇸 美国 | trojan | 793
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 31.58.50.23
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇺🇸 美国 | trojan | 804
+  password: AZWY=WAZk5TeVYmMUudr2xmeb00I3ymeMQ
+  port: 443
+  server: 23.227.193.173
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇺🇸 美国 | vmess | 742
+  name: 🇺🇸 美国 | vmess | 813
   network: tcp
   port: 22324
   server: 216.106.183.35
@@ -12221,21 +12251,9 @@ proxies:
   tls: true
   type: vmess
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- name: 🇺🇸 美国 | trojan | 749
-  password: AZWY=WAZk5TeVYmMUudr2xmeb00I3ymeMQ
-  port: 443
-  server: 23.227.193.173
-  type: trojan
-- name: 🇺🇸 美国 | trojan | 757
-  password: WF42809561
-  port: 443
-  server: 54.184.22.123
-  skip-cert-verify: true
-  sni: nearby-muskrat.rooster465.autos
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇺🇸 美国 | vmess | 762
+  name: 🇺🇸 美国 | vmess | 826
   network: ws
   port: 443
   server: 47.253.60.200
@@ -12249,7 +12267,7 @@ proxies:
     path: /swoole
 - alterId: 4
   cipher: auto
-  name: 🇺🇸 美国 | vmess | 763
+  name: 🇺🇸 美国 | vmess | 827
   network: ws
   port: 443
   server: 192.96.204.250
@@ -12261,15 +12279,31 @@ proxies:
     headers:
       Host: usa-washington.lvuft.com
     path: /ws
-- name: 🇺🇸 美国 | trojan | 766
-  password: 2ee85121-31de-4581-a492-eb00f606e392
+- name: 🇺🇸 美国 | trojan | 828
+  password: ddbe4c70-7a02-11ee-aef2-1239d0255272
   port: 443
-  server: 198.23.229.250
-  sni: rc6.freeguard.org
+  server: 15.204.240.119
+  sni: us1.test3.net
   type: trojan
+- name: 🇺🇸 美国 | trojan | 833
+  password: 3ac6a6ca99f74941b1eaf892818e2ddb
+  port: 443
+  server: 194.33.45.157
+  type: trojan
+- name: 🇺🇸 美国 | trojan | 834
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 104.167.196.91
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - alterId: 0
   cipher: auto
-  name: 🇺🇸 美国 | vmess | 767
+  name: 🇺🇸 美国 | vmess | 846
   network: ws
   port: 443
   server: 47.253.55.72
@@ -12281,32 +12315,25 @@ proxies:
     headers:
       Host: ''
     path: /swoole
-- name: 🇺🇸 美国 | trojan | 768
-  network: ws
-  password: 4c3164ee-abcf-4091-abea-d1cd4937a68d
-  port: 8443
-  server: 64.186.240.9
-  skip-cert-verify: true
-  sni: jy.hhllfly.kdns.fr
-  type: trojan
-  ws-opts:
-    headers:
-      Host: jy.hhllfly.kdns.fr
-    path: '%2F%3Fed%3D2048'
-- name: 🇺🇸 美国 | trojan | 772
-  password: 3ac6a6ca99f74941b1eaf892818e2ddb
-  port: 443
-  server: 194.33.45.157
-  type: trojan
-- name: 🇺🇸 美国 | trojan | 797
+- name: 🇺🇸 美国 | trojan | 859
   password: b1952da9-8a2a-4e2e-a79c-61914f9e6a9f
   port: 41050
   server: 37.46.18.128
   sni: www.oracle.com
   type: trojan
 - alterId: 0
+  name: 🇺🇸US美国2
+  password: '!!str 114514'
+  port: 443
+  server: 72.249.204.157
+  skip-cert-verify: true
+  sni: tjaaa.hhllfly.kdns.fr
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
   cipher: auto
-  name: 🇺🇸 美国 | vmess | 805
+  name: 🇺🇸 美国 | vmess | 874
   network: ws
   port: 80
   server: 38.150.13.64
@@ -12318,29 +12345,19 @@ proxies:
     headers:
       Host: ''
     path: /
-- alterId: 0
-  name: 🇭🇰HK香港8
-  password: 825929f4-c702-35ce-9124-00d3f95b8c32
-  port: 34436
-  server: adak.sonofthewinds.com
-  skip-cert-verify: true
-  sni: hh4.sonofthewinds.com
-  tls: true
+- name: 🇺🇸 美国 | trojan | 889
+  password: 2ee85121-31de-4581-a492-eb00f606e392
+  port: 443
+  server: 198.23.229.250
+  sni: rc6.freeguard.org
   type: trojan
-  udp: true
-- name: 🇺🇸 美国 | trojan | 839
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2083
-  server: 31.172.79.138
-  sni: Koma-YT.PAGeS.Dev
+- name: 🇺🇸 美国 | trojan | 904
+  password: 4863e1b2-ec2f-4c71-b862-ce533028e57e
+  port: 443
+  server: trus.moonfree.top
   type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - alterId: 0
-  name: 未知30
+  name: 未知
   password: 825929f4-c702-35ce-9124-00d3f95b8c32
   port: 34450
   server: adak.sonofthewinds.com
@@ -12349,19 +12366,18 @@ proxies:
   tls: true
   type: trojan
   udp: true
-- name: 🇺🇸 美国 | trojan | 845
-  password: ddbe4c70-7a02-11ee-aef2-1239d0255272
-  port: 443
-  server: 15.204.240.119
-  sni: us1.test3.net
-  type: trojan
-- name: 🇺🇸 美国 | trojan | 869
-  password: WF42809561
-  port: 443
-  server: nearby-muskrat.rooster465.autos
-  type: trojan
 - alterId: 0
-  name: 🇯🇵JP日本
+  name: 🇭🇰HK香港7
+  password: 825929f4-c702-35ce-9124-00d3f95b8c32
+  port: 34436
+  server: adak.sonofthewinds.com
+  skip-cert-verify: true
+  sni: hh4.sonofthewinds.com
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
+  name: 🇯🇵JP日本2
   password: 825929f4-c702-35ce-9124-00d3f95b8c32
   port: 34470
   server: adak.sonofthewinds.com
@@ -12370,31 +12386,67 @@ proxies:
   tls: true
   type: trojan
   udp: true
-- alterId: 0
-  name: 🇭🇰HK香港4
-  password: '!!str 114514'
-  port: 443
-  server: 68.64.178.42
-  skip-cert-verify: true
-  sni: tjaaa.hhllfly.kdns.fr
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 2
+- alterId: 64
   cipher: auto
-  name: 🇺🇸 美国 | vmess | 913
+  name: 🇺🇸 美国 | vmess | 942
   network: ws
-  port: 80
-  server: 527hk2.fans8.xyz
+  port: 38005
+  server: 107.148.203.99
   servername: ''
   tls: true
   type: vmess
-  uuid: 7f4ff2e1-c08f-35bd-afe7-4a6a386907aa
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   ws-opts:
     headers:
-      Host: 527hk2.fans8.xyz
+      Host: ''
     path: /
-- name: 🇺🇸 美国 | trojan | 918
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸 美国 | vmess | 943
+  network: ws
+  port: 80
+  server: 147.135.112.248
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 973c2639-c9c2-484d-ae9b-3d68b2f30d9e
+  ws-opts:
+    headers:
+      Host: ''
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸 美国 | vmess | 944
+  network: ws
+  port: 80
+  server: 146.190.114.190
+  servername: tms.dingtalk.com
+  tls: false
+  type: vmess
+  uuid: db8f8bbe-c589-4316-8063-49baaf0fd858
+  ws-opts:
+    headers:
+      Host: ''
+    path: /
+- name: 🇺🇸 美国 | trojan | 964
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 37.46.19.79
+  skip-cert-verify: false
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+- name: 🇺🇸 美国 | trojan | 967
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 144.31.81.233
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇺🇸 美国 | trojan | 980
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 443
@@ -12406,7 +12458,7 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2'
-- name: 🇺🇸 美国 | trojan | 925
+- name: 🇺🇸 美国 | trojan | 986
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
@@ -12417,19 +12469,7 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2
-- name: 🇺🇸 美国 | trojan | 929
-  network: ws
-  password: '!!str 1234567890'
-  port: 2053
-  server: 144.31.246.245
-  skip-cert-verify: true
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
-- name: 🇺🇸 美国 | trojan | 941
+- name: 🇺🇸 美国 | trojan | 992
   network: ws
   password: '!!str 1234567890'
   port: 8443
@@ -12441,45 +12481,73 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 🇺🇸 美国 | trojan | 983
+- name: 🇺🇸 美国 | trojan | 994
+  network: ws
+  password: '!!str 1234567890'
+  port: 2053
+  server: 144.31.246.245
+  skip-cert-verify: true
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
+- name: 🇺🇸 美国 | trojan | 1036
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 144.31.82.175
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇺🇸 美国 | trojan | 1059
   password: acf3f32e-2b46-4535-a068-4bcb6dcb86f8
   port: 50000
   server: us200m.jiasu.asia
   sni: us200m.jiasu.asia
   type: trojan
-- name: 🇺🇸 美国 | trojan | 991
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸 美国 | vmess | 1062
+  network: ws
+  port: '80'
+  server: us-lb.sshkit.org
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 6fea1649-425b-4092-bf53-29792152c925
+  ws-opts:
+    headers:
+      Host: zoom.us
+    path: /sshkit/Variu88/634dab7abadf1/
+- name: 🇺🇸 美国 | trojan | 1064
   password: ZfhGKkAmGl.hxRfIUI0LUU.MuK3hkQdxed
   port: 443
   server: 38.60.202.163
   type: trojan
 - alterId: 0
-  name: 🇺🇸US美国17 329.9KB/s
+  name: 🇺🇸US美国13 652.3KB/s
+  network: tcp
+  password: S.ibYdZshHTF-ne.M+.Fznp_-hyFFnCSix
+  port: 443
+  server: 149.104.104.58
+  skip-cert-verify: true
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇺🇸 美国 | trojan | 1070
   password: ks3og6wZ9kH8UJv1bmpvwXbfgDNNaTd1Lk
   port: 443
   server: 38.54.64.247
-  skip-cert-verify: true
   sni: 38.54.64.247
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 0
-  name: 🇺🇸US美国12
-  password: '!!str 114514'
-  port: 443
-  server: 72.249.204.157
-  skip-cert-verify: true
-  sni: tjaaa.hhllfly.kdns.fr
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 美国 | trojan | 1128
-  password: 4863e1b2-ec2f-4c71-b862-ce533028e57e
-  port: 443
-  server: trus.moonfree.top
   type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇺🇸 美国 | vmess | 1145
+  name: 🇺🇸 美国 | vmess | 1180
   network: ws
   port: 443
   server: oz.moonfree.top
@@ -12491,6 +12559,25 @@ proxies:
     headers:
       Host: oz.moonfree.top
     path: /
+- name: 🇺🇸 美国 | trojan | 1202
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 443
+  server: starlink-us4.mfa.cat
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  type: trojan
+- name: 🇺🇸 美国 | trojan | 1207
+  network: ws
+  password: 4c3164ee-abcf-4091-abea-d1cd4937a68d
+  port: 8443
+  server: 64.186.240.9
+  skip-cert-verify: true
+  sni: jy.hhllfly.kdns.fr
+  type: trojan
+  ws-opts:
+    headers:
+      Host: jy.hhllfly.kdns.fr
+    path: '%2F%3Fed%3D2048'
 - alpn:
   - ''
   alterId: '0'
@@ -12526,8 +12613,73 @@ proxies:
     path: /
   xudp: true
 - alterId: 0
+  name: 🇺🇸US美国
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.20.6.134
+  skip-cert-verify: true
+  sni: www.calmloud.com
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
+  name: 美国2|@ripaojiedian
+  network: tcp
+  password: ba5b6f1d3a9da87096165da523fb4375
+  port: 17005
+  server: 57.183.13.23
+  skip-cert-verify: true
+  sni: www.nintendogames.net
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
   cipher: auto
-  name: US2
+  name: US
+  network: ws
+  port: 80
+  server: us-lb.sshkit.org
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 6fea1649-425b-4092-bf53-29792152c925
+  ws-opts:
+    headers:
+      host: zoom.us
+    path: /sshkit/Variu88/634dab7abadf1/
+- alterId: 0
+  name: 🇺🇸US美国5
+  password: BxceQaOe
+  port: 22657
+  server: 43.199.44.33
+  skip-cert-verify: true
+  sni: t.me/ripaojiedian
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
+  name: 🇺🇸US美国6
+  password: '!!str 114514'
+  port: 443
+  server: 104.207.152.96
+  skip-cert-verify: true
+  sni: tjaaa.hhllfly.kdns.fr
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: chacha20-ietf-poly1305
+  name: 🇺🇸US美国7 529.3KB/s
+  password: xfscSDcb-SeEqqRb.omzVGgVgNpXh3bA1u
+  port: 26286
+  server: 67.219.106.119
+  skip-cert-verify: true
+  tls: true
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: US3
   network: ws
   port: 443
   server: cold-dawn-9246.fly.dev
@@ -12541,32 +12693,40 @@ proxies:
     path: /ea4909ef-7ca6-4b46-bf2e-6c07896ef338-vm
 - alterId: 0
   cipher: auto
-  name: US3
+  name: US4
   network: ws
-  port: 443
-  server: 77.v2ray1.xyz
+  port: 80
+  server: 15.204.8.218
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+  uuid: 7df2ed79-59a7-46e0-959a-b5cb367d6f08
   ws-opts:
     headers:
-      host: 77.v2ray1.xyz
-    path: /A2DJOPFT
+      host: us2.v2rayserv.com
+    path: /sshocean
 - alterId: 0
-  name: 🇺🇸US美国
-  network: ws
-  password: humanity
+  name: 🇺🇸US美国10
+  password: '!!str 114514'
   port: 443
-  server: 104.17.121.9
+  server: 154.64.235.208
   skip-cert-verify: true
-  sni: www.calmlunch.com
+  sni: tjaaa.hhllfly.kdns.fr
   tls: true
   type: trojan
   udp: true
 - alterId: 0
+  cipher: chacha20-ietf-poly1305
+  name: 🇺🇸US美国11
+  password: p78naCf2EfOlRSLTX0wFVx
+  port: 443
+  server: 71.19.148.143
+  skip-cert-verify: true
+  tls: true
+  type: ss
+- alterId: 0
   cipher: auto
-  name: US4
+  name: US5
   network: ws
   port: 443
   server: 188.114.97.3
@@ -12579,45 +12739,17 @@ proxies:
       host: afrhms16v.bestxray.buzz
     path: /linkws
 - alterId: 0
-  name: 🇺🇸US美国3
-  password: BxceQaOe
-  port: 11993
-  server: 95.40.92.87
+  name: 🇺🇸US美国14
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  port: 443
+  server: store.ubi.com
   skip-cert-verify: true
-  sni: t.me/ripaojiedian
+  sni: hhcm.hhxaf.cc.cd
   tls: true
   type: trojan
   udp: true
 - alterId: 0
-  cipher: aes-256-gcm
-  name: 🇺🇸US美国4
-  password: 8JCsPssfgS8tiRwiMlhARg==
-  port: 12000
-  server: 15.204.247.49
-  skip-cert-verify: true
-  tls: true
-  type: ss
-- alterId: 0
-  name: 🇺🇸US美国5
-  password: '!!str 114514'
-  port: 443
-  server: 154.64.235.208
-  skip-cert-verify: true
-  sni: tjaaa.hhllfly.kdns.fr
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 0
-  cipher: chacha20-ietf-poly1305
-  name: 🇺🇸US美国6
-  password: p78naCf2EfOlRSLTX0wFVx
-  port: 443
-  server: pupas-shirting-unsung.freesocks.work
-  skip-cert-verify: true
-  tls: true
-  type: ss
-- alterId: 0
-  name: 🇺🇸US美国7
+  name: 🇺🇸US美国15
   password: humanity
   port: 443
   server: 165.215.250.14
@@ -12627,41 +12759,45 @@ proxies:
   type: trojan
   udp: true
 - alterId: 0
-  cipher: auto
-  name: US5
-  network: ws
-  port: 443
-  server: 45.85.118.88
+  cipher: chacha20-ietf-poly1305
+  name: 🇺🇸US美国18
+  password: qFvn2fNEvBgM5knffrN96q
+  port: 9483
+  server: 92.118.112.101
   skip-cert-verify: true
   tls: true
-  type: vmess
-  uuid: ee30d3ff-da14-4ea8-bcd2-02e8ee3667de
-  ws-opts:
-    headers:
-      host: hstr1675520106270.aidapp.life
-    path: /aidapp.lifevws
-- alterId: 0
-  name: 🇺🇸US美国13
-  password: MITIVPN
-  port: 80
-  server: 151.101.1.194
-  skip-cert-verify: true
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 0
-  name: 🇺🇸US美国15
-  password: '!!str 114514'
-  port: 443
-  server: 104.207.152.96
-  skip-cert-verify: true
-  sni: tjaaa.hhllfly.kdns.fr
-  tls: true
-  type: trojan
-  udp: true
+  type: ss
 - alterId: 0
   cipher: auto
   name: US7
+  network: ws
+  port: 443
+  server: 77.v2ray1.xyz
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+  ws-opts:
+    headers:
+      host: 77.v2ray1.xyz
+    path: /A2DJOPFT
+- alterId: 16
+  cipher: auto
+  name: US8
+  network: ws
+  port: 80
+  server: usv-4.openv2ray.com
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
+  ws-opts:
+    headers:
+      host: usv-4.openv2ray.com
+    path: /opentunnel?user=opentunnel.net-arty98
+- alterId: 0
+  cipher: auto
+  name: US9
   network: ws
   port: 8443
   server: 172.64.146.102
@@ -12675,10 +12811,43 @@ proxies:
     path: /c1a8dee0-bdad-4b6d-9926-5e15c3c8ed7d-vm
 - alterId: 0
   cipher: chacha20-ietf-poly1305
-  name: 🇺🇸US美国18
-  password: qFvn2fNEvBgM5knffrN96q
-  port: 9483
-  server: 92.118.112.101
+  name: 🇺🇸US美国19
+  password: p78naCf2EfOlRSLTX0wFVx
+  port: 443
+  server: pupas-shirting-unsung.freesocks.work
+  skip-cert-verify: true
+  tls: true
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: US11
+  network: ws
+  port: 443
+  server: 45.85.118.88
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: ee30d3ff-da14-4ea8-bcd2-02e8ee3667de
+  ws-opts:
+    headers:
+      host: hstr1675520106270.aidapp.life
+    path: /aidapp.lifevws
+- alterId: 0
+  name: 🇺🇸US美国20
+  password: '!!str 114514'
+  port: 443
+  server: 140.82.19.127
+  skip-cert-verify: true
+  sni: tjaaa.hhllfly.kdns.fr
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: aes-256-gcm
+  name: 🇺🇸US美国21
+  password: 8JCsPssfgS8tiRwiMlhARg==
+  port: 12000
+  server: 15.204.247.49
   skip-cert-verify: true
   tls: true
   type: ss
@@ -12898,6 +13067,15 @@ proxies:
     headers:
       Host: 17692413636189.206355.xyz
     path: '%2Fvideomuaawe'
+- alterId: 0
+  cipher: auto
+  name: US297｜原生/疑似家宽｜非常安全
+  network: tcp
+  port: '47084'
+  server: tunnel2.qqa678.com
+  tls: false
+  type: vmess
+  uuid: 9f8c122d-5b86-4c19-af87-64f458a88223
 - alterId: 64
   cipher: auto
   name: US234｜机房｜低风险
@@ -12907,14 +13085,6 @@ proxies:
   tls: false
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- name: 美国2|@ripaojiedian
-  network: tcp
-  password: ba5b6f1d3a9da87096165da523fb4375
-  port: 17005
-  server: 57.183.13.23
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
 - alterId: 0
   cipher: auto
   name: '🇺🇸_US_美国_1 #1'
