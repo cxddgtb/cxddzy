@@ -161,9 +161,12 @@ proxies:
   port: '30807'
   server: v10.hdacd.com
   servername: ''
+  skip-cert-verify: false
   tls: false
   type: vmess
+  udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  xudp: true
 - client-fingerprint: chrome
   name: 🇭🇰 香港 | trojan | 07
   network: tcp
@@ -184,7 +187,7 @@ proxies:
   sni: gh.01.naiun.bilibili.com
   type: trojan
   udp: true
-- name: HK【机场推荐：https://a9a.xyz】28
+- name: HK【机场推荐：https://a9a.xyz】35
   network: ws
   password: '!!str 114514'
   port: 443
@@ -195,7 +198,7 @@ proxies:
     headers:
       Host: tjaaa.hhllfly.kdns.fr
     path: '%2F'
-- name: UN【机场推荐：https://a9a.xyz】110
+- name: UN【机场推荐：https://a9a.xyz】111
   network: ws
   port: 80
   server: 151.101.79.151
@@ -206,7 +209,7 @@ proxies:
     headers:
       Host: max-gb1.global.ssl.fastly.net
     path: '%2F%3Fhttps%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: UN【机场推荐：https://a9a.xyz】111
+- name: UN【机场推荐：https://a9a.xyz】113
   network: ws
   port: 80
   server: 151.101.76.151
@@ -217,7 +220,7 @@ proxies:
     headers:
       Host: max-gb1.global.ssl.fastly.net
     path: '%2F%3Fhttps%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: HK【机场推荐：https://a9a.xyz】14
+- name: UN【机场推荐：https://a9a.xyz】123
   network: ws
   port: 80
   server: 151.101.78.151
@@ -228,7 +231,7 @@ proxies:
     headers:
       Host: max-gb1.global.ssl.fastly.net
     path: '%2F%3Fhttps%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: UN【机场推荐：https://a9a.xyz】146
+- name: UN【机场推荐：https://a9a.xyz】133
   network: ws
   port: 80
   server: 151.101.77.151
@@ -497,24 +500,6 @@ proxies:
   tls: true
   type: socks5
   username: f8eca8df-a1a5-4918-a194-d34112a3673f
-- alpn:
-  - ''
-  alterId: 0
-  cipher: auto
-  http-opts:
-    headers: {}
-    path:
-    - /
-  name: 🇭🇰 香港 | vmess | 86
-  network: http
-  port: 13221
-  server: 154.37.223.105
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: a0d7636e-b973-4d6a-e6c3-c520d0b43a55
-  xudp: true
 - client-fingerprint: chrome
   encryption: none
   name: '🔴🇭🇰[🎬🤖📺🔍]_github.com/Ruk1ng001... #4'
@@ -1096,6 +1081,15 @@ proxies:
   tls: false
   type: vless
   uuid: 1f56cd31-87f4-47cf-aac9-a8fc9bca8eed
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰 香港 | vmess | 86
+  network: http
+  port: 13221
+  server: 154.37.223.105
+  tls: false
+  type: vmess
+  uuid: a0d7636e-b973-4d6a-e6c3-c520d0b43a55
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇭🇰 香港 | vless | 91
@@ -1725,7 +1719,7 @@ proxies:
   skip-cert-verify: true
   sni: bing.com
   type: trojan
-- name: 8|🇭🇰 HK
+- name: 8| HK
   password: a305ac08-d136-11ee-b6db-f23c91cfbbc9
   port: 443
   server: ffc60249-t53wg0-t92wi1-1qkeg.hk2.hyhuawei.com
@@ -3238,14 +3232,6 @@ proxies:
     headers:
       Host: hkt.gotochinatown.net
     path: /
-- name: 8|HK_@WangCai_8
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.174
-  skip-cert-verify: true
-  sni: https://t.me/WangCai2🇨🇳
-  tls: false
-  type: hysteria2
 - name: 9|HK_@https://t.me/daily_free_...
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
@@ -3254,3 +3240,27 @@ proxies:
   sni: https://t.me/daily_free_vpn
   tls: false
   type: hysteria2
+- name: 香港3|@ripaojiedian
+  network: tcp
+  password: a844e75e40134ee742e80ced8509b310
+  port: 2008
+  server: 95.40.80.58
+  skip-cert-verify: true
+  sni: www.nintendogames.net
+  type: trojan
+- name: 香港4|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 27167
+  server: 18.163.184.21
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- name: 香港5|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 29449
+  server: 43.199.73.120
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
