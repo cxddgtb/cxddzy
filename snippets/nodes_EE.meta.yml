@@ -1,4 +1,19 @@
 proxies:
+- alterId: 1
+  cipher: auto
+  name: '爱沙尼亚 001 #1'
+  network: ws
+  port: 8080
+  server: 104.160.19.22
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  type: vmess
+  uuid: efb748ec-c921-42a1-ac9e-1d5485d6c447
+  ws-opts:
+    headers:
+      Host: download.windowsupdate.com
+    path: /download
 - client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
@@ -31,125 +46,83 @@ proxies:
   udp: true
   uuid: dbfa97b8-f4fb-4687-96dc-a5a2aebfae11
   xudp: true
-- client-fingerprint: qq
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: '🇪🇪 Estonia — #286'
+  name: 🇪🇪 Estonia, Tallinn | 🌐 | [IPv...
   network: tcp
   port: 443
-  reality-opts:
-    public-key: ca5sfJNcjkh3oNt51hRexXbGWgITAqCprGSU-YKCJBA
-    short-id: '!!str c9f531958ae0c87c'
-  server: 185.215.184.55
-  servername: es.subv.ru
-  tls: false
+  server: ng-ee-0.woffic1al.com
+  servername: ng-ee-0.woffic1al.com
+  skip-cert-verify: false
+  tls: true
   type: vless
-  uuid: 2a70873b-5722-4c87-aea0-b76c0a5e9ec2
+  uuid: e2daaf71-363d-43f7-852b-1a6d1117734e
 - client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: '🇪🇪 Estonia — #445'
+  name: 🇷🇺 俄罗斯 | vless | 1028
   network: tcp
   port: 443
   reality-opts:
     public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
     short-id: '!!str 428ef87fd47a3a32'
-  server: 158.160.114.71
+  server: 158.160.102.236
+  servername: sso.passport.yandex.ru
+  tls: false
+  type: vless
+  uuid: 2420af47-2316-482e-bb0f-b164df4b2334
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇪🇪
+  network: tcp
+  port: 443
+  server: ee1.mehab.me
+  tls: true
+  type: vless
+  uuid: c631d469-de07-44ea-afcf-1033616e06f4
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: '🇪🇪 Estonia — #433'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: '!!str 428ef87fd47a3a32'
+  server: 158.160.46.104
   servername: smartcaptcha.yandexcloud.net
   tls: false
   type: vless
-  uuid: 409bdb0f-5aae-4e93-a8dd-60adc47d5fd3
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: '[1596]⭐ 🇪🇪 EST ⭐ 📑 🗺️ #71725e'
-  network: xhttp
-  port: 443
-  server: 185.242.19.249
-  servername: top2197697635.mwscdn.ru
-  tls: true
-  type: vless
-  uuid: 5cd4d036-929a-410e-b5bd-5677fb9f6c6b
-  ws-opts:
-    headers:
-      Host: top2197697635.mwscdn.ru
-    path: /xhttppath
-- name: '🇪🇪 Estonia — #85 (d2ca33)'
+  uuid: 5074df4a-1b57-4417-9f9c-d055b420a6f3
+- client-fingerprint: chrome
+  name: '🇪🇪 Estonia — #24'
   network: ws
   port: 443
-  server: 185.242.19.250
+  server: 185.242.18.117
+  servername: top3097655569.mwscdn.ru
   tls: true
   type: vless
   uuid: c8e83bdd-40ae-43f9-9e2a-c19241d2ca33
-- client-fingerprint: chrome
+  ws-opts:
+    headers:
+      Host: top3097655569.mwscdn.ru
+    path: '%2Fmws-ws'
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '[1596]⭐ 🇪🇪 EST ⭐ 📑 [YA] #59c49...'
+  name: '[1596]✴️ 🇪🇪 EST ✴️ #93a6b3'
   network: tcp
-  port: 443
+  port: 18443
   reality-opts:
-    public-key: MXpxhnU1ctGMXbGGjIrtDfjRX-BbbpsjnS4-SUv3OFs
-  server: 51.250.43.93
+    public-key: d6tkVFvU5G24OD8sc7y4dn9HfTEw0vn3d1e7OBUoolI
+    short-id: '!!str 98925752c3eae149'
+  server: 51.250.70.27
   servername: ads.x5.ru
   tls: false
   type: vless
-  uuid: 91427003-38cb-473e-95f2-a4b500c91f7b
-- client-fingerprint: qq
-  name: 🇷🇺 俄罗斯 | vless | 496
-  network: xhttp
-  port: 50042
-  reality-opts:
-    public-key: 47xoruuC1hScnss03pN8ltTby7JYD-LUepdk3UnQUl4
-    short-id: '!!str 279c694ce5'
-  server: 52145c4afb573e57.node6.qeunso.com
-  servername: cats.qeunso.com
-  tls: false
-  type: vless
-  uuid: 9c8a6eeb-b505-4000-8be2-178829512e39
-  ws-opts:
-    headers:
-      Host: cats.qeunso.com
-    path: /api/ads
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: '🇪🇪 Estonia — #188'
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: oqRus6Z_Q1jqJaTEPu7ENbRL0-XKOw54K0jwCCGLtEk
-    short-id: '!!str a9c4f17e3b62d8'
-  server: 91.218.230.88
-  servername: m.vk.com
-  tls: false
-  type: vless
-  uuid: dc236e2a-5e26-4f50-b48d-28514926db50
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: '[1596]⭐ 🇪🇪 EST ⭐ 📑 🗺️ #86061c'
-  network: xhttp
-  port: 443
-  server: 185.242.19.250
-  servername: top2197697635.mwscdn.ru
-  tls: true
-  type: vless
-  uuid: 0f8c710c-459c-49be-96f8-dc57cf75d75a
-  ws-opts:
-    headers:
-      Host: top2197697635.mwscdn.ru
-    path: /xhttppath
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 634
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: VUuPGj8ERHsRZy9puLbSkVKZUNTm6w23xsdfHjRxJTg
-    short-id: '!!str 34A21bc14ccaaA12'
-  server: 51.250.32.172
-  servername: ads.x5.ru
-  tls: false
-  type: vless
-  uuid: 4e8d48bb-3c03-4e02-b15f-a76737cca9e7
+  uuid: 1c7e2730-839d-4321-84f9-4e6b69ea4856
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇪🇪 爱沙尼亚 | vless | 02
@@ -317,6 +290,18 @@ proxies:
   tls: false
   type: vless
   uuid: 1c7e2730-839d-4321-84f9-4e6b69ea4856
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇪🇪 爱沙尼亚 | vless | 33
+  port: 443
+  reality-opts:
+    public-key: r77nilacD34SeLmghmchRKuNiUL0xzh-pK87Ux58dzI
+    short-id: '!!str d0a1665d1b96515e'
+  server: 37.49.224.29
+  servername: dev.max.ru
+  tls: false
+  type: vless
+  uuid: 208b2b41-4801-44f9-9f13-9149dd457da5
 - client-fingerprint: firefox
   grpc-opts:
     grpc-service-name: gun
@@ -405,19 +390,6 @@ proxies:
   uuid: e9ebf8c2-dbe9-4220-9234-6a47be3e9dea
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇪🇪 爱沙尼亚 | vless | 41
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: QWxSKVguwUnPvmYaOR4DvxpmVxCJfPEaipbjdAfAbG4
-    short-id: '!!str c338fe2b01cf271a'
-  server: 37.49.224.32
-  servername: dev.max.ru
-  tls: false
-  type: vless
-  uuid: a5f3e5f5-ffa4-43dd-84b6-20aedd1a843e
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
   name: 🇪🇪 爱沙尼亚 | vless | 44
   port: 8443
   reality-opts:
@@ -440,6 +412,20 @@ proxies:
   tls: false
   type: vless
   uuid: e9ebf8c2-dbe9-4220-9234-6a47be3e9dea
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: 🇪🇪 爱沙尼亚 | vless | 51
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: QWxSKVguwUnPvmYaOR4DvxpmVxCJfPEaipbjdAfAbG4
+    short-id: '!!str c338fe2b01cf271a'
+  server: 37.49.224.93
+  servername: dev.max.ru
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: 536a80c2-18bd-40ac-b147-dbafc6f8e872
 - client-fingerprint: firefox
   name: 🇪🇪 爱沙尼亚 | vless | 53
   port: 443
@@ -486,13 +472,6 @@ proxies:
   tls: false
   type: vless
   uuid: 1c3f4485-0ba1-4796-9806-7be98e947842
-- name: 🇪🇪 爱沙尼亚 | hy2 | 60
-  password: bmw32hjrgwaflcf1
-  port: 443
-  server: estia.1o0.net
-  sni: estia-cdn.1o0.net
-  tls: false
-  type: hysteria2
 - client-fingerprint: qq
   flow: xtls-rprx-vision
   name: 🇪🇪 爱沙尼亚 | vless | 61
@@ -519,18 +498,16 @@ proxies:
   tls: false
   type: vless
   uuid: b0f08ae1-7cf9-4612-ad61-72681e0b92da
-- alterId: 1
-  cipher: auto
-  name: 爱沙尼亚 001
-  network: ws
-  port: 8080
-  server: 104.160.19.22
-  skip-cert-verify: false
-  tfo: false
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: vless-grpc
+  name: 🇪🇪 爱沙尼亚 | vless | 73
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: QGnGWzhnKWHNkpRXIm13T-2OFfZ8h7ch9pJhpqADzFU
+  server: 132.243.65.121
+  servername: yahoo.com
   tls: false
-  type: vmess
-  uuid: efb748ec-c921-42a1-ac9e-1d5485d6c447
-  ws-opts:
-    headers:
-      Host: download.windowsupdate.com
-    path: /download
+  type: vless
+  uuid: dd47f0f6-e503-44d5-8243-0f48c1c20c28
