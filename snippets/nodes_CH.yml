@@ -54,6 +54,7 @@ proxies:
   port: 1514
   server: sinavip.cnavippanel.com
   skip-cert-verify: true
+  tls: false
   type: vmess
   uuid: 0aca35ee-b845-45d7-9b52-379a2984378a
 - alterId: 0
@@ -66,41 +67,25 @@ proxies:
   tls: true
   type: vmess
   uuid: 1de9d119-12ca-4620-a29c-60b40a7f8650
-- name: 🇨🇭 瑞士 | trojan | 19
+- alpn:
+  - h2
+  - http/1.1
+  - h3
+  name: 🇨🇭 瑞士 | trojan | 04
+  network: tcp
+  password: SoftNetConnect
+  port: 42549
+  server: 37.156.44.215
+  skip-cert-verify: true
+  sni: www.speedtest.net
+  type: trojan
+- name: 🇨🇭 瑞士 | trojan | 12
   password: '!!str 1234567890'
   port: 443
   server: 138.124.32.121
   sni: kfm-bn0.pages.dev
   type: trojan
-- name: 🇨🇭 瑞士 | trojan | 28
-  network: xhttp
-  password: SoftNetConnect
-  port: 443
-  server: 37.156.44.157
-  skip-cert-verify: true
-  sni: www.yahoo.com
-  type: trojan
-  ws-opts:
-    path: /
-- name: 🇨🇭 瑞士 | trojan | 31
-  password: '!!str 1234567890'
-  port: 443
-  server: 138.124.28.173
-  skip-cert-verify: false
-  sni: kfm-bn0.pages.dev
-  type: trojan
-- name: 🇨🇭 瑞士 | trojan | 34
-  network: ws
-  password: '!!str 1234567890'
-  port: 443
-  server: 138.124.28.78
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 🇨🇭 瑞士 | trojan | 40
+- name: 🇨🇭 瑞士 | trojan | 39
   network: ws
   password: rYuChHcwQZskq9E0zdoR
   port: 443
@@ -112,7 +97,7 @@ proxies:
     headers:
       Host: vpn5.rnmcnm.com
     path: /ws-79dffb8106db
-- name: 🇨🇭 瑞士 | trojan | 46
+- name: 🇨🇭 瑞士 | trojan | 40
   network: ws
   password: '!!str 162534'
   port: 8443
@@ -124,6 +109,60 @@ proxies:
     headers:
       Host: cchh2.pages.dev
     path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
+- name: 🇨🇭 瑞士 | trojan | 42
+  network: xhttp
+  password: SoftNetConnect
+  port: 443
+  server: 37.156.44.157
+  skip-cert-verify: true
+  sni: www.yahoo.com
+  type: trojan
+  ws-opts:
+    path: /
+- name: 🇨🇭 瑞士 | trojan | 50
+  network: ws
+  password: '!!str 1234567890'
+  port: 443
+  server: 138.124.28.78
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: 🇨🇭 瑞士 | trojan | 52
+  password: '!!str 1234567890'
+  port: 443
+  server: 138.124.28.173
+  skip-cert-verify: false
+  sni: kfm-bn0.pages.dev
+  type: trojan
+- name: 🇨🇭 瑞士 | trojan | 63
+  network: grpc
+  password: SoftNetConnect
+  port: 2087
+  server: 37.156.44.215
+  skip-cert-verify: true
+  sni: www.yahoo.com
+  type: trojan
+- name: 🇨🇭 瑞士 | trojan | 65
+  network: xhttp
+  password: SoftNetConnect
+  port: 443
+  server: 37.156.44.215
+  skip-cert-verify: true
+  sni: www.yahoo.com
+  type: trojan
+  ws-opts:
+    path: /
+- name: 🇨🇭 瑞士 | trojan | 66
+  network: tcp
+  password: SoftNetConnect
+  port: 8443
+  server: 37.156.44.215
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: trojan
 - cipher: aes-256-cfb
   name: '🇨🇭_CH_瑞士 #1'
   password: asdKkaskJKfnsa
