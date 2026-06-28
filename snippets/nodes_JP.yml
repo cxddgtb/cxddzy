@@ -120,7 +120,7 @@ proxies:
     headers:
       Host: download.windowsupdate.com
     path: /download
-- name: 日本|@ripaojiedian
+- name: '11,12|日本|@ripaojiedian #1'
   network: tcp
   password: BxceQaOe
   port: 47656
@@ -529,6 +529,7 @@ proxies:
       Host: hhcm.hhxaf.cc.cd
     path: '%2F'
 - alterId: 0
+  client-fingerprint: chrome
   name: 🇯🇵JP日本3
   password: 7e70223b-f331-41d5-9313-02b8d2df2885
   port: 58995
@@ -564,6 +565,7 @@ proxies:
   udp: true
 - alterId: 0
   name: 🇯🇵JP日本9
+  network: tcp
   password: 7e70223b-f331-41d5-9313-02b8d2df2885
   port: 50888
   server: d1.catcat321.com
@@ -606,13 +608,16 @@ proxies:
   udp: true
 - alterId: 2
   cipher: auto
+  client-fingerprint: chrome
   name: 🏳️ Google | vmess | 16
   network: tcp
   port: 30806
   server: v6.hdacd.com
   servername: ''
+  skip-cert-verify: false
   tls: false
   type: vmess
+  udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - name: 🇯🇵_日本_158
   password: 7e70223b-f331-41d5-9313-02b8d2df2885
@@ -636,6 +641,13 @@ proxies:
   type: vmess
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- alterId: 0
+  cipher: auto
+  name: 🔴🇯🇵_github.com/Ruk1ng001_8e4d2...
+  port: 32221
+  server: 153.121.73.175
+  type: vmess
+  uuid: b06054ae-f249-438e-998a-8e67bd8df653
 - alterId: 0
   cipher: auto
   client-fingerprint: chrome
@@ -946,6 +958,23 @@ proxies:
   skip-cert-verify: true
   sni: www.alibaba.com
   type: trojan
+- alpn:
+  - h2
+  client-fingerprint: firefox
+  name: 🇯🇵JP_7|2.6MB/s
+  network: ws
+  password: Mitivpn
+  port: '443'
+  server: 151.101.1.242
+  skip-cert-verify: false
+  sni: cdn.gamingdll.ir
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      User-Agent: Mozilla/5.0 (Linux; Android 7.0; Redmi Note 4 Build/NRD90M) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/63.0.3239.111 Mobile Safari/537.36
+    path: /de=mitivpn
 - alterId: 0
   name: 🇯🇵JP日本
   password: BxceQaOe
@@ -977,3 +1006,11 @@ proxies:
     headers:
       Host: n1753598445.74qxv.top
     path: /
+- name: 日本|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 18021
+  server: 18.183.83.131
+  skip-cert-verify: true
+  sni: t.me%252Fripaojiedian
+  type: trojan
