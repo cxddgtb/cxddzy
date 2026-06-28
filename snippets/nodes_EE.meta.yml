@@ -1,7 +1,22 @@
 proxies:
+- alterId: 1
+  cipher: auto
+  name: '爱沙尼亚 001 #1'
+  network: ws
+  port: 8080
+  server: 104.160.19.22
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  type: vmess
+  uuid: efb748ec-c921-42a1-ac9e-1d5485d6c447
+  ws-opts:
+    headers:
+      Host: download.windowsupdate.com
+    path: /download
 - client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: '🇪🇪 Estonia — #188'
+  name: 🇷🇺 俄罗斯 | vless | 300
   network: tcp
   port: 443
   reality-opts:
@@ -15,7 +30,7 @@ proxies:
 - client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: gun
-  name: 🇪🇪 Estonia, Tallinn | [BL]
+  name: 🇪🇪 爱沙尼亚 | vless | 06
   network: grpc
   port: 443
   reality-opts:
@@ -28,7 +43,7 @@ proxies:
   uuid: 9cab10a8-7936-457f-bf1f-b9842439f494
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇪🇪 Estonia — #464'
+  name: 🇷🇺 俄罗斯 | vless | 273
   network: tcp
   port: 443
   reality-opts:
@@ -41,7 +56,7 @@ proxies:
   uuid: 5074df4a-1b57-4417-9f9c-d055b420a6f3
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '[1596]🎈 🇪🇪 EST 🎈 #0318ac'
+  name: 🇪🇪 爱沙尼亚 | vless | 02
   network: tcp
   port: 443
   reality-opts:
@@ -65,18 +80,16 @@ proxies:
   tls: false
   type: vless
   uuid: 409bdb0f-5aae-4e93-a8dd-60adc47d5fd3
-- alterId: 1
-  cipher: auto
-  name: 爱沙尼亚 001
-  network: ws
-  port: 8080
-  server: 104.160.19.22
-  skip-cert-verify: false
-  tfo: false
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: vless-grpc
+  name: 🇪🇪 爱沙尼亚 | vless | 05
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: QGnGWzhnKWHNkpRXIm13T-2OFfZ8h7ch9pJhpqADzFU
+  server: 132.243.65.121
+  servername: yahoo.com
   tls: false
-  type: vmess
-  uuid: efb748ec-c921-42a1-ac9e-1d5485d6c447
-  ws-opts:
-    headers:
-      Host: download.windowsupdate.com
-    path: /download
+  type: vless
+  uuid: dd47f0f6-e503-44d5-8243-0f48c1c20c28
