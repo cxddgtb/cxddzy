@@ -54,7 +54,6 @@ proxies:
   port: 1514
   server: sinavip.cnavippanel.com
   skip-cert-verify: true
-  tls: false
   type: vmess
   uuid: 0aca35ee-b845-45d7-9b52-379a2984378a
 - alterId: 0
@@ -67,12 +66,37 @@ proxies:
   tls: true
   type: vmess
   uuid: 1de9d119-12ca-4620-a29c-60b40a7f8650
-- name: 🇨🇭 瑞士 | trojan | 15
-  password: '!!str 1234567890'
+- name: 🇨🇭 瑞士 | trojan | 02
+  network: tcp
+  password: SoftNetConnect
+  port: 42549
+  server: 83.228.250.119
+  skip-cert-verify: true
+  sni: www.speedtest.net
+  type: trojan
+- name: 🇨🇭 瑞士 | trojan | 09
+  network: xhttp
+  password: SoftNetConnect
   port: 443
-  server: 138.124.28.173
-  skip-cert-verify: false
-  sni: kfm-bn0.pages.dev
+  server: 37.156.44.157
+  skip-cert-verify: true
+  sni: www.yahoo.com
+  type: trojan
+  ws-opts:
+    path: /
+- name: 🇨🇭 瑞士 | trojan | 21
+  network: tcp
+  password: SoftNetConnect
+  port: 8443
+  server: 83.228.250.119
+  sni: www.bing.com
+  type: trojan
+- name: 🇨🇭 瑞士 | trojan | 22
+  network: grpc
+  password: SoftNetConnect
+  port: 2087
+  server: 83.228.250.119
+  sni: www.yahoo.com
   type: trojan
 - alpn:
   - h2
@@ -88,41 +112,6 @@ proxies:
   sni: www.speedtest.net
   type: trojan
   udp: true
-- name: 🇨🇭 瑞士 | trojan | 11
-  network: xhttp
-  password: SoftNetConnect
-  port: 443
-  server: 37.156.44.157
-  skip-cert-verify: true
-  sni: www.yahoo.com
-  type: trojan
-  ws-opts:
-    path: /
-- name: 🇨🇭 瑞士 | trojan | 21
-  network: grpc
-  password: SoftNetConnect
-  port: 2087
-  server: 37.156.44.215
-  skip-cert-verify: true
-  sni: www.yahoo.com
-  type: trojan
-- name: 🇨🇭 瑞士 | trojan | 22
-  network: xhttp
-  password: SoftNetConnect
-  port: 443
-  server: 37.156.44.215
-  skip-cert-verify: true
-  sni: www.yahoo.com
-  type: trojan
-  ws-opts:
-    path: /
-- name: 🇨🇭 瑞士 | trojan | 23
-  network: tcp
-  password: SoftNetConnect
-  port: 8443
-  server: 37.156.44.215
-  sni: www.bing.com
-  type: trojan
 - cipher: aes-256-cfb
   name: '🇨🇭_CH_瑞士 #1'
   password: asdKkaskJKfnsa
