@@ -1,6 +1,5 @@
 proxies:
-- name: 🇮🇷 伊朗 | vless | 119
-  network: tcp
+- name: 荷兰 149
   port: 50070
   server: 45.134.97.33
   skip-cert-verify: true
@@ -9,7 +8,8 @@ proxies:
   udp: true
   uuid: bef4c9ac-908d-4ff2-97b3-4ca70f232881
 - client-fingerprint: chrome
-  name: 🇺🇸_US_美国->🇸🇬_SG_新加坡
+  encryption: none
+  name: 美国 092
   network: ws
   port: 443
   server: support.zoom.us
@@ -22,32 +22,48 @@ proxies:
   ws-opts:
     headers:
       Host: support.zoom.us.yxls.eu.cc
+      User-Agent: Mozilla/5.0 (Linux; Android 6.0.1; vivo 1603 Build/MMB29M) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/58.0.3029.83 Mobile Safari/537.36
     path: /sg-melbi
-- name: 🇮🇷_IR_伊朗->🇱🇹_LT_立陶宛
-  network: ws
-  port: 8443
-  server: 5.34.209.231
-  servername: sni.111000.v6.navy
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-    path: '%2F'
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: CF中转_0626103866 t.me/rjsxrd
+  xudp: true
+- name: CF中转_0626109200 t.me/rjsxrd
   network: ws
   port: 443
-  server: 188.114.96.1
-  servername: 24VvD-4imRvfaQv7hQxYbU9WzJv378Qi.v2Raygulf.WorkeRS.DeV
+  server: 104.16.72.70
+  servername: nbhhh.mrcool.kdns.fr
   tls: true
   type: vless
-  uuid: b03db3b9-6edb-4aef-8485-41c66e502487
+  uuid: 659a9075-d5ab-4fd2-bf34-b37043fae832
   ws-opts:
-    path: /eyJqdW5rIjoicGtPV3BFY3BySDMwSUYiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560
+    headers:
+      Host: nbhhh.mrcool.kdns.fr
+    path: '%2Fproxyip'
+- name: 🇨🇳_CN_中国->🇺🇸_US_美国
+  network: ws
+  port: 7443
+  server: 222.167.202.23
+  servername: 2026.hhhhh.eu.org
+  tls: true
+  type: vless
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  ws-opts:
+    headers:
+      Host: 2026.hhhhh.eu.org
+    path: '%2F222.167.202.23%3A7443'
+- client-fingerprint: chrome
+  name: CF中转_0626105367 t.me/rjsxrd
+  network: ws
+  port: 2053
+  server: 173.245.58.214
+  servername: snowy-waterfall-1901.ali1112.workers.dev
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 88203f09-90ad-4e89-8707-cc26cf2a1591
+  ws-opts:
+    headers:
+      Host: snowy-waterfall-1901.ali1112.workers.dev
+    path: /
 - alterId: 64
   cipher: auto
   name: 🇺🇸_US_美国->🇳🇱_NL_荷兰

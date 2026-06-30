@@ -34,18 +34,17 @@ proxies:
   server: 195.133.23.142
   type: ss
   udp: true
-- name: 🇷🇺 俄罗斯 | trojan | 05
-  network: ws
-  password: 78defd88-d333-67a5-9c34-d3bcef5816eb
+- alpn:
+  - h2
+  - http/1.1
+  grpc-opts:
+    grpc-service-name: /45219/OiTZ4bJ2
+  name: '🇷🇺 #7'
+  network: grpc
+  password: RJvy9tO9DC
   port: 443
-  server: 45.67.215.214
-  skip-cert-verify: false
-  sni: tirex.sugarbreaker1.workers.dev
+  server: ch1.xxee.ru
   type: trojan
-  ws-opts:
-    headers:
-      Host: tirex.sugarbreaker1.workers.dev
-    path: '%2F%40TirexNet'
 - alterId: 0
   cipher: auto
   name: 乌克兰 018
@@ -61,30 +60,33 @@ proxies:
     headers:
       Host: e130917c-1b58-4136-b2d9-76dc920e0add.add97ee8-0f14-48a3-b2cd-979c56742e64.loseyourip.com
     path: /
+- name: 🇷🇺 俄罗斯 | trojan | 21
+  network: ws
+  password: 78defd88-d333-67a5-9c34-d3bcef5816eb
+  port: 443
+  server: 45.67.215.214
+  skip-cert-verify: false
+  sni: tirex.sugarbreaker1.workers.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: tirex.sugarbreaker1.workers.dev
+    path: '%2F%40TirexNet'
+- name: 🇷🇺 俄罗斯 | trojan | 66
+  password: bb06e055ee5b4cb7a3a1e581bd7c09a2
+  port: 9443
+  server: 51.250.7.178
+  sni: ya.ru
+  type: trojan
 - alpn:
   - h2
   - http/1.1
-  name: 🇷🇺 俄罗斯 | trojan | 146
+  name: 🇷🇺 俄罗斯 | trojan | 160
   password: Qfw0MqoyNkSvqjRhZ_x5WNM3V_tF6q
   port: 7443
   server: 109.120.190.132
   sni: plone.rushtaxi.ru
   type: trojan
-- alterId: 0
-  cipher: auto
-  name: 俄罗斯 053
-  network: ws
-  port: 443
-  server: 37.220.161.249
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: df9c9355-b02c-4c12-909d-0dbeb725d52b
-  ws-opts:
-    headers:
-      Host: renderer-stream-1-411.mirra.now
-    path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
   name: 俄罗斯 063
@@ -102,6 +104,57 @@ proxies:
     path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
+  name: 俄罗斯 053
+  network: ws
+  port: 443
+  server: 37.220.161.249
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: df9c9355-b02c-4c12-909d-0dbeb725d52b
+  ws-opts:
+    headers:
+      Host: renderer-stream-1-411.mirra.now
+    path: /api/v1/gpu-stream/socket
+- alterId: 64
+  cipher: auto
+  name: 🇷🇺 俄罗斯 | vmess | 548
+  network: ws
+  port: 443
+  server: 171.22.134.12
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: ''
+    path: /path/1689935243027
+- name: 🇷🇺 俄罗斯 | trojan | 615
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 45.95.203.214
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇷🇺 俄罗斯 | trojan | 627
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 46.17.43.161
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- alterId: 0
+  cipher: auto
   name: 俄罗斯 069
   network: ws
   port: 443
@@ -115,53 +168,15 @@ proxies:
     headers:
       Host: renderer-stream-1-411.mirra.now
     path: /api/v1/gpu-stream/socket
-- name: 🇷🇺 俄罗斯 | trojan | 523
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 46.17.43.161
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- alterId: 64
-  cipher: auto
-  name: 🇷🇺 俄罗斯 | vmess | 575
-  network: ws
-  port: 443
-  server: 171.22.134.12
-  servername: ''
+- alterId: 0
+  cipher: chacha20-ietf-poly1305
+  name: 🇷🇺RU俄罗斯3
+  password: 36ZCHeabUSfKjfQEvJ4HDV
+  port: 54170
+  server: 185.242.86.156
+  skip-cert-verify: true
   tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: ''
-    path: /path/1689935243027
-- name: 🇷🇺 俄罗斯 | trojan | 584
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 45.95.203.214
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇷🇺 俄罗斯 | trojan | 592
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 217.114.7.17
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+  type: ss
 - alterId: 0
   cipher: auto
   name: 俄罗斯 001
