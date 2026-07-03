@@ -2,6 +2,7 @@ proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇹🇼 台湾 | vless | 30
+  network: tcp
   port: 443
   reality-opts:
     public-key: JE82iOR_U_H7ffxJ5yfoxXeRkMlE-aVu1wxR7n6jrVM
@@ -21,46 +22,49 @@ proxies:
   sni: tw.pitopone.com
   type: trojan
   udp: true
-- alpn:
-  - h3
-  name: TW HY2-193 | free-nodes
-  password: 205d6869-02ca-3b36-b933-be2465250c7e
-  port: 443
-  server: 82.47.22.163
-  sni: u716087us372.okgfw.top
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼 Taiwan fcea | SNI - www.pyt...
+  network: tcp
+  port: 58387
+  reality-opts:
+    public-key: OJ_yZDM6tzBPEM6BjNfof-CyyX1PlNCMuc67nDXZano
+    short-id: '!!str 8821102e'
+  server: 6sttaqn50k8io46motirrbyfw.beupisp.com
+  servername: www.python.org
   tls: false
-  type: hysteria2
+  type: vless
+  uuid: cfd0c8cc-d7b7-42b5-8b3f-7b07923c1456
+- name: 🇨🇳台湾-10
+  network: ws
+  port: 443
+  server: 104.21.1.254
+  servername: nfs.kdns.fr
+  tls: true
+  type: vless
+  uuid: e0240134-0986-4b92-a230-fdc8d1200456
+  ws-opts:
+    headers:
+      Host: nfs.kdns.fr
+    path: '%2Fvless'
 - alpn:
   - ''
   client-fingerprint: ''
   flow: xtls-rprx-vision
   grpc-opts:
     grpc-service-name: ''
-  name: TW VLESS-196 | free-nodes
+  name: TW VLESS-199 | free-nodes
   network: tcp
   port: 443
   server: 82.47.22.163
-  servername: u716087us501.okgfw.top
+  servername: u723828us501.okgfw.top
   tls: true
   type: vless
-  uuid: 205d6869-02ca-3b36-b933-be2465250c7e
+  uuid: 723af53a-b131-3270-8ce0-13f8ecaaa322
   ws-opts:
     headers:
       Host: s501.okgfw.top
     path: ''
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇹🇼 Taiwan 21e0 | SNI - swcdn.a...
-  network: raw
-  port: 54387
-  reality-opts:
-    public-key: qqb-vrDIPSrFIithw497zM-LmGUEcTo-dqAjhHi6kyY
-    short-id: '!!str f810'
-  server: 1.sdwan.realm-sync.com
-  servername: swcdn.apple.com
-  tls: false
-  type: vless
-  uuid: e0c3a80e-6290-4c29-9605-fbd6c4fb3322
 - alterId: 0
   cipher: auto
   name: 🇹🇼 台湾 | vmess | 03

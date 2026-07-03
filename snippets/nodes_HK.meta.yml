@@ -18,11 +18,9 @@ proxies:
   sni: ch.01.naiun.bilibili.com
   type: trojan
 - name: 🇭🇰 香港 | trojan | 04
-  network: tcp
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   port: 45619
   server: 103.177.136.42
-  skip-cert-verify: true
   sni: fr.01.naiun.bilibili.com
   type: trojan
 - name: 🇭🇰 香港 | trojan | 06
@@ -126,31 +124,18 @@ proxies:
     headers:
       Host: tjaaa.hhllfly.kdns.fr
     path: '%2F'
-- client-fingerprint: chrome
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 10
+  name: 🇭🇰 Hong Kong 926c | SNI - www....
   network: tcp
-  port: 443
+  port: 8080
   reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: '!!str '
-  server: 141.11.164.89
-  servername: sellflow.org
+    public-key: gIZroPoitLL_o4L_u4krqQl_y5PcwlZDH3VogB789Fg
+  server: 85.113.71.97
+  servername: www.amazon.com
   tls: false
   type: vless
-  uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
-- name: 港优续-01-172.66.1.50
-  network: ws
-  port: 443
-  server: 172.66.1.50
-  servername: nfs.kdns.fr
-  tls: true
-  type: vless
-  uuid: e0240134-0986-4b92-a230-fdc8d1200456
-  ws-opts:
-    headers:
-      Host: nfs.kdns.fr
-    path: '%2Fvless'
+  uuid: 3ef4c5d2-5de2-446c-b07b-2ece124c839a
 - alpn:
   - h3
   name: HK HY2-385 | free-nodes
@@ -160,10 +145,10 @@ proxies:
   sni: u711540us306.wagahaha.xyz
   tls: false
   type: hysteria2
-- name: 🇭🇰香港-10
+- name: 港优-09-172.66.0.16
   network: ws
   port: 443
-  server: 162.159.153.254
+  server: 172.66.0.16
   servername: nfs.kdns.fr
   tls: true
   type: vless
@@ -172,19 +157,87 @@ proxies:
     headers:
       Host: nfs.kdns.fr
     path: '%2Fvless'
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇭🇰 香港 | vless | 26
-  network: tcp
-  port: 14302
+- client-fingerprint: chrome
+  name: 🇭🇰 Hong Kong | 🌐 [*CIDR]
+  network: xhttp
+  port: 9443
   reality-opts:
-    public-key: lw7-Msn5E2O6HbBdqMw9SvoDJgbDIvHss0UVQ9iZFRc
-    short-id: '!!str 106f1604d65bb70c'
-  server: 62.60.232.249
-  servername: www.samsung.com
+    public-key: 7C84T5ujt_ka9Iwwiemwab5DupyErPfsyucC-stwQho
+    short-id: '!!str e5825614'
+  server: 212.192.15.19
+  servername: ads.x5.ru
   tls: false
   type: vless
-  uuid: 1dd5f2be-f124-4f35-9239-8abc042829c2
+  uuid: c09b4aa0-0c15-5b97-9b12-3fba93c24112
+  ws-opts:
+    path: /grpc
+- name: 港优续-11-172.66.1.53
+  network: ws
+  port: 443
+  server: 172.66.1.53
+  servername: nfs.kdns.fr
+  tls: true
+  type: vless
+  uuid: e0240134-0986-4b92-a230-fdc8d1200456
+  ws-opts:
+    headers:
+      Host: nfs.kdns.fr
+    path: '%2Fvless'
+- name: 🇭🇰 香港 阿里云
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 47.82.155.79
+  skip-cert-verify: true
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+- name: 港优续-06-172.66.0.65
+  network: ws
+  port: 443
+  server: 172.66.0.65
+  servername: nfs.kdns.fr
+  tls: true
+  type: vless
+  uuid: e0240134-0986-4b92-a230-fdc8d1200456
+  ws-opts:
+    headers:
+      Host: nfs.kdns.fr
+    path: '%2Fvless'
+- name: 港优-29-172.66.1.30
+  network: ws
+  port: 443
+  server: 172.66.1.30
+  servername: nfs.kdns.fr
+  tls: true
+  type: vless
+  uuid: e0240134-0986-4b92-a230-fdc8d1200456
+  ws-opts:
+    headers:
+      Host: nfs.kdns.fr
+    path: '%2Fvless'
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇦🇺 澳大利亚 | vless | 12
+  port: 443
+  reality-opts:
+    public-key: Vc8ycAgKqfRvtXjvGP0ry_U91o5wgrQlqOhHq72HYRs
+    short-id: '!!str 1bc2c1ef1c'
+  server: 155.254.102.74
+  servername: www.microsoft.com
+  tls: false
+  type: vless
+  uuid: e6dbaf95-1c9e-48c5-a0b4-0bd18aecc221
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇭🇰 proxy-vless-reality-291
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  server: 194.26.229.161
+  servername: hk.sellflow.org
+  tls: false
+  type: vless
+  uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
 - name: 🇭🇰 香港 | trojan | 02
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   port: 45553
@@ -196,6 +249,12 @@ proxies:
   port: 45553
   server: 103.177.136.45
   sni: ch.01.naiun.bilibili.com
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 07
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 48697
+  server: 103.177.136.41
+  sni: gh.01.naiun.bilibili.com
   type: trojan
 - name: 🇭🇰 香港 | trojan | 08
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
@@ -237,6 +296,18 @@ proxies:
   tls: false
   type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇭🇰 香港 | vless | 26
+  port: 14302
+  reality-opts:
+    public-key: lw7-Msn5E2O6HbBdqMw9SvoDJgbDIvHss0UVQ9iZFRc
+    short-id: '!!str 106f1604d65bb70c'
+  server: 62.60.232.249
+  servername: www.samsung.com
+  tls: false
+  type: vless
+  uuid: 1dd5f2be-f124-4f35-9239-8abc042829c2
 - client-fingerprint: chrome
   name: 🇭🇰 香港 | vless | 29
   port: 448
@@ -455,15 +526,6 @@ proxies:
   server: 119.246.1.143
   sni: t.me%2Fripaojiedian
   type: trojan
-- client-fingerprint: chrome
-  name: 🇭🇰 香港 | vless | 68
-  port: 8443
-  server: 84.17.37.19
-  servername: hkg1.fromblancwithlove.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
 - name: 🇭🇰 香港 | vless | 71
   network: ws
   port: 443
@@ -677,6 +739,18 @@ proxies:
   tls: false
   type: vless
   uuid: 575324da-63f6-448e-963f-4d67e9ea4cb4
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: 🇭🇰 香港 | vless | 105
+  port: 14002
+  reality-opts:
+    public-key: D4eZTpgaPV_2YQa7cbiDMGnZs6NBEU2JkfUroHpvoWs
+    short-id: '!!str 7cabb05b68f63b'
+  server: vip.bcjdvip.com
+  servername: apple.com
+  tls: false
+  type: vless
+  uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
 - alterId: 2
   cipher: auto
   name: 🇭🇰 香港 | vmess | 106
