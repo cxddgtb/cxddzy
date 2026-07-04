@@ -1,7 +1,7 @@
 proxies:
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇨🇭 Switzerland 244d | SNI - si...
+  name: 🇨🇭 瑞士 | vless | 60
   network: tcp
   port: 443
   reality-opts:
@@ -13,7 +13,7 @@ proxies:
   type: vless
   uuid: 8b04b31b-6435-472e-a598-90705c575afc
 - client-fingerprint: firefox
-  name: 🇨🇭 瑞士 | vless | 02
+  name: 🇨🇭 瑞士 | vless | 03
   network: tcp
   port: 22000
   reality-opts:
@@ -52,7 +52,7 @@ proxies:
     path: /eyJqdW5rIjoiZ0VHeXpWVlBNUiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0%3D%3Fed%3D2560
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇸🇨 塞舌尔 | vless | 593
+  name: 🇸🇨 塞舌尔 | vless | 776
   network: tcp
   port: 8443
   reality-opts:
@@ -65,7 +65,7 @@ proxies:
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇨🇭
+  name: 🇸🇨 塞舌尔 | vless | 520
   network: tcp
   port: 8443
   reality-opts:
@@ -90,19 +90,22 @@ proxies:
   type: vless
   uuid: daff1228-8d1a-4812-a57a-09604faa5e0c
 - client-fingerprint: chrome
-  name: 🇨🇭 瑞士 | vless | 05
-  port: 9443
+  grpc-opts:
+    grpc-service-name: neurex
+  name: 🇨🇭 瑞士 | vless | 01
+  network: grpc
+  port: 16923
   reality-opts:
-    public-key: z8bZYyTkhYsy6brj4VOdv5JOMyOmLzFI2fn8xNPmrS4
-    short-id: '!!str e02810ad'
-  server: 138.124.6.185
-  servername: ads.x5.ru
+    public-key: _QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA
+    short-id: '!!str 10ffb85da1c2d986'
+  server: 152.233.31.71
+  servername: api-maps.yandex.ru
   tls: false
   type: vless
-  uuid: c09b4aa0-0c15-5b97-9b12-3fba93c24112
+  uuid: 732a3a5c-5dee-42c7-a898-139e35b78c5d
 - alpn:
   - http/1.1
-  name: 🇨🇭 瑞士 | vless | 06
+  name: 🇨🇭 瑞士 | vless | 07
   network: ws
   port: 8000
   server: 179.43.144.10
@@ -114,18 +117,54 @@ proxies:
     headers:
       Host: us2.wxgqlfx.xyz
     path: '%2FTG%40wxgqlfxfp=chromesecurity=tls'
-- client-fingerprint: qq
-  grpc-opts:
-    grpc-service-name: neurex
-  name: 🇨🇭 瑞士 | vless | 07
-  network: grpc
-  port: 16923
-  server: 152.233.31.71
-  servername: api-maps.yandex.ru
-  tls: true
+- client-fingerprint: chrome
+  name: 🇨🇭 瑞士 | vless | 08
+  port: 9443
+  reality-opts:
+    public-key: z8bZYyTkhYsy6brj4VOdv5JOMyOmLzFI2fn8xNPmrS4
+    short-id: '!!str e02810ad'
+  server: 138.124.6.185
+  servername: ads.x5.ru
+  tls: false
   type: vless
-  uuid: 732a3a5c-5dee-42c7-a898-139e35b78c5d
-- name: 🇨🇭 瑞士 | vless | 09
+  uuid: c09b4aa0-0c15-5b97-9b12-3fba93c24112
+- client-fingerprint: ''
+  flow: xtls-rprx-vision
+  name: 🇨🇭 瑞士 | vless | 10
+  port: 443
+  reality-opts:
+    public-key: AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI
+    short-id: '!!str 15bcc0a77c3cacdf'
+  server: 138.124.67.158
+  servername: nl-root.sworkingvpn.com
+  tls: false
+  type: vless
+  uuid: baeb9020-8fcd-444c-b95d-f76507816e6d
+- client-fingerprint: ''
+  flow: xtls-rprx-vision
+  name: 🇨🇭 瑞士 | vless | 11
+  port: 443
+  reality-opts:
+    public-key: AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI
+    short-id: '!!str 15bcc0a77c3cacdf'
+  server: 138.124.67.161
+  servername: nl-root.sworkingvpn.com
+  tls: false
+  type: vless
+  uuid: baeb9020-8fcd-444c-b95d-f76507816e6d
+- client-fingerprint: ''
+  flow: xtls-rprx-vision
+  name: 🇨🇭 瑞士 | vless | 12
+  port: 443
+  reality-opts:
+    public-key: AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI
+    short-id: '!!str 15bcc0a77c3cacdf'
+  server: 138.124.67.165
+  servername: nl-root.sworkingvpn.com
+  tls: false
+  type: vless
+  uuid: baeb9020-8fcd-444c-b95d-f76507816e6d
+- name: 🇨🇭 瑞士 | vless | 13
   network: ws
   port: 443
   server: 138.124.32.78
@@ -138,59 +177,21 @@ proxies:
     headers:
       Host: sni.latonyamadeline.ndjp.net
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3security=tls'
-- client-fingerprint: ''
-  flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 10
-  port: 443
-  reality-opts:
-    public-key: AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI
-    short-id: '!!str 15bcc0a77c3cacdf'
-  server: 138.124.67.165
-  servername: nl-root.sworkingvpn.com
-  tls: false
-  type: vless
-  uuid: baeb9020-8fcd-444c-b95d-f76507816e6d
-- client-fingerprint: ''
-  flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 11
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI
-    short-id: '!!str 15bcc0a77c3cacdf'
-  server: 138.124.67.161
-  servername: nl-root.sworkingvpn.com
-  tls: false
-  type: vless
-  uuid: baeb9020-8fcd-444c-b95d-f76507816e6d
-- name: 🇨🇭 瑞士 | trojan | 12
-  network: ws
-  password: '!!str 1234567890'
-  port: 443
-  server: 138.124.32.121
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- client-fingerprint: ''
-  flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 13
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI
-    short-id: '!!str 15bcc0a77c3cacdf'
-  server: 138.124.67.158
-  servername: nl-root.sworkingvpn.com
-  tls: false
-  type: vless
-  uuid: baeb9020-8fcd-444c-b95d-f76507816e6d
-- client-fingerprint: ''
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇨🇭 瑞士 | vless | 14
-  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: '!!str '
+  server: 141.11.164.89
+  servername: sellflow.org
+  tls: false
+  type: vless
+  uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
+- client-fingerprint: ''
+  flow: xtls-rprx-vision
+  name: 🇨🇭 瑞士 | vless | 15
   port: 443
   reality-opts:
     public-key: AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI
@@ -201,7 +202,7 @@ proxies:
   type: vless
   uuid: baeb9020-8fcd-444c-b95d-f76507816e6d
 - client-fingerprint: chrome
-  name: 🇨🇭 瑞士 | vless | 15
+  name: 🇨🇭 瑞士 | vless | 16
   network: tcp
   port: 443
   reality-opts:
@@ -212,21 +213,9 @@ proxies:
   tls: false
   type: vless
   uuid: 83989465-4ec6-4dbe-97c6-2779df88d9e0
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 16
-  port: 8443
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: '!!str '
-  server: 141.11.164.89
-  servername: sellflow.org
-  tls: false
-  type: vless
-  uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 18
+  name: 🇨🇭 瑞士 | vless | 17
   port: 443
   reality-opts:
     public-key: 1Txlqu4hCFzUPBSO6anONR0ql930aitMuh4ZcsJcxm4
@@ -236,9 +225,20 @@ proxies:
   tls: false
   type: vless
   uuid: 8742a92e-6826-4746-b7c3-d42d83e5d83c
+- name: 🇨🇭 瑞士 | trojan | 18
+  network: ws
+  password: '!!str 1234567890'
+  port: 443
+  server: 138.124.32.121
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 19
+  name: 🇨🇭 瑞士 | vless | 20
   port: 443
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
@@ -250,7 +250,7 @@ proxies:
   uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
 - client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 20
+  name: 🇨🇭 瑞士 | vless | 21
   port: 443
   reality-opts:
     public-key: NqYnddqVskPX-aTP4Vdip_XDnMphLwVtgc3XwTc2QVg
@@ -260,18 +260,6 @@ proxies:
   tls: false
   type: vless
   uuid: de407f76-5220-4505-aaad-84cf04acb615
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 22
-  port: 443
-  reality-opts:
-    public-key: 43DWPlqYk-BPJharzluPKDfV6KU3-_MT44-Tlh8j2Vs
-    short-id: '!!str 28f383a6a48a5995'
-  server: 138.124.6.65
-  servername: fi.truetunnel.xyz
-  tls: false
-  type: vless
-  uuid: 8c05e68a-2fe0-4c0d-9be5-b7d2df9bb2a3
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇨🇭 瑞士 | vless | 23
@@ -284,7 +272,76 @@ proxies:
   tls: false
   type: vless
   uuid: 9c93762c-5632-43fe-83bf-96607488f42b
-- name: 🇨🇭 瑞士 | vless | 24
+- name: 🇨🇭 瑞士 | trojan | 24
+  network: ws
+  password: '!!str 1234567890'
+  port: 443
+  server: 138.124.28.173
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: '%2F'
+- name: 🇨🇭 瑞士 | trojan | 25
+  network: ws
+  password: '!!str 1234567890'
+  port: 443
+  server: 138.124.28.78
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: 🇨🇭 瑞士 | vless | 26
+  port: 443
+  server: 84.234.16.169
+  tls: false
+  type: vless
+  uuid: 8007e155-622e-4c9d-8a6e-67f49b4678f4
+- name: 🇨🇭 瑞士 | trojan | 27
+  password: SoftNetConnect
+  port: 443
+  server: 37.156.44.157
+  skip-cert-verify: true
+  sni: www.yahoo.com
+  type: trojan
+- name: 🇨🇭 瑞士 | trojan | 29
+  network: ws
+  password: '!!str 162534'
+  port: 443
+  server: 138.124.111.115
+  sni: cchh2.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: cchh2.pages.dev
+    path: '%2F%3Fed%3D2560'
+- client-fingerprint: chrome
+  name: 🇨🇭 瑞士 | vless | 30
+  port: 443
+  reality-opts:
+    public-key: z8bZYyTkhYsy6brj4VOdv5JOMyOmLzFI2fn8xNPmrS4
+    short-id: '!!str e02810ad'
+  server: 138.124.6.185
+  servername: ads.x5.ru
+  tls: false
+  type: vless
+  uuid: c09b4aa0-0c15-5b97-9b12-3fba93c24112
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: 🇨🇭 瑞士 | vless | 34
+  port: 443
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: '!!str 428ef87fd47a3a32'
+  server: 31.7.60.252
+  servername: chel.su
+  tls: false
+  type: vless
+  uuid: dd047c2c-8a9a-4353-aa7e-69aec49478e3
+- name: 🇨🇭 瑞士 | vless | 35
   network: ws
   port: 443
   server: 146.70.233.25
@@ -297,92 +354,9 @@ proxies:
     headers:
       Host: vpn47.cc.cd
     path: /security=tls
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 26
-  port: 443
-  reality-opts:
-    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
-    short-id: '!!str 428ef87fd47a3a32'
-  server: 31.7.60.252
-  servername: chel.su
-  tls: false
-  type: vless
-  uuid: dd047c2c-8a9a-4353-aa7e-69aec49478e3
-- name: 🇨🇭 瑞士 | trojan | 27
-  network: ws
-  password: '!!str 1234567890'
-  port: 443
-  server: 138.124.28.173
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: '%2F'
-- name: 🇨🇭 瑞士 | vless | 29
-  port: 443
-  server: 84.234.16.169
-  tls: false
-  type: vless
-  uuid: 8007e155-622e-4c9d-8a6e-67f49b4678f4
-- name: 🇨🇭 瑞士 | trojan | 30
-  password: SoftNetConnect
-  port: 443
-  server: 37.156.44.157
-  skip-cert-verify: true
-  sni: www.yahoo.com
-  type: trojan
-- name: 🇨🇭 瑞士 | trojan | 31
-  network: ws
-  password: '!!str 1234567890'
-  port: 443
-  server: 138.124.28.78
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 🇨🇭 瑞士 | trojan | 33
-  network: ws
-  password: '!!str 162534'
-  port: 443
-  server: 138.124.111.115
-  sni: cchh2.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: cchh2.pages.dev
-    path: '%2F%3Fed%3D2560'
-- client-fingerprint: chrome
-  name: 🇨🇭 瑞士 | vless | 35
-  port: 443
-  reality-opts:
-    public-key: z8bZYyTkhYsy6brj4VOdv5JOMyOmLzFI2fn8xNPmrS4
-    short-id: '!!str e02810ad'
-  server: 138.124.6.185
-  servername: ads.x5.ru
-  tls: false
-  type: vless
-  uuid: c09b4aa0-0c15-5b97-9b12-3fba93c24112
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: xyz
-  name: 🇨🇭 瑞士 | vless | 38
-  network: grpc
-  port: 2053
-  reality-opts:
-    public-key: r44-29dhInxzD-1JIMYuQMrbhieWsLm00BEHXn-6ggg
-    short-id: '!!str 6ba85179e30d4fc2'
-  server: 83.228.225.64
-  servername: play.google.com
-  tls: false
-  type: vless
-  uuid: 7796f5bf-7433-4e00-a9fd-6233ccb91df7
 - client-fingerprint: randomized
   flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 39
+  name: 🇨🇭 瑞士 | vless | 36
   port: 8443
   reality-opts:
     public-key: QHkXBS2ENHV0khgY9VBYi8_9bpfqnUYDcfQN4cW5Qg0
@@ -393,18 +367,32 @@ proxies:
   type: vless
   uuid: 8ea09611-4e24-49f9-8b2a-25974d8ebf8c
 - client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: xyz
+  name: 🇨🇭 瑞士 | vless | 39
+  network: grpc
+  port: 2053
+  reality-opts:
+    public-key: r44-29dhInxzD-1JIMYuQMrbhieWsLm00BEHXn-6ggg
+    short-id: '!!str 6ba85179e30d4fc2'
+  server: 83.228.225.64
+  servername: play.google.com
+  tls: false
+  type: vless
+  uuid: 7796f5bf-7433-4e00-a9fd-6233ccb91df7
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: 🇨🇭 瑞士 | vless | 40
   port: 443
   reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: '!!str '
-  server: 185.167.234.250
-  servername: sellflow.org
+    public-key: 43DWPlqYk-BPJharzluPKDfV6KU3-_MT44-Tlh8j2Vs
+    short-id: '!!str 28f383a6a48a5995'
+  server: 138.124.6.65
+  servername: fi.truetunnel.xyz
   tls: false
   type: vless
-  uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
-- name: 🇨🇭 瑞士 | trojan | 41
+  uuid: 8c05e68a-2fe0-4c0d-9be5-b7d2df9bb2a3
+- name: 🇨🇭 瑞士 | trojan | 45
   network: ws
   password: '!!str 162534'
   port: 8443
@@ -418,7 +406,7 @@ proxies:
     path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 44
+  name: 🇨🇭 瑞士 | vless | 49
   port: 443
   reality-opts:
     public-key: yG8cY_s4kg0UVudhs4zPW5MXqo_stNRVtsQaw1PB1jc
@@ -430,7 +418,7 @@ proxies:
   uuid: e8251633-7755-4065-92d8-e49d507d03ac
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 49
+  name: 🇨🇭 瑞士 | vless | 53
   port: 443
   reality-opts:
     public-key: gOEyW5XYfKV6t_3vCR0iCOcItof1desNG7CSiFnVpF4
@@ -441,27 +429,54 @@ proxies:
   type: vless
   uuid: 69a2af58-d74a-44ca-864a-e09b493f4274
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 50
-  port: 8443
+  grpc-opts:
+    grpc-service-name: xyz
+  name: 🇨🇭 瑞士 | vless | 55
+  network: grpc
+  port: 443
   reality-opts:
-    public-key: QHkXBS2ENHV0khgY9VBYi8_9bpfqnUYDcfQN4cW5Qg0
-    short-id: '!!str 4326'
-  server: roz1r.skystreamgame.com
-  servername: roz1r.skystreamgame.com
+    public-key: MhOa-Fkr656VVRcxXd27gam263cdXF_uyGiHZZEISUA
+    short-id: '!!str ce741cbe468babc7'
+  server: 179.237.74.183
+  servername: yahoo.com
+  skip-cert-verify: true
   tls: false
   type: vless
-  uuid: 0468a043-e12c-466e-881c-7d685c1b3950
-- name: 🇨🇭 瑞士 | hy2 | 51
+  uuid: 4fb30f87-a9c2-43de-994f-9228fe4dac17
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇨🇭 瑞士 | vless | 57
+  port: 443
+  reality-opts:
+    public-key: MpuwI3YH2g3YWHKLuQwwgD_qLo-UmUtZe8L1KXOKxhA
+    short-id: '!!str b0d8f964b7ac8ac0'
+  server: cdn7-02.cdn-vkvideo.com
+  servername: cdn7-02.cdn-vkvideo.com
+  tls: false
+  type: vless
+  uuid: 9a2573c5-936f-4f93-8409-e43164793176
+- name: 🇨🇭 瑞士 | hy2 | 58
   password: bmw32hjrgwaflcf1
   port: 443
   server: hk1.xxee.ru
   sni: gethk1in.xxee.ru
   tls: false
   type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇨🇭 瑞士 | vless | 61
+  port: 2050
+  reality-opts:
+    public-key: CnLETCV02SjuYQ_NIET-Um0iw2YHQ5Smrs4vdnHaMB8
+    short-id: '!!str d2d1dad761fa733c'
+  server: sw.eorqen.ir
+  servername: play.google.com
+  tls: false
+  type: vless
+  uuid: e62f5a0b-7b25-45b1-9baa-80a696466681
 - client-fingerprint: edge
   flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 52
+  name: 🇨🇭 瑞士 | vless | 63
   port: 8443
   reality-opts:
     public-key: QHkXBS2ENHV0khgY9VBYi8_9bpfqnUYDcfQN4cW5Qg0
@@ -472,40 +487,19 @@ proxies:
   type: vless
   uuid: b3bc0d50-ab6a-40b4-840d-a7eeea497c81
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 53
-  port: 443
+  grpc-opts:
+    grpc-service-name: xyz
+  name: 🇨🇭 瑞士 | vless | 64
+  network: grpc
+  port: 2045
   reality-opts:
-    public-key: MpuwI3YH2g3YWHKLuQwwgD_qLo-UmUtZe8L1KXOKxhA
-    short-id: '!!str b0d8f964b7ac8ac0'
-  server: cdn7-02.cdn-vkvideo.com
-  servername: cdn7-02.cdn-vkvideo.com
-  tls: false
-  type: vless
-  uuid: 9a2573c5-936f-4f93-8409-e43164793176
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | vless | 56
-  port: 2050
-  reality-opts:
-    public-key: CnLETCV02SjuYQ_NIET-Um0iw2YHQ5Smrs4vdnHaMB8
-    short-id: '!!str d2d1dad761fa733c'
-  server: sw.eorqen.ir
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: '!!str 6ba85179e30d4fc2'
+  server: seti.wizardp.org
   servername: play.google.com
   tls: false
   type: vless
-  uuid: e62f5a0b-7b25-45b1-9baa-80a696466681
-- client-fingerprint: chrome
-  name: 🇨🇭 瑞士 | vless | 58
-  network: tcp
-  port: 6200
-  reality-opts:
-    public-key: lQbgwNDYw6Zbjdim0JtXUarzb-3GSjDvtX6FJYZD9Qo
-  server: ch-zicid.locations-sub.com
-  servername: play.google.com
-  tls: false
-  type: vless
-  uuid: 5c9ca141-62fb-4c9a-8ba2-af48afdeafaa
+  uuid: 4a836d89-0655-4c77-9702-b47219afaa5d
 - alterId: 0
   cipher: auto
   name: 瑞士 001
