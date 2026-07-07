@@ -994,7 +994,7 @@ proxies:
     headers:
       Host: nova.speedur.org
     path: /uploader.php
-- name: 🇫🇮 芬兰 | trojan | 140
+- name: 🇫🇮 芬兰 | trojan | 151
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2087
@@ -1080,7 +1080,7 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇬🇧 英国 | trojan | 104
+- name: 🇬🇧 英国 | trojan | 124
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
@@ -1491,7 +1491,8 @@ proxies:
     headers:
       Host: s5.868001.xyz
     path: /Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3%2520%2540WangCai2
-- name: '🇨🇦 #4'
+- client-fingerprint: firefox
+  name: 🇨🇦 加拿大 | vless | 09
   network: tcp
   port: 8443
   server: 185.156.47.96
@@ -1649,21 +1650,21 @@ proxies:
     headers:
       Host: autumn-base-0eb9.116-d25.workers.dev
     path: /pyip%3DProxyIP.JP.autumniussss.net
-- name: 🇨🇦 加拿大 | vless | 01
-  network: ws
-  port: 9443
-  server: 72.11.146.119
-  servername: vpn47.cc.cd
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇨🇦 加拿大 | vless | 01
+  port: 41373
+  reality-opts:
+    public-key: m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU
+    short-id: '!!str 0e'
+  server: 130.107.73.148
+  servername: google.com
   tls: false
   type: vless
-  uuid: 0970324b-8c61-4ae7-8c3f-385a6f1e17e4
-  ws-opts:
-    headers:
-      Host: vpn47.cc.cd
-    path: /fp=chromesecurity=tls
+  uuid: a71c8954-66a8-4321-bedb-2336230d81ce
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 03
+  name: 🇨🇦 加拿大 | vmess | 02
   network: ws
   port: 80
   server: 137.184.164.233
@@ -1677,17 +1678,6 @@ proxies:
     path: /vmess
 - alterId: 0
   cipher: auto
-  name: 美国 775
-  network: tcp
-  port: 18000
-  server: 134.195.196.211
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- alterId: 0
-  cipher: auto
   name: 美国 2054
   network: tcp
   port: 18000
@@ -1698,18 +1688,72 @@ proxies:
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 07
+  name: 美国 775
+  network: tcp
+  port: 18000
+  server: 134.195.196.211
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+- name: 🇨🇦 加拿大 | vless | 07
+  network: ws
+  port: 9443
+  server: 72.11.146.119
+  servername: vpn47.cc.cd
+  tls: false
+  type: vless
+  uuid: 0970324b-8c61-4ae7-8c3f-385a6f1e17e4
+  ws-opts:
+    headers:
+      Host: vpn47.cc.cd
+    path: /fp=chromesecurity=tls
+- name: 🇨🇦 加拿大 | vless | 08
+  network: ws
+  port: 8443
+  server: ov-canada1.09vpn.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 08f96221-9b7b-4e6f-8ffe-aee8b9c9b504
+  ws-opts:
+    path: '%2Fvless%2F'
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 | vmess | 10
   network: ws
   port: 443
-  server: 134.195.198.147
+  server: 23.162.200.227
   servername: ''
   tls: true
   type: vmess
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   ws-opts:
     headers:
-      Host: inna.cfd
+      Host: ''
     path: /linkvws
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 | vmess | 11
+  network: ws
+  port: 443
+  server: 158.51.121.36
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: ''
+    path: /linkvws
+- name: 🇨🇦 加拿大 | trojan | 12
+  password: f4dc01c0-6376-11ee-8ca8-1239d0255272
+  port: 443
+  server: 51.222.15.68
+  skip-cert-verify: true
+  sni: www.ewane.krd
+  type: trojan
 - alterId: 0
   cipher: auto
   name: 美国 772
@@ -1727,26 +1771,20 @@ proxies:
     path: linkvws
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 10
+  name: 美国 619
   network: ws
   port: 443
-  server: 158.51.121.36
+  server: 134.195.198.147
   servername: ''
+  skip-cert-verify: false
   tls: true
   type: vmess
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   ws-opts:
     headers:
-      Host: ''
-    path: /linkvws
-- name: 🇨🇦 加拿大 | trojan | 11
-  password: f4dc01c0-6376-11ee-8ca8-1239d0255272
-  port: 443
-  server: 51.222.15.68
-  skip-cert-verify: true
-  sni: www.ewane.krd
-  type: trojan
-- name: 🇨🇦 加拿大 | vless | 14
+      Host: inna.cfd
+    path: /
+- name: 🇨🇦 加拿大 | vless | 17
   network: ws
   port: 443
   server: 44.32.235.12
@@ -1757,12 +1795,40 @@ proxies:
     headers:
       Host: plain-bar-4b5a.alvlirm6969.workers.dev
     path: '%2Ffp=chromesecurity=tls'
-- name: 🇨🇦 加拿大 | trojan | 15
-  password: bc7593fe-0604-4fbe-a70bYWVzLTI1Ni1nY206Q1VuZFNabllzUEtjdTaclWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272
-  port: 443
-  server: ca-trojan.bonds.id
+- name: 🇨🇦 加拿大 | trojan | 20
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 23.173.104.228
+  sni: Koma-YT.PAGeS.Dev
   type: trojan
-- name: 🇨🇦 加拿大 | trojan | 17
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇨🇦 加拿大 | trojan | 21
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 23.173.104.215
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇨🇦 加拿大 | trojan | 22
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 23.173.104.202
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇨🇦 加拿大 | trojan | 23
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
@@ -1773,7 +1839,18 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇨🇦 加拿大 | vless | 18
+- name: 🇨🇦 加拿大 | trojan | 27
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 23.173.104.220
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇨🇦 加拿大 | vless | 28
   network: ws
   port: 2053
   server: 23.173.104.222
@@ -1786,7 +1863,7 @@ proxies:
     headers:
       Host: vpn47.cc.cd
     path: /fp
-- name: 🇨🇦 加拿大 | vless | 20
+- name: 🇨🇦 加拿大 | vless | 29
   network: ws
   port: 2053
   server: 23.173.104.201
@@ -1798,62 +1875,7 @@ proxies:
     headers:
       Host: babayaga-6i7.pages.dev
     path: /%3Fed%3D2560%26Telegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2fp=chromesecurity=tls
-- name: 🇨🇦 加拿大 | trojan | 21
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 23.173.104.228
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇨🇦 加拿大 | trojan | 23
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 23.173.104.202
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇨🇦 加拿大 | trojan | 24
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 23.173.104.215
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇨🇦 加拿大 | trojan | 26
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 23.173.104.220
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇨🇦 加拿大 | trojan | 27
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 23.173.104.207
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇨🇦 加拿大 | trojan | 28
+- name: 🇨🇦 加拿大 | trojan | 30
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
@@ -1864,33 +1886,20 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- client-fingerprint: chrome
-  name: 🇨🇦 加拿大 | vless | 33
-  port: 2026
-  reality-opts:
-    public-key: 1pZz4shnro2xyuXc7MMSFseBbbuy1weo2QLclTDJ8Fo
-    short-id: '!!str db4a993c8bb355ba'
-  server: ca1.appcodes.ir
-  servername: yahoo.com
-  tls: false
-  type: vless
-  uuid: 13f99069-a259-4422-a294-ee59d21b54b3
-- name: 🇨🇦 加拿大 | vless | 34
+- name: 🇨🇦 加拿大 | trojan | 31
   network: ws
-  port: 8443
-  server: ov-canada1.09vpn.com
-  servername: ov-canada1.09vpn.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 08f96221-9b7b-4e6f-8ffe-aee8b9c9b504
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 23.173.104.207
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
   ws-opts:
     headers:
-      Host: ov-canada1.09vpn.com
-    path: '%2Fvless%2Ffp=chrome'
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇦 加拿大 | vless | 36
+  name: 🇨🇦 加拿大 | vless | 37
   port: 443
   reality-opts:
     public-key: pxLk0ocXqKYYqUFyALvH2BVXaswI-6NE00posKNayy0
@@ -1900,9 +1909,25 @@ proxies:
   tls: false
   type: vless
   uuid: 47ab09c5-b2cc-441f-b5e5-6782b722d3ee
-- name: 🇨🇦 加拿大 | vless | 38
+- name: 🇨🇦 加拿大 | trojan | 38
+  password: bc7593fe-0604-4fbe-a70bYWVzLTI1Ni1nY206Q1VuZFNabllzUEtjdTaclWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272
+  port: 443
+  server: ca-trojan.bonds.id
+  type: trojan
+- name: 🇨🇦 加拿大 | vless | 40
   port: 8080
   server: ca1.codesystem.ir
+  tls: false
+  type: vless
+  uuid: 13f99069-a259-4422-a294-ee59d21b54b3
+- client-fingerprint: chrome
+  name: 🇨🇦 加拿大 | vless | 41
+  port: 2026
+  reality-opts:
+    public-key: 1pZz4shnro2xyuXc7MMSFseBbbuy1weo2QLclTDJ8Fo
+    short-id: '!!str db4a993c8bb355ba'
+  server: ca1.appcodes.ir
+  servername: yahoo.com
   tls: false
   type: vless
   uuid: 13f99069-a259-4422-a294-ee59d21b54b3
@@ -2707,3 +2732,14 @@ proxies:
     headers:
       Host: zeus-panel-n4i8us.zeus-ri73nu.workers.dev
     path: '%2FIn_Panel_Rayeghan_Ast_Va_Gheyre_Ghabele_Foroosh'
+- name: CA【机场推荐：https://a9a.xyz】13
+  network: ws
+  port: 80
+  server: 162.159.81.177
+  tls: false
+  type: vless
+  uuid: 4b00d726-e072-429b-997e-f07affea3b7f
+  ws-opts:
+    headers:
+      Host: icy-darkness-8ff1.farzambia12mo.workers.dev
+    path: '%2FeyJqdW5rIjoibHFUM0pwRHZXIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMjYwMjpmYzU5OmIwOjY0OjpdIl19'
