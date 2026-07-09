@@ -1,10 +1,13 @@
 proxies:
-- name: 🇨🇳_中国_91
+- name: 🇭🇰HK_1|5.2MB/s
   password: 1df3ece1218bedba28c6c6ac726a07bb
   port: 39001
   server: 114.80.8.128
+  skip-cert-verify: true
   sni: www.yrtok.com
+  tls: true
   type: trojan
+  udp: true
 - name: 🇨🇳_中国_92
   password: ef73ca2cf3d9cd0f04c8f448da8125c6
   port: 39001
@@ -40,16 +43,63 @@ proxies:
     path: /
 - alterId: 2
   cipher: auto
-  name: 亚太地区 011
+  name: HK192｜机房｜低风险
   network: tcp
-  port: 30806
-  server: v6.hdacd.com
-  skip-cert-verify: true
+  port: '30809'
+  server: v9.hdacd.com
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  ws-headers:
-    Host: v6.hdacd.com
+- alterId: 2
+  cipher: auto
+  name: US326｜机房｜低风险
+  network: tcp
+  port: '30824'
+  server: v24.hdacd.com
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- alterId: 2
+  cipher: auto
+  name: GB29｜机房｜低风险
+  network: tcp
+  port: '30836'
+  server: v36.hdacd.com
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- alterId: 2
+  cipher: auto
+  name: 🇨🇳 中国 | vmess | 05
+  network: tcp
+  port: '30804'
+  server: v4.hdacd.com
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- alterId: 2
+  cipher: auto
+  name: 🇨🇳 中国 | vmess | 06
+  network: tcp
+  port: '30829'
+  server: v29.hdacd.com
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- alterId: 2
+  cipher: auto
+  name: 🇨🇳 中国 | vmess | 07
+  network: tcp
+  port: '30808'
+  server: v8.hdacd.com
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - alterId: 2
   cipher: auto
   name: 美国 146
@@ -62,6 +112,18 @@ proxies:
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   xudp: true
+- alterId: 2
+  cipher: auto
+  name: 亚太地区 011
+  network: tcp
+  port: 30806
+  server: v6.hdacd.com
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  ws-headers:
+    Host: v6.hdacd.com
 - alterId: 64
   cipher: auto
   name: CN2｜家宽｜非常安全
@@ -1010,19 +1072,6 @@ proxies:
   uuid: ab4df3ef-e77f-4f2a-bfb8-63604412f73b
 - alterId: 0
   cipher: auto
-  name: 中国 088
-  network: ws
-  port: 5100
-  server: st-2.dnspro.icu
-  skip-cert-verify: true
-  type: vmess
-  uuid: 13ef5f2c-d002-36a2-9e96-a13d5e3ae03b
-  ws-opts:
-    headers:
-      Host: st-2.dnspro.icu
-    path: /iso
-- alterId: 0
-  cipher: auto
   name: 中国 089
   network: http
   port: 60808
@@ -1057,20 +1106,6 @@ proxies:
   skip-cert-verify: true
   type: vmess
   uuid: bb73d6fe-9700-4607-8dc1-eb9f15253e9d
-- alterId: 0
-  cipher: auto
-  name: 中国 094
-  network: ws
-  port: 443
-  server: fullaccesstohongkongnet.azurewebsites.net
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 274f11c6-f69b-40b9-8966-f39e06e97be7
-  ws-opts:
-    headers:
-      Host: fullaccesstohongkongnet.azurewebsites.net
-    path: /ws
 - alterId: 0
   cipher: auto
   name: 中国 095
@@ -1599,6 +1634,21 @@ proxies:
     headers:
       Host: tel-bobbyv2.alvlirm2023.workers.dev
     path: /proxyip=147.90.26.66,31.56.48.183,51.91.248.253,104.252.30.243,51.91.248.99,51.91.249.22,51.91.251.37,173.212.218.109
+- name: 中国 146
+  network: ws
+  port: 8443
+  server: 156.243.83.52
+  servername: weathered-brook-18b6.alvlirm741.workers.dev
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8525fe74-67e6-4a55-8a26-95f227bd1384
+  ws-opts:
+    headers:
+      Host: weathered-brook-18b6.alvlirm741.workers.dev
+    path: /proxyip=212.193.35.100,185.218.0.16,83.147.255.88,138.124.255.49,185.147.26.135,79.174.80.62,185.72.145.79,82.146.38.33
 - client-fingerprint: chrome
   name: 中国 147
   network: ws
@@ -1959,6 +2009,19 @@ proxies:
   type: vless
   udp: true
   uuid: 71ff6388-fbd5-462b-afbd-90630b13704f
+- alterId: 0
+  cipher: auto
+  name: 中国 175
+  network: ws
+  port: 443
+  server: n1747624274.4u9ma.icu
+  skip-cert-verify: true
+  type: vmess
+  uuid: d8daf507-a4ac-4eea-8399-8f0cd071eb52
+  ws-opts:
+    headers:
+      Host: n1747624274.4u9ma.icu
+    path: /
 - name: 中国 178
   network: xhttp
   port: 2060
