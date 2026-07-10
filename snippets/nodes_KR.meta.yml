@@ -27,7 +27,7 @@ proxies:
   sni: kr04212339.tmdsb.org
   type: trojan
 - client-fingerprint: chrome
-  name: 🇯🇵JP_1|4.1MB/s
+  name: 🇯🇵JP_1|4.6MB/s
   network: ws
   password: '!!str 666'
   port: '443'
@@ -48,130 +48,89 @@ proxies:
   skip-cert-verify: true
   type: socks5
   username: ''
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇺🇸 proxy-abuse-direct-424
-  network: tcp
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  flow: ''
+  grpc-opts:
+    grpc-service-name: ''
+  name: KR VLESS-635 | free-nodes
+  network: xhttp
   port: 443
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  server: 185.167.234.250
-  servername: sellflow.org
-  tls: false
-  type: vless
-  uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: KR VLESS-103 | free-nodes
-  port: 443
-  server: ako.pagate.top
-  servername: ako.pagate.top
-  skip-cert-verify: false
+  server: s208.gogocs.xyz
+  servername: u691611u0e97cfc0s203.gogocs.xyz
   tls: true
   type: vless
-  uuid: e6d8d743-a9bc-48c9-be99-8f3cc94d16e1
-- client-fingerprint: chrome
-  name: 🇰🇷 South Korea 0f13 | SNI - ee...
-  network: ws
-  port: 8443
-  server: 119.28.162.39
-  servername: ee.seaspirit.dpdns.org
-  tls: true
-  type: vless
-  uuid: 14aedc8e-66d3-4e38-8f03-e7315fcf5b36
+  uuid: 9794d18f-9280-3553-a7a5-a23da75aca76
   ws-opts:
     headers:
-      Host: ee.seaspirit.dpdns.org
-    path: /%3Fed%3D2560
-- client-fingerprint: ''
-  name: '🇰🇷 [VL] Южная Корея #3090 | Ро...'
-  network: tcp
-  port: 40701
-  reality-opts:
-    public-key: TWuVILeiSXfCSMZPsqNHtRquNALPRaW5Z51I63zdLEA
-    short-id: '!!str 7ef3a8ab2886'
-  server: 43.108.48.169
-  servername: amazon.com
-  tls: false
-  type: vless
-  uuid: cdb7d825-9892-4d6f-80b8-7add83159dac
-- client-fingerprint: chrome
-  name: 🇰🇷 South Korea e218 | SNI - ww...
-  network: tcp
-  port: 9001
-  reality-opts:
-    public-key: Ep_RxUq0kSY2xhXtVRHJNQPgl3V_T4UGhTzOYXVPQEk
-    short-id: '!!str 458ff70ea97eeac2'
-  server: kr.kefenhuimin.com
-  servername: www.apple.com
-  tls: false
-  type: vless
-  uuid: dda82e57-02c8-4d0b-9c6c-c2945e5509e5
-- name: KR韩国(mibei77.com 米贝节点分享)
-  network: ws
-  password: 5dc15e15-f285-4a9d-959b-0e4fbdd77b63
-  port: 443
-  server: cf.130519.xyz
-  sni: cloudflare-proxy-1jk.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: cloudflare-proxy-1jk.pages.dev
-    path: '%2F%3Fed%3D2560'
-- client-fingerprint: chrome
-  name: KR VLESS-1032 | free-nodes
-  network: ws
-  port: 443
-  server: afrcloud22.mmv.kr
-  servername: afrcloud22.mmv.kr
-  tls: true
-  type: vless
-  uuid: fa335d1c-e6d1-48bb-99a3-f06710a29043
-  ws-opts:
-    headers:
-      Host: afrcloud22.mmv.kr
-    path: '%2F130.185.164.213%3D8443'
-- name: KR VLESS-998 | free-nodes
-  network: ws
-  port: 80
-  server: afrcloud22.mmv.kr
-  tls: false
-  type: vless
-  uuid: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-  ws-opts:
-    headers:
-      Host: chatgpt.com.afrcloud22.mmv.kr
-    path: '%2F157.245.215.195%3D8443'
-- name: 🇰🇷KR韩国19
-  password: '!!str 1234567890'
-  port: 18781
-  server: 220.122.42.198
-  sni: kfm-bn0.pages.dev
-  type: trojan
-- name: 🇰🇷
+      Host: 0e97cfc0s203.gogocs.xyz
+    path: 209361c7e04e096b98a7abad8316d5b1
+- name: 美国 2058
   network: ws
   port: 8880
-  server: skk.moe
+  server: 162.159.21.178
   tls: false
   type: vless
-  uuid: 0787cfdb-9930-4abb-8419-c1b96c3ef628
+  udp: true
+  uuid: f9a53aa5-774e-4556-b2b7-d8b57b423b97
   ws-opts:
     headers:
-      Host: red-snowflake-c399.12-ee1.workers.dev
-    path: '%2Fpyip%3DProxyIP.KR.CMLiussss.net'
-- name: 🇰🇷 韩国 | trojan | 25
+      Host: yellow-breeze-989b.348-9b8.workers.dev
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/69.0.3497.100 Safari/537.36
+    path: /pyip=ProxyIP.KR.CMLiussss.net
+  xudp: true
+- client-fingerprint: random
+  name: 🇰🇷 South Korea 89df | SNI - au...
   network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 32773
-  server: 59.0.95.106
-  skip-cert-verify: true
-  sni: Koma-YT.PAGeS.Dev
+  port: 443
+  server: 119.205.235.58
+  servername: auv.vavava.kdns.fr
+  tls: true
+  type: vless
+  uuid: 890cb407-0d00-4337-9e5d-b4df06a1635c
+  ws-opts:
+    headers:
+      Host: auv.vavava.kdns.fr
+    path: /%3Fed%3D2560
+- name: 韩国(yudou789.top 玉豆免费节点)
+  network: ws
+  password: GKHWMe2R4qwNcNxu6l3KMkdd
+  port: 10912
+  server: 218.150.34.228
+  sni: vpn1.rnmcnm.com
   type: trojan
   ws-opts:
     headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2'
-- name: KR VLESS-72 | free-nodes
+      Host: vpn1.rnmcnm.com
+    path: '%2Ftrj-ws'
+- name: 11|🇰🇷 KR-6 | Mix
+  network: ws
+  port: 23023
+  server: 59.0.58.42
+  servername: q40ivxuck.danfeng.qzz.io
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: q40ivxuck.danfeng.qzz.io
+    path: /danfeng?ed=2560fp=chrome
+- name: '🇰🇷 #1'
+  network: ws
+  port: 8880
+  server: 172.67.187.219
+  tls: false
+  type: vless
+  uuid: 8cc8bedd-5103-4d22-a79c-a88f1160055a
+  ws-opts:
+    headers:
+      Host: red-unit-60bc.165-1dd.workers.dev
+    path: '%2Fpyip%3DProxyIP.KR.CMLiussss.net'
+- name: KR VLESS-73 | free-nodes
   network: ws
   port: 443
   server: 140.238.17.157
@@ -183,6 +142,41 @@ proxies:
     headers:
       Host: sni.111000.v6.rocks
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: KR VLESS-781 | free-nodes
+  network: ws
+  port: 80
+  server: afrcloud22.mmv.kr
+  tls: false
+  type: vless
+  uuid: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+  ws-opts:
+    headers:
+      Host: chatgpt.com.afrcloud22.mmv.kr
+    path: '%2F157.245.215.195%3D8443'
+- name: 🇰🇷 韩国 | trojan | 37
+  network: ws
+  password: '!!str 1234567890'
+  port: 10001
+  server: 220.79.9.247
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- client-fingerprint: chrome
+  name: KR VLESS-1066 | free-nodes
+  network: ws
+  port: 443
+  server: afrcloud22.mmv.kr
+  servername: afrcloud22.mmv.kr
+  tls: true
+  type: vless
+  uuid: fa335d1c-e6d1-48bb-99a3-f06710a29043
+  ws-opts:
+    headers:
+      Host: afrcloud22.mmv.kr
+    path: '%2F130.185.164.213%3D8443'
 - name: 🇰🇷 韩国 | vless | 03
   network: ws
   port: 15807
@@ -281,6 +275,29 @@ proxies:
     headers:
       Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
     path: '%2F%40Marisa_kristiflow=fp=chrome'
+- name: 🇰🇷 韩国 | trojan | 24
+  network: ws
+  password: '!!str 1234567890'
+  port: 18081
+  server: 220.124.181.77
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
+- name: 🇰🇷 韩国 | trojan | 25
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 32773
+  server: 59.0.95.106
+  skip-cert-verify: true
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2'
 - name: 🇰🇷 韩国 | vless | 27
   network: ws
   port: 18789
@@ -345,17 +362,6 @@ proxies:
     headers:
       Host: czvjaheuiweghruiwegfbldsafsdgaryreygnxvbhsfgretgreyhthsfgj.pages.dev
     path: /flow=fp=chromesecurity=tls
-- name: 🇰🇷 韩国 | trojan | 37
-  network: ws
-  password: '!!str 1234567890'
-  port: 10001
-  server: 220.79.9.247
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
 - name: 🇰🇷 韩国 | trojan | 39
   network: ws
   password: '!!str 1234567890'
@@ -683,6 +689,22 @@ proxies:
   tls: true
   type: vless
   uuid: 30bc91bf-229a-4c1e-a711-392eb86d0f76
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇰🇷KR_1|2.9MB/s
+  network: raw
+  port: '443'
+  reality-opts:
+    public-key: 6pZxjabeHoyJlsc2cP3Q5YK7G0bIOQwzWFyiarbUQXc
+    short-id: '!!str c8af1462debbc1'
+  server: kr2.miyazono-kaori.com
+  servername: www.coway.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4442c33c-9889-4e0f-bff7-14f1f626dd6c
+  xudp: true
 - name: KR3｜机房｜低风险
   network: ws
   port: 50000

@@ -33,39 +33,53 @@ proxies:
     headers:
       Host: tjplay.lxdxo.kdns.fr
     path: '%2F'
-- name: 台湾-02-172.64.147.78:8443-c2
+- client-fingerprint: chrome
+  name: 🇹🇼 Taiwan ab0c | SNI - s5.8680...
   network: ws
-  port: 8443
-  server: 172.64.147.78
-  servername: nfs.kdns.fr
+  port: 443
+  server: 125.228.236.138
+  servername: s5.868001.xyz
   tls: true
   type: vless
-  uuid: e0240134-0986-4b92-a230-fdc8d1200456
+  uuid: 23cb9aa7-9756-459f-aa84-3a27bdf6ad64
   ws-opts:
     headers:
-      Host: nfs.kdns.fr
-    path: '%2Fvless'
+      Host: s5.868001.xyz
+    path: /proxyip%3Dtw.william.us.ci
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼 Taiwan 3362 | SNI - www.tra...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: q42m1wg11kZLyRtjaKus8T-NNl1vriRG3V1eVTL6ICc
+    short-id: '!!str 1b8d2fb1eec1'
+  server: download.riferoser.icu
+  servername: www.tradingview.com
+  tls: false
+  type: vless
+  uuid: 6ec6da0f-008b-43fa-899d-d5cf147fe13a
+- alpn:
+  - h2
+  grpc-opts:
+    grpc-service-name: db
+  name: TW TROJAN-42 | free-nodes
+  network: grpc
+  password: 0a9f1f5a397bd427
+  port: 443
+  server: 125.227.86.45
+  skip-cert-verify: true
+  sni: TG.freecodes
+  type: trojan
 - alpn:
   - h3
-  name: TW HY2-213 | free-nodes
-  password: 1c65bee4-bc54-364c-8988-6a5912fda891
+  name: TW HY2-184 | free-nodes
+  password: bc7c7c10-8f24-332e-b303-fb3c8943c24f
   port: 443
   server: 82.47.22.163
-  sni: u723829us372.okgfw.top
+  sni: u712927us372.okgfw.top
   tls: false
   type: hysteria2
-- name: 台湾-03-162.159.192.5:443-c4
-  network: ws
-  port: 443
-  server: 162.159.192.5
-  servername: nfs.kdns.fr
-  tls: true
-  type: vless
-  uuid: e0240134-0986-4b92-a230-fdc8d1200456
-  ws-opts:
-    headers:
-      Host: nfs.kdns.fr
-    path: '%2Fvless'
 - client-fingerprint: firefox
   name: 🇹🇼 台湾 | vless | 03
   port: 10000
@@ -106,10 +120,20 @@ proxies:
   port: 443
   server: 85.237.207.189
   type: trojan
+- name: 🇹🇼 台湾 | trojan | 11
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.kyiv.ua
+  type: trojan
 - name: 🇹🇼 台湾 | trojan | 12
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
   server: official.taipeicitygovernment.com.ua
+  type: trojan
+- name: 🇹🇼 台湾 | trojan | 14
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.co.ua
   type: trojan
 - name: 🇹🇼 台湾 | vless | 17
   network: ws

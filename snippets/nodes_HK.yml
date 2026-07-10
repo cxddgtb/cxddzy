@@ -254,12 +254,27 @@ proxies:
     headers:
       Host: tjaaa.hhllfly.kdns.fr
     path: '%2F'
-- name: 🇭🇰 香港 | trojan | 68
-  password: 8r<[9'l6hAO#8ZQi
+- alpn:
+  - http/1.1
+  name: 🇭🇰
+  network: ws
+  password: a4dbc061021f2931c0e28901a602f3c5
   port: 443
-  server: 213.176.92.138
+  server: hk-007.pg13900.com
   skip-cert-verify: true
-  sni: Koma-YT.PAGeS.Dev
+  sni: hk-007.pg13900.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: hk-007.pg13900.com
+    path: /atlas-cdn
+- name: 香港節點丨yoyapai.com
+  network: tcp
+  password: 825929f4-c702-35ce-9124-00d3f95b8c32
+  port: 34436
+  server: adak.sonofthewinds.com
+  skip-cert-verify: false
+  sni: hh4.sonofthewinds.com
   type: trojan
 - name: 🇭🇰 香港 | trojan | 03
   network: ws
@@ -359,12 +374,6 @@ proxies:
   type: trojan
   ws-opts:
     path: '%2F'
-- name: 🇭🇰 香港 | trojan | 32
-  password: BxceQaOe
-  port: 443
-  server: 119.246.1.143
-  sni: t.me/ripaojiedian
-  type: trojan
 - name: 🇭🇰 香港 | trojan | 36
   network: ws
   password: OnbLQqEtdB
@@ -376,12 +385,6 @@ proxies:
     headers:
       Host: vn2.wxgqlfx.icu
     path: '%2FTG%40wxgqlfx'
-- name: 🇭🇰 香港 | trojan | 40
-  password: b26e31e5-eac1-45b0-9069-83830bd69521
-  port: 443
-  server: 20.187.85.198
-  sni: hkt.iamnotagoodman.com
-  type: trojan
 - alterId: 2
   cipher: auto
   name: 中国 118
@@ -419,6 +422,13 @@ proxies:
   password: WF42809561
   port: 443
   server: top-goshawk.rooster465.autos
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 68
+  password: 8r<[9'l6hAO#8ZQi
+  port: 443
+  server: 213.176.92.138
+  skip-cert-verify: true
+  sni: Koma-YT.PAGeS.Dev
   type: trojan
 - name: 🇭🇰 香港 | trojan | 70
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
@@ -606,7 +616,16 @@ proxies:
   type: vmess
   uuid: 7ff27156-744d-31ff-9703-24f6094e5729
 - alterId: 0
-  client-fingerprint: chrome
+  cipher: auto
+  name: HK
+  network: tcp
+  port: 5566
+  server: 47.76.127.88
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 44712929-c2b7-4fa4-93bd-9de332a78c8c
+- alterId: 0
   name: 中国 008
   network: tcp
   password: 1df3ece1218bedba28c6c6ac726a07bb
@@ -617,26 +636,6 @@ proxies:
   tls: true
   type: trojan
   udp: true
-- client-fingerprint: chrome
-  name: '🇺🇸 美国 | USA #1'
-  network: tcp
-  password: 1df3ece1218bedba28c6c6ac726a07bb
-  port: 39001
-  server: 114.80.8.128
-  skip-cert-verify: true
-  sni: www.yrtok.com
-  type: trojan
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: HK
-  network: tcp
-  port: 5566
-  server: 47.76.127.88
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 44712929-c2b7-4fa4-93bd-9de332a78c8c
 - alterId: 0
   name: 🇭🇰HK香港2
   password: BxceQaOe
