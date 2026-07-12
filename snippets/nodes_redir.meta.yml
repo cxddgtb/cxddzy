@@ -35,13 +35,14 @@ proxies:
   type: vmess
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- name: 🇨🇳_CN_中国->🇭🇰_HK_中国香港
+- alterId: 0
+  name: 🇭🇰HK香港
   password: 1df3ece1218bedba28c6c6ac726a07bb
   port: 39001
   server: 114.80.8.128
   skip-cert-verify: true
   sni: www.yrtok.com
-  tls: false
+  tls: true
   type: trojan
   udp: true
 - alterId: 2
@@ -80,38 +81,52 @@ proxies:
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   xudp: true
-- name: CF中转_06261010745 t.me/rjsxrd
+- name: CF中转_06261010754 t.me/rjsxrd
   network: ws
   port: 443
-  server: 162.159.42.182
-  servername: t1s1.rittbo.kdns.fr
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-- name: CF中转_06261010728 t.me/rjsxrd
-  network: ws
-  port: 8443
-  server: 162.159.13.196
+  server: 162.159.5.231
   servername: t1s1.rittbo.kdns.fr
   skip-cert-verify: false
   tls: true
   type: vless
   uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
 - client-fingerprint: chrome
-  name: CF中转_0626106866 t.me/rjsxrd
+  name: CF中转_0626101578 t.me/rjsxrd
   network: ws
-  port: 443
-  server: 141.101.121.196
-  servername: blackshadow.dpdns.org
+  port: 8443
+  server: 188.114.97.6
+  servername: orange-darkness-749f.phantomnettest1-65d.workers.dev
+  tls: true
+  type: vless
+  uuid: 3cb4c775-bf08-4158-a0e3-cbae9ac452d7
+  ws-opts:
+    headers:
+      Host: orange-darkness-749f.phantomnettest1-65d.workers.dev
+    path: '%2Fsync'
+- client-fingerprint: chrome
+  name: CF中转_06261010720 t.me/rjsxrd
+  network: ws
+  port: 8443
+  server: 104.18.37.237
+  servername: t1s1.rittbo.kdns.fr
   skip-cert-verify: false
   tls: true
   type: vless
-  uuid: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+- client-fingerprint: chrome
+  name: CF中转_0626104069 t.me/rjsxrd
+  network: ws
+  port: 443
+  server: 108.162.192.75
+  servername: amoosamiii.net
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 4f013568-a58b-4b04-b5dd-4d52bf1c33a4
   ws-opts:
     headers:
-      Host: blackshadow.dpdns.org
-    path: '%2F44.209.52.7-443'
+      Host: amoosamiii.net
+    path: '%2Fpoiuyws'
 - alterId: 64
   cipher: auto
   name: 🇺🇸_US_美国->🇳🇱_NL_荷兰
