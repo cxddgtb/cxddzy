@@ -21,24 +21,52 @@ proxies:
     headers:
       Host: tjplay.lxdxo.kdns.fr
     path: '%2F'
-- alpn:
-  - ''
-  client-fingerprint: ''
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  grpc-opts:
-    grpc-service-name: ''
-  name: TW VLESS-183 | free-nodes
+  name: 未知 VLESS-302 | free-nodes
   network: tcp
   port: 443
-  server: 82.47.22.163
-  servername: u712927us501.okgfw.top
+  reality-opts:
+    public-key: JE82iOR_U_H7ffxJ5yfoxXeRkMlE-aVu1wxR7n6jrVM
+    short-id: '!!str 473277e2'
+  server: tw3.miyazono-kaori.com
+  servername: dlcdnets.asus.com
+  tls: false
+  type: vless
+  uuid: 580d81f8-4f30-49d6-ad90-59fb4a850313
+- alpn:
+  - h2
+  grpc-opts:
+    grpc-service-name: db
+  name: TW TROJAN-48 | free-nodes
+  network: grpc
+  password: 0a9f1f5a397bd427
+  port: 443
+  server: 125.227.86.47
+  skip-cert-verify: true
+  sni: TG.freecodes
+  type: trojan
+- name: 🇨🇳台湾-6
+  network: ws
+  port: 443
+  server: 104.21.1.1
+  servername: nfs.kdns.fr
   tls: true
   type: vless
-  uuid: bc7c7c10-8f24-332e-b303-fb3c8943c24f
+  uuid: e0240134-0986-4b92-a230-fdc8d1200456
   ws-opts:
     headers:
-      Host: s501.okgfw.top
-    path: ''
+      Host: nfs.kdns.fr
+    path: '%2Fvless'
+- alpn:
+  - h3
+  name: TW HY2-193 | free-nodes
+  password: 723af53a-b131-3270-8ce0-13f8ecaaa322
+  port: 443
+  server: 82.47.22.163
+  sni: u723828us372.okgfw.top
+  tls: false
+  type: hysteria2
 - client-fingerprint: firefox
   name: 🇹🇼 台湾 | vless | 03
   port: 10000
@@ -58,6 +86,13 @@ proxies:
   tls: false
   type: vless
   uuid: d26598cf-2cdf-4219-80d0-94646dff160d
+- client-fingerprint: firefox
+  name: 🇹🇼 台湾 | vless | 08
+  port: 10000
+  server: 61.221.84.106
+  tls: false
+  type: vless
+  uuid: 69693208-38c1-4e15-8f93-36ac80d69840
 - name: 🇹🇼 台湾 | vless | 09
   network: ws
   port: 17009
