@@ -1,36 +1,44 @@
 proxies:
-- alpn:
-  - h2
-  grpc-opts:
-    grpc-service-name: db
-  name: 🇹🇼 台湾 | trojan | 06
-  network: grpc
-  password: 3f5bc61547b1f0d9
-  port: 443
-  server: 125.227.86.46
-  skip-cert-verify: true
-  sni: TG.freecodes
-  type: trojan
-- client-fingerprint: chrome
-  name: 🇹🇼 Taiwan d3c7 | SNI - s5.8680...
+- name: 🇨🇳台湾-6
   network: ws
-  port: 2053
-  server: 185.248.184.201
-  servername: s5.868001.xyz
+  port: 443
+  server: 104.21.1.1
+  servername: nfs.kdns.fr
   tls: true
   type: vless
-  uuid: 23cb9aa7-9756-459f-aa84-3a27bdf6ad64
+  uuid: e0240134-0986-4b92-a230-fdc8d1200456
   ws-opts:
     headers:
-      Host: s5.868001.xyz
-    path: /proxyip%3DProxyIP.CMLiussss.net
+      Host: nfs.kdns.fr
+    path: '%2Fvless'
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼 台湾 | vless | 15
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: JE82iOR_U_H7ffxJ5yfoxXeRkMlE-aVu1wxR7n6jrVM
+    short-id: '!!str 473277e2'
+  server: tw3.miyazono-kaori.com
+  servername: dlcdnets.asus.com
+  tls: false
+  type: vless
+  uuid: 580d81f8-4f30-49d6-ad90-59fb4a850313
+- name: 🇹🇼TW(AzadNet.t.me)
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: 60.250.152.209
+  skip-cert-verify: true
+  sni: official.taipeicitygovernment.net.ua
+  type: trojan
 - alpn:
   - ''
   client-fingerprint: ''
   flow: xtls-rprx-vision
   grpc-opts:
     grpc-service-name: ''
-  name: TW VLESS-213 | free-nodes
+  name: TW VLESS-194 | free-nodes
   network: tcp
   port: 443
   server: 82.47.22.163
@@ -38,6 +46,24 @@ proxies:
   tls: true
   type: vless
   uuid: 1c65bee4-bc54-364c-8988-6a5912fda891
+  ws-opts:
+    headers:
+      Host: s501.okgfw.top
+    path: ''
+- alpn:
+  - ''
+  client-fingerprint: ''
+  flow: xtls-rprx-vision
+  grpc-opts:
+    grpc-service-name: ''
+  name: TW VLESS-202 | free-nodes
+  network: tcp
+  port: 443
+  server: 82.47.22.163
+  servername: u723828us501.okgfw.top
+  tls: true
+  type: vless
+  uuid: 723af53a-b131-3270-8ce0-13f8ecaaa322
   ws-opts:
     headers:
       Host: s501.okgfw.top
@@ -52,11 +78,6 @@ proxies:
   tls: false
   type: vmess
   uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
-- name: 🇹🇼 台湾 | trojan | 02
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 8443
-  server: official.taipeicitygovernment.org.ua
-  type: trojan
 - name: 🇹🇼 台湾 | trojan | 03
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
@@ -71,6 +92,18 @@ proxies:
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
   server: official.taipeicitygovernment.cn.ua
+  type: trojan
+- alpn:
+  - h2
+  grpc-opts:
+    grpc-service-name: db
+  name: 🇹🇼 台湾 | trojan | 06
+  network: grpc
+  password: 3f5bc61547b1f0d9
+  port: 443
+  server: 125.227.86.46
+  skip-cert-verify: true
+  sni: TG.freecodes
   type: trojan
 - name: 🇹🇼 台湾 | trojan | 08
   network: ws
