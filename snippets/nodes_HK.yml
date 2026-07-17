@@ -1,7 +1,7 @@
 proxies:
 - alterId: 0
   client-fingerprint: chrome
-  name: '🇸🇬 新加坡 | SGP #9'
+  name: 🇸🇬SG新加坡
   password: BxceQaOe
   port: 9149
   server: 18.163.41.112
@@ -10,7 +10,8 @@ proxies:
   tls: true
   type: trojan
   udp: true
-- name: 🇭🇰 香港 | trojan | 92
+- client-fingerprint: chrome
+  name: 🇭🇰 香港 | trojan | 92
   network: tcp
   password: OccIqeORGQwiNkwS
   port: 19128
@@ -18,9 +19,10 @@ proxies:
   skip-cert-verify: false
   sni: yazhou10.dynu.net
   type: trojan
+  udp: true
 - alterId: 0
   cipher: auto
-  name: 🇭🇰 香港 | HKG
+  name: 🇭🇰 香港 | vmess | 16
   network: tcp
   port: '80'
   server: 47.83.221.185
@@ -91,22 +93,18 @@ proxies:
     headers:
       Host: tjplay.lxdxo.kdns.fr
     path: '%2F'
-- alpn:
-  - http/1.1
-  name: 🇺🇸 美国 | trojan | 1373
-  network: tcp
-  password: 63872b0d-87dd-4474-b690-92773af2922e
-  port: 20098
-  server: kkvlvvq-a.catcat321.com
-  sni: hk.catxstar.com
-  type: trojan
-- name: 香港+电讯盈科有限公司
-  network: tcp
-  password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
+- name: HK TROJAN-36 | free-nodes
+  network: ws
+  password: 8b45d379-702f-41b3-a6b2-9c87a01dcd5c
   port: 443
-  server: download1hkt.windowsupdatea.com
-  sni: glc-hkt1.windowsupdatea.com
+  server: 23.227.38.178
+  skip-cert-verify: true
+  sni: q6clkp794liy3y90.hktimecsgo.xyz
   type: trojan
+  ws-opts:
+    headers:
+      Host: q6clkp794liy3y90.hktimecsgo.xyz
+    path: /images
 - alpn:
   - http/1.1
   name: 🇭🇰 香港 | trojan | 07
@@ -304,6 +302,11 @@ proxies:
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 2053
   server: official.tokyometropolis.odesa.ua
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 130
+  password: 4123ae62-0999-4984-8ead-091630e594a9
+  port: 443
+  server: n2.chateditimage.com
   type: trojan
 - alterId: 0
   client-fingerprint: chrome
