@@ -221,20 +221,30 @@ proxies:
   type: vless
   uuid: daff1228-8d1a-4812-a57a-09604faa5e0c
 - client-fingerprint: chrome
-  name: 🇨🇭 瑞士 | vless | 02
-  network: tcp
-  port: 32875
+  encryption: none
+  http-opts:
+    headers:
+      Host:
+      - yahoo.com
+    path:
+    - /
+  name: 🇨🇭CH_1|2.9MB/s
+  network: http
+  port: '32875'
   reality-opts:
     public-key: NFQAS72yT1b_7ZZhYcIC6Nm3rYSqQwxqOZKid5DJ0Gg
+    short-id: '!!str '
   server: 179.237.75.28
   servername: yahoo.com
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vless
+  udp: true
   uuid: 1961317f-5f2c-4346-e4b0-b767f0946138
   ws-opts:
     headers:
       Host: yahoo.com
+  xudp: true
 - name: 🇨🇭 瑞士 | trojan | 03
   password: y3b03zx3tznhyo538p4c
   port: 53261
