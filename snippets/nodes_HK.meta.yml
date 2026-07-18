@@ -1,14 +1,14 @@
 proxies:
 - client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇭🇰_香港_32
+  flow: xtls-rprx-vision-udp443
+  name: 🇭🇰 香港 | vless | 126
   port: 443
   reality-opts:
     public-key: MCdZOPt6XUdH3N8xQc6J4GElI9_9csxjsOOzwCPZjR0
     short-id: '!!str 6378191533abf6df'
   server: hong1.panel11.ru
   servername: hong1.panel11.ru
-  tls: false
+  tls: true
   type: vless
   uuid: aeb9e730-5f9e-404d-a8af-9e2e68dc7f5d
 - name: 🇭🇰_香港_94
@@ -25,10 +25,11 @@ proxies:
   type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇭🇰_香港_110
+  name: 🇭🇰 香港 | vmess | 07
   network: tcp
-  port: 80
+  port: '80'
   server: 47.83.221.185
+  servername: ''
   tls: false
   type: vmess
   uuid: 771a590c-5eac-5732-b796-17251132f8d2
@@ -49,10 +50,11 @@ proxies:
   type: trojan
 - alterId: 2
   cipher: auto
-  name: 🇭🇰_香港_115
+  name: 🇭🇰 香港 | vmess | 28
   network: tcp
   port: 30807
   server: v10.zgtfqs.click
+  servername: ''
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
@@ -114,55 +116,80 @@ proxies:
   type: ss
   udp: true
 - client-fingerprint: chrome
-  name: HK【机场推荐：https://a9a.xyz】7
-  network: ws
-  port: 8443
-  server: 185.241.42.81
-  servername: s5gydl.936.us.ci
+  flow: xtls-rprx-vision
+  name: 🇭🇰 香港 | vless | 162
+  network: tcp
+  port: 19279
+  reality-opts:
+    public-key: 8_fdD3bAbJaIW_MAVe0bR3t6WrtXUnJc12m9KO03fzI
+    short-id: '!!str 78e9a0e9'
+  server: hw01v.t11-a.app
+  servername: www.cloudflare.com
+  tls: false
+  type: vless
+  uuid: 1f56cd31-87f4-47cf-aac9-a8fc9bca8eed
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  grpc-opts:
+    grpc-service-name: ''
+  name: HK VLESS-933 | free-nodes
+  network: tcp
+  port: 443
+  server: s299.freessr.bid
+  servername: u695099u36cf43b9s298.wagahaha.xyz
   tls: true
   type: vless
-  udp: true
-  uuid: f4e91fac-25eb-4d26-a14c-c82c3778a0e4
+  uuid: 5d02517f-63d5-3e9f-b467-1bcf4d4e25d3
   ws-opts:
     headers:
-      Host: s5gydl.936.us.ci
-    path: /proxyip=tw.william.us.ci?uuid=f4e91fac-25eb-4d26-a14c-c82c3778a0e4fp=chrome
-  xudp: true
+      Host: 36cf43b9s298.wagahaha.xyz
+    path: ''
 - name: HK香港(mibei77.com 米贝节点分享)
   network: ws
   port: 443
-  server: saas.sin.fan
-  servername: cloudflare-proxy-1jk.pages.dev
+  server: 66.45.118.42
+  servername: snippet.danfeng.rr.kg
   tls: true
   type: vless
-  uuid: 5dc15e15-f285-4a9d-959b-0e4fbdd77b63
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
   ws-opts:
     headers:
-      Host: cloudflare-proxy-1jk.pages.dev
-    path: '%2F%3Fed%3D2560'
-- alterId: 0
-  name: 🇭🇰HK香港3 551.4KB/s
-  network: tcp
-  password: OccIqeORGQwiNkwS
-  port: 19128
-  server: jpbgp.netvigor.cc
-  skip-cert-verify: true
-  sni: yazhou10.dynu.net
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇭🇰香港-11
+      Host: snippet.danfeng.rr.kg
+    path: '%2Fdanfeng'
+- name: '>>@oneclickvpnkeys::HK'
   network: ws
   port: 443
-  server: 162.159.154.1
-  servername: nfs.kdns.fr
+  server: 108.162.192.75
+  servername: amooaliii.net
   tls: true
   type: vless
-  uuid: e0240134-0986-4b92-a230-fdc8d1200456
+  uuid: 72d1797c-cef8-410a-b8fd-db9104dc3cb0
   ws-opts:
     headers:
-      Host: nfs.kdns.fr
-    path: '%2Fvless'
+      Host: amooaliii.net
+    path: '%2Fjdhfyws'
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  grpc-opts:
+    grpc-service-name: ''
+  name: HK VLESS-931 | free-nodes
+  network: tcp
+  port: 443
+  server: 212.192.15.191
+  servername: u695099u36cf43b9s298.wagahaha.xyz
+  tls: true
+  type: vless
+  uuid: 5d02517f-63d5-3e9f-b467-1bcf4d4e25d3
+  ws-opts:
+    headers:
+      Host: 36cf43b9s298.wagahaha.xyz
+    path: ''
 - name: 港优续-16-172.66.0.60
   network: ws
   port: 443
@@ -175,31 +202,844 @@ proxies:
     headers:
       Host: nfs.kdns.fr
     path: '%2Fvless'
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰 香港 | vmess | 04
+  network: tcp
+  port: '52080'
+  server: 154.37.223.56
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: f1ac5c82-00a4-400b-bb20-530c91b7c5bb
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰 香港 | vmess | 05
+  network: ws
+  port: 36703
+  server: 47.244.120.197
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
+  ws-opts:
+    headers:
+      Host: ''
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 未知70
+  network: tcp
+  port: 5566
+  server: 47.76.127.88
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 5d746f1e-7028-455f-bb00-1806249a5941
+- alpn:
+  - http/1.1
+  name: 🇭🇰 香港 | trojan | 08
+  password: 7e70223b-f331-41d5-9313-02b8d2df2885
+  port: 20068
+  server: 45.67.201.210
+  sni: hk.catxstar.com
+  type: trojan
+- client-fingerprint: ios
+  flow: xtls-rprx-vision
+  name: 🇭🇰 香港 | vless | 09
+  port: 34119
+  reality-opts:
+    public-key: w96uepPSdOQqo-SKKvW1Xt3tGYUqjbKV7A8GN2emjE0
+    short-id: '!!str 92257b015a9780e1'
+  server: 150.40.180.152
+  servername: pypi.org
+  tls: false
+  type: vless
+  uuid: 50d7a89f-a23d-4b0e-984e-2bdd1878dc85
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰 香港 | vmess | 10
+  network: ws
+  port: 44867
+  server: 47.244.120.197
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
+  ws-opts:
+    headers:
+      Host: ''
+    path: /arki?ed=2048
+- name: 🇭🇰 香港 | vless | 15
+  network: ws
+  port: 21415
+  server: 43.132.244.52
+  servername: sni.jpmj.dev
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.jpmj.dev
+    path: '%2F%3Fed%3D2560%26Telegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2security=tls'
+- name: 🇭🇰 香港 | vless | 16
+  network: ws
+  port: 8030
+  server: 54.46.72.234
+  servername: shkiau5c.api-node-a1.chinam.indevs.in
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: shkiau5c.api-node-a1.chinam.indevs.in
+    path: /danfengfp=firefoxsecurity=tls
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰 香港 | vmess | 17
+  network: ws
+  port: '80'
+  server: 16.163.143.214
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 2d9a81f6-e86e-48e6-9646-b3b1325f8d61
+  ws-opts:
+    headers:
+      Host: syjsq.hk2.flyidc.top
+    path: /syjsq/data
+- name: 🇭🇰 香港 | vless | 19
+  network: ws
+  port: 8112
+  server: 103.192.179.207
+  servername: qznql.node-proxy.chinat.indevs.in
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: qznql.node-proxy.chinat.indevs.in
+    path: /danfeng?ed=2560fp=chromesecurity=tls
+- name: 🇭🇰 香港 | vless | 20
+  network: ws
+  port: 44735
+  server: 45.144.137.184
+  servername: subtaler.trevely.de5.net
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: f17d7eb4-ba07-463a-9ad8-3ec30f19dca2
+  ws-opts:
+    headers:
+      Host: subtaler.trevely.de5.net
+    path: /%3Fed%3D2560fp=chromesecurity=tls
+- name: 🇭🇰 香港 | vless | 21
+  network: ws
+  port: 32237
+  server: 83.229.126.127
+  servername: dcsrzh.ccwu.cc
+  tls: false
+  type: vless
+  uuid: 73bcd72f-9545-4cb8-8daf-7d004501880d
+  ws-opts:
+    headers:
+      Host: dcsrzh.ccwu.cc
+    path: '%2F%3Fed%3D2560security=tls'
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰 香港 | vmess | 25
+  network: none
+  port: '25532'
+  server: 103.172.134.162
+  tls: false
+  type: vmess
+  uuid: 5b26f68b-9f7f-41e5-b35f-ed1aded831d5
+- alpn:
+  - http/1.1
+  name: 🇭🇰 香港 | trojan | 29
+  password: 7e70223b-f331-41d5-9313-02b8d2df2885
+  port: 20013
+  server: 45.67.201.210
+  sni: hk.catxstar.com
+  type: trojan
+- name: 🇭🇰 香港 | vless | 30
+  network: ws
+  port: 7443
+  server: 222.167.202.23
+  servername: 2026.hhhhh.eu.org
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  ws-opts:
+    headers:
+      Host: 2026.hhhhh.eu.org
+    path: '%2F222.167.202.23%3A7443security=tls'
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: 🇭🇰 香港 | vless | 32
+  port: 19106
+  reality-opts:
+    public-key: hYb4wEKoSCy8rJqf7MUQ0virZWUoKBQbKT6Fbt96yEs
+    short-id: '!!str 63f6e09994d5'
+  server: 87.83.109.106
+  servername: www.tesla.com
+  tls: false
+  type: vless
+  uuid: 2d1470a0-fa48-4d3b-8378-b827b744ac00
+- alterId: 0
+  name: 🇭🇰HK香港3 551.4KB/s
+  password: OccIqeORGQwiNkwS
+  port: 19128
+  server: jpbgp.netvigor.cc
+  skip-cert-verify: true
+  sni: yazhou10.dynu.net
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇭🇰 香港 | trojan | 39
+  password: c85761bc-5d74-4ae5-b525-0d32443182fa
+  port: 443
+  server: 45.149.92.71
+  skip-cert-verify: true
+  sni: uk.mjt000.com
+  type: trojan
+- alpn:
+  - http/1.1
+  name: 🇭🇰 香港 | trojan | 40
+  network: tcp
+  password: BxceQaOe
+  port: 443
+  server: 119.246.1.143
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 41
+  password: b26e31e5-eac1-45b0-9069-83830bd69521
+  port: 443
+  server: 20.187.85.198
+  sni: hkt.iamnotagoodman.com
+  type: trojan
+- name: 🇭🇰 香港 | vless | 42
+  network: ws
+  port: 443
+  server: 219.76.13.167
+  servername: t1s1.rittbo.kdns.fr
+  tls: false
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  ws-opts:
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+    path: '%2Fsecurity=tls'
+- name: 🇭🇰 香港 | vless | 43
+  network: ws
+  port: 8443
+  server: 23.175.201.2
+  servername: edt2-lgy.pages.dev
+  tls: false
+  type: vless
+  uuid: 8007e155-622e-4c9d-8a6e-67f49b4678f4
+  ws-opts:
+    headers:
+      Host: edt2-lgy.pages.dev
+    path: '%2Ffp=chromesecurity=tls'
+- name: 🇭🇰 香港 | vless | 47
+  network: ws
+  port: 443
+  server: 47.76.218.163
+  servername: vp11.cc.cd
+  tls: false
+  type: vless
+  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
+  ws-opts:
+    headers:
+      Host: vp11.cc.cd
+    path: /fp=chromesecurity=tls
+- client-fingerprint: ios
+  name: 🇭🇰 香港 | vless | 49
+  network: ws
+  port: 443
+  server: 119.246.150.50
+  servername: gogo.wknm.dpdns.org
+  tls: true
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  ws-opts:
+    headers:
+      Host: gogo.wknm.dpdns.org
+    path: '%2F'
+- name: 🇭🇰 香港 | vless | 50
+  network: ws
+  port: 443
+  server: 47.239.4.246
+  servername: t1s1.rittbo.kdns.fr
+  tls: false
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  ws-opts:
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+    path: /fp=chromesecurity=tls
+- name: 🇭🇰 香港 | vless | 51
+  network: ws
+  port: 8443
+  server: 206.237.0.11
+  servername: s5gydl.936.us.ci
+  tls: true
+  type: vless
+  uuid: f4e91fac-25eb-4d26-a14c-c82c3778a0e4
+  ws-opts:
+    headers:
+      Host: s5gydl.936.us.ci
+    path: '%2Fproxyip%3Dtw.william.us.ci%3Fuuid%3Df4e91fac-25eb-4d26-a14c-c82c3778a0e4fp=chrome'
+- name: 🇭🇰 香港 | vless | 55
+  network: ws
+  port: 443
+  server: 219.76.13.177
+  servername: sn1.skylee5.cloudns.ch
+  tls: false
+  type: vless
+  uuid: 06b65903-406d-4a41-8463-6fd5c0ee7798
+  ws-opts:
+    headers:
+      Host: sn1.skylee5.cloudns.ch
+    path: '%2Fproxyip%3Dproxyip.cmliussss.netsecurity=tls'
+- name: 🇭🇰 香港 | trojan | 56
+  network: ws
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  port: 443
+  server: 209.33.166.199
+  sni: hhcm.hhxaf.cc.cd
+  type: trojan
+  ws-opts:
+    path: /
+- name: 🇭🇰 香港 | vless | 58
+  network: ws
+  port: 2053
+  server: 45.38.42.73
+  servername: t1s1.rittbo.kdns.fr
+  tls: false
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  ws-opts:
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+    path: '%2Ffp=chromesecurity=tls'
+- name: 🇭🇰 香港 | vless | 59
+  network: ws
+  port: 2053
+  server: 45.38.42.156
+  servername: t1s1.rittbo.kdns.fr
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  ws-opts:
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+    path: '%2Fsecurity=tls'
+- name: 🇭🇰 香港 | vless | 60
+  network: ws
+  port: 2053
+  server: 45.38.42.198
+  servername: t1s1.rittbo.kdns.fr
+  tls: true
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  ws-opts:
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+    path: /fp=chrome
+- name: 🇭🇰 香港 | vless | 62
+  network: ws
+  port: 8443
+  server: 103.148.73.119
+  servername: ty986gfazs.cainiaohub.xyz
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: e5ce79f9-fdac-4e80-8286-a15b96fded72
+  ws-opts:
+    headers:
+      Host: ty986gfazs.cainiaohub.xyz
+    path: '%2F81574b6b-c9d7-44a0-b83d-dad56e8cb530fp=chromesecurity=tls'
+- name: 🇭🇰 香港 | vless | 63
+  network: ws
+  port: 443
+  server: 209.33.166.199
+  servername: auv.vavava.kdns.fr
+  tls: false
+  type: vless
+  uuid: 890cb407-0d00-4337-9e5d-b4df06a1635c
+  ws-opts:
+    headers:
+      Host: auv.vavava.kdns.fr
+    path: /%3Fed%3D2560fp=randomsecurity=tls
+- client-fingerprint: chrome
+  name: 🇭🇰 香港 | vless | 65
+  network: ws
+  port: 8443
+  server: 185.241.42.81
+  servername: s5gydl.936.us.ci
+  tls: true
+  type: vless
+  uuid: f4e91fac-25eb-4d26-a14c-c82c3778a0e4
+  ws-opts:
+    headers:
+      Host: s5gydl.936.us.ci
+    path: '%2Fproxyip%3Dtw.william.us.ci%3Fuuid%3Df4e91fac-25eb-4d26-a14c-c82c3778a0e4'
+- name: 🇭🇰 香港 | trojan | 70
+  network: ws
+  password: '!!str 162534'
+  port: 2053
+  server: 45.38.42.198
+  skip-cert-verify: true
+  sni: cchh2.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: cchh2.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- client-fingerprint: chrome
+  name: 🇭🇰 香港 | vless | 72
+  port: 8443
+  reality-opts:
+    public-key: oiJNWjjR6fNKu3j8V83Gti4OFiYoyO3JFYscgR45pAI
+    short-id: '!!str 189fe82c'
+  server: 185.132.125.200
+  servername: ads.x5.ru
+  tls: false
+  type: vless
+  uuid: c09b4aa0-0c15-5b97-9b12-3fba93c24112
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: 🇭🇰 香港 | vless | 75
+  port: 8443
+  reality-opts:
+    public-key: 10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc
+    short-id: '!!str 43dcff53849b81e6'
+  server: 176.98.181.161
+  servername: auto.quattro-tech.ru
+  tls: false
+  type: vless
+  uuid: 497631c4-a1a4-0050-a86a-f42873473bb6
+- name: 🇭🇰 香港 | vless | 77
+  network: ws
+  port: 443
+  server: 217.60.38.113
+  servername: sni.111000.dns.army
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.dns.army
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3security=tls'
+- name: 🇭🇰 香港 | vless | 78
+  network: ws
+  port: 8443
+  server: 43.254.164.50
+  servername: s5.868001.xyz
+  tls: false
+  type: vless
+  uuid: f9255507-1b65-433f-bfd8-193b35e068e2
+  ws-opts:
+    headers:
+      Host: s5.868001.xyz
+    path: '%2Fproxyip%3Dtw.william.us.cifp=chromesecurity=tls'
+- name: 🇭🇰 香港 | vless | 80
+  network: ws
+  port: 443
+  server: 43.198.204.35
+  servername: vp13.cc.cd
+  tls: true
+  type: vless
+  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
+  ws-opts:
+    headers:
+      Host: vp13.cc.cd
+    path: /fp=chrome
+- name: 🇭🇰 香港 | trojan | 82
+  password: KV63147582
+  port: 443
+  server: electric-sturgeon.rooster465.autos
+  sni: electric-sturgeon.rooster465.autos
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 83
+  password: IL37892054
+  port: 443
+  server: just-alpaca.rooster465.autos
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 84
+  password: WF42809561
+  port: 443
+  server: top-goshawk.rooster465.autos
+  type: trojan
+- name: 🇭🇰 香港 | vless | 86
+  network: ws
+  port: 443
+  server: 8.218.22.14
+  servername: vp11.cc.cd
+  tls: true
+  type: vless
+  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
+  ws-opts:
+    headers:
+      Host: vp11.cc.cd
+    path: /fp=chrome
+- client-fingerprint: chrome
+  name: 🇭🇰 香港 | vless | 90
+  network: ws
+  port: 8443
+  server: 216.23.86.105
+  servername: s5gydl.936.us.ci
+  tls: true
+  type: vless
+  uuid: f4e91fac-25eb-4d26-a14c-c82c3778a0e4
+  ws-opts:
+    headers:
+      Host: s5gydl.936.us.ci
+    path: '%2Fproxyip%3Dtw.william.us.ci%3Fuuid%3Df4e91fac-25eb-4d26-a14c-c82c3778a0e4'
+- name: 🇭🇰 香港 | trojan | 92
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.kiev.ua
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 94
+  password: 72d8e820-7926-4ce3-a87c-b6969f425c79
+  port: 443
+  server: 103.235.46.40
+  skip-cert-verify: true
+  sni: www.baidu.com
+  type: trojan
+- alterId: 2
+  cipher: auto
+  name: 香港|@ripaojiedian
+  network: tcp
+  port: '30807'
+  server: v10.hdacd.com
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: US_speednode_0055
+  port: 14005
+  reality-opts:
+    public-key: sKWozGVep6wrIm63253QviGBtMLVrGB_W1JJHLEHi0s
+    short-id: '!!str 97a01dfaef'
+  server: vip.bcjdvip.com
+  servername: apple.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
+- name: 🇭🇰 香港 | trojan | 97
+  network: ws
+  password: '!!str 521314'
+  port: 443
+  server: 122.10.119.252
+  sni: tjplay.lxdxo.kdns.fr
+  type: trojan
+  ws-opts:
+    headers:
+      Host: tjplay.lxdxo.kdns.fr
+    path: '%2F'
+- name: 7| HK
+  password: a305ac08-d136-11ee-b6db-f23c91cfbbc9
+  port: 443
+  server: ffc60249-t53wg0-t92wi1-1qkeg.hk2.hyhuawei.com
+  sni: ffc60249-t53wg0-t92wi1-1qkeg.hk2.hyhuawei.com
+  tls: false
+  type: hysteria2
+- name: 🇭🇰 香港 | trojan | 102
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.kharkov.ua
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 105
+  password: XG59623478
+  port: 443
+  server: growing-oyster.rooster465.autos
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 106
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.kherson.ua
+  type: trojan
+- name: 🇭🇰 香港 | vless | 110
+  network: ws
+  port: 8443
+  server: 216.23.93.24
+  servername: s5gydl.936.us.ci
+  tls: true
+  type: vless
+  uuid: f4e91fac-25eb-4d26-a14c-c82c3778a0e4
+  ws-opts:
+    headers:
+      Host: s5gydl.936.us.ci
+    path: '%2Fproxyip%3Dtw.william.us.ci%3Fuuid%3Df4e91fac-25eb-4d26-a14c-c82c3778a0e4fp=chrome'
+- grpc-opts:
+    grpc-service-name: zhs
+  name: 🇭🇰 香港 | trojan | 127
+  network: grpc
+  password: f0283949-16ba-3060-89f4-4dacb9451ce7
+  port: 37443
+  server: kjr1hk.susun.co
+  skip-cert-verify: true
+  type: trojan
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: 🇭🇰 香港 | vless | 128
+  port: 45003
+  reality-opts:
+    public-key: UOm0J3F4jQCKZUJXU0roM9yhl7YwTcibxYgXnfY6kF8
+    short-id: '!!str 8bce'
+  server: beatr-hk3.599789.xyz
+  servername: www.tesla.com
+  tls: false
+  type: vless
+  uuid: 2d1470a0-fa48-4d3b-8378-b827b744ac00
+- name: 🇭🇰 香港 | vless | 129
+  port: 10443
+  server: jc.20120222.xyz
+  tls: false
+  type: vless
+  uuid: 71a7db14-1b6f-5aec-9e5d-9bd5f8beabab
+- client-fingerprint: chrome
+  name: 🇭🇰 香港 | vless | 130
+  port: 2052
+  reality-opts:
+    public-key: aI_luZYgQhUBKncsor71U4sfvMiaOmzKQVeCAwHwDEU
+    short-id: '!!str d604ae16'
+  server: hom12.sytes.net
+  servername: www.yahoo.com
+  tls: false
+  type: vless
+  uuid: 344a1397-6e71-4381-8895-d67e77a87ac1
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443
+  name: 🇭🇰 香港 | vless | 133
+  port: 29876
+  server: xsus.xs-us.net
+  servername: sni.eos-suzhou-4.cmecloud.cn
+  tls: true
+  type: vless
+  uuid: fa1464f2-0fec-47c9-97da-d6964de37f0e
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇭🇰 香港 | vless | 135
+  port: 14003
+  reality-opts:
+    public-key: bHHdXJs2NGgY4tDUBwmoLBaKM7y_5sd49geQcdbihz0
+    short-id: '!!str 80963776'
+  server: vip.bcjdvip.com
+  servername: apple.com
+  tls: false
+  type: vless
+  uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: 🇭🇰 香港 | vless | 136
+  port: 14007
+  reality-opts:
+    public-key: wybFjQzLnkKIaaTEhwp_N9UXU8miqds9U__P971YHlU
+    short-id: '!!str 1d89ebb78c'
+  server: vip.bcjdvip.com
+  servername: apple.com
+  tls: false
+  type: vless
+  uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: 🇭🇰 香港 | vless | 137
+  port: 14002
+  reality-opts:
+    public-key: D4eZTpgaPV_2YQa7cbiDMGnZs6NBEU2JkfUroHpvoWs
+    short-id: '!!str 7cabb05b68f63b'
+  server: vip.bcjdvip.com
+  servername: apple.com
+  tls: false
+  type: vless
+  uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇭🇰 Hong Kong 6aa2 | SNI - www....
-  network: tcp
-  port: 19279
+  name: 🇭🇰 香港 | vless | 138
+  port: 13413
   reality-opts:
-    public-key: 8_fdD3bAbJaIW_MAVe0bR3t6WrtXUnJc12m9KO03fzI
-    short-id: '!!str 78e9a0e9'
-  server: hw01v.t11-a.app
+    public-key: epgveXEcUs0sbs4jV_1KldTkZGnWUHfMKcs0XNyP41Y
+    short-id: '!!str a1b2c3d4'
+  server: zzhk6.ainivp.com
+  servername: www.microsoft.com
+  tls: false
+  type: vless
+  uuid: 9204afcd-026e-781f-1abc-c03efabd1344
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇭🇰 香港 | vless | 140
+  port: 8443
+  reality-opts:
+    public-key: uWB8HfNVK_-9KtjDGjmBovnYxTh6wN95APRUBmCC30M
+    short-id: '!!str fe31454fcc98d74d'
+  server: profit-hk-01.live
+  servername: rbc.ru
+  tls: false
+  type: vless
+  uuid: 0f7bf188-b5e0-4d14-bd42-e1e64747c165
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇭🇰 香港 | vless | 141
+  port: 17188
+  reality-opts:
+    public-key: g-Rc56odSO_5SFo_eJUUuGkF-UpOPj94X0g0jqhCnRA
+    short-id: '!!str d04cdd72f15e07'
+  server: tomhk1.chatagent.online
   servername: www.cloudflare.com
   tls: false
   type: vless
-  uuid: 1f56cd31-87f4-47cf-aac9-a8fc9bca8eed
-- name: 低延迟-01-172.64.148.42:2053-c0-t...
-  network: ws
+  uuid: 2d1470a0-fa48-4d3b-8378-b827b744ac00
+- name: 🇭🇰 香港 | trojan | 145
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 2053
-  server: 172.64.148.42
-  servername: nfs.kdns.fr
+  server: official.tokyometropolis.odesa.ua
+  type: trojan
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇭🇰 香港 | vless | 146
+  port: 54387
+  reality-opts:
+    public-key: qqb-vrDIPSrFIithw497zM-LmGUEcTo-dqAjhHi6kyY
+    short-id: '!!str f810'
+  server: 1.sdwan.realm-sync.com
+  servername: swcdn.apple.com
+  tls: false
+  type: vless
+  uuid: e0c3a80e-6290-4c29-9605-fbd6c4fb3322
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443
+  name: 🇭🇰 香港 | vless | 148
+  port: 443
+  server: hk1.ap221.com
+  servername: hk.ap221.com
   tls: true
   type: vless
-  uuid: e0240134-0986-4b92-a230-fdc8d1200456
-  ws-opts:
-    headers:
-      Host: nfs.kdns.fr
-    path: '%2Fvless'
+  uuid: 3a1d7c1d-09c6-4c81-8e11-75dd4ab1ac07
+- name: 🇭🇰 香港 | trojan | 151
+  password: KV63147582
+  port: 443
+  server: amused-peacock.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- client-fingerprint: firefox
+  name: 🇭🇰 香港 | vless | 152
+  port: 2083
+  server: core-hk.cdn.sx
+  servername: core-hk.cdn.sx
+  tls: true
+  type: vless
+  uuid: 1d69b662-74b4-46e4-8353-7c48e11ab9cd
+- name: 🇭🇰 香港 | trojan | 154
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.odessa.ua
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 155
+  password: 4123ae62-0999-4984-8ead-091630e594a9
+  port: 443
+  server: n2.chateditimage.com
+  type: trojan
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇭🇰 香港 | vless | 156
+  port: 13610
+  reality-opts:
+    public-key: DI6vTFBBSNeTblRpUwPuATIiNRUUbFyZwkzjNLPsT0E
+    short-id: '!!str 3f34b0dd'
+  server: p9kz7mp4a97c1f-r7.edg3.org
+  servername: v5-dy-e.ixigua.com
+  tls: false
+  type: vless
+  uuid: 29db9d7a-2ce0-4d54-9c96-669fedc63f44
+- name: 🇭🇰 香港 | trojan | 157
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.ivano-frankivsk.ua
+  type: trojan
+- name: 🇭🇰 香港 | trojan | 158
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.kyiv.ua
+  type: trojan
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇭🇰 香港 | vless | 159
+  port: 13613
+  reality-opts:
+    public-key: HHELCCDoATrULkMMKyMk_7gC3DnYiSBlcV0NALyM5S0
+    short-id: '!!str 0275ce45'
+  server: p9kz7mp4a97c1f-r7.edg3.org
+  servername: v5-dy-e.ixigua.com
+  tls: false
+  type: vless
+  uuid: 29db9d7a-2ce0-4d54-9c96-669fedc63f44
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇭🇰 香港 | vless | 160
+  port: 13615
+  reality-opts:
+    public-key: rvE1vLjyIjfwY3llzuC7ZFOuS7xJJMb5VMMDcYly_08
+    short-id: '!!str ffbe72e6'
+  server: p9kz7mp4a97c1f-r7.edg3.org
+  servername: v5-dy-e.ixigua.com
+  tls: false
+  type: vless
+  uuid: 29db9d7a-2ce0-4d54-9c96-669fedc63f44
+- name: 🇭🇰 香港 | trojan | 163
+  password: d4d7a8df-eafc-4693-8680-1cc998822aa0
+  port: 443
+  server: node1-vpn.hrzy.me
+  skip-cert-verify: false
+  type: trojan
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇭🇰 香港 | vless | 164
+  network: tcp
+  port: 14010
+  reality-opts:
+    public-key: PT1gw9B5majPBH2_qST-vymli9f6RlTmvGS2gPtdhF8
+    short-id: '!!str 1ebaa8ea57a71ffc'
+  server: vip.bcjdvip.com
+  servername: apple.com
+  tls: false
+  type: vless
+  uuid: 3e06720a-86f0-49b9-8f00-062681e3b385
+- name: 🇭🇰 香港 | trojan | 165
+  password: CF68213490
+  port: 443
+  server: well-marmot.rooster465.autos
+  skip-cert-verify: false
+  sni: well-marmot.rooster465.autos
+  type: trojan
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇭🇰HK_1|3.1MB/s
+  network: tcp
+  port: '443'
+  reality-opts:
+    public-key: CdNLdccy_ALnjDvwZa14eP31CoJ_BLqJAS2OLCNwogg
+    short-id: '!!str d19dcb524604e214'
+  server: z-hkl.h.w.466688.xyz
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1b6de5d8-3285-422c-b6fe-2989918f528b
+  xudp: true
 - alterId: 0
   cipher: auto
   name: HK
@@ -1602,15 +2442,6 @@ proxies:
     headers:
       Host: sni.111000.cc.cd
     path: '%2F%3Fed%3D2560%26Telegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2'
-- alterId: 2
-  cipher: auto
-  name: 🇭🇰 香港 | HKG
-  network: tcp
-  port: '30809'
-  server: v9.hdacd.com
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - client-fingerprint: safari
   name: HK194｜原生/疑似家宽｜非常安全
   network: tcp
@@ -1663,25 +2494,6 @@ proxies:
     headers:
       Host: hkt.gotochinatown.net
     path: /
-- alterId: 2
-  cipher: auto
-  name: 香港|@ripaojiedian
-  network: tcp
-  port: '30807'
-  server: v10.hdacd.com
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- alterId: 2
-  cipher: auto
-  name: 🇭🇰 香港|@ripaojiedian
-  port: 30807
-  server: v10.hdacd.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - name: HK_speednode_0008
   password: 25b2699a-e18e-11ec-8e69-f23c91cfbbc9
   port: 8443
@@ -1690,3 +2502,15 @@ proxies:
   type: http
   udp: true
   username: 25b2699a-e18e-11ec-8e69-f23c91cfbbc9
+- name: HK【机场推荐：https://a9a.xyz】7
+  network: ws
+  port: 8443
+  server: 185.241.42.81
+  servername: s5gydl.936.us.ci
+  tls: true
+  type: vless
+  uuid: f4e91fac-25eb-4d26-a14c-c82c3778a0e4
+  ws-opts:
+    headers:
+      Host: s5gydl.936.us.ci
+    path: /proxyip=tw.william.us.ci?uuid=f4e91fac-25eb-4d26-a14c-c82c3778a0e4fp=chrome
