@@ -334,7 +334,7 @@ proxies:
   uuid: eab915bc-d2df-73d1-47d0-6eb240497055
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: RU【机场推荐：https://a9a.xyz】10
+  name: RU【机场推荐：https://a9a.xyz】9
   network: raw
   port: 443
   reality-opts:
@@ -345,17 +345,19 @@ proxies:
   tls: false
   type: vless
   uuid: 153560b0-1a33-4b44-b059-ca5b22e55c19
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇬🇧GB_3|2.5MB/s
-  network: raw
-  port: 443
+- client-fingerprint: qq
+  http-opts:
+    headers: {}
+    path:
+    - /
+  name: 🇬🇧GB_1|2.0MB/s
+  network: tcp
+  port: '443'
   reality-opts:
     public-key: 4e4FI0siWxFtLCRCVDQurn1wLTuvKWhRY0zj1SaUcyw
     short-id: '!!str 1559b440'
   server: 77.110.113.188
   servername: www.samsung.com
-  skip-cert-verify: true
   tls: true
   type: vless
   udp: true
@@ -373,7 +375,7 @@ proxies:
     headers:
       Host: cf11.evan00.dpdns.org
     path: '%2FTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2'
-- name: RU【机场推荐：https://a9a.xyz】1
+- name: RU【机场推荐：https://a9a.xyz】16
   network: ws
   port: 4100
   server: 5.129.194.34
@@ -385,18 +387,21 @@ proxies:
       Host: live.ok.ru
     path: '%2Fv1'
 - client-fingerprint: chrome
+  encryption: none
   flow: xtls-rprx-vision
-  name: 🇫🇷 法国 | vless | 201
-  network: tcp
-  port: 443
+  name: 🇫🇷FR_2|1.9MB/s
+  network: raw
+  port: '443'
   reality-opts:
     public-key: 2dgS9vJTywAfGZmlkuzDIIXLUR-E1A-0na8_W--ruUc
     short-id: '!!str 5be8210215'
   server: 89.208.113.157
   servername: parisjetaime.com
-  tls: false
+  tls: true
   type: vless
+  udp: true
   uuid: 1f4c983e-382c-d2fa-b2dc-7981f02b34de
+  xudp: true
 - client-fingerprint: edge
   flow: xtls-rprx-vision
   name: '🇷🇺 UFO Hosting — #24'
@@ -5043,21 +5048,17 @@ proxies:
   tls: false
   type: vless
   uuid: 83cd3888-2ebe-4cb0-a012-d3c572358ac9
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇮🇹IT_1|2.2MB/s
-  network: tcp
-  port: '443'
+- client-fingerprint: firefox
+  name: 🇷🇺 俄罗斯 | vless | 794
+  port: 443
   reality-opts:
     public-key: QapbUJT61NbhceZHd1X5ylScWQpkHOEkUZ5VG6p53w4
     short-id: '!!str ed1fd4c7'
   server: 51.250.3.73
   servername: ads.x5.ru
-  tls: true
+  tls: false
   type: vless
-  udp: true
   uuid: 3fffe7ed-7374-57ba-956f-6e930f10f04f
-  xudp: true
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: 🇷🇺 俄罗斯 | vless | 795
@@ -5298,16 +5299,22 @@ proxies:
   type: vless
   uuid: 0ac9aa84-cef2-40a5-8e81-31eb25174947
 - client-fingerprint: safari
+  encryption: none
   grpc-opts:
     grpc-service-name: moktana.net.v1.StreamService
-  name: 🇷🇺 俄罗斯 | vless | 836
+  name: 🇱🇹LT_1|1.8MB/s
   network: grpc
-  port: 443
+  port: '443'
+  reality-opts:
+    public-key: C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4
+    short-id: '!!str 1c8d5a7f4e2b9c6d'
   server: 5.129.201.40
   servername: auth.moktana.app
   tls: true
   type: vless
+  udp: true
   uuid: 190bab80-d7b5-4065-a81f-49a6953bb365
+  xudp: true
 - alpn:
   - http/1.1
   client-fingerprint: chrome
@@ -6462,6 +6469,23 @@ proxies:
   tls: false
   type: vless
   uuid: c75dc5b4-4705-4daa-83d5-6c63577dafc3
+- client-fingerprint: firefox
+  encryption: none
+  grpc-opts:
+    grpc-service-name: moktana.net.v1.StreamService
+  name: 🇷🇺RU_1|1.7MB/s
+  network: grpc
+  port: '443'
+  reality-opts:
+    public-key: C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4
+    short-id: '!!str 9e2a6f4c3b7d1e8a'
+  server: ru.moktana.app
+  servername: ru.moktana.app
+  tls: true
+  type: vless
+  udp: true
+  uuid: 696915f2-5ad4-452b-987c-d83d29d0503a
+  xudp: true
 - alterId: 0
   cipher: chacha20-ietf-poly1305
   name: 🇷🇺RU俄罗斯
