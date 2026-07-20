@@ -117,10 +117,10 @@ proxies:
     headers:
       Host: ''
     path: /arki?ed=2048
-- name: 港优-21-172.66.1.18
+- name: 港优续-16-172.66.0.60
   network: ws
   port: 443
-  server: 172.66.1.18
+  server: 172.66.0.60
   servername: nfs.kdns.fr
   tls: true
   type: vless
@@ -142,33 +142,55 @@ proxies:
   tls: false
   type: vless
   uuid: 2428711f-5117-46e9-a2cb-741797a60ed8
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇭🇰 香港 | vless | 06
-  network: raw
-  port: 59750
-  reality-opts:
-    public-key: W9BjX6YmCIVsjhKMlz233Yoe0xcf0SVHfvPKqbf3vCg
-    short-id: '!!str '
-  server: 47.83.153.19
-  servername: www.amd.com
-  tls: false
+- name: 🇭🇰香港-15
+  network: ws
+  port: 443
+  server: 162.159.154.254
+  servername: nfs.kdns.fr
+  tls: true
   type: vless
-  uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: '[431ms HK HK  @vlesstrojan]'
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: uWB8HfNVK_-9KtjDGjmBovnYxTh6wN95APRUBmCC30M
-    short-id: '!!str fe31454fcc98d74d'
-  server: profit-hk-01.live
-  servername: rbc.ru
-  tls: false
+  uuid: e0240134-0986-4b92-a230-fdc8d1200456
+  ws-opts:
+    headers:
+      Host: nfs.kdns.fr
+    path: '%2Fvless'
+- name: 🇭🇰 1978bf
+  network: ws
+  port: 443
+  server: 104.129.166.54
+  servername: va.zhuk.us.kg
+  tls: true
   type: vless
-  uuid: 0f7bf188-b5e0-4d14-bd42-e1e64747c165
-- name: HK VLESS-100 | free-nodes
+  uuid: 71ed6628-5870-4d19-8a52-f2a3ba3d4898
+  ws-opts:
+    headers:
+      Host: va.zhuk.us.kg
+    path: '%2FProxyIP%3DProxyIP.US.fxxk.dedyn.io'
+- name: HK香港(mibei77.com 米贝节点分享)
+  network: ws
+  password: 4c3164ee-abcf-4091-abea-d1cd4937a68d
+  port: 443
+  server: 104.253.175.202
+  skip-cert-verify: true
+  sni: jy.hhllfly.kdns.fr
+  type: trojan
+  ws-opts:
+    headers:
+      Host: jy.hhllfly.kdns.fr
+    path: '%2F%3Fed%3D2048'
+- name: HK-01-172.64.148.42:2053-STABL...
+  network: ws
+  port: 2053
+  server: 172.64.148.42
+  servername: nfs.kdns.fr
+  tls: true
+  type: vless
+  uuid: e0240134-0986-4b92-a230-fdc8d1200456
+  ws-opts:
+    headers:
+      Host: nfs.kdns.fr
+    path: '%2Fvless'
+- name: HK VLESS-87 | free-nodes
   network: ws
   port: 443
   server: vpn3.rnmcnm.com
@@ -177,30 +199,27 @@ proxies:
   uuid: c3d4e5f6-7890-1234-5678-90abcdef1234
   ws-opts:
     path: /ray
-- name: 🇭🇰
-  network: ws
-  port: 8880
-  server: 176.124.223.29
+- alpn:
+  - h3
+  name: HK HY2-665 | free-nodes
+  password: 9794d18f-9280-3553-a7a5-a23da75aca76
+  port: 443
+  server: s306.okgg.top
+  sni: u691611ub93696d0s298.wagahaha.xyz
   tls: false
+  type: hysteria2
+- name: 'HK香港(mibei77.com 米贝节点分享) #1'
+  network: ws
+  port: 443
+  server: 198.71.190.42
+  servername: snippet.danfeng.rr.kg
+  tls: true
   type: vless
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
   ws-opts:
     headers:
-      Host: hk.laoyoutiao.link
-    path: '%2F'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇭🇰 Hong Kong d3b6 | SNI - swcd...
-  network: tcp
-  port: 5457
-  reality-opts:
-    public-key: 8Ct9wBZLha-ePZMWbSau9ViKgbwlCgEsbGMjNnoVDzw
-    short-id: '!!str 9da3779ceafd'
-  server: 203.175.12.216
-  servername: swcdn.apple.com
-  tls: false
-  type: vless
-  uuid: 48959fe8-4a5e-4996-bc87-8d66398e6860
+      Host: snippet.danfeng.rr.kg
+    path: '%2Fdanfeng'
 - client-fingerprint: firefox
   name: 🇭🇰 香港 | vless | 01
   port: 45647
@@ -238,6 +257,18 @@ proxies:
     headers:
       Host: sni.jpmj.dev
     path: '%2F%3Fed%3D2560%26Telegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2security=tls'
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇭🇰 香港 | vless | 06
+  port: 59750
+  reality-opts:
+    public-key: W9BjX6YmCIVsjhKMlz233Yoe0xcf0SVHfvPKqbf3vCg
+    short-id: '!!str '
+  server: 47.83.153.19
+  servername: www.amd.com
+  tls: false
+  type: vless
+  uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
 - alterId: 0
   cipher: auto
   name: 🇭🇰 香港 | vmess | 07
@@ -459,18 +490,6 @@ proxies:
     headers:
       Host: t1s1.rittbo.kdns.fr
     path: /fp=chromesecurity=tls
-- name: 🇭🇰 香港 | trojan | 47
-  network: ws
-  password: '!!str 162534'
-  port: 2053
-  server: 45.38.42.198
-  skip-cert-verify: true
-  sni: cchh2.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: cchh2.pages.dev
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
 - name: 🇭🇰 香港 | vless | 49
   network: ws
   port: 443
@@ -833,6 +852,15 @@ proxies:
   tls: false
   type: vless
   uuid: 1f56cd31-87f4-47cf-aac9-a8fc9bca8eed
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443
+  name: 🇭🇰 香港 | vless | 114
+  port: 29876
+  server: xsus.xs-us.net
+  servername: sni.eos-suzhou-4.cmecloud.cn
+  tls: true
+  type: vless
+  uuid: fa1464f2-0fec-47c9-97da-d6964de37f0e
 - alterId: 0
   name: HK6 554.7KB/s
   password: XG59623478
@@ -849,16 +877,9 @@ proxies:
   tls: false
   type: vless
   uuid: 763dd3ae-ace3-47f7-a88c-1387311af4d6
-- cipher: aes-256-gcm
-  name: 🇭🇰HK_1|5.1MB/s
-  password: 95c3d114-5370-3e54-832a-5a5acc492b9b
-  port: '1416'
-  server: n.j.y.y.h.z.g.e.d.hk06-ae5.entry.v51124-5.qpon
-  type: ss
-  udp: true
 - client-fingerprint: ios
   flow: xtls-rprx-vision
-  name: 🇭🇰HK_2|2.5MB/s
+  name: 🇭🇰HK_1|1.8MB/s
   network: tcp
   port: '34757'
   reality-opts:
@@ -871,6 +892,16 @@ proxies:
   udp: true
   uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
   xudp: true
+- alterId: 0
+  name: HK 580.4KB/s
+  password: KV63147582
+  port: 443
+  server: electric-sturgeon.rooster465.autos
+  skip-cert-verify: true
+  sni: electric-sturgeon.rooster465.autos
+  tls: true
+  type: trojan
+  udp: true
 - alterId: 0
   name: HK2 548.0KB/s
   password: CF68213490
