@@ -1,8 +1,8 @@
 proxies:
-- name: 台湾-03-162.159.192.5:443-c4
+- name: 低延迟-06-172.64.147.78:8443-c2-t...
   network: ws
-  port: 443
-  server: 162.159.192.5
+  port: 8443
+  server: 172.64.147.78
   servername: nfs.kdns.fr
   tls: true
   type: vless
@@ -11,43 +11,50 @@ proxies:
     headers:
       Host: nfs.kdns.fr
     path: '%2Fvless'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇹🇼 Taiwan 808d | SNI - www.tec...
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: q42m1wg11kZLyRtjaKus8T-NNl1vriRG3V1eVTL6ICc
-    short-id: '!!str 960e1c59701f'
-  server: download.riferoser.icu
-  servername: www.techradar.com
-  tls: false
-  type: vless
-  uuid: 29621ca8-099f-4109-821e-a8c8aee894b6
-- name: 🇦🇹 奥地利 | trojan | 18
-  password: '!!str 1234567890'
-  port: 443
-  server: 77.110.116.7
-  skip-cert-verify: false
-  sni: kfm-bn0.pages.dev
-  type: trojan
 - alpn:
   - ''
   client-fingerprint: ''
   flow: xtls-rprx-vision
   grpc-opts:
     grpc-service-name: ''
-  name: TW VLESS-192 | free-nodes
+  name: TW VLESS-194 | free-nodes
   network: tcp
   port: 443
   server: 82.47.22.163
-  servername: u723829us501.okgfw.top
+  servername: u723828us501.okgfw.top
+  tls: true
+  type: vless
+  uuid: 723af53a-b131-3270-8ce0-13f8ecaaa322
+  ws-opts:
+    headers:
+      Host: s501.okgfw.top
+    path: ''
+- client-fingerprint: firefox
+  name: '🇹🇼 [VL] Тайвань #15401 | РосТу...'
+  network: ws
+  port: 2053
+  server: 104.17.190.87
+  servername: vp9.cc.cd
+  tls: true
+  type: vless
+  uuid: 663cf772-829c-4bc6-893d-b7d021d42f5b
+- alpn:
+  - ''
+  client-fingerprint: ''
+  flow: xtls-rprx-vision
+  grpc-opts:
+    grpc-service-name: ''
+  name: TW VLESS-161 | free-nodes
+  network: tcp
+  port: 443
+  server: 82.47.22.163
+  servername: u723829us348.okgfw.top
   tls: true
   type: vless
   uuid: 1c65bee4-bc54-364c-8988-6a5912fda891
   ws-opts:
     headers:
-      Host: s501.okgfw.top
+      Host: s348.okgfw.top
     path: ''
 - name: 🇹🇼 台湾 | trojan | 03
   password: 736cd94d-7b94-3e44-8106-3419f64eaf09
@@ -70,11 +77,6 @@ proxies:
   password: 3ac6a6ca99f74941b1eaf892818e2ddb
   port: 443
   server: 85.237.207.189
-  type: trojan
-- name: 🇹🇼 台湾 | trojan | 06
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 8443
-  server: official.taipeicitygovernment.com.ua
   type: trojan
 - name: 🇹🇼 台湾 | trojan | 07
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
@@ -293,6 +295,13 @@ proxies:
   tls: false
   type: vless
   uuid: d44ed678-88ff-4bb4-b170-1a397a2f7ee2
+- name: 🇹🇼 台湾 | trojan | 44
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 12405
+  server: starlink-tw5.mfa.cat
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  type: trojan
 - client-fingerprint: chrome
   name: TW4｜商宽｜非常安全
   network: tcp
