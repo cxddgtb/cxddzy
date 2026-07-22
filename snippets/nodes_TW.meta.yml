@@ -1,34 +1,21 @@
 proxies:
+- name: 🇹🇼 台湾 | trojan | 12
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.dp.ua
+  type: trojan
 - alpn:
-  - ''
-  client-fingerprint: ''
-  flow: xtls-rprx-vision
+  - h2
   grpc-opts:
-    grpc-service-name: ''
-  name: TW VLESS-181 | free-nodes
-  network: tcp
+    grpc-service-name: db
+  name: TW TROJAN-45 | free-nodes
+  network: grpc
+  password: 3f5bc61547b1f0d9
   port: 443
-  server: 82.47.22.163
-  servername: u716087us501.okgfw.top
-  tls: true
-  type: vless
-  uuid: 205d6869-02ca-3b36-b933-be2465250c7e
-  ws-opts:
-    headers:
-      Host: s501.okgfw.top
-    path: ''
-- name: 🇨🇳台湾-4
-  network: ws
-  port: 443
-  server: 104.21.0.192
-  servername: nfs.kdns.fr
-  tls: true
-  type: vless
-  uuid: e0240134-0986-4b92-a230-fdc8d1200456
-  ws-opts:
-    headers:
-      Host: nfs.kdns.fr
-    path: '%2Fvless'
+  server: 125.227.86.46
+  skip-cert-verify: true
+  sni: TG.freecodes
+  type: trojan
 - name: 🇹🇼 台湾 | vless | 03
   network: ws
   port: 10004
@@ -65,11 +52,6 @@ proxies:
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
   server: official.taipeicitygovernment.ivano-frankivsk.ua
-  type: trojan
-- name: 🇹🇼 台湾 | trojan | 12
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 8443
-  server: official.taipeicitygovernment.dp.ua
   type: trojan
 - name: 🇹🇼 台湾 | trojan | 14
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
@@ -153,6 +135,18 @@ proxies:
   port: 443
   server: 85.237.207.189
   type: trojan
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼 台湾 | vless | 29
+  port: 443
+  reality-opts:
+    public-key: JE82iOR_U_H7ffxJ5yfoxXeRkMlE-aVu1wxR7n6jrVM
+    short-id: '!!str 473277e2'
+  server: tw3.miyazono-kaori.com
+  servername: dlcdnets.asus.com
+  tls: false
+  type: vless
+  uuid: 580d81f8-4f30-49d6-ad90-59fb4a850313
 - name: 🇹🇼 台湾 | trojan | 30
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
@@ -217,6 +211,18 @@ proxies:
   skip-cert-verify: true
   sni: www.cloudflare.com
   type: trojan
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼 台湾 | vless | 43
+  port: 32166
+  reality-opts:
+    public-key: OdTELUjAUKO_qr-O-uihaAZJAhA8GyIWVI6CpozVCU4
+    short-id: '!!str 6c6c7c97'
+  server: 3696b38bsg.murphyweb.sbs
+  servername: buylite.music.apple.com
+  tls: false
+  type: vless
+  uuid: d44ed678-88ff-4bb4-b170-1a397a2f7ee2
 - alterId: 0
   cipher: auto
   name: 🇹🇼 台湾 | vmess | 44
@@ -337,10 +343,3 @@ proxies:
   type: vless
   udp: true
   uuid: 52faee73-e0fe-4661-992d-67259257170f
-- name: 🇹🇼 🇨🇳 台湾 | TWN
-  password: '!!str 3632736327'
-  port: 1321
-  server: tw060401.tmdsb.org
-  skip-cert-verify: true
-  sni: tw060401.tmdsb.org
-  type: trojan
