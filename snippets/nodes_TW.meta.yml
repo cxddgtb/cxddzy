@@ -15,15 +15,27 @@ proxies:
   port: 8443
   server: official.taipeicitygovernment.dp.ua
   type: trojan
+- name: 🇨🇳台湾-1
+  network: ws
+  port: 443
+  server: 104.21.0.1
+  servername: nfs.kdns.fr
+  tls: true
+  type: vless
+  uuid: e0240134-0986-4b92-a230-fdc8d1200456
+  ws-opts:
+    headers:
+      Host: nfs.kdns.fr
+    path: '%2Fvless'
 - alpn:
   - h2
   grpc-opts:
     grpc-service-name: db
-  name: 🇹🇼 台湾 | trojan | 18
+  name: TW TROJAN-46 | free-nodes
   network: grpc
-  password: 3f5bc61547b1f0d9
+  password: 0a9f1f5a397bd427
   port: 443
-  server: 125.227.86.46
+  server: 125.227.86.45
   skip-cert-verify: true
   sni: TG.freecodes
   type: trojan
@@ -79,10 +91,17 @@ proxies:
   port: 8443
   server: official.taipeicitygovernment.if.ua
   type: trojan
-- name: 🇹🇼 台湾 | trojan | 17
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 8443
-  server: official.taipeicitygovernment.org.ua
+- alpn:
+  - h2
+  grpc-opts:
+    grpc-service-name: db
+  name: 🇹🇼 台湾 | trojan | 18
+  network: grpc
+  password: 3f5bc61547b1f0d9
+  port: 443
+  server: 125.227.86.46
+  skip-cert-verify: true
+  sni: TG.freecodes
   type: trojan
 - name: 🇹🇼 台湾 | trojan | 21
   password: 736cd94d-7b94-3e44-8106-3419f64eaf09
