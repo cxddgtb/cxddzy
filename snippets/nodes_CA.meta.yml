@@ -1367,7 +1367,7 @@ proxies:
     path: '%2FRoBeRt'
 - client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: 🇸🇨 塞舌尔 | vless | 03
+  name: 🇸🇨 塞舌尔 | vless | 02
   network: tcp
   port: 443
   reality-opts:
@@ -2639,7 +2639,7 @@ proxies:
     path: Telegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇦 加拿大 | vless | 02
+  name: 🇨🇦 加拿大 | vless | 04
   network: tcp
   port: 41373
   reality-opts:
@@ -2652,7 +2652,7 @@ proxies:
   uuid: a71c8954-66a8-4321-bedb-2336230d81ce
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 08
+  name: 🇨🇦 加拿大 | vmess | 06
   network: ws
   port: 443
   server: 158.51.121.63
@@ -2664,16 +2664,58 @@ proxies:
     headers:
       Host: seribus.org
     path: /
-- name: 🇨🇦 加拿大 | vless | 10
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 | vmess | 07
+  network: ws
+  port: 443
+  server: 158.51.121.36
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: ''
+    path: /linkvws
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 | vmess | 08
+  network: ws
+  port: 443
+  server: 134.195.198.147
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: inna.cfd
+    path: /linkvws
+- client-fingerprint: chrome
+  name: 🇨🇦 加拿大 | vless | 12
   network: ws
   port: 8443
   server: ov-canada1.09vpn.com
+  servername: ov-canada1.09vpn.com
   skip-cert-verify: false
-  tls: false
+  tls: true
   type: vless
   uuid: 08f96221-9b7b-4e6f-8ffe-aee8b9c9b504
   ws-opts:
-    path: '%2Fvless%2Fsecurity=tls'
+    headers:
+      Host: ov-canada1.09vpn.com
+    path: /vless/
+- client-fingerprint: chrome
+  name: 🇨🇦CA_1|1.9MB/s
+  network: tcp
+  password: 7e70223b-f331-41d5-9313-02b8d2df2885
+  port: '20113'
+  server: d3.catcat321.com
+  skip-cert-verify: true
+  sni: ca.catxstar.com
+  type: trojan
+  udp: true
 - alterId: 0
   cipher: auto
   name: 🇨🇦_CA_加拿大
