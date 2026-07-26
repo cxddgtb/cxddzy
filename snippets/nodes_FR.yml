@@ -176,10 +176,13 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
+  grpc-opts:
+    grpc-service-name: ''
   name: '法国 015 #1'
   network: grpc
   port: 2096
   server: 51.254.142.162
+  servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -316,6 +319,7 @@ proxies:
   network: ws
   port: 80
   server: 51.254.133.152
+  servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -374,11 +378,29 @@ proxies:
     headers:
       Host: hhtj.hhllfly.kdns.fr
     path: '%2Fpyip%3DTelegram-WangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: '🇫🇷 #12'
+- name: 🇫🇷 France, Paris 09 Opéra | [B...
+  network: tcp
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 45619
+  server: 188.253.12.92
+  skip-cert-verify: true
+  sni: fr.01.naiun.bilibili.com
+  type: trojan
+- name: '>>@v2line::FR'
   network: ws
   password: humanity
   port: 443
-  server: 172.64.152.23
+  server: 104.18.32.37
+  skip-cert-verify: true
+  sni: www.gossipglove.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- name: '>>@oneclickvpnkeys::FR'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.17.131.88
   skip-cert-verify: false
   sni: www.gossipglove.com
   type: trojan
@@ -386,31 +408,113 @@ proxies:
     headers:
       Host: www.gossipglove.com
     path: '%2Fassignment'
-- name: '🇫🇷 #14'
+- name: 🇫🇷
+  network: ws
+  password: '!!str 521314'
+  port: 443
+  server: 45.67.215.9
+  skip-cert-verify: true
+  sni: tjplay.lxdxo.kdns.fr
+  type: trojan
+  ws-opts:
+    headers:
+      Host: tjplay.lxdxo.kdns.fr
+    path: '%2FTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2'
+- name: '[1596]️🌤️ 🇫🇷 FRA [TR] #6091ee'
+  password: 598c19f3-a48e-47cd-8451-1ba04ea094d0
+  port: 80
+  server: 51.91.11.29
+  type: trojan
+- name: 🇮🇷 伊朗 | trojan | 165
+  network: ws
+  password: humanity
+  port: 40443
+  server: 2.144.21.112
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.ignitelimit.com
+    path: /assignment
+- name: 🇦🇹 奥地利 | trojan | 09
   network: ws
   password: humanity
   port: 443
-  server: 104.18.32.47
-  skip-cert-verify: false
+  server: 212.183.88.136
   sni: www.calmlunch.com
   type: trojan
   ws-opts:
-    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+    path: '%2Fassignment'
 - alpn:
+  - h3
+  - h2
   - http/1.1
-  name: '🇫🇷 #18'
+  name: '🇫🇷 #6'
   network: ws
   password: humanity
   port: 443
-  server: 104.20.42.250
+  server: join-telegram-channel.tirexnet.kdns.fr
   skip-cert-verify: false
+  sni: www.creationlong.org
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.creationlong.org
+    path: '%2Fassignment'
+- name: '🇫🇷 #7'
+  network: ws
+  password: '!!str 521314'
+  port: 443
+  server: 45.131.5.9
+  sni: tjplay.lxdxo.kdns.fr
+  type: trojan
+  ws-opts:
+    path: '%2FTelegram%2B%40WangCai2'
+- alpn:
+  - http/1.1
+  name: 🇫🇷 France [*CIDR]
+  network: ws
+  password: humanity
+  port: 443
+  server: 216.24.57.6
+  skip-cert-verify: true
   sni: www.calmloud.com
   type: trojan
   ws-opts:
     headers:
       Host: www.calmloud.com
     path: '%2Fassignment'
-- name: 🇫🇷 法国 | trojan | 15
+- name: FR TROJAN-43 | free-nodes
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.20.6.134
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.ignitelimit.com
+    path: /assignment
+- alpn:
+  - h3
+  - h2
+  - http/1.1
+  name: '🇫🇷 #10'
+  network: ws
+  password: humanity
+  port: 443
+  server: join-telegram-channel.tirexnet.kdns.fr
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.ignitelimit.com
+    path: '%2Fassignment'
+- name: 🇫🇷 法国 | trojan | 07
   network: ws
   password: humanity
   port: 443
@@ -421,9 +525,15 @@ proxies:
     headers:
       Host: www.creationlong.org
     path: '%2Fassignment'
+- name: 🇫🇷 法国 | trojan | 53
+  password: e0d44ae7-cb7d-4acc-a8c0-9861a6f5eaad
+  port: 80
+  server: 51.91.11.29
+  sni: asriran.com
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 51
+  name: 🇫🇷 法国 | vmess | 54
   network: ws
   port: 80
   server: 51.83.97.167
@@ -435,31 +545,19 @@ proxies:
     headers:
       Host: ''
     path: /vmess
-- name: 🇫🇷 法国 | trojan | 63
-  password: e0d44ae7-cb7d-4acc-a8c0-9861a6f5eaad
-  port: 80
-  server: 51.91.11.29
-  sni: namayesh.com
-  type: trojan
-- name: 🇫🇷 法国 | trojan | 76
-  password: IQ68037294
-  port: 443
-  server: 13.37.222.178
-  sni: correct-pony.rooster465.autos
-  type: trojan
-- name: 🇫🇷 法国 | trojan | 89
+- name: 🇫🇷 法国 | trojan | 73
   password: PD07395842
   port: 443
   server: 13.39.127.43
   sni: united-bedbug.rooster465.autos
   type: trojan
-- name: 🇫🇷 法国 | trojan | 93
-  password: ON38567014
+- name: 🇫🇷 法国 | trojan | 74
+  password: IQ68037294
   port: 443
-  server: 13.39.249.40
-  sni: one-quail.rooster465.autos
+  server: 35.180.10.212
+  sni: firm-warthog.rooster465.autos
   type: trojan
-- name: 🇫🇷 法国 | trojan | 94
+- name: 🇫🇷 法国 | trojan | 77
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
@@ -470,69 +568,25 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 100
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 31.59.121.223
-  sni: Koma-YT.PAGeS.Dev
+- name: 🇫🇷 法国 | trojan | 78
+  password: IQ68037294
+  port: 443
+  server: 13.37.222.178
+  sni: correct-pony.rooster465.autos
   type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 102
+- name: 🇫🇷 法国 | trojan | 79
   password: 6e3b4240-38f9-4321-9b3c-bc669a34b848
   port: 443
   server: 141.94.76.177
   type: trojan
-- name: 🇫🇷 法国 | trojan | 104
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 95.182.98.140
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 117
+- name: 🇫🇷 法国 | trojan | 81
   password: NQ26071394
   port: 443
   server: 15.237.250.154
   skip-cert-verify: false
   sni: chief-cricket.rooster465.autos
   type: trojan
-- name: 🇫🇷 法国 | trojan | 118
-  password: IQ68037294
-  port: 443
-  server: 35.180.10.212
-  sni: firm-warthog.rooster465.autos
-  type: trojan
-- name: 🇫🇷 法国 | trojan | 119
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 31.58.76.50
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 121
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 95.182.97.46
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 139
+- name: 🇫🇷 法国 | trojan | 82
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
@@ -543,62 +597,52 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 143
+- name: 🇫🇷 法国 | trojan | 83
+  password: ON38567014
+  port: 443
+  server: 13.39.249.40
+  sni: one-quail.rooster465.autos
+  type: trojan
+- name: 🇫🇷 法国 | trojan | 96
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
-  server: 188.130.207.30
+  server: 95.182.98.140
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 146
+- name: 🇫🇷 法国 | trojan | 98
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
-  server: 31.59.120.124
+  server: 31.58.76.50
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 156
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 31.56.48.63
-  sni: Koma-YT.PAGeS.Dev
+- name: 🇫🇷 法国 | trojan | 99
+  password: b8808043-6566-4923-9195-e66bfb553d57
+  port: 443
+  server: 51.38.99.96
+  sni: ba24.ir
   type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2
-- name: 🇫🇷 法国 | trojan | 157
+- name: 🇫🇷 法国 | trojan | 102
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
-  server: 31.59.121.199
+  server: 95.182.96.30
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 159
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 31.57.108.170
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 162
+- name: 🇫🇷 法国 | trojan | 105
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
@@ -609,42 +653,75 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇫🇷 法国 | trojan | 163
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 146.19.168.188
-  skip-cert-verify: true
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-- name: 🇫🇷 法国 | trojan | 164
-  password: b8808043-6566-4923-9195-e66bfb553d57
-  port: 443
-  server: 51.38.99.96
-  sni: ba24.ir
-  type: trojan
-- name: 🇫🇷 法国 | trojan | 181
+- name: 🇫🇷 法国 | trojan | 109
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
-  server: 77.110.106.91
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
-- name: 🇫🇷 法国 | trojan | 185
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2096
-  server: 88.218.78.20
+  server: 31.57.108.170
   sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
       Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 123
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 31.59.120.124
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 130
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 188.130.207.30
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 138
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 31.59.121.199
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 144
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 95.182.97.46
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇫🇷 法国 | trojan | 184
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 62.60.157.104
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 法国 | vmess | 186
+  name: 🇫🇷 法国 | vmess | 190
   network: ws
   port: 443
   server: 217.182.76.202
@@ -656,73 +733,159 @@ proxies:
     headers:
       Host: ''
     path: /
-- name: 🇫🇷 法国 | trojan | 206
-  password: 9498f3a0-2992-11ee-a4c7-1239d0255272
-  port: 443
-  server: fr.test3.net
-  sni: zula.ir
+- name: 🇫🇷 法国 | trojan | 192
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 77.110.106.91
+  sni: Koma-YT.PAGeS.Dev
   type: trojan
-- name: 🇫🇷 法国 | trojan | 215
+  ws-opts:
+    path: /trTelegram🇨🇳+@WangCai2
+- name: 🇫🇷 法国 | trojan | 197
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2096
+  server: 88.218.78.20
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
+- name: 🇫🇷 法国 | trojan | 198
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 193.42.61.121
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2
+- name: 🇫🇷 法国 | trojan | 205
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 31.56.48.63
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2
+- name: 🇫🇷 法国 | trojan | 213
   password: 973ed2e0-c4d8-4737-a093-71629148086d
   port: 443
   server: 51.77.213.197
   sni: frt2.sshocean.net
   type: trojan
-- name: 🇫🇷 法国 | trojan | 228
+- name: 🇫🇷 法国 | trojan | 220
   password: IQ68037294
   port: 443
-  server: correct-pony.rooster465.autos
-  sni: correct-pony.rooster465.autos
+  server: humane-bird.rooster465.autos
   type: trojan
-- name: 🇫🇷 法国 | trojan | 229
+- name: 🇫🇷 法国 | trojan | 221
+  password: ON38567014
+  port: 443
+  server: one-quail.rooster465.autos
+  sni: one-quail.rooster465.autos
+  type: trojan
+- name: 🇫🇷 法国 | trojan | 223
+  password: WG39087154
+  port: 443
+  server: nearby-cod.rooster465.autos
+  type: trojan
+- name: 🇫🇷 法国 | trojan | 226
+  password: JT80563429
+  port: 443
+  server: musical-shrew.rooster465.autos
+  type: trojan
+- name: 🇫🇷 法国 | trojan | 227
   password: UZ15382649
   port: 443
   server: moral-dolphin.rooster465.autos
   sni: moral-dolphin.rooster465.autos
   type: trojan
-- name: 🇫🇷 法国 | trojan | 230
+- name: 🇫🇷 法国 | trojan | 229
+  password: 9498f3a0-2992-11ee-a4c7-1239d0255272
+  port: 443
+  server: fr.test3.net
+  sni: zula.ir
+  type: trojan
+- name: 🇫🇷 法国 | trojan | 235
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 146.19.168.188
+  skip-cert-verify: true
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+- name: 🇫🇷 法国 | trojan | 243
+  password: ON38567014
+  port: 443
+  server: lucky-marmot.rooster465.autos
+  sni: lucky-marmot.rooster465.autos
+  type: trojan
+- name: 🇫🇷 法国 | trojan | 244
   password: IQ68037294
   port: 443
-  server: humane-bird.rooster465.autos
+  server: correct-pony.rooster465.autos
+  sni: correct-pony.rooster465.autos
   type: trojan
-- name: 🇫🇷 法国 | trojan | 266
-  password: IQ68037294
+- name: 🇫🇷 法国 | trojan | 261
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 31.59.121.223
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 法国 | vmess | 275
+  network: tcp
+  port: '2052'
+  server: node-uk.connectsuite.org
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 40b25dc2-8e1a-4889-b334-e3376ab3d865
+- name: 🇫🇷 法国 | trojan | 285
+  password: NQ26071394
   port: 443
-  server: desired-pony.rooster465.autos
-  sni: desired-pony.rooster465.autos
+  server: chief-cricket.rooster465.autos
+  skip-cert-verify: false
   type: trojan
-- name: 🇫🇷 法国 | trojan | 280
-  password: PD07395842
-  port: 443
-  server: united-bedbug.rooster465.autos
-  type: trojan
-- name: 🇫🇷 法国 | trojan | 282
+- name: 🇫🇷 法国 | trojan | 289
   password: WG39087154
   port: 443
   server: great-krill.rooster465.autos
   type: trojan
-- name: 🇫🇷 法国 | trojan | 284
+- name: 🇫🇷 法国 | trojan | 290
+  password: PD07395842
+  port: 443
+  server: united-bedbug.rooster465.autos
+  type: trojan
+- name: 🇫🇷 法国 | trojan | 291
   password: PD07395842
   port: 443
   server: tough-pigeon.rooster465.autos
   type: trojan
-- name: 🇫🇷 法国 | trojan | 285
+- name: 🇫🇷 法国 | trojan | 292
   password: IQ68037294
   port: 443
   server: firm-warthog.rooster465.autos
   skip-cert-verify: false
   sni: firm-warthog.rooster465.autos
   type: trojan
-- name: 🇫🇷 法国 | trojan | 287
+- name: 🇫🇷 法国 | trojan | 296
   password: IQ68037294
   port: 443
   server: immune-earwig.rooster465.autos
-  type: trojan
-- name: 🇫🇷 法国 | trojan | 296
-  password: NQ26071394
-  port: 443
-  server: chief-cricket.rooster465.autos
-  skip-cert-verify: false
   type: trojan
 - cipher: aes-256-cfb
   name: '🇫🇷_FR_法国 #1'
