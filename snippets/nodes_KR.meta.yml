@@ -257,65 +257,75 @@ proxies:
   sni: hk.catxstar.com
   type: trojan
   udp: true
-- name: KR VLESS-81 | free-nodes
-  network: ws
-  port: 443
-  server: 140.238.17.157
-  servername: sni.111000.v6.rocks
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.rocks
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 🇰🇷 ✓ 1722r
-  network: ws
-  port: 11310
-  server: 118.37.231.34
-  servername: a.xn--i-sx6a60i.us.kg
-  tls: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: a.xn--i-sx6a60i.us.kg
-    path: '%2F%3Fed%3D2560'
 - client-fingerprint: chrome
-  name: 🇰🇷_KR_韩国
+  name: KR VLESS-1208 | free-nodes
   network: ws
   port: 443
-  server: 211.49.57.175
-  servername: s5.868001.xyz
+  server: afrcloud22.mmv.kr
+  servername: afrcloud22.mmv.kr
   tls: true
   type: vless
-  uuid: 23cb9aa7-9756-459f-aa84-3a27bdf6ad64
+  uuid: fa335d1c-e6d1-48bb-99a3-f06710a29043
   ws-opts:
     headers:
-      Host: s5.868001.xyz
-    path: '%2Fproxyipfp%3Dchrome'
-- name: 🇰🇷
-  network: ws
-  port: 8880
-  server: 162.159.140.78
+      Host: afrcloud22.mmv.kr
+    path: '%2F130.185.164.213%3D8443'
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇰🇷 韩国 | vless | 142
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: '!!str '
+  server: 27.102.138.74
+  servername: abuse.sellflow.org
   tls: false
   type: vless
-  uuid: 7111212b-6bc3-459a-85b4-3b13038a19f8
-  ws-opts:
-    headers:
-      Host: shrill-fog-67af.235-e6a.workers.dev
-    path: /pyip=ProxyIP.KR.CMLiussss.net
-- name: 🇰🇷 韩国 | trojan | 33
-  network: ws
-  password: GKHWMe2R4qwNcNxu6l3KMkdd
-  port: 18853
-  server: 221.158.4.230
-  sni: vpn1.rnmcnm.com
+  uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
+- name: 🇰🇷 KR韩国(mibei77.com 米贝节点分享)
+  password: '!!str 1234567890'
+  port: 14265
+  server: 222.113.18.213
+  skip-cert-verify: false
+  sni: kfm-bn0.pages.dev
   type: trojan
+- name: KR VLESS-667 | free-nodes
+  network: ws
+  port: 443
+  server: afrcloud22.mmv.kr
+  servername: afrcloud22.mmv.kr
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: b7039fbe-0359-4d91-977d-a926203b1936
   ws-opts:
     headers:
-      Host: vpn1.rnmcnm.com
-    path: '%2Ftrj-ws'
+      Host: afrcloud22.mmv.kr
+    path: '%2F'
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: 🇰🇷
+  network: ws
+  port: 8880
+  server: 104.16.107.139
+  tls: false
+  type: vless
+  uuid: ff7390de-ce93-4d7d-b08b-bef8f71a85cf
+  ws-opts:
+    headers:
+      Host: tiny-lake-c7f3.16-1af.workers.dev
+    path: '%2Fpyip%3DProxyIP.KR.CMLiussss.net'
+- alpn:
+  - h3
+  name: KR HY2-255 | free-nodes
+  password: 28beee5e-40ab-3c36-b797-1e4ecf27d0a0
+  port: 443
+  server: 158.247.193.236
+  sni: u729792us351.wagahaha.xyz
+  tls: false
+  type: hysteria2
 - name: 🇰🇷 韩国 | vless | 04
   network: ws
   port: 24619
@@ -427,6 +437,17 @@ proxies:
     headers:
       Host: cf.ysuzy.com
     path: '%2F%3Fed%3D2560%26Telegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2security=tls'
+- name: 🇰🇷 韩国 | trojan | 33
+  network: ws
+  password: GKHWMe2R4qwNcNxu6l3KMkdd
+  port: 18853
+  server: 221.158.4.230
+  sni: vpn1.rnmcnm.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: vpn1.rnmcnm.com
+    path: '%2Ftrj-ws'
 - name: 🇰🇷 韩国 | vless | 35
   network: ws
   port: 10480
@@ -766,10 +787,11 @@ proxies:
   server: 82.117.226.237
   sni: premium-weevil.rooster465.autos
   type: trojan
-- name: 🇰🇷 韩国 | trojan | 91
+- name: 🇰🇷 韩国 | trojan | 90
   password: IQ68037294
   port: 443
-  server: select-marmoset.rooster465.autos
+  server: accurate-drake.rooster465.autos
+  sni: accurate-drake.rooster465.autos
   type: trojan
 - name: 🇰🇷 韩国 | trojan | 92
   password: WG39087154
@@ -1016,17 +1038,6 @@ proxies:
     headers:
       Host: xfxl35a.node-edge.gfw.hidns.co
     path: /danfengfp=chromesecurity=tls
-- client-fingerprint: chrome
-  name: 🇰🇷 韩国 | vless | 133
-  port: 2053
-  reality-opts:
-    public-key: 9HIcma6Y5a0yddTqa3_zNUyItI3J-g99GdT0u0Moqzw
-    short-id: '!!str 87478274a30fcaea'
-  server: 151.245.106.49
-  servername: www.cloudflare.com
-  tls: false
-  type: vless
-  uuid: a5a82872-616b-49f6-a40a-6a54feeb5dd0
 - name: 🇰🇷 韩国 | trojan | 134
   password: FC60532879
   port: 443
@@ -1065,22 +1076,16 @@ proxies:
     headers:
       Host: auv.vavava.kdns.fr
     path: '%2F%3Fed%3D2560fp=randomsecurity=tls'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇰🇷 韩国 | vless | 142
-  port: 443
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: '!!str '
-  server: 27.102.138.74
-  servername: abuse.sellflow.org
-  tls: false
-  type: vless
-  uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
 - name: 🇰🇷 韩国 | trojan | 145
   password: ZY07256934
   port: 443
   server: closing-crow.rooster465.autos
+  type: trojan
+- name: 🇰🇷 韩国 | trojan | 149
+  password: WG39087154
+  port: 443
+  server: proud-pheasant.rooster465.autos
+  sni: proud-pheasant.rooster465.autos
   type: trojan
 - name: 🇰🇷 韩国 | trojan | 150
   password: JT80563429
@@ -1107,10 +1112,10 @@ proxies:
   skip-cert-verify: true
   sni: growing-tuna.rooster465.autos
   type: trojan
-- name: 🇰🇷 韩国 | trojan | 154
-  password: IQ68037294
+- name: 🇰🇷 韩国 | trojan | 155
+  password: FC60532879
   port: 443
-  server: adapted-quetzal.rooster465.autos
+  server: powerful-opossum.rooster465.autos
   skip-cert-verify: true
   type: trojan
 - alterId: 0
@@ -1139,3 +1144,16 @@ proxies:
     headers:
       Host: zybs.worker.ddns-ip.net
     path: '%2F%40Marisa_kristi'
+- alterId: 0
+  cipher: auto
+  name: '🇰🇷 韩国 | KOR #1'
+  network: ws
+  port: '33204'
+  server: yd4.ainivp.com
+  tls: true
+  type: vmess
+  uuid: 9227afcd-026e-781f-1abc-c06efabd2338
+  ws-opts:
+    headers:
+      Host: yd4.ainivp.com
+    path: /ray
