@@ -37,7 +37,6 @@ proxies:
   network: ws
   port: 443
   server: sgp.kapok.buzz
-  servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -166,7 +165,6 @@ proxies:
   network: ws
   port: 443
   server: us-full.privateip.net
-  servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -181,7 +179,6 @@ proxies:
   network: ws
   port: 443
   server: jp-full.privateip.net
-  servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -256,7 +253,6 @@ proxies:
   network: ws
   port: 443
   server: it-full.privateip.net
-  servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -345,7 +341,6 @@ proxies:
   network: ws
   port: 443
   server: hk-full.privateip.net
-  servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -405,7 +400,6 @@ proxies:
   network: ws
   port: 443
   server: uk2-full.privateip.net
-  servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -693,9 +687,7 @@ proxies:
   network: ws
   port: 2095
   server: 185.135.9.19
-  servername: ''
   skip-cert-verify: true
-  tls: false
   type: vmess
   uuid: 3f638f34-8dba-4186-bc43-2716a7ddd4be
   ws-opts:
@@ -780,56 +772,52 @@ proxies:
   skip-cert-verify: true
   type: vmess
   uuid: 2d4dd672-180f-415c-9035-e2fc461dd95a
-- name: '🌐 Anycast-IP | [IPv6] | [BL] #16'
+- name: 🇩🇪
   network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 89.22.230.89
-  sni: Koma-YT.PAGeS.Dev
+  password: trojan
+  port: 8444
+  server: 152.53.200.98
+  sni: jflsjlaf.pages.dev
   type: trojan
   ws-opts:
     headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 'DE德国(mibei77.com 米贝节点分享) #1'
-  network: ws
-  password: '!!str 1234567890'
-  port: 2053
-  server: 202.61.226.121
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 'DE德国(mibei77.com 米贝节点分享) #2'
-  network: ws
-  password: '!!str 1234567890'
-  port: 443
-  server: 93.123.84.194
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: '🇩🇪 #22'
+      Host: jflsjlaf.pages.dev
+    path: '%252F%252F'
+- alpn:
+  - http/1.1
+  name: '🇩🇪 #11'
   network: ws
   password: MITIVPN
-  port: 8443
-  server: www.speedtest.net
-  sni: de-j7o-doo.MaQror.IR
+  port: 443
+  server: 104.18.114.47
+  skip-cert-verify: true
+  sni: de-ms.Maqror.ir
   type: trojan
   ws-opts:
     headers:
-      Host: jDe1-2v-3.MaQror.IR
-    path: /---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN=D-E-e
+      Host: De1-2-3.Maqror.ir
+    path: '%2F---%40MiTiVPN%2F---%40MiTiVPN%2F---%40MiTiVPN%2F---%40MiTiVPN%2F---%40MiTiVPN%3DDEE'
+- alpn:
+  - http/1.1
+  name: '🇩🇪 #22'
+  network: ws
+  password: MITIVPN
+  port: 443
+  server: assets.fiverr.com
+  skip-cert-verify: true
+  sni: de-ms.Maqror.ir
+  type: trojan
+  ws-opts:
+    headers:
+      Host: De1-2-3.Maqror.ir
+    path: /---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN=DEE
 - alterId: 0
   cipher: auto
-  name: DE36｜机房｜低风险
+  name: 🇩🇪 德国 | vmess | 01
   network: tcp
   port: '180'
-  server: 82.198.246.97
+  server: 82.198.246.250
+  servername: ''
   tls: false
   type: vmess
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
@@ -837,15 +825,25 @@ proxies:
   cipher: auto
   name: 🇩🇪 德国 | vmess | 02
   network: tcp
-  port: 180
+  port: '180'
   server: 82.198.246.37
   servername: ''
   tls: false
   type: vmess
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
 - alterId: 0
+  cipher: auto
+  name: DE36｜机房｜低风险
+  network: tcp
+  port: '180'
+  server: 82.198.246.97
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- alterId: 0
   cipher: aes-128-gcm
-  name: 🇩🇪 德国 | vmess | 03
+  name: 🇩🇪 德国 | vmess | 04
   network: tcp
   port: '180'
   server: 82.198.246.233
@@ -855,17 +853,7 @@ proxies:
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 04
-  network: tcp
-  port: 180
-  server: 82.198.246.250
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 36
+  name: 🇩🇪 德国 | vmess | 47
   network: ws
   port: 80
   server: 5.75.173.189
@@ -877,12 +865,6 @@ proxies:
     headers:
       Host: ''
     path: /telegram-id-@privatevpns
-- name: 🇩🇪 德国 | trojan | 43
-  network: tcp
-  password: h1j3H7aFfh1kKPjusgOBfj2kWDelatQDAMWl3ayMioM=
-  port: 30879
-  server: 91.107.139.186
-  type: trojan
 - alterId: 0
   cipher: auto
   name: 🇩🇪 德国 | vmess | 50
@@ -899,7 +881,7 @@ proxies:
     path: /telegram-id-@privatevpns
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 77
+  name: 🇩🇪 德国 | vmess | 54
   network: ws
   port: 80
   server: 188.40.132.107
@@ -911,37 +893,15 @@ proxies:
     headers:
       Host: ''
     path: /p3573l6m92h1ham3q23t
+- name: 🇩🇪 德国 | trojan | 57
+  network: tcp
+  password: h1j3H7aFfh1kKPjusgOBfj2kWDelatQDAMWl3ayMioM=
+  port: 30879
+  server: 91.107.139.186
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 92
-  network: ws
-  port: 80
-  server: 94.130.184.57
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: c5e523e7-da73-40af-a4a9-c638720c30e1
-  ws-opts:
-    headers:
-      Host: ''
-    path: /graphql
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 110
-  network: ws
-  port: 80
-  server: 162.55.62.193
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 2aac77de-b3e4-4017-845c-ca1380f2e8d0
-  ws-opts:
-    headers:
-      Host: ''
-    path: /telegram-id-@privatevpns
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 114
+  name: 🇩🇪 德国 | vmess | 58
   network: ws
   port: 80
   server: 162.55.174.135
@@ -955,24 +915,44 @@ proxies:
     path: /graphql
 - alterId: 0
   cipher: auto
-  name: '🇩🇪 德国 | DEU #1'
+  name: 🇩🇪 德国 | vmess | 94
+  network: ws
+  port: 80
+  server: 94.130.184.57
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: c5e523e7-da73-40af-a4a9-c638720c30e1
+  ws-opts:
+    headers:
+      Host: ''
+    path: /graphql
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 105
+  network: ws
+  port: 80
+  server: 162.55.62.193
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 2aac77de-b3e4-4017-845c-ca1380f2e8d0
+  ws-opts:
+    headers:
+      Host: ''
+    path: /telegram-id-@privatevpns
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | DEU
   network: tcp
   port: '27726'
-  server: fj260404.freechatup.com
+  server: fj260305.freechatup.com
   tls: false
   type: vmess
   uuid: 98e2be3c-8f84-4b85-996b-b68dcc2fbcb6
-- name: 🇩🇪 德国 | trojan | 123
-  network: tcp
-  password: I1vtf6pjYsAu-nFnraWAMjKTy90AHitdAz
-  port: 443
-  server: 91.233.8.25
-  skip-cert-verify: false
-  sni: fra34.tracker-ws.click
-  type: trojan
 - grpc-opts:
     grpc-service-name: trojangrpc
-  name: 🇩🇪 德国 | trojan | 126
+  name: 🇩🇪 德国 | trojan | 127
   network: grpc
   password: mainssh-niwrhf87
   port: 443
@@ -981,56 +961,14 @@ proxies:
   type: trojan
 - grpc-opts:
     grpc-service-name: trojangrpc
-  name: 🇩🇪 德国 | trojan | 135
-  network: grpc
-  password: mainssh-ddoejfv14
-  port: 443
-  server: 95.179.254.136
-  sni: frtgrpc.mainssh.xyz
-  type: trojan
-- name: 🇩🇪 德国 | trojan | 146
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 179.61.132.245
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇩🇪 德国 | trojan | 177
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 179.61.132.245
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇩🇪 德国 | trojan | 189
-  network: ws
-  password: '!!str 1234567890'
-  port: 443
-  server: 158.101.190.78
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- grpc-opts:
-    grpc-service-name: trojangrpc
-  name: 🇩🇪 德国 | trojan | 215
+  name: 🇩🇪 德国 | trojan | 131
   network: grpc
   password: mainssh-niwrhf87
   port: 443
   server: 108.61.171.167
   sni: getgrpc.mainssh.xyz
   type: trojan
-- name: 🇩🇪 德国 | trojan | 220
+- name: 🇩🇪 德国 | trojan | 143
   network: ws
   password: '!!str 1234567890'
   port: 2083
@@ -1041,19 +979,16 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 🇩🇪 德国 | trojan | 246
-  network: ws
-  password: '!!str 1234567890'
-  port: 443
-  server: 159.195.44.151
-  skip-cert-verify: false
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: /?ed=2560
-- name: 🇩🇪 德国 | trojan | 249
+- alterId: 0
+  cipher: auto
+  name: '🇩🇪 德国 | DEU #1'
+  network: tcp
+  port: '27726'
+  server: fj260404.freechatup.com
+  tls: false
+  type: vmess
+  uuid: 98e2be3c-8f84-4b85-996b-b68dcc2fbcb6
+- name: 🇩🇪 德国 | trojan | 147
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
@@ -1064,7 +999,101 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇩🇪 德国 | trojan | 250
+- name: 🇩🇪 德国 | trojan | 155
+  network: ws
+  password: '!!str 1234567890'
+  port: 443
+  server: 158.101.190.78
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: 🇩🇪 德国 | trojan | 174
+  network: tcp
+  password: I1vtf6pjYsAu-nFnraWAMjKTy90AHitdAz
+  port: 443
+  server: 91.233.8.25
+  skip-cert-verify: false
+  sni: fra34.tracker-ws.click
+  type: trojan
+- grpc-opts:
+    grpc-service-name: trojangrpc
+  name: 🇩🇪 德国 | trojan | 203
+  network: grpc
+  password: mainssh-ddoejfv14
+  port: 443
+  server: 95.179.254.136
+  sni: frtgrpc.mainssh.xyz
+  type: trojan
+- name: 🇩🇪 德国 | trojan | 224
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 179.61.132.245
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇩🇪 德国 | trojan | 238
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 152.53.153.158
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇩🇪 德国 | trojan | 280
+  network: ws
+  password: '!!str 1234567890'
+  port: 443
+  server: 159.195.44.151
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: 🇩🇪 德国 | trojan | 284
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 172.86.95.71
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇩🇪 德国 | trojan | 292
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 179.61.132.245
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇩🇪 德国 | trojan | 309
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 194.35.13.234
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇩🇪 德国 | trojan | 311
   network: ws
   password: '!!str 1234567890'
   port: 443
@@ -1075,62 +1104,7 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 🇩🇪 德国 | trojan | 262
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 147.45.197.233
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇩🇪 德国 | trojan | 269
-  password: '!!str 1234567890'
-  port: 443
-  server: 152.53.236.205
-  sni: kfm-bn0.pages.dev
-  type: trojan
-- name: 🇩🇪 德国 | trojan | 286
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 77.239.98.191
-  skip-cert-verify: true
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-- name: 🇩🇪 德国 | trojan | 288
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 147.45.197.95
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    path: /trTelegram+@WangCai2
-- name: 🇩🇪 德国 | trojan | 292
-  network: ws
-  password: '!!str 1234567890'
-  port: 443
-  server: 138.124.50.89
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- name: 🇩🇪 德国 | trojan | 303
-  network: ws
-  password: '!!str 1234567890'
-  port: 2053
-  server: 202.61.226.121
-  sni: kfm-bn0.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
-- name: 🇩🇪 德国 | trojan | 308
+- name: 🇩🇪 德国 | trojan | 312
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
@@ -1141,14 +1115,34 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇩🇪 德国 | trojan | 321
-  password: '!!str 1234567890'
-  port: 443
-  server: 159.195.5.181
-  skip-cert-verify: false
-  sni: kfm-bn0.pages.dev
+- name: 🇩🇪 德国 | trojan | 313
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 147.45.197.233
+  sni: Koma-YT.PAGeS.Dev
   type: trojan
-- name: 🇩🇪 德国 | trojan | 330
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇩🇪 德国 | trojan | 320
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 77.239.98.191
+  skip-cert-verify: true
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+- name: 🇩🇪 德国 | trojan | 341
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 147.45.197.95
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    path: /trTelegram+@WangCai2
+- name: 🇩🇪 德国 | trojan | 342
   network: ws
   password: bb8ec708-eb54-4c9f-8052-9bf97372863b
   port: 2053
@@ -1160,46 +1154,48 @@ proxies:
     headers:
       Host: raspy-leaf-6781.bardia13781387.workers.dev
     path: '%2Fproxyip%3D91.192.102.155%3A8443%3Fu%3D23217c392f'
-- name: 🇩🇪 德国 | trojan | 340
+- name: 🇩🇪 德国 | trojan | 344
   network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 194.35.13.234
-  sni: Koma-YT.PAGeS.Dev
+  password: '!!str 1234567890'
+  port: 443
+  server: 138.124.50.89
+  sni: kfm-bn0.pages.dev
   type: trojan
   ws-opts:
     headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇩🇪 德国 | trojan | 343
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: 🇩🇪 德国 | trojan | 353
+  password: '!!str 1234567890'
+  port: 443
+  server: 152.53.236.205
+  sni: kfm-bn0.pages.dev
+  type: trojan
+- name: 🇩🇪 德国 | trojan | 363
+  network: ws
+  password: '!!str 1234567890'
+  port: 443
+  server: 93.123.84.194
+  sni: kfm-bn0.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: 🇩🇪 德国 | trojan | 381
   password: '!!str 1234567890'
   port: 443
   server: 152.53.118.28
   sni: kfm-bn0.pages.dev
   type: trojan
-- name: 🇩🇪 德国 | trojan | 347
-  network: xhttp
-  password: hnwWP8L98hm7jMaE4Dfd7Q
-  port: 19302
-  server: mmi.jorzel.ir
-  sni: yahoo.com
+- name: 🇩🇪 德国 | trojan | 415
+  password: '!!str 1234567890'
+  port: 443
+  server: 159.195.5.181
+  skip-cert-verify: false
+  sni: kfm-bn0.pages.dev
   type: trojan
-  ws-opts:
-    headers:
-      Host: hostname
-    path: /path
-- name: 🇩🇪 德国 | trojan | 376
-  network: xhttp
-  password: hnwWP8L98hm7jMaE4Dfd7Q
-  port: 19302
-  server: mmip.jorzel.ir
-  sni: www.yahoo.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: hostname
-    path: /path
-- name: 🇩🇪 德国 | trojan | 397
+- name: 🇩🇪 德国 | trojan | 429
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
@@ -1222,7 +1218,38 @@ proxies:
   tls: true
   type: vmess
   uuid: 3d358ea5-465b-46ac-a2df-98ca1555194f
-- name: 🇩🇪 德国 | trojan | 411
+- name: 🇩🇪 德国 | trojan | 461
+  network: xhttp
+  password: hnwWP8L98hm7jMaE4Dfd7Q
+  port: 19302
+  server: mmi.jorzel.ir
+  sni: yahoo.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: hostname
+    path: /path
+- name: 🇩🇪 德国 | trojan | 466
+  network: xhttp
+  password: hnwWP8L98hm7jMaE4Dfd7Q
+  port: 19302
+  server: koper.jorzel.ir
+  sni: yahoo.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: hostname
+    path: /path
+- alterId: 0
+  cipher: auto
+  name: '🇩🇪 德国 | DEU #5'
+  network: tcp
+  port: '27726'
+  server: fj260205.freechatup.com
+  tls: false
+  type: vmess
+  uuid: 98e2be3c-8f84-4b85-996b-b68dcc2fbcb6
+- name: 🇩🇪 德国 | trojan | 525
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
@@ -1233,16 +1260,7 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | DEU
-  network: tcp
-  port: '27726'
-  server: fj260305.freechatup.com
-  tls: false
-  type: vmess
-  uuid: 98e2be3c-8f84-4b85-996b-b68dcc2fbcb6
-- name: 🇩🇪 德国 | trojan | 471
+- name: 🇩🇪 德国 | trojan | 593
   network: ws
   password: ncnr1qxfkf4j1pg1
   port: 44600
@@ -1252,60 +1270,14 @@ proxies:
     headers:
       Host: P30day.ir
     path: '%2Ft.me%2Fdefyxvpn_fa'
-- alterId: 0
-  cipher: auto
-  name: '🇩🇪 德国 | DEU #5'
-  network: tcp
-  port: '27726'
-  server: fj260205.freechatup.com
-  tls: false
-  type: vmess
-  uuid: 98e2be3c-8f84-4b85-996b-b68dcc2fbcb6
-- name: 🇩🇪 德国 | trojan | 514
-  password: 8VPcuL7uudvB4IBhnl-QkA
-  port: 19302
-  server: mov-2.jorzel.ir
-  sni: yahoo.com
-  type: trojan
-- name: 🇩🇪 德国 | trojan | 519
-  password: a6vYW-ALaoLQDh8z6nBhyQ
-  port: 19302
-  server: mov-5.jorzel.ir
-  sni: www.yahoo.com
-  type: trojan
-- name: 🇩🇪 德国 | trojan | 521
-  password: a6vYW-ALaoLQDh8z6nBhyQ
-  port: 19302
-  server: mov-7.jorzel.ir
-  sni: yahoo.com
-  type: trojan
-- name: 🇩🇪 德国 | trojan | 539
-  password: a6vYW-ALaoLQDh8z6nBhyQ
-  port: 19302
-  server: mov-8.jorzel.ir
-  sni: yahoo.com
-  type: trojan
-- name: 🇩🇪 德国 | trojan | 573
+- name: 🇩🇪 德国 | trojan | 641
   password: 升级订阅解锁全部节点
-  port: 10108
+  port: 10036
   server: z-eu1.mfa.cat
   skip-cert-verify: true
   sni: www.cloudflare.com
   type: trojan
-- name: 🇩🇪 德国 | trojan | 579
-  password: 升级订阅解锁全部节点
-  port: 10018
-  server: z-eu1.mfa.cat
-  skip-cert-verify: true
-  sni: www.cloudflare.com
-  type: trojan
-- name: 🇩🇪 德国 | trojan | 633
-  password: 8VPcuL7uudvB4IBhnl-QkA
-  port: 19302
-  server: mov-4.jorzel.ir
-  sni: yahoo.com
-  type: trojan
-- name: 🇩🇪 德国 | trojan | 639
+- name: 🇩🇪 德国 | trojan | 642
   network: ws
   password: '!!str 1234567890'
   port: 8443
@@ -1315,7 +1287,58 @@ proxies:
   ws-opts:
     headers:
       Host: kfm-bn0.pages.dev
-    path: /
+    path: /%3Fed%3D2560
+- name: 🇩🇪 德国 | trojan | 666
+  password: 8VPcuL7uudvB4IBhnl-QkA
+  port: 19302
+  server: mov-2.jorzel.ir
+  sni: yahoo.com
+  type: trojan
+- name: 🇩🇪 德国 | trojan | 672
+  password: a6vYW-ALaoLQDh8z6nBhyQ
+  port: 19302
+  server: mov-7.jorzel.ir
+  sni: yahoo.com
+  type: trojan
+- name: 🇩🇪 德国 | trojan | 675
+  password: a6vYW-ALaoLQDh8z6nBhyQ
+  port: 19302
+  server: mov-5.jorzel.ir
+  sni: www.yahoo.com
+  type: trojan
+- name: 🇩🇪 德国 | trojan | 681
+  password: 升级订阅解锁全部节点
+  port: 10108
+  server: z-eu1.mfa.cat
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  type: trojan
+- name: 🇩🇪 德国 | trojan | 683
+  password: 升级订阅解锁全部节点
+  port: 10018
+  server: z-eu1.mfa.cat
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  type: trojan
+- name: 🇩🇪 德国 | trojan | 699
+  password: 8VPcuL7uudvB4IBhnl-QkA
+  port: 19302
+  server: mov-4.jorzel.ir
+  sni: yahoo.com
+  type: trojan
+- name: 🇩🇪 德国 | trojan | 710
+  password: 升级订阅解锁全部节点
+  port: 10120
+  server: z-eu2.mfa.cat
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  type: trojan
+- name: 🇩🇪 德国 | trojan | 715
+  password: a6vYW-ALaoLQDh8z6nBhyQ
+  port: 19302
+  server: mov-8.jorzel.ir
+  sni: yahoo.com
+  type: trojan
 - name: DE30｜机房｜低风险
   network: ws
   password: 32497489-2052-4219-a0b5-43af86bfcd9b
