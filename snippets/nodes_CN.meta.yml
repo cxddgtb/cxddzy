@@ -1492,7 +1492,8 @@ proxies:
   type: vless
   udp: true
   uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
-- name: '中国 126 #1'
+- client-fingerprint: chrome
+  name: '中国 126 #1'
   network: tcp
   port: 10000
   server: 60.249.101.13
@@ -1513,7 +1514,10 @@ proxies:
   type: vless
   udp: true
   uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
-- flow: ''
+- client-fingerprint: chrome
+  flow: ''
+  grpc-opts:
+    grpc-service-name: ''
   name: '中国 128 #1'
   network: tcp
   port: 10000
@@ -1524,6 +1528,10 @@ proxies:
   type: vless
   udp: true
   uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
+  ws-opts:
+    headers:
+      Host: ''
+    path: ''
 - flow: ''
   name: '中国 129 #1'
   network: ws
@@ -1596,9 +1604,22 @@ proxies:
   network: tcp
   port: '30809'
   server: v9.hdacd.com
+  skip-cert-verify: true
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- client-fingerprint: chrome
+  name: 🇨🇳 China 08a3
+  network: ws
+  port: 80
+  server: 43.169.18.179
+  tls: false
+  type: vless
+  uuid: 5b6e7300-8fc8-404e-8dc9-40a5393dd881
+  ws-opts:
+    headers:
+      Host: line.smartphone1.azazilvpn.sbs
+    path: /XnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXn%3Fed%3D2560
 - alterId: 0
   cipher: auto
   name: 🇨🇳 中国 | vmess | 01
