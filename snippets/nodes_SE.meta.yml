@@ -407,7 +407,7 @@ proxies:
       Host: se-cdn.ru
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 61
+  name: 🇸🇪 瑞典 | vless | 21
   network: tcp
   port: 443
   reality-opts:
@@ -435,7 +435,7 @@ proxies:
   uuid: 02e2d68f-9982-4467-ad47-00cbeeae30e6
 - client-fingerprint: ''
   flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 83
+  name: 🇸🇪 瑞典 | vless | 16
   network: tcp
   port: 443
   reality-opts:
@@ -449,7 +449,7 @@ proxies:
   uuid: f61025f4-7973-4e3e-883c-a0fe85f0489c
 - client-fingerprint: ''
   flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 100
+  name: 🇸🇪 瑞典 | vless | 110
   network: tcp
   port: 443
   reality-opts:
@@ -515,7 +515,7 @@ proxies:
   uuid: 02e2d68f-9982-4467-ad47-00cbeeae30e6
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 66
+  name: 🇸🇪 瑞典 | vless | 68
   port: 443
   reality-opts:
     public-key: nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q
@@ -552,8 +552,8 @@ proxies:
   udp: true
   uuid: 02e2d68f-9982-4467-ad47-00cbeeae30e6
 - client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 73
+  flow: xtls-rprx-vision-udp443
+  name: 🇸🇪 瑞典 | vless | 46
   network: tcp
   port: 443
   reality-opts:
@@ -566,7 +566,7 @@ proxies:
   uuid: 02e2d68f-9982-4467-ad47-00cbeeae30e6
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 04
+  name: 🇸🇪 瑞典 | vless | 01
   network: tcp
   port: 40443
   reality-opts:
@@ -574,12 +574,13 @@ proxies:
     short-id: '!!str 2d127d11297df7de'
   server: 88.216.130.130
   servername: deepl.com
-  tls: true
+  tls: false
   type: vless
   uuid: 641baa2f-6f74-4ecf-b948-032d19ba0142
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: SE【机场推荐：https://a9a.xyz】36
+  network: tcp
   port: 443
   reality-opts:
     public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
@@ -592,7 +593,7 @@ proxies:
   uuid: f61025f4-7973-4e3e-883c-a0fe85f0489c
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 67
+  name: 🇸🇪 瑞典 | vless | 29
   network: tcp
   port: 443
   reality-opts:
@@ -609,7 +610,6 @@ proxies:
   port: 8443
   server: 193.232.178.149
   servername: edge.yzkvm.top
-  skip-cert-verify: false
   tls: true
   type: vless
   uuid: bba95b1f-f48c-454b-897b-a6c6bc307df1
@@ -618,8 +618,8 @@ proxies:
       Host: edge.yzkvm.top
     path: '%2F'
 - client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇸🇨 塞舌尔 | vless | 67
+  flow: xtls-rprx-vision-udp443
+  name: 🇸🇨 塞舌尔 | vless | 83
   network: tcp
   port: 443
   reality-opts:
@@ -634,214 +634,140 @@ proxies:
   port: 9050
   server: 45.61.129.165
   type: socks5
-- name: '🇸🇪 Sweden — #327 (deaf8c)'
-  network: xhttp
+- client-fingerprint: chrome
+  name: '🇸🇪 Sweden — #661'
+  network: tcp
   port: 443
-  server: 46.42.185.252
+  server: 144.31.128.38
+  servername: secdn22.suio.me
   tls: true
   type: vless
-  uuid: 78aae9c1-029c-4dfe-bac9-b04e94deaf8c
-- name: '🇸🇪 Sweden — #359 (1e3370)'
+  uuid: 94a03e9a-74d5-4036-95e9-563cc19355de
+- name: '[1596]🎈 🇸🇪 SWE 🎈 #b63f45'
+  network: tcp
+  port: 8443
+  server: 79.127.249.223
+  servername: ams1.fromblancwithlove.com
+  tls: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: 🇸🇪
+  network: raw
+  port: 443
+  reality-opts:
+    public-key: oqRus6Z_Q1jqJaTEPu7ENbRL0-XKOw54K0jwCCGLtEk
+    short-id: '!!str a9c4f17e3b62d8'
+  server: 188.68.218.41
+  servername: api-maps.yandex.ru
+  tls: false
+  type: vless
+  uuid: bd33c069-8f8c-4da3-9d14-9f539597ab66
+- client-fingerprint: firefox
+  name: 🇸🇪 Sweden fa1d
+  network: httpupgrade
+  port: 8880
+  server: 185.146.173.39
+  tls: false
+  type: vless
+  uuid: 88888888-8888-8888-8888-888888888888
+- client-fingerprint: chrome
+  name: ' Unsorted 428f | SNI - BIlLOwI...'
+  network: ws
+  port: 443
+  server: billowing-sunset-e340.qaraatayi.workers.dev
+  servername: BIlLOwIng-suNSEt-e340.QaRAaTAyi.worKeRs.deV
+  tls: true
+  type: vless
+  uuid: c6ba83a7-c4b5-481f-8f71-0f17deff0bf2
+  ws-opts:
+    headers:
+      Host: billowing-sunset-e340.qaraatayi.workers.dev
+    path: /eyJqdW5rIjoiVnJ5TkZEWnQiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iXX0%3D%3Fed%3D2560
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: '🇸🇪 #2'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: tSxNp48AuTUzqggANCWsR6v7bqlguCoVWk_YOUs36Ug
+    short-id: '!!str bc8307f814'
+  server: 144.31.128.56
+  servername: 33432ews-topology-gslb-yccdn.ru
+  tls: false
+  type: vless
+  uuid: 8f0560ec-ba22-4431-a6a7-318dc59d5233
+- name: '🇸🇪 Sweden — #399 (f95573)'
   network: xhttp
   port: 443
   server: 188.72.103.3
   tls: true
   type: vless
-  uuid: 69cdf257-e42b-4d23-8ba7-65c7711e3370
-- client-fingerprint: edge
-  flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 406
-  network: raw
-  port: 8443
-  reality-opts:
-    public-key: 10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc
-    short-id: '!!str 43dcff53849b81e6'
-  server: 78.159.250.193
-  servername: player.mediavitrina.ru
-  tls: false
-  type: vless
-  uuid: ecad47b0-249e-0009-adff-e3c8f02b1897
-- name: '🇸🇪 [VL] Швеция #7039 | РосТунн...'
-  network: ws
-  port: 2053
-  server: 185.82.126.216
-  servername: forfreeuse.sub-flow.online
-  tls: true
-  type: vless
-  uuid: c7e9c591-2764-423a-afca-efbd010fd396
-- client-fingerprint: firefox
-  name: 🇸🇪 Sweden 9790 | SNI - ams1.fr...
-  network: tcp
-  port: 8443
-  server: 45.159.12.133
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  type: vless
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-- name: 🇸🇪 ✨ Швеция
-  network: ws
-  port: 443
-  server: se.s3-rus.ru
-  tls: false
-  type: vless
-  uuid: 7d6ab3be-722e-4752-8f23-19f15952d599
-  ws-opts:
-    path: '%2Fapi-se'
-- client-fingerprint: firefox
-  name: 🇸🇪 Sweden 2bfd
-  network: ws
-  port: 80
-  server: 185.146.173.98
-  tls: false
-  type: vless
-  uuid: b69f02d4-4947-5d4c-a341-aae33b616dbc
-  ws-opts:
-    headers:
-      Host: Uk2.vless.site.
-    path: /vless
-- name: 🇸🇪 299
-  network: ws
-  port: 8080
-  server: 185.146.173.58
-  tls: false
-  type: vless
-  uuid: 53ba623c-00a0-4785-889c-28428307847a
-  ws-opts:
-    headers:
-      Host: Kanal-polproxy.Vipnufilter.Online.
-    path: '%2Ftelegram-%40Sobi_Vpn%2Ctelegram-%40Sobi_Vpn%2Ctelegram-%40Sobi_Vpn%2Ctelegram-%40Sobi_Vpn%2Ctelegram-%40Sobi_Vpn%2Ctelegram-%40Sobi_Vpn%2Ctelegram-%40Sobi_Vpn%2Ctelegram-%40Sobi_Vpn%2Ctelegram-%40Sobi_Vpn%2Ctelegram-%40Sobi_Vpn%2Ctelegram-%40Sobi_Vpn%2Ctelegram-%40Sobi_Vpn%2Ctelegram-%40Sobi_Vpn%2Ctelegram-%40Sobi_Vpn%2Ctelegram-%40Sobi_Vpn%2Ctelegram-%40Sobi_Vpn%2Ctelegram-%40Sobi_Vpn%2Ctelegram-%40Sobi_Vpn%3Fed%3D2048'
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: '🇸🇪 #1'
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: Mn0DIMKW6zu0_D3E1qKO7xMlIVZvB-rqO_-f7Le2vAs
-    short-id: '!!str 428ef87fd47a3a32'
-  server: 62.152.56.205
-  servername: ads.x5.ru
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  uuid: b97b46c9-974a-4e0e-8812-01abfcf3a843
-- client-fingerprint: safari
-  flow: xtls-rprx-vision
-  name: 🇸🇪 Швеция
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: qoAuuFJ0eK1lAMHIqTt6LniY6qu1GIobrGthBcRHUXM
-    short-id: '!!str 9d84de9d9f7b85e9'
-  server: se.edge-9d7c.com
-  servername: se.edge-9d7c.com
-  tls: false
-  type: vless
-  uuid: 5dc1b4ed-c897-468d-921d-266b062db2cb
+  uuid: 1b07b070-c02d-4518-8189-e39de1f95573
 - alpn:
   - h2
   - http/1.1
-  client-fingerprint: firefox
-  name: '🇸🇪 Sweden — #284'
+  client-fingerprint: edge
+  name: '🇸🇪 Sweden — #360'
   network: xhttp
   port: 443
   server: 188.72.103.3
-  servername: media.spacecoretion.space
+  servername: worldstream.club
   tls: true
   type: vless
-  uuid: 66da0421-1cc9-479c-8848-d30c2292d9de
+  uuid: c92a1537-d909-44e2-ae2e-38d1301e6211
   ws-opts:
     headers:
-      Host: media.spacecoretion.space
-    path: '%2Fapi'
-- name: 瑞典(mibei77.com 米贝节点分享)
-  network: tcp
-  port: 8443
-  server: 45.159.12.131
-  servername: ams1.fromblancwithlove.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-- client-fingerprint: qq
+      Host: worldstream.club
+    path: '%2Fstatic%2FgetFile%2Faudio%2Fsegment.ts'
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '🇸🇪 Sweden — #361'
+  name: '🇸🇪 Sweden — #525'
   network: raw
   port: 443
   reality-opts:
-    public-key: knrqm393ghxJNYj-4qu2BYpwpG5_zOG5h5-H7yyyR38
-    short-id: '!!str 0be28edc1b0278d6'
-  server: 46.254.17.226
-  servername: wl-8-1.nodes.ac
+    public-key: zYJherUg8rsyTsumgWLweMea_Tp2j4ZpVuRlskKTwiY
+    short-id: '!!str 92df5620ac107be4'
+  server: 51.250.40.74
+  servername: ads.x5.ru
   tls: false
-  type: vless
-  uuid: e48bfc56-18be-4221-8aad-c21a76144d01
-- client-fingerprint: firefox
-  name: '🇸🇪 [VL] Швеция #7223 | РосТунн...'
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk
-  server: 2.26.79.48
-  servername: pro-se.emrata.top
-  tls: false
-  type: vless
-  uuid: 4bce450e-0a37-4fdd-8c9e-ba6a5e4730aa
-- client-fingerprint: qq
-  name: '🇸🇪 [VL] Швеция #15873 | РосТун...'
-  network: ws
-  port: 443
-  server: 104.155.124.198
-  servername: learn00.evany.de5.net
-  tls: true
-  type: vless
-  uuid: 29ca503d-e6b8-4509-b666-48133f450857
-- name: '🇸🇪 #2'
-  network: ws
-  port: 8080
-  server: 104.16.198.192
-  tls: false
-  type: vless
-  uuid: d3812294-5ec4-4dd1-9753-1c022c439463
-  ws-opts:
-    headers:
-      Host: SE.KRbc9DyCP8.zUlaiR.org.
-    path: '%2F%3Fed%3D2048'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 68
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: J5ITJbg5FQFembAfkogKHHQB6DigsFXQxK7xu-QMWUs
-    short-id: '!!str a20d3ed244c76426'
-  server: 178.20.211.215
-  servername: reserve.ayagut.ovh
-  tls: false
-  type: vless
-  uuid: b406bc51-9002-474c-beae-b194b02c91da
-- name: '🇸🇪 Sweden — #524 (f82dd1)'
-  network: xhttp
-  port: 443
-  server: 188.72.103.3
-  tls: true
   type: vless
   uuid: ddfe991b-4658-4cfb-a26c-93aa54f82dd1
-- client-fingerprint: qq
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '🇸🇪 Sweden — #393'
+  name: '🇸🇪 Sweden — #415 (812748)'
   network: raw
   port: 443
   reality-opts:
-    public-key: sXOFKo2LTiE3qg7Z68FIiwTYvhNNSAOTx9AYMuUoUnk
-    short-id: '!!str 07d3a29177aefcb6'
-  server: 213.226.112.213
-  servername: wl-7-5.nodes.ac
+    public-key: yX1E6fqEpS0oU3efsyAc0x6hXsl7w5iBTnZkbzG7JB8
+    short-id: '!!str 22730c666bd10642'
+  server: 51.250.40.74
+  servername: api-maps.yandex.ru
   tls: false
   type: vless
-  uuid: d4c552c4-ac97-4933-b0f8-027690865449
+  uuid: 836c2f09-65c7-4a6f-bb57-0674ee812748
+- client-fingerprint: firefox
+  name: 🇸🇪 Sweden aa3d
+  network: httpupgrade
+  port: 8880
+  server: 185.146.173.39
+  tls: false
+  type: vless
+  uuid: 88888888-8888-8888-8888-888888888888
+- name: 🇸🇪 306
+  network: ws
+  port: 8080
+  server: 185.146.173.20
+  servername: uzA2KMsNyBLrRoJomW5L.NIgc-ar.nET
+  tls: true
+  type: vless
+  uuid: 51701e0e-a004-4f2c-9466-9cd2670465b3
+  ws-opts:
+    path: '%2Fbackup'
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '🇸🇪 Sweden — #531 (f82dd1)'
+  name: '[1596]✴️ 🇸🇪 SWE ✴️ #385ac0'
   network: raw
   port: 443
   reality-opts:
@@ -851,62 +777,41 @@ proxies:
   servername: smartcaptcha.yandexcloud.net
   tls: false
   type: vless
-  uuid: ddfe991b-4658-4cfb-a26c-93aa54f82dd1
+  uuid: 910890e3-2c9d-45f5-a942-237ef0dc7c8f
 - client-fingerprint: firefox
-  name: 🇸🇪 Sweden f318 | SNI - ams1.fr...
+  name: '[1596]🎈 🇸🇪 SWE 🎈 #0c46aa'
   network: tcp
-  port: 8443
-  server: 79.127.249.217
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  type: vless
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-- name: '🇸🇪 Sweden — #375 (0414a0)'
-  network: xhttp
   port: 443
-  server: 188.72.103.3
-  tls: true
+  reality-opts:
+    public-key: AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk
+  server: 2.26.79.73
+  servername: pro-se.emrata.top
+  tls: false
   type: vless
-  uuid: 9d67dedc-9218-4ad3-bb2c-79b6a60414a0
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
+  uuid: 95f50108-2bae-4634-948c-b22e01ae3133
+- client-fingerprint: firefox
   name: '[🇸🇪]t.me/ConfigsHub'
   network: tcp
   port: 443
   reality-opts:
-    public-key: K7no4vVZPV-eW6uFsq2xP3m5bwuau4bSvRU1bnFs80k
-    short-id: '!!str fcfb56dcc1d63834'
-  server: cxcczechia1.chickenkiller.com
-  servername: ''
+    public-key: fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ
+    short-id: '!!str 31181028b56c8704'
+  server: se01.goodmaximum.com
+  servername: forms.sablefrost.com
   tls: false
   type: vless
-  uuid: d78c12c4-6927-40b8-8550-ed9be00334da
-- client-fingerprint: chrome
-  name: 🇩🇪 德国 | vless | 40
-  network: ws
-  port: 10051
-  server: 80.240.18.227
-  servername: d-l28t5-65-b.pbe40wmcujaw726h7cpqernzmawz4stwtrnqve0n1s5reht.workers.dev
-  tls: true
-  type: vless
-  uuid: f4d859eb-abc6-4c57-9eee-8fe9e2ef0f94
-  ws-opts:
-    headers:
-      Host: d-l28t5-65-b.pbe40wmcujaw726h7cpqernzmawz4stwtrnqve0n1s5reht.workers.dev
-    path: '%2F%40Marisa_kristi'
-- client-fingerprint: qq
-  grpc-opts:
-    grpc-service-name: ns
-  name: '[1596]⭐ 🇸🇪 SWE ⭐ 📑 [VK] #3f18c...'
+  uuid: db95b766-43a8-0029-9b5d-5ca6f2735188
+- client-fingerprint: firefox
+  name: '[1596]⭐ 🇸🇪 SWE ⭐ 📑 #c33594'
   network: grpc
-  port: 8443
+  port: 8446
   reality-opts:
-    public-key: ZpXBddDY5CBXaRTnUz4lM4xs_KBVX4CPulN-q9AqhAI
-  server: 213.219.212.254
+    public-key: rUCHk3_64Wv_f_v46OfVNYldKu9fUqHpX937bmGeeDs
+  server: 5.188.115.159
   servername: 360.yandex.ru
   tls: false
   type: vless
-  uuid: 3c2516fb-6db8-4666-af75-8eb5d35eefe9
+  uuid: feea7616-c8cd-4e72-9d3f-d85f0e6d60c5
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: 🇸🇪 瑞典 | vless | 02
@@ -946,198 +851,21 @@ proxies:
   tls: false
   type: vless
   uuid: ab51054f-de76-4a0f-9f3a-b44c8df86a6c
-- client-fingerprint: chrome
-  name: 🇸🇪 瑞典 | vless | 06
-  network: tcp
-  port: 8443
-  server: 79.127.249.221
-  servername: ams1.fromblancwithlove.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-- client-fingerprint: chrome
-  name: 🇸🇪 瑞典 | vless | 07
-  network: tcp
-  port: 8443
-  server: 45.159.12.191
-  servername: ams1.fromblancwithlove.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-- name: 🇸🇪 瑞典 | vless | 08
-  port: 8443
-  server: 45.159.12.193
-  servername: ams1.fromblancwithlove.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-- name: 🇸🇪 瑞典 | vless | 10
-  network: tcp
-  port: 8443
-  server: 45.159.12.4
-  servername: ams1.fromblancwithlove.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-- name: 🇸🇪 瑞典 | vless | 13
-  network: tcp
-  port: 8443
-  server: 45.159.12.18
-  servername: ams1.fromblancwithlove.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-- client-fingerprint: firefox
-  name: 🇸🇪 瑞典 | vless | 15
-  port: 8443
-  server: 79.127.249.204
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  type: vless
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-- name: 🇸🇪 瑞典 | vless | 16
-  network: ws
-  port: 443
-  server: 185.139.228.126
-  servername: tn1rr.qzz.io
-  tls: true
-  type: vless
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: tn1rr.qzz.io
-    path: /sg-lnd
-- client-fingerprint: firefox
-  name: 🇸🇪 瑞典 | vless | 17
-  port: 8443
-  server: 45.159.12.1
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  type: vless
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-- client-fingerprint: chrome
-  name: 🇸🇪 瑞典 | vless | 18
-  port: 8443
-  server: 45.159.12.3
-  servername: ams1.fromblancwithlove.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-- client-fingerprint: firefox
-  name: 🇸🇪 瑞典 | vless | 22
-  port: 8443
-  server: 79.127.249.198
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  type: vless
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-- client-fingerprint: firefox
-  name: 🇸🇪 瑞典 | vless | 23
-  port: 8443
-  server: 45.159.12.31
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  type: vless
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-- name: 🇸🇪 瑞典 | vless | 24
-  port: 8443
-  server: 45.159.12.163
-  servername: ams1.fromblancwithlove.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 26
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: zb1esVBjrdlitl7Z_YkRi44kC0NXVvF5U17LAXW6fDQ
-    short-id: '!!str 825d392c67e4'
-  server: 207.2.123.28
-  servername: sa.ch-moltisanti.ru
-  tls: false
-  type: vless
-  uuid: 94d2d711-76e5-4d82-a3c9-4f06fd5558c8
-- name: 🇸🇪 瑞典 | vless | 27
-  network: tcp
-  port: 8443
-  server: 45.159.12.15
-  servername: ams1.fromblancwithlove.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-- client-fingerprint: firefox
-  name: 🇸🇪 瑞典 | vless | 30
-  port: 8443
-  server: 79.127.249.208
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  type: vless
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 34
-  port: 443
-  reality-opts:
-    public-key: V6FabatADtcX7aO9KMjGCadJC4LuQ_5nRViab-z-nFQ
-    short-id: '!!str abcd'
-  server: 82.29.43.42
-  servername: auto.malina24.xyz
-  tls: false
-  type: vless
-  uuid: 635a1c4e-122b-45f5-8339-03bce6039739
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 36
-  port: 443
-  reality-opts:
-    public-key: pU7ElcbPMVObHoWqGThioVD4i5ux_phWFwElN97aDSQ
-    short-id: '!!str 0f4dacf89993e21f'
-  server: 185.189.46.70
-  servername: sw.api-yandex.net
-  tls: false
-  type: vless
-  uuid: 959b4df5-15bc-4eb8-8b93-95f6af50cd80
-- name: 🇸🇪 瑞典 | vless | 39
+- name: 🇸🇪 瑞典 | vless | 07
   network: ws
   port: 443
   server: 94.242.59.190
   servername: 31.76.11.46.cdn-one.org
-  tls: false
+  tls: true
   type: vless
   uuid: 4f375fb4-3c95-425f-bc7b-8085487a6f3c
   ws-opts:
     headers:
       Host: 31.76.11.46.cdn-one.org
-    path: '%2F52872%2FBNzG4FvIArfp=chromesecurity=tls'
-- name: 🇸🇪 瑞典 | vless | 41
-  port: 8443
-  server: 45.159.12.16
-  servername: ams1.fromblancwithlove.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-- name: 🇸🇪 瑞典 | vless | 42
-  port: 8443
-  server: 45.159.12.161
-  servername: ams1.fromblancwithlove.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    path: /52872/BNzG4FvIArfp=chrome
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 43
+  name: 🇸🇪 瑞典 | vless | 09
   port: 443
   reality-opts:
     public-key: V6FabatADtcX7aO9KMjGCadJC4LuQ_5nRViab-z-nFQ
@@ -1149,29 +877,31 @@ proxies:
   uuid: da7685a7-15ef-41e4-a0d9-009bb4be7220
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 44
+  name: 🇸🇪 瑞典 | vless | 10
+  network: tcp
   port: 443
   reality-opts:
-    public-key: 6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY
-    short-id: '!!str 1c3e8241a8743df9'
-  server: 192.142.23.99
-  servername: jwtdecoder.xyz
+    public-key: zb1esVBjrdlitl7Z_YkRi44kC0NXVvF5U17LAXW6fDQ
+    short-id: '!!str 825d392c67e4'
+  server: 207.2.123.28
+  servername: sa.ch-moltisanti.ru
   tls: false
   type: vless
-  uuid: f0dc4d4f-c956-0002-bc3a-021424b8e879
+  uuid: 94d2d711-76e5-4d82-a3c9-4f06fd5558c8
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 45
+  name: 🇸🇪 瑞典 | vless | 13
+  network: tcp
   port: 443
   reality-opts:
-    public-key: 6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY
-    short-id: '!!str 1c3e8241a8743df9'
-  server: 192.142.23.30
-  servername: jwtdecoder.xyz
+    public-key: Z2c9dK70_0OWBEZGgeaXJyt9dup9h2-hZlCCvIGLg1Q
+    short-id: '!!str 496ee75c2f91f51d'
+  server: 185.189.45.159
+  servername: sw1-chr.astralweb.tech
   tls: false
   type: vless
-  uuid: bd92eda1-8b37-0002-91fb-dafe419590ea
-- name: 🇸🇪 瑞典 | trojan | 46
+  uuid: 3ad1d277-5715-4ca1-84db-5baea72f822d
+- name: 🇸🇪 瑞典 | trojan | 19
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
@@ -1183,15 +913,46 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2'
-- client-fingerprint: chrome
-  name: 🇸🇪 瑞典 | vless | 53
+- name: 🇸🇪 瑞典 | vless | 30
+  network: tcp
   port: 8443
-  server: 45.159.12.34
+  server: 45.159.12.15
+  servername: ams1.fromblancwithlove.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+- client-fingerprint: chrome
+  name: 🇸🇪 瑞典 | vless | 31
+  network: tcp
+  port: 8443
+  server: 45.159.12.191
+  servername: ams1.fromblancwithlove.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇪 瑞典 | vless | 33
+  port: 443
+  reality-opts:
+    public-key: V6FabatADtcX7aO9KMjGCadJC4LuQ_5nRViab-z-nFQ
+    short-id: '!!str abcd'
+  server: 82.29.43.42
+  servername: auto.malina24.xyz
+  tls: false
+  type: vless
+  uuid: 635a1c4e-122b-45f5-8339-03bce6039739
+- client-fingerprint: firefox
+  name: 🇸🇪 瑞典 | vless | 34
+  port: 8443
+  server: 45.159.12.1
   servername: ams1.fromblancwithlove.com
   tls: true
   type: vless
   uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-- name: 🇸🇪 瑞典 | vless | 55
+- name: 🇸🇪 瑞典 | vless | 35
   network: ws
   port: 443
   server: 5.178.109.158
@@ -1203,21 +964,96 @@ proxies:
     headers:
       Host: sni.111000.dns.army
     path: '%2F%3Fhttps%253A%252F%252Ft.me%252FWangCai2%25F0%259F%2587%25A8%25F0%259F%2587%25B3%3D'
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 56
-  port: 443
-  reality-opts:
-    public-key: kWLch3EWX5VBdNU5EiTNQhMwaOWNUtqR-ftUcc-B6gc
-    short-id: '!!str 43dabaaf5e906033'
-  server: 2.26.124.69
-  servername: site.rumedia-cdn.com
-  tls: false
+- name: 🇸🇪 瑞典 | vless | 37
+  network: tcp
+  port: 8443
+  server: 45.159.12.18
+  servername: ams1.fromblancwithlove.com
+  skip-cert-verify: false
+  tls: true
   type: vless
-  uuid: 73db72eb-eae3-4623-9395-a5eedc584569
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+- client-fingerprint: firefox
+  name: 🇸🇪 瑞典 | vless | 39
+  port: 8443
+  server: 79.127.249.198
+  servername: ams1.fromblancwithlove.com
+  tls: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+- name: 🇸🇪 瑞典 | vless | 40
+  port: 8443
+  server: 45.159.12.123
+  servername: ams1.fromblancwithlove.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+- name: 🇸🇪 瑞典 | vless | 42
+  network: tcp
+  port: 8443
+  server: 45.159.12.4
+  servername: ams1.fromblancwithlove.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 60
+  name: 🇸🇪 瑞典 | vless | 44
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: JwL5KoiWkCJI2vMJxyTEplfv-zBAtwxOH8SMbw6QHzY
+    short-id: '!!str cd40c992fe4b10c2'
+  server: 46.246.92.109
+  servername: www.rumedia-cdn.com
+  tls: false
+  type: vless
+  uuid: 14f19724-de91-4285-a633-aa8e2caaf812
+- name: 🇸🇪 瑞典 | vless | 50
+  port: 8443
+  server: 45.159.12.193
+  servername: ams1.fromblancwithlove.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇸🇪 瑞典 | vless | 51
+  port: 443
+  reality-opts:
+    public-key: pU7ElcbPMVObHoWqGThioVD4i5ux_phWFwElN97aDSQ
+    short-id: '!!str 0f4dacf89993e21f'
+  server: 185.189.46.70
+  servername: sw.api-yandex.net
+  tls: false
+  type: vless
+  uuid: 959b4df5-15bc-4eb8-8b93-95f6af50cd80
+- name: 🇸🇪 瑞典 | vless | 52
+  network: ws
+  port: 443
+  server: 185.139.228.126
+  servername: tn1rr.qzz.io
+  tls: true
+  type: vless
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: tn1rr.qzz.io
+    path: /sg-lnd
+- name: 🇸🇪 瑞典 | vless | 54
+  port: 8443
+  server: 45.159.12.131
+  servername: ams1.fromblancwithlove.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇪 瑞典 | vless | 55
   port: 443
   reality-opts:
     public-key: 6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY
@@ -1227,8 +1063,16 @@ proxies:
   tls: false
   type: vless
   uuid: aaa16b30-0816-0002-bab3-f4b4e850fe88
+- client-fingerprint: chrome
+  name: 🇸🇪 瑞典 | vless | 56
+  port: 8443
+  server: 45.159.12.34
+  servername: ams1.fromblancwithlove.com
+  tls: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
 - client-fingerprint: ''
-  name: 🇸🇪 瑞典 | vless | 62
+  name: 🇸🇪 瑞典 | vless | 60
   network: xhttp
   port: 443
   reality-opts:
@@ -1241,124 +1085,7 @@ proxies:
   ws-opts:
     path: /api/v1/data/?@MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=2048
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 63
-  port: 443
-  reality-opts:
-    public-key: JZppw-ux1-GsHY6eN1B-sFcVjXNVvb1D6-qKBKCrxAo
-    short-id: '!!str 64324d55105c96b5'
-  server: 84.32.49.93
-  servername: se.moktana.app
-  tls: false
-  type: vless
-  uuid: d0fae6b5-f262-4ede-8120-934421d0f12e
-- alterId: 0
-  cipher: auto
-  name: 未知67
-  network: tcp
-  port: 8588
-  server: se1.sepahanatlas.ir
-  servername: se1.sepahanatlas.ir
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 891314fa-ddd5-40ff-b219-717bff76bb8a
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: grpc2
-  name: 🇸🇪 瑞典 | vless | 72
-  network: grpc
-  port: 2096
-  reality-opts:
-    public-key: -Dg4mGAAM5Lwe9ri7Bx5WlYdPBsyYJy-Pai2Z0FGlyc
-    short-id: '!!str afee962d'
-  server: 31.207.7.48
-  servername: max.ru
-  tls: false
-  type: vless
-  uuid: 2181d0c8-448a-4f75-b848-1718029baef9
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 74
-  port: 2053
-  reality-opts:
-    public-key: Xx3r5KsSKa1I8O3avmwMbgXOWj_-MqiqzTO_7BzBxyU
-    short-id: '!!str 58c5b3ee013bdc8f'
-  server: 62.60.231.42
-  servername: www.nvidia.com
-  tls: false
-  type: vless
-  uuid: f7e0e597-636e-4550-9f54-6ab1c0e8cf49
-- name: 🇸🇪 瑞典 | trojan | 75
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 443
-  server: 185.104.151.181
-  skip-cert-verify: true
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2'
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 77
-  port: 443
-  reality-opts:
-    public-key: vmEFirr1z_W718lt4EWI30TdrNEbeh41CsKIS2wyfz8
-    short-id: '!!str '
-  server: 132.243.231.170
-  servername: yandex.ru
-  tls: false
-  type: vless
-  uuid: 46c0d31a-4857-4c7f-87dd-4f3c3174c92b
-- name: 🇸🇪 瑞典 | hy2 | 79
-  password: 71cada65-d23e-418c-88e4-a06188d14689
-  port: 443
-  server: 87.121.105.108
-  sni: swe-one.quiet-rogue.site
-  tls: false
-  type: hysteria2
-- client-fingerprint: ''
-  flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 80
-  port: 443
-  reality-opts:
-    public-key: HKpd1sbrhBds8SJSL0d22MAq_QyTR6EP6y5b5DYol3U
-    short-id: '!!str '
-  server: 31.77.144.45
-  servername: www.wikihow.com
-  tls: false
-  type: vless
-  uuid: 4cbefb4d-328c-411d-bf76-780df1082df8
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 81
-  port: 443
-  reality-opts:
-    public-key: HUIUjR11K2-23-4Y-i51g9cun8etjfgaWW-h8AsEtEU
-    short-id: '!!str 45ba24f179ad1f26'
-  server: 185.231.102.168
-  servername: web.max.ru
-  tls: false
-  type: vless
-  uuid: 0b9bcbc1-b289-4a64-86fa-a5b731b65384
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 86
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: Z2c9dK70_0OWBEZGgeaXJyt9dup9h2-hZlCCvIGLg1Q
-    short-id: '!!str 496ee75c2f91f51d'
-  server: 185.189.45.159
-  servername: sw1-chr.astralweb.tech
-  tls: false
-  type: vless
-  uuid: 3ad1d277-5715-4ca1-84db-5baea72f822d
-- client-fingerprint: chrome
-  name: 🇸🇪 瑞典 | vless | 88
+  name: 🇸🇪 瑞典 | vless | 61
   network: xhttp
   port: 443
   reality-opts:
@@ -1370,8 +1097,174 @@ proxies:
   uuid: c97b2158-64c9-1f55-8167-72970d347288
   ws-opts:
     path: '%2F'
+- name: 🇸🇪 瑞典 | vless | 62
+  port: 8443
+  server: 45.159.12.16
+  servername: ams1.fromblancwithlove.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
 - client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇪 瑞典 | vless | 63
+  port: 443
+  reality-opts:
+    public-key: 6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY
+    short-id: '!!str 1c3e8241a8743df9'
+  server: 192.142.23.30
+  servername: jwtdecoder.xyz
+  tls: false
+  type: vless
+  uuid: bd92eda1-8b37-0002-91fb-dafe419590ea
+- name: 🇸🇪 瑞典 | vless | 64
+  port: 8443
+  server: 45.159.12.163
+  servername: ams1.fromblancwithlove.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+- client-fingerprint: chrome
+  name: 🇸🇪 瑞典 | vless | 65
+  port: 8443
+  server: 45.159.12.3
+  servername: ams1.fromblancwithlove.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇪 瑞典 | vless | 66
+  port: 443
+  reality-opts:
+    public-key: JZppw-ux1-GsHY6eN1B-sFcVjXNVvb1D6-qKBKCrxAo
+    short-id: '!!str 64324d55105c96b5'
+  server: 84.32.49.93
+  servername: se.moktana.app
+  tls: false
+  type: vless
+  uuid: d0fae6b5-f262-4ede-8120-934421d0f12e
+- client-fingerprint: firefox
+  name: 🇸🇪 瑞典 | vless | 70
+  port: 8443
+  server: 79.127.249.217
+  servername: ams1.fromblancwithlove.com
+  tls: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+- client-fingerprint: firefox
+  name: 🇸🇪 瑞典 | vless | 71
+  port: 8443
+  server: 79.127.249.204
+  servername: ams1.fromblancwithlove.com
+  tls: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+- client-fingerprint: firefox
+  name: 🇸🇪 瑞典 | vless | 72
+  port: 8443
+  server: 45.159.12.133
+  servername: ams1.fromblancwithlove.com
+  tls: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+- client-fingerprint: firefox
+  name: 🇸🇪 瑞典 | vless | 74
+  port: 8443
+  server: 79.127.249.208
+  servername: ams1.fromblancwithlove.com
+  tls: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+- name: 🇸🇪 瑞典 | vless | 77
+  port: 8443
+  server: 45.159.12.161
+  servername: ams1.fromblancwithlove.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+- client-fingerprint: firefox
+  name: 🇸🇪 瑞典 | vless | 78
+  port: 8443
+  server: 45.159.12.31
+  servername: ams1.fromblancwithlove.com
+  tls: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+- name: 🇸🇪 瑞典 | hy2 | 81
+  password: 71cada65-d23e-418c-88e4-a06188d14689
+  port: 443
+  server: 87.121.105.108
+  sni: swe-one.quiet-rogue.site
+  tls: false
+  type: hysteria2
+- client-fingerprint: ''
+  flow: xtls-rprx-vision
+  name: 🇸🇪 瑞典 | vless | 82
+  port: 443
+  reality-opts:
+    public-key: HKpd1sbrhBds8SJSL0d22MAq_QyTR6EP6y5b5DYol3U
+    short-id: '!!str '
+  server: 31.77.144.45
+  servername: www.wikihow.com
+  tls: false
+  type: vless
+  uuid: 4cbefb4d-328c-411d-bf76-780df1082df8
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇪 瑞典 | vless | 85
+  port: 8443
+  reality-opts:
+    public-key: J5ITJbg5FQFembAfkogKHHQB6DigsFXQxK7xu-QMWUs
+    short-id: '!!str a20d3ed244c76426'
+  server: 178.20.211.215
+  servername: reserve.ayagut.ovh
+  tls: false
+  type: vless
+  uuid: b406bc51-9002-474c-beae-b194b02c91da
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇸🇪 瑞典 | vless | 87
+  port: 443
+  reality-opts:
+    public-key: kWLch3EWX5VBdNU5EiTNQhMwaOWNUtqR-ftUcc-B6gc
+    short-id: '!!str 43dabaaf5e906033'
+  server: 2.26.124.69
+  servername: site.rumedia-cdn.com
+  tls: false
+  type: vless
+  uuid: 73db72eb-eae3-4623-9395-a5eedc584569
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: grpc2
   name: 🇸🇪 瑞典 | vless | 89
+  network: grpc
+  port: 2096
+  reality-opts:
+    public-key: -Dg4mGAAM5Lwe9ri7Bx5WlYdPBsyYJy-Pai2Z0FGlyc
+    short-id: '!!str afee962d'
+  server: 31.207.7.48
+  servername: max.ru
+  tls: false
+  type: vless
+  uuid: 2181d0c8-448a-4f75-b848-1718029baef9
+- name: 🇸🇪 瑞典 | trojan | 90
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 443
+  server: 185.104.151.181
+  skip-cert-verify: true
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2'
+- client-fingerprint: chrome
+  name: 🇸🇪 瑞典 | vless | 91
   port: 1000
   reality-opts:
     public-key: ECxm-BdHYhxYK9MtN33NkkrFSdFZXp-OB-yhN8AleRY
@@ -1382,31 +1275,9 @@ proxies:
   tls: false
   type: vless
   uuid: 6f436a44-f703-93da-7e45-615824a39d3b
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 90
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: JwL5KoiWkCJI2vMJxyTEplfv-zBAtwxOH8SMbw6QHzY
-    short-id: '!!str cd40c992fe4b10c2'
-  server: 46.246.92.109
-  servername: www.rumedia-cdn.com
-  tls: false
-  type: vless
-  uuid: 14f19724-de91-4285-a633-aa8e2caaf812
-- name: 🇸🇪 瑞典 | vless | 91
-  network: tcp
-  port: 443
-  server: sw1-chr.astralweb.tech
-  servername: sw1-chr.astralweb.tech
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 5dc56757-458e-4df2-9e71-2a14ce47e8af
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 93
+  name: 🇸🇪 瑞典 | vless | 92
   port: 443
   reality-opts:
     public-key: L1mMPvSystB6rMgj4GnHizy37M_M1gj_krywNf3hfHc
@@ -1416,10 +1287,118 @@ proxies:
   tls: false
   type: vless
   uuid: ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇸🇪 瑞典 | vless | 93
+  port: 443
+  reality-opts:
+    public-key: vmEFirr1z_W718lt4EWI30TdrNEbeh41CsKIS2wyfz8
+    short-id: '!!str '
+  server: 132.243.231.170
+  servername: yandex.ru
+  tls: false
+  type: vless
+  uuid: 46c0d31a-4857-4c7f-87dd-4f3c3174c92b
+- name: 🇸🇪 瑞典 | vless | 94
+  network: ws
+  port: 8443
+  server: 193.232.178.149
+  servername: edge.yzkvm.top
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: bba95b1f-f48c-454b-897b-a6c6bc307df1
+  ws-opts:
+    headers:
+      Host: edge.yzkvm.top
+    path: /fp=chrome
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇪 瑞典 | vless | 95
+  port: 443
+  reality-opts:
+    public-key: 9F7JxyyP-TNLt0dY2xOB0_34I8W0xXIpFY7rZ7-L0Gg
+    short-id: '!!str 0a6ba2716a409da6'
+  server: se-in.api.dznn.net
+  servername: ya.ru
+  tls: false
+  type: vless
+  uuid: b11c8d06-96bf-41b3-908d-8663f919e399
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: 🇸🇪 瑞典 | vless | 96
+  port: 443
+  reality-opts:
+    public-key: HUIUjR11K2-23-4Y-i51g9cun8etjfgaWW-h8AsEtEU
+    short-id: '!!str 45ba24f179ad1f26'
+  server: 185.231.102.168
+  servername: web.max.ru
+  tls: false
+  type: vless
+  uuid: 0b9bcbc1-b289-4a64-86fa-a5b731b65384
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇸🇪 瑞典 | vless | 97
+  port: 40443
+  reality-opts:
+    public-key: -cxFcuI9vCkNZvlwGFms4bENl_cZbOz2pUMOVCKB4j0
+    short-id: '!!str e6bbe5cbfd3a1c9f'
+  server: sw.deeplcdn.com
+  servername: tv.apple.com
+  tls: false
+  type: vless
+  uuid: ed2c5f6c-8383-4f7a-a231-c28916489f76
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇸🇪 瑞典 | vless | 98
+  port: 2053
+  reality-opts:
+    public-key: Xx3r5KsSKa1I8O3avmwMbgXOWj_-MqiqzTO_7BzBxyU
+    short-id: '!!str 58c5b3ee013bdc8f'
+  server: 62.60.231.42
+  servername: www.nvidia.com
+  tls: false
+  type: vless
+  uuid: f7e0e597-636e-4550-9f54-6ab1c0e8cf49
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇪 瑞典 | vless | 99
+  port: 443
+  reality-opts:
+    public-key: HUIUjR11K2-23-4Y-i51g9cun8etjfgaWW-h8AsEtEU
+    short-id: '!!str 45ba24f179ad1f26'
+  server: se.vrsvpn.com
+  servername: web.max.ru
+  tls: false
+  type: vless
+  uuid: 0b9bcbc1-b289-4a64-86fa-a5b731b65384
+- alterId: 0
+  cipher: auto
+  name: 未知45
+  network: tcp
+  port: 8588
+  server: se1.sepahanatlas.ir
+  servername: se1.sepahanatlas.ir
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 891314fa-ddd5-40ff-b219-717bff76bb8a
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: 🇸🇪 瑞典 | vless | 109
+  port: 443
+  reality-opts:
+    public-key: qoAuuFJ0eK1lAMHIqTt6LniY6qu1GIobrGthBcRHUXM
+    short-id: '!!str 9d84de9d9f7b85e9'
+  server: se.edge-9d7c.com
+  servername: se.edge-9d7c.com
+  tls: false
+  type: vless
+  uuid: 5dc1b4ed-c897-468d-921d-266b062db2cb
 - client-fingerprint: ''
   grpc-opts:
     grpc-service-name: apisub
-  name: 🇸🇪 瑞典 | vless | 94
+  name: 🇸🇪 瑞典 | vless | 111
   network: grpc
   port: 2761
   reality-opts:
@@ -1430,32 +1409,29 @@ proxies:
   tls: false
   type: vless
   uuid: 8fecd05d-a813-45ca-8e4c-84ccaecaa923
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 95
-  port: 443
+- client-fingerprint: ios
+  name: 🇸🇪 瑞典 | vless | 112
+  port: 1001
   reality-opts:
-    public-key: HUIUjR11K2-23-4Y-i51g9cun8etjfgaWW-h8AsEtEU
-    short-id: '!!str 45ba24f179ad1f26'
-  server: se.vrsvpn.com
-  servername: web.max.ru
+    public-key: ECxm-BdHYhxYK9MtN33NkkrFSdFZXp-OB-yhN8AleRY
+    short-id: '!!str a62d513cd709744a'
+  server: teain.org
+  servername: knox.cdn-apple.com
   tls: false
   type: vless
-  uuid: 0b9bcbc1-b289-4a64-86fa-a5b731b65384
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 96
+  uuid: 5ae768bf-2ea0-22d2-eade-6763e14dc745
+- grpc-opts:
+    grpc-service-name: vlgrpc
+  name: 🇸🇪 瑞典 | vless | 113
+  network: grpc
   port: 443
-  reality-opts:
-    public-key: 9F7JxyyP-TNLt0dY2xOB0_34I8W0xXIpFY7rZ7-L0Gg
-    short-id: '!!str 0a6ba2716a409da6'
-  server: se-in.api.dznn.net
-  servername: ya.ru
-  tls: false
+  server: srv-5728.atlanta-games.com
+  servername: srv-5728.atlanta-games.com
+  tls: true
   type: vless
-  uuid: b11c8d06-96bf-41b3-908d-8663f919e399
+  uuid: 843b7f51-16cc-42ca-a047-8d32879ff1e5
 - client-fingerprint: chrome
-  name: 🇸🇪 瑞典 | vless | 97
+  name: 🇸🇪 瑞典 | vless | 114
   network: tcp
   port: 1000
   reality-opts:
@@ -1466,33 +1442,28 @@ proxies:
   tls: false
   type: vless
   uuid: 6f436a44-f703-93da-7e45-615824a39d3b
-- client-fingerprint: firefox
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典 | vless | 98
-  port: 40443
+  name: 🇸🇪 瑞典 | vless | 116
+  network: tcp
+  port: 443
   reality-opts:
-    public-key: -cxFcuI9vCkNZvlwGFms4bENl_cZbOz2pUMOVCKB4j0
-    short-id: '!!str e6bbe5cbfd3a1c9f'
-  server: sw.deeplcdn.com
-  servername: tv.apple.com
+    public-key: 978-Yxgtd3AWTVfiXEQqCstdwrT1qgsgleGPIRGQDl8
+    short-id: '!!str bdac121c7debdaba'
+  server: swe-8t.freeonline.pro
+  servername: www.microsoft.com
   tls: false
   type: vless
-  uuid: ed2c5f6c-8383-4f7a-a231-c28916489f76
-- client-fingerprint: chrome
-  name: 🇸🇪SE_1|2.7MB/s
-  network: ws
-  port: 8443
-  server: 193.232.178.149
-  servername: edge.yzkvm.top
+  uuid: 980231fb-4372-5c81-b696-20aa34d33af0
+- name: 🇸🇪 瑞典 | vless | 117
+  network: tcp
+  port: 443
+  server: sw1-chr.astralweb.tech
+  servername: sw1-chr.astralweb.tech
   skip-cert-verify: true
   tls: true
   type: vless
-  udp: true
-  uuid: bba95b1f-f48c-454b-897b-a6c6bc307df1
-  ws-opts:
-    headers:
-      Host: edge.yzkvm.top
-    path: /
+  uuid: 5dc56757-458e-4df2-9e71-2a14ce47e8af
 - grpc-opts:
     grpc-service-name: max.ru
   name: SE1｜机房｜低风险
