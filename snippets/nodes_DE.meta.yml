@@ -1,6 +1,7 @@
 proxies:
 - name: '德国 001 #1'
   network: tcp
+  packet-encoding: xudp
   port: 62145
   server: 134.98.154.253
   type: vless
@@ -9,6 +10,7 @@ proxies:
   xudp: true
 - name: '德国 002 #1'
   network: tcp
+  packet-encoding: xudp
   port: 62145
   server: 84.235.175.201
   type: vless
@@ -17,6 +19,7 @@ proxies:
   xudp: true
 - name: '德国 003 #1'
   network: tcp
+  packet-encoding: xudp
   port: 62145
   server: 134.98.159.8
   type: vless
@@ -1333,7 +1336,6 @@ proxies:
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 176
-  network: tcp
   port: 443
   reality-opts:
     public-key: bg_o5_i-5MSy-t3CB3iyqIeI8Uqyy_wTP2kheJCXngg
@@ -1367,7 +1369,6 @@ proxies:
 - client-fingerprint: firefox
   flow: xtls-rprx-vision-udp443-udp443-udp443
   name: 🇩🇪 德国 | vless | 173
-  network: tcp
   port: 443
   reality-opts:
     public-key: bg_o5_i-5MSy-t3CB3iyqIeI8Uqyy_wTP2kheJCXngg
@@ -1428,7 +1429,6 @@ proxies:
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 208
-  network: tcp
   port: 443
   reality-opts:
     public-key: bg_o5_i-5MSy-t3CB3iyqIeI8Uqyy_wTP2kheJCXngg
@@ -1490,81 +1490,135 @@ proxies:
   type: hysteria
   udp: true
   up: '500'
-- cipher: chacha20-ietf-poly1305
+- cipher: aes-256-cfb
   name: 🟠🇩🇪[🎬🤖📺🎭]_github.com/Ruk1ng001...
-  password: OWVhYWM4OTFlNGFhNTFiNjY5NDNlODI3ZDE5Njc0ZmE=
-  port: 59924
-  server: 158.180.61.141
+  password: amazonskr05
+  port: 443
+  server: 51.102.205.132
   type: ss
-- name: '🟠🇩🇪[🎬🤖📺🎭]_github.com/Ruk1ng001... #1'
-  password: d4436c04-d0fc-4761-8120-ad5d399ba6b0
-  port: 51061
-  server: 64.118.158.150
+  udp: true
+- cipher: aes-256-cfb
+  name: 🟠🇩🇪[🎬🤖📺🎪]_github.com/Ruk1ng001...
+  password: amazonskr05
+  port: 443
+  server: 3.76.30.105
+  type: ss
+  udp: true
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 482
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: Oyd0sn1z_6uNSN6AN63Q7aBq7AUQ1bOsB9MT3FyyiRM
+    short-id: '!!str 837fa04e73d6b581'
+  server: 93.123.85.86
+  servername: www.ya.ru
   skip-cert-verify: true
-  sni: dl.hu-yunpan.top
-  type: anytls
-  udp: true
-- name: 🔴🇩🇪[🤖📺🎭🎞️]_github.com/Ruk1ng00...
-  password: None
-  port: 1081
-  server: 46.37.123.166
-  type: socks5
-  udp: true
-  username: null
-- name: 🟢🇩🇪[📺🎭📦✈️]_github.com/Ruk1ng00...
-  password: None
-  port: 8889
+  tfo: false
+  tls: false
+  type: vless
+  uuid: acc50200-7f21-4f90-9cca-0057efcbf042
+- name: '🟠🇩🇪[🎬🤖📺🎭]_github.com/Ruk1ng001... #1'
+  network: ws
+  port: 2096
+  server: de-193-58.neobo-tooth.ru
+  skip-cert-verify: true
+  tfo: false
+  tls: false
+  type: vless
+  uuid: b6c29ae7-4748-4049-b642-b695c0d2c776
+  ws-opts:
+    headers:
+      Host: de-193-58.neobo-tooth.ru
+    path: /
+- name: 🔴🇩🇪[🎬🤖📺🎭]_github.com/Ruk1ng001...
+  password: su2j2TfjY
+  port: 64200
+  server: 154.195.173.209
+  type: http
+  username: WwDyfLyzH
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 283
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: X6zcH8pCUXrauNQvbNkm8e_oTdB0wOr8eCMCzs3b1Tc
+  server: 94.249.225.83
+  servername: plucky-kestrel.cdn.cachefleet.com
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vless
+  uuid: f4dbc770-016d-4a0f-82f0-d83ee6f45da3
+- name: 🟢🇩🇪[🎬🤖📺🎭]_github.com/Ruk1ng001...
+  port: 8888
   server: 95.211.64.139
   type: http
-  username: null
-- name: 🔴🇩🇪[🎬🤖📺🎭]_github.com/Ruk1ng001...
+- name: '🟠🇩🇪[🎬🤖📺🎭]_github.com/Ruk1ng001... #2'
+  password: smart@hkteVBi9aMFp-veBGU72OSCx
+  port: 10024
+  server: z-eu1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  type: trojan
+- name: '🔴🇩🇪[🎬🤖📺🎭]_github.com/Ruk1ng001... #1'
+  password: None
   port: 11111
   server: 103.237.102.191
   type: http
-- client-fingerprint: chrome
-  flow: ''
-  name: 🇺🇸 美国 | vless | 1152
-  network: ws
+  username: null
+- name: '🟠🇩🇪[🎬🤖📺🎭]_github.com/Ruk1ng001... #3'
+  password: smart@hkteVBi9aMFp-veBGU72OSCx
   port: 443
-  server: 150.241.101.218.fwqfw783rg2dad.website
-  servername: 150.241.101.218.fwqfw783rg2dad.website
-  tls: true
-  type: vless
-  uuid: 9efe092e-e4ae-4601-bb89-169fcb3db39b
-  ws-opts:
-    path: /websocket
-- name: '🟠🇩🇪[🎬🤖📺🎭]_github.com/Ruk1ng001... #2'
+  server: starlink-de1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  type: trojan
+- name: '🔴🇩🇪[🎬🤖📺🎭]_github.com/Ruk1ng001... #2'
+  password: smart@hkteVBi9aMFp-veBGU72OSCx
+  port: 443
+  server: starlink-de2.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  type: trojan
+- down: ''
+  fingerprint: ''
+  name: '🟠🇩🇪[🎬🤖📺🎭]_github.com/Ruk1ng001... #4'
+  obfs: salamander
+  obfs-password: xnJ%rKbwakdx
+  password: 6a3fe9d0-0d68-4f29-ae99-5771d4217a45
+  port: 10086
+  server: de4.xiaoliyu.cyou
+  skip-cert-verify: true
+  sni: de4.xiaoliyu.cyou
+  type: hysteria2
+  up: ''
+- name: '🟠🇩🇪[🎬🤖📺🎭]_github.com/Ruk1ng001... #5'
   password: qGwNSnw1
   port: 64218
   server: 200.225.173.142
   type: http
   username: ZJWRqQLE
-- client-fingerprint: ''
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇸🇨 塞舌尔 | vless | 116
+  name: 🇩🇪 德国 | vless | 547
   network: tcp
-  port: 443
+  packet-encoding: xudp
+  port: 2053
   reality-opts:
-    public-key: ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo
-    short-id: '!!str dc8109baf0f607ea'
-  server: 154.222.9.166
-  servername: storage.yandex.net
+    public-key: E6u2RbffXIPvia5v5iIZVj6U_VpSBWmGTsHHNtH-5Rg
+    short-id: '!!str 417063feab794131'
+  server: de3.neobo-tooth.ru
+  servername: vk.ru
   tls: false
   type: vless
-  uuid: d2042070-c247-4226-a3ac-15337923e00d
-- client-fingerprint: ''
-  flow: xtls-rprx-vision
-  name: 🇸🇨 塞舌尔 | vless | 96
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo
-    short-id: '!!str 5be97fb85093a3a9'
-  server: 154.222.9.122
-  servername: storage.yandex.net
-  tls: false
-  type: vless
-  uuid: d2042070-c247-4226-a3ac-15337923e00d
+  uuid: b6c29ae7-4748-4049-b642-b695c0d2c776
+- name: 🔴🇩🇪_github.com/Ruk1ng001_180c6...
+  port: 9050
+  server: 45.61.129.165
+  type: socks5
 - name: DE_speednode_0001
   password: e4b72b531a2d10900519
   port: 443
@@ -1575,501 +1629,96 @@ proxies:
   type: http
   udp: true
   username: testuser1
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: vless-grpc-reality
-  name: 🇩🇪 德国 | vless | 37
-  network: grpc
-  port: 8082
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: '!!str '
-  server: 5.199.133.35
-  servername: id.vk.com
-  tls: false
-  type: vless
-  uuid: f6808c62-cfe0-438c-aae6-44fe6ef51e47
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 630
-  network: raw
-  port: 8443
-  reality-opts:
-    public-key: 4CH3o5zOMcFNMbnwXnkAg0FFepmsc0QzhahXkUzb1ik
-    short-id: '!!str d8c6b58bcbb0c323'
-  server: 89.208.231.191
-  servername: max.ru
-  tls: false
-  type: vless
-  uuid: 64b8c7ca-df0c-0bb8-ad19-190a85daa99f
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: 🇩🇪
-  network: tcp
+- name: '🟢🇩🇪[🎬🤖📺🎭]_github.com/Ruk1ng001... #2'
   port: 443
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  server: 159.195.56.110
-  servername: jobinvest.ru
+  server: fan.973511.xyz
+  sni: fan.973511.xyz
+  tls: true
+  type: http
+- client-fingerprint: chrome
+  name: '[1596]🎈 🇩🇪 DEU 🎈 🗺️ #bb3e70'
+  network: ws
+  port: 80
+  server: 167.82.0.7
   tls: false
   type: vless
-  uuid: 74d77eab-871a-4bbf-b59c-7056b67f9db6
-- client-fingerprint: chrome
-  name: 🇩🇪 Germany ab6c | SNI - d-l28t...
-  network: ws
-  port: 14750
-  server: 45.76.87.125
-  servername: d-l28t5-65-b.pbe40wmcujaw726h7cpqernzmawz4stwtrnqve0n1s5reht.workers.dev
-  tls: true
-  type: vless
-  uuid: 432289de-8dec-46ef-9a3f-001a3af178a7
+  uuid: 7387968b-a44e-4a22-81e7-a719f95f9a72
   ws-opts:
     headers:
-      Host: d-l28t5-65-b.pbe40wmcujaw726h7cpqernzmawz4stwtrnqve0n1s5reht.workers.dev
-    path: /%40Marisa_kristi
-- name: 🇩🇪 德国 | vless | 321
+      Host: BankMelat.glObal.ssl.faStly.nEt.
+    path: /
+- name: DE德国(mibei77.com 米贝节点分享)
   network: ws
+  password: '!!str 1234567890'
   port: 443
-  server: 148.253.210.141
-  servername: sni.latonyamadeline.ndjp.net
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  server: 152.53.138.238
+  sni: kfm-bn0.pages.dev
+  type: trojan
   ws-opts:
     headers:
-      Host: sni.latonyamadeline.ndjp.net
-- name: '🇩🇪 Germany — #356'
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- name: 🇩🇪
   network: ws
-  port: 443
-  server: 135.84.67.38
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 716
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: BjG7XoEMR2uxHbBk_rtkR7P_S_luG2VcvQlvZ4YHzH8
-    short-id: '!!str 27e53bbcab7593d7'
-  server: 84.201.178.175
-  servername: max.ru
+  port: 8080
+  server: 104.21.65.173
   tls: false
   type: vless
-  uuid: 8adb3efd-46da-485f-bdd3-b340bb5b5470
-- client-fingerprint: chrome
-  name: 🇳🇱 荷兰 | vless | 288
-  network: grpc
-  port: 8443
-  reality-opts:
-    public-key: YAGFX8W6o2l3UWIAMEP93ULo0NSQ2iFM8DopfcFDBUk
-    short-id: '!!str '
-  server: 195.63.134.133
-  servername: steamcommunity.com
-  tls: false
-  type: vless
-  uuid: 81a1237d-5f5d-47c8-b9ff-ff4c3349d296
+  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
+  ws-opts:
+    headers:
+      Host: tr-cd.sublink-vip2.com
+    path: '%2F'
 - alpn:
   - ''
   client-fingerprint: ''
   flow: xtls-rprx-vision
   grpc-opts:
     grpc-service-name: ''
-  name: 🇺🇸 美国 | vless | 1411
+  name: DE VLESS-1276 | free-nodes
   network: tcp
   port: 443
-  server: s660.ccgfw.top
-  servername: u716087us660.ccgfw.top
+  server: s662.ccgfw.top
+  servername: s662.ccgfw.top
   tls: true
   type: vless
-  uuid: 205d6869-02ca-3b36-b933-be2465250c7e
+  uuid: 6d49fae1-374d-313e-b360-1227b0ea8dea
   ws-opts:
     headers:
-      Host: s660.ccgfw.top
+      Host: s662.ccgfw.top
     path: ''
-- name: 🇷🇺 俄罗斯 | vless | 43
-  network: ws
-  port: 4100
-  server: 168.222.140.233
-  tls: false
-  type: vless
-  uuid: 9b44bfb4-9d28-4870-9fc3-5154d6d462ff
-  ws-opts:
-    headers:
-      Host: live.ok.ru
-    path: '%2Fv1'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇨 塞舌尔 | vless | 114
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo
-    short-id: '!!str dc8109baf0f607ea'
-  server: 154.222.9.190
-  servername: storage.yandex.net
-  tls: false
-  type: vless
-  uuid: 83ab4443-ec22-4b3d-a587-53090be7beb2
-  ws-opts:
-    path: '%2f'
-- client-fingerprint: chrome
-  name: 🇩🇪 德国 | vless | 170
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-    short-id: '!!str '
-  server: 2.26.12.9
-  servername: pro-de.emrata.top
-  tls: false
-  type: vless
-  uuid: ed838389-e7e0-0001-8a1b-040f06d0ba88
-- client-fingerprint: ios
-  flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 1123
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: 4cG01BPepPVFkwZcHzXzVXEHhA72Seko8oFLcPIVEzM
-    short-id: '!!str f9db06260afa'
-  server: reserve-node.dylariz.ru
-  servername: reserve-node.dylariz.ru
-  tls: false
-  type: vless
-  uuid: 36347721-d014-7533-8acd-c3b798f417a8
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: 🇩🇪 Germany [*CIDR]
-  network: ws
-  port: 443
-  server: 195.208.65.150
-  servername: s46270.cdn.ngenix.net
-  tls: true
-  type: vless
-  uuid: 7f9b6f26-ce23-48fe-b0eb-f3748eba2ade
-  ws-opts:
-    headers:
-      Host: s46270.cdn.ngenix.net
-    path: '%2Fv1%2Fdata%2Fsync%2F'
-- alpn:
-  - http/1.1
-  client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 930
-  network: raw
-  port: 443
-  server: 213.219.212.200
-  servername: z4.nnmm.me
-  tls: true
-  type: vless
-  uuid: 887c13db-4bdb-4a61-bc26-7d96d89875ba
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 615
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: WrPShaEtQUXeKeyWDuELzBsd_ygDsU-k2bL1Avi13xI
-    short-id: '!!str '
-  server: 89.208.210.165
-  servername: yandex.ru
-  tls: false
-  type: vless
-  uuid: 02748922-7829-469a-96ae-ed5470f36bdc
-- client-fingerprint: chrome
-  name: 🇷🇴 罗马尼亚 | vless | 07
-  network: tcp
-  port: 448
-  reality-opts:
-    public-key: qX6IJfWNN-SNray6xJugb8pCpgY_zjeyCfvq9IUyd3w
-    short-id: '!!str e1bdc95c1554c8eb'
-  server: 93.114.194.114
-  servername: www.samsung.com
-  tls: false
-  type: vless
-  uuid: bc5b801f-49a7-4db7-ac92-a2c57d42d132
 - alpn:
   - h2
   - http/1.1
-  name: 🇩🇪 德国 | trojan | 81
-  network: tcp
-  password: rmXWalDesivbP8npZPa3S5Mj
-  port: 37976
-  server: 185.189.58.195
-  sni: 185.189.58.195
-  type: trojan
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 200
-  network: tcp
+  client-fingerprint: edge
+  name: '[1596]⭐ 🇩🇪 DEU ⭐ 📑 🗺️ #b3c29c'
+  network: xhttp
   port: 443
-  reality-opts:
-    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
-    short-id: '!!str 868419504747f6de'
-  server: 84.32.100.151
-  servername: tcpde8.figurapn.ru
-  tls: false
+  server: 188.68.218.160
+  servername: api.pushbyte.cc
+  tls: true
   type: vless
-  uuid: 90620657-58a2-441a-a4ce-cdb0503bb9f5
-- name: 🇩🇪 德国 | trojan | 298
-  password: '!!str 1234567890'
-  port: 443
-  server: 143.20.160.200
-  skip-cert-verify: false
-  sni: kfm-bn0.pages.dev
-  type: trojan
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 211
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: '!!str '
-  server: 159.195.151.6
-  servername: sellflow.org
-  tls: false
-  type: vless
-  uuid: 0108c657-a9bd-4c99-9179-74050cf78889
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  flow: ''
+  uuid: 388451f3-5ce2-415d-bb06-2fab697fc648
+  ws-opts:
+    headers:
+      Host: api.pushbyte.cc
+    path: /api/v2/
+- client-fingerprint: safari
   grpc-opts:
-    grpc-service-name: ''
-  name: DE VLESS-589 | free-nodes
-  network: xhttp
-  port: 443
-  server: 179.61.138.177
-  servername: u691611ud822cc65s71.okgfwbackxyz.xyz
-  tls: true
-  type: vless
-  uuid: 9794d18f-9280-3553-a7a5-a23da75aca76
-  ws-opts:
-    headers:
-      Host: d822cc65s71.okgfwbackxyz.xyz
-    path: 12743e6c90fa8429becf5ec50661cdd0
-- name: '🇩🇪 Germany — #116 (0f7a0c)'
-  network: xhttp
-  port: 443
-  server: 188.72.103.3
-  tls: true
-  type: vless
-  uuid: e99d1c4f-e3f0-4618-a461-549e810f7a0c
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 682
-  network: raw
+    grpc-service-name: grpc
+  name: '🇩🇪 Germany | 🌐 [*CIDR] #3'
+  network: grpc
   port: 443
   reality-opts:
-    public-key: YpcvMn5qyBuqOg0yBnJlbzcROJAz4T164xXQghB7ey8
-    short-id: '!!str eb0cca73'
-  server: 72.56.243.225
-  servername: eh.vk.com%3A443
+    public-key: vxhkDXfYpz1OLqZ-_9QVoQr3_UJLtJFheb5bD5YH7z8
+    short-id: '!!str 3303c7a5'
+  server: 46.8.220.182
+  servername: media2.tcpdoor.net
   tls: false
   type: vless
-  uuid: da20450f-c96d-467d-a5e4-4814402bcf9e
-- name: DE VLESS-62 | free-nodes
-  network: ws
-  port: 80
-  server: 172.64.147.255
-  tls: false
-  type: vless
-  uuid: 478cc26d-16b3-4fdd-be64-60d5a58c1622
-  ws-opts:
-    headers:
-      Host: tt.andishehparenting.com
-    path: '%2F'
-- name: '🇩🇪 Germany — #126 (a1ee2e)'
-  network: ws
-  port: 443
-  server: 158.160.182.90
-  tls: true
-  type: vless
-  uuid: 0b0e9802-3a94-4cb0-83e3-293b94a1ee2e
-- name: '🇩🇪 Germany — #44'
-  network: ws
-  port: 2096
-  server: 45.67.215.191
-  servername: sni.my111000.tech
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    path: Telegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2%2F%3Fed%3D2560
+  uuid: 218fd696-e3a2-4c33-b397-a5f13a82969e
 - client-fingerprint: edge
-  name: 🇩🇪 Germany ba03 | SNI - apple....
-  network: tcp
-  port: 443
-  server: 188.72.103.3
-  servername: apple.dbintro.space
-  tls: true
-  type: vless
-  uuid: aff2bf28-0e5c-4380-9a7b-5a6851d65b38
-- alpn:
-  - http/1.1
-  name: '🇩🇪 #3'
-  network: ws
-  password: MITIVPN
-  port: 443
-  server: basecamp.com
-  skip-cert-verify: true
-  sni: de-jodo.MaQRor.Ir
-  type: trojan
-  ws-opts:
-    headers:
-      Host: De1-2-3.MaQRor.Ir
-    path: /---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN=D--e
-- alpn:
-  - http/1.1
-  client-fingerprint: safari
-  name: '🇩🇪 Germany — #136'
-  network: ws
-  port: 443
-  server: 78.41.110.128
-  servername: s76276.cdn.ngenix.net
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 45c8814c-c06f-4444-acda-1b745e74d33e
-  ws-opts:
-    headers:
-      Host: s76276.cdn.ngenix.net
-    path: '%2Fv1%2Fdata%2Fsync%2F'
-- name: 🇷🇺 俄罗斯 | vless | 508
-  network: ws
-  port: 443
-  server: 195.208.65.192
-  tls: true
-  type: vless
-  uuid: 6e7d40bb-880b-413c-88c4-97c39b724f80
-- name: '🇩🇪 Germany — #258'
-  network: ws
-  port: 80
-  server: 104.17.145.59
-  tls: false
-  type: vless
-  uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da
-  ws-opts:
-    headers:
-      Host: vip.yaml7.ggff.net
-    path: '%2F'
-- client-fingerprint: chrome
-  name: '🇩🇪 [VL] Германия #2364 | РосТу...'
-  network: ws
-  port: 2083
-  server: 68.183.65.82
-  servername: lucky-sky-0104.alvlirm444.workers.dev
-  tls: true
-  type: vless
-  uuid: 8525fe74-67e6-4a55-8a26-95f227bd1384
-  ws-opts:
-    headers:
-      Host: lucky-sky-0104.alvlirm444.workers.dev
-    path: /
-- client-fingerprint: firefox
-  name: 🇩🇪 Germany 2c60
-  network: ws
-  port: 80
-  server: 146.75.119.82
-  tls: false
-  type: vless
-  uuid: 6f75658c-6dcc-4d23-a45b-0bef82f66b1c
-  ws-opts:
-    headers:
-      Host: rb24.ir
-    path: ws/%3Fed%3D2048/%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz%40AzadMarz/%3F2048
-- name: 🇫🇷 法国 | vless | 224
-  network: ws
-  port: 80
-  server: de4.niekotin.de
-  tls: false
-  type: vless
-  uuid: 2415cbdc-e5fc-453e-91ad-0e2e532afb7c
-  ws-opts:
-    headers:
-      Host: de4.niekotin.de
-    path: /vless
-- client-fingerprint: chrome
-  name: '[1596]⭐ 🇩🇪 DEU ⭐ 📑 #a81b7f'
-  network: ws
-  port: 443
-  server: 195.208.65.192
-  servername: s46270.cdn.ngenix.net
-  tls: true
-  type: vless
-  uuid: 2766fda3-bb08-438a-94d7-0022e188ca31
-  ws-opts:
-    headers:
-      Host: s46270.cdn.ngenix.net
-    path: /v1/data/sync/
-- name: '🇩🇪 Germany — #160 (dffebf)'
-  network: xhttp
-  port: 443
-  server: 188.72.103.3
-  tls: true
-  type: vless
-  uuid: c402ae77-bd1c-4c05-a981-89418fdffebf
-- client-fingerprint: ''
-  name: 🇩🇪 DE | — | 38 | @ByeWhiteList...
-  network: tcp
-  port: 443
-  server: kinode24.boevik-tut.org
-  servername: kinode24.boevik-tut.org
-  tls: true
-  type: vless
-  uuid: 7d714031-76a9-4500-a132-27dd3307b16e
-  ws-opts:
-    headers:
-      Host: ''
-    path: ''
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇩🇪 DE | — | 67 | @ByeWhiteList...
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: v1IeaDFVRDohxTWfnsoiWI3-vZCj6pbli30r2az_TXU
-    short-id: '!!str '
-  server: de.whalon.top
-  servername: de.whalon.top
-  tls: false
-  type: vless
-  uuid: 645da6ec-876b-44c9-8fdc-2d0c4715ffd0
-  ws-opts:
-    headers:
-      Host: ''
-    path: ''
-- name: '🇩🇪 Germany — #81'
-  network: xhttp
-  port: 443
-  server: 188.72.103.3
-  tls: true
-  type: vless
-  uuid: 90f0f31b-3400-4563-8e71-1cfb05dc85d0
-- client-fingerprint: chrome
-  name: '🇩🇪 #5'
-  network: xhttp
-  port: 443
-  server: 151.101.129.51
-  servername: relay-6bcjt33c.edgecompute.app
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 83048224-1465-4dc7-9492-d7f5ba339fee
-  ws-opts:
-    headers:
-      Host: relay-6bcjt33c.edgecompute.app
-    path: /dana1365
-- client-fingerprint: ios
-  name: '[1596]⭐ 🇩🇪 DEU ⭐ 📑 #ae9abd'
+  name: '🇩🇪 Germany — #101'
   network: xhttp
   port: 443
   server: 185.126.93.15
@@ -2080,201 +1729,317 @@ proxies:
   ws-opts:
     headers:
       Host: wx-deu-022.cdnphotos.org
-    path: /api/v1/
-- client-fingerprint: firefox
-  name: '🇩🇪 #13'
-  network: xhttp
-  port: 2087
-  server: 31.12.75.21
-  servername: ch-de.sdcards.ir
-  tls: true
-  type: vless
-  uuid: 9d6104a5-fc6d-4fe6-95b7-80d8f699e09d
-  ws-opts:
-    headers:
-      Host: ch-de.sdcards.ir
-    path: '%2F%3FTelegram-WangCai2'
-- name: '🇩🇪 Germany — #152'
+    path: '%2Fapi%2Fv1%2F'
+- client-fingerprint: chrome
+  name: 🇩🇪 Germany 4d58
   network: ws
   port: 80
-  server: 172.64.80.1
+  server: 57.129.41.216
+  tls: false
+  type: vless
+  uuid: 18535741-e8b3-4b43-9348-785b55936751
+  ws-opts:
+    headers:
+      Host: ov-germany1.09vpn.com
+    path: /vless/
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  name: '🇩🇪 Germany — #108'
+  network: ws
+  port: 443
+  server: 195.209.87.181
+  servername: s76276.cdn.ngenix.net
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 45c8814c-c06f-4444-acda-1b745e74d33e
+  ws-opts:
+    headers:
+      Host: s76276.cdn.ngenix.net
+    path: '%2Fv1%2Fdata%2Fsync%2F'
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: service
+  name: 🇩🇪 Germany d68f | SNI - www.mi...
+  network: grpc
+  port: 8547
+  reality-opts:
+    public-key: 4IOWxdtudwyVdmZl1Z2CINSbYHgMk94Bet0hVlgkrXo
+    short-id: '!!str c4e8a1f29b3d6075'
+  server: 45.146.131.154
+  servername: www.microsoft.com
+  tls: false
+  type: vless
+  uuid: 0dd1365f-4765-4502-a20d-1e09516ae8f5
+- name: '🇩🇪 Germany — #230'
+  network: ws
+  port: 80
+  server: 104.21.227.134
   tls: false
   type: vless
   uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da
   ws-opts:
     headers:
       Host: vip.yaml7.ggff.net
-- alpn:
-  - h3
-  name: 🇺🇸 美国 | hy2 | 1422
-  password: 205d6869-02ca-3b36-b933-be2465250c7e
-  port: 443
-  server: s662.ccgfw.top
-  sni: u716087us662.ccgfw.top
-  tls: false
-  type: hysteria2
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: edge
-  name: '🇩🇪 Germany — #84 #1'
-  network: xhttp
-  port: 443
-  server: 178.176.128.128
-  servername: first.eurocast.work
-  tls: true
-  type: vless
-  uuid: 1970b1ee-eeff-42ce-9042-a6b4b24accc5
-  ws-opts:
-    headers:
-      Host: first.eurocast.work
-    path: '%2Fapi%2FuploadFile%2F'
-- client-fingerprint: chrome
-  name: '🇩🇪 [VL] Германия #2545 | РосТу...'
+- name: '🇩🇪 Germany — #172'
   network: ws
-  port: 2053
-  server: 78.47.203.106
-  servername: forfreeuse.sub-flow.online
-  tls: true
+  port: 80
+  server: 172.66.44.211
+  tls: false
   type: vless
-  uuid: c7e9c591-2764-423a-afca-efbd010fd396
+  uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da
   ws-opts:
     headers:
-      Host: forfreeuse.sub-flow.online
-    path: '%2F'
-- client-fingerprint: random
+      Host: vip.yaml7.ggff.net
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '🇩🇪 Germany — #223'
+  name: DE-VLESS 296ms
   network: tcp
   port: 443
   reality-opts:
-    public-key: BjG7XoEMR2uxHbBk_rtkR7P_S_luG2VcvQlvZ4YHzH8
-    short-id: '!!str 27e53bbcab7593d7'
-  server: 84.201.178.175
+    public-key: Mg3ZxHNUFbX96q1HpS3WReeM7rnhEsXXtlEzxALeTDc
+    short-id: '!!str d8d3dc6c3ca45dd4'
+  server: 159.195.22.155
+  servername: 2.oncloudnineservicestreang.com
+  tls: false
+  type: vless
+  uuid: 859a537b-09cf-4bce-8da4-ecbb72950e3a
+- name: '[1596]️🌤️ 🇷🇺 RUS ️🌤️ [YA] #ed4...'
+  port: 443
+  server: 91.99.205.121
+  tls: false
+  type: vless
+  uuid: 153ee04c-dcc1-4ef8-a146-8fb31cec1f48
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: '[1596]⭐ 🇩🇪 DEU ⭐ 📑 [VK] #d1a16...'
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: 4CH3o5zOMcFNMbnwXnkAg0FFepmsc0QzhahXkUzb1ik
+    short-id: '!!str d8c6b58bcbb0c323'
+  server: 89.208.231.191
   servername: max.ru
   tls: false
   type: vless
-  uuid: 12dcd2f9-147a-428e-96db-083654677555
-- name: '🇩🇪 Germany — #59 (d23e52)'
-  network: xhttp
+  uuid: 64614ce0-8fbf-03e8-b521-e1135adffe21
+- client-fingerprint: chrome
+  name: 🇮🇷 伊朗 | vless | 230
+  network: raw
   port: 443
-  server: 188.72.103.3
+  reality-opts:
+    public-key: pCo2-ElBkfx1KTUwjzUyQVxcqGHcQXoX6-_z5uIccC0
+    short-id: '!!str 5918f395cc696590'
+  server: fast.superturk.ir
+  servername: telewebion.ir
+  tls: false
+  type: vless
+  uuid: b3790af1-e595-408d-bd26-2f21a15cd610
+- name: '🇩🇪 Germany — #95'
+  network: ws
+  port: 443
+  server: 51.250.47.71
+  servername: cloudflare.vhub.pro
   tls: true
   type: vless
-  uuid: a3eeaf55-bc53-4c42-9fed-098aadd23e52
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  grpc-opts:
-    grpc-service-name: ''
-  name: DE VLESS-757 | free-nodes
-  network: tcp
-  port: 443
-  server: s661.wagahaha.xyz
-  servername: u695099ub02ce874s660.ccgfw.top
-  tls: true
-  type: vless
-  uuid: 5d02517f-63d5-3e9f-b467-1bcf4d4e25d3
+  uuid: 9b4c96f9-60e8-4694-b069-c46992390555
   ws-opts:
     headers:
-      Host: b02ce874s660.ccgfw.top
-    path: ''
-- client-fingerprint: safari
+      Host: cloudflare.vhub.pro
+    path: '%2Fwebsocket'
+- name: '[1596]⚡ 🇩🇪 DEU ⚡ #91fe76'
+  network: ws
+  port: 8080
+  server: 172.67.74.2
+  tls: false
+  type: vless
+  uuid: cabbfe13-038b-4dbb-9c45-5079c829abfa
+  ws-opts:
+    headers:
+      Host: tr-cd.sublink-vip2.com
+    path: /
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: grpc-yandex
+  name: '🇩🇪 Germany | 🌐 [*CIDR] #1'
+  network: grpc
+  port: 8443
+  reality-opts:
+    public-key: sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg
+    short-id: '!!str 844352756c1fabba'
+  server: de.riotvpn.eu
+  servername: ads.x5.ru
+  tls: false
+  type: vless
+  uuid: 41da9cd0-b02c-427a-b74e-7e402c610ae4
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇩🇪 Germany b670 | SNI - yandex...
+  name: '🇩🇪 #1'
   network: tcp
   port: 443
   reality-opts:
-    public-key: WrPShaEtQUXeKeyWDuELzBsd_ygDsU-k2bL1Avi13xI
-  server: 89.208.210.165
-  servername: yandex.ru
+    public-key: JtA0d5K6Jnmg35oWP9SDOsc1ceuqaxOsNg33fiPHJQs
+    short-id: '!!str e915'
+  server: r.telewebion.ir.varzesh3.com.de
+  servername: yahoo.com
   tls: false
   type: vless
-  uuid: f915b170-2399-4c8b-bc73-40aaa265a872
+  uuid: edae0c5c-6979-44ba-b82b-1575cb5804d6
 - alpn:
   - h2
   - http/1.1
   client-fingerprint: edge
-  name: 🇷🇺 俄罗斯 | vless | 369
+  name: '🇩🇪 Germany — #114'
   network: xhttp
   port: 443
-  server: 37.9.4.128
-  servername: api1.madapp.cc
+  server: 188.72.103.3
+  servername: tomato.dragonborn.space
   tls: true
   type: vless
-  uuid: caa2deb9-5adb-48d1-a4f6-9aa95cd094b3
+  uuid: d7d95d50-1e97-43b8-9340-12d6c2fd9a54
   ws-opts:
     headers:
-      Host: api1.madapp.cc
-    path: /api/v2/
-- name: 🇷🇺 俄罗斯 | vless | 119
-  network: ws
-  port: 4100
-  server: 195.133.25.181
-  tls: false
-  type: vless
-  uuid: 9b44bfb4-9d28-4870-9fc3-5154d6d462ff
-  ws-opts:
-    path: '%2Fv1'
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: ios
-  flow: ''
-  grpc-opts:
-    grpc-service-name: ''
-  name: DE VLESS-881 | free-nodes
-  network: xhttp
-  port: 443
-  server: 104.27.9.178
-  servername: 76713a05s71.sspcccdn.xyz
-  tls: true
-  type: vless
-  uuid: 5d02517f-63d5-3e9f-b467-1bcf4d4e25d3
-  ws-opts:
-    headers:
-      Host: 76713a05s71.sspcccdn.xyz
-    path: ed696ed58e1baa9fc1175e94b867598d
-- client-fingerprint: firefox
-  name: 🇺🇸 美国 | vless | 692
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-    short-id: '!!str '
-  server: 2.26.78.35
-  servername: pro-de.emrata.top
-  tls: false
-  type: vless
-  uuid: caeb0482-d3d9-0032-8fbe-bc2cfe694efa
-- client-fingerprint: firefox
+      Host: tomato.dragonborn.space
+    path: '%2Fresources%2Fapp%2Fvendor-42c1%2F'
+- client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 180
+  name: 🇺🇸 美国 | vless | 990
+  network: tcp
+  port: 443
+  server: mx.bexumconnect.ltd
+  servername: mx.bexumconnect.ltd
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 1e06c388-d31c-420e-916a-94a990648e34
+- client-fingerprint: firefox
+  name: '[1596]🎈 🇩🇪 DEU 🎈 #f365c4'
   network: tcp
   port: 443
   reality-opts:
-    public-key: KqIktJ-mJFDrR7bIDz26rn6dDE6d3ehPoTh3wEmDNQY
-    short-id: '!!str 09f93f4737bedd0f'
-  server: 83.243.86.37
-  servername: www.mozilla.org
+    public-key: uRuW2K9JNw64jgAVEdV39NMh_udtVD6xxEV-dQFATHY
+  server: free-de-04.la-la-land.top
+  servername: free-de-04.la-la-land.top
   tls: false
   type: vless
-  uuid: dc76c57c-827f-4ad7-8a1c-94c798638aa9
-- client-fingerprint: android
-  name: 🇩🇪 Germany | 🌐 | [BL] t.me/rjs...
-  network: ws
-  port: 8443
-  server: 172.64.80.1
-  servername: ad-005.novayjr9g.info
-  tls: true
+  uuid: db310f93-900f-0032-a674-f2225f6f64d0
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '🇩🇪 Germany — #129'
+  network: raw
+  port: 443
+  reality-opts:
+    public-key: CF49-iS9dsHBwvqYFoDs_T3Me8TT0FpNW2kibGBkVXY
+  server: 46.182.24.163
+  servername: yandex.ru
+  tls: false
   type: vless
-  uuid: 2e1eb27b-9b56-40e9-a2f8-b959bc71736e
+  uuid: ab933e15-7d7f-488e-a8af-0a8e3d92872f
+- name: 'DE德国(mibei77.com 米贝节点分享) #1'
+  network: ws
+  password: '!!str 1234567890'
+  port: 2083
+  server: 134.209.252.120
+  sni: kfm-bn0.pages.dev
+  type: trojan
   ws-opts:
     headers:
-      Host: ad-005.novayjr9g.info
-    path: '%2F'
+      Host: kfm-bn0.pages.dev
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '🇩🇪 #2'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: P5ceHLOW8Gmz45z-ozbm9T6xsdSsIGLB71-jMfSjCBQ
+    short-id: '!!str 04bc695105689674'
+  server: 159.195.46.178
+  servername: 4.oncloudnineservicestreang.com
+  tls: false
+  type: vless
+  uuid: 859a537b-09cf-4bce-8da4-ecbb72950e3a
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: vless-grpc-reality
+  name: 🇩🇪 Germany | 🌐 | [IPv6] [*CIDR...
+  network: grpc
+  port: 8082
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  server: 89.163.154.211
+  servername: id.vk.com
+  tls: false
+  type: vless
+  uuid: f6808c62-cfe0-438c-aae6-44fe6ef51e47
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: '🇩🇪 #3'
+  network: ws
+  port: 443
+  server: 195.208.65.150
+  servername: s46270.cdn.ngenix.net
+  tls: true
+  type: vless
+  uuid: 0a3f4e17-70a2-47cd-9fb6-56fe57caf15a
+  ws-opts:
+    headers:
+      Host: s46270.cdn.ngenix.net
+    path: '%2Fv1%2Fdata%2Fsync%2F'
+- client-fingerprint: chrome
+  name: '🇩🇪 #4'
+  network: ws
+  port: 443
+  server: 195.209.88.182
+  servername: s36978.cdn.ngenix.net
+  tls: true
+  type: vless
+  uuid: e369547a-d774-4c07-a81f-6e0749cb8a03
+  ws-opts:
+    headers:
+      Host: s36978.cdn.ngenix.net
+    path: /v1/data/sync/
+- name: '[1596]🎈 🇩🇪 DEU [TR] 🎈 🗺️ #90b0...'
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 62.60.216.82
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- alpn:
+  - http%2525252F1.1
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '🇩🇪 Germany | 🌐 | [IPv6] [*CIDR... #1'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: cKzljSufhp_TTVyy85qjeByAHzTJZB2SHxKFjHaZHwA
+    short-id: '!!str 5a8d3f'
+  server: 91.222.237.113
+  servername: vk.com
+  tls: false
+  type: vless
+  uuid: e136eb65-a979-428e-959c-a1865aec92f6
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: '🇩🇪 Germany — #113'
+  network: raw
+  port: 443
+  reality-opts:
+    public-key: Ec54Eop0jZft7rcJsPN4RHc4xG9smXhtenM52pJFUQI
+    short-id: '!!str 27e53bbcab7593d7'
+  server: 84.201.178.175
+  servername: yandex.ru
+  tls: false
+  type: vless
+  uuid: a9a17d03-a73f-46ca-9af6-541c63f6fbe2
 - client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: grpc-direct
@@ -2289,118 +2054,53 @@ proxies:
   tls: false
   type: vless
   uuid: 42d3cfb6-8a1d-11f1-9ca5-1e6febe3e1df
-- client-fingerprint: firefox
-  name: 🇺🇸 美国 | vless | 1410
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-    short-id: '!!str '
-  server: pro-de.emrata.top
-  servername: pro-de.emrata.top
-  tls: false
-  type: vless
-  uuid: fdac0300-5963-0032-adb6-fc89a2de99a2
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: '🇩🇪 Germany [*CIDR] #1'
-  network: ws
-  port: 443
-  server: 195.208.65.163
-  servername: s36978.cdn.ngenix.net
-  tls: true
-  type: vless
-  uuid: 317cc64a-4149-40f2-9f71-f4376acab8b2
-  ws-opts:
-    headers:
-      Host: s36978.cdn.ngenix.net
-    path: '%2Fv1%2Fdata%2Fsync%2F'
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 753
-  network: raw
-  port: 443
-  reality-opts:
-    public-key: C5BdXsdyFfayzGJ6sT-yLQNzhsAnyjPF1QYfjLGAkEQ
-    short-id: '!!str 937292f106a737f6'
-  server: 51.250.21.169
-  servername: max.ru
-  tls: false
-  type: vless
-  uuid: d6747f33-1b99-4c27-beec-f9dd801a0f1d
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 533
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: Rt0UPm4jCurABfX6UnQReTQkmURaulL76dSbc1rDQhw
-    short-id: '!!str e8d2a1b4c39f8877'
-  server: 80.253.249.187
-  servername: www.cloudflare.com
-  tls: false
-  type: vless
-  uuid: abd880a5-d08f-4dfe-b8f5-d4b61892163a
-- client-fingerprint: safari
-  flow: xtls-rprx-vision
-  name: '[1596]⭐ 🇩🇪 DEU ⭐ 📑 [VK] #6631c...'
-  network: raw
-  port: 443
-  reality-opts:
-    public-key: WrPShaEtQUXeKeyWDuELzBsd_ygDsU-k2bL1Avi13xI
-  server: 89.208.210.165
-  servername: yandex.ru
-  tls: false
-  type: vless
-  uuid: b4fbc30a-561f-444b-8b09-f3159164f5a4
 - client-fingerprint: random
   flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 546
-  network: raw
+  name: '🇩🇪 Germany — #121'
+  network: tcp
   port: 443
   reality-opts:
-    public-key: xwusQ4IEWdYyuPLCc4LOA89P6HyQDNT7xo_75v2YW2I
+    public-key: v6rib0-2FxBd1MnBxdylbIRIhvXywSj56QEtCkaEuBo
     short-id: '!!str 27e53bbcab7593d7'
-  server: 51.250.16.150
-  servername: api-maps.yandex.ru
-  tls: false
-  type: vless
-  uuid: 95ee9a0d-7380-48d0-a367-ad947cb02412
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: grpc-yandex
-  name: '[1596]⭐ 🇩🇪 DEU ⭐ 📑 #6e7366'
-  network: grpc
-  port: 8443
-  reality-opts:
-    public-key: sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg
-    short-id: '!!str 844352756c1fabba'
-  server: de.riotvpn.eu
+  server: 158.160.249.252
   servername: ads.x5.ru
   tls: false
   type: vless
-  uuid: 41da9cd0-b02c-427a-b74e-7e402c610ae4
-- client-fingerprint: chrome
-  name: 🇩🇪 King 👑
-  network: ws
-  port: 443
-  server: 104.18.35.85
-  servername: cf.vless.sandesh.fr
-  tls: true
-  type: vless
-  uuid: 060a8fe8-7175-4ded-94a5-d9808bc645b6
-  ws-opts:
-    headers:
-      Host: cf.vless.sandesh.fr
-    path: '%2F'
-- name: '🇩🇪 Germany — #145 (540862)'
+  uuid: 6d981fab-9195-4a94-ac85-db35e0156d6c
+- alpn:
+  - h3
+  client-fingerprint: chrome
+  name: '🇩🇪 #5'
   network: xhttp
   port: 443
-  server: 188.68.218.110
+  server: 151.101.71.220
+  servername: www.fastly.com
   tls: true
   type: vless
-  uuid: b721ab8f-eac9-4de8-a109-6ad1f7540862
+  uuid: c2d7ef90-1d72-4c10-a694-fac554d17829
+  ws-opts:
+    headers:
+      Host: ov1.global.ssl.fastly.net
+    path: '%2F'
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: random
+  flow: ''
+  grpc-opts:
+    grpc-service-name: ''
+  name: DE VLESS-366 | free-nodes
+  network: xhttp
+  port: 443
+  server: 179.61.138.177
+  servername: u711540us71.okgfwbackxyz.xyz
+  tls: true
+  type: vless
+  uuid: 43bcba7d-cd22-379c-a7da-2e8eafecbc78
+  ws-opts:
+    headers:
+      Host: s71.okgfwbackxyz.xyz
+    path: ssp-xhttp
 - alpn:
   - h2
   - http/1.1
@@ -2408,10 +2108,10 @@ proxies:
   flow: ''
   grpc-opts:
     grpc-service-name: ''
-  name: DE VLESS-917 | free-nodes
+  name: DE VLESS-900 | free-nodes
   network: xhttp
   port: 443
-  server: 104.21.36.247
+  server: 104.27.9.178
   servername: 76713a05s71.sspcccdn.xyz
   tls: true
   type: vless
@@ -2420,9 +2120,100 @@ proxies:
     headers:
       Host: 76713a05s71.sspcccdn.xyz
     path: ed696ed58e1baa9fc1175e94b867598d
+- name: '🇩🇪 Germany — #344'
+  network: ws
+  port: 443
+  server: 162.159.13.20
+  tls: true
+  type: vless
+  uuid: a6f1755f-0140-4bea-8727-0db1bed7c4df
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: ios
+  name: '🇩🇪 Germany — #87'
+  network: xhttp
+  port: 443
+  server: 37.9.4.128
+  servername: api1.madapp.cc
+  tls: true
+  type: vless
+  uuid: f21079b8-b9b0-4b20-917d-c930d71351bb
+  ws-opts:
+    headers:
+      Host: api1.madapp.cc
+    path: '%2Fapi%2Fv2%2F'
+- alpn:
+  - h2
+  client-fingerprint: firefox
+  name: '🇩🇪 #6'
+  port: 443
+  server: 181.214.231.180
+  servername: statue.lnmarketp
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 7c63f43f-f526-49bb-b5c8-2be26e11ef00
+  ws-opts:
+    path: '%2Fstatue'
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  name: '[1596]⭐ 🇩🇪 DEU ⭐ 📑 🗺️ #5784ee'
+  network: xhttp
+  port: 443
+  server: 185.242.19.250
+  servername: top2197697635.mwscdn.ru
+  tls: true
+  type: vless
+  uuid: 041dfddd-a4e0-46a1-ac1b-eaf0bfe8c4f5
+  ws-opts:
+    headers:
+      Host: top2197697635.mwscdn.ru
+    path: /xhttppath
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: edge
+  name: '🇩🇪 Germany — #79'
+  network: xhttp
+  port: 443
+  server: 195.209.90.8
+  servername: s36828.cdn.ngenix.net
+  tls: true
+  type: vless
+  uuid: f707adc9-a26f-4b2f-8469-6e9fac189917
+  ws-opts:
+    headers:
+      Host: s36828.cdn.ngenix.net
+    path: '%2Fapi%2Fv4%2Fclient%2Fevents%2Fstream%2F'
+- name: 🌐 Anycast-IP | 🇩🇪 | [BL]
+  network: ws
+  port: 80
+  server: 167.82.0.7
+  tls: false
+  type: vless
+  uuid: 46445435-11cd-47e8-87dc-1acc159fc360
+  ws-opts:
+    headers:
+      Host: BankMelat.glObal.ssl.faStly.nEt.
+    path: ''
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 Germany 5bd7 | SNI - yandex...
+  network: raw
+  port: 443
+  reality-opts:
+    public-key: CF49-iS9dsHBwvqYFoDs_T3Me8TT0FpNW2kibGBkVXY
+  server: 185.130.114.211
+  servername: yandex.ru
+  tls: false
+  type: vless
+  uuid: 2bcdacbd-854d-48d8-9cb7-a720dd0fb654
 - client-fingerprint: safari
   flow: xtls-rprx-vision
-  name: '🇩🇪 Germany — #99'
+  name: '[1596]✴️ 🇩🇪 DEU ✴️ #d1e829'
   network: tcp
   port: 443
   reality-opts:
@@ -2431,130 +2222,106 @@ proxies:
   servername: yandex.ru
   tls: false
   type: vless
-  uuid: 04d917dc-d401-4ffe-8ee6-f38a4d2b9ae3
-- name: '🇩🇪 Germany — #330'
-  network: ws
+  uuid: 742d4ee3-2330-412d-83ab-b0f9464a6785
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 Germany 6795 | SNI - decher...
+  network: tcp
   port: 443
-  server: 162.159.13.206
+  server: 84.32.59.15
+  servername: decher11.potatosubge20.org
   tls: true
   type: vless
-  uuid: a6f1755f-0140-4bea-8727-0db1bed7c4df
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: '[1596]⭐ 🇩🇪 DEU ⭐ 📑 #de02bf'
+  uuid: d23a1ce1-b6a6-4a58-b56b-1be6a1cd7d39
+- client-fingerprint: chrome
+  name: '[1596]⭐ 🇩🇪 DEU ⭐ 📑 #424984'
   network: ws
   port: 443
-  server: 195.208.65.150
-  servername: s46270.cdn.ngenix.net
+  server: 195.208.65.163
+  servername: s36978.cdn.ngenix.net
   tls: true
   type: vless
-  uuid: 34faad28-807b-4e2e-b47f-013eeb7cdebe
+  uuid: 4cc53e63-1cda-4bbb-9c79-3b72c0669f4a
   ws-opts:
     headers:
-      Host: s46270.cdn.ngenix.net
+      Host: s36978.cdn.ngenix.net
     path: /v1/data/sync/
-- name: '🇩🇪 Germany — #143 (346cb3)'
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: '🇩🇪 Germany — #169'
+  network: raw
+  port: 443
+  reality-opts:
+    public-key: nkpZyXHfG7nhEh1vjBjEDV-Tn7UhHEb5iN9iA8gc9VE
+    short-id: '!!str c31188450fe50718'
+  server: 91.240.86.12
+  servername: www.vk.com
+  tls: false
+  type: vless
+  uuid: 8b501ee5-7773-4565-9d64-fd9043a67553
+- name: '🇩🇪 Germany — #172 (858fe2)'
   network: xhttp
   port: 443
   server: 188.72.103.3
   tls: true
   type: vless
-  uuid: 6beba316-729f-4c30-9e12-e23afc346cb3
-- alpn:
-  - ''
-  client-fingerprint: random
-  flow: ''
-  grpc-opts:
-    grpc-service-name: ''
-  name: DE VLESS-154 | free-nodes
-  network: xhttp
-  port: 443
-  server: 179.61.138.177
-  servername: u723828us88.okgfwbackxyz.xyz
-  tls: true
-  type: vless
-  uuid: 723af53a-b131-3270-8ce0-13f8ecaaa322
-  ws-opts:
-    headers:
-      Host: s88.okgfwbackxyz.xyz
-    path: ssp-xhttp
-- alpn:
-  - h3
-  name: 🇺🇸 美国 | hy2 | 1389
-  password: 6d49fae1-374d-313e-b360-1227b0ea8dea
-  port: 443
-  server: s663.ccgfw.top
-  sni: s663.ccgfw.top
-  tls: false
-  type: hysteria2
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 233
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: EIlnBMyH--EIasnzGPJAAFSP5WM_4FNU4ktFUQI0O00
-    short-id: '!!str a13edee689fca1da'
-  server: 144.31.219.56
-  servername: cdn2.swaginozip.fun
-  tls: false
-  type: vless
-  uuid: cf038a28-8f85-41fc-9e86-ba99a3fdd0d9
+  uuid: 0af19a89-c0ab-4c2a-9673-3cf0f7858fe2
 - client-fingerprint: safari
   flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 737
-  network: raw
+  name: '[1596]✴️ 🇩🇪 DEU ✴️ #7634ad'
+  network: tcp
   port: 443
   reality-opts:
     public-key: WrPShaEtQUXeKeyWDuELzBsd_ygDsU-k2bL1Avi13xI
-    short-id: '!!str '
   server: 89.208.210.216
   servername: yandex.ru
   tls: false
   type: vless
-  uuid: 304c83db-b44b-43c2-905a-7ff120c8f101
-- client-fingerprint: ios
-  name: 🇩🇪 Germany 8572 | SNI - server...
-  network: ws
-  port: 443
-  server: 45.130.125.158
-  servername: server-ir-3.ariyuz.org
-  tls: true
-  type: vless
-  uuid: b3bd8d0e-3cbe-4241-a4f1-e3dd0a9e432c
-  ws-opts:
-    headers:
-      Host: server-ir-3.ariyuz.org
-    path: /page%3D2
-- client-fingerprint: safari
-  grpc-opts:
-    grpc-service-name: grpc
-  name: '🇩🇪 Germany — #117'
-  network: grpc
-  port: 443
-  reality-opts:
-    public-key: vxhkDXfYpz1OLqZ-_9QVoQr3_UJLtJFheb5bD5YH7z8
-    short-id: '!!str 3303c7a5'
-  server: 46.8.220.182
-  servername: media2.tcpdoor.net
-  tls: false
-  type: vless
-  uuid: 218fd696-e3a2-4c33-b397-a5f13a82969e
+  uuid: c3da47e3-78aa-4a7f-b73c-4698b525c52e
 - client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇩🇪 Germany, Berlin | [BL]
+  name: 🇩🇪 Germany, Frankfurt am Main ...
   network: tcp
   port: 443
   reality-opts:
-    public-key: c9FNVDSx_oUTDFW0JewGq511wlGweUkQGgPPY9vsCVM
-    short-id: '!!str 08804e078e1257c8'
-  server: stratix.orbvia.online
-  servername: stratix.orbvia.online
+    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
+  server: 2.26.78.131
+  servername: pro-de.emrata.top
   tls: false
   type: vless
-  uuid: 1bced29a-3051-42b8-b393-005135b97616
-- name: 🇩🇪 德国 | vless | 687
+  uuid: caeb0482-d3d9-4271-8fbe-bc2cfe694efa
+- client-fingerprint: ios
+  name: '🇩🇪 #7'
+  network: ws
+  port: 14443
+  server: media.kinodrozd.com
+  tls: true
+  type: vless
+  uuid: 8f0560ec-ba22-4431-a6a7-318dc59d5233
+- name: '🇩🇪 Germany — #112 (8fb28b)'
+  network: xhttp
+  port: 443
+  server: 188.72.103.3
+  tls: true
+  type: vless
+  uuid: 3cb888c3-31b6-4679-a35f-a80f418fb28b
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: edge
+  name: '🇩🇪 Germany — #56'
+  network: xhttp
+  port: 443
+  server: 188.72.103.3
+  servername: worldstream.club
+  tls: true
+  type: vless
+  uuid: 8d0e402c-ee29-4dfd-a3e9-8cb2390076fb
+  ws-opts:
+    headers:
+      Host: worldstream.club
+    path: '%2Fstatic%2FgetFile%2Fvideo%2Fsegment.ts'
+- client-fingerprint: firefox
+  name: 🇩🇪 Germany ff41
   network: ws
   port: 80
   server: ov-germany1.09vpn.com
@@ -2562,32 +2329,136 @@ proxies:
   type: vless
   uuid: 7d74eae4-8a06-4306-a923-ad686f30bf26
   ws-opts:
-    headers:
-      Host: OV-Germany1.09vpn.com
     path: /vless/
-- name: '🇩🇪 Germany — #335'
-  network: ws
-  port: 443
-  server: 162.159.152.2
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-- client-fingerprint: qq
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇩🇪 Germany — #32'
+  name: 🇩🇪 德国 | vless | 326
   network: tcp
-  port: 8443
+  port: 443
   reality-opts:
-    public-key: 4CH3o5zOMcFNMbnwXnkAg0FFepmsc0QzhahXkUzb1ik
-    short-id: '!!str d8c6b58bcbb0c323'
-  server: 89.208.231.191
-  servername: o-gate.perekrestok.ru
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: '!!str '
+  server: 159.195.26.24
+  servername: de.sellflow.org
   tls: false
   type: vless
-  uuid: 2cb59c3b-21ca-0bb8-a5ab-18c390dc4b96
+  uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '🇩🇪 #8'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo
+    short-id: '!!str dc8109baf0f607ea'
+  server: 81.26.182.87
+  servername: max.ru
+  tls: false
+  type: vless
+  uuid: 31181fd0-dbdb-4877-b384-11bfd4bb4262
+- client-fingerprint: qq
+  name: '🇩🇪 #18'
+  network: xhttp
+  port: 2087
+  server: 31.12.75.21
+  servername: ch-de.sdcards.ir
+  tls: true
+  type: vless
+  uuid: 9d6104a5-fc6d-4fe6-95b7-80d8f699e09d
+  ws-opts:
+    path: '%2F%3FTelegram-WangCai2'
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  name: '🇩🇪 #10'
+  network: xhttp
+  port: 2053
+  server: 198.12.145.121
+  servername: myopen.tencan.ir
+  tls: true
+  type: vless
+  uuid: bd1cbd82-1da8-497f-9eb5-83bf1d8b6de2
+  ws-opts:
+    path: /?ed%3D2048
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '[1596]✴️ 🇩🇪 DEU ✴️ #07dcb0'
+  network: raw
+  port: 443
+  reality-opts:
+    public-key: CF49-iS9dsHBwvqYFoDs_T3Me8TT0FpNW2kibGBkVXY
+  server: 185.130.115.132
+  servername: yandex.ru
+  tls: false
+  type: vless
+  uuid: d3a53e1b-430a-4e4c-9e83-a69d5a3f7fdd
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: vless-grpc-reality
+  name: '🇩🇪 #11'
+  network: grpc
+  port: 8082
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  server: 5.199.143.28
+  servername: id.vk.com
+  tls: false
+  type: vless
+  uuid: f6808c62-cfe0-438c-aae6-44fe6ef51e47
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: edge
+  name: '🇩🇪 Germany — #61'
+  network: xhttp
+  port: 443
+  server: 188.72.103.3
+  servername: apple.dbintro.space
+  tls: true
+  type: vless
+  uuid: 6f33e365-70bd-4886-924b-655008ecb641
+  ws-opts:
+    headers:
+      Host: apple.dbintro.space
+    path: '%2Fassets%2Fjs%2Fchunk-a91a%2F'
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: '[1596]⭐ 🇩🇪 DEU ⭐ 📑 #9e5f7a'
+  network: raw
+  port: 5443
+  reality-opts:
+    public-key: A3BZvaih9lBbMaKWjndiEdhCDZLMRbeRD1fI8CP4324
+  server: 91.185.83.94
+  servername: 5post-gate.x5.ru
+  tls: false
+  type: vless
+  uuid: 499735db-03b7-47a7-8569-c8662a34ad56
+- client-fingerprint: chrome
+  name: 🇷🇺 俄罗斯 | vless | 384
+  network: ws
+  port: 14443
+  server: 176.109.85.48
+  servername: media.kinodrozd.com
+  tls: true
+  type: vless
+  uuid: 8f0560ec-ba22-4431-a6a7-318dc59d5233
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: '[🇩🇪]t.me/ConfigsHub'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: dp-ncBuRHgZl5O80eHBYhSKo1i9qbt-J7MJ1alyWXmM
+    short-id: '!!str 1991780b928b292d'
+  server: 159.195.45.129
+  servername: 3.oncloudnineservicestreang.com
+  tls: false
+  type: vless
+  uuid: 859a537b-09cf-4bce-8da4-ecbb72950e3a
 - client-fingerprint: safari
   flow: xtls-rprx-vision
-  name: '[1596]✴️ 🇩🇪 DEU ✴️ #56b908'
+  name: '[1596]✴️ 🇩🇪 DEU ✴️ #9040c7'
   network: tcp
   port: 443
   reality-opts:
@@ -2596,21 +2467,182 @@ proxies:
   servername: yandex.ru
   tls: false
   type: vless
-  uuid: 4fa85d40-a099-42a1-a865-1bc6121f477f
-- name: DE德国(mibei77.com 米贝节点分享)
-  network: ws
-  port: 80
-  server: 104.17.15.87
+  uuid: c77c7dc9-7761-42a3-8333-769015e1ee64
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: '[1596]⭐ 🇩🇪 DEU ⭐ 📑 [VK] #c709a...'
+  network: raw
+  port: 443
+  reality-opts:
+    public-key: WrPShaEtQUXeKeyWDuELzBsd_ygDsU-k2bL1Avi13xI
+  server: 89.208.210.216
+  servername: yandex.ru
   tls: false
   type: vless
-  uuid: f929cc78-e2a1-4ce3-8051-3e9538405144
+  uuid: d35fbe2d-481d-4d26-854a-e7739bb5cdef
+- name: '🇩🇪 #12'
+  port: 443
+  server: 138.124.186.80
+  tls: false
+  type: vless
+  uuid: e346f220-4ca4-4f69-a66b-52e992b3b625
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  grpc-opts:
+    grpc-service-name: ''
+  name: DE VLESS-1041 | free-nodes
+  network: tcp
+  port: 443
+  server: 179.61.138.177
+  servername: u695099u818690d8s71.gogocs.xyz
+  tls: true
+  type: vless
+  uuid: 5d02517f-63d5-3e9f-b467-1bcf4d4e25d3
   ws-opts:
     headers:
-      Host: britain.xydcqd.workers.dev
-    path: '%2F%40WireXnet'
+      Host: 818690d8s71.gogocs.xyz
+    path: ''
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: '🇩🇪 Germany — #135'
+  network: raw
+  port: 443
+  reality-opts:
+    public-key: WrPShaEtQUXeKeyWDuELzBsd_ygDsU-k2bL1Avi13xI
+  server: 158.160.139.156
+  servername: yandex.ru
+  tls: false
+  type: vless
+  uuid: ab933e15-7d7f-488e-a8af-0a8e3d92872f
+- client-fingerprint: chrome
+  name: 🇩🇪 德国 | vless | 690
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ
+    short-id: '!!str 77778028b56c8704'
+  server: de01.goodmaximum.com
+  servername: data.glimmerhouse.com
+  tls: false
+  type: vless
+  uuid: db95b766-43a8-0014-9b5d-5ca6f2735188
+- name: 🌐 Anycast-IP | 🇦🇷 🇩🇪 🇫🇮 | [BL]
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 141.105.143.132
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: '🇩🇪 [VL] Германия #2530 | РосТу...'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: CGrQMXFz6Qopcrvn3EIJnJwY-d_tQ4ahez7WQI8Z1Bk
+    short-id: '!!str 53f809e639280191'
+  server: ge14.cyphervpn.pro
+  servername: ge14.cyphervpn.pro
+  tls: false
+  type: vless
+  uuid: 8bba3194-4856-46d1-8319-075817d87eb1
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: edge
+  name: '🇩🇪 Germany — #74'
+  network: xhttp
+  port: 443
+  server: 188.72.103.3
+  servername: worldstream.club
+  tls: true
+  type: vless
+  uuid: c4940fb7-64ec-4377-a9f3-3327983bdd94
+  ws-opts:
+    headers:
+      Host: worldstream.club
+    path: '%2Fstatic%2FgetFile%2Fvideo%2Fsegment.ts'
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: '🇩🇪 Germany — #113 #1'
+  network: raw
+  port: 443
+  reality-opts:
+    public-key: WrPShaEtQUXeKeyWDuELzBsd_ygDsU-k2bL1Avi13xI
+  server: 89.208.210.165
+  servername: yandex.ru
+  tls: false
+  type: vless
+  uuid: 5f90d1b3-1411-47f1-a682-b7dc0754e7a3
+- client-fingerprint: edge
+  name: '🌐 Anycast-IP | 🇩🇪 | [BL] #1'
+  network: ws
+  port: 8443
+  server: 172.64.80.1
+  servername: ad-005.novayjr9g.info
+  tls: true
+  type: vless
+  uuid: 2e1eb27b-9b56-40e9-a2f8-b959bc71736e
+  ws-opts:
+    headers:
+      Host: ad-005.novayjr9g.info
+    path: '%2F'
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '[1596]🎈 🇩🇪 DEU 🎈 🗺️ #a48ad7'
+  network: tcp
+  port: 43000
+  reality-opts:
+    public-key: a_OuNKLGp5Z2rLwuWKM1Y3pMbuGE78z5-L7c0p5hNUE
+    short-id: '!!str f2059a31'
+  server: 77.90.60.233
+  tls: false
+  type: vless
+  uuid: e81b3eeb-5c79-47c2-8196-722358e14acb
+- client-fingerprint: ''
+  flow: xtls-rprx-vision
+  name: 🇸🇨 塞舌尔 | vless | 96
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo
+    short-id: '!!str 5be97fb85093a3a9'
+  server: 154.222.9.122
+  servername: storage.yandex.net
+  tls: false
+  type: vless
+  uuid: d2042070-c247-4226-a3ac-15337923e00d
+- client-fingerprint: chrome
+  name: '[1596]🎈 🇩🇪 DEU 🎈 #ecfc44'
+  network: ws
+  port: 443
+  server: 43.174.246.60
+  servername: sni.mmadcoffee.info
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 317c8bd5-2e89-4bfb-9513-a37b8e29427f
+  ws-opts:
+    headers:
+      Host: mail.mmadcoffee.info
+    path: /19426/mmad
+- name: '🇩🇪 Germany — #163 (bed4db)'
+  network: xhttp
+  port: 443
+  server: 37.9.4.128
+  tls: true
+  type: vless
+  uuid: bc533f14-8fc3-4dd4-abc9-c9330fbed4db
 - client-fingerprint: random
   flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 457
+  name: '🇩🇪 Germany — #128'
   network: tcp
   port: 443
   reality-opts:
@@ -2620,338 +2652,336 @@ proxies:
   servername: api-maps.yandex.ru
   tls: false
   type: vless
-  uuid: ff579efe-eba8-4827-acea-004a62a73839
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: vless-grpc-reality
-  name: 🇩🇪 德国 | vless | 140
-  network: grpc
-  port: 8082
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: '!!str '
-  server: 85.14.247.144
-  servername: id.vk.com
-  tls: false
-  type: vless
-  uuid: f6808c62-cfe0-438c-aae6-44fe6ef51e47
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: '🇩🇪 Germany — #56'
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: bwuT_tpimT_uUeWpSn-HbRztfol4o4uCcUHcdvkeFx0
-    short-id: '!!str 27e53bbcab7593d7'
-  server: 84.201.178.175
-  servername: www.vk.com
-  tls: false
-  type: vless
-  uuid: 44148081-cd4d-41a6-a7e7-eda38d72a795
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: ns
-  name: 🇷🇺 俄罗斯 | vless | 990
-  network: grpc
-  port: 443
-  reality-opts:
-    public-key: N6RiU4XHQl31HeKmBNOFDypgfDqqshGa7zxfqe72hjk
-    short-id: '!!str e42075de64c24511'
-  server: 81.163.23.39
-  servername: cdn.byteark.com
-  tls: false
-  type: vless
-  uuid: 68cd9871-59ce-5aa5-a209-e379c6fb987f
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 956
-  network: raw
-  port: 443
-  reality-opts:
-    public-key: rbczuaWlz3zi9O70gTc7pCdiXuhMsc967zFonli-pBY
-    short-id: '!!str c1756ac68565f85c'
-  server: 31.177.111.151
-  servername: storage.yandexcloud.net
-  tls: false
-  type: vless
-  uuid: e8addda1-28dd-4286-acd2-f876cf507e1b
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '[1596]🦋 🇩🇪 DEU 🦋 #5e70e1'
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: WrPShaEtQUXeKeyWDuELzBsd_ygDsU-k2bL1Avi13xI
-  server: 89.208.210.216
-  servername: yandex.ru
-  tls: false
-  type: vless
-  uuid: 021c45bb-4982-47a6-a07f-3c65b6f63a9b
-- client-fingerprint: chrome
-  name: 🇷🇴 罗马尼亚 | vless | 08
-  network: tcp
-  port: 448
-  reality-opts:
-    public-key: qX6IJfWNN-SNray6xJugb8pCpgY_zjeyCfvq9IUyd3w
-    short-id: '!!str e1bdc95c1554c8eb'
-  server: 93.114.194.115
-  servername: www.samsung.com
-  tls: false
-  type: vless
-  uuid: bc5b801f-49a7-4db7-ac92-a2c57d42d132
-- client-fingerprint: chrome
-  name: 🇩🇪 Germany f832 | SNI - JoinPr...
-  network: ws
-  port: 443
-  server: 104.16.174.3
-  servername: JoinProxyVPN11.amoosamiii.net
-  tls: true
-  type: vless
-  uuid: 4f013568-a58b-4b04-b5dd-4d52bf1c33a4
-  ws-opts:
-    headers:
-      Host: amoosamiii.net
-    path: /poiuyws
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇳🇱 荷兰 | vless | 452
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww
-    short-id: '!!str ed7b9bdfedb9b8e5'
-  server: nl.go-vpn.club
-  servername: gateway.icloud.com
-  tls: false
-  type: vless
-  uuid: 40de6299-d792-4868-8a82-411ead0aa943
-- client-fingerprint: chrome
-  name: '🇩🇪 #9'
-  network: xhttp
-  port: 443
-  server: 151.101.193.51
-  servername: relay-6bcjt33c.edgecompute.app
-  tls: true
-  type: vless
-  uuid: 83048224-1465-4dc7-9492-d7f5ba339fee
-  ws-opts:
-    path: /dana1365
-- alpn:
-  - ''
-  client-fingerprint: ''
-  flow: xtls-rprx-vision
-  grpc-opts:
-    grpc-service-name: ''
-  name: 🇺🇸 美国 | vless | 1338
-  network: tcp
-  port: 443
-  server: s663.ccgfw.top
-  servername: u716087us663.ccgfw.top
-  tls: true
-  type: vless
-  uuid: 205d6869-02ca-3b36-b933-be2465250c7e
-  ws-opts:
-    headers:
-      Host: s663.ccgfw.top
-    path: ''
-- client-fingerprint: firefox
-  name: 🇺🇸 美国 | vless | 695
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-    short-id: '!!str '
-  server: 2.26.78.67
-  servername: pro-de.emrata.top
-  tls: false
-  type: vless
-  uuid: caeb0482-d3d9-4271-8fbe-bc2cfe694efa
-- name: '[1596]🎈 🇩🇪 DEU 🎈 🗺️ #fe34ef'
+  uuid: 1155a83e-e5dc-4859-a61b-c83620080134
+- name: '🇩🇪 Germany — #276'
   network: ws
   port: 80
-  server: 199.232.170.67
+  server: 104.18.12.149
   tls: false
   type: vless
-  uuid: cfde0aba-0985-4034-ab92-50b1534b126c
+  uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da
   ws-opts:
     headers:
-      Host: BankMelat.glObal.ssl.faStly.nEt
-    path: /%3FTelegram-WangCai2%F0%9F%87%A8%F0%9F%87%B3
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  name: '[1596]🎈 🇩🇪 DEU 🎈 #9cbc55'
+      Host: vip.yaml7.ggff.net
+    path: '%2F+%40ProxyVPN11'
+- name: '[1596]🎈 🇩🇪 DEU 🎈 #edb784'
   network: xhttp
   port: 2087
-  server: 45.80.110.21
+  server: 185.193.30.21
   servername: ch-de.sdcards.ir
   tls: true
   type: vless
   uuid: 9d6104a5-fc6d-4fe6-95b7-80d8f699e09d
   ws-opts:
     path: /%3FTelegram-WangCai2
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: 🇺🇸 美国 | vless | 226
-  network: xhttp
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: '🇩🇪 #13'
+  network: raw
+  port: 7444
+  reality-opts:
+    public-key: vZ22ThhkpXUd5-tY-v5TTrouLHjgYYmeQgqeLt7HRz0
+  server: 81.163.23.187
+  servername: google.com
+  tls: false
+  type: vless
+  uuid: 7f9e1efd-7676-4472-b092-57f07685f542
+- name: '🇩🇪 Germany — #129 (a7e0da)'
+  network: raw
   port: 443
-  server: 208.103.161.32
-  servername: panel-free.emergency-service.org
-  skip-cert-verify: false
+  server: 213.219.212.12
   tls: true
   type: vless
-  uuid: e234245f-b66e-4eef-b8cb-6298500221ba
-  ws-opts:
-    headers:
-      Host: panel-free.emergency-service.org
-    path: /
-- name: '🇩🇪 Germany — #329'
+  uuid: 24b62fcb-c39c-4e64-9c1f-10b699a7e0da
+- client-fingerprint: chrome
+  name: '🇩🇪 #14'
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: D8uvi--0Aq7Hjc7cYnfcJGY0h4SSBCrPh7wEp1mvFlw
+    short-id: '!!str b7b70c104ad267b8'
+  server: check08.farsinblog.ir
+  servername: play.google.com
+  tls: false
+  type: vless
+  uuid: cbfd36b0-cba7-48d7-8411-2f5446099ee9
+- client-fingerprint: random
+  grpc-opts:
+    grpc-service-name: data-sync
+  name: 🇩🇪 德国 | vless | 772
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: kPBXTe2KCp55GrHS_qU_sF7ohUcT8Vu-e8i6Yd9MERI
+    short-id: '!!str d5c7f84e37e0c12d'
+  server: de-1.coinbridge.nl
+  servername: google.com
+  tls: false
+  type: vless
+  uuid: 8658fe29-466b-41d9-b1f9-05c268054f87
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: '🇩🇪 Germany — #160'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: iRbc5G3wZbluYutzDvrJlc356yJsEnhV1T4tvE-tCnM
+    short-id: '!!str 27e53bbcab7593d7'
+  server: 158.160.249.252
+  servername: smartcaptcha.yandexcloud.net
+  tls: false
+  type: vless
+  uuid: cdc8abfd-bc1c-4324-8a6f-ef75c32f4a03
+- name: '🇩🇪 Germany — #167'
   network: ws
   port: 80
-  server: 8.6.112.0
+  server: 104.17.150.99
   tls: false
   type: vless
   uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da
-- name: '[1596]🎈 🇩🇪 DEU 🎈 #5fce37'
-  network: ws
-  port: 443
-  server: vxc.galardoxtn.ir
-  servername: speedtest.net%40freenettir%20%C2%B9
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 5f65c1ae-9e7a-48ea-8ecf-6822365cd177
   ws-opts:
     headers:
-      Host: apiv2.global.ssl.fastly.net
-    path: /
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 704
-  network: tcp
+      Host: vip.yaml7.ggff.net
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '[🇩🇪]t.me/ConfigsHub #4'
+  network: ws
   port: 443
-  reality-opts:
-    public-key: fxYPLrSzBFwZ3IUuLyrv_OTtgHgbx8GL7HuD3walpwc
-    short-id: '!!str 5f75688e69eb611f'
-  server: geg.xxee.ru
-  servername: getgegin.xxee.ru
-  tls: false
+  server: 109.122.198.64
+  servername: floral-paper-7186.aminarmin10050.workers.dev
+  skip-cert-verify: false
+  tls: true
   type: vless
-  uuid: 1ac9f6f1-06ed-4cc6-af67-d79a96618cf8
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: 🇧🇬 保加利亚 | vless | 14
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: 2XTPvkK41t8x8qQfYxETMWtFVf5w4jW3-RbXb997x3k
-    short-id: '!!str 5b591e78b15610f7'
-  server: de5fra.s812331.shop
-  servername: de5fra.s812331.shop
-  tls: false
-  type: vless
-  uuid: 1badd6a3-735b-45fa-bf30-7ee42abcfefe
+  uuid: e5a0a44d-8a95-cf86-412f-5b7800000000
+  ws-opts:
+    headers:
+      Host: floral-paper-7186.aminarmin10050.workers.dev
+    path: '%2Fsync'
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 750
+  name: 🇩🇪 proxy-abuse-bridge-357
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  server: 84.200.24.155
+  servername: abuse.sellflow.org
+  tls: false
+  type: vless
+  uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
+- client-fingerprint: edge
+  name: 🇩🇪 Germany 9e76 | SNI - s99309...
+  network: ws
+  port: 443
+  server: 78.41.111.242
+  servername: s99309.cdn.ngenix.net
+  tls: true
+  type: vless
+  uuid: 9fbcc698-8b42-4506-915e-76b227a40dc2
+  ws-opts:
+    path: /v1/data/sync/
+- alpn:
+  - ''
+  client-fingerprint: random
+  flow: ''
+  grpc-opts:
+    grpc-service-name: ''
+  name: DE VLESS-180 | free-nodes
+  network: xhttp
+  port: 443
+  server: 179.61.138.177
+  servername: u723828us71.okgfwbackxyz.xyz
+  tls: true
+  type: vless
+  uuid: 723af53a-b131-3270-8ce0-13f8ecaaa322
+  ws-opts:
+    headers:
+      Host: s71.okgfwbackxyz.xyz
+    path: ssp-xhttp
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: '[1596]⭐ 🇩🇪 DEU ⭐ 📑 #edac89'
+  network: raw
+  port: 8443
+  reality-opts:
+    public-key: 10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc
+    short-id: '!!str 43dcff53849b81e6'
+  server: 46.8.209.163
+  servername: rutube.ru
+  tls: false
+  type: vless
+  uuid: 97b930ef-d873-0012-8940-9e461909a3a3
+- alpn:
+  - http/1.1
+  client-fingerprint: safari
+  name: 🇩🇪 Germany [*CIDR]
+  network: ws
+  port: 443
+  server: 195.209.87.198
+  servername: s52061.cdn.ngenix.net
+  tls: true
+  type: vless
+  uuid: 9727d3cf-d839-4d8b-b22e-6d62483fea25
+  ws-opts:
+    headers:
+      Host: s52061.cdn.ngenix.net
+    path: '%2Fv1%2Fdata%2Fsync%2F'
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: '[1596]🎈 🇩🇪 DEU 🎈 #edb784 #1'
+  network: xhttp
+  port: 2087
+  server: 185.193.30.21
+  servername: ch-de.sdcards.ir
+  tls: true
+  type: vless
+  uuid: 9d6104a5-fc6d-4fe6-95b7-80d8f699e09d
+  ws-opts:
+    headers:
+      Host: ch-de.sdcards.ir
+    path: /%3FTelegram-WangCai2
+- alpn:
+  - http/1.1
+  - h2
+  client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: '%40v2ray_fark%40v2ray_fark'
+  name: '[1596]🦋 🇩🇪 DEU 🦋 #12e502'
+  network: grpc
+  port: 2096
+  server: 104.16.48.41
+  servername: wu.foxnt-telegram-foxnt.shop
+  tls: true
+  type: vless
+  uuid: 88888888-8888-8888-8888-888888888888
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: '🇩🇪 #16'
+  network: ws
+  port: 443
+  server: zmaoz.faculty.ucdavis.edu
+  servername: Zmaoz.Faculty.Ucdavis.Edu.
+  tls: true
+  type: vless
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: Parsashonam-DE.ir
+    path: '%2F%40Parsashonam%2Fws%3Fed%3D2560'
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: 🇩🇪 Germany dd0f | SNI - wl-2-1...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: uL4x8EbCl080G43kFlv8nbpEyseWi1Dc_bl8F7lWtm8
+    short-id: '!!str aa03ec59c9695e91'
+  server: 37.9.4.224
+  servername: wl-2-1.legendary.ac
+  tls: false
+  type: vless
+  uuid: 77fdc88b-e414-4e7c-b040-4bbc65c52d81
+- client-fingerprint: chrome
+  name: 🇩🇪 Germany e67d | SNI - play.g...
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: nm8EUwqyxdBuJke7StEgzNV9BEeVYDNqfRFb3v_KI2w
+    short-id: '!!str 099fadc24a55af9a'
+  server: 195.201.232.215
+  servername: play.google.com
+  tls: false
+  type: vless
+  uuid: 5e8add97-7e48-458a-a000-32d0d6fa253e
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: '🇩🇪 Germany — #114 #1'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: iRbc5G3wZbluYutzDvrJlc356yJsEnhV1T4tvE-tCnM
+    short-id: '!!str 27e53bbcab7593d7'
+  server: 158.160.249.252
+  servername: smartcaptcha.yandexcloud.net
+  tls: false
+  type: vless
+  uuid: 6e4bbe1a-e9a4-4f20-845c-fe3a2c8f986a
+- client-fingerprint: edge
+  name: 🇩🇪 Germany acf8 | SNI - s47314...
+  network: tcp
+  port: 443
+  server: 78.41.111.242
+  servername: s47314.cdn.ngenix.net
+  tls: true
+  type: vless
+  uuid: 85654830-879f-4e76-9077-7d5013ed5d9d
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: '🇩🇪 Germany — #82'
+  network: xhttp
+  port: 443
+  server: 188.72.103.3
+  servername: cdnvp2.jetstoreapp.ru
+  tls: true
+  type: vless
+  uuid: 2a088d58-eb38-47bd-b74d-ac392ee12ccd
+  ws-opts:
+    headers:
+      Host: cdnvp2.jetstoreapp.ru
+    path: '%2Fapi%2Fv1%2Fsync'
+- name: '🇩🇪 Germany — #171 (3fa044)'
+  network: xhttp
+  port: 443
+  server: 188.72.103.3
+  tls: true
+  type: vless
+  uuid: e8d19e7d-2ead-4ee9-91f3-081fcc3fa044
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '[1596]✴️ 🇩🇪 DEU ✴️ #6c7462'
   network: raw
   port: 443
   reality-opts:
     public-key: CF49-iS9dsHBwvqYFoDs_T3Me8TT0FpNW2kibGBkVXY
-    short-id: '!!str '
-  server: 185.130.114.211
+  server: 185.130.115.132
   servername: yandex.ru
   tls: false
   type: vless
-  uuid: b4fbc30a-561f-444b-8b09-f3159164f5a4
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: edge
-  name: '🇩🇪 Germany — #150'
+  uuid: 6fd0c76d-b735-465c-9ca3-7968661e2c87
+- name: '[1596]⭐ 🇩🇪 DEU ⭐ 📑 #55b9c7'
   network: xhttp
   port: 443
-  server: 188.72.103.3
-  servername: carrot.hotwigga.space
-  tls: true
-  type: vless
-  uuid: c1c09e61-75fe-44bf-bda9-38c4f9f48a9a
-  ws-opts:
-    headers:
-      Host: carrot.hotwigga.space
-    path: '%2Fmedia%2Fcache%2Fthumbs-b82f%2F'
-- name: 🇷🇺 俄罗斯 | vless | 260
-  network: ws
-  port: 2200
-  server: 31.129.96.186
-  tls: false
-  type: vless
-  uuid: 112912a9-cedf-485d-b8ed-d8f8d4774437
-  ws-opts:
-    path: /v1
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 515
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: xiBnF5t8koXllU1GwzSRmU0Vcbs21DEHCg399WUg1EM
-    short-id: '!!str 48b65fa924db296e'
-  server: 84.201.177.174
-  servername: ads.x5.ru
-  tls: false
-  type: vless
-  uuid: d5eebbf7-2bce-40e5-bc9c-b316cb753e19
-- client-fingerprint: chrome
-  name: '🇩🇪 #10'
-  network: ws
-  port: 443
-  server: news.zoom.us
-  servername: api.mozestan.dpdns.org
-  tls: true
-  type: vless
-  uuid: cee8c30c-fb13-4a89-abb4-5a32cf716c97
-  ws-opts:
-    headers:
-      Host: api.mozestan.dpdns.org
-    path: /api-api
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: '🇩🇪 #11'
-  network: ws
-  port: 443
-  server: 78.41.111.87
-  servername: s10211.cdn.ngenix.net
+  server: 141.193.213.21
+  servername: cloudflare.dns.xn--q9jyb4c
   skip-cert-verify: false
   tls: true
   type: vless
-  uuid: dba50bb9-2456-4128-8632-f7ba1e6a7ab5
+  uuid: 9a98146a-235c-40ed-9633-a67fe3bf9f18
   ws-opts:
     headers:
-      Host: s10211.cdn.ngenix.net
-    path: /api/user
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: edge
-  name: '🇩🇪 Germany — #145'
-  network: xhttp
+      Host: cloudflare.dns.xn--q9jyb4c
+    path: /xn--q9jyb4c
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: '[1596]⭐ 🇩🇪 DEU ⭐ 📑 #b3de84'
+  network: raw
   port: 443
-  server: 188.68.218.110
-  servername: api.madapp.cc
-  tls: true
+  reality-opts:
+    public-key: b4n1pcO8ST3JkGtj8YymXVrW17LEe2EHec5wY7hMMR4
+    short-id: '!!str 8c2d9e1f'
+  server: 176.108.246.130
+  servername: 5post-gate.x5.ru
+  tls: false
   type: vless
-  uuid: b721ab8f-eac9-4de8-a109-6ad1f7540862
-  ws-opts:
-    headers:
-      Host: api.madapp.cc
-    path: '%2Fapi%2Fv2%2F'
+  uuid: 94a5294d-1125-4139-8934-380c5de5552f
 - client-fingerprint: chrome
-  name: 🇩🇪 德国 | vless | 439
+  name: '🇩🇪 Germany — #453'
   network: xhttp
   port: 8443
   reality-opts:
@@ -2961,69 +2991,273 @@ proxies:
   servername: apple.com
   tls: false
   type: vless
-  uuid: 0c58b39c-e233-4277-a7bd-6b34121ab5e3
-  ws-opts:
-    headers:
-      Host: apple.com
-    path: '%2Ffavicon.ico'
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: '[1596]⭐ 🇩🇪 DEU ⭐ 📑 #aaeb21'
+  uuid: 92bdb6c2-88ab-4e5e-9413-3d22fca48d91
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: '🇩🇪 Germany — #119'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: v6rib0-2FxBd1MnBxdylbIRIhvXywSj56QEtCkaEuBo
+    short-id: '!!str 27e53bbcab7593d7'
+  server: 51.250.16.150
+  servername: ads.x5.ru
+  tls: false
+  type: vless
+  uuid: 1155a83e-e5dc-4859-a61b-c83620080134
+- client-fingerprint: chrome
+  name: 🇩🇪 德国 | vless | 339
+  network: grpc
+  port: 2083
+  reality-opts:
+    public-key: 6UOpq2RvrDowNKEM8Fc2TPXhFJxsQaP7q8rIQzkw9Tc
+    short-id: '!!str fa42ae2dbb82df'
+  server: 161.35.207.2
+  servername: www.speedtest.net
+  tls: false
+  type: vless
+  uuid: 998a84b7-b9da-4f91-a66d-332c6ea8bc60
+- client-fingerprint: chrome
+  name: '[1596]🎈 🇩🇪 DEU 🎈 🗺️ #8b390c'
   network: ws
   port: 443
-  server: 195.208.65.150
-  servername: s46270.cdn.ngenix.net
+  server: 94.242.59.190
+  servername: 31.76.11.46.cdn-one.org
   tls: true
   type: vless
-  uuid: 348c4b4b-8f8c-4bad-add2-41682ee30cfb
+  uuid: 4f375fb4-3c95-425f-bc7b-8085487a6f3c
   ws-opts:
     headers:
-      Host: s46270.cdn.ngenix.net
-    path: /v1/data/sync/
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: '🇩🇪 Germany [*CIDR] #2'
-  network: ws
-  port: 443
-  server: 195.208.65.150
-  servername: s46270.cdn.ngenix.net
-  tls: true
-  type: vless
-  uuid: 7a0b022b-2af6-4a43-bb24-c1de0be5cd9b
-  ws-opts:
-    headers:
-      Host: s46270.cdn.ngenix.net
-    path: '%2Fv1%2Fdata%2Fsync%2F'
+      Host: 31.76.11.46.cdn-one.org
+    path: /52872/BNzG4FvIAr
 - alpn:
   - h2
   - http/1.1
   client-fingerprint: firefox
-  name: '🇩🇪 #12'
-  network: ws
-  port: 80
-  server: zmaoz.faculty.ucdavis.edu
-  servername: Zmaoz.Faculty.Ucdavis.Edu.
-  tls: false
-  type: vless
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: Parsashonam-DE.ir
-    path: '%2F%40Parsashonam%3Fed%3D2048'
-- name: '🇩🇪 Germany — #196'
-  network: ws
+  flow: ''
+  grpc-opts:
+    grpc-service-name: ''
+  name: DE VLESS-578 | free-nodes
+  network: xhttp
   port: 443
-  server: 188.114.96.3
+  server: s88.wagahaha.xyz
+  servername: u691611ud822cc65s71.okgfwbackxyz.xyz
   tls: true
   type: vless
-  uuid: d082b5e0-2435-4599-b935-d2c2b70beb67
+  uuid: 9794d18f-9280-3553-a7a5-a23da75aca76
+  ws-opts:
+    headers:
+      Host: d822cc65s71.okgfwbackxyz.xyz
+    path: 12743e6c90fa8429becf5ec50661cdd0
+- alpn:
+  - ''
+  client-fingerprint: ios
+  flow: xtls-rprx-vision
+  grpc-opts:
+    grpc-service-name: ''
+  name: DE VLESS-272 | free-nodes
+  network: tcp
+  port: 443
+  server: s660.ccgfw.top
+  servername: u729792us660.ccgfw.top
+  tls: true
+  type: vless
+  uuid: 28beee5e-40ab-3c36-b797-1e4ecf27d0a0
+  ws-opts:
+    headers:
+      Host: s660.ccgfw.top
+    path: ''
+- client-fingerprint: edge
+  name: 🇩🇪 Germany | 🌐 | [BL]
+  network: ws
+  port: 8443
+  server: 172.64.80.1
+  servername: ad-005.pixel9xdmq.info
+  tls: true
+  type: vless
+  uuid: 2e1eb27b-9b56-40e9-a2f8-b959bc71736e
+  ws-opts:
+    headers:
+      Host: ad-005.pixel9xdmq.info
+    path: '%2F'
+- client-fingerprint: firefox
+  name: 🇩🇪 Germany 2620 | SNI - sni.11...
+  network: ws
+  port: 2053
+  server: 141.101.90.98
+  servername: sni.111000.dynv6.net
+  tls: true
+  type: vless
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  ws-opts:
+    headers:
+      Host: sni.111000.dynv6.net
+    path: /
+- name: 'DE德国(mibei77.com 米贝节点分享) #2'
+  network: ws
+  port: 80
+  server: 151.101.240.11
+  tls: false
+  type: vless
+  uuid: 3b940e86-7b0d-40da-acf1-12d334e41023
+  ws-opts:
+    headers:
+      Host: Fastapi.Org
+    path: '%2F'
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 47a
+  network: raw
+  port: 1829
+  reality-opts:
+    public-key: dbe3HCS7E7QfvfN59Us7rV8Kasm_5CCUgKiGm8k8vRg
+    short-id: '!!str c3607d'
+  server: 109.120.190.41
+  servername: max.ru
+  tls: false
+  type: vless
+  uuid: db7cae85-3c1a-4e4f-b317-7cdeaf419c5a
 - client-fingerprint: chrome
-  name: '🇩🇪 Germany [*CIDR] #3'
+  name: '🌐 Anycast-IP | 🇩🇪 | [BL] #2'
+  network: ws
+  port: 8443
+  server: 172.64.80.1
+  servername: ad-005.vector9nmb3.info
+  tls: true
+  type: vless
+  uuid: 2e1eb27b-9b56-40e9-a2f8-b959bc71736e
+  ws-opts:
+    headers:
+      Host: ad-005.vector9nmb3.info
+    path: '%2F'
+- alpn:
+  - http%2F1.1
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '🇩🇪 Germany | 🌐 | [IPv6] [*CIDR... #2'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: cKzljSufhp_TTVyy85qjeByAHzTJZB2SHxKFjHaZHwA
+    short-id: '!!str 5a8d3f'
+  server: 91.222.237.113
+  servername: vk.com
+  tls: false
+  type: vless
+  uuid: e136eb65-a979-428e-959c-a1865aec92f6
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: '[1596]⭐ 🇩🇪 DEU ⭐ 📑 #a5e204'
   network: ws
   port: 443
-  server: 93.93.88.78
+  server: 195.208.65.150
+  servername: s46270.cdn.ngenix.net
+  tls: true
+  type: vless
+  uuid: 0b359f6f-3e78-4e0b-8d24-b0df568052e7
+  ws-opts:
+    headers:
+      Host: s46270.cdn.ngenix.net
+    path: /v1/data/sync/
+- name: 📡🇩🇪®️Germany©️Frankfurt
+  network: ws
+  port: 443
+  server: ez-5c5bcd.armynkyany51.workers.dev
+  tls: true
+  type: vless
+  uuid: 5a1f5c42-f1ab-db2c-9342-0af34ff6b861
+  ws-opts:
+    headers:
+      Host: ez-5c5bcd.armynkyany51.workers.dev
+    path: '%2Fsync'
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: '🇩🇪 #19'
+  network: ws
+  port: 443
+  server: parspack.com
+  servername: parspack.allhub.ltd
+  tls: true
+  type: vless
+  uuid: f176aa7c-e5be-40a9-a2c0-37c2a20d86e1
+  ws-opts:
+    headers:
+      Host: de-04.allhub.ltd
+    path: '%2Fcdn'
+- name: '🇩🇪 Germany — #255'
+  network: ws
+  port: 443
+  server: 185.146.173.20
+  tls: true
+  type: vless
+  uuid: 8c4604ef-749c-4b56-adf1-7da405002a21
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: edge
+  name: '🇩🇪 Germany — #127'
+  network: xhttp
+  port: 443
+  server: 188.72.103.3
+  servername: carrot.hotwigga.space
+  tls: true
+  type: vless
+  uuid: 68c2898b-2869-4ed1-b921-db9452182e8e
+  ws-opts:
+    headers:
+      Host: carrot.hotwigga.space
+    path: '%2Fmedia%2Fcache%2Fthumbs-b82f%2F'
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  grpc-opts:
+    grpc-service-name: ''
+  name: DE VLESS-1357 | free-nodes
+  network: tcp
+  port: 443
+  server: s88.okgg.top
+  servername: u695099u44ea3b0cs71.gogocs.xyz
+  tls: true
+  type: vless
+  uuid: 5d02517f-63d5-3e9f-b467-1bcf4d4e25d3
+  ws-opts:
+    headers:
+      Host: 44ea3b0cs71.gogocs.xyz
+    path: ''
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇵🇱 波兰 | vless | 01
+  network: tcp
+  port: 49001
+  reality-opts:
+    public-key: _LbLyj6OynSREglFpkhdrxVmh_bf9p60uTEWfQbtUWo
+    short-id: '!!str 1a6b1f9d0e'
+  server: 188.119.123.112
+  servername: de-7.techprovide.icu
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: 41784775-8846-4579-9d9d-9ad6ea802e2e
+- name: 🌐 Anycast-IP | 🇩🇪 🇫🇮 | [BL]
+  network: ws
+  port: 80
+  server: 199.232.170.246
+  tls: false
+  type: vless
+  uuid: cfde0aba-0985-4034-ab92-50b1534b126c
+  ws-opts:
+    headers:
+      Host: BankMelat.glObal.ssl.faStly.nEt
+    path: /?Telegram-TGRVPN🇨🇳
+- client-fingerprint: safari
+  name: '🇩🇪 Germany — #126'
+  network: ws
+  port: 443
+  server: 195.209.88.182
   servername: s76276.cdn.ngenix.net
   tls: true
   type: vless
@@ -3032,25 +3266,79 @@ proxies:
     headers:
       Host: s76276.cdn.ngenix.net
     path: '%2Fv1%2Fdata%2Fsync%2F'
+- client-fingerprint: chrome
+  name: 🇩🇪 Germany 64fb | SNI - cloudf...
+  network: tcp
+  port: 443
+  server: 5.175.141.113
+  servername: cloudflare.dns.xn--q9jyb4c
+  tls: true
+  type: vless
+  uuid: 9a98146a-235c-40ed-9633-a67fe3bf9f18
+- name: '🇩🇪 LTE - Обход глушилок #48'
+  network: ws
+  port: 80
+  server: support.zoom.us
+  tls: false
+  type: vless
+  uuid: 7983f39c-7251-43b9-991d-62677bfee640
+  ws-opts:
+    headers:
+      Host: apexcloud.ggff.net
+    path: '%2Fapexcloud.ggff.net'
+- name: '🇩🇪 Germany — #225'
+  network: ws
+  port: 80
+  server: 104.20.6.134
+  tls: false
+  type: vless
+  uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da
+  ws-opts:
+    headers:
+      Host: vip.yaml7.ggff.net
+    path: '%2F+%40ProxyVPN11'
 - alpn:
   - h2
   - http/1.1
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  grpc-opts:
-    grpc-service-name: ''
-  name: DE VLESS-1303 | free-nodes
-  network: tcp
-  port: 443
-  server: s85.okgfw.top
-  servername: u695099u818690d8s71.gogocs.xyz
+  name: '[1596]🎈 🇩🇪 DEU 🎈 #768d16'
+  network: xhttp
+  port: 2087
+  server: 167.68.4.21
+  servername: ch-de.sdcards.ir
+  skip-cert-verify: false
   tls: true
   type: vless
-  uuid: 5d02517f-63d5-3e9f-b467-1bcf4d4e25d3
+  uuid: 9d6104a5-fc6d-4fe6-95b7-80d8f699e09d
   ws-opts:
     headers:
-      Host: 818690d8s71.gogocs.xyz
-    path: ''
+      Host: ch-de.sdcards.ir
+    path: /%3FTelegram-WangCai2
+- client-fingerprint: chrome
+  name: '🇩🇪 [VL] Германия #2540 | РосТу...'
+  network: ws
+  port: 2053
+  server: 94.159.96.182
+  servername: forfreeuse.sub-flow.online
+  tls: true
+  type: vless
+  uuid: c7e9c591-2764-423a-afca-efbd010fd396
+  ws-opts:
+    headers:
+      Host: forfreeuse.sub-flow.online
+    path: '%2F'
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 15
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: V3uMWEfDQAPFP6o5ED8Jtk0rJBPs7IlOLf_Wh8w_jXc
+    short-id: '!!str 76132b3b39704c44'
+  server: 150.241.72.43
+  servername: ger.hatvpn.org
+  tls: false
+  type: vless
+  uuid: 109c13c0-5ef7-47a3-b278-3d47a35136e5
 - client-fingerprint: qq
   flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 470
@@ -3064,217 +3352,6 @@ proxies:
   tls: false
   type: vless
   uuid: 2a70873b-5722-4c87-aea0-b76c0a5e9ec2
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: '[1596]⭐ 🇩🇪 DEU ⭐ 📑 #8b134e'
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  server: 91.194.213.150
-  servername: de.sellflow.org
-  tls: false
-  type: vless
-  uuid: a256bcb1-e3fd-4148-b206-26ccc93a7f9e
-- name: '🇩🇪 Germany — #285'
-  network: ws
-  port: 80
-  server: 57.129.41.216
-  tls: false
-  type: vless
-  uuid: 7d74eae4-8a06-4306-a923-ad686f30bf26
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  flow: ''
-  grpc-opts:
-    grpc-service-name: ''
-  name: DE VLESS-553 | free-nodes
-  network: xhttp
-  port: 443
-  server: s88.wagahaha.xyz
-  servername: u691611ud822cc65s71.okgfwbackxyz.xyz
-  tls: true
-  type: vless
-  uuid: 9794d18f-9280-3553-a7a5-a23da75aca76
-  ws-opts:
-    headers:
-      Host: d822cc65s71.okgfwbackxyz.xyz
-    path: 12743e6c90fa8429becf5ec50661cdd0
-- name: '🇩🇪 Germany — #277'
-  network: ws
-  port: 80
-  server: 162.159.36.5
-  tls: false
-  type: vless
-  uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da
-  ws-opts:
-    headers:
-      Host: vip.yaml7.ggff.net
-    path: '%2F'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 882
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
-    short-id: '!!str 428ef87fd47a3a32'
-  server: 51.250.67.51
-  servername: web.max.ru
-  tls: false
-  type: vless
-  uuid: 409bdb0f-5aae-4e93-a8dd-60adc47d5fd3
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 1103
-  network: tcp
-  port: 44003
-  reality-opts:
-    public-key: mCtDwMr9u9MdztUGzCGADj-nfHv6CQpAf_ywbyKl8ww
-    short-id: '!!str 68fc781cf8'
-  server: ru.pool-b.vodkacore.pro
-  servername: netcenter-cdn.com
-  tls: false
-  type: vless
-  uuid: 4a2bf92b-b25a-48a1-8656-43ef38414523
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: '🇩🇪 Germany — #197'
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: BjG7XoEMR2uxHbBk_rtkR7P_S_luG2VcvQlvZ4YHzH8
-    short-id: '!!str 27e53bbcab7593d7'
-  server: 84.201.178.175
-  servername: max.ru
-  tls: false
-  type: vless
-  uuid: eb4807ef-216b-4660-8580-d4058d446e6a
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: '🇩🇪 Germany — #187 (9d631c)'
-  network: raw
-  port: 443
-  reality-opts:
-    public-key: bwuT_tpimT_uUeWpSn-HbRztfol4o4uCcUHcdvkeFx0
-    short-id: '!!str 27e53bbcab7593d7'
-  server: 193.33.133.106
-  servername: www.vk.com
-  tls: false
-  type: vless
-  uuid: 1e59c68a-9103-46aa-b322-95bd279d631c
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: '🇩🇪 Germany — #55'
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: Ec54Eop0jZft7rcJsPN4RHc4xG9smXhtenM52pJFUQI
-    short-id: '!!str 27e53bbcab7593d7'
-  server: 84.201.178.175
-  servername: yandex.ru
-  tls: false
-  type: vless
-  uuid: 65c4031f-900e-479a-824c-7480903ad592
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: '🇩🇪 Germany [*CIDR] #4'
-  network: ws
-  port: 443
-  server: 195.208.65.150
-  servername: s46270.cdn.ngenix.net
-  tls: true
-  type: vless
-  uuid: d9699ec4-e9d3-4ee4-bd85-1d4479a7d105
-  ws-opts:
-    headers:
-      Host: s46270.cdn.ngenix.net
-    path: '%2Fv1%2Fdata%2Fsync%2F'
-- name: '🇩🇪 Germany — #222'
-  network: ws
-  port: 80
-  server: 172.64.149.54
-  tls: false
-  type: vless
-  uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da
-- name: 🏳️ Fastly | vless | 15
-  network: xhttp
-  port: 80
-  server: 151.101.116.219
-  tls: false
-  type: vless
-  uuid: c6f71723-35a8-4186-ad6e-2b3d39d9b4f8
-  ws-opts:
-    headers:
-      Host: speedup58.global.ssl.fastly.net
-    path: /
-- client-fingerprint: firefox
-  name: 🇩🇪 Germany 8f4f | SNI - 09OSer...
-  network: ws
-  port: 443
-  server: 104.16.7.70
-  servername: 09OSerT5Ts9U9wgB4X-u45B-h5u8w275.yzDaN2879.WOrKERS.DEV
-  tls: true
-  type: vless
-  uuid: af501b09-1af5-4399-b36a-52624e4304a7
-  ws-opts:
-    headers:
-      Host: 09osert5ts9u9wgb4x-u45b-h5u8w275.yzdan2879.workers.dev
-    path: /eyJqdW5rIjoibEdCdlM3dElEZWkxIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ%3D%3D
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 374
-  network: raw
-  port: 443
-  reality-opts:
-    public-key: YpcvMn5qyBuqOg0yBnJlbzcROJAz4T164xXQghB7ey8
-    short-id: '!!str eb0cca73'
-  server: 193.233.249.18
-  servername: eh.vk.com%3A443
-  tls: false
-  type: vless
-  uuid: da20450f-c96d-467d-a5e4-4814402bcf9e
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 596
-  network: raw
-  port: 443
-  reality-opts:
-    public-key: YpcvMn5qyBuqOg0yBnJlbzcROJAz4T164xXQghB7ey8
-    short-id: '!!str eb0cca73'
-  server: 83.217.200.178
-  servername: eh.vk.com%3A443
-  tls: false
-  type: vless
-  uuid: da20450f-c96d-467d-a5e4-4814402bcf9e
-- name: '[1596]🎈 🇩🇪 DEU 🎈 #723e8f'
-  network: xhttp
-  port: 443
-  server: 185.207.197.156
-  servername: cloudflare.dns.xn--q9jyb4c
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 9a98146a-235c-40ed-9633-a67fe3bf9f18
-  ws-opts:
-    headers:
-      Host: cloudflare.dns.xn--q9jyb4c
-    path: /xn--q9jyb4c
-- client-fingerprint: chrome
-  name: 🇩🇪 德国 | vless | 322
-  network: grpc
-  port: 443
-  reality-opts:
-    public-key: SPHl8eat6QSJ5ptl9l-08tu1vEf_1QHRazZrBuqM6z8
-    short-id: '!!str 4332e1e3ea3950fa'
-  server: 89.39.121.16
-  servername: b.primarymaster.online
-  tls: false
-  type: vless
-  uuid: eaa39cf6-26ac-43a4-99df-208b248c5d84
 - client-fingerprint: ios
   flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 02
@@ -3495,6 +3572,22 @@ proxies:
   tls: false
   type: vless
   uuid: f6808c62-cfe0-438c-aae6-44fe6ef51e47
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: vless-grpc-reality
+  name: 🇩🇪 德国 | vless | 37
+  network: grpc
+  port: 8082
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: '!!str '
+  server: 5.199.133.35
+  servername: id.vk.com
+  tls: false
+  type: vless
+  uuid: f6808c62-cfe0-438c-aae6-44fe6ef51e47
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 39
@@ -3708,6 +3801,15 @@ proxies:
   tls: false
   type: vless
   uuid: 3b475934-cb2a-4d96-b260-5e50cca5d430
+- alpn:
+  - h2
+  - http/1.1
+  name: 🇩🇪 德国 | trojan | 81
+  password: rmXWalDesivbP8npZPa3S5Mj
+  port: 37976
+  server: 185.189.58.195
+  sni: 185.189.58.195
+  type: trojan
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 82
@@ -3967,20 +4069,6 @@ proxies:
   tls: false
   type: vless
   uuid: 9631096d-3032-4942-9446-bdf12665682b
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: grpc-md-8h3k4j6n2p4q8r5t
-  name: 🇩🇪 德国 | vless | 113
-  network: grpc
-  port: 7444
-  reality-opts:
-    public-key: RwtMzZtTCmy9WRq3_27xeGF8-1l_qPXRVG3yIFp-6Go
-    short-id: '!!str c0d1d1776fed0f6d'
-  server: 178.18.147.252
-  servername: nl-t.vinnypuxtomoon.today
-  tls: false
-  type: vless
-  uuid: d98c856e-4aec-4d6c-ac66-fca0e474991d
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 115
@@ -4066,6 +4154,20 @@ proxies:
   tls: false
   type: vless
   uuid: c50f9480-2e1d-40db-9458-630e79636663
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: ''
+  name: 🇩🇪 德国 | vless | 124
+  network: grpc
+  port: 50051
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: '!!str cd1dd1e4a801f54b'
+  server: 202.61.228.170
+  servername: jobinvest.ru
+  tls: false
+  type: vless
+  uuid: c7166f8f-236b-4fa4-b99c-172813b24f73
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 125
@@ -4225,6 +4327,20 @@ proxies:
   tls: false
   type: vless
   uuid: 54a0bf6d-f2b5-4b2a-942c-798fb129527e
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: vless-grpc-reality
+  name: 🇩🇪 德国 | vless | 140
+  network: grpc
+  port: 8082
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: '!!str '
+  server: 85.14.247.144
+  servername: id.vk.com
+  tls: false
+  type: vless
+  uuid: f6808c62-cfe0-438c-aae6-44fe6ef51e47
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 141
@@ -4434,19 +4550,42 @@ proxies:
   tls: false
   type: vless
   uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-- client-fingerprint: ios
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 168
+  name: 🇩🇪 德国 | vless | 165
   network: tcp
   port: 443
   reality-opts:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
     short-id: '!!str c39cc7310a'
-  server: 169.40.42.179
+  server: 169.40.42.15
   servername: yahoo.com
   tls: false
   type: vless
   uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+- client-fingerprint: chrome
+  name: 🇩🇪 德国 | vless | 170
+  port: 443
+  reality-opts:
+    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
+    short-id: '!!str '
+  server: 2.26.12.9
+  servername: pro-de.emrata.top
+  tls: false
+  type: vless
+  uuid: ed838389-e7e0-0001-8a1b-040f06d0ba88
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 172
+  port: 443
+  reality-opts:
+    public-key: 2dUnvgWjYo4Xs5T17CfWoImszwB0I6hGHwRxZZEQvQs
+    short-id: '!!str b0d8f964b7ac8ac3'
+  server: 109.107.168.154
+  servername: cdn9-03.cdn-vkvideo.com
+  tls: false
+  type: vless
+  uuid: 9a2573c5-936f-4f93-8409-e43164793176
 - name: 🇩🇪 德国 | vless | 175
   port: 443
   server: 203.23.179.151
@@ -4475,6 +4614,30 @@ proxies:
   tls: false
   type: vless
   uuid: a09cc52a-66ce-4af8-9011-ac24d717f5e0
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 180
+  port: 443
+  reality-opts:
+    public-key: KqIktJ-mJFDrR7bIDz26rn6dDE6d3ehPoTh3wEmDNQY
+    short-id: '!!str 09f93f4737bedd0f'
+  server: 83.243.86.37
+  servername: www.mozilla.org
+  tls: false
+  type: vless
+  uuid: dc76c57c-827f-4ad7-8a1c-94c798638aa9
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 188
+  port: 443
+  reality-opts:
+    public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
+    short-id: '!!str '
+  server: 2.27.29.154
+  servername: de3.rexten.cc
+  tls: false
+  type: vless
+  uuid: f61025f4-7973-4e3e-883c-a0fe85f0489c
 - flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 189
   network: tcp
@@ -4513,6 +4676,18 @@ proxies:
   type: vless
   uuid: f61025f4-7973-4e3e-883c-a0fe85f0489c
 - client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 195
+  port: 443
+  reality-opts:
+    public-key: C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4
+    short-id: '!!str a1b2c3d4e5f6a7b8'
+  server: 84.32.100.185
+  servername: de.moktana.app
+  tls: false
+  type: vless
+  uuid: 97dc60fb-31cf-4156-be16-a3815ce64b60
+- client-fingerprint: chrome
   name: 🇩🇪 德国 | vless | 196
   network: tcp
   port: 8443
@@ -4526,6 +4701,30 @@ proxies:
   uuid: b9b1e7c9-4160-49b4-85a4-2f096706509a
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 200
+  port: 443
+  reality-opts:
+    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
+    short-id: '!!str 868419504747f6de'
+  server: 84.32.100.151
+  servername: tcpde8.figurapn.ru
+  tls: false
+  type: vless
+  uuid: 90620657-58a2-441a-a4ce-cdb0503bb9f5
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 202
+  port: 443
+  server: 159.195.21.231
+  servername: de.bananaru.shop
+  tls: true
+  type: vless
+  uuid: 664749ca-3bba-4f57-a433-395759419edf
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 205
   network: tcp
   port: 443
@@ -4537,6 +4736,18 @@ proxies:
   tls: false
   type: vless
   uuid: c6a420c7-3bdb-40cd-8a57-f5ce870e9b83
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 211
+  port: 443
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: '!!str '
+  server: 159.195.151.6
+  servername: sellflow.org
+  tls: false
+  type: vless
+  uuid: 0108c657-a9bd-4c99-9179-74050cf78889
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 212
@@ -4717,20 +4928,6 @@ proxies:
   tls: false
   type: vless
   uuid: 14eba471-4623-4ed1-b937-f5b2206749bf
-- flow: ''
-  grpc-opts:
-    grpc-service-name: api.v1.StreamService
-  name: 🇩🇪 德国 | vless | 244
-  network: grpc
-  port: 443
-  reality-opts:
-    public-key: q3kOYHdjmqWLLYj8oikvna1bTjofk45ktegGaJE611g
-    short-id: '!!str d3b394558cfe0266'
-  server: 88.216.220.88
-  servername: files.noneok.com
-  tls: false
-  type: vless
-  uuid: a8e3155b-ceb1-4fcb-bc0c-2e77ec005401
 - client-fingerprint: chrome
   name: 🇩🇪 德国 | vless | 245
   network: xhttp
@@ -4826,6 +5023,18 @@ proxies:
   uuid: dd8b69d3-5ef6-418c-a94c-2f4f37d88a7f
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 265
+  port: 443
+  reality-opts:
+    public-key: RurLbpOTStqCjS3lhwB0d3MEZ3629j3atv_r1dT5zjM
+    short-id: '!!str 273940fba6ad8250'
+  server: 159.195.44.159
+  servername: 5.oncloudnineservicestreang.com
+  tls: false
+  type: vless
+  uuid: 859a537b-09cf-4bce-8da4-ecbb72950e3a
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 267
   network: tcp
   port: 443
@@ -4885,15 +5094,6 @@ proxies:
   tls: false
   type: vless
   uuid: a8e3155b-ceb1-4fcb-bc0c-2e77ec005401
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 283
-  port: 443
-  server: 94.249.225.83
-  servername: plucky-kestrel.cdn.cachefleet.com
-  tls: true
-  type: vless
-  uuid: f4dbc770-016d-4a0f-82f0-d83ee6f45da3
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 287
@@ -4972,6 +5172,24 @@ proxies:
   skip-cert-verify: true
   sni: downloadde.xn--mes358acgm99l.com
   type: trojan
+- name: 🇩🇪 德国 | trojan | 298
+  password: '!!str 1234567890'
+  port: 443
+  server: 143.20.160.200
+  skip-cert-verify: false
+  sni: kfm-bn0.pages.dev
+  type: trojan
+- name: 🇩🇪 德国 | trojan | 300
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 103.7.55.148
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - name: 🇩🇪 德国 | vless | 301
   network: ws
   port: 443
@@ -5081,6 +5299,30 @@ proxies:
   skip-cert-verify: false
   sni: next-turkey.rooster465.autos
   type: trojan
+- name: 🇩🇪 德国 | vless | 321
+  network: ws
+  port: 443
+  server: 148.253.210.141
+  servername: sni.latonyamadeline.ndjp.net
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.latonyamadeline.ndjp.net
+- client-fingerprint: chrome
+  name: 🇩🇪 德国 | vless | 322
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: SPHl8eat6QSJ5ptl9l-08tu1vEf_1QHRazZrBuqM6z8
+    short-id: '!!str 4332e1e3ea3950fa'
+  server: 89.39.121.16
+  servername: b.primarymaster.online
+  tls: false
+  type: vless
+  uuid: eaa39cf6-26ac-43a4-99df-208b248c5d84
 - name: 🇩🇪 德国 | trojan | 324
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -5104,18 +5346,6 @@ proxies:
   tls: false
   type: vless
   uuid: 8222ed26-98f5-4d41-878f-260bdd2f5686
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 326
-  port: 443
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: '!!str '
-  server: 159.195.26.24
-  servername: de.sellflow.org
-  tls: false
-  type: vless
-  uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
 - grpc-opts:
     grpc-service-name: trojangrpc
   name: 🇩🇪 德国 | trojan | 327
@@ -5178,18 +5408,6 @@ proxies:
   tls: true
   type: vless
   uuid: 8f2a6194-1748-4ec7-9c5f-8ad504818aa3
-- client-fingerprint: chrome
-  name: 🇩🇪 德国 | vless | 339
-  network: grpc
-  port: 2083
-  reality-opts:
-    public-key: 6UOpq2RvrDowNKEM8Fc2TPXhFJxsQaP7q8rIQzkw9Tc
-    short-id: '!!str fa42ae2dbb82df'
-  server: 161.35.207.2
-  servername: www.speedtest.net
-  tls: false
-  type: vless
-  uuid: 998a84b7-b9da-4f91-a66d-332c6ea8bc60
 - name: 🇩🇪 德国 | trojan | 340
   network: ws
   password: '!!str 1234567890'
@@ -5378,6 +5596,18 @@ proxies:
     headers:
       Host: 4qrnyf6s.5e6pmte8uw52n5ymvwx8.workers.dev
     path: /photos/register%3Fed%3D2560fp=chromesecurity=tls
+- client-fingerprint: ''
+  name: 🇩🇪 德国 | vless | 368
+  network: tcp
+  port: 2053
+  reality-opts:
+    public-key: EDeWEPBq0QDOPp73PNVlaV2EWaEBWhgBcNy3MROgZ00
+    short-id: '!!str 04b38b6b152a1b0b'
+  server: 144.31.87.16
+  servername: pinterest.com
+  tls: false
+  type: vless
+  uuid: c40f773e-3b96-417e-b22c-e48cb63ca7d9
 - name: 🇩🇪 德国 | trojan | 371
   network: ws
   password: '!!str 1234567890'
@@ -5729,14 +5959,6 @@ proxies:
   tls: false
   type: vless
   uuid: de407f76-5220-4505-aaad-84cf04acb615
-- flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 420
-  port: 443
-  server: 213.108.20.152
-  servername: node-de-frankfurt.neverlock.uk
-  tls: true
-  type: vless
-  uuid: f76412c3-abdf-4318-baf8-4a1bfa438968
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 421
@@ -5784,18 +6006,6 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 429
-  port: 443
-  reality-opts:
-    public-key: 5NHgGSXmIyLoslNxkfnH9ZUojx_WafjIhllNUEAhIwc
-    short-id: '!!str ea7acce8b971'
-  server: 79.137.207.130
-  servername: lvz.de
-  tls: false
-  type: vless
-  uuid: 1f4c983e-382c-d2fa-b2dc-7981f02b34de
 - name: 🇩🇪 德国 | trojan | 430
   network: ws
   password: '!!str 1234567890'
@@ -5858,6 +6068,17 @@ proxies:
   skip-cert-verify: false
   sni: kfm-bn0.pages.dev
   type: trojan
+- client-fingerprint: chrome
+  name: 🇩🇪 德国 | vless | 439
+  port: 8443
+  reality-opts:
+    public-key: FTqwbHsPie1ihfB6z0-hhyn31OJqAg6iohtVhwZ2_w4
+    short-id: '!!str 39192174fc3b4920'
+  server: 159.195.69.46
+  servername: apple.com
+  tls: false
+  type: vless
+  uuid: 0c58b39c-e233-4277-a7bd-6b34121ab5e3
 - name: 🇩🇪 德国 | vless | 440
   network: tcp
   port: 8443
@@ -6065,13 +6286,6 @@ proxies:
     headers:
       Host: sni.latonyamadeline.ndjp.net
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3security=tls'
-- name: 🇩🇪 德国 | trojan | 466
-  password: AG4yPUSazj57DBFnKG
-  port: 443
-  server: 193.8.124.54
-  skip-cert-verify: true
-  sni: de-2.tr202604.com
-  type: trojan
 - name: 🇩🇪 德国 | vless | 467
   network: ws
   port: 2053
@@ -6133,6 +6347,18 @@ proxies:
   tls: false
   type: vless
   uuid: df489ab2-2242-4952-a774-1074a3a31f41
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 476
+  port: 443
+  reality-opts:
+    public-key: 3TrzFrsFzfZAeYOclG39atVKrsJcN7Beoa4VhN5D-j4
+    short-id: '!!str 19ffa83bd83eb32d'
+  server: 152.53.139.226
+  servername: ads.x5.ru
+  tls: false
+  type: vless
+  uuid: 765e0908-5ec4-41e9-8bd0-6482425e4247
 - name: 🇩🇪 德国 | vless | 477
   network: ws
   port: 2087
@@ -6157,19 +6383,6 @@ proxies:
     headers:
       Host: kfm-bn0.pages.dev
     path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3'
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 482
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: Oyd0sn1z_6uNSN6AN63Q7aBq7AUQ1bOsB9MT3FyyiRM
-    short-id: '!!str 837fa04e73d6b581'
-  server: 93.123.85.86
-  servername: www.ya.ru
-  tls: false
-  type: vless
-  uuid: acc50200-7f21-4f90-9cca-0057efcbf042
 - flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 483
   network: tcp
@@ -6193,18 +6406,6 @@ proxies:
   tls: false
   type: vless
   uuid: cf038a28-8f85-41fc-9e86-ba99a3fdd0d9
-- name: 🇩🇪 德国 | trojan | 485
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 18.194.183.74
-  skip-cert-verify: false
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: '%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2'
 - flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 493
   network: tcp
@@ -6227,6 +6428,18 @@ proxies:
   tls: false
   type: vless
   uuid: 4af298c3-5c2d-4cf1-af68-5261e482c4e7
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 499
+  port: 443
+  reality-opts:
+    public-key: 3wa3ZmMniymkL-58bPtY7baWPxdJ6n2UaJMG7YiLiGo
+    short-id: '!!str '
+  server: 144.31.217.142
+  servername: dl.google.com
+  tls: false
+  type: vless
+  uuid: 0294d19d-5b1c-4ac6-8bf9-b14be79f3db3
 - grpc-opts:
     grpc-service-name: fi1cosmos
   name: 🇩🇪 德国 | vless | 500
@@ -6275,14 +6488,17 @@ proxies:
   tls: false
   type: vless
   uuid: 55f7d143-a594-4a91-b030-f227039f85ef
-- client-fingerprint: firefox
-  name: 🇩🇪 德国 | vless | 506
-  port: 443
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: grpc
+  name: 🇩🇪 德国 | vless | 505
+  network: grpc
+  port: 2096
   reality-opts:
-    public-key: l5eAOSPQMEyzEPvWGAKvCkcPpsJvR3DJfYo6elw1UTE
-    short-id: '!!str 3b802dad547b0847'
+    public-key: HdIk7jX58DtK-PGVKoU587O4w1KrDiej1qz8J2SmRA8
+    short-id: '!!str a7bf40db1b0e566a'
   server: 144.31.87.16
-  servername: yandex.ru
+  servername: www.avito.ru
   tls: false
   type: vless
   uuid: c40f773e-3b96-417e-b22c-e48cb63ca7d9
@@ -6310,6 +6526,19 @@ proxies:
   tls: false
   type: vless
   uuid: 0861c7f8-1d0e-491b-bbd2-584ffc324629
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 509
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: 4uDjB4cV22HwhNwXkyicoWN5ocwxBB85i08lcRpN7Xc
+    short-id: '!!str ad5cfe18'
+  server: 93.152.217.55
+  servername: vk-portal.ru
+  tls: false
+  type: vless
+  uuid: 5bb07942-ca80-4577-acd0-e5935c3cd523
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 512
@@ -6368,6 +6597,18 @@ proxies:
   ws-opts:
     headers:
       Host: play.google.com
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 520
+  port: 443
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: '!!str '
+  server: 159.195.35.239
+  servername: ai.sellflow.org
+  tls: false
+  type: vless
+  uuid: 00000000-0000-0000-0000-000000000000
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 521
@@ -6451,6 +6692,18 @@ proxies:
   tls: false
   type: vless
   uuid: 564082ff-cf3c-48db-9e10-8ad2312847b4
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 533
+  port: 443
+  reality-opts:
+    public-key: Rt0UPm4jCurABfX6UnQReTQkmURaulL76dSbc1rDQhw
+    short-id: '!!str e8d2a1b4c39f8877'
+  server: 80.253.249.187
+  servername: www.cloudflare.com
+  tls: false
+  type: vless
+  uuid: abd880a5-d08f-4dfe-b8f5-d4b61892163a
 - name: 🇩🇪 德国 | vless | 534
   network: tcp
   port: 8090
@@ -6462,6 +6715,22 @@ proxies:
     headers:
       Host: play.google.com
     path: /
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 535
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: nA87ol2_2BADZHfXhH00wy3fNe4R8TiGG_IQbzWbPnA
+    short-id: '!!str 56c96c1d14'
+  server: a.r-o-o-t3.ir
+  servername: www.linkedin.com
+  tls: false
+  type: vless
+  uuid: 09548571-364e-4876-8e92-98f423e73913
+  ws-opts:
+    headers:
+      Host: www.linkedin.com
 - client-fingerprint: chrome
   name: 🇩🇪 德国 | vless | 537
   network: ws
@@ -6549,19 +6818,6 @@ proxies:
   tls: false
   type: vless
   uuid: 1ee46997-c514-4ab0-a6d3-ad0492adab15
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 547
-  network: tcp
-  port: 2053
-  reality-opts:
-    public-key: E6u2RbffXIPvia5v5iIZVj6U_VpSBWmGTsHHNtH-5Rg
-    short-id: '!!str 417063feab794131'
-  server: de3.neobo-tooth.ru
-  servername: vk.ru
-  tls: false
-  type: vless
-  uuid: b6c29ae7-4748-4049-b642-b695c0d2c776
 - flow: ''
   name: 🇩🇪 德国 | vless | 550
   network: tcp
@@ -6957,6 +7213,20 @@ proxies:
   type: vless
   uuid: 57efd68b-1b54-4e7a-aa69-341cc99bd613
 - client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: api.v1.StreamService
+  name: 🇩🇪 德国 | vless | 602
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: HAqqALwpxu_tx-IFcYaZWVshVKyKttGGrxoEfuP_Lgs
+    short-id: '!!str fde63d9c58210bf9'
+  server: core.noneok.com
+  servername: core.noneok.com
+  tls: false
+  type: vless
+  uuid: 340e4de3-144b-49c4-ad72-b49b35713728
+- client-fingerprint: chrome
   name: 🇩🇪 德国 | vless | 604
   network: grpc
   port: 23857
@@ -7206,6 +7476,18 @@ proxies:
   tls: false
   type: vless
   uuid: d0e97ee2-c6de-48f8-bd4a-8e63a9cd9e89
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 634
+  port: 443
+  reality-opts:
+    public-key: 8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho
+    short-id: '!!str 2f49bccf11150ef2'
+  server: de.riotvpn.eu
+  servername: avatars.mds.yandex.net
+  tls: false
+  type: vless
+  uuid: d945d410-9a71-426f-964a-fc37c653a4b5
 - client-fingerprint: ''
   flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 635
@@ -7219,6 +7501,20 @@ proxies:
   tls: false
   type: vless
   uuid: 564082ff-cf3c-48db-9e10-8ad2312847b4
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: push.v2.FeedService
+  name: 🇩🇪 德国 | vless | 641
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: VTO26jBMVVnEnnHQON7k8lB3ED46_JHshPorJHHXSRU
+    short-id: '!!str a30b344b5214d62f'
+  server: api.oneokgames.com
+  servername: api.oneokgames.com
+  tls: false
+  type: vless
+  uuid: 86208db7-8bbc-42c2-9eb2-ffe5675502c3
 - client-fingerprint: chrome
   name: 🇩🇪 德国 | vless | 643
   port: 40840
@@ -7285,20 +7581,6 @@ proxies:
   uuid: efe18f67-927b-d4b3-9113-079007af6013
   ws-opts:
     path: /storge
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: gw.v1.MetricsService
-  name: 🇩🇪 德国 | vless | 649
-  network: grpc
-  port: 443
-  reality-opts:
-    public-key: 28oR3ji9c2CneMNkbvcDL8WfvNWHS3GfA3RdtaF-pSg
-    short-id: '!!str 89e97b6542785ca6'
-  server: grid.onetimeok.com
-  servername: grid.onetimeok.com
-  tls: false
-  type: vless
-  uuid: 86208db7-8bbc-42c2-9eb2-ffe5675502c3
 - name: 🇩🇪 德国 | vless | 654
   network: ws
   port: 52700
@@ -7463,18 +7745,6 @@ proxies:
   port: 443
   server: us-full.privateip.net
   type: trojan
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 681
-  port: 443
-  reality-opts:
-    public-key: -tePObR3oZwGAUOb5kqTYkNWl6rtUKl0RFuzuu06wgw
-    short-id: '!!str 50'
-  server: 7qqrbome80g.country-27.de-nfast.com
-  servername: tradingview.com
-  tls: false
-  type: vless
-  uuid: 4b481152-ba7f-4445-8cc0-d33d58546e23
 - name: 🇩🇪 德国 | vless | 682
   network: ws
   port: 443
@@ -7488,17 +7758,17 @@ proxies:
     headers:
       Host: zeus-panel-xzftot.zeus-aww3i3.workers.dev
     path: '%2FIn_Panel_Rayeghan_Ast_Va_Gheyre_Ghabele_Forooshfp=iossecurity=tls'
-- client-fingerprint: chrome
-  name: 🇩🇪 德国 | vless | 690
-  port: 443
-  reality-opts:
-    public-key: fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ
-    short-id: '!!str 77778028b56c8704'
-  server: de01.goodmaximum.com
-  servername: data.glimmerhouse.com
+- name: 🇩🇪 德国 | vless | 687
+  network: ws
+  port: 80
+  server: ov-germany1.09vpn.com
   tls: false
   type: vless
-  uuid: db95b766-43a8-0014-9b5d-5ca6f2735188
+  uuid: 7d74eae4-8a06-4306-a923-ad686f30bf26
+  ws-opts:
+    headers:
+      Host: OV-Germany1.09vpn.com
+    path: /vless/
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 692
@@ -7581,6 +7851,18 @@ proxies:
     headers:
       Host: deapp.jisuyun.top
     path: /devm
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 704
+  port: 443
+  reality-opts:
+    public-key: fxYPLrSzBFwZ3IUuLyrv_OTtgHgbx8GL7HuD3walpwc
+    short-id: '!!str 5f75688e69eb611f'
+  server: geg.xxee.ru
+  servername: getgegin.xxee.ru
+  tls: false
+  type: vless
+  uuid: 1ac9f6f1-06ed-4cc6-af67-d79a96618cf8
 - name: 🇩🇪 德国 | vless | 705
   network: ws
   port: 443
@@ -7603,20 +7885,6 @@ proxies:
   tls: false
   type: vless
   uuid: 0dc7f4b5-5ad1-41f4-857a-9d9ddda6f89a
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: push.v2.FeedService
-  name: 🇩🇪 德国 | vless | 709
-  network: grpc
-  port: 443
-  reality-opts:
-    public-key: VTO26jBMVVnEnnHQON7k8lB3ED46_JHshPorJHHXSRU
-    short-id: '!!str a30b344b5214d62f'
-  server: tracker.oneokgames.com
-  servername: tracker.oneokgames.com
-  tls: false
-  type: vless
-  uuid: 86208db7-8bbc-42c2-9eb2-ffe5675502c3
 - client-fingerprint: firefox
   flow: ''
   name: 🇩🇪 德国 | vless | 710
@@ -7744,6 +8012,18 @@ proxies:
   tls: false
   type: vless
   uuid: 050fb692-dba7-4b69-b1fd-182c8e1c53eb
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 728
+  port: 443
+  reality-opts:
+    public-key: 5Tt-quE0unPIlD-aN03PqpjZ4eMh34Dq1FSbPuFMzGA
+    short-id: '!!str '
+  server: denode.kaguya.sbs
+  servername: denode.kaguya.sbs
+  tls: false
+  type: vless
+  uuid: ba0f90b6-3c3c-4701-b2b6-afe57da05527
 - alpn:
   - h2
   - http/1.1
@@ -7779,6 +8059,19 @@ proxies:
   tls: false
   type: vless
   uuid: 71c92c65-61d4-445a-a307-aa163a41c180
+- grpc-opts:
+    grpc-service-name: api.v1.StreamService
+  name: 🇩🇪 德国 | vless | 738
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: 0DwrY31Tr1wowEKo8Q2dSUYHuwBPhQ2OGWlcpBOVrks
+    short-id: '!!str c18304806fa688bd'
+  server: stream.noneok.com
+  servername: stream.noneok.com
+  tls: false
+  type: vless
+  uuid: 8673cea6-211f-45cf-88e7-09d61a98e33f
 - client-fingerprint: firefox
   name: 🇩🇪 德国 | vless | 739
   port: 8080
@@ -7861,6 +8154,18 @@ proxies:
   tls: false
   type: vless
   uuid: 86208db7-8bbc-42c2-9eb2-ffe5675502c3
+- client-fingerprint: randomized
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 751
+  port: 6443
+  reality-opts:
+    public-key: L7DF7bQGLb1hLQxHoDqnsd7WMAo8bklWteoXqKYwAl8
+    short-id: '!!str deadbeef'
+  server: germany.voxyvpn.ru
+  servername: api.led.samsung.com
+  tls: false
+  type: vless
+  uuid: e722d19e-7eec-4090-8012-a6c7c7afa20e
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 753
@@ -7884,20 +8189,6 @@ proxies:
   tls: false
   type: vless
   uuid: 7a6d89b0-82af-4d44-830c-4b3f87fde277
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: api.v1.StreamService
-  name: 🇩🇪 德国 | vless | 755
-  network: grpc
-  port: 443
-  reality-opts:
-    public-key: 8foPheDUi9ULJfe5UuxfspzwQ7J5JZg-2J1XkhL1B1I
-    short-id: '!!str 0768452b5e736e7f'
-  server: get.noneok.com
-  servername: get.noneok.com
-  tls: false
-  type: vless
-  uuid: ad5ff95a-81a8-4006-8771-8e33f0bcd9aa
 - client-fingerprint: chrome
   name: 🇩🇪 德国 | vless | 756
   network: xhttp
@@ -7938,6 +8229,17 @@ proxies:
   tls: false
   type: vless
   uuid: 31fb98b7-e7a1-4b56-8c6a-3f060f06393c
+- client-fingerprint: firefox
+  name: 🇩🇪 德国 | vless | 760
+  port: 443
+  reality-opts:
+    public-key: aYP8O0UOZHTrYk0cyyEwZXuPONqiKgZ_FKoByHHDd0E
+    short-id: '!!str 421d07b1161479d1'
+  server: ash.asan-ps.ir
+  servername: yahoo.com
+  tls: false
+  type: vless
+  uuid: 48f9dc0d-115c-458a-94eb-2fb19a91a94c
 - name: 🇩🇪 德国 | trojan | 761
   password: ND91608427
   port: 443
@@ -7980,19 +8282,88 @@ proxies:
   tls: false
   type: vless
   uuid: 68dc7ee8-179e-4dff-8275-2c4ebc5c03ea
-- alpn:
-  - h3
-  auth-str: dongtaiwang.com
-  auth_str: dongtaiwang.com
-  down: 55 Mbps
-  name: 🇩🇪DE_1|1.3MB/s
-  port: 26691
-  protocol: udp
-  server: 5.83.129.143
-  skip-cert-verify: true
-  sni: apple.com
-  type: hysteria
-  up: 11 Mbps
+- client-fingerprint: chrome
+  name: 🇩🇪 德国 | vless | 769
+  port: 16213
+  reality-opts:
+    public-key: fgynRPElsVUSsIn0Shvcq0wUuTw4WW9m70Kgj0vmKhQ
+    short-id: '!!str 3678cb2fb4e35cec'
+  server: three7up.us
+  servername: www.play.google.com
+  tls: false
+  type: vless
+  uuid: b447d2a4-2ea2-45bb-9a82-728999ba1cfa
+- name: 🇩🇪 德国 | trojan | 770
+  password: UO36402987
+  port: 443
+  server: many-cricket.rooster465.autos
+  type: trojan
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 771
+  port: 443
+  reality-opts:
+    public-key: 2dUnvgWjYo4Xs5T17CfWoImszwB0I6hGHwRxZZEQvQs
+    short-id: '!!str b0d8f964b7ac8ac3'
+  server: cdn9-03.cdn-vkvideo.com
+  tls: false
+  type: vless
+  uuid: 9a2573c5-936f-4f93-8409-e43164793176
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 773
+  port: 443
+  reality-opts:
+    public-key: -tePObR3oZwGAUOb5kqTYkNWl6rtUKl0RFuzuu06wgw
+    short-id: '!!str 50'
+  server: test.raw-maple.test-cdn-kkk.com
+  servername: tradingview.com
+  tls: false
+  type: vless
+  uuid: 2060228c-5f0f-41f8-a3ca-f7988308442d
+- flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 774
+  port: 443
+  reality-opts:
+    public-key: zmntN5nMk1JVsrChV_kBogdxWIO0iC-iYSya20w70XI
+    short-id: '!!str 00a02855ba568c29'
+  server: de-two.quiet-rogue.site
+  servername: de-two.quiet-rogue.site
+  tls: false
+  type: vless
+  uuid: 71cada65-d23e-418c-88e4-a06188d14689
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: neurex
+  name: 🇩🇪 德国 | vless | 775
+  network: grpc
+  port: 16923
+  reality-opts:
+    public-key: _QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA
+    short-id: '!!str 10ffb85da1c2d986'
+  server: ded.kosmosapp.ru
+  servername: yandex.ru
+  tls: false
+  type: vless
+  uuid: cf0310b0-2cd6-4ae1-b4c4-e029e7fb0ee3
+- name: 🇩🇪 德国 | vless | 776
+  port: 8080
+  server: uaeee.appcodes.ir
+  tls: false
+  type: vless
+  uuid: 7fc38fba-37ba-41bb-9f26-5f173a3a4397
+- client-fingerprint: ''
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | vless | 777
+  port: 443
+  reality-opts:
+    public-key: EtKRG8sxUJsdy-KwUOtYUNJnSn5VMx2sfKvvdpzg2X0
+    short-id: '!!str f0eb800bd980b00b'
+  server: nbg.edgeptr.org
+  servername: www.lovelive-anime.jp
+  tls: false
+  type: vless
+  uuid: 4e00f3f8-06db-4e20-9737-3e0ca935ab60
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: IN3｜机房｜低风险
@@ -8312,7 +8683,7 @@ proxies:
   sni: grape-zet-ro-turbo.bumbleshrimp.com
   tls: false
   type: hysteria2
-- name: '8,9|کانال تلگرام : Free_VPN_CH...'
+- name: '8,9|کانال ترا : Free_VPN_CH@'
   obfs: salamander
   obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
   password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
