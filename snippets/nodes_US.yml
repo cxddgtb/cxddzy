@@ -23,17 +23,14 @@ proxies:
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
   type: trojan
-- alterId: 0
-  name: '美国 004 #1'
+- name: '美国 004 #1'
   network: tcp
   password: 6ec301428255a78a1d826988d86cc87e
   port: 7630
   server: 18.166.178.12
   skip-cert-verify: true
   sni: www.nintendogames.net
-  tls: true
   type: trojan
-  udp: true
 - name: 日本3|@ripaojiedian
   network: tcp
   password: 6ec301428255a78a1d826988d86cc87e
@@ -42,17 +39,14 @@ proxies:
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
-- alterId: 0
-  name: 新加坡2|@ripaojiedian
+- name: 新加坡2|@ripaojiedian
   network: tcp
   password: 6ec301428255a78a1d826988d86cc87e
   port: 45744
   server: 18.166.178.12
   skip-cert-verify: false
   sni: www.nintendogames.net
-  tls: true
   type: trojan
-  udp: true
 - name: '美国 007 #1'
   network: tcp
   password: BxceQaOe
@@ -61,14 +55,17 @@ proxies:
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
   type: trojan
-- name: 美国2|@ripaojiedian
+- alterId: 0
+  name: 美国2|@ripaojiedian
   network: tcp
   password: 6ec301428255a78a1d826988d86cc87e
   port: 34039
   server: 18.163.100.58
   skip-cert-verify: true
   sni: www.nintendogames.net
+  tls: true
   type: trojan
+  udp: true
 - name: '美国 009 #1'
   network: tcp
   password: BxceQaOe
@@ -1108,7 +1105,6 @@ proxies:
   port: 443
   server: 165.140.216.142
   skip-cert-verify: true
-  tls: true
   type: vmess
   uuid: b65a2d69-5634-42a2-e4be-54e8a6176900
 - alterId: 0
@@ -14442,7 +14438,7 @@ proxies:
   server: 47.86.167.194
   servername: ''
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
   uuid: f2c67cae-c09d-4739-947d-f5302d87a3c0
 - alterId: 0
@@ -14452,6 +14448,7 @@ proxies:
   port: 46962
   server: 65.109.208.236
   skip-cert-verify: true
+  tls: true
   type: vmess
   uuid: c896406b-ccc4-4c37-8b8c-15964f32a9a2
 - alterId: 0
@@ -14495,7 +14492,7 @@ proxies:
   tls: true
   type: trojan
   udp: true
-- name: 🇺🇸_美国_134
+- name: '未命名 #34'
   password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
   port: 20004
   server: oplosgru-c.catcat321.com
@@ -14570,7 +14567,7 @@ proxies:
       Host: px8r9i1b4k.bpusfaster2.top
     path: '%2Fimages'
 - cipher: aes-256-cfb
-  name: 'us|95ff|puddincat07@Telegram #1'
+  name: 🇺🇸_US_美国_2
   password: amazonskr05
   port: 443
   server: 98.89.48.191
@@ -14587,24 +14584,50 @@ proxies:
   type: vmess
   udp: true
   uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
-- name: 🇺🇸 美国 | trojan | 289
-  password: 0ebb269c9f2d4e8e46b0cd4105a55134
-  port: 49361
-  server: 163.245.196.68
-  sni: 163.245.196.68.sslip.io
-  type: trojan
-- name: 🇺🇸 美国 | trojan | 307
+- name: 🇳🇱 荷兰 | trojan | 244
+  network: ws
   password: 8r<[9'l6hAO#8ZQi
-  port: 443
-  server: 167.71.169.92
-  skip-cert-verify: true
+  port: 8443
+  server: 157.22.182.229
   sni: Koma-YT.PAGeS.Dev
   type: trojan
-- name: 🇩🇪 德国 | trojan | 685
-  password: 07e52cb1-7ab7-479f-819a-e3df91510cb5
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇺🇸
+  network: ws
+  password: humanity
   port: 443
-  server: us-full.privateip.net
+  server: 198.202.211.1
+  skip-cert-verify: false
+  sni: www.creationlong.org
   type: trojan
+  ws-opts:
+    headers:
+      Host: www.creationlong.org
+    path: /assignment
+- name: '[1596]⭐ 🇺🇸 USA [TR] ⭐ 📑 #063a7...'
+  network: ws
+  password: 267a9de0-6776-11f1-a9ea-1239d0255272
+  port: 443
+  server: news.microsoft.com
+  skip-cert-verify: false
+  sni: usa.test3.net
+  type: trojan
+  ws-opts:
+    headers:
+      Host: usa.test3.net
+    path: /howdy
+- name: 美国+CloudFlare节点
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.210
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
 - name: 🇸🇪 瑞典 | trojan | 101
   password: '!!str 1234567890'
   port: 443
@@ -14612,77 +14635,87 @@ proxies:
   skip-cert-verify: false
   sni: kfm-bn0.pages.dev
   type: trojan
-- name: 🇰🇷 韩国 | trojan | 36
-  network: ws
+- name: 🇺🇸 US美国(mibei77.com 米贝节点分享)
   password: '!!str 1234567890'
-  port: 20002
-  server: 112.187.247.37
+  port: 443
+  server: 95.85.233.44
+  skip-cert-verify: false
   sni: kfm-bn0.pages.dev
   type: trojan
-  ws-opts:
-    headers:
-      Host: kfm-bn0.pages.dev
-    path: /%3Fed%3D2560%26https%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
-- name: '[1596]️🌤️ 🇷🇺 RUS [TR] #076ad1'
-  password: humanity
-  port: 443
-  server: 104.18.32.37
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: '[1596]⭐ 🇷🇺 RUS [TR] 🗺️ #beae8d'
+- name: 🇳🇱 荷兰 | trojan | 340
   network: ws
-  password: trojan
-  port: 2087
-  server: 109.234.211.66
-  sni: store.timimi.dpdns.org
-  type: trojan
-  ws-opts:
-    path: /%3FBIA_TELEGRAM%2B%28%40AZARBAYJAB1%29%2BTM%2B%28%40AZARBAYJAB1%29%2BTM%2B%28%40AZARBAYJAB1%29%2BTM%2B%28%40AZARBAYJAB1%29%2BTM%2B%28%40AZARBAYJAB1%29%2BTM%2B%28%40AZARBAYJAB1%29
-- name: 🇸🇬 新加坡 | trojan | 12
-  network: tcp
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 47909
-  server: 188.253.12.90
-  skip-cert-verify: true
-  sni: is.01.naiun.bilibili.com
-  type: trojan
-- name: '🇺🇸 #21'
-  network: ws
-  password: MITIVPN
-  port: 443
-  server: 104.16.1.120
-  skip-cert-verify: false
-  sni: us-ga-MiTiVPN--MiTiVPN--MiTiVPN---MiTiVPN--MiTiVPN--MiTiVPN.mitiVpN.lIfeStyLe
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 138.124.89.211
+  sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
     headers:
-      Host: Us-A-MiTiVPN--MiTiVPN--MiTiVPN---MiTiVPN--MiTiVPN--MiTiVPN.mitiVpN.lIfeStyLe
-    path: '%2F---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN%2Fus---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN'
-- name: '[1596]️🌤️ 🇷🇺 RUS [TR] #74820c'
-  password: 71409d3e488548e8bb076d229778f008
-  port: 443
-  server: 104.17.147.77
-  sni: bangladeshipatri.com
-  type: trojan
-- name: '🇺🇸_US_美国 #1'
-  password: WOeXShhJpL
-  port: 443
-  server: 172.67.67.64
-  type: trojan
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - alpn:
   - http/1.1
-  name: '🇺🇸 #25'
+  name: '>>@configV2rayNG::US'
   network: ws
-  password: humanity
+  password: MiTiVPN
   port: 443
-  server: 8.6.112.6
-  sni: www.calmloud.com
+  server: 151.101.193.242
+  skip-cert-verify: false
+  sni: f6r.ir
   type: trojan
   ws-opts:
     headers:
-      Host: www.calmloud.com
-    path: /assignment
+      Host: f6r.ir
+    path: '%2Fusa%3Dmitivpn'
+- name: 🌐 Anycast-IP | 🇨🇦 🇮🇪 🇳🇱 🇺🇸 [*C...
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 77.105.139.166
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: '[1596]🎈 🇺🇸 USA [TR] 🎈 #7e355a'
+  network: ws
+  password: Usd79ZgxSfv_HLlBrnmW8A
+  port: 443
+  server: 216.105.168.58
+  type: trojan
+  ws-opts:
+    headers:
+      Host: telegram.org
+    path: /
+- name: 'US美国(mibei77.com 米贝节点分享) #2'
+  network: ws
+  password: 7a67a0b5-87e9-4b69-a9b4-b48ebcc8358e
+  port: 443
+  server: 888.cloudflare.182682.xyz
+  sni: px8r9i1b4k.bpusfaster2.top
+  type: trojan
+  ws-opts:
+    headers:
+      Host: px8r9i1b4k.bpusfaster2.top
+    path: '%2Fimages'
+- name: 🇺🇸 美国 | trojan | 984
+  password: 4863e1b2-ec2f-4c71-b862-ce533028e57e
+  port: 443
+  server: trus.moonfree.top
+  type: trojan
+- name: 🇺🇸US美国60
+  password: '!!str 1234567890'
+  port: 443
+  server: 31.58.85.103
+  sni: kfm-bn0.pages.dev
+  type: trojan
+- name: '[1596]️🌤️ 🇷🇺 RUS [TR] #2ed7d1'
+  password: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  port: 443
+  server: 104.18.12.149
+  skip-cert-verify: true
+  type: trojan
 - name: 🇺🇸 美国 | trojan | 01
   network: ws
   password: MiTiVPN
@@ -14713,6 +14746,16 @@ proxies:
     headers:
       Host: Nl.App-Cloud.ir
     path: '%2FMiTiVPN%3DNL'
+- name: 🇺🇸 美国 | trojan | 42
+  network: ws
+  password: MiTiVPN
+  port: 80
+  server: 166.62.114.3
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Nl.App-Cloud.ir
+    path: /MiTiVPN%3DNL
 - alterId: 0
   cipher: auto
   name: 🇺🇸 美国 | vmess | 44
@@ -14732,6 +14775,19 @@ proxies:
   port: 80
   server: 15.204.210.176
   sni: telewebion.com
+  type: trojan
+- name: 🇺🇸 美国 | trojan | 55
+  password: 7ea37e4f-325b-416f-901a-67012367307f
+  port: 80
+  server: 15.204.209.50
+  skip-cert-verify: true
+  sni: telewebion.com
+  type: trojan
+- name: 🇺🇸 美国 | trojan | 62
+  password: 800eb26c-cd0c-4269-aae7-e63d75de4edd
+  port: 80
+  server: 135.148.148.4
+  sni: us3.trojanvh.xyz
   type: trojan
 - alterId: 0
   cipher: auto
@@ -14761,6 +14817,31 @@ proxies:
   server: 66.33.22.245
   sni: is1-ssl.mzstatic.com
   type: trojan
+- alpn:
+  - http/1.1
+  name: 🇺🇸 美国 | trojan | 114
+  network: ws
+  password: humanity
+  port: 443
+  server: 208.103.161.170
+  skip-cert-verify: false
+  sni: www.calmloud.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmloud.com
+    path: '%2Fassignment'
+- alpn:
+  - http/1.1
+  name: 🇺🇸 美国 | trojan | 116
+  network: ws
+  password: humanity
+  port: 443
+  server: 216.24.57.6
+  sni: www.calmloud.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
 - alterId: 4
   cipher: auto
   name: 🇺🇸 美国 | vmess | 118
@@ -14796,6 +14877,15 @@ proxies:
     headers:
       Host: ous3.dean52.top
     path: /f08369d1-5ee7-4b16-d786-30bce12fc33c
+- name: 🇺🇸 美国 | trojan | 176
+  network: ws
+  password: 6884d714-d3c4-4b49-aa20-767ea92837d6
+  port: 443
+  server: 160.79.105.220
+  sni: icecream.955850.xyz
+  type: trojan
+  ws-opts:
+    path: '%2Fproxyip%3D160.79.105.220%3A443'
 - name: 🇺🇸 美国 | trojan | 177
   network: ws
   password: humanity
@@ -14806,6 +14896,29 @@ proxies:
   type: trojan
   ws-opts:
     path: /assignment
+- name: 🇺🇸 美国 | trojan | 179
+  network: ws
+  password: Aimer
+  port: 2053
+  server: 199.34.228.50
+  sni: epgb.aimercc.dpdns.org
+  type: trojan
+  ws-opts:
+    path: /?ed=2560
+- alpn:
+  - http/1.1
+  name: 🇺🇸 美国 | trojan | 212
+  network: ws
+  password: Mitivpn
+  port: 443
+  server: 216.24.57.251
+  skip-cert-verify: true
+  sni: cdn.hitgram.ir
+  type: trojan
+  ws-opts:
+    headers:
+      Host: cdn.hitgram.ir
+    path: /?ed=2048
 - alterId: 1
   cipher: auto
   name: 🇺🇸 美国 | vmess | 240
@@ -14878,12 +14991,25 @@ proxies:
     headers:
       Host: www.ignitelimit.com
     path: /assignment
+- name: 🇺🇸 美国 | trojan | 289
+  password: 0ebb269c9f2d4e8e46b0cd4105a55134
+  port: 49361
+  server: 163.245.196.68
+  sni: 163.245.196.68.sslip.io
+  type: trojan
 - name: 🇺🇸 美国 | trojan | 295
   password: '!!str 3648425794742788096'
   port: 443
   server: 35.168.124.79
   skip-cert-verify: true
   sni: humble-rodent.treefrog761.one
+  type: trojan
+- name: 🇺🇸 美国 | trojan | 307
+  password: 8r<[9'l6hAO#8ZQi
+  port: 443
+  server: 167.71.169.92
+  skip-cert-verify: true
+  sni: Koma-YT.PAGeS.Dev
   type: trojan
 - alpn:
   - h3
@@ -14901,18 +15027,11 @@ proxies:
     headers:
       Host: ezaccess1-luffy-ezaccess1-ab56.up.railway.app
     path: /ws/trojan/e6975922-245b-4507-8d12-61b3a5434bc4?ed=2048
-- name: 🇺🇸 美国 | trojan | 312
-  network: ws
-  password: humanity
-  port: 443
-  server: 198.62.62.23
-  skip-cert-verify: false
-  sni: www.calmlunch.com
+- name: 🇺🇸 美国 | trojan | 314
+  password: kkzh2prsyr2ik47as615
+  port: 57142
+  server: 64.94.95.118
   type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
 - alpn:
   - h3
   name: 🇺🇸 美国 | trojan | 320
@@ -15192,13 +15311,6 @@ proxies:
     headers:
       Host: cf-lt.sharecentre.online
     path: 4a47e680
-- name: 🇺🇸 美国 | trojan | 501
-  password: 2ee85121-31de-4581-a492-eb00f606e392
-  port: 443
-  server: 198.23.229.250
-  skip-cert-verify: true
-  sni: rc6.freeguard.org
-  type: trojan
 - name: 🇺🇸 美国 | trojan | 506
   password: 8r<[9'l6hAO#8ZQi
   port: 2053
@@ -15279,15 +15391,6 @@ proxies:
   server: 44.246.163.102
   sni: fleet-bonefish.rooster465.autos
   type: trojan
-- name: 🇺🇸 美国 | trojan | 592
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 216.126.237.69
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    path: /trTelegram🇨🇳
 - name: 🇺🇸 美国 | trojan | 594
   password: ND91608427
   port: 443
@@ -15463,14 +15566,6 @@ proxies:
   port: 443
   server: evolving-platypus.rooster465.autos
   type: trojan
-- name: 🇺🇸 美国 | trojan | 831
-  network: tcp
-  password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
-  port: 20066
-  server: oplosgru-c.catcat321.com
-  skip-cert-verify: true
-  sni: hk.catxstar.com
-  type: trojan
 - name: 🇺🇸 美国 | trojan | 834
   password: 41c406e2-12b5-41f2-a329-d0621052d675
   port: 20088
@@ -15530,10 +15625,12 @@ proxies:
   port: 443
   server: comic-poodle.rooster465.autos
   type: trojan
-- name: 🇺🇸 美国 | trojan | 984
-  password: 4863e1b2-ec2f-4c71-b862-ce533028e57e
-  port: 443
-  server: trus.moonfree.top
+- name: 🇺🇸 美国 | trojan | 992
+  password: 7e70223b-f331-41d5-9313-02b8d2df2885
+  port: 20031
+  server: kkvlvvq-a.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
   type: trojan
 - name: 🇺🇸 美国 | trojan | 993
   network: ws
@@ -15606,200 +15703,72 @@ proxies:
   server: us200m.jiasu.asia
   sni: us200m.jiasu.asia
   type: trojan
-- client-fingerprint: chrome
-  name: 🇺🇸US_3|2.9MB/s
+- name: 🇺🇸 美国 | trojan | 1192
+  password: 63872b0d-87dd-4474-b690-92773af2922e
+  port: 20046
+  server: kkvlvvq-a.catcat321.com
+  sni: hk.catxstar.com
+  type: trojan
+- name: 🇺🇸 美国 | trojan | 1215
+  password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
+  port: 20120
+  server: oplosgru-c.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
+  type: trojan
+- alterId: 0
+  client-fingerprint: chrome
+  name: 🇺🇸US美国2
   password: BxceQaOe
-  port: '39024'
+  port: 39024
   server: 18.166.226.204
   skip-cert-verify: true
   sni: t.me/ripaojiedian
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
+  name: 🇺🇸US美国
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.144
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
   type: trojan
   udp: true
 - alterId: 0
   cipher: auto
-  name: US
-  network: ws
-  port: 33410
-  server: yd4.ainivp.com
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 9301afcd-025e-781f-1abc-c10efabd1211
-  ws-opts:
-    headers:
-      host: yd4.ainivp.com
-    path: /ray
-- alterId: 0
-  cipher: auto
-  name: 🇺🇸US美国 831.7KB/s
-  network: ws
-  port: 8443
-  server: 104.17.77.77
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  ws-opts:
-    headers:
-      host: v2ray1.dozapp.xyz
-    path: /lMnsZUN4/
-- alterId: 0
-  cipher: auto
   name: US2
   network: ws
-  port: 2086
-  server: 23.254.166.237
+  port: 2082
+  server: us1.levikogjgfdd.ir
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 8d0fd618-5d60-40d6-9f23-e503555f496f
+  uuid: 542bd1db-f5e7-4c81-a08a-d95da62a914b
   ws-opts:
     headers:
-      host: 23.254.166.237
-    path: /
+      host: www.bing.com
+    path: 542bd1db-f5e7-4c81-a08a-d95da62a914b-vm
 - alterId: 0
   cipher: auto
   name: US3
   network: ws
   port: 443
-  server: gt021.bestforxray.buzz
+  server: xsj004-10.facai2024.com
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: c1fd780a-3408-4f48-a932-5832a28ce9f6
+  uuid: 1f1aa362-2576-4989-8fdb-7cf1c2c96490
   ws-opts:
     headers:
-      host: ausgt02.bestforxray.buzz
-    path: /linkws
-- alterId: 0
-  name: '🇫🇷 法国 | FRA #10'
-  password: humanity
-  port: 443
-  server: 104.16.174.44
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 0
-  name: 🇺🇸US美国3
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.152.103
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: US7
-  network: tcp
-  port: 22324
-  server: 38.99.82.128
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- alterId: 0
-  name: 🇺🇸US美国4
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.152.187
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 0
-  name: 🇺🇸US美国5
-  network: ws
-  password: humanity
-  port: 443
-  server: www.speedtest.org
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: US9
-  network: tcp
-  port: 42899
-  server: 47.251.91.241
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 0925b355-2bcd-4eae-9720-d2709e4f7e36
-- alterId: 0
-  cipher: auto
-  name: US10
-  network: ws
-  port: 2086
-  server: 154.17.234.39
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 7e25875e-50bb-47ed-9627-261e6d232f69
-  ws-opts:
-    headers:
-      host: www.bing.com
-    path: /7e25875e-50bb-47ed-9627-261e6d232f69-vm
-- alterId: 0
-  name: 🇺🇸US美国6
-  password: humanity
-  port: 443
-  server: 104.18.152.208
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 0
-  name: 🇺🇸US美国7
-  password: humanity
-  port: 443
-  server: 104.18.152.140
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 0
-  name: 🇺🇸US美国8
-  password: humanity
-  port: 443
-  server: www.ignitelimit.com
-  skip-cert-verify: true
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 0
-  name: '🇫🇷 法国 | FRA #18'
-  password: humanity
-  port: 443
-  server: 198.41.223.96
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 0
-  name: 🇺🇸US美国10
-  password: cd5637fd-f992-423a-8be0-5b80360f26fc
-  port: 443
-  server: 5344gt5.cloudflare.182682.xyz
-  skip-cert-verify: true
-  sni: ttt1.ttttlefjljl.xyz
-  tls: true
-  type: trojan
-  udp: true
+      host: xsj004-10.facai2024.com
+    path: /1f1aa362-25
 - alterId: 64
   cipher: auto
-  name: US12
+  name: US4
   network: ws
   port: 30001
   server: 107.167.30.151
@@ -15810,11 +15779,52 @@ proxies:
   ws-opts:
     path: /path/1719489101668
 - alterId: 0
-  name: 🇺🇸US美国11
+  name: 🇺🇸US北美
+  password: humanity
+  port: 443
+  server: 198.62.62.23
+  skip-cert-verify: true
+  sni: www.calmlunch.com
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
+  name: 🇺🇸US美国3
   network: ws
   password: humanity
   port: 443
-  server: 104.18.152.155
+  server: 104.18.152.204
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
+  name: 🇺🇸US美国4
+  password: humanity
+  port: 443
+  server: 172.67.149.60
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
+  name: 🇺🇸US美国5
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.16.174.6
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
+  name: 🇺🇸US美国6
+  password: humanity
+  port: 443
+  server: 104.18.152.246
   skip-cert-verify: true
   sni: www.ignitelimit.com
   tls: true
@@ -15822,7 +15832,99 @@ proxies:
   udp: true
 - alterId: 0
   cipher: auto
-  name: US14
+  name: US7
+  network: ws
+  port: 8880
+  server: 154.21.83.77
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 04bccfa1-a6a8-4ace-991f-454624a8766f
+  ws-opts:
+    headers:
+      host: www.bing.com
+    path: 04bccfa1-a6a8-4ace-991f-454624a8766f-vm
+- alterId: 0
+  cipher: auto
+  name: US8
+  network: ws
+  port: 80
+  server: cfcdn3.sanfencdn9.com
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 7e1d0a3d-8d0d-46b9-83bf-0eac8cf895c6
+  ws-opts:
+    headers:
+      host: agzbjszujp4.yofnhkfc.xyz
+    path: /video/ibCT6z55
+- alterId: 0
+  name: 🇺🇸US美国7
+  network: ws
+  password: humanity
+  port: 443
+  server: 8.6.112.0
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: US9
+  network: tcp
+  port: 8881
+  server: 165.227.65.40
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: db5afae4-ac23-41a6-8378-f307a9a47436
+- alterId: 0
+  name: 🇺🇸US美国8
+  password: humanity
+  port: 443
+  server: 104.16.174.121
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
+  name: 🇺🇸US美国9
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.17.111.4
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: US10
+  network: ws
+  port: 2082
+  server: 69.63.204.31
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 542bd1db-f5e7-4c81-a08a-d95da62a914b
+  ws-opts:
+    path: 542bd1db-f5e7-4c81-a08a-d95da62a914b-vm
+- alterId: 0
+  cipher: auto
+  name: US11
+  network: tcp
+  port: 20001
+  server: 74.211.102.179
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 7f5f0705-3dfb-4f56-9657-c95cade2ba83
+- alterId: 0
+  cipher: auto
+  name: US13
   network: ws
   port: 80
   server: 69.84.182.49
@@ -15834,23 +15936,52 @@ proxies:
     headers:
       host: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
     path: /
-- alterId: 64
+- alterId: 0
+  name: 🇺🇸US美国10
+  password: cd5637fd-f992-423a-8be0-5b80360f26fc
+  port: 443
+  server: 5344gt5.cloudflare.182682.xyz
+  skip-cert-verify: true
+  sni: ttt1.ttttlefjljl.xyz
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
+  name: 🇺🇸US美国11
+  password: humanity
+  port: 443
+  server: 104.18.152.73
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
+  name: 🇺🇸US美国12
+  password: cd5637fd-f992-423a-8be0-5b80360f26fc
+  port: 443
+  server: cdn2.bpcdn.cc
+  skip-cert-verify: true
+  sni: ehofhoe.bpuk2026.top
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
   cipher: auto
-  name: US16
-  network: ws
-  port: 30000
-  server: 104.160.166.253
+  name: US14
+  network: tcp
+  port: 22324
+  server: 38.99.82.128
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    path: /path/181721272114
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
 - alterId: 0
-  name: '🇺🇸 美国 | USA #18'
+  name: 🇺🇸US美国13
+  network: ws
   password: humanity
   port: 443
-  server: 104.18.152.219
+  server: 104.16.7.70
   skip-cert-verify: true
   sni: www.ignitelimit.com
   tls: true
@@ -15858,57 +15989,51 @@ proxies:
   udp: true
 - alterId: 0
   cipher: auto
-  name: US17
+  name: US15
+  network: ws
+  port: 2095
+  server: 64.186.253.113
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 3df54c90-5cc4-4a70-98f7-52245f25230b
+  ws-opts:
+    path: 3df54c90-5cc4-4a70-98f7-52245f25230b-vm
+- alterId: 0
+  name: 🇺🇸US美国14
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.16.174.22
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
+  name: 🇺🇸US美国15
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.16.174.117
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: US16
   network: tcp
   port: 8881
-  server: 165.227.65.40
+  server: 170.187.163.89
   skip-cert-verify: true
   tls: true
   type: vmess
   uuid: db5afae4-ac23-41a6-8378-f307a9a47436
 - alterId: 0
-  name: 🇺🇸US美国13
-  password: humanity
-  port: 443
-  server: 104.18.152.246
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 0
-  name: '🇺🇸 美国 | USA #20'
-  password: humanity
-  port: 443
-  server: 104.18.152.175
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 0
-  name: 🇫🇷 法国 | FRA
-  password: humanity
-  port: 443
-  server: 104.18.152.77
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 0
-  name: 🇺🇸US美国16
-  password: humanity
-  port: 443
-  server: 104.18.152.108
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-- alterId: 0
   cipher: auto
-  name: US19
+  name: US17
   network: ws
   port: 2052
   server: cfcdn1.sanfencdn9.com
@@ -15923,13 +16048,17 @@ proxies:
 - alterId: 0
   cipher: auto
   name: US20
-  network: tcp
-  port: 8881
-  server: 159.65.44.98
+  network: ws
+  port: 2052
+  server: cfcdn2.sanfencdn9.com
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: db5afae4-ac23-41a6-8378-f307a9a47436
+  uuid: 9ebb09ef-ce69-4bbb-ba8f-3be6c52ef9c2
+  ws-opts:
+    headers:
+      host: zifstzamhk1.yofnhkfc.xyz
+    path: /video/VuDFdktz
 - alterId: 0
   cipher: auto
   name: US21
@@ -15944,6 +16073,20 @@ proxies:
     headers:
       host: 176.122.174.175
     path: /vmess
+- alterId: 0
+  cipher: auto
+  name: US22
+  network: ws
+  port: 443
+  server: lin0502.hwcar.sbs
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 39cec18f-a439-427c-9a4e-aeb6fcdf6f53
+  ws-opts:
+    headers:
+      host: linja05.hwcar.sbs
+    path: /linkws
 - name: US166｜机房｜低风险
   network: ws
   password: 32497489-2052-4219-a0b5-43af86bfcd9b
@@ -16281,6 +16424,13 @@ proxies:
   skip-cert-verify: true
   sni: default.fastly.com
   type: trojan
+- name: '🇺🇸 美国 | USA #7'
+  password: humanity
+  port: 443
+  server: 104.18.152.97
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  type: trojan
 - name: '🇺🇸 美国 | USA #8'
   password: humanity
   port: 443
@@ -16309,13 +16459,6 @@ proxies:
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
-- name: '🇺🇸 美国 | USA #13'
-  password: humanity
-  port: 443
-  server: 104.18.152.225
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  type: trojan
 - name: '🇺🇸 美国 | USA #14'
   password: humanity
   port: 443
@@ -16337,10 +16480,24 @@ proxies:
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
+- name: '🇺🇸 美国 | USA #18'
+  password: humanity
+  port: 443
+  server: 104.18.152.219
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  type: trojan
 - name: '🇺🇸 美国 | USA #19'
   password: humanity
   port: 443
   server: 104.18.152.50
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  type: trojan
+- name: '🇺🇸 美国 | USA #20'
+  password: humanity
+  port: 443
+  server: 104.18.152.175
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
