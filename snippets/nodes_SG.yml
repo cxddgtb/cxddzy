@@ -331,16 +331,27 @@ proxies:
   port: 56927
   server: 140.245.108.170
   type: ss
-- name: 🇸🇬 新加坡 | trojan | 126
-  password: 3ac6a6ca99f74941b1eaf892818e2ddb
+- name: 🇸🇬SG-172.104.51.247-6349
+  password: affae2e0-e84b-11ec-b09f-1239d0255272
   port: 443
-  server: 185.151.146.40
+  server: trojan1.udpgw.com
   type: trojan
-- name: 🇸🇬SG-15.235.197.4-8967
-  password: 16bcc187-a1a0-4b8a-8b69-627f38b7cc0d
-  port: 80
-  server: 15.235.197.4
-  sni: 15.235.197.4
+- name: 🇸🇬新加坡高速02-0.1倍
+  network: ws
+  password: 15aa1dfe-99d1-4bbb-bd53-2f5ff032a539
+  port: 443
+  server: 23.227.38.176
+  skip-cert-verify: false
+  sni: sg1.pqjc.buzz
+  type: trojan
+  ws-opts:
+    headers:
+      Host: sg1.pqjc.buzz
+    path: /pq/sg1
+- name: 🇯🇵 日本 | trojan | 197
+  password: IQ68037294
+  port: 443
+  server: still-mastodon.rooster465.autos
   type: trojan
 - alterId: 0
   cipher: auto
@@ -470,6 +481,13 @@ proxies:
     headers:
       Host: ''
     path: /sshkit/Ertusg86/635014638c264/
+- name: 🇸🇬 新加坡 | trojan | 50
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 45553
+  server: 188.253.12.94
+  skip-cert-verify: true
+  sni: ch.01.naiun.bilibili.com
+  type: trojan
 - alterId: 64
   cipher: auto
   name: 🇸🇬 新加坡 | vmess | 53
@@ -574,6 +592,11 @@ proxies:
     headers:
       Host: ''
     path: /path/080712342310
+- name: 🇸🇬 新加坡 | trojan | 82
+  password: 6cb6f769-b28e-4f7f-a593-8c0b0a161992
+  port: 443
+  server: 170.187.231.189
+  type: trojan
 - alterId: 0
   cipher: auto
   name: 🇸🇬 新加坡 | vmess | 84
@@ -626,6 +649,11 @@ proxies:
   password: ND91608427
   port: 443
   server: tidy-gelding.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 126
+  password: 3ac6a6ca99f74941b1eaf892818e2ddb
+  port: 443
+  server: 185.151.146.40
   type: trojan
 - alpn:
   - http/1.1
@@ -873,6 +901,27 @@ proxies:
   server: amazing-troll.rooster465.autos
   type: trojan
 - alterId: 0
+  name: 新加坡2|@ripaojiedian
+  network: tcp
+  password: 6ec301428255a78a1d826988d86cc87e
+  port: 45744
+  server: 16.162.192.182
+  skip-cert-verify: true
+  sni: www.nintendogames.net
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
+  name: 🇸🇬 新加坡 | SGP
+  password: BxceQaOe
+  port: 26704
+  server: 18.163.126.92
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  tls: true
+  type: trojan
+  udp: true
+- alterId: 0
   cipher: auto
   name: SG7｜机房｜高风险 (黑名单)
   network: tcp
@@ -898,14 +947,6 @@ proxies:
   skip-cert-verify: true
   sni: www.nintendogames.net
   type: trojan
-- name: 新加坡2|@ripaojiedian
-  network: tcp
-  password: 6ec301428255a78a1d826988d86cc87e
-  port: 45744
-  server: 16.162.192.182
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
 - name: 新加坡3|@ripaojiedian
   network: tcp
   password: BxceQaOe
@@ -913,11 +954,4 @@ proxies:
   server: 18.163.126.92
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
-  type: trojan
-- name: 🇸🇬 新加坡 | SGP
-  password: BxceQaOe
-  port: 26704
-  server: 18.163.126.92
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
   type: trojan
