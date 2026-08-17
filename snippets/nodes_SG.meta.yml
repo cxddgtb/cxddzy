@@ -1,17 +1,13 @@
 proxies:
-- alterId: 1
+- alterId: 0
   cipher: auto
   name: '新加坡 001 #1'
-  network: ws
-  port: 21888
-  server: 104.248.148.147
+  network: tcp
+  port: 16115
+  server: zfd-hkv2.kunlun01dns.com
   skip-cert-verify: true
   type: vmess
-  uuid: ae7486f9-d7b7-4f26-97a0-dc5b093dfa89
-  ws-opts:
-    headers:
-      Host: 104.248.148.147
-    path: /
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
 - alterId: 0
   cipher: auto
   name: '新加坡 002 #1'
@@ -25,9 +21,22 @@ proxies:
     headers:
       Host: 139.99.61.154
     path: /vmess
-- alterId: 0
+- alterId: 1
   cipher: auto
   name: '新加坡 003 #1'
+  network: ws
+  port: 21888
+  server: 104.248.148.147
+  skip-cert-verify: true
+  type: vmess
+  uuid: ae7486f9-d7b7-4f26-97a0-dc5b093dfa89
+  ws-opts:
+    headers:
+      Host: 104.248.148.147
+    path: /
+- alterId: 0
+  cipher: auto
+  name: '新加坡 004 #1'
   network: ws
   port: 5001
   server: steam.dnspro.icu
@@ -40,7 +49,7 @@ proxies:
     path: /iso
 - alterId: 0
   cipher: auto
-  name: '新加坡 004 #1'
+  name: '新加坡 005 #1'
   network: ws
   port: 9111
   server: st-1.dnspro.icu
@@ -55,7 +64,7 @@ proxies:
     path: /iso
 - alterId: 0
   cipher: auto
-  name: '新加坡 005 #1'
+  name: '新加坡 006 #1'
   network: ws
   port: 5100
   server: st-2.dnspro.icu
@@ -68,9 +77,24 @@ proxies:
     headers:
       Host: st-2.dnspro.icu
     path: /iso
+- alterId: 0
+  cipher: auto
+  name: '新加坡 007 #1'
+  network: ws
+  port: 20025
+  server: sh-cn-1.dnspro.icu
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 13ef5f2c-d002-36a2-9e96-a13d5e3ae03b
+  ws-opts:
+    headers:
+      Host: sh-cn-1.dnspro.icu
+    path: /iso
 - alterId: 4
   cipher: auto
-  name: '新加坡 006 #1'
+  name: '新加坡 008 #1'
   network: ws
   port: 443
   server: 103.253.26.134
@@ -84,7 +108,7 @@ proxies:
     path: /ws
 - alterId: 4
   cipher: auto
-  name: '新加坡 007 #1'
+  name: '新加坡 009 #1'
   network: ws
   port: 443
   server: 103.253.26.20
@@ -96,77 +120,80 @@ proxies:
     headers:
       Host: zecjk.com
     path: /ws
-- name: 🇸🇬SG_6|4.6MB/s
+- client-fingerprint: chrome
+  name: '新加坡 010 #1'
+  network: grpc
+  port: 10036
+  server: sg1-r.link-t7.com
+  servername: s0.awsstatic.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 88DA9CA6-5E68-4687-A748-961B612DCED5
+- name: 🇸🇬 新加坡 | trojan | 294
   password: PQ05174892
   port: 443
   server: vast-werewolf.rooster465.autos
   skip-cert-verify: true
   sni: vast-werewolf.rooster465.autos
-  tls: true
   type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: 🇸🇬SG_22|2.0MB/s
-  network: tcp
+- name: 🇸🇬 新加坡 | trojan | 296
   password: PQ05174892
-  port: '443'
+  port: 443
   server: composed-sheep.rooster465.autos
   skip-cert-verify: false
   sni: composed-sheep.rooster465.autos
   type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: 🇸🇬SG_12|4.4MB/s
-  network: tcp
+- name: 🇸🇬 新加坡 | trojan | 297
   password: PQ05174892
-  port: '443'
+  port: 443
   server: intense-monarch.rooster465.autos
   skip-cert-verify: false
   sni: intense-monarch.rooster465.autos
   type: trojan
-  udp: true
 - name: 🇸🇬_新加坡_10
   password: PQ05174892
   port: 443
   server: stable-python.rooster465.autos
   sni: stable-python.rooster465.autos
   type: trojan
-- client-fingerprint: chrome
-  name: 🇸🇬SG_13|4.6MB/s
-  network: tcp
+- name: 🇸🇬 新加坡 | trojan | 295
   password: PQ05174892
-  port: '443'
+  port: 443
   server: pleased-albacore.rooster465.autos
   skip-cert-verify: false
   sni: pleased-albacore.rooster465.autos
-  tls: true
   type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: 🇸🇬SG_21|4.4MB/s
-  network: tcp
+- name: 🇸🇬SG_4|4.6MB/s
   password: PQ05174892
-  port: '443'
+  port: 443
   server: amusing-grub.rooster465.autos
-  skip-cert-verify: false
+  skip-cert-verify: true
   sni: amusing-grub.rooster465.autos
   tls: true
   type: trojan
   udp: true
-- name: 🇸🇬_新加坡_22
+- client-fingerprint: chrome
+  name: 🇸🇬SG_15|4.8MB/s
+  network: tcp
   password: PQ05174892
-  port: 443
+  port: '443'
   server: intense-sole.rooster465.autos
+  skip-cert-verify: false
   sni: intense-sole.rooster465.autos
+  tls: true
   type: trojan
-- name: 🇸🇬_新加坡_24
+  udp: true
+- name: 🇸🇬 新加坡 | trojan | 312
   password: PQ05174892
   port: 443
   server: pleased-raptor.rooster465.autos
   sni: pleased-raptor.rooster465.autos
   type: trojan
 - client-fingerprint: chrome
-  name: 🇸🇬SG_25|4.1MB/s
+  name: 🇸🇬SG_13|2.3MB/s
   network: tcp
   password: PQ05174892
   port: '443'
@@ -177,14 +204,13 @@ proxies:
   type: trojan
   udp: true
 - client-fingerprint: chrome
-  name: 🇸🇬SG_23|5.3MB/s
+  name: 🇸🇬SG_12|2.0MB/s
   network: tcp
   password: PQ05174892
   port: '443'
   server: fleet-pony.rooster465.autos
   skip-cert-verify: false
   sni: fleet-pony.rooster465.autos
-  tls: true
   type: trojan
   udp: true
 - client-fingerprint: chrome
@@ -247,14 +273,14 @@ proxies:
   server: yzany01.jdoanst2026.com
   sni: xjp03.ascwt179.com
   type: anytls
-- name: 🟠🇸🇬[🎬📺🎭✨]_github.com/Ruk1ng001...
+- name: 🇸🇬SG_9|3.8MB/s
   password: 13f0acfa-38c1-4e82-a758-583aa31740df
   port: 60572
   server: sivp666.ipad1el.com
   sni: yzhou015.jdvipkuai.cc
   type: anytls
   udp: true
-- name: 🇸🇬SG_15|2.9MB/s
+- name: '🟠🇸🇬[🎬🤖📺🎭]_github.com/Ruk1ng001... #4'
   password: 13f0acfa-38c1-4e82-a758-583aa31740df
   port: 45647
   server: yazhouany02.twzq59.cc
@@ -328,9 +354,9 @@ proxies:
   skip-cert-verify: true
   sni: sg1.xiaoliyu.cyou
   type: hysteria2
-- client-fingerprint: chrome
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡 | vless | 167
+  name: 🔴🇸🇬[📺🎭🎪]_github.com/Ruk1ng001_...
   network: tcp
   port: 443
   reality-opts:
@@ -340,7 +366,7 @@ proxies:
   servername: asia.cendora.ru
   skip-cert-verify: true
   tfo: false
-  tls: false
+  tls: true
   type: vless
   uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
 - name: 🔴🇸🇬[🎬🤖🎭✨]_github.com/Ruk1ng001...
@@ -380,19 +406,6 @@ proxies:
     headers:
       Host: hhlfy.twiladaphne.ndjp.net
     path: '%2F'
-- name: SG VLESS-99 | free-nodes
-  network: ws
-  port: 443
-  server: 104.18.12.149
-  servername: S4-f45.pAGeS.DeV
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: b60e5c32-3d4e-425c-a785-a36cd0621a72
-  ws-opts:
-    headers:
-      Host: S4-f45.pAGeS.DeV
-    path: /
 - name: 🇸🇬新加坡-5
   network: ws
   port: 443
@@ -496,7 +509,7 @@ proxies:
       Host: sni.skylee4.cloudns.ch
     path: /proxyip%3DProxyIP.CMLiussss.net
 - client-fingerprint: chrome
-  name: '🇸🇬 #1'
+  name: 🇸🇬 新加坡 | vless | 189
   network: xhttp
   port: 8443
   reality-opts:
@@ -668,6 +681,16 @@ proxies:
     path: /afrhms16v.bestxray.buzz/linkws
 - name: 🇸🇬 新加坡 | vless | 02
   network: ws
+  port: 443
+  server: 206.238.236.65
+  servername: ve.ylkszy.eu.org
+  tls: false
+  type: vless
+  uuid: c82f8880-bdd8-4a35-b8e7-ad5aa880f7d0
+  ws-opts:
+    path: /?proxyipsecurity=tls
+- name: 🇸🇬 新加坡 | vless | 03
+  network: ws
   port: 8443
   server: 206.238.237.133
   servername: king-ae1.pages.dev
@@ -678,19 +701,33 @@ proxies:
     headers:
       Host: king-ae1.pages.dev
     path: '%2F%40AZARBAYJAB1%40AZARBAYJAB1%40AZARBAYJAB1%40AZARBAYJAB1%40AZARBAYJAB1%40AZARBAYJAB1%3Fed%3D2560security=tls'
-- name: 🇸🇬 新加坡 | vless | 05
+- name: 🇸🇬 新加坡 | vless | 07
   network: ws
   port: 443
-  server: 206.238.236.65
-  servername: ve.ylkszy.eu.org
+  server: dodo.pixoservers.com
+  servername: pixoservers.com
+  skip-cert-verify: false
   tls: false
   type: vless
-  uuid: c82f8880-bdd8-4a35-b8e7-ad5aa880f7d0
+  uuid: c16b6dec-d873-4271-9fb6-493285b195b0
   ws-opts:
-    path: /?proxyipsecurity=tls
+    headers:
+      Host: uk-cdnws.pixoservers.com
+    path: '%2F%3Fed%3D2048fp=androidsecurity=tls'
+- name: 🇸🇬 新加坡 | vless | 08
+  network: ws
+  port: 80
+  server: 43.169.18.179
+  tls: false
+  type: vless
+  uuid: 5b6e7300-8fc8-404e-8dc9-40a5393dd881
+  ws-opts:
+    headers:
+      Host: line.smartphone1.azazilvpn.sbs
+    path: '%2FXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXn%3Fed'
 - alterId: 0
   cipher: auto
-  name: 🇸🇬 新加坡 | vmess | 08
+  name: 🇸🇬 新加坡 | vmess | 10
   network: ws
   port: 80
   server: 109.123.237.41
@@ -702,7 +739,39 @@ proxies:
     headers:
       Host: ''
     path: /fastssh
-- name: 🇸🇬 新加坡 | vless | 09
+- name: 🇸🇬 新加坡 | trojan | 12
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 41943
+  server: 188.253.12.92
+  skip-cert-verify: true
+  sni: az.01.naiun.bilibili.com
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 13
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 45553
+  server: 188.253.12.93
+  sni: ch.01.naiun.bilibili.com
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 14
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 41943
+  server: 188.253.12.93
+  sni: az.01.naiun.bilibili.com
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 15
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 47909
+  server: 188.253.12.90
+  skip-cert-verify: true
+  sni: is.01.naiun.bilibili.com
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 16
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 45553
+  server: 188.253.12.90
+  sni: ch.01.naiun.bilibili.com
+  type: trojan
+- name: 🇸🇬 新加坡 | vless | 17
   network: ws
   port: 9443
   server: 89.34.227.47
@@ -714,30 +783,9 @@ proxies:
     headers:
       Host: ww1.aniuge.qzz.io
     path: '%252F%253Fed%253D2095fp=chromesecurity=tls'
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬 新加坡 | vmess | 11
-  network: ws
-  port: 80
-  server: 139.99.61.154
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 6a620223-84f8-40f4-b6ba-ed6abfe4e4f2
-  ws-opts:
-    headers:
-      Host: ''
-    path: /vmess
-- name: 🇸🇬 新加坡 | trojan | 12
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 47909
-  server: 188.253.12.90
-  skip-cert-verify: true
-  sni: is.01.naiun.bilibili.com
-  type: trojan
 - client-fingerprint: ios
   flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡 | vless | 13
+  name: 🇸🇬 新加坡 | vless | 18
   port: 48663
   reality-opts:
     public-key: vrcnMSS7jQZD92Xz1JLfxLk252IaRGi5oiEIqjz9knc
@@ -747,25 +795,24 @@ proxies:
   tls: false
   type: vless
   uuid: 220c9da3-0891-4904-8c57-81eb49c0b39a
-- name: 🇸🇬 新加坡 | trojan | 14
-  password: 16bcc187-a1a0-4b8a-8b69-627f38b7cc0d
-  port: 80
-  server: 15.235.197.4
-  sni: 15.235.197.4
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇸🇬 新加坡 | vmess | 15
-  network: tcp
-  port: 18000
-  server: 149.88.23.207
-  servername: null
+  name: 🇸🇬 新加坡 | vmess | 19
+  network: raw
+  port: '18000'
+  server: 149.88.23.202
   tls: false
   type: vmess
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+- name: 🇸🇬 新加坡 | trojan | 20
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 41943
+  server: 188.253.12.94
+  sni: az.01.naiun.bilibili.com
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇸🇬 新加坡 | vmess | 17
+  name: 🇸🇬 新加坡 | vmess | 21
   network: ws
   port: 80
   server: 15.235.147.186
@@ -779,19 +826,127 @@ proxies:
     path: /sshkit/Ertusg86/635014638c264/
 - alterId: 0
   cipher: auto
-  name: 🇸🇬 新加坡 | vmess | 19
+  name: 🇸🇬 新加坡 | vmess | 23
+  network: raw
+  port: '18000'
+  server: 149.88.23.207
+  tls: false
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+- name: 🇸🇬 新加坡 | vless | 24
+  network: ws
+  port: 54321
+  server: 101.33.45.201
+  servername: c.eoa.ccwu.cc
+  tls: false
+  type: vless
+  uuid: 03d73bc8-01a9-46a7-90b9-3d27065ed328
+  ws-opts:
+    headers:
+      Host: c.eoa.ccwu.cc
+    path: /fp=chromesecurity=tls
+- name: 🇸🇬 新加坡 | trojan | 27
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 46424
+  server: 188.253.12.15
+  skip-cert-verify: true
+  sni: de.01.naiun.bilibili.com
+  type: trojan
+- client-fingerprint: ios
+  flow: xtls-rprx-vision
+  name: 🇸🇬 新加坡 | vless | 28
+  port: 8899
+  reality-opts:
+    public-key: -kGaCYGM_MImDMVkOsFp4yvv4dLy3FXe9gqAtf4eYF8
+    short-id: '!!str 905ae32a'
+  server: 138.2.94.44
+  servername: www.lovelive-anime.jp
+  tls: false
+  type: vless
+  uuid: d95e62f8-b961-4362-bb07-e1e421b02274
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬 新加坡 | vmess | 29
   network: ws
   port: 80
-  server: 213.35.113.150
+  server: 139.99.61.154
   servername: ''
   tls: false
   type: vmess
-  uuid: eaf5e01b-f27d-44cf-94ae-87196143eef9
+  uuid: 6a620223-84f8-40f4-b6ba-ed6abfe4e4f2
   ws-opts:
     headers:
-      Host: dl.kgvn.garenanow.com
-    path: /
-- name: 🇸🇬 新加坡 | vless | 24
+      Host: ''
+    path: /vmess
+- name: 🇸🇬 新加坡 | vless | 30
+  network: ws
+  port: 10460
+  server: 45.76.191.197
+  servername: 57vanjkxjo3kejbf4o2iul6z4o.gike.dpdns.org
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: 00000000-0000-4000-8000-000000000000
+  ws-opts:
+    headers:
+      Host: 57vanjkxjo3kejbf4o2iul6z4o.gike.dpdns.org
+    path: /@Marisa_kristifp=chromesecurity=tls
+- name: 🇸🇬 新加坡 | trojan | 31
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 47909
+  server: 188.253.12.91
+  skip-cert-verify: true
+  sni: is.01.naiun.bilibili.com
+  type: trojan
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬 新加坡 | vless | 32
+  port: 10000
+  reality-opts:
+    public-key: xELgry1aUBwZLDAAvyiBkLTXsIi1M-mKhuqvwiP6FxU
+    short-id: '!!str 3b0b73e5'
+  server: 140.245.50.174
+  servername: gateway.icloud.com
+  tls: false
+  type: vless
+  uuid: af6904c1-4349-4448-8e99-0024824a0c33
+- alterId: 64
+  cipher: auto
+  name: 🇸🇬 新加坡 | vmess | 33
+  network: ws
+  port: 80
+  server: 159.223.94.156
+  tls: false
+  type: vmess
+  uuid: 533724ad-58ef-4147-88dc-9da523c15fc4
+  ws-opts:
+    headers:
+      Host: ''
+    path: /anti13.zingfast.vn
+- name: 🇸🇬 新加坡 | trojan | 36
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 47909
+  server: 188.253.12.93
+  skip-cert-verify: true
+  sni: is.01.naiun.bilibili.com
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 37
+  password: 16bcc187-a1a0-4b8a-8b69-627f38b7cc0d
+  port: 80
+  server: 15.235.197.4
+  sni: 15.235.197.4
+  type: trojan
+- name: 🇸🇬 新加坡 | vless | 38
+  network: ws
+  port: 36322
+  server: 168.138.179.107
+  servername: ve.ylkszy.eu.org
+  tls: false
+  type: vless
+  uuid: c82f8880-bdd8-4a35-b8e7-ad5aa880f7d0
+  ws-opts:
+    path: '%2F%3Fedsecurity=tls'
+- name: 🇸🇬 新加坡 | vless | 39
   network: ws
   port: 3100
   server: 103.195.190.219
@@ -805,33 +960,7 @@ proxies:
     path: /danfengfp=chromesecurity=tls
 - alterId: 0
   cipher: auto
-  name: 🇸🇬 新加坡 | vmess | 25
-  network: ws
-  port: 80
-  server: 15.235.184.36
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 7ce525f5-3a9b-4627-ae0e-3ca0b57519e3
-  ws-opts:
-    headers:
-      Host: ''
-    path: /vmess
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡 | vless | 26
-  port: 10000
-  reality-opts:
-    public-key: xELgry1aUBwZLDAAvyiBkLTXsIi1M-mKhuqvwiP6FxU
-    short-id: '!!str 3b0b73e5'
-  server: 140.245.50.174
-  servername: gateway.icloud.com
-  tls: false
-  type: vless
-  uuid: af6904c1-4349-4448-8e99-0024824a0c33
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬 新加坡 | vmess | 27
+  name: 🇸🇬 新加坡 | vmess | 40
   network: ws
   port: 80
   server: 157.245.152.136
@@ -843,38 +972,9 @@ proxies:
     headers:
       Host: 4gvpn.akamaized.net
     path: /kvw0870h/
-- name: 🇸🇬 新加坡 | vless | 28
-  network: ws
-  port: 51262
-  server: 175.41.179.37
-  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 903fed13-8e78-4fa2-a83e-b392b289741f
-  ws-opts:
-    headers:
-      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
-    path: /@VPNine1fp=chromesecurity=tls
-- name: 🇸🇬 新加坡 | vless | 29
-  network: ws
-  port: 36322
-  server: 168.138.179.107
-  servername: ve.ylkszy.eu.org
-  tls: false
-  type: vless
-  uuid: c82f8880-bdd8-4a35-b8e7-ad5aa880f7d0
-  ws-opts:
-    path: '%2F%3Fedsecurity=tls'
-- name: 🇸🇬 新加坡 | trojan | 31
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 41943
-  server: 188.253.12.94
-  sni: az.01.naiun.bilibili.com
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇸🇬 新加坡 | vmess | 32
+  name: 🇸🇬 新加坡 | vmess | 43
   network: ws
   port: 80
   server: 15.235.192.196
@@ -888,97 +988,7 @@ proxies:
     path: /vmess
 - alterId: 0
   cipher: auto
-  name: 🇸🇬 新加坡 | vmess | 33
-  network: raw
-  port: '18000'
-  server: 149.88.23.202
-  tls: false
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- name: 🇸🇬 新加坡 | trojan | 34
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 46424
-  server: 188.253.12.15
-  skip-cert-verify: true
-  sni: de.01.naiun.bilibili.com
-  type: trojan
-- name: 🇸🇬 新加坡 | vless | 35
-  network: ws
-  port: 2000
-  server: 13.212.82.58
-  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
-  tls: true
-  type: vless
-  uuid: 0f23a4fe-afcf-438a-84a5-d368f9144b5d
-  ws-opts:
-    headers:
-      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
-    path: '%2F%40Marisa_kristifp=chrome'
-- client-fingerprint: ios
-  flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡 | vless | 38
-  port: 8899
-  reality-opts:
-    public-key: 4ciiQdZe4F8wyoRKpNzW5xwmQzGyIJnlPHrK70iU6DQ
-    short-id: '!!str f0cce996'
-  server: 168.138.166.89
-  servername: www.lovelive-anime.jp
-  tls: false
-  type: vless
-  uuid: ff334415-1a33-4c20-8301-07e1dd66fe8c
-- name: 🇸🇬 新加坡 | vless | 40
-  network: ws
-  port: 9999
-  server: 43.160.247.113
-  servername: c.eoa.ccwu.cc
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 03d73bc8-01a9-46a7-90b9-3d27065ed328
-  ws-opts:
-    headers:
-      Host: c.eoa.ccwu.cc
-    path: '%2Fsecurity=tls'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡 | vless | 42
-  port: 10574
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: '!!str 48050fab'
-  server: 3.0.111.82
-  servername: www.apple.com
-  tls: false
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: 🇸🇬 新加坡 | trojan | 43
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 45553
-  server: 188.253.12.93
-  sni: ch.01.naiun.bilibili.com
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 44
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 41943
-  server: 188.253.12.93
-  sni: az.01.naiun.bilibili.com
-  type: trojan
-- alterId: 64
-  cipher: auto
-  name: 🇸🇬 新加坡 | vmess | 45
-  network: ws
-  port: 80
-  server: 159.223.94.156
-  tls: false
-  type: vmess
-  uuid: 533724ad-58ef-4147-88dc-9da523c15fc4
-  ws-opts:
-    headers:
-      Host: ''
-    path: /anti13.zingfast.vn
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬 新加坡 | vmess | 47
+  name: 🇸🇬 新加坡 | vmess | 44
   network: ws
   port: 80
   server: 157.230.36.235
@@ -990,13 +1000,32 @@ proxies:
     headers:
       Host: ''
     path: /graphql
-- name: 🇸🇬 新加坡 | trojan | 48
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 47909
-  server: 188.253.12.91
-  skip-cert-verify: true
-  sni: is.01.naiun.bilibili.com
-  type: trojan
+- name: 🇸🇬 新加坡 | vless | 45
+  network: ws
+  port: 56311
+  server: 158.178.242.195
+  servername: sni.111000.v6.rocks
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.rocks
+    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3security=tls'
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬 新加坡 | vmess | 48
+  network: ws
+  port: 80
+  server: 143.198.219.182
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: e9c4ce52-9a78-4381-b6f8-23350bc4d606
+  ws-opts:
+    headers:
+      Host: ''
+    path: /v2ray
 - alterId: 0
   cipher: auto
   name: 🇸🇬 新加坡 | vmess | 49
@@ -1011,48 +1040,9 @@ proxies:
     headers:
       Host: ''
     path: /2TokGE9A/
-- name: 🇸🇬 新加坡 | trojan | 50
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 41943
-  server: 188.253.12.92
-  skip-cert-verify: true
-  sni: az.01.naiun.bilibili.com
-  type: trojan
 - alterId: 0
   cipher: auto
   name: 🇸🇬 新加坡 | vmess | 51
-  network: ws
-  port: 80
-  server: 143.198.219.182
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: e9c4ce52-9a78-4381-b6f8-23350bc4d606
-  ws-opts:
-    headers:
-      Host: ''
-    path: /v2ray
-- client-fingerprint: ios
-  flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡 | vless | 53
-  port: 8899
-  reality-opts:
-    public-key: -kGaCYGM_MImDMVkOsFp4yvv4dLy3FXe9gqAtf4eYF8
-    short-id: '!!str 905ae32a'
-  server: 138.2.94.44
-  servername: www.lovelive-anime.jp
-  tls: false
-  type: vless
-  uuid: d95e62f8-b961-4362-bb07-e1e421b02274
-- name: 🇸🇬 新加坡 | trojan | 54
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 45619
-  server: 188.253.12.92
-  sni: fr.01.naiun.bilibili.com
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬 新加坡 | vmess | 55
   network: ws
   port: 80
   server: 139.59.255.209
@@ -1064,71 +1054,52 @@ proxies:
     headers:
       Host: 4gvpn.akamaized.net
     path: /cloudfast
-- name: 🇸🇬 新加坡 | vless | 56
+- name: 🇸🇬 新加坡 | vless | 53
   network: ws
-  port: 56311
-  server: 158.178.242.195
-  servername: sni.111000.v6.rocks
+  port: 9999
+  server: 43.160.247.113
+  servername: c.eoa.ccwu.cc
+  skip-cert-verify: false
   tls: false
   type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  uuid: 03d73bc8-01a9-46a7-90b9-3d27065ed328
   ws-opts:
     headers:
-      Host: sni.111000.v6.rocks
-    path: '%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3security=tls'
-- client-fingerprint: ios
+      Host: c.eoa.ccwu.cc
+    path: '%2Fsecurity=tls'
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡 | vless | 57
-  port: 33519
+  name: 🇸🇬 新加坡 | vless | 54
+  port: 10574
   reality-opts:
-    public-key: P5OHWm4pZ7jfg54ElnGSRGqrizGyVOFrBIIqCxUgyCM
-    short-id: '!!str eb89'
-  server: 138.2.85.8
-  servername: pypi.org
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '!!str 48050fab'
+  server: 3.0.111.82
+  servername: www.apple.com
   tls: false
   type: vless
-  uuid: 220c9da3-0891-4904-8c57-81eb49c0b39a
-- name: 🇸🇬 新加坡 | trojan | 58
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: 🇸🇬 新加坡 | trojan | 55
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 45619
-  server: 188.253.12.93
-  skip-cert-verify: true
-  sni: fr.01.naiun.bilibili.com
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 59
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 45619
+  port: 41943
   server: 188.253.12.90
   skip-cert-verify: true
-  sni: fr.01.naiun.bilibili.com
+  sni: az.01.naiun.bilibili.com
   type: trojan
-- name: 🇸🇬 新加坡 | trojan | 60
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 48697
-  server: 188.253.12.90
-  skip-cert-verify: true
-  sni: gh.01.naiun.bilibili.com
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 61
-  password: pvZE3UfT0ziK1omVLlsjINBqeqqwab1M
-  port: 50573
-  server: 139.59.238.97
-  skip-cert-verify: true
-  type: trojan
-- name: 🇸🇬 新加坡 | vless | 62
-  network: ws
-  port: 41493
-  server: 158.178.225.153
-  servername: 020g5uxcxmqlndg.luyuju.dpdns.org
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬 新加坡 | vless | 56
+  port: 12972
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '!!str 48050fab'
+  server: 3.0.111.82
+  servername: www.apple.com
   tls: false
   type: vless
-  uuid: 00000000-0000-4000-8000-000000000000
-  ws-opts:
-    headers:
-      Host: 020g5uxcxmqlndg.luyuju.dpdns.org
-    path: /@Marisa_kristifp=firefoxsecurity=tls
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
 - client-fingerprint: firefox
-  name: 🇸🇬 新加坡 | vless | 63
+  name: 🇸🇬 新加坡 | vless | 57
   network: ws
   port: 6768
   server: 54.254.145.25
@@ -1141,76 +1112,144 @@ proxies:
     headers:
       Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
     path: '%2F%40Marisa_kristi'
-- client-fingerprint: chrome
-  name: 🇸🇬 新加坡 | vless | 64
-  port: 8686
-  server: 13.251.77.78
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
-- name: 🇸🇬 新加坡 | trojan | 65
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 41943
-  server: 188.253.12.90
-  skip-cert-verify: true
-  sni: az.01.naiun.bilibili.com
-  type: trojan
-- name: 🇸🇬 新加坡 | vless | 66
+- name: 🇸🇬 新加坡 | vless | 58
   network: ws
-  port: 54321
-  server: 101.33.45.201
-  servername: c.eoa.ccwu.cc
+  port: 41493
+  server: 158.178.225.153
+  servername: 020g5uxcxmqlndg.luyuju.dpdns.org
   tls: false
-  type: vless
-  uuid: 03d73bc8-01a9-46a7-90b9-3d27065ed328
-  ws-opts:
-    headers:
-      Host: c.eoa.ccwu.cc
-    path: /fp=chromesecurity=tls
-- name: 🇸🇬 新加坡 | trojan | 67
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 47909
-  server: 188.253.12.93
-  skip-cert-verify: true
-  sni: is.01.naiun.bilibili.com
-  type: trojan
-- name: 🇸🇬 新加坡 | vless | 68
-  network: ws
-  port: 10460
-  server: 45.76.191.197
-  servername: 57vanjkxjo3kejbf4o2iul6z4o.gike.dpdns.org
-  skip-cert-verify: true
-  tls: true
   type: vless
   uuid: 00000000-0000-4000-8000-000000000000
   ws-opts:
     headers:
-      Host: 57vanjkxjo3kejbf4o2iul6z4o.gike.dpdns.org
-    path: /@Marisa_kristifp=chrome
-- name: 🇸🇬 新加坡 | trojan | 69
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 45553
-  server: 188.253.12.90
-  sni: ch.01.naiun.bilibili.com
+      Host: 020g5uxcxmqlndg.luyuju.dpdns.org
+    path: /@Marisa_kristifp=firefoxsecurity=tls
+- name: 🇸🇬 新加坡 | trojan | 59
+  password: pvZE3UfT0ziK1omVLlsjINBqeqqwab1M
+  port: 50573
+  server: 139.59.238.97
+  skip-cert-verify: true
   type: trojan
+- name: 🇸🇬 新加坡 | trojan | 60
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 48697
+  server: 188.253.12.90
+  skip-cert-verify: true
+  sni: gh.01.naiun.bilibili.com
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 61
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 45619
+  server: 188.253.12.90
+  skip-cert-verify: true
+  sni: fr.01.naiun.bilibili.com
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 64
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 45619
+  server: 188.253.12.93
+  skip-cert-verify: true
+  sni: fr.01.naiun.bilibili.com
+  type: trojan
+- name: 🇸🇬 新加坡 | vless | 65
+  network: ws
+  port: 2000
+  server: 13.212.82.58
+  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+  tls: false
+  type: vless
+  uuid: 0f23a4fe-afcf-438a-84a5-d368f9144b5d
+  ws-opts:
+    headers:
+      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+    path: '%2F%40Marisa_kristifp=chromesecurity=tls'
+- name: 🇸🇬 新加坡 | vless | 66
+  network: ws
+  port: 51262
+  server: 175.41.179.37
+  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: 903fed13-8e78-4fa2-a83e-b392b289741f
+  ws-opts:
+    headers:
+      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+    path: /@VPNine1fp=chromesecurity=tls
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬 新加坡 | vmess | 68
+  network: tcp
+  port: 9028
+  server: select-us.ddnskunlun.com
+  tls: false
+  type: vmess
+  uuid: a8bcce43-abda-315b-8e81-e3e65bcb3d07
+- client-fingerprint: ios
+  flow: xtls-rprx-vision
+  name: 🇸🇬 新加坡 | vless | 69
+  port: 33519
+  reality-opts:
+    public-key: P5OHWm4pZ7jfg54ElnGSRGqrizGyVOFrBIIqCxUgyCM
+    short-id: '!!str eb89'
+  server: 138.2.85.8
+  servername: pypi.org
+  tls: false
+  type: vless
+  uuid: 220c9da3-0891-4904-8c57-81eb49c0b39a
 - name: 🇸🇬 新加坡 | trojan | 70
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 45553
-  server: 188.253.12.94
-  skip-cert-verify: true
-  sni: ch.01.naiun.bilibili.com
+  port: 45619
+  server: 188.253.12.92
+  sni: fr.01.naiun.bilibili.com
   type: trojan
 - name: 🇸🇬 新加坡 | trojan | 71
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 48697
+  server: 188.253.12.93
+  sni: gh.01.naiun.bilibili.com
+  type: trojan
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443
+  name: 🇸🇬 新加坡 | vless | 73
+  port: 17623
+  server: 3.0.111.82
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: 🇸🇬 新加坡 | trojan | 74
+  password: smart@hkteVBi9aMFp-veBGU72OSCx
+  port: 10010
+  server: z-sg1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 75
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   port: 41943
   server: 188.253.12.91
   skip-cert-verify: true
   sni: az.01.naiun.bilibili.com
   type: trojan
+- name: 🇸🇬 新加坡 | trojan | 76
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 45553
+  server: 188.253.12.94
+  skip-cert-verify: true
+  sni: ch.01.naiun.bilibili.com
+  type: trojan
+- client-fingerprint: chrome
+  name: 🇸🇬 新加坡 | vless | 80
+  port: 8686
+  server: 18.138.228.135
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
 - client-fingerprint: safari
   flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡 | vless | 72
+  name: 🇸🇬 新加坡 | vless | 82
   port: 59352
   reality-opts:
     public-key: Huiy-kpX5yve5yluidpgRDcO6IKYBwTsTODog9YSiXc
@@ -1220,128 +1259,114 @@ proxies:
   tls: false
   type: vless
   uuid: 220c9da3-0891-4904-8c57-81eb49c0b39a
-- name: 🇸🇬 新加坡 | trojan | 73
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 48697
-  server: 188.253.12.93
-  sni: gh.01.naiun.bilibili.com
-  type: trojan
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision-udp443-udp443-udp443
-  name: 🇸🇬 新加坡 | vless | 77
-  port: 17623
-  server: 3.0.111.82
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡 | vless | 80
-  port: 12972
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: '!!str 48050fab'
-  server: 3.0.111.82
-  servername: www.apple.com
-  tls: false
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: 🇸🇬 新加坡 | vless | 81
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬 新加坡 | vmess | 83
   network: ws
   port: 80
-  server: 43.169.18.179
+  server: 15.235.184.36
+  servername: ''
   tls: false
-  type: vless
-  uuid: 5b6e7300-8fc8-404e-8dc9-40a5393dd881
+  type: vmess
+  uuid: 7ce525f5-3a9b-4627-ae0e-3ca0b57519e3
   ws-opts:
     headers:
-      Host: line.smartphone1.azazilvpn.sbs
-    path: '%2FXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXnXn%3Fed'
-- name: 🇸🇬 新加坡 | trojan | 82
-  password: smart@hkteVBi9aMFp-veBGU72OSCx
-  port: 10010
-  server: z-sg1.251313.xyz
-  skip-cert-verify: true
-  sni: www.cloudflare.com
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 83
-  password: smart@hkteVBi9aMFp-veBGU72OSCx
-  port: 10011
-  server: z-sg1.251313.xyz
-  skip-cert-verify: true
-  sni: www.cloudflare.com
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 84
+      Host: ''
+    path: /vmess
+- name: 🇸🇬 新加坡 | trojan | 86
   password: smart@hkteVBi9aMFp-veBGU72OSCx
   port: 10001
   server: z-sg1.251313.xyz
   skip-cert-verify: true
   sni: www.cloudflare.com
   type: trojan
-- name: 🇸🇬 新加坡 | trojan | 85
+- name: 🇸🇬 新加坡 | trojan | 87
+  password: smart@hkteVBi9aMFp-veBGU72OSCx
+  port: 10011
+  server: z-sg1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬 新加坡 | vmess | 89
+  network: tcp
+  port: '11973'
+  server: board-04.ddnskunlun.com
+  tls: false
+  type: vmess
+  uuid: a8bcce43-abda-315b-8e81-e3e65bcb3d07
+- name: 🇸🇬 新加坡 | vless | 92
+  network: ws
+  port: 443
+  server: 43.169.19.179
+  tls: true
+  type: vless
+  uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
+- client-fingerprint: ios
+  flow: xtls-rprx-vision
+  name: 🇸🇬 新加坡 | vless | 93
+  port: 10123
+  reality-opts:
+    public-key: PyXvouO1e307xRJ_AIyE1rXQM9sGFLb3MxWMdGFbFAA
+    short-id: '!!str e9de8d446b2c1c51'
+  server: ddesde.llmdeepsearch.ccwu.cc
+  servername: pypi.org
+  tls: false
+  type: vless
+  uuid: 220c9da3-0891-4904-8c57-81eb49c0b39a
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬 新加坡 | vmess | 94
+  network: tcp
+  port: '9027'
+  server: select-us.ddnskunlun.com
+  tls: false
+  type: vmess
+  uuid: a8bcce43-abda-315b-8e81-e3e65bcb3d07
+- name: 🇸🇬 新加坡 | trojan | 96
   password: smart@hkteVBi9aMFp-veBGU72OSCx
   port: 10006
   server: z-sg1.251313.xyz
   skip-cert-verify: true
   sni: www.cloudflare.com
   type: trojan
-- client-fingerprint: chrome
-  name: 🇸🇬 新加坡 | vless | 86
-  network: ws
-  port: 443
-  server: 43.169.18.179
-  servername: sni.skylee4.cloudns.ch
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 06b65903-406d-4a41-8463-6fd5c0ee7798
-  ws-opts:
-    headers:
-      Host: sni.skylee4.cloudns.ch
-    path: /proxyip=ProxyIP.CMLiussss.net
-- alpn:
-  - http/1.1
-  name: 🇸🇬 新加坡 | trojan | 87
-  network: ws
-  password: humanity
-  port: 443
-  server: 43.169.18.179
-  skip-cert-verify: false
-  sni: www.creationlong.org
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.creationlong.org
-    path: /assignment
 - alterId: 0
   cipher: auto
-  name: 🇸🇬 新加坡 | vmess | 89
+  name: 🇸🇬 新加坡 | vmess | 97
   network: tcp
-  port: '11985'
+  port: '11885'
   server: board-02.ddnskunlun.com
   tls: false
   type: vmess
   uuid: a8bcce43-abda-315b-8e81-e3e65bcb3d07
+- alterId: 0
+  cipher: auto
+  name: 未知115
+  network: tcp
+  port: 37265
+  server: ac01.111165.xyz
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: a77727c6-0b19-4894-95bc-7a9f4dff1e84
 - client-fingerprint: chrome
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: update
-  name: 🇸🇬SG_1|4.6MB/s
-  network: grpc
-  port: 10036
-  reality-opts:
-    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-    short-id: '!!str 686c0ef0'
-  server: sg1-r.link-t7.com
-  servername: s0.awsstatic.com
+  name: 🇸🇬 新加坡 | vless | 100
+  network: ws
+  port: 8443
+  server: 103.152.136.29
+  servername: kjgdksgghre466.pages.dev
   tls: true
   type: vless
-  udp: true
-  uuid: 88DA9CA6-5E68-4687-A748-961B612DCED5
+  uuid: 6705ddbd-04cf-40f6-99b9-36846b08c2a9
+  ws-opts:
+    headers:
+      Host: kjgdksgghre466.pages.dev
+    path: /
 - alterId: 64
   cipher: auto
-  name: 🇸🇬 新加坡 | vmess | 91
+  name: 🇸🇬 新加坡 | vmess | 101
   network: ws
   port: 443
   server: 118.107.46.173
@@ -1353,31 +1378,9 @@ proxies:
     headers:
       Host: ''
     path: /path/080712342310
-- name: 🇸🇬 新加坡 | vless | 92
-  network: ws
-  port: 443
-  server: 43.175.169.174
-  servername: sni.mmadcoffee.info
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 2c473bc0-484c-49d5-8cf3-c89d26b724fe
-  ws-opts:
-    headers:
-      Host: smtp.mmadcoffee.info
-    path: '%2F16838%2Fc89d26b724fe%2Ffp=randomsecurity=tls'
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬 新加坡 | vmess | 94
-  network: tcp
-  port: '11885'
-  server: board-02.ddnskunlun.com
-  tls: false
-  type: vmess
-  uuid: a8bcce43-abda-315b-8e81-e3e65bcb3d07
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡 | vless | 95
+  name: 🇸🇬 新加坡 | vless | 102
   port: 443
   reality-opts:
     public-key: VAY8J0c6ziCIiUWREeU0OR6EQSVqKzuofvlqHm_ka0A
@@ -1387,31 +1390,22 @@ proxies:
   tls: false
   type: vless
   uuid: 8ff25ce3-e8c6-45d3-8a8c-cdbd3eb1b2a6
-- client-fingerprint: chrome
-  name: 🇸🇬SG_11|4.0MB/s
-  network: tcp
+- alpn:
+  - http/1.1
+  name: 🇸🇬 新加坡 | trojan | 104
+  password: e505ff62-bc60-4113-b922-b40919396462
+  port: 443
+  server: 159.223.76.87
+  sni: sp1.u-n.cz.prod.hosts.ooklaserver.net
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 105
   password: PQ05174892
-  port: '443'
+  port: 443
   server: 52.220.98.46
   skip-cert-verify: false
   sni: pleased-albacore.rooster465.autos
   type: trojan
-  udp: true
-- alpn:
-  - http/1.1
-  name: 🇸🇬 新加坡 | vless | 99
-  network: ws
-  port: 443
-  server: 92.223.116.224
-  servername: revil.servehttp.com
-  tls: true
-  type: vless
-  uuid: 0603385b-2d6f-4bfb-8f26-d26dbc85878d
-  ws-opts:
-    headers:
-      Host: revil.servehttp.com
-    path: /?ed%3D2048fp=chrome
-- name: 🇸🇬 新加坡 | vless | 101
+- name: 🇸🇬 新加坡 | vless | 106
   network: ws
   port: 443
   server: 149.28.142.169
@@ -1424,9 +1418,47 @@ proxies:
     headers:
       Host: t1s1.rittbo.kdns.fr
     path: '%2Fsecurity=tls'
+- name: 🇸🇬 新加坡 | trojan | 109
+  password: PQ05174892
+  port: 443
+  server: 47.128.224.11
+  skip-cert-verify: false
+  sni: vast-werewolf.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 110
+  network: tcp
+  password: AE62539071
+  port: 443
+  server: 13.229.94.200
+  skip-cert-verify: false
+  sni: massive-terrapin.rooster465.autos
+  type: trojan
+- alpn:
+  - http/1.1
+  name: 🇸🇬 新加坡 | vless | 112
+  network: ws
+  port: 443
+  server: 92.223.116.224
+  servername: revil.servehttp.com
+  tls: false
+  type: vless
+  uuid: 0603385b-2d6f-4bfb-8f26-d26dbc85878d
+  ws-opts:
+    headers:
+      Host: revil.servehttp.com
+    path: /?ed%3D2048fp=chromesecurity=tls
+- name: 🇸🇬 新加坡 | trojan | 113
+  network: tcp
+  password: FH72359861
+  port: 443
+  server: 13.229.56.205
+  sni: exciting-turtle.rooster465.autos
+  type: trojan
+  ws-opts:
+    path: /
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡 | vless | 102
+  name: 🇸🇬 新加坡 | vless | 114
   network: tcp
   port: 443
   reality-opts:
@@ -1437,74 +1469,42 @@ proxies:
   tls: false
   type: vless
   uuid: 9206ae06-88ee-49b1-a558-531ade80fcaa
-- name: 🇸🇬 新加坡 | vless | 103
-  network: ws
-  port: 443
-  server: dodo.pixoservers.com
-  servername: pixoservers.com
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: c16b6dec-d873-4271-9fb6-493285b195b0
-  ws-opts:
-    headers:
-      Host: uk-cdnws.pixoservers.com
-    path: '%2F%3Fed%3D2048fp=androidsecurity=tls'
-- client-fingerprint: firefox
-  name: 🇸🇬 新加坡 | vless | 104
-  network: ws
-  port: 443
-  server: 104.64.207.134
-  servername: zero.csmaster.ggff.net
-  tls: true
-  type: vless
-  uuid: 1bc380b1-cff7-446f-b13f-5c0ad29fc75a
-- alpn:
-  - http/1.1
-  name: 🇸🇬 新加坡 | trojan | 105
-  password: e505ff62-bc60-4113-b922-b40919396462
-  port: 443
-  server: 159.223.76.87
-  sni: sp1.u-n.cz.prod.hosts.ooklaserver.net
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬 新加坡 | vmess | 109
-  network: tcp
-  port: '11973'
-  server: board-04.ddnskunlun.com
-  tls: false
-  type: vmess
-  uuid: a8bcce43-abda-315b-8e81-e3e65bcb3d07
-- name: 🇸🇬 新加坡 | trojan | 110
-  password: PQ05174892
-  port: 443
-  server: 47.128.224.11
-  skip-cert-verify: false
-  sni: vast-werewolf.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 111
-  network: tcp
+- name: 🇸🇬 新加坡 | trojan | 115
   password: AE62539071
   port: 443
-  server: 13.229.94.200
-  skip-cert-verify: false
-  sni: massive-terrapin.rooster465.autos
+  server: integral-quetzal.rooster465.autos
+  sni: integral-quetzal.rooster465.autos
   type: trojan
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡 | vless | 114
+  name: 🇸🇬 新加坡 | SGP
   network: tcp
+  password: PQ05174892
   port: 443
-  reality-opts:
-    public-key: bMcyxNueltQhz5Kuxcf8odDStWHowYfLhKNdCbUweDc
-    short-id: '!!str d1742269'
-  server: 91.192.81.214
-  servername: www.cloudflare.com
-  tls: false
+  server: 13.212.174.21
+  skip-cert-verify: true
+  sni: fleet-pony.rooster465.autos
+  type: trojan
+  udp: true
+- name: 🇸🇬 新加坡 | vless | 117
+  network: ws
+  port: 443
+  server: 18.138.34.221
+  servername: t1s1.rittbo.kdns.fr
+  skip-cert-verify: false
+  tls: true
   type: vless
-  uuid: 607801ac-dbdd-4938-a167-129015d9978e
-- name: 🇸🇬 新加坡 | trojan | 117
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  ws-opts:
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+    path: fp=chrome
+- name: 🇸🇬 新加坡 | trojan | 118
+  password: FH72359861
+  port: 443
+  server: square-guinea.rooster465.autos
+  sni: square-guinea.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 119
   password: iyinglong
   port: 443
   server: 18.140.67.76
@@ -1512,49 +1512,21 @@ proxies:
 - name: 🇸🇬 新加坡 | trojan | 120
   password: FH72359861
   port: 443
-  server: leading-eel.rooster465.autos
-  sni: leading-eel.rooster465.autos
+  server: national-dingo.rooster465.autos
+  sni: national-dingo.rooster465.autos
   type: trojan
-- name: 🇸🇬 新加坡 | vless | 121
-  network: ws
-  port: 443
-  server: 20.6.12.145
-  servername: sni.skylee4.cloudns.ch
-  tls: true
-  type: vless
-  uuid: 06b65903-406d-4a41-8463-6fd5c0ee7798
-  ws-opts:
-    headers:
-      Host: sni.skylee4.cloudns.ch
-    path: '%2Fproxyip%3DProxyIP.CMLiussss.net'
-- name: 🇸🇬 新加坡 | trojan | 122
-  password: 6cb6f769-b28e-4f7f-a593-8c0b0a161992
-  port: 443
-  server: 170.187.231.189
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 123
+- name: 🇸🇬 新加坡 | trojan | 121
   password: FH72359861
   port: 443
-  server: worthy-perch.rooster465.autos
+  server: select-chipmunk.rooster465.autos
+  sni: select-chipmunk.rooster465.autos
   type: trojan
-- name: 🇸🇬 新加坡 | vless | 124
+- name: 🇸🇬 新加坡 | vless | 122
   network: ws
   port: 443
-  server: 185.81.28.39
+  server: 66.42.61.215
   servername: t1s1.rittbo.kdns.fr
-  tls: false
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  ws-opts:
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-    path: /security=tls
-- name: 🇸🇬 新加坡 | vless | 125
-  network: ws
-  port: 443
-  server: 138.2.87.237
-  servername: t1s1.rittbo.kdns.fr
-  skip-cert-verify: false
+  skip-cert-verify: true
   tls: false
   type: vless
   uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
@@ -1562,75 +1534,74 @@ proxies:
     headers:
       Host: t1s1.rittbo.kdns.fr
     path: '%2Fsecurity=tls'
-- name: 🇸🇬 新加坡 | trojan | 126
-  password: dc54abbf-0b35-4e01-8aee-3fa16cc677bd
+- name: 🇸🇬 新加坡 | trojan | 123
+  password: 6cb6f769-b28e-4f7f-a593-8c0b0a161992
   port: 443
-  server: 188.166.189.168
-  sni: aka.ms
+  server: 170.187.231.189
   type: trojan
-- name: 🇸🇬 新加坡 | trojan | 127
+- name: 🇸🇬 新加坡 | trojan | 124
   password: FH72359861
   port: 443
   server: musical-terrier.rooster465.autos
   sni: musical-terrier.rooster465.autos
   type: trojan
-- name: 🇸🇬 新加坡 | trojan | 128
+- name: 🇸🇬 新加坡 | vless | 127
+  network: ws
+  port: 8443
+  server: 3.1.116.161
+  servername: sni.skylee4.cloudns.ch
+  tls: true
+  type: vless
+  uuid: 06b65903-406d-4a41-8463-6fd5c0ee7798
+  ws-opts:
+    headers:
+      Host: sni.skylee4.cloudns.ch
+    path: /proxyip%3DProxyIP.CMLiussss.netfp=chrome
+- client-fingerprint: firefox
+  name: 🇸🇬 新加坡 | vless | 129
+  network: ws
+  port: 443
+  server: 104.64.207.134
+  servername: zero.csmaster.ggff.net
+  tls: true
+  type: vless
+  uuid: 1bc380b1-cff7-446f-b13f-5c0ad29fc75a
+- name: 🇸🇬 新加坡 | trojan | 130
+  password: FH72359861
+  port: 443
+  server: assuring-skink.rooster465.autos
+  sni: assuring-skink.rooster465.autos
+  type: trojan
+- client-fingerprint: chrome
+  name: 🇸🇬SG_8|3.7MB/s
+  network: tcp
+  password: PQ05174892
+  port: '443'
+  server: 54.169.228.116
+  skip-cert-verify: false
+  sni: amusing-grub.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: '🇸🇬 新加坡 | SGP #3'
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: 47.129.183.20
+  skip-cert-verify: true
+  sni: welcome-monitor.rooster465.autos
+  type: trojan
+  udp: true
+- name: 🇸🇬 新加坡 | trojan | 134
   password: FH72359861
   port: 443
   server: charming-ox.rooster465.autos
-  skip-cert-verify: true
   sni: charming-ox.rooster465.autos
   type: trojan
-- client-fingerprint: chrome
-  name: 🇸🇬 新加坡 | vless | 130
-  port: 443
-  reality-opts:
-    public-key: DNdTBHyztOVJOBJQX91YXEhNkWbSAntqUoTFBHc6Clw
-    short-id: '!!str 6ba85179e30d4fc2'
-  server: 8.222.181.231
-  servername: www.autodesk.com
-  tls: false
-  type: vless
-  uuid: 5c183802-747d-4d2f-a6f1-aff2d5d78401
-- name: 🇸🇬 新加坡 | vless | 131
+- name: 🇸🇬 新加坡 | vless | 135
   network: ws
   port: 8443
-  server: 64.56.71.64
-  servername: s5gydl.936.us.ci
-  tls: false
-  type: vless
-  uuid: f4e91fac-25eb-4d26-a14c-c82c3778a0e4
-  ws-opts:
-    headers:
-      Host: s5gydl.936.us.ci
-    path: /proxyip%3Dtw.william.us.ci%3Fuuid%3Df4e91fac-25eb-4d26-a14c-c82c3778a0e4fp=chromesecurity=tls
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬 新加坡 | vmess | 133
-  network: ws
-  port: '36802'
-  server: cindy51.ceoiii.com
-  tls: false
-  type: vmess
-  uuid: a6ab6513-6ec3-327f-a068-b89fe72954b8
-  ws-opts:
-    headers:
-      Host: ajax.microsoft.com
-    path: /hls/cctv5phd.m3u8
-- name: 🇸🇬 新加坡 | trojan | 136
-  password: 3ac6a6ca99f74941b1eaf892818e2ddb
-  port: 443
-  server: 185.151.146.40
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 137
-  password: d30ab83dbde4480082048fb315bedebd
-  port: 443
-  server: 5.180.78.22
-  type: trojan
-- name: 🇸🇬 新加坡 | vless | 138
-  network: ws
-  port: 443
-  server: 18.138.34.221
+  server: 161.118.195.117
   servername: t1s1.rittbo.kdns.fr
   tls: false
   type: vless
@@ -1639,81 +1610,19 @@ proxies:
     headers:
       Host: t1s1.rittbo.kdns.fr
     path: '%2Ffp=chromesecurity=tls'
-- name: 🇸🇬 新加坡 | trojan | 140
-  password: ceaea123-1b4b-469b-8358-bcd5f5529305
-  port: 443
-  server: 18.139.15.8
-  skip-cert-verify: true
-  sni: uk.liangyuandian.top
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 141
-  password: FH72359861
-  port: 443
-  server: master-possum.rooster465.autos
-  sni: master-possum.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | vless | 142
+- name: 🇸🇬 新加坡 | vless | 137
   network: ws
   port: 443
-  server: 146.235.16.191
+  server: 129.150.48.17
   servername: t1s1.rittbo.kdns.fr
-  skip-cert-verify: true
-  tls: false
+  tls: true
   type: vless
   uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
   ws-opts:
     headers:
       Host: t1s1.rittbo.kdns.fr
-    path: '%2Fsecurity=tls'
-- name: 🇸🇬 新加坡 | vless | 143
-  port: 443
-  server: 159.65.7.154
-  tls: false
-  type: vless
-  uuid: 3c5e6124-decf-425d-8c1e-fe05cb4dd298
-- name: 🇸🇬 新加坡 | trojan | 146
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  port: 443
-  server: 18.138.34.221
-  sni: tjsp.hhxaf.cc.cd
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 147
-  password: FH72359861
-  port: 443
-  server: select-chipmunk.rooster465.autos
-  sni: select-chipmunk.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | vless | 149
-  network: ws
-  port: 8443
-  server: 185.225.20.99
-  servername: t1s1.rittbo.kdns.fr
-  tls: false
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  ws-opts:
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-    path: /fp=chromesecurity=tls
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡 | vless | 151
-  port: 443
-  reality-opts:
-    public-key: wBGbKVrmLkLakVB5dfsYqkyrZNCUAvTe0xe0EkiG-Ek
-    short-id: '!!str c2df4d52a3ecca8b'
-  server: 5.199.165.16
-  servername: sg.capynode.com
-  tls: false
-  type: vless
-  uuid: 8da74d63-fed9-480f-9b94-c8836e4f64e4
-- name: 🇸🇬 新加坡 | trojan | 153
-  password: AE62539071
-  port: 443
-  server: integral-quetzal.rooster465.autos
-  skip-cert-verify: true
-  type: trojan
-- name: 🇸🇬 新加坡 | vless | 155
+    path: /fp=chrome
+- name: 🇸🇬 新加坡 | vless | 140
   network: ws
   port: 443
   server: 172.236.154.50
@@ -1725,26 +1634,65 @@ proxies:
     headers:
       Host: auv.vavava.kdns.fr
     path: /%3Fed%3D2560fp=randomsecurity=tls
-- name: 🇸🇬 新加坡 | vless | 156
-  network: ws
+- name: 🇸🇬 新加坡 | trojan | 142
+  password: FH72359861
   port: 443
-  server: 141.11.43.55
-  servername: testcf.motherfuck.dpdns.org
+  server: worthy-perch.rooster465.autos
+  type: trojan
+- client-fingerprint: chrome
+  name: 🇸🇬 新加坡 | vless | 143
+  port: 443
+  reality-opts:
+    public-key: DNdTBHyztOVJOBJQX91YXEhNkWbSAntqUoTFBHc6Clw
+    short-id: '!!str 6ba85179e30d4fc2'
+  server: 8.222.181.231
+  servername: www.autodesk.com
   tls: false
   type: vless
-  uuid: 0d251504-8b91-4744-8130-412ec76af13f
-  ws-opts:
-    headers:
-      Host: testcf.motherfuck.dpdns.org
-    path: '%2F%3Fproxyip%3D141.11.43.55%3A443fp=randomsecurity=tls'
-- name: 🇸🇬 新加坡 | vless | 158
+  uuid: 5c183802-747d-4d2f-a6f1-aff2d5d78401
+- name: 🇸🇬 新加坡 | vless | 144
   network: ws
-  port: 443
-  server: 68.183.225.227
+  port: 2083
+  server: 165.245.184.86
+  servername: fm3.pages.dev
   tls: true
   type: vless
-  uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
-- name: 🇸🇬 新加坡 | vless | 160
+  uuid: 548df4ba-0b7f-4850-ac84-716bbb68a4ba
+  ws-opts:
+    path: '%2Ffp=random'
+- name: 🇸🇬 新加坡 | trojan | 145
+  password: PQ05174892
+  port: 443
+  server: 13.212.91.165
+  skip-cert-verify: false
+  sni: composed-sheep.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | vless | 148
+  network: ws
+  port: 443
+  server: 43.175.169.174
+  servername: sni.mmadcoffee.info
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: 2c473bc0-484c-49d5-8cf3-c89d26b724fe
+  ws-opts:
+    headers:
+      Host: smtp.mmadcoffee.info
+    path: '%2F16838%2Fc89d26b724fe%2Ffp=randomsecurity=tls'
+- name: 🇸🇬 新加坡 | trojan | 150
+  password: FH72359861
+  port: 443
+  server: proven-stud.rooster465.autos
+  sni: proven-stud.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 153
+  password: dc54abbf-0b35-4e01-8aee-3fa16cc677bd
+  port: 443
+  server: 188.166.189.168
+  sni: aka.ms
+  type: trojan
+- name: 🇸🇬 新加坡 | vless | 156
   network: ws
   port: 8443
   server: 207.148.119.176
@@ -1757,9 +1705,83 @@ proxies:
     headers:
       Host: t1s1.rittbo.kdns.fr
     path: /fp=chromesecurity=tls
+- name: 🇸🇬 新加坡 | vless | 157
+  network: ws
+  port: 443
+  server: 68.183.225.227
+  tls: true
+  type: vless
+  uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
+- name: 🇸🇬 新加坡 | trojan | 160
+  password: FH72359861
+  port: 443
+  server: leading-eel.rooster465.autos
+  sni: leading-eel.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 163
+  password: FH72359861
+  port: 443
+  server: master-possum.rooster465.autos
+  sni: master-possum.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 164
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  port: 443
+  server: 18.138.34.221
+  sni: tjsp.hhxaf.cc.cd
+  type: trojan
+- name: 🇸🇬 新加坡 | vless | 165
+  network: ws
+  port: 8443
+  server: 185.225.20.99
+  servername: t1s1.rittbo.kdns.fr
+  tls: false
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  ws-opts:
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+    path: /fp=chromesecurity=tls
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: update
+  name: 🇸🇬SG_1|5.3MB/s
+  network: grpc
+  port: 10036
+  reality-opts:
+    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
+    short-id: '!!str 686c0ef0'
+  server: sg1-r.link-t7.com
+  servername: s0.awsstatic.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 88DA9CA6-5E68-4687-A748-961B612DCED5
+- name: 🇸🇬 新加坡 | trojan | 172
+  network: ws
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  port: 2053
+  server: 3.1.116.161
+  sni: dxy1h.twiladaphne.ndjp.net
+  type: trojan
+  ws-opts:
+    path: '%2Fproxyip%3D104.168.132.123%2C172.104.53.198%2C85.121.50.16%2C151.242.125.226'
+- name: 🇸🇬 新加坡 | vless | 173
+  network: ws
+  port: 2053
+  server: 3.1.116.161
+  servername: sni.skylee4.cloudns.ch
+  tls: false
+  type: vless
+  uuid: 06b65903-406d-4a41-8463-6fd5c0ee7798
+  ws-opts:
+    headers:
+      Host: sni.skylee4.cloudns.ch
+    path: '%2Fproxyip%3DProxyIP.CMLiussss.netsecurity=tls'
 - alpn:
   - http/1.1
-  name: 🇸🇬 新加坡 | vless | 164
+  name: 🇸🇬 新加坡 | vless | 175
   network: ws
   port: 443
   server: 134.185.91.72
@@ -1772,7 +1794,51 @@ proxies:
     headers:
       Host: ww1.aniuge.qzz.io
     path: '%2F%3Fed%3D2095fp=chromesecurity=tls'
-- name: 🇸🇬 新加坡 | vless | 165
+- name: 🇸🇬 新加坡 | vless | 176
+  network: ws
+  port: 443
+  server: 138.2.87.237
+  servername: t1s1.rittbo.kdns.fr
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  ws-opts:
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+    path: '%2Fsecurity=tls'
+- name: 🇸🇬 新加坡 | vless | 177
+  port: 443
+  server: 159.65.7.154
+  tls: false
+  type: vless
+  uuid: 3c5e6124-decf-425d-8c1e-fe05cb4dd298
+- name: 🇸🇬 新加坡 | trojan | 178
+  password: d30ab83dbde4480082048fb315bedebd
+  port: 443
+  server: 5.180.78.22
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 179
+  password: ceaea123-1b4b-469b-8358-bcd5f5529305
+  port: 443
+  server: 18.139.15.8
+  skip-cert-verify: true
+  sni: uk.liangyuandian.top
+  type: trojan
+- name: 🇸🇬 新加坡 | vless | 181
+  network: ws
+  port: 443
+  server: 146.235.16.191
+  servername: t1s1.rittbo.kdns.fr
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  ws-opts:
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+    path: '%2Fsecurity=tls'
+- name: 🇸🇬 新加坡 | vless | 182
   network: ws
   port: 8443
   server: 116.251.216.12
@@ -1784,28 +1850,85 @@ proxies:
     headers:
       Host: 1-brc.pages.dev
     path: '%2Ffp=chrome'
-- name: 🇸🇬 新加坡 | trojan | 169
-  network: ws
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  port: 2053
-  server: 3.1.116.161
-  sni: dxy1h.twiladaphne.ndjp.net
-  type: trojan
-  ws-opts:
-    path: '%2Fproxyip%3D104.168.132.123%2C172.104.53.198%2C85.121.50.16%2C151.242.125.226'
-- name: 🇸🇬 新加坡 | vless | 170
-  network: ws
-  port: 2053
-  server: 3.1.116.161
-  servername: sni.skylee4.cloudns.ch
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: 🇸🇬 新加坡 | vless | 184
+  port: 443
+  reality-opts:
+    public-key: wBGbKVrmLkLakVB5dfsYqkyrZNCUAvTe0xe0EkiG-Ek
+    short-id: '!!str c2df4d52a3ecca8b'
+  server: 5.199.165.16
+  servername: sg.capynode.com
   tls: false
   type: vless
-  uuid: 06b65903-406d-4a41-8463-6fd5c0ee7798
+  uuid: 8da74d63-fed9-480f-9b94-c8836e4f64e4
+- name: 🇸🇬 新加坡 | vless | 185
+  network: ws
+  port: 443
+  server: 141.11.43.55
+  servername: testcf.motherfuck.dpdns.org
+  tls: false
+  type: vless
+  uuid: 0d251504-8b91-4744-8130-412ec76af13f
   ws-opts:
     headers:
-      Host: sni.skylee4.cloudns.ch
-    path: '%2Fproxyip%3DProxyIP.CMLiussss.netsecurity=tls'
-- name: 🇸🇬 新加坡 | vless | 175
+      Host: testcf.motherfuck.dpdns.org
+    path: '%2F%3Fproxyip%3D141.11.43.55%3A443fp=randomsecurity=tls'
+- name: 🇸🇬 新加坡 | vless | 187
+  network: ws
+  port: 443
+  server: 185.81.28.39
+  servername: t1s1.rittbo.kdns.fr
+  tls: false
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  ws-opts:
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+    path: /security=tls
+- name: 🇸🇬 新加坡 | vless | 188
+  network: ws
+  port: 8443
+  server: 64.56.71.64
+  servername: s5gydl.936.us.ci
+  tls: false
+  type: vless
+  uuid: f4e91fac-25eb-4d26-a14c-c82c3778a0e4
+  ws-opts:
+    headers:
+      Host: s5gydl.936.us.ci
+    path: /proxyip%3Dtw.william.us.ci%3Fuuid%3Df4e91fac-25eb-4d26-a14c-c82c3778a0e4fp=chromesecurity=tls
+- name: 🇸🇬 新加坡 | trojan | 192
+  password: 3ac6a6ca99f74941b1eaf892818e2ddb
+  port: 443
+  server: 185.151.146.40
+  type: trojan
+- name: 🇸🇬 新加坡 | vless | 193
+  network: ws
+  port: 443
+  server: 116.251.217.65
+  servername: netlivpn4813.ddhshhshs.workers.dev
+  tls: false
+  type: vless
+  uuid: 2388e166-3890-33ae-f77e-efac00000002
+  ws-opts:
+    headers:
+      Host: netlivpn4813.ddhshhshs.workers.dev
+    path: /NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPNfp=chromesecurity=tls
+- name: '🇸🇬 新加坡 | SGP #2'
+  password: PQ05174892
+  port: 443
+  server: intense-sole.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 195
+  password: PD07395842
+  port: 443
+  server: frank-turtle.rooster465.autos
+  skip-cert-verify: true
+  sni: frank-turtle.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | vless | 197
   network: ws
   port: 443
   server: 43.174.247.60
@@ -1818,20 +1941,109 @@ proxies:
     headers:
       Host: mail.mmadcoffee.info
     path: /19426/mmadfp=chromesecurity=tls
-- name: 🇸🇬 新加坡 | vless | 176
+- name: 🇸🇬 新加坡 | vless | 198
   network: ws
-  port: 443
-  server: 43.174.247.53
-  servername: sni.irandoc.info
-  skip-cert-verify: false
+  port: 80
+  server: www.lianchuang123.com
   tls: false
   type: vless
-  uuid: 0fc3eba4-2774-4c99-cfc7-c38b007908b0
+  uuid: 2c473bc0-484c-49d5-8cf3-c89d26b724fe
   ws-opts:
     headers:
-      Host: aron.irandoc.info
-    path: '%2F55072%2Fapifp=chromesecurity=tls'
-- name: 🇸🇬 新加坡 | vless | 177
+      Host: smtp.mmadcoffee.info
+    path: '%2F16838%2Fc89d26b724fe%2F'
+- name: 🇸🇬 新加坡 | trojan | 199
+  password: NQ26071394
+  port: 443
+  server: emerging-baboon.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 200
+  password: CF68213490
+  port: 443
+  server: ultimate-jaguar.rooster465.autos
+  type: trojan
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬 新加坡 | vless | 201
+  port: 443
+  reality-opts:
+    public-key: 3WzSgL8uXA3vE3IHrfdBpJmOO4MYrsWpczDSY_jJRjI
+    short-id: '!!str 226509f017e4c36d'
+  server: vsgch.mostserv.xyz
+  servername: vsgch.mostserv.xyz
+  tls: false
+  type: vless
+  uuid: 0ddc1b7c-ce23-4a30-8ede-8a9e19f02fb7
+- name: 🇸🇬 新加坡 | trojan | 202
+  password: NQ26071394
+  port: 443
+  server: alert-titmouse.rooster465.autos
+  sni: alert-titmouse.rooster465.autos
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬 新加坡 | vmess | 203
+  network: ws
+  port: '36802'
+  server: cindy51.ceoiii.com
+  tls: false
+  type: vmess
+  uuid: a6ab6513-6ec3-327f-a068-b89fe72954b8
+  ws-opts:
+    headers:
+      Host: ajax.microsoft.com
+    path: /hls/cctv5phd.m3u8
+- name: 🇸🇬 新加坡 | trojan | 204
+  password: AE62539071
+  port: 443
+  server: helping-newt.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 205
+  password: AE62539071
+  port: 443
+  server: wired-grouper.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 207
+  password: PQ05174892
+  port: 443
+  server: pro-mako.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 208
+  password: NQ26071394
+  port: 443
+  server: gentle-turtle.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 209
+  password: smart@hkteVBi9aMFp-veBGU72OSCx
+  port: 443
+  server: starlink-sg6.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 210
+  password: CF68213490
+  port: 443
+  server: funny-hawk.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 211
+  password: CF68213490
+  port: 443
+  server: immune-mullet.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 212
+  password: CF68213490
+  port: 443
+  server: fair-werewolf.rooster465.autos
+  sni: fair-werewolf.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 213
+  password: PQ05174892
+  port: 443
+  server: allowing-ram.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- name: 🇸🇬 新加坡 | vless | 215
   network: ws
   port: 443
   server: 43.174.246.60
@@ -1844,79 +2056,46 @@ proxies:
     headers:
       Host: mail.mmadcoffee.info
     path: /19426/mmadfp=chromesecurity=tls
-- name: 🇸🇬 新加坡 | vless | 178
-  network: ws
+- name: 🇸🇬 新加坡 | trojan | 216
+  password: NQ26071394
   port: 443
-  server: 43.174.246.46
-  servername: sni.irandoc.info
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 78294bc4-89a2-4a4e-c116-0cd177fd556d
-  ws-opts:
-    headers:
-      Host: a.irandoc.info
-    path: /48831/apifp=chromesecurity=tls
-- name: 🇸🇬 新加坡 | vless | 181
-  network: ws
+  server: elegant-marten.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 217
+  password: NQ26071394
   port: 443
-  server: 116.251.217.65
-  servername: netlivpn4813.ddhshhshs.workers.dev
-  tls: false
-  type: vless
-  uuid: 2388e166-3890-33ae-f77e-efac00000002
-  ws-opts:
-    headers:
-      Host: netlivpn4813.ddhshhshs.workers.dev
-    path: /NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPNfp=chromesecurity=tls
-- name: 🇸🇬 新加坡 | vless | 183
-  network: ws
-  port: 80
-  server: www.lianchuang123.com
-  tls: false
-  type: vless
-  uuid: 2c473bc0-484c-49d5-8cf3-c89d26b724fe
-  ws-opts:
-    headers:
-      Host: smtp.mmadcoffee.info
-    path: '%2F16838%2Fc89d26b724fe%2F'
-- name: 🇸🇬 新加坡 | vless | 185
-  network: ws
+  server: bold-eagle.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 218
+  password: CF68213490
   port: 443
-  server: 8.222.193.153
-  servername: gogo13.kmj.qzz.io
-  tls: true
-  type: vless
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-  ws-opts:
-    headers:
-      Host: gogo13.kmj.qzz.io
-    path: '%2Ffp=chrome'
-- name: 🇸🇬 新加坡 | vless | 186
-  network: ws
+  server: tight-gator.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 221
+  password: AE62539071
   port: 443
-  server: 8.219.195.31
-  servername: t1s1.rittbo.kdns.fr
+  server: sharp-dogfish.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 222
+  password: CF68213490
+  port: 443
+  server: immense-eagle.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | hy2 | 223
+  password: smart@hkteVBi9aMFp-veBGU72OSCx
+  port: 443
+  server: starlink-sg4.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
   tls: false
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  ws-opts:
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-    path: /fp=chromesecurity=tls
-- name: 🇸🇬 新加坡 | vless | 187
-  network: ws
-  port: 8443
-  server: 161.118.195.117
-  servername: t1s1.rittbo.kdns.fr
-  tls: true
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  ws-opts:
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-    path: '%2Ffp=chrome'
-- name: 🇸🇬 新加坡 | vless | 188
+  type: hysteria2
+- name: 🇸🇬 新加坡 | trojan | 224
+  password: CF68213490
+  port: 443
+  server: live-drake.rooster465.autos
+  sni: live-drake.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | vless | 225
   network: ws
   port: 443
   server: 8.219.155.125
@@ -1929,37 +2108,33 @@ proxies:
     headers:
       Host: t1s1.rittbo.kdns.fr
     path: /fp=chromesecurity=tls
-- alpn:
-  - h2
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡 | vless | 189
-  network: tcp
+- name: 🇸🇬 新加坡 | trojan | 227
+  password: PQ05174892
   port: 443
-  reality-opts:
-    public-key: EeLAX-BAjzSdRes-zpUFzVOYsBedmP8lUOHhXXJFXyI
-    short-id: '!!str 5a42dbd7e26a0415'
-  server: 178.128.52.52
-  servername: zoom.us
+  server: excited-alien.rooster465.autos
   skip-cert-verify: true
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 228
+  password: PQ05174892
+  port: 443
+  server: lenient-grubworm.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- name: 🇸🇬 新加坡 | vless | 229
+  network: ws
+  port: 443
+  server: 8.222.193.153
+  servername: gogo13.kmj.qzz.io
   tls: false
   type: vless
-  uuid: efd11a89-7506-44ce-95b6-6654859f155b
-- client-fingerprint: ios
-  flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡 | vless | 190
-  port: 10123
-  reality-opts:
-    public-key: PyXvouO1e307xRJ_AIyE1rXQM9sGFLb3MxWMdGFbFAA
-    short-id: '!!str e9de8d446b2c1c51'
-  server: ddesde.llmdeepsearch.ccwu.cc
-  servername: pypi.org
-  tls: false
-  type: vless
-  uuid: 220c9da3-0891-4904-8c57-81eb49c0b39a
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  ws-opts:
+    headers:
+      Host: gogo13.kmj.qzz.io
+    path: '%2Ffp=chromesecurity=tls'
 - alterId: 64
   cipher: auto
-  name: 🇸🇬 新加坡 | vmess | 191
+  name: 🇸🇬 新加坡 | vmess | 230
   network: ws
   port: 443
   server: 202.79.172.53
@@ -1971,51 +2146,293 @@ proxies:
     headers:
       Host: ''
     path: /path/220128071100
-- name: 🇸🇬 新加坡 | vless | 193
-  network: ws
-  port: 2083
-  server: 165.245.184.86
-  servername: fm3.pages.dev
-  tls: true
-  type: vless
-  uuid: 548df4ba-0b7f-4850-ac84-716bbb68a4ba
-  ws-opts:
-    headers:
-      Host: fm3.pages.dev
-    path: '%2Ffp=random'
-- name: 🇸🇬 新加坡 | vless | 194
+- name: 🇸🇬 新加坡 | vless | 231
   network: ws
   port: 443
-  server: 43.169.19.179
-  tls: true
+  server: 8.219.195.31
+  servername: t1s1.rittbo.kdns.fr
+  tls: false
   type: vless
-  uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
-- client-fingerprint: ios
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  ws-opts:
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+    path: /fp=chromesecurity=tls
+- client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡 | vless | 198
-  port: 443
+  name: 🇸🇬 新加坡 | vless | 232
+  port: 8443
   reality-opts:
-    public-key: ySbU9uoTnPneLySGXnYvGz2fgXUJWK9E47fGwLBgKk0
-    short-id: '!!str fd242ce3'
-  server: 66x11x7.ly123.edu.kg
-  servername: sg-hyp-api.hoyoverse.com
+    public-key: DG904eM7xGecwV_nhjX73c-7g_fGEv8BgjbeAmTE8Bs
+    short-id: '!!str 505c94b8c65afb0a'
+  server: ja4jaa3-61adf1.sg.y-tun.com
+  servername: auth.deepl.com
   tls: false
   type: vless
-  uuid: 5c21bbcf-d4f6-4fb6-9864-72c4ddbd21d7
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬 新加坡 | vmess | 199
+  uuid: 8a116433-0c70-4f3a-ac99-4dfcccbd4350
+- name: 🇸🇬 新加坡 | vless | 233
   network: ws
-  port: '36822'
-  server: sylva51.ceoiii.com
+  port: 443
+  server: 43.174.247.53
+  servername: sni.irandoc.info
+  skip-cert-verify: false
   tls: false
-  type: vmess
-  uuid: 4f198ea9-311e-3dcf-910c-896de6cb160b
+  type: vless
+  uuid: 0fc3eba4-2774-4c99-cfc7-c38b007908b0
   ws-opts:
     headers:
-      Host: ajax.microsoft.com
-    path: /hls/cctv5phd.m3u8
-- name: 🇸🇬 新加坡 | trojan | 201
+      Host: aron.irandoc.info
+    path: '%2F55072%2Fapifp=chromesecurity=tls'
+- name: 🇸🇬 新加坡 | trojan | 235
+  password: AE62539071
+  port: 443
+  server: cunning-midge.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 236
+  password: AE62539071
+  port: 443
+  server: needed-haddock.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | vless | 237
+  network: ws
+  port: 443
+  server: 43.174.246.46
+  servername: sni.irandoc.info
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: 78294bc4-89a2-4a4e-c116-0cd177fd556d
+  ws-opts:
+    headers:
+      Host: a.irandoc.info
+    path: /48831/apifp=chromesecurity=tls
+- name: 🇸🇬 新加坡 | trojan | 238
+  password: NQ26071394
+  port: 443
+  server: capable-baboon.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 239
+  password: CF68213490
+  port: 443
+  server: relevant-oryx.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 240
+  password: AE62539071
+  port: 443
+  server: sharp-feline.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 241
+  password: NQ26071394
+  port: 443
+  server: verified-ringtail.rooster465.autos
+  sni: verified-ringtail.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 242
+  password: smart@hkteVBi9aMFp-veBGU72OSCx
+  port: 443
+  server: starlink-sg1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 243
+  password: CF68213490
+  port: 443
+  server: smooth-hornet.rooster465.autos
+  sni: smooth-hornet.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 245
+  password: AE62539071
+  port: 443
+  server: simple-sunbeam.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 246
+  password: AE62539071
+  port: 443
+  server: prepared-hawk.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 248
+  password: CF68213490
+  port: 443
+  server: sincere-crappie.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 249
+  password: AE62539071
+  port: 443
+  server: robust-wallaby.rooster465.autos
+  type: trojan
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443
+  name: 🇸🇬 新加坡 | vless | 250
+  port: 8443
+  server: 1sg001.344211.cc
+  servername: www.python.org
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 6b5a9259-c7de-45f0-b4de-e89db7850d0c
+- name: 🇸🇬 新加坡 | trojan | 251
+  password: AE62539071
+  port: 443
+  server: brave-squirrel.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 252
+  password: smart@hkteVBi9aMFp-veBGU72OSCx
+  port: 443
+  server: starlink-sg2.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 253
+  password: NQ26071394
+  port: 443
+  server: helped-jennet.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 254
+  password: CF68213490
+  port: 443
+  server: rested-osprey.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 255
+  password: AE62539071
+  port: 443
+  server: prime-buzzard.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 256
+  password: AE62539071
+  port: 443
+  server: cosmic-shepherd.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 257
+  password: AE62539071
+  port: 443
+  server: moved-bass.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 258
+  password: CF68213490
+  port: 443
+  server: smashing-fawn.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | hy2 | 259
+  password: smart@hkteVBi9aMFp-veBGU72OSCx
+  port: 443
+  server: starlink-sg3.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: false
+  type: hysteria2
+- name: 🇸🇬 新加坡 | trojan | 260
+  password: AE62539071
+  port: 443
+  server: ultimate-cardinal.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 263
+  password: CF68213490
+  port: 443
+  server: adapting-basilisk.rooster465.autos
+  sni: adapting-basilisk.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 264
+  password: NQ26071394
+  port: 443
+  server: direct-hawk.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 265
+  password: CF68213490
+  port: 443
+  server: careful-penguin.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 266
+  password: AE62539071
+  port: 443
+  server: noted-bass.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 267
+  password: AE62539071
+  port: 443
+  server: excited-sole.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 268
+  password: AE62539071
+  port: 443
+  server: darling-ram.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 269
+  password: AE62539071
+  port: 443
+  server: model-wombat.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 270
+  password: AE62539071
+  port: 443
+  server: willing-eagle.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 271
+  password: AE62539071
+  port: 443
+  server: splendid-dolphin.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 272
+  password: CF68213490
+  port: 443
+  server: shining-piranha.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 273
+  password: CF68213490
+  port: 443
+  server: free-hare.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 274
+  password: NQ26071394
+  port: 443
+  server: amazing-troll.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 275
+  password: AE62539071
+  port: 443
+  server: inspired-goshawk.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 276
+  password: CF68213490
+  port: 443
+  server: eternal-perch.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | vless | 277
+  network: ws
+  port: 443
+  server: 20.6.12.145
+  servername: sni.skylee4.cloudns.ch
+  tls: true
+  type: vless
+  uuid: 06b65903-406d-4a41-8463-6fd5c0ee7798
+  ws-opts:
+    headers:
+      Host: sni.skylee4.cloudns.ch
+    path: '%2Fproxyip%3DProxyIP.CMLiussss.net'
+- name: 🇸🇬 新加坡 | trojan | 278
+  password: AE62539071
+  port: 443
+  server: loved-shark.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 280
+  password: CF68213490
+  port: 443
+  server: modest-bat.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 281
+  password: smart@hkteVBi9aMFp-veBGU72OSCx
+  port: 443
+  server: starlink-sg5.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 282
+  password: JA96378052
+  port: 443
+  server: 52.74.76.236
+  skip-cert-verify: true
+  sni: WangCai.rooster465.autos
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 283
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
@@ -2024,39 +2441,18 @@ proxies:
   type: trojan
   ws-opts:
     path: /
-- name: 🇸🇬 新加坡 | trojan | 202
-  password: JA96378052
-  port: 443
-  server: 52.74.76.236
-  skip-cert-verify: true
-  sni: WangCai.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | SGP
+- client-fingerprint: chrome
+  name: 🇸🇬SG_16|4.3MB/s
+  network: tcp
   password: PQ05174892
-  port: 443
-  server: fleet-pony.rooster465.autos
-  skip-cert-verify: true
+  port: '443'
+  server: stable-python.rooster465.autos
+  skip-cert-verify: false
   type: trojan
   udp: true
-- name: 🇸🇬 新加坡 | trojan | 204
-  password: CF68213490
-  port: 443
-  server: adapting-basilisk.rooster465.autos
-  sni: adapting-basilisk.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 205
-  password: CF68213490
-  port: 443
-  server: free-hare.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 206
-  password: AE62539071
-  port: 443
-  server: excited-sole.rooster465.autos
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇸🇬 新加坡 | vmess | 207
+  name: 🇸🇬 新加坡 | vmess | 285
   network: ws
   port: '36824'
   server: sylva53.ceoiii.com
@@ -2068,95 +2464,20 @@ proxies:
     headers:
       Host: ajax.microsoft.com
     path: /hls/cctv5phd.m3u8
-- name: 🇸🇬 新加坡 | trojan | 208
-  password: AE62539071
-  port: 443
-  server: noted-bass.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 209
-  password: AE62539071
-  port: 443
-  server: simple-rodent.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 210
-  password: CF68213490
-  port: 443
-  server: modest-bat.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 211
-  password: AE62539071
-  port: 443
-  server: prepared-hawk.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | vless | 212
-  network: ws
-  port: 443
-  server: 194.127.192.165
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: update
+  name: 🇸🇬 新加坡 | vless | 288
+  network: grpc
+  port: 10039
+  server: sg4-r.link-t7.com
+  servername: d1.awsstatic.com
   tls: true
   type: vless
-  uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
-- name: 🇸🇬 新加坡 | trojan | 213
-  password: NQ26071394
-  port: 443
-  server: amazing-troll.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 214
-  password: FH72359861
-  port: 443
-  server: national-dingo.rooster465.autos
-  sni: national-dingo.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 215
-  password: FH72359861
-  port: 443
-  server: proven-stud.rooster465.autos
-  sni: proven-stud.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 216
-  password: FH72359861
-  port: 443
-  server: assuring-skink.rooster465.autos
-  sni: assuring-skink.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 219
-  password: AE62539071
-  port: 443
-  server: composed-sheep.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 220
-  password: AE62539071
-  port: 443
-  server: splendid-dolphin.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 221
-  password: CF68213490
-  port: 443
-  server: eternal-perch.rooster465.autos
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: 未知115
-  network: tcp
-  port: 37265
-  server: ac01.111165.xyz
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: a77727c6-0b19-4894-95bc-7a9f4dff1e84
-- name: 🇸🇬 新加坡 | trojan | 223
-  password: CF68213490
-  port: 443
-  server: shining-piranha.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 225
-  password: AE62539071
-  port: 443
-  server: loved-shark.rooster465.autos
-  type: trojan
+  uuid: 88DA9CA6-5E68-4687-A748-961B612DCED5
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡 | vless | 226
+  name: 🇸🇬 新加坡 | vless | 289
   port: 10000
   reality-opts:
     public-key: xELgry1aUBwZLDAAvyiBkLTXsIi1M-mKhuqvwiP6FxU
@@ -2166,318 +2487,7 @@ proxies:
   tls: false
   type: vless
   uuid: af6904c1-4349-4448-8e99-0024824a0c33
-- name: 🇸🇬 新加坡 | trojan | 227
-  password: FH72359861
-  port: 443
-  server: square-guinea.rooster465.autos
-  sni: square-guinea.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | hy2 | 228
-  password: smart@hkteVBi9aMFp-veBGU72OSCx
-  port: 443
-  server: starlink-sg3.251313.xyz
-  skip-cert-verify: true
-  sni: www.cloudflare.com
-  tls: false
-  type: hysteria2
-- name: 🇸🇬 新加坡 | trojan | 229
-  password: CF68213490
-  port: 443
-  server: careful-penguin.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 231
-  password: NQ26071394
-  port: 443
-  server: helped-jennet.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 232
-  password: NQ26071394
-  port: 443
-  server: direct-hawk.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 233
-  password: AE62539071
-  port: 443
-  server: darling-ram.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 234
-  password: AE62539071
-  port: 443
-  server: prime-buzzard.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 235
-  password: smart@hkteVBi9aMFp-veBGU72OSCx
-  port: 443
-  server: starlink-sg2.251313.xyz
-  skip-cert-verify: true
-  sni: www.cloudflare.com
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 236
-  password: AE62539071
-  port: 443
-  server: moved-bass.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 237
-  password: AE62539071
-  port: 443
-  server: inspired-goshawk.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 238
-  password: AE62539071
-  port: 443
-  server: cosmic-shepherd.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 239
-  password: AE62539071
-  port: 443
-  server: willing-eagle.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 241
-  password: AE62539071
-  port: 443
-  server: intense-sole.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 242
-  password: CF68213490
-  port: 443
-  server: smashing-fawn.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 243
-  password: AE62539071
-  port: 443
-  server: cunning-midge.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 244
-  password: AE62539071
-  port: 443
-  server: ultimate-cardinal.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 245
-  password: AE62539071
-  port: 443
-  server: brave-squirrel.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 246
-  password: smart@hkteVBi9aMFp-veBGU72OSCx
-  port: 443
-  server: starlink-sg5.251313.xyz
-  skip-cert-verify: true
-  sni: www.cloudflare.com
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 247
-  password: smart@hkteVBi9aMFp-veBGU72OSCx
-  port: 443
-  server: starlink-sg1.251313.xyz
-  skip-cert-verify: true
-  sni: www.cloudflare.com
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 248
-  password: NQ26071394
-  port: 443
-  server: verified-ringtail.rooster465.autos
-  sni: verified-ringtail.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 249
-  password: AE62539071
-  port: 443
-  server: model-wombat.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 250
-  password: AE62539071
-  port: 443
-  server: sharp-feline.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 251
-  password: AE62539071
-  port: 443
-  server: pleased-raptor.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 252
-  password: CF68213490
-  port: 443
-  server: relevant-oryx.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 253
-  password: AE62539071
-  port: 443
-  server: needed-haddock.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 254
-  password: CF68213490
-  port: 443
-  server: sincere-crappie.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 255
-  password: AE62539071
-  port: 443
-  server: robust-wallaby.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 256
-  password: CF68213490
-  port: 443
-  server: smooth-hornet.rooster465.autos
-  sni: smooth-hornet.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 257
-  password: AE62539071
-  port: 443
-  server: simple-sunbeam.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 258
-  password: CF68213490
-  port: 443
-  server: rested-osprey.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 260
-  password: NQ26071394
-  port: 443
-  server: capable-baboon.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 261
-  password: PQ05174892
-  port: 443
-  server: pro-mako.rooster465.autos
-  skip-cert-verify: true
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 262
-  password: NQ26071394
-  port: 443
-  server: gentle-turtle.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 263
-  password: ND91608427
-  port: 443
-  server: tidy-gelding.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 264
-  password: CF68213490
-  port: 443
-  server: funny-hawk.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 265
-  password: CF68213490
-  port: 443
-  server: ultimate-jaguar.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 266
-  password: NQ26071394
-  port: 443
-  server: emerging-baboon.rooster465.autos
-  type: trojan
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡 | vless | 267
-  port: 8443
-  reality-opts:
-    public-key: DG904eM7xGecwV_nhjX73c-7g_fGEv8BgjbeAmTE8Bs
-    short-id: '!!str 505c94b8c65afb0a'
-  server: ja4jaa3-61adf1.sg.y-tun.com
-  servername: auth.deepl.com
-  tls: false
-  type: vless
-  uuid: 8a116433-0c70-4f3a-ac99-4dfcccbd4350
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡 | vless | 268
-  port: 443
-  reality-opts:
-    public-key: 3WzSgL8uXA3vE3IHrfdBpJmOO4MYrsWpczDSY_jJRjI
-    short-id: '!!str 226509f017e4c36d'
-  server: vsgch.mostserv.xyz
-  servername: vsgch.mostserv.xyz
-  tls: false
-  type: vless
-  uuid: 0ddc1b7c-ce23-4a30-8ede-8a9e19f02fb7
-- name: 🇸🇬 新加坡 | trojan | 269
-  password: AE62539071
-  port: 443
-  server: helping-newt.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 270
-  password: AE62539071
-  port: 443
-  server: wired-grouper.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 271
-  password: CF68213490
-  port: 443
-  server: tight-gator.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 272
-  password: NQ26071394
-  port: 443
-  server: bold-eagle.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | vless | 273
-  network: ws
-  port: 443
-  server: www.spark.red
-  servername: sni.mmadcoffee.info
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 5582f622-f805-4a7a-81c5-f99b74b5bdfb
-  ws-opts:
-    headers:
-      Host: raz.mmadcoffee.info
-    path: '%2F10835%2Fcdn-cgifp=chromesecurity=tls'
-- name: 🇸🇬 新加坡 | trojan | 275
-  password: AE62539071
-  port: 443
-  server: vast-werewolf.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 276
-  password: NQ26071394
-  port: 443
-  server: alert-titmouse.rooster465.autos
-  sni: alert-titmouse.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 277
-  password: CF68213490
-  port: 443
-  server: immense-eagle.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 278
-  password: NQ26071394
-  port: 443
-  server: elegant-marten.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 279
-  password: CF68213490
-  port: 443
-  server: fair-werewolf.rooster465.autos
-  sni: fair-werewolf.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 280
-  password: PQ05174892
-  port: 443
-  server: allowing-ram.rooster465.autos
-  skip-cert-verify: true
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 281
-  password: PQ05174892
-  port: 443
-  server: lenient-grubworm.rooster465.autos
-  skip-cert-verify: true
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 282
-  password: CF68213490
-  port: 443
-  server: immune-mullet.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 283
-  password: AE62539071
-  port: 443
-  server: sharp-dogfish.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 284
-  password: PQ05174892
-  port: 443
-  server: infinite-anteater.rooster465.autos
-  skip-cert-verify: false
-  sni: infinite-anteater.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | vless | 285
+- name: 🇸🇬 新加坡 | vless | 290
   network: ws
   port: 443
   server: img.openaether.cn
@@ -2490,58 +2500,32 @@ proxies:
     headers:
       Host: dpi.mmadcoffee.info
     path: /16509/e37cb81c¬e=fp=chromesecurity=tls
-- name: 🇸🇬 新加坡 | trojan | 286
-  password: CF68213490
+- name: 🇸🇬 新加坡 | vless | 291
+  network: ws
   port: 443
-  server: live-drake.rooster465.autos
-  sni: live-drake.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | hy2 | 287
-  password: smart@hkteVBi9aMFp-veBGU72OSCx
+  server: 194.127.192.165
+  tls: true
+  type: vless
+  uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
+- client-fingerprint: chrome
+  name: 🇸🇬 新加坡 | vless | 292
+  network: raw
   port: 443
-  server: starlink-sg4.251313.xyz
-  skip-cert-verify: true
-  sni: www.cloudflare.com
-  tls: false
-  type: hysteria2
-- name: 🇸🇬 新加坡 | trojan | 288
+  server: 194.233.75.66
+  servername: sahanwickramasinghevip.shop
+  tls: true
+  type: vless
+  uuid: 55d61055-1a7f-4bc5-aca2-4ee78c738b60
+- name: 🇸🇬SG_2|3.8MB/s
   password: PQ05174892
   port: 443
-  server: excited-alien.rooster465.autos
+  server: fleet-pony.rooster465.autos
   skip-cert-verify: true
   type: trojan
-- name: 🇸🇬 新加坡 | trojan | 289
-  password: smart@hkteVBi9aMFp-veBGU72OSCx
-  port: 443
-  server: starlink-sg6.251313.xyz
-  skip-cert-verify: true
-  sni: www.cloudflare.com
-  type: trojan
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443-udp443
-  name: 🇸🇬 新加坡 | vless | 290
-  port: 8443
-  server: 1sg001.344211.cc
-  servername: www.python.org
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 6b5a9259-c7de-45f0-b4de-e89db7850d0c
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: 🇸🇬 新加坡 | vless | 291
-  port: 443
-  server: pan.zhangyichi.cn
-  servername: on1sni.irandoc.info
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 6de97a5c-acc0-473a-895e-0e9b3b120c74
+  udp: true
 - alpn:
   - http/1.1
-  name: 🇸🇬 新加坡 | vless | 292
+  name: 🇸🇬 新加坡 | vless | 301
   network: ws
   port: 443
   server: vbzm.cn
@@ -2554,112 +2538,135 @@ proxies:
     headers:
       Host: on1.irandoc.info
     path: /17001/msnfp=chromesecurity=tls
-- name: 🇸🇬 新加坡 | trojan | 293
-  password: PD07395842
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  name: 🇸🇬 新加坡 | vless | 302
   port: 443
-  server: frank-turtle.rooster465.autos
-  skip-cert-verify: true
-  sni: frank-turtle.rooster465.autos
-  type: trojan
-- name: 🇸🇬 新加坡 | trojan | 296
-  password: CF68213490
+  server: pan.zhangyichi.cn
+  servername: on1sni.irandoc.info
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 6de97a5c-acc0-473a-895e-0e9b3b120c74
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬 新加坡 | vmess | 305
+  network: ws
+  port: '36822'
+  server: sylva51.ceoiii.com
+  tls: false
+  type: vmess
+  uuid: 4f198ea9-311e-3dcf-910c-896de6cb160b
+  ws-opts:
+    headers:
+      Host: ajax.microsoft.com
+    path: /hls/cctv5phd.m3u8
+- name: 🇸🇬 新加坡 | vless | 313
+  network: ws
   port: 443
-  server: welcome-monitor.rooster465.autos
+  server: www.spark.red
+  servername: sni.mmadcoffee.info
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: e37cb81c-221c-47af-9e27-1145b1795aeb
+  ws-opts:
+    headers:
+      Host: dpi.mmadcoffee.info
+    path: /16509/e37cb81c¬e=Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---fp=chrome
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬 新加坡 | vmess | 315
+  network: tcp
+  port: '11985'
+  server: board-02.ddnskunlun.com
+  tls: false
+  type: vmess
+  uuid: a8bcce43-abda-315b-8e81-e3e65bcb3d07
+- name: 🇸🇬 新加坡 | trojan | 316
+  password: PQ05174892
+  port: 443
+  server: infinite-anteater.rooster465.autos
+  skip-cert-verify: false
+  sni: infinite-anteater.rooster465.autos
   type: trojan
-- name: 🇸🇬 新加坡 | trojan | 297
+- name: 🇸🇬 新加坡 | trojan | 317
   password: affae2e0-e84b-11ec-b09f-1239d0255272
   port: 443
   server: trojan1.udpgw.com
   type: trojan
-- name: 🇸🇬 新加坡 | trojan | 300
+- client-fingerprint: ios
+  flow: xtls-rprx-vision
+  name: 🇸🇬 新加坡 | vless | 319
+  port: 443
+  reality-opts:
+    public-key: ySbU9uoTnPneLySGXnYvGz2fgXUJWK9E47fGwLBgKk0
+    short-id: '!!str fd242ce3'
+  server: 66x11x7.ly123.edu.kg
+  servername: sg-hyp-api.hoyoverse.com
+  tls: false
+  type: vless
+  uuid: 5c21bbcf-d4f6-4fb6-9864-72c4ddbd21d7
+- name: 🇸🇬 新加坡 | trojan | 322
   password: PQ05174892
   port: 443
   server: apparent-wasp.rooster465.autos
   skip-cert-verify: true
   type: trojan
+- name: 🇸🇬 新加坡 | trojan | 323
+  password: FH72359861
+  port: 443
+  server: eminent-panther.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- name: 🇸🇬 新加坡 | trojan | 324
+  password: AE62539071
+  port: 443
+  server: simple-rodent.rooster465.autos
+  type: trojan
+- alpn:
+  - h2
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬 新加坡 | vless | 325
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: EeLAX-BAjzSdRes-zpUFzVOYsBedmP8lUOHhXXJFXyI
+    short-id: '!!str 5a42dbd7e26a0415'
+  server: 178.128.52.52
+  servername: zoom.us
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: efd11a89-7506-44ce-95b6-6654859f155b
 - client-fingerprint: chrome
-  name: 🇸🇬SG_17|1.2MB/s
+  name: 🇸🇬SG_10|4.8MB/s
   network: tcp
   password: PQ05174892
   port: '443'
-  server: 13.212.174.21
+  server: 13.229.204.224
   skip-cert-verify: false
-  sni: fleet-pony.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: 🇸🇬SG_18|1.2MB/s
-  network: tcp
-  password: PQ05174892
-  port: '443'
-  server: 13.212.91.165
-  skip-cert-verify: false
-  sni: composed-sheep.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: 🇸🇬SG_19|1.2MB/s
-  network: tcp
-  password: PQ05174892
-  port: '443'
-  server: 47.129.183.20
-  skip-cert-verify: false
-  sni: welcome-monitor.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: 🇸🇬SG_20|5.2MB/s
-  network: tcp
-  password: PQ05174892
-  port: '443'
-  server: 54.169.228.116
-  skip-cert-verify: false
-  sni: amusing-grub.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: 🇸🇬SG_24|3.6MB/s
-  password: PQ05174892
-  port: '443'
-  server: intense-monarch.rooster465.autos
-  skip-cert-verify: false
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: 🇸🇬SG_26|3.8MB/s
-  network: tcp
-  password: PQ05174892
-  port: '443'
-  server: stable-python.rooster465.autos
-  skip-cert-verify: false
+  sni: intense-sole.rooster465.autos
   type: trojan
   udp: true
 - client-fingerprint: chrome
   grpc-opts:
-    grpc-mode: gun
     grpc-service-name: update
-  name: 🇸🇬SG_27|3.9MB/s
+  name: 🇸🇬SG_14|5.3MB/s
   network: grpc
-  port: 10039
+  port: '10039'
   reality-opts:
     public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
     short-id: '!!str 686c0ef0'
-  server: sg4-r.link-t7.com
+  server: 13.212.89.97
   servername: d1.awsstatic.com
   tls: true
   type: vless
   udp: true
   uuid: 88DA9CA6-5E68-4687-A748-961B612DCED5
-- fingerprint: ''
-  name: 🇸🇬SG_28|3.8MB/s
-  password: 13f0acfa-38c1-4e82-a758-583aa31740df
-  port: '60572'
-  server: 47.129.8.234
-  skip-cert-verify: true
-  sni: yzhou015.jdvipkuai.cc
-  type: anytls
-  udp: true
-  username: 13f0acfa-38c1-4e82-a758-583aa31740df
 - alterId: 0
   name: 🇸🇬SG新加坡
   password: BxceQaOe
