@@ -825,7 +825,7 @@ proxies:
   uuid: 48aca1e4-fc30-4ac4-9042-9992cc0cd99f
 - client-fingerprint: ios
   flow: xtls-rprx-vision
-  name: US【机场推荐：https://a9a.xyz】6
+  name: US【机场推荐：https://a9a.xyz】24
   network: tcp
   port: 443
   reality-opts:
@@ -835,13 +835,15 @@ proxies:
   servername: yahoo.com
   tls: false
   type: vless
+  udp: true
   uuid: d65cc14c-f53f-4fe2-b262-97856601319c
   ws-opts:
     headers:
       Host: yahoo.com
 - client-fingerprint: ios
   flow: xtls-rprx-vision
-  name: US【机场推荐：https://a9a.xyz】16
+  name: US【机场推荐：https://a9a.xyz】9
+  network: tcp
   port: 443
   reality-opts:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
@@ -856,15 +858,15 @@ proxies:
       Host: yahoo.com
 - client-fingerprint: ios
   flow: xtls-rprx-vision
-  name: US【机场推荐：https://a9a.xyz】11
+  name: 🇺🇸US_2|2.9MB/s
+  network: tcp
   port: 443
   reality-opts:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
     short-id: '!!str c39cc7310a'
   server: 169.40.42.229
   servername: yahoo.com
-  skip-cert-verify: true
-  tls: false
+  tls: true
   type: vless
   udp: true
   uuid: d65cc14c-f53f-4fe2-b262-97856601319c
@@ -884,7 +886,7 @@ proxies:
   uuid: 93dac4b8-3879-4179-abdb-9666a9e2ca8d
 - client-fingerprint: ios
   flow: xtls-rprx-vision
-  name: US【机场推荐：https://a9a.xyz】10
+  name: US【机场推荐：https://a9a.xyz】26
   network: tcp
   port: 443
   reality-opts:
@@ -900,7 +902,7 @@ proxies:
       Host: yahoo.com
 - client-fingerprint: ios
   flow: xtls-rprx-vision
-  name: 🇩🇪 德国 | vless | 52
+  name: US【机场推荐：https://a9a.xyz】27
   port: 443
   reality-opts:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
@@ -915,7 +917,7 @@ proxies:
       Host: yahoo.com
 - client-fingerprint: ios
   flow: xtls-rprx-vision
-  name: US【机场推荐：https://a9a.xyz】15
+  name: US【机场推荐：https://a9a.xyz】28
   network: tcp
   port: 443
   reality-opts:
@@ -963,7 +965,7 @@ proxies:
   ws-opts:
     path: '%2Fassignment'
 - client-fingerprint: chrome
-  name: UN【机场推荐：https://a9a.xyz】85
+  name: 🇩🇪_德国_213
   network: ws
   port: 2053
   server: 163.5.187.118
@@ -4250,11 +4252,10 @@ proxies:
   tls: true
   type: vmess
   uuid: f2ff4ae6-cf2d-4d15-9f0d-b6d9980df9aa
-- name: '🇩🇪 德国 | DEU #1'
+- name: 🇩🇪 德国 | trojan | 203
   password: PQ05174892
   port: 443
   server: usable-dogfish.rooster465.autos
-  skip-cert-verify: true
   type: trojan
 - client-fingerprint: ios
   flow: xtls-rprx-vision
@@ -4442,7 +4443,7 @@ proxies:
   tls: false
   type: vless
   uuid: 00b41e07-68e6-46b0-928f-a02becd4e398
-- name: 🇩🇪 德国 | DEU
+- name: 🇩🇪 德国 | hy2 | 233
   password: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
   port: 443
   server: de104.mechvpn.online
@@ -5111,18 +5112,24 @@ proxies:
   tls: true
   type: vless
   uuid: e0021a91-e53a-4757-96fc-912c7c830721
-- alterId: 0
+- alpn:
+  - ''
+  alterId: '0'
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 313
+  name: 🇩🇪DE_1|1.2MB/s
   network: ws
   port: '80'
   server: 68.183.209.180
   servername: ''
+  skip-cert-verify: false
   tls: false
   type: vmess
+  udp: true
   uuid: d5121154-ced6-460d-a9fd-5892027ab4a0
   ws-opts:
+    headers: {}
     path: /graphql
+  xudp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇩🇪 德国 | vless | 314
@@ -5327,21 +5334,6 @@ proxies:
     headers:
       Host: play.google.com
     path: /
-- client-fingerprint: safari
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: vless-grpc-reality
-  name: 🇩🇪DE_1|1.6MB/s
-  network: grpc
-  port: 2096
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  server: ss.1010101.vip
-  servername: id.vk.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 53b7fdec-4ccb-481a-8d98-83aa19509330
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: IN3｜机房｜低风险
@@ -5712,30 +5704,6 @@ proxies:
   server: de.1.22.washing.help
   skip-cert-verify: true
   sni: germany1.h2corp.local
-  tls: false
-  type: hysteria2
-- name: '🇩🇪 德国 | DEU #2'
-  password: 425e9e31-b017-4e32-bbd3-656473466d5e
-  port: 2443
-  server: mdt1.pubconverter.com
-  skip-cert-verify: true
-  sni: md.pubconverter.com
-  tls: false
-  type: hysteria2
-- name: '🇩🇪 德国 | DEU #3'
-  password: 62b72631-985d-4768-8b5a-7cc06753e0f0
-  port: 2443
-  server: mdt1.pubconverter.com
-  skip-cert-verify: true
-  sni: md.pubconverter.com
-  tls: false
-  type: hysteria2
-- name: '🇩🇪 德国 | DEU #4'
-  password: 4984930f-4a7a-4dfa-8edc-5d21bbf5ca13
-  port: 2443
-  server: mdt1.pubconverter.com
-  skip-cert-verify: true
-  sni: md.pubconverter.com
   tls: false
   type: hysteria2
 - name: DE_speednode_0001
