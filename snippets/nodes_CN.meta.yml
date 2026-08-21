@@ -10,7 +10,9 @@ proxies:
   skip-cert-verify: true
   tls: false
   type: vmess
+  udp: true
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  xudp: true
 - alterId: 0
   cipher: auto
   name: '中国 002 #1'
@@ -227,7 +229,6 @@ proxies:
   port: 59121
   server: 129.226.157.220
   skip-cert-verify: true
-  tls: true
   type: vmess
   uuid: d9865d63-d95c-454b-ba07-8e88b838a801
 - name: '中国 019 #1'
@@ -254,8 +255,7 @@ proxies:
   type: vless
   udp: true
   uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
-- client-fingerprint: edge
-  name: '中国 021 #1'
+- name: '中国 021 #1'
   network: tcp
   port: 45647
   server: 182.16.61.4
@@ -808,6 +808,7 @@ proxies:
   network: ws
   port: 443
   server: n1747624260.4u9ma.icu
+  servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -1040,23 +1041,61 @@ proxies:
   skip-cert-verify: true
   type: vmess
   uuid: dba51a2e-a788-43b7-9ac4-9f7cc1255f15
-- name: 🟢🇨🇳_github.com/Ruk1ng001_0c540...
+- name: 🟢🇨🇳_github.com/Ruk1ng001_96deb...
+  password: None
   port: 8080
   server: 112.64.135.45
   type: http
+  username: null
 - client-fingerprint: chrome
-  name: '🇨🇳 [VL] Китай #9026 | РосТунне...'
+  flow: xtls-rprx-vision
+  name: 🏳️ 未知 | vless | 01
+  network: tcp
+  port: 993
+  reality-opts:
+    public-key: UvQ2HZFkQXrBiaprbcmks-aFo1dvnfPlHXcUKcl-i04
+    short-id: '!!str '
+  server: 122.8.44.3
+  servername: dl.google.com
+  tls: false
+  type: vless
+  uuid: 2703cda8-5cf4-019d-c4bd-6cf0c2261946
+- name: '🇨🇳 [VL] Китай #9079 | РосТунне...'
   network: ws
-  port: 2053
-  server: 104.17.172.114
-  servername: node-726721114-1b5aef.infinityconfig7-3b9f.workers.dev
+  port: 443
+  server: 172.64.153.90
+  servername: 40t1.wxgqlfx.vip
   tls: true
   type: vless
-  uuid: ad4ae058-cd7e-4e69-a6f7-aee7ce7b0e6e
+  uuid: e4dfa054-4b6e-405f-c439-6e4f0b6b700b
   ws-opts:
     headers:
-      Host: node-726721114-1b5aef.infinityconfig7-3b9f.workers.dev
-    path: '%2F'
+      Host: 40t1.wxgqlfx.vip
+    path: '%2FTG%40wxgqlfx'
+- name: 🇸🇬 新加坡 | trojan | 96
+  network: ws
+  password: humanity
+  port: 443
+  server: 43.169.18.179
+  skip-cert-verify: true
+  sni: www.creationlong.org
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.creationlong.org
+    path: '%2Fassignment'
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇨🇳 中国 | vless | 01
+  port: 12878
+  reality-opts:
+    public-key: oRpiuzgpCJp1KJYbpaQ46wt5QdaHXs4yHkyYxaG9600
+    short-id: '!!str b94602998b'
+  server: 36.151.187.225
+  servername: www.spotify.com
+  tls: false
+  type: vless
+  uuid: 16b3793b-3335-4832-b1fd-877b2c5e15d6
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: 🇨🇳 中国 | vless | 02
@@ -1069,21 +1108,21 @@ proxies:
   tls: false
   type: vless
   uuid: 16b3793b-3335-4832-b1fd-877b2c5e15d6
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇨🇳 中国 | vless | 03
-  port: 12878
-  reality-opts:
-    public-key: oRpiuzgpCJp1KJYbpaQ46wt5QdaHXs4yHkyYxaG9600
-    short-id: '!!str b94602998b'
-  server: 36.151.187.225
-  servername: www.spotify.com
-  tls: false
-  type: vless
-  uuid: 16b3793b-3335-4832-b1fd-877b2c5e15d6
+- name: 🇨🇳 中国 | trojan | 03
+  network: ws
+  password: 2763afef-32a8-410a-b76b-4f42e3f505a1
+  port: 46867
+  server: 221.181.169.196
+  skip-cert-verify: true
+  sni: vpn-node.internal
+  type: trojan
+  ws-opts:
+    headers:
+      Host: vpn-node.internal
+    path: /xVpnTrojanWsSvc7f3a
 - alterId: 0
   cipher: auto
-  name: 🇨🇳 中国 | vmess | 09
+  name: 🇨🇳 中国 | vmess | 06
   network: ws
   port: 80
   server: 124.222.189.225
@@ -1095,6 +1134,18 @@ proxies:
     headers:
       Host: ''
     path: /
+- down: ''
+  fingerprint: ''
+  name: 🇨🇳CN_1|1.6MB/s
+  obfs: ''
+  obfs-password: ''
+  password: 0wdsa_nJXEWRj9jz9J9xMgtx_n7gzfK_m8
+  port: '9080'
+  server: 139.28.168.54
+  skip-cert-verify: false
+  sni: grape-honk.yyuyy.com
+  type: hysteria2
+  up: ''
 - alterId: 64
   cipher: auto
   name: CN2｜家宽｜非常安全
@@ -1105,16 +1156,23 @@ proxies:
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
 - cipher: aes-256-cfb
+  name: CN_speednode_0001
+  password: 7eadc6dbe2ae
+  port: 65443
+  server: 120.232.251.128
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: CN_speednode_0002
+  password: 7eadc6dbe2ae
+  port: 65443
+  server: 121.46.230.234
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
   name: CN_speednode_0003
   password: 7eadc6dbe2ae
   port: 65443
   server: 120.232.250.161
   type: ss
   udp: true
-- name: CN【机场推荐：https://a9a.xyz】11
-  network: tcp
-  port: 58011
-  server: us22.sofast.live
-  tls: false
-  type: vless
-  uuid: 0afc6426-606c-48e7-bd70-3c424a416842
