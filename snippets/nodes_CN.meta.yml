@@ -131,11 +131,13 @@ proxies:
   skip-cert-verify: true
   type: vmess
   uuid: 7d2a4e66-152c-49f5-9ff5-c19a836e8c89
-- name: 🇨🇳_中国_8
+- name: 🇨🇳_CN_中国->🇺🇸_US_美国
   port: 52683
   server: jp.sofast.live
+  skip-cert-verify: true
   tls: false
   type: vless
+  udp: true
   uuid: 5aaa5259-f924-4682-a4a3-149d472a9dcc
 - name: 🇨🇳_中国_9
   port: 52683
@@ -143,12 +145,39 @@ proxies:
   tls: false
   type: vless
   uuid: 399b6b23-cc40-4831-a494-61948e2df133
-- name: 🇨🇳_中国_65
+- name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
   port: 58011
   server: us22.sofast.live
+  skip-cert-verify: true
   tls: false
   type: vless
+  udp: true
   uuid: 0afc6426-606c-48e7-bd70-3c424a416842
+- flow: ''
+  http-opts:
+    headers: {}
+    path:
+    - /
+  name: 🇨🇳 中国 | vless | 07
+  network: tcp
+  port: 12528
+  server: 120.227.1.43
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  udp: true
+  uuid: f0169b08-43fd-4dc3-8195-18f6ad2fe39d
+  xudp: true
+- alterId: 64
+  cipher: auto
+  name: 🇨🇳_CN_中国_1
+  port: 50002
+  server: 112.132.215.108
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
 - alterId: 64
   cipher: auto
   name: 🇨🇳 中国 | vmess | 04
@@ -161,20 +190,6 @@ proxies:
   type: vmess
   udp: true
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  xudp: true
-- flow: ''
-  http-opts:
-    headers: {}
-    path:
-    - /
-  name: 🇨🇳 中国 | vless | 12
-  network: tcp
-  port: 12528
-  server: 120.227.1.43
-  tls: false
-  type: vless
-  udp: true
-  uuid: f0169b08-43fd-4dc3-8195-18f6ad2fe39d
   xudp: true
 - name: 🟢🇨🇳_github.com/Ruk1ng001_96deb...
   password: None
@@ -194,14 +209,13 @@ proxies:
     headers:
       Host: vpn-node.internal
     path: /xVpnTrojanWsSvc7f3a
-- client-fingerprint: chrome
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: 🇨🇳 中国 | vless | 02
-  network: tcp
-  port: 12887
+  port: 12878
   reality-opts:
-    public-key: a3H5ffQkcW4xELeJEGQ8FsaXLG4sGomkB7_ms0d5xzc
-    short-id: '!!str b48d22a492'
+    public-key: oRpiuzgpCJp1KJYbpaQ46wt5QdaHXs4yHkyYxaG9600
+    short-id: '!!str b94602998b'
   server: 36.151.187.225
   servername: www.spotify.com
   tls: false
@@ -219,13 +233,13 @@ proxies:
   tls: false
   type: vless
   uuid: 16b3793b-3335-4832-b1fd-877b2c5e15d6
-- client-fingerprint: firefox
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇳 中国 | vless | 05
-  port: 12878
+  name: 🇨🇳 中国 | vless | 06
+  port: 12887
   reality-opts:
-    public-key: oRpiuzgpCJp1KJYbpaQ46wt5QdaHXs4yHkyYxaG9600
-    short-id: '!!str b94602998b'
+    public-key: a3H5ffQkcW4xELeJEGQ8FsaXLG4sGomkB7_ms0d5xzc
+    short-id: '!!str b48d22a492'
   server: 36.151.187.225
   servername: www.spotify.com
   tls: false
@@ -256,60 +270,10 @@ proxies:
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - alterId: 2
   cipher: auto
-  name: 🇨🇳 中国 | vmess | 11
+  name: 🇨🇳 中国 | vmess | 13
   network: tcp
   port: 30833
   server: v33.hdacd.com
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- alterId: 2
-  cipher: auto
-  name: 🇨🇳 中国 | vmess | 13
-  network: tcp
-  port: '30829'
-  server: v29.hdacd.com
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- alterId: 2
-  cipher: auto
-  name: US326｜机房｜低风险
-  network: tcp
-  port: '30824'
-  server: v24.hdacd.com
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- alterId: 2
-  cipher: auto
-  name: 🇨🇳 中国 | vmess | 15
-  network: tcp
-  port: '30808'
-  server: v8.hdacd.com
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- alterId: 2
-  cipher: auto
-  name: GB29｜机房｜低风险
-  network: tcp
-  port: '30836'
-  server: v36.hdacd.com
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- alterId: 2
-  cipher: auto
-  name: 🇨🇳 中国 | vmess | 17
-  network: tcp
-  port: '30804'
-  server: v4.hdacd.com
-  servername: ''
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
