@@ -6,7 +6,6 @@ proxies:
   network: tcp
   port: 50002
   server: 112.132.215.108
-  servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
@@ -46,6 +45,7 @@ proxies:
   network: ws
   port: 8080
   server: yh2.dtku41.xyz
+  servername: ''
   tls: false
   type: vmess
   uuid: 9258153a-dc97-4e39-9037-009abfc4fed0
@@ -125,7 +125,7 @@ proxies:
   server: 129.226.157.220
   servername: ''
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
   uuid: d9865d63-d95c-454b-ba07-8e88b838a801
 - client-fingerprint: chrome
@@ -376,7 +376,7 @@ proxies:
   network: ws
   port: 443
   server: fullaccesstohongkongnet.azurewebsites.net
-  servername: fullaccesstohongkongnet.azurewebsites.net
+  servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -863,24 +863,24 @@ proxies:
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: 🇨🇳 中国 | vless | 03
-  port: 12878
-  reality-opts:
-    public-key: oRpiuzgpCJp1KJYbpaQ46wt5QdaHXs4yHkyYxaG9600
-    short-id: '!!str b94602998b'
-  server: 36.151.187.225
-  servername: www.spotify.com
-  tls: false
-  type: vless
-  uuid: 16b3793b-3335-4832-b1fd-877b2c5e15d6
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇨🇳 中国 | vless | 04
   port: 12888
   reality-opts:
     public-key: GUeUPPVhptRY2UH0BlLCqh5_WqPZp7Xu0rpqmifkNTk
     short-id: '!!str 455a4f30c5'
   server: 36.151.187.225
   servername: www.tidal.com
+  tls: false
+  type: vless
+  uuid: 16b3793b-3335-4832-b1fd-877b2c5e15d6
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇨🇳 中国 | vless | 04
+  port: 12878
+  reality-opts:
+    public-key: oRpiuzgpCJp1KJYbpaQ46wt5QdaHXs4yHkyYxaG9600
+    short-id: '!!str b94602998b'
+  server: 36.151.187.225
+  servername: www.spotify.com
   tls: false
   type: vless
   uuid: 16b3793b-3335-4832-b1fd-877b2c5e15d6
@@ -900,11 +900,28 @@ proxies:
     path: /
 - alterId: 2
   cipher: auto
-  name: 🇨🇳 中国 | vmess | 11
+  name: 🇨🇳 中国 | vmess | 09
+  network: tcp
+  port: 30845
+  server: v45.hdacd.com
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- alterId: 2
+  cipher: auto
+  name: 🇨🇳 中国 | vmess | 10
   network: tcp
   port: 30833
   server: v33.hdacd.com
-  servername: ''
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- alterId: 2
+  cipher: auto
+  name: HK192｜机房｜低风险
+  network: tcp
+  port: '30809'
+  server: v9.hdacd.com
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
@@ -912,38 +929,18 @@ proxies:
   cipher: auto
   name: 🇨🇳 中国 | vmess | 12
   network: tcp
-  port: '30808'
-  server: v8.hdacd.com
+  port: 30806
+  server: v6.hdacd.com
   servername: ''
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - alterId: 2
   cipher: auto
-  name: 🇨🇳 中国 | vmess | 13
+  name: 🇨🇳 中国 | vmess | 15
   network: tcp
   port: '30829'
   server: v29.hdacd.com
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- alterId: 2
-  cipher: auto
-  name: US326｜机房｜低风险
-  network: tcp
-  port: '30824'
-  server: v24.hdacd.com
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- alterId: 2
-  cipher: auto
-  name: GB29｜机房｜低风险
-  network: tcp
-  port: '30836'
-  server: v36.hdacd.com
   servername: ''
   tls: false
   type: vmess
@@ -960,19 +957,20 @@ proxies:
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - alterId: 2
   cipher: auto
-  name: HK192｜机房｜低风险
+  name: GB29｜机房｜低风险
   network: tcp
-  port: '30809'
-  server: v9.hdacd.com
+  port: '30836'
+  server: v36.hdacd.com
+  servername: ''
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - alterId: 2
   cipher: auto
-  name: 🇨🇳 中国 | vmess | 18
+  name: US326｜机房｜低风险
   network: tcp
-  port: 30806
-  server: v6.hdacd.com
+  port: '30824'
+  server: v24.hdacd.com
   servername: ''
   tls: false
   type: vmess
@@ -981,8 +979,9 @@ proxies:
   cipher: auto
   name: 🇨🇳 中国 | vmess | 19
   network: tcp
-  port: 30845
-  server: v45.hdacd.com
+  port: '30808'
+  server: v8.hdacd.com
+  servername: ''
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
