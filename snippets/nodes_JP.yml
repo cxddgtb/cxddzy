@@ -164,6 +164,56 @@ proxies:
   port: 3893
   server: 35.73.128.210
   type: trojan
+- alterId: 0
+  cipher: none
+  http-opts:
+    path:
+    - /
+  name: '🇯🇵_JP_日本 #1'
+  network: http
+  port: 49432
+  server: 38.47.121.14
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: ce94f204-ffa6-4fa8-a1dc-ecfccfd463cb
+- cipher: aes-256-gcm
+  name: 🇯🇵 日本2|@ripaojiedian
+  password: Butterfly123@qwe9527
+  port: 40001
+  server: 103.236.66.4
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇯🇵 日本3|@ripaojiedian
+  password: Butterfly123@qwe9527
+  port: 40002
+  server: 103.236.66.4
+  type: ss
+- name: '🇯🇵 日本 | JPN #1'
+  password: ultra@kWZdAzt_IH593eGLRjdxnBZ0
+  port: 10012
+  server: z-jp1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  type: trojan
+  udp: true
+- name: '🇯🇵 日本 | JPN #2'
+  password: ultra@kWZdAzt_IH593eGLRjdxnBZ0
+  port: 10010
+  server: z-jp1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  type: trojan
+  udp: true
+- name: '🇯🇵 日本 | JPN #3'
+  password: ultra@kWZdAzt_IH593eGLRjdxnBZ0
+  port: 10011
+  server: z-jp1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  type: trojan
+  udp: true
 - cipher: chacha20-ietf-poly1305
   name: C🟠🇯🇵[🎬🤖📺🎭]_dokng.com_38613c0a
   password: ljqdalu13..
@@ -171,11 +221,11 @@ proxies:
   server: 52.193.18.241
   type: ss
   udp: true
-- alterId: '0'
+- alterId: 0
   cipher: auto
-  name: C🟠🇯🇵[🎬🤖📺🎭]_dokng.com_c089b1f5
+  name: 🇯🇵 日本 | vmess | 193
   network: tcp
-  port: 18112
+  port: '18112'
   server: oc.imfun.fun
   skip-cert-verify: false
   tls: false
@@ -183,28 +233,25 @@ proxies:
   udp: true
   uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
   xudp: true
-- name: 🇯🇵 日本 | trojan | 03
+- name: 🇯🇵 日本 | trojan | 06
+  network: ws
+  password: tg-dns68
+  port: 9710
+  server: 150.230.206.237
+  sni: vip.putata.eu.org
+  type: trojan
+  ws-opts:
+    headers:
+      Host: vip.putata.eu.org
+    path: /?ed=2560
+- name: 🇯🇵 日本 | trojan | 08
   password: i99Cef
   port: 27242
   server: 45.32.57.242
   skip-cert-verify: true
   sni: download.windowsupdate.com
   type: trojan
-- alpn:
-  - http/1.1
-  name: 🇯🇵 日本 | trojan | 09
-  network: ws
-  password: 5cc264ad-92a8-46cc-85b0-82dca5b12faf
-  port: 43102
-  server: 172.238.22.232
-  skip-cert-verify: true
-  sni: vpn-node.internal
-  type: trojan
-  ws-opts:
-    headers:
-      Host: vpn-node.internal
-    path: /xVpnTrojanWsSvc7f3a
-- name: 🇯🇵 日本 | trojan | 12
+- name: 🇯🇵 日本 | trojan | 14
   password: 758a36c5-d422-4e0d-9bee-a89ce9f9b078
   port: 48774
   server: 172.238.22.232
@@ -212,7 +259,7 @@ proxies:
   type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇯🇵 日本 | vmess | 13
+  name: 🇯🇵 日本 | vmess | 20
   network: ws
   port: '8080'
   server: 156.231.116.156
@@ -224,24 +271,28 @@ proxies:
     headers:
       Host: images-na.ssl-images-amazon.com
     path: /image
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 日本 | vmess | 14
-  network: tcp
-  port: '55216'
-  server: 155.248.176.44
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 154dbc39-0921-cf11-29bd-156c5000d763
-- name: 🇯🇵 日本 | trojan | 33
+- alpn:
+  - http/1.1
+  name: 🇯🇵 日本 | trojan | 27
+  network: ws
+  password: 5cc264ad-92a8-46cc-85b0-82dca5b12faf
+  port: 43102
+  server: 172.238.22.232
+  skip-cert-verify: true
+  sni: vpn-node.internal
+  type: trojan
+  ws-opts:
+    headers:
+      Host: vpn-node.internal
+    path: /xVpnTrojanWsSvc7f3a
+- name: 🇯🇵 日本 | trojan | 43
   password: a196faa4-403e-4a8b-987a-d1789f379685
   port: 49755
   server: 139.162.100.58
   type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇯🇵 日本 | vmess | 45
+  name: 🇯🇵 日本 | vmess | 56
   network: ws
   port: 80
   server: 172.111.146.64
@@ -252,54 +303,45 @@ proxies:
   ws-opts:
     headers:
       Host: ''
-    path: /
+    path: /vmess/
 - alterId: 0
   cipher: auto
-  name: 未知128
-  network: ws
-  port: 47431
-  server: jp.6807251.xyz
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 7aa3a024-e333-4b63-99a2-3db9d3b2054e
-  ws-opts:
-    path: /
-- name: 🇯🇵 日本 | trojan | 69
-  password: ultra@kWZdAzt_IH593eGLRjdxnBZ0
-  port: 10012
-  server: z-jp2.251313.xyz
-  sni: www.cloudflare.com
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 日本 | vmess | 71
-  network: ws
-  port: '8555'
-  server: 54.168.242.25
+  name: 🇯🇵 日本 | vmess | 58
+  network: tcp
+  port: '55216'
+  server: 155.248.176.44
   tls: false
   type: vmess
-  uuid: 7aa3a024-e333-4b63-99a2-3db9d3b2054e
-  ws-opts:
-    path: /
-- alterId: 1
+  uuid: 154dbc39-0921-cf11-29bd-156c5000d763
+- alterId: 0
   cipher: auto
-  name: 🇯🇵 日本 | vmess | 72
-  network: tcp
-  port: '21586'
-  server: g06.jp01-nn-vm0.entry.fr0528.art
-  servername: ''
-  tls: true
+  name: 🇯🇵 日本 | vmess | 60
+  network: ws
+  port: '80'
+  server: 168.138.43.75
+  tls: false
   type: vmess
-  uuid: 9c955dfc-c1d6-3de3-8230-deac3bd9c1a2
-- name: 🇯🇵 日本 | trojan | 73
-  password: ultra@kWZdAzt_IH593eGLRjdxnBZ0
-  port: 10008
-  server: z-jp2.251313.xyz
-  sni: www.cloudflare.com
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  ws-opts:
+    headers:
+      Host: none
+    path: /cctv13.m3u8
+- name: 🇯🇵 日本 | trojan | 69
+  password: d050aca3-9df2-4461-90ec-92373c1d7636
+  port: 44184
+  server: v2jp.k1.ssnss.live
   type: trojan
-- name: 🇯🇵 日本 | trojan | 78
+- name: 🇯🇵 日本 | trojan | 72
+  password: NQ26071394
+  port: 443
+  server: correct-starfish.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 80
+  password: ND91608427
+  port: 443
+  server: 18.179.31.199
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 87
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
@@ -309,33 +351,29 @@ proxies:
   type: trojan
   ws-opts:
     path: '%2F'
-- name: 🇯🇵 日本 | trojan | 93
+- name: 🇯🇵 日本 | trojan | 88
+  password: ND91608427
+  port: 443
+  server: sincere-gelding.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 90
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
-  server: 161.248.63.77
+  server: 168.138.212.80
   sni: hhcm.hhxaf.cc.cd
   type: trojan
   ws-opts:
+    headers:
+      Host: hhcm.hhxaf.cc.cd
     path: /
-- name: 🇯🇵 日本 | trojan | 95
-  password: CF68213490
-  port: 443
-  server: brief-warthog.rooster465.autos
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 110
-  password: ultra@kWZdAzt_IH593eGLRjdxnBZ0
-  port: 10009
-  server: z-jp2.251313.xyz
-  sni: www.cloudflare.com
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 115
+- name: 🇯🇵 日本 | trojan | 99
   password: i99Cef
   port: 443
   server: 45.76.51.23
   skip-cert-verify: true
   type: trojan
-- name: 🇯🇵 日本 | trojan | 117
+- name: 🇯🇵 日本 | trojan | 106
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
@@ -346,7 +384,7 @@ proxies:
     headers:
       Host: tjsp.hhxaf.cc.cd
     path: '%2F'
-- name: 🇯🇵 日本 | trojan | 135
+- name: 🇯🇵 日本 | trojan | 111
   network: ws
   password: 4c3164ee-abcf-4091-abea-d1cd4937a68d
   port: 443
@@ -358,55 +396,84 @@ proxies:
     headers:
       Host: jy.hhllfly.kdns.fr
     path: '%2F%3Fed%3D2048'
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 日本 | vmess | 136
-  network: ws
-  port: '443'
-  server: J3Nz0zA0r13AoVhH.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: J3Nz0zA0r13AoVhH.v.3dns.vip
-    path: /ws-vmess
+- name: 🇯🇵 日本 | trojan | 120
+  password: NQ26071394
+  port: 443
+  server: massive-ocelot.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 124
+  password: CF68213490
+  port: 443
+  server: smashing-fawn.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 127
+  password: JT80563429
+  port: 443
+  server: musical-shrew.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 129
+  password: AE62539071
+  port: 443
+  server: firm-krill.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 132
+  password: CF68213490
+  port: 443
+  server: gentle-mastiff.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 134
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.ivano-frankivsk.ua
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 135
+  password: NQ26071394
+  port: 443
+  server: legible-ram.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 136
+  password: HW85960347
+  port: 443
+  server: normal-dory.rooster465.autos
+  type: trojan
 - name: 🇯🇵 日本 | trojan | 137
+  password: NQ26071394
+  port: 443
+  server: one-dove.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 138
+  password: QV31589740
+  port: 443
+  server: great-krill.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 139
+  password: PQ05174892
+  port: 443
+  server: lucky-marmot.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 141
   password: NQ26071394
   port: 443
   server: chief-cricket.rooster465.autos
   type: trojan
 - name: 🇯🇵 日本 | trojan | 143
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 2053
-  server: official.tokyometropolis.kiev.ua
+  password: CF68213490
+  port: 443
+  server: smooth-hornet.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 144
+  password: CF68213490
+  port: 443
+  server: rested-osprey.rooster465.autos
   type: trojan
 - name: 🇯🇵 日本 | trojan | 145
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 2053
-  server: official.tokyometropolis.chernigov.ua
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 146
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 2053
-  server: official.tokyometropolis.ivano-frankivsk.ua
+  password: ND91608427
+  port: 443
+  server: clear-snail.rooster465.autos
   type: trojan
 - alterId: 0
   cipher: auto
   name: 🇯🇵 日本 | vmess | 147
-  network: ws
-  port: '443'
-  server: UcKniXjfd2JOKBmx.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: UcKniXjfd2JOKBmx.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 日本 | vmess | 151
   network: ws
   port: '36801'
   server: cindy50.ceoiii.com
@@ -417,147 +484,66 @@ proxies:
     headers:
       Host: ajax.microsoft.com
     path: /hls/cctv5phd.m3u8
-- name: 🇯🇵 日本 | trojan | 152
-  password: NQ26071394
-  port: 443
-  server: massive-ocelot.rooster465.autos
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 153
-  password: PQ05174892
-  port: 443
-  server: lucky-marmot.rooster465.autos
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 157
-  password: 4c3164ee-abcf-4091-abea-d1cd4937a68d
-  port: 443
-  server: 35.72.81.216
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 166
-  password: NQ26071394
-  port: 443
-  server: ready-kangaroo.rooster465.autos
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 167
-  password: ND91608427
-  port: 443
-  server: sensible-mongrel.rooster465.autos
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 168
-  password: IL37892054
-  port: 443
-  server: engaged-ram.rooster465.autos
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 169
-  password: NQ26071394
-  port: 443
-  server: skilled-polliwog.rooster465.autos
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 170
-  password: UZ15382649
-  port: 443
-  server: moral-dolphin.rooster465.autos
-  sni: moral-dolphin.rooster465.autos
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 171
-  password: NQ26071394
-  port: 443
-  server: real-ewe.rooster465.autos
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 172
-  password: ON38567014
-  port: 443
-  server: vast-turkey.rooster465.autos
-  skip-cert-verify: true
-  sni: vast-turkey.rooster465.autos
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 173
-  password: NQ26071394
-  port: 443
-  server: correct-starfish.rooster465.autos
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 174
-  password: CF68213490
-  port: 443
-  server: funny-hawk.rooster465.autos
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 175
-  password: WG39087154
-  port: 443
-  server: nearby-cod.rooster465.autos
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 176
-  password: PD07395842
-  port: 443
-  server: united-bedbug.rooster465.autos
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 177
-  password: OD90375861
-  port: 443
-  server: fit-calf.rooster465.autos
-  sni: fit-calf.rooster465.autos
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 178
-  password: AE62539071
-  port: 443
-  server: distinct-quail.rooster465.autos
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 180
-  password: CF68213490
-  port: 443
-  server: gentle-mastiff.rooster465.autos
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 181
-  password: NQ26071394
-  port: 443
-  server: promoted-rattler.rooster465.autos
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 183
-  password: NQ26071394
-  port: 443
-  server: thankful-piranha.rooster465.autos
-  sni: thankful-piranha.rooster465.autos
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 184
-  password: IQ68037294
-  port: 443
-  server: humane-bird.rooster465.autos
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 190
-  password: ultra@kWZdAzt_IH593eGLRjdxnBZ0
-  port: 10010
-  server: z-jp1.251313.xyz
-  skip-cert-verify: true
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇯🇵 日本 | vmess | 192
-  network: tcp
-  port: 53225
-  server: jpaws.ccwink.photos
-  servername: gw.alicdn.com
+  name: 🇯🇵 日本 | vmess | 149
+  network: ws
+  port: '443'
+  server: UcKniXjfd2JOKBmx.v.3dns.vip
+  servername: UcKniXjfd2JOKBmx.v.3dns.vip
   tls: true
   type: vmess
-  uuid: a157bb84-dd84-4ad8-86b0-0656bc76e4d1
-- name: 🇯🇵 日本 | trojan | 193
-  password: ultra@kWZdAzt_IH593eGLRjdxnBZ0
-  port: 10010
-  server: z-jp2.251313.xyz
-  skip-cert-verify: true
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: UcKniXjfd2JOKBmx.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵 日本 | vmess | 150
+  network: ws
+  port: '443'
+  server: J3Nz0zA0r13AoVhH.v.3dns.vip
+  servername: J3Nz0zA0r13AoVhH.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: J3Nz0zA0r13AoVhH.v.3dns.vip
+    path: /ws-vmess
+- name: 🇯🇵 日本 | trojan | 151
+  password: CF68213490
+  port: 443
+  server: in-oriole.rooster465.autos
   type: trojan
-- name: 🇯🇵 日本 | trojan | 194
-  password: ultra@kWZdAzt_IH593eGLRjdxnBZ0
-  port: 10012
-  server: z-jp1.251313.xyz
-  skip-cert-verify: true
+- name: 🇯🇵 日本 | trojan | 153
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.kherson.ua
   type: trojan
-- name: 🇯🇵 日本 | trojan | 195
+- name: 🇯🇵 日本 | trojan | 157
+  network: ws
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  port: 443
+  server: 161.248.63.77
+  sni: hhcm.hhxaf.cc.cd
+  type: trojan
+  ws-opts:
+    path: /
+- name: 🇯🇵 日本 | trojan | 158
   password: NQ26071394
   port: 443
   server: gentle-platypus.rooster465.autos
   type: trojan
+- name: 🇯🇵 日本 | trojan | 160
+  password: 4c3164ee-abcf-4091-abea-d1cd4937a68d
+  port: 443
+  server: 35.72.81.216
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇯🇵 日本 | vmess | 201
+  name: 🇯🇵 日本 | vmess | 163
   network: ws
   port: '8998'
   server: cc28.goingside.site
@@ -568,22 +554,177 @@ proxies:
     headers:
       Host: cc28.goingside.site
     path: /
-- name: 🇯🇵 日本 | trojan | 202
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵 日本 | vmess | 164
+  network: tcp
+  port: 53225
+  server: jpaws.ccwink.photos
+  servername: gw.alicdn.com
+  tls: true
+  type: vmess
+  uuid: a157bb84-dd84-4ad8-86b0-0656bc76e4d1
+- name: 🇯🇵 日本 | trojan | 165
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.odesa.ua
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 169
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.kiev.ua
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 170
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 2053
   server: official.tokyometropolis.kyiv.ua
   type: trojan
-- name: 🇯🇵 日本 | trojan | 206
+- alterId: 1
+  cipher: auto
+  name: 🇯🇵 日本 | vmess | 172
+  network: tcp
+  port: '21586'
+  server: g06.jp01-nn-vm0.entry.fr0528.art
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 9c955dfc-c1d6-3de3-8230-deac3bd9c1a2
+- name: 🇯🇵 日本 | trojan | 174
+  password: ultra@kWZdAzt_IH593eGLRjdxnBZ0
+  port: 10010
+  server: z-jp1.251313.xyz
+  skip-cert-verify: true
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 175
+  password: ultra@kWZdAzt_IH593eGLRjdxnBZ0
+  port: 10010
+  server: z-jp2.251313.xyz
+  skip-cert-verify: true
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 177
+  password: IQ68037294
+  port: 443
+  server: humane-bird.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 179
+  password: NQ26071394
+  port: 443
+  server: thankful-piranha.rooster465.autos
+  sni: thankful-piranha.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 180
+  password: NQ26071394
+  port: 443
+  server: promoted-rattler.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 182
+  password: OD90375861
+  port: 443
+  server: fit-calf.rooster465.autos
+  sni: fit-calf.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 183
+  password: CF68213490
+  port: 443
+  server: funny-hawk.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 185
+  password: UZ15382649
+  port: 443
+  server: moral-dolphin.rooster465.autos
+  sni: moral-dolphin.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 186
+  password: PD07395842
+  port: 443
+  server: united-bedbug.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 187
+  password: ND91608427
+  port: 443
+  server: sensible-mongrel.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 188
+  password: NQ26071394
+  port: 443
+  server: real-ewe.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 189
+  password: AE62539071
+  port: 443
+  server: distinct-quail.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 191
+  password: WG39087154
+  port: 443
+  server: nearby-cod.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 192
+  password: ON38567014
+  port: 443
+  server: vast-turkey.rooster465.autos
+  skip-cert-verify: true
+  sni: vast-turkey.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 194
+  password: CF68213490
+  port: 443
+  server: brief-warthog.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 195
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.chernigov.ua
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 196
+  password: NQ26071394
+  port: 443
+  server: skilled-polliwog.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 198
+  password: IL37892054
+  port: 443
+  server: engaged-ram.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 200
+  password: ultra@kWZdAzt_IH593eGLRjdxnBZ0
+  port: 10012
+  server: z-jp1.251313.xyz
+  skip-cert-verify: true
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 203
+  password: ND91608427
+  port: 443
+  server: thankful-mustang.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 209
   password: ultra@kWZdAzt_IH593eGLRjdxnBZ0
   port: 10009
   server: z-jp1.251313.xyz
   skip-cert-verify: true
   type: trojan
-- name: 🇯🇵 日本 | trojan | 214
-  password: d050aca3-9df2-4461-90ec-92373c1d7636
-  port: 44184
-  server: v2jp.k1.ssnss.live
-  skip-cert-verify: false
+- name: 🇯🇵 日本 | trojan | 210
+  password: NQ26071394
+  port: 443
+  server: ready-kangaroo.rooster465.autos
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 221
+  password: ultra@kWZdAzt_IH593eGLRjdxnBZ0
+  port: 10009
+  server: z-jp2.251313.xyz
+  sni: www.cloudflare.com
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 224
+  password: ultra@kWZdAzt_IH593eGLRjdxnBZ0
+  port: 10008
+  server: z-jp2.251313.xyz
+  sni: www.cloudflare.com
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 227
+  password: IQ68037294
+  port: 443
+  server: definite-giraffe.rooster465.autos
+  sni: definite-giraffe.rooster465.autos
   type: trojan
 - alterId: 0
   cipher: auto
@@ -615,27 +756,3 @@ proxies:
     headers:
       Host: n1753598445.74qxv.top
     path: /
-- cipher: aes-256-gcm
-  name: 🇯🇵 日本2|@ripaojiedian
-  password: Butterfly123@qwe9527
-  port: 40001
-  server: 103.236.66.4
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇯🇵 日本3|@ripaojiedian
-  password: Butterfly123@qwe9527
-  port: 40002
-  server: 103.236.66.4
-  type: ss
-- name: 节点日期：2026-09-07
-  network: ws
-  password: humanity
-  port: 443
-  server: www.speedtest.net
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: /assignment
