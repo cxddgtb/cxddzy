@@ -185,33 +185,49 @@ proxies:
   tls: false
   type: hysteria2
 - client-fingerprint: chrome
-  name: 🇸🇬 新加坡 | SGP
-  network: ws
-  port: 8443
-  server: 8.35.211.145
-  servername: mianfei-73q.pages.dev
+  grpc-opts:
+    grpc-service-name: update
+  name: '🇸🇬SG_1|4.8MB/s #1'
+  network: grpc
+  port: 10037
+  reality-opts:
+    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
+    short-id: '!!str 686c0ef0'
+  server: sg2-r.link-t7.com
+  servername: s0.awsstatic.com
   tls: true
   type: vless
   udp: true
-  uuid: 8666ab45-8e3d-4988-841b-2561d91e32d5
+  uuid: D2436339-0F26-479A-8064-4D91C2B93652
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: update
+  name: 🇸🇬 新加坡 | SGP 2
+  network: grpc
+  port: 10036
+  reality-opts:
+    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
+    short-id: '!!str 686c0ef0'
+  server: sg1-r.link-t7.com
+  servername: s0.awsstatic.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: D2436339-0F26-479A-8064-4D91C2B93652
+- name: 🇸🇬 新加坡 | SGP 3
+  network: ws
+  port: 8080
+  server: 162.159.43.187
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  tls: false
+  type: vless
+  udp: true
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   ws-opts:
     headers:
-      Host: mianfei-73q.pages.dev
-    path: /proxyip=154.3.33.43
-- client-fingerprint: safari
-  flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡 | SGP 3
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: rmJLsckpATk3jDodB0OLaQ1Fp4b87RLw68gB3cE4QCo
-    short-id: '!!str 2fdc37f435a78e20'
-  server: 163.128.98.190
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: eb76362a-1367-4d4f-957c-2b2cfb2300aa
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+    path: /?ed=2560security=tls
 - alpn:
   - h2
   - http/1.1
@@ -2812,21 +2828,6 @@ proxies:
   port: 443
   server: intense-wildcat.rooster465.autos
   type: trojan
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: update
-  name: '🇸🇬SG_1|4.8MB/s #1'
-  network: grpc
-  port: 10037
-  reality-opts:
-    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-    short-id: '!!str 686c0ef0'
-  server: sg2-r.link-t7.com
-  servername: s0.awsstatic.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: D2436339-0F26-479A-8064-4D91C2B93652
 - name: 🇸🇬 新加坡 | trojan | 258
   password: CF68213490
   port: 443
@@ -3063,10 +3064,3 @@ proxies:
   tls: false
   type: vmess
   uuid: 0863424a-f6e8-4486-b85a-a7144ee89ddc
-- name: '🇸🇬 新加坡 | SGP #1'
-  password: 5504eaa8-1395-402f-8e0e-75ecd762e627
-  port: 443
-  server: sg2.998998.best
-  skip-cert-verify: true
-  sni: nat6.outsidemyheart.space
-  type: trojan
