@@ -52,6 +52,21 @@ proxies:
   tls: false
   type: vless
   uuid: dfad3362-8534-4495-bf49-89f2ae229e7a
+- client-fingerprint: chrome
+  name: '🇯🇵_JP_日本 #1'
+  network: ws
+  port: 443
+  server: 172.104.81.253
+  servername: decf.xzdq.eu.org
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4ec2c66e-becd-4c51-9d6d-9ef74b27c95a
+  ws-opts:
+    headers:
+      Host: decf.xzdq.eu.org
+    path: /api/v1/539e86
 - name: '日本 #6'
   obfs: salamander
   obfs-password: d0dd99b2b4da604123ce17b6d17072a2
@@ -98,42 +113,61 @@ proxies:
   port: 40002
   server: 103.236.66.4
   type: ss
-- alpn:
-  - h3
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
+- name: 🇯🇵JP_1|2.2MB/s
+  password: 'null'
+  port: '443'
+  server: fan.571589.xyz
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: 'null'
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
   name: 🇯🇵 日本 | JPN
-  network: ws
+  network: tcp
   port: 443
-  server: 172.105.225.6
-  servername: decf.xzdq.eu.org
+  reality-opts:
+    public-key: kb1uhDsBcfsCD6acCuFcVERW29dscNGIjKPd67NArVk
+    short-id: '!!str ab3b914f0c9d9de5'
+  server: 47.74.3.200
+  servername: www.logitech.com
   tls: true
   type: vless
   udp: true
-  uuid: 4ec2c66e-becd-4c51-9d6d-9ef74b27c95a
-  ws-opts:
-    headers:
-      Host: decf.xzdq.eu.org
-    path: /api/v1/539e86
-- alpn:
-  - h3
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: 🇯🇵 日本 | JPN 2
-  network: ws
+  uuid: 7fb42fab-ea8a-4f0f-af9e-55df8ae6cb1d
+- auth: 0bffb8e71bca29788862f986caae97b3
+  name: 🇯🇵JP_1|1.1MB/s
+  obfs: salamander
+  obfs-password: 5c8f1a3e7b2d9046c1f8a5e3b7d04f2a
+  password: 0bffb8e71bca29788862f986caae97b3
   port: 443
-  server: 172.104.81.253
-  servername: decf.xzdq.eu.org
-  tls: true
-  type: vless
+  server: 8.211.175.129
+  skip-cert-verify: true
+  sni: 8.211.175.129
+  type: hysteria2
   udp: true
-  uuid: 4ec2c66e-becd-4c51-9d6d-9ef74b27c95a
-  ws-opts:
-    headers:
-      Host: decf.xzdq.eu.org
-    path: /api/v1/539e86
+- auth: 20b7100438be713dc89876906214c5b1
+  name: 🇯🇵 日本 | JPN 3
+  obfs: salamander
+  obfs-password: 5c8f1a3e7b2d9046c1f8a5e3b7d04f2a
+  password: 20b7100438be713dc89876906214c5b1
+  port: 443
+  server: 8.209.217.129
+  skip-cert-verify: true
+  sni: 8.209.217.129
+  type: hysteria2
+  udp: true
+- auth: 6219d77fdd9d4570d1c473de7f051c44
+  name: 🇯🇵 日本 | JPN 4
+  obfs: salamander
+  obfs-password: 5c8f1a3e7b2d9046c1f8a5e3b7d04f2a
+  password: 6219d77fdd9d4570d1c473de7f051c44
+  port: 443
+  server: 8.211.152.47
+  skip-cert-verify: true
+  sni: 8.211.152.47
+  type: hysteria2
+  udp: true
 - cipher: chacha20-ietf-poly1305
   name: C🟠🇯🇵[🎬🤖📺🎭]_dokng.com_b3356b15
   password: ljqdalu13..
@@ -190,7 +224,7 @@ proxies:
   server: fan.587475.xyz
   tls: true
   type: http
-- name: D🔴🇯🇵[📺🎭🎪]_dokng.com_94469bf7
+- name: 🇯🇵JP_2|2.4MB/s
   password: ''
   port: 8094
   server: 110.80.25.76
@@ -625,12 +659,6 @@ proxies:
   tls: false
   type: vmess
   uuid: 7a6cb59b-fbcd-3f50-b5f2-a2534326c4c8
-- name: 🇯🇵 日本 | trojan | 36
-  password: ultra@kWZdAzt_IH593eGLRjdxnBZ0
-  port: 10009
-  server: z-jp1.1card.cc
-  sni: www.cloudflare.com
-  type: trojan
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇯🇵 日本 | vless | 38
@@ -654,16 +682,6 @@ proxies:
   tls: false
   type: vmess
   uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
-- client-fingerprint: chrome
-  name: 🇶🇦 QA_108
-  network: tcp
-  password: ultra@kWZdAzt_IH593eGLRjdxnBZ0
-  port: 10008
-  server: z-jp2.1card.cc
-  skip-cert-verify: true
-  sni: www.cloudflare.com
-  type: trojan
-  udp: true
 - client-fingerprint: ios
   flow: xtls-rprx-vision
   name: 🇯🇵 日本 | vless | 43
@@ -1261,14 +1279,6 @@ proxies:
   sni: www.microsoft.com
   tls: false
   type: hysteria2
-- name: 🇯🇵JP_1|2.2MB/s
-  password: 'null'
-  port: '443'
-  server: fan.571589.xyz
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: 'null'
 - alterId: 0
   cipher: auto
   name: JP2｜原生/疑似家宽｜非常安全
@@ -1312,6 +1322,45 @@ proxies:
     headers:
       Host: n1753598445.74qxv.top
     path: /
+- name: '🇯🇵 日本 | JPN #1'
+  obfs: salamander
+  obfs-password: salamander
+  password: 0bffb8e71bca29788862f986caae97b3
+  port: 443
+  server: 8.211.175.129
+  skip-cert-verify: true
+  sni: 8.211.175.129
+  tls: false
+  type: hysteria2
+- name: '🇯🇵 日本 | JPN #2'
+  obfs: salamander
+  obfs-password: salamander
+  password: 20b7100438be713dc89876906214c5b1
+  port: 443
+  server: 8.209.217.129
+  skip-cert-verify: true
+  sni: 8.209.217.129
+  tls: false
+  type: hysteria2
+- name: '🇯🇵 日本 | JPN #3'
+  obfs: salamander
+  obfs-password: salamander
+  password: 6219d77fdd9d4570d1c473de7f051c44
+  port: 443
+  server: 8.211.152.47
+  skip-cert-verify: true
+  sni: 8.211.152.47
+  tls: false
+  type: hysteria2
+- alterId: 2
+  cipher: auto
+  name: '🇯🇵 日本 | JPN #4'
+  network: tcp
+  port: '30806'
+  server: v6.hdacd.com
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - client-fingerprint: unsafe
   name: 节点日期：2026-09-13
   network: ws
