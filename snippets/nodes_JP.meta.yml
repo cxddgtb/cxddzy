@@ -192,24 +192,24 @@ proxies:
   tls: true
   type: vless
   uuid: 7fb42fab-ea8a-4f0f-af9e-55df8ae6cb1d
-- name: '🇯🇵_JP_日本 #1'
-  obfs: salamander
-  obfs-password: 5c8f1a3e7b2d9046c1f8a5e3b7d04f2a
-  password: 20b7100438be713dc89876906214c5b1
-  port: 443
-  server: 8.209.217.129
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵_JP_日本
+  network: http
+  port: 49432
+  server: 38.47.121.14
   skip-cert-verify: true
-  sni: 8.209.217.129
-  type: hysteria2
+  tls: false
+  type: vmess
   udp: true
-- name: '🇯🇵_JP_日本_1 #1'
-  obfs: salamander
-  obfs-password: 5c8f1a3e7b2d9046c1f8a5e3b7d04f2a
-  password: 6219d77fdd9d4570d1c473de7f051c44
-  port: 443
-  server: 8.211.152.47
+  uuid: ce94f204-ffa6-4fa8-a1dc-ecfccfd463cb
+- name: '日本 #1 #1'
+  password: 184cdec28da5a09450803c8debcd2cc9
+  port: 50160
+  server: 138.3.208.26
   skip-cert-verify: true
-  sni: 8.211.152.47
+  sni: www.bing.com
+  tls: false
   type: hysteria2
   udp: true
 - name: '日本 #6'
@@ -218,14 +218,6 @@ proxies:
   password: 07a4fcf5553a80cf300374d325386038
   port: 443
   server: 141.147.151.58
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
-- name: '日本 #1 #1'
-  password: 184cdec28da5a09450803c8debcd2cc9
-  port: 50160
-  server: 138.3.208.26
   skip-cert-verify: true
   sni: www.bing.com
   tls: false
@@ -250,88 +242,45 @@ proxies:
   port: 40002
   server: 103.236.66.4
   type: ss
-- auth: 9b5ebb1c-5221-4381-850e-0b5eaac603e2
-  name: '🇯🇵 日本 | JPN #6'
-  password: 9b5ebb1c-5221-4381-850e-0b5eaac603e2
-  port: 8443
-  server: hyfnjp03.459292.xyz
+- client-fingerprint: chrome
+  name: '🇯🇵JP_1|4.1MB/s #2'
+  network: ws
+  password: d83a390c-33c3-4577-9258-e062f8ebdc16
+  port: '443'
+  server: 172.64.41.251
+  skip-cert-verify: false
+  sni: oa1.hyas.space
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/52.0.2743.116 Safari/537.36
+    path: /x7f9k2m4p8
+- name: 🇯🇵 日本 | JPN
+  network: ws
+  password: d83a390c-33c3-4577-9258-e062f8ebdc16
+  port: 443
+  server: 172.64.41.251
   skip-cert-verify: true
-  sni: localhost
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | JPN 2
-  network: ws
-  port: 443
-  server: 103.27.186.195
-  servername: m73j8.fssr.jst.hh.vavava.kdns.fr
-  tls: true
-  type: vless
-  udp: true
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  sni: oa1.hyas.space
+  type: trojan
   ws-opts:
     headers:
-      Host: m73j8.fssr.jst.hh.vavava.kdns.fr
-    path: /?ed=2560
+      Host: oa1.hyas.space
+    path: /x7f9k2m4p8
 - alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | JPN 3
-  network: tcp
-  port: 24001
-  reality-opts:
-    public-key: TGnwQRDCN1sfSE77zO-v0Hm9NosFgNF5XbOOu2RIUXQ
-    short-id: '!!str 7462443874d3cec4'
-  server: 8.210.201.148
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
+  - ''
+  alterId: 2
+  cipher: auto
+  name: 🇯🇵 日本 | JPN 2
+  port: 30806
+  server: v6.hdacd.com
+  skip-cert-verify: true
+  tls: false
+  type: vmess
   udp: true
-  uuid: 5a6eb94c-5d6d-43f1-9828-f629c51f2db7
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | JPN 4
-  network: ws
-  port: 443
-  server: cdn.cf.3666888.xyz
-  servername: m73j8.fssr.jst.hh.vavava.kdns.fr
-  tls: true
-  type: vless
-  udp: true
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  ws-opts:
-    headers:
-      Host: m73j8.fssr.jst.hh.vavava.kdns.fr
-    path: /?ed=2560
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | JPN 5
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: -xifNSQULgG36to_xCmk0u61ncHEJqNHklsiaRIxO1A
-    short-id: '!!str f6c05c88'
-  server: ntt.ddnnss.me
-  servername: slack.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 363d3f39-bed2-3b6a-b692-c7c3236c2b1c
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | JPN 6
-  network: tcp
-  port: 49921
-  reality-opts:
-    public-key: 1ejQLdV5c4EDRnsR56OJzNBRNE1SR59vF9ZR2FYTonI
-    short-id: '!!str 5a80eca0ce05a6'
-  server: jprbhhzalybqwjok.jiedddym.com
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 6dbb8854-17a5-4684-b930-c11f022975ec
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - cipher: chacha20-ietf-poly1305
   name: C🟠🇯🇵[🎬🤖📺🎭]_dokng.com_b3356b15
   password: ljqdalu13..
@@ -1698,21 +1647,6 @@ proxies:
   server: z-jp1.1card.cc
   sni: www.cloudflare.com
   type: trojan
-- client-fingerprint: chrome
-  name: 🇯🇵JP_1|4.1MB/s
-  network: ws
-  password: d83a390c-33c3-4577-9258-e062f8ebdc16
-  port: '443'
-  server: 172.64.41.251
-  skip-cert-verify: false
-  sni: oa1.hyas.space
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/52.0.2743.116 Safari/537.36
-    path: /x7f9k2m4p8
 - alterId: 0
   cipher: auto
   name: JP2｜原生/疑似家宽｜非常安全
@@ -1756,51 +1690,30 @@ proxies:
     headers:
       Host: n1753598445.74qxv.top
     path: /
-- name: '🇯🇵 日本 | JPN #2'
-  password: 9b5ebb1c-5221-4381-850e-0b5eaac603e2
-  port: 8443
-  server: jp03.459292.xyz
+- name: '🇯🇵_JP_日本 #1'
+  obfs: salamander
+  obfs-password: 5c8f1a3e7b2d9046c1f8a5e3b7d04f2a
+  password: 20b7100438be713dc89876906214c5b1
+  port: 443
+  server: 8.209.217.129
   skip-cert-verify: true
-  sni: localhost
-  tls: false
+  sni: 8.209.217.129
   type: hysteria2
-- name: '🇯🇵 日本 | JPN #3'
-  password: 9b5ebb1c-5221-4381-850e-0b5eaac603e2
-  port: 8443
-  server: jp06.459292.xyz
+  udp: true
+- name: '🇯🇵_JP_日本_1 #1'
+  obfs: salamander
+  obfs-password: 5c8f1a3e7b2d9046c1f8a5e3b7d04f2a
+  password: 6219d77fdd9d4570d1c473de7f051c44
+  port: 443
+  server: 8.211.152.47
   skip-cert-verify: true
-  sni: localhost
-  tls: false
+  sni: 8.211.152.47
   type: hysteria2
-- name: '🇯🇵 日本 | JPN #4'
-  password: 9b5ebb1c-5221-4381-850e-0b5eaac603e2
-  port: 8443
-  server: 27add0b5.459921.xyz
-  skip-cert-verify: true
-  sni: localhost
-  tls: false
-  type: hysteria2
-- name: '🇯🇵 日本 | JPN #5'
-  password: 9b5ebb1c-5221-4381-850e-0b5eaac603e2
-  port: 8443
-  server: 5791271f.459921.xyz
-  skip-cert-verify: true
-  sni: localhost
-  tls: false
-  type: hysteria2
-- name: '🇯🇵 日本 | JPN #7'
-  password: 9b5ebb1c-5221-4381-850e-0b5eaac603e2
-  port: 8443
-  server: 898ca7c3.459292.xyz
-  skip-cert-verify: true
-  sni: localhost
-  tls: false
-  type: hysteria2
+  udp: true
 - name: '🇯🇵 日本 | JPN #1'
-  password: 9b5ebb1c-5221-4381-850e-0b5eaac603e2
-  port: 8443
-  server: hyfnjp01.459292.xyz
+  password: d83a390c-33c3-4577-9258-e062f8ebdc16
+  port: 443
+  server: 172.64.41.251
   skip-cert-verify: true
-  sni: localhost
-  tls: false
-  type: hysteria2
+  sni: oa1.hyas.space
+  type: trojan
