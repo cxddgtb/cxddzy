@@ -6,6 +6,7 @@ proxies:
   network: tcp
   port: 30824
   server: v24.hdacd.com
+  servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
@@ -29,7 +30,6 @@ proxies:
   network: ws
   port: 8080
   server: yh2.dtku41.xyz
-  servername: ''
   tls: false
   type: vmess
   uuid: 9258153a-dc97-4e39-9037-009abfc4fed0
@@ -45,7 +45,7 @@ proxies:
   server: 112.132.215.108
   servername: ''
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
   udp: true
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
@@ -266,9 +266,16 @@ proxies:
   type: vmess
   udp: true
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- name: 🇨🇳@FreakConfig
+  network: tcp
+  password: Masir_Sefid
+  port: 443
+  server: 37.156.45.168
+  sni: store.steampowered.com
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇨🇳 中国 | vmess | 02
+  name: 🇨🇳 中国 | vmess | 03
   network: tcp
   port: '10001'
   server: 106.52.57.86
@@ -276,19 +283,6 @@ proxies:
   tls: false
   type: vmess
   uuid: f56b9a92-47d4-4d6e-b828-1aa3e96dae65
-- name: 🇨🇳 中国 | vless | 03
-  network: ws
-  port: 443
-  server: 101.96.234.244
-  servername: kkkk-8oc.pages.dev
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
-  ws-opts:
-    headers:
-      Host: kkkk-8oc.pages.dev
-    path: /?ed=2048fp=chrome
 - alterId: 0
   cipher: auto
   name: 🇨🇳 中国 | vmess | 04
@@ -305,17 +299,36 @@ proxies:
     path: /
 - name: 🇨🇳 中国 | vless | 05
   network: ws
+  port: 443
+  server: 101.96.234.244
+  servername: kkkk-8oc.pages.dev
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  ws-opts:
+    headers:
+      Host: kkkk-8oc.pages.dev
+    path: /?ed=2048fp=chromesecurity=tls
+- name: 🇨🇳 中国 | vless | 06
+  network: ws
   port: 8443
   server: 171.83.48.117
   servername: kkkk-xcd.pages.dev
   skip-cert-verify: false
-  tls: true
+  tls: false
   type: vless
   uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
   ws-opts:
     headers:
       Host: kkkk-xcd.pages.dev
-    path: /?ed=2048fp=chrome
+    path: /?ed=2048fp=chromesecurity=tls
+- name: 🇨🇳 中国 | vless | 07
+  port: 443
+  server: www.visa.cn
+  tls: false
+  type: vless
+  uuid: bacd98b0-ff3e-4be9-ba89-1698f7dfc64d
 - alterId: 64
   cipher: auto
   name: CN2｜家宽｜非常安全
