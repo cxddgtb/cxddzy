@@ -1,7 +1,8 @@
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: HK【机场推荐：https://a9a.xyz】29
+  name: HK【机场推荐：https://a9a.xyz】20
+  network: tcp
   port: 2574
   reality-opts:
     public-key: JXdqcykVt3Ue2ToOemH_AHoZUnQKbGIzaUmeZY7o32Y
@@ -12,17 +13,22 @@ proxies:
   uuid: 032b96c6-752f-4cff-88d1-fad817b0dad3
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇭🇰 香港 | HKG
+  http-opts:
+    headers: {}
+    path:
+    - /
+  name: HK【机场推荐：https://a9a.xyz】21
   network: tcp
   port: 27948
   reality-opts:
     public-key: ZJbUs5ZBJacR5XKdOKz8rI7ovNMcq0ocdCvsA0Z3ul8
   server: 83.229.127.18
   servername: www.amazon.com
-  tls: true
+  tls: false
   type: vless
   udp: true
   uuid: 7010c0c4-ac62-4456-9f40-fead039d2be5
+  xudp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: '🇭🇰 香港 | vless | 41 #1'
@@ -60,6 +66,7 @@ proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision-udp443-udp443-udp443
   name: 🇭🇰 香港 | vless | 56
+  network: tcp
   port: 3077
   reality-opts:
     public-key: 48zW4lXrGFUEbsQ1JSRrv2yLzmxMsWYSk9KACEG_eFk
@@ -107,7 +114,7 @@ proxies:
       Host: shuma.ccwu.cc
     path: '%2F'
 - client-fingerprint: chrome
-  name: UN【机场推荐：https://a9a.xyz】66
+  name: UN【机场推荐：https://a9a.xyz】72
   network: ws
   port: 443
   server: 103.143.81.178
@@ -120,7 +127,7 @@ proxies:
       Host: shuma.ccwu.cc
     path: '%2F'
 - client-fingerprint: chrome
-  name: UN【机场推荐：https://a9a.xyz】69
+  name: UN【机场推荐：https://a9a.xyz】76
   network: ws
   port: 443
   server: 103.101.0.73
@@ -132,15 +139,6 @@ proxies:
     headers:
       Host: shuma.ccwu.cc
     path: '%2F'
-- alterId: 2
-  cipher: auto
-  name: '🇭🇰 香港|@ripaojiedian #3'
-  port: 30807
-  server: v10.hdacd.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - cipher: aes-256-gcm
   name: 🇭🇰 香港2|@ripaojiedian
   password: Butterfly123@qwe9527
@@ -164,27 +162,89 @@ proxies:
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇭🇰 香港 | HKG 2
-  network: tcp
-  port: 53517
-  reality-opts:
-    public-key: rlAsfb-BXMZTnJpvvDrVkP-FO7Ll4-7sWVDPD7GThX4
-  server: 68.64.183.179
-  servername: www.ebay.com
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+  name: D🔴🇭🇰hos[🎬🤖📺🎭]_dokng.com_44bbcc...
+  network: ws
+  port: 40649
+  server: 185.155.235.35
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: true
   tls: true
   type: vless
-  uuid: 0473ce6d-65e6-4ee2-a030-9e7a006f7921
-- name: D🔴🇭🇰hos[📺🎭✨🔍]_dokng.com_054bd5...
-  port: 10808
-  server: 123.58.219.171
-  type: socks5
-- name: C🟠🇭🇰hos[📺🎭🎪📦]_dokng.com_da7c41...
-  password: admin
-  port: 1080
-  server: 47.239.116.165
-  type: socks5
-  username: admin
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  ws-opts:
+    headers:
+      Host: cdn8848.776676.xyz
+    path: /clip/tech/vod?ed=2560
+- name: 🇭🇰 香港 | HKG 2
+  network: ws
+  port: 8443
+  server: 103.180.20.101
+  servername: ty986gfazs.cainiaohub.xyz
+  tls: true
+  type: vless
+  udp: true
+  uuid: 06e177f7-240d-4687-bd85-235505801a5e
+  ws-opts:
+    headers:
+      Host: ty986gfazs.cainiaohub.xyz
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+- name: 🇭🇰 香港 | HKG 3
+  network: ws
+  port: 8443
+  server: 103.148.73.136
+  servername: ty986gfazs.cainiaohub.xyz
+  tls: true
+  type: vless
+  udp: true
+  uuid: 06e177f7-240d-4687-bd85-235505801a5e
+  ws-opts:
+    headers:
+      Host: ty986gfazs.cainiaohub.xyz
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+- client-fingerprint: chrome
+  name: D🔴🇭🇰hos[🎬🤖📺🎭]_dokng.com_0240ce...
+  network: ws
+  port: 443
+  server: 103.101.0.73
+  servername: shuma.ccwu.cc
+  tls: true
+  type: vless
+  udp: true
+  uuid: c18b978e-1c4e-415c-8bea-07942b563a64
+  ws-opts:
+    headers:
+      Host: shuma.ccwu.cc
+      User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)
+        Chrome/70.0.3538.110 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇭🇰 香港 | HKG 6
+  network: ws
+  port: 2096
+  server: 104.21.8.201
+  servername: cdn-hk.skyvora.app
+  tls: true
+  type: vless
+  udp: true
+  uuid: ecb9ab47-31aa-4dd9-92eb-191047b353bd
+  ws-opts:
+    headers:
+      Host: cdn-hk.skyvora.app
+    path: /f7i3lo6xbs
+- fingerprint: ''
+  name: 🇭🇰HK_1|1000KB/s
+  password: 9sK2mP8xQ7vL3nZ6
+  port: 443
+  server: ac7548f3ebe045b39a90288ff1e97528.pnuqcnp.cn
+  skip-cert-verify: true
+  sni: ac7548f3ebe045b39a90288ff1e97528.lwdnxf.cn
+  type: anytls
+  udp: true
+  username: 9sK2mP8xQ7vL3nZ6
 - client-fingerprint: chrome
   ech-opts:
     enable: true
@@ -202,110 +262,120 @@ proxies:
     headers:
       Host: cdn8848.776676.xyz
     path: /html?ed=2560
-- name: A🟢🇭🇰res[📺🎪🎞️✈️]_dokng.com_d5e4...
-  password: T2c9PTpPZz09
+- name: C🟠🇭🇰hos[🎬📺🎭🎞️]_dokng.com_da7c4...
+  password: admin
   port: 1080
-  server: 103.210.161.8
+  server: 47.239.116.165
   type: socks5
-  udp: true
-  username: T2c9PTpPZz09
+  username: admin
+- name: D🔴🇭🇰hos[🎬📺🎭🎪]_dokng.com_d85a93...
+  password: None
+  port: 443
+  server: fan.240104.xyz
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: null
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇭🇰 香港 | vless | 193
-  port: 45905
-  reality-opts:
-    public-key: StvqZwmo9OZKdjPrQiXEPZVQm46vq2DQLtglyVGeFwo
-  server: 45.145.229.234
-  servername: www.paypal.com
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+  name: D🔴🇭🇰hos[🎬📺🎭🎪]_dokng.com_93532e...
+  network: ws
+  port: 443
+  server: 45.145.229.44
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: true
   tls: true
   type: vless
-  uuid: 83de2a89-7b91-47ca-8305-5d8acf48025a
-- name: C🟠🇭🇰hos[📺🎭✨📦]_dokng.com_db363b...
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  ws-opts:
+    headers:
+      Host: cdn8848.776676.xyz
+    path: /setting/friends?ed=2560
+- name: A🟢🇭🇰res[📺🎪🎞️]_dokng.com_50f72a...
+  password: ''
+  port: 1080
+  server: 103.210.161.8
+  skip-cert-verify: true
+  type: socks5
+  username: ''
+- name: C🟠🇭🇰hos[✨]_dokng.com_099454ad
+  password: '!!str 111'
+  port: 11211
+  server: 47.243.173.50
+  skip-cert-verify: true
+  type: socks5
+  username: '111'
+- client-fingerprint: chrome
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+  name: D🔴🇭🇰hos[🎬🤖📺🎭]_dokng.com_fcd20b...
+  network: ws
+  port: 57537
+  server: 221.125.10.8
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  ws-opts:
+    headers:
+      Host: cdn8848.776676.xyz
+    path: /stock?ed=2560
+- name: C🟠🇭🇰hos[📺🎪📦🔍]_dokng.com_db363b...
   password: admin
   port: 8899
   server: 47.242.19.215
   skip-cert-verify: true
   type: socks5
   username: admin
-- client-fingerprint: chrome
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-  name: D🔴🇭🇰hos[🤖✨🎞️📦]_dokng.com_d31aa...
+- alterId: 0
+  cipher: auto
+  name: A🟢🇭🇰res[🎬📺🎭🎪]_dokng.com_630bb7...
   network: ws
   port: 443
-  server: 122.10.119.252
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
+  server: dee2309db4944c248b6d4372c6641e7b.oylfmxz.cn
+  servername: dee2309db4944c248b6d4372c6641e7b.oylfmxz.cn
+  skip-cert-verify: false
   tls: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  type: vmess
+  udp: true
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
   ws-opts:
     headers:
-      Host: cdn8848.776676.xyz
-    path: /photos/avatar/redirect?ed=2560
-- fingerprint: ''
-  name: A🟢🇭🇰res[🤖📺🎭🎪]_dokng.com_218ee7...
-  password: 9sK2mP8xQ7vL3nZ6
-  port: 443
-  server: ac7548f3ebe045b39a90288ff1e97528.pnuqcnp.cn
-  skip-cert-verify: true
-  sni: ac7548f3ebe045b39a90288ff1e97528.lwdnxf.cn
-  type: anytls
-  udp: true
-  username: 9sK2mP8xQ7vL3nZ6
-- client-fingerprint: chrome
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-  name: 🇭🇰HK_1|1.1MB/s
-  network: ws
-  port: 40649
-  server: 185.155.235.35
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /clip/tech/vod?ed=2560
-- name: D🔴🇭🇰hos[🎬📺🎭🎪]_dokng.com_de4eaa...
-  port: 443
-  server: fan.240104.xyz
-  skip-cert-verify: true
-  sni: fan.240104.xyz
-  tls: true
-  type: http
-- name: A🟢🇭🇰res[🎬📺🎭✨]_dokng.com_36c679...
-  password: 7212418a-c4e9-4378-8722-b34bda5f0467
-  port: 56301
-  server: a1.entrance.app.xdns.men
-  skip-cert-verify: true
-  sni: www.microsoft.com
-  type: anytls
-  udp: true
+      Host: dee2309db4944c248b6d4372c6641e7b.oylfmxz.cn
+    path: /
+  xudp: true
 - client-fingerprint: chrome
   encryption: none
-  flow: xtls-rprx-vision
-  http-opts:
-    headers: {}
-    path:
-    - /
-  name: 🇭🇰 香港 | vless | 18
-  network: tcp
-  port: 47481
-  reality-opts:
-    public-key: mBoopmF9JfhJzKygTCLMJOfBmC8OQvNsuI46UUDD2Qw
-    short-id: '!!str '
-  server: 45.145.229.32
-  servername: www.paypal.com
+  name: D🔴🇭🇰hos[🎬🤖📺✨]_dokng.com_97cc52...
+  network: ws
+  port: 443
+  server: 43.161.254.71
+  servername: shuma.ccwu.cc
   tls: true
   type: vless
   udp: true
-  uuid: 965d4b67-706e-4937-a7c4-c0e03f4b4b37
+  uuid: c18b978e-1c4e-415c-8bea-07942b563a64
+  ws-opts:
+    headers:
+      Host: shuma.ccwu.cc
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/45.0.2454.101 Safari/537.36
+    path: /
   xudp: true
+- name: D🔴🇭🇰hos[🎬📺🎭🎪]_dokng.com_5b6c4f...
+  password: 19f72087-4591-4d72-930b-2697078ec2be
+  port: 4433
+  server: hk2.xiaoliyu.cyou
+  skip-cert-verify: true
+  type: hysteria2
+- name: D🔴🇭🇰hos[🎬📺✈️🔍]_dokng.com_054bd...
+  port: 10808
+  server: 123.58.219.171
+  type: socks5
 - name: HK-01-172.64.148.42:2053-STABL...
   network: ws
   port: 2053
@@ -336,11 +406,11 @@ proxies:
     headers:
       Host: va.zhuk.us.kg
     path: '%2FProxyIP%3DProxyIP.US.fxxk.dedyn.io'
-- name: '🇺🇸 美国 | USA #2'
+- name: 🇭🇰 HK香港(mibei77.com 米贝节点分享)
   password: humanity
   port: 443
   server: 104.18.23.63
-  skip-cert-verify: true
+  skip-cert-verify: false
   sni: www.ignitelimit.com
   type: trojan
 - client-fingerprint: chrome
@@ -477,7 +547,7 @@ proxies:
   tls: false
   type: vless
   uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
-- name: 🇭🇰 香港 | vless | 03
+- name: '🇭🇰HK_1|1.1MB/s #1'
   network: ws
   port: 40649
   server: 185.155.235.35
@@ -562,6 +632,15 @@ proxies:
   tls: true
   type: vless
   uuid: 322c0364-b447-45c2-a27c-250376170dc0
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇭🇰 香港 | vless | 18
+  port: 47481
+  server: 45.145.229.32
+  servername: www.paypal.com
+  tls: true
+  type: vless
+  uuid: 965d4b67-706e-4937-a7c4-c0e03f4b4b37
 - client-fingerprint: chrome
   name: 🇭🇰 香港 | vless | 19
   network: tcp
@@ -1341,7 +1420,7 @@ proxies:
     path: '%2FGOrbEhfp=chromesecurity=tls'
 - alterId: 2
   cipher: auto
-  name: 🇭🇰 香港 | vmess | 146
+  name: '🇩🇪 德国 | DEU #1'
   network: tcp
   port: '30833'
   server: v33.hdacd.com
@@ -1695,6 +1774,15 @@ proxies:
   port: 443
   server: kind-unicorn.rooster465.autos
   type: trojan
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇭🇰 香港 | vless | 193
+  port: 45905
+  server: 45.145.229.234
+  servername: www.paypal.com
+  tls: true
+  type: vless
+  uuid: 83de2a89-7b91-47ca-8305-5d8acf48025a
 - client-fingerprint: chrome
   flow: ''
   grpc-opts:
@@ -3237,13 +3325,3 @@ proxies:
     headers:
       Host: hkt.gotochinatown.net
     path: /
-- name: '🇭🇰 香港 | HKG #1'
-  obfs: salamander
-  obfs-password: salamander
-  password: 8294f130408299df8cab08c80bf6f819
-  port: 443
-  server: 24.233.8.109
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
