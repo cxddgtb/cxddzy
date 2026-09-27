@@ -15,7 +15,7 @@ proxies:
   port: 10936
   server: mn.qwer-cn.org
   type: ss
-- name: 🇹🇼 台湾 | trojan | 01
+- name: 🇹🇼 台湾 | trojan | 05
   password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
   port: 3462
   server: 60.250.152.230
@@ -24,7 +24,7 @@ proxies:
   type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇹🇼 台湾 | vmess | 04
+  name: 🇹🇼 台湾 | vmess | 08
   network: tcp
   port: '35034'
   server: 165.154.195.38
@@ -32,14 +32,25 @@ proxies:
   tls: false
   type: vmess
   uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
-- name: 🇹🇼 台湾 | trojan | 17
+- name: 🇹🇼 台湾 | trojan | 23
+  network: ws
+  password: f15900b5-f86b-432d-a67c-45325dc66a2d
+  port: 443
+  server: ttww11.bpca2026.top
+  skip-cert-verify: true
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ttww11.bpca2026.top
+    path: '%2Fimages'
+- name: 🇹🇼 台湾 | trojan | 26
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
-  server: official.taipeicitygovernment.if.ua
+  server: official.taipeicitygovernment.biz.ua
   type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇹🇼 台湾 | vmess | 24
+  name: 🇹🇼 台湾 | vmess | 28
   network: ws
   port: '443'
   server: 654168416355441.oylfmxz.cn
@@ -53,44 +64,30 @@ proxies:
     path: /
 - alpn:
   - http/1.1
-  name: 🇹🇼 台湾 | trojan | 26
+  name: 🇹🇼 台湾 | trojan | 32
   password: b5a21d2a-6208-4e23-91ab-c2423c2ae362
   port: 443
   server: tw2.microsoft-orgwly.vip
   sni: tls.microsoft-orgwly.vip
   type: trojan
-- name: 🇹🇼 台湾 | trojan | 28
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 8443
-  server: official.taipeicitygovernment.biz.ua
+- client-fingerprint: safari
+  name: 🇹🇼TW_1|1.3MB/s
+  network: ws
+  password: f15900b5-f86b-432d-a67c-45325dc66a2d
+  port: '443'
+  server: zhilegelian1.bpca2026.top
+  skip-cert-verify: false
+  sni: zhilegelian1.bpca2026.top
   type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)
+        Chrome/70.0.3538.77 Safari/537.36
+    path: /images
 - alterId: 0
   cipher: auto
   name: TW
-  network: ws
-  port: 443
-  server: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: TW2
-  network: ws
-  port: 443
-  server: dee2309db4se3g5sds35g4s3dg.oylfmxz.cn
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: TW3
   network: ws
   port: 443
   server: dee2309db4944c248b6d4372c6641e25.oylfmxz.cn
@@ -108,11 +105,4 @@ proxies:
   server: tuntro011.instconn.com
   skip-cert-verify: true
   sni: cntwbta.686911.xyz
-  type: trojan
-- name: 🇹🇼 🇨🇳 台湾 | TWN
-  password: f15900b5-f86b-432d-a67c-45325dc66a2d
-  port: 443
-  server: ttww11.bpca2026.top
-  skip-cert-verify: true
-  sni: ttww11.bpca2026.top
   type: trojan
