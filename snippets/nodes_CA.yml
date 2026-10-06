@@ -47,7 +47,9 @@ proxies:
   network: tcp
   port: 35034
   server: 165.154.195.38
+  servername: ''
   skip-cert-verify: true
+  tls: false
   type: vmess
   uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
 - alterId: 0
@@ -56,7 +58,6 @@ proxies:
   network: tcp
   port: 22324
   server: 198.57.27.190
-  servername: null
   skip-cert-verify: true
   tls: false
   type: vmess
@@ -67,6 +68,7 @@ proxies:
   network: tcp
   port: 22324
   server: 167.17.68.89
+  servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
@@ -277,17 +279,17 @@ proxies:
     headers:
       Host: tms.dingtalk.com
     path: /
+- cipher: aes-128-gcm
+  name: '🇨🇦[www.v2nodes.com] ss-CA-1588... #2'
+  password: 4efe1af272e7292139b889f6a63ee071
+  port: 18766
+  server: 64.74.163.69
+  type: ss
 - cipher: aes-256-gcm
-  name: 🇨🇦[www.v2nodes.com] ss-CA-1584...
+  name: '🇨🇦[www.v2nodes.com] ss-CA-1574... #2'
   password: eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH
   port: 9443
   server: yyz-ca-01.blncvpn4u.cc
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇨🇦[www.v2nodes.com] ss-CA-1574...
-  password: eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH
-  port: 9443
-  server: 185.156.47.97
   type: ss
 - cipher: aes-256-gcm
   name: '🇨🇦[www.v2nodes.com] ss-CA-1559... #4'
@@ -314,16 +316,10 @@ proxies:
   server: 51.222.136.236
   type: ss
 - cipher: aes-256-gcm
-  name: '🇨🇦[www.v2nodes.com] ss-CA-1546... #4'
+  name: '🇨🇦[www.v2nodes.com] ss-CA-1546... #2'
   password: Y6R9pAtvxxzmGC
   port: 5601
   server: 51.222.155.113
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇨🇦[www.v2nodes.com] ss-CA-1546... #5'
-  password: g5MeD6Ft3CWlJId
-  port: 5003
-  server: 51.222.155.32
   type: ss
 - cipher: aes-256-gcm
   name: '🇨🇦[www.v2nodes.com] ss-CA-1545... #4'
@@ -343,107 +339,131 @@ proxies:
   port: 445
   server: 51.222.12.127
   type: ss
-- name: '[🇨🇦]t.me/ConfigsHub'
+- alpn:
+  - http/1.1
+  name: '[🇨🇦]t.me/ConfigsHub'
   network: ws
-  password: Config0plus
+  password: mitivpn
   port: 443
-  server: 104.16.75.127
-  sni: api24-normal.tiktokv.com.cyylr.eu.cc
+  server: 188.114.97.6
+  skip-cert-verify: false
+  sni: www.mitivpn.in.net
+  type: trojan
+  ws-opts:
+    path: '%2F720f09dba195249b423f771661162528%2Fworkers%2Fservices%2Fview%2Fmitivpn%2Fproduction'
+- name: '🇨🇦 #1'
+  network: ws
+  password: humanity
+  port: 443
+  server: www.multiplydose.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- alpn:
+  - http/1.1
+  name: '[1596]🎈 🇨🇦 CAN [TR] 🎈 🗺️ #0449...'
+  network: ws
+  password: MiTiVPN
+  port: 443
+  server: 151.101.56.8
+  skip-cert-verify: false
+  sni: default.fastly.com
   type: trojan
   ws-opts:
     headers:
-      Host: api24-normal.tiktokv.com.cyylr.eu.cc
-    path: '%2Fid-tksi'
+      Host: s3z-mitivpn--mitivpn------mitivpn.global.ssl.fastly.net
+    path: /---%40MiTiVPN---%40MiTiVPN/---%40MiTiVPN---%40MiTiVPN/---%40MiTiVPN---%40MiTiVPN/g-b%40MiTiVPN---%40MiTiVPN/---%40MiTiVPN---%40MiTiVPN/---%40MiTiVPN---%40MiTiVPN
+- alpn:
+  - h3
+  - h2
+  - http/1.1
+  name: '[1596]🎈 🇨🇦 CAN [TR] 🎈 🗺️ #d61c...'
+  network: ws
+  password: MiTiVPN
+  port: 443
+  server: 45.131.4.115
+  skip-cert-verify: false
+  sni: Nl-L.App-Cloud.ir
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Nl-L.App-Cloud.ir
+    path: /MiTiVPN%3DN-L
+- name: '🇨🇦 #2'
+  network: ws
+  password: humanity
+  port: 443
+  server: www.gossipglove.com
+  sni: www.gossipglove.com
+  type: trojan
+  ws-opts:
+    path: /assignment
 - name: '[🇨🇦]t.me/ConfigsHub #2'
   network: ws
   password: humanity
   port: 443
-  server: 104.18.13.149
+  server: 104.19.229.21
+  sni: www.gossipglove.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment%3FTELEGRAM--KANAL--UnNurmal--UnNurmal--UnNurmal--UnNurmal--UnNurmal--UnNurmal'
+- alpn:
+  - h3
+  - h2
+  - http/1.1
+  name: 'CA #1'
+  network: ws
+  password: humanity
+  port: 443
+  server: 172.67.221.242
   skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.ignitelimit.com
+    path: /assignment
+- name: '[1596]🎈 🇨🇦 CAN [TR] 🎈 🗺️ #2407...'
+  network: ws
+  password: '!!str 521314'
+  port: 443
+  server: 89.116.180.27
+  sni: hhtj.hhllfly.kdns.fr
+  type: trojan
+  ws-opts:
+    headers:
+      Host: hhtj.hhllfly.kdns.fr
+    path: /pyip%3DTelegram-WangCai2%F0%9F%87%A8%F0%9F%87%B3
+- alpn:
+  - http/1.1
+  name: '[🇨🇦]t.me/ConfigsHub #8'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.246
   sni: www.calmloud.com
   type: trojan
   ws-opts:
     headers:
       Host: www.calmloud.com
     path: '%2Fassignment'
-- name: '[🇨🇦]t.me/ConfigsHub #3'
-  network: ws
+- name: 🇨🇦 CA加拿大(mibei77.com 米贝节点分享)
   password: humanity
   port: 443
-  server: 104.18.32.47
-  sni: www.multiplydose.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.multiplydose.com
-    path: '%2Fassignment'
-- alpn:
-  - http/1.1
-  name: '[1596]🎈 🇨🇦 CAN [TR] 🎈 🗺️ #39b1...'
-  network: ws
-  password: MiTiVPN
-  port: 443
-  server: 199.232.78.150
-  skip-cert-verify: false
-  sni: ssl.fastly.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: s4z-mitivpn--mitivpn------mitivpn.global.ssl.fastly.net
-    path: /---%40MiTiVPN---%40MiTiVPN/---%40MiTiVPN---%40MiTiVPN/---%40MiTiVPN---%40MiTiVPN/s-g%40MiTiVPN---%40MiTiVPN/---%40MiTiVPN---%40MiTiVPN/---%40MiTiVPN---%40MiTiVPN
-- name: 🇷🇺 俄罗斯 | trojan | 19
-  network: ws
-  password: '!!str 521314'
-  port: 443
-  server: 45.67.215.9
-  skip-cert-verify: false
-  sni: tjplay.lxdxo.kdns.fr
-  type: trojan
-  ws-opts:
-    path: /Telegram%2B%40WangCai2
-- name: '[1596]🎈 🇨🇦 CAN [TR] 🎈 🗺️ #780e...'
-  network: ws
-  password: Mitivpn
-  port: 80
-  server: 146.75.116.177
-  type: trojan
-  ws-opts:
-    headers:
-      Host: 3-mitivpn.global.ssl.fastly.net
-    path: /%3Fhttps%3A//t.me/WangCai2%F0%9F%87%A8%F0%9F%87%B3
-- alpn:
-  - http/1.1
-  name: '[🇨🇦]t.me/ConfigsHub #6'
-  network: ws
-  password: humanity
-  port: 443
-  server: 188.114.96.4
-  skip-cert-verify: false
-  sni: www.calmloud.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-- name: '[1596]🎈 🇨🇦 CAN [TR] 🎈 🗺️ #063c...'
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 62.60.152.14
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: '@irdusti(22)🇫🇷'
-  network: ws
-  password: humanity
-  port: 443
-  server: www.hcaptcha.com
+  server: 104.16.174.117
   skip-cert-verify: false
   sni: www.ignitelimit.com
   type: trojan
+- name: '[1596]⭐ 🇨🇦 CAN [TR] ⭐ 📑 🗺️ #26...'
+  network: ws
+  password: MiTiVPN
+  port: 80
+  server: 45.40.150.3
+  type: trojan
   ws-opts:
-    path: /assignment
+    headers:
+      Host: Nl.App-Cloud.ir
+    path: /MiTiVPN%3DNL
 - alpn:
   - h2
   - http/1.1
@@ -458,95 +478,9 @@ proxies:
     headers:
       Host: mitivpn--mitivpn------mitivpn.global.ssl.fastly.net
     path: /---%40MiTiVPN/---%40MiTiVPN/---%40MiTiVPN/---%40MiTiVPN/---%40MiTiVPN%3Dd--ee
-- name: '🇨🇦 #3'
-  network: ws
-  password: humanity
-  port: 443
-  server: www.multiplydose.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- alpn:
-  - h3
-  - h2
-  - http/1.1
-  name: 'CA #1'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.21.46.3
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: 🇨🇦CA加拿大丨yoyapai.com\r
-  password: humanity
-  port: 443
-  server: 104.18.152.219
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  type: trojan
 - alpn:
   - http/1.1
-  name: '🇨🇦 #4'
-  network: tcp
-  password: a3fa5lWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272
-  port: 443
-  server: ca-trojan.bonds.id
-  type: trojan
-- alpn:
-  - http/1.1
-  name: '[1596]🎈 🇨🇦 CAN [TR] 🎈 🗺️ #9180...'
-  network: ws
-  password: MITIVPN
-  port: 443
-  server: 89.116.250.135
-  skip-cert-verify: true
-  sni: ksidi-isid-d.App-Cloud.ir
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Ussa-Si-ieo.App-Cloud.ir
-    path: /---%40MiTiVPN/---%40MiTiVPN/---%40MiTiVPN/---%40MiTiVPN/---%40MiTiVPN%3DUSA
-- name: '[1596]🎈 🇨🇦 CAN [TR] 🎈 🗺️ #d351...'
-  network: ws
-  password: '!!str 521314'
-  port: 443
-  server: 154.83.2.27
-  sni: hhtj.hhllfly.kdns.fr
-  type: trojan
-  ws-opts:
-    headers:
-      Host: hhtj.hhllfly.kdns.fr
-    path: /pyip%3DTelegram-WangCai2%F0%9F%87%A8%F0%9F%87%B3
-- name: 'CA #2'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.16.174.117
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: /assignment
-- name: '[1596]🎈 🇨🇦 CAN [TR] 🎈 🗺️ #cdd9...'
-  network: ws
-  password: '!!str 521314'
-  port: 443
-  server: 45.131.5.9
-  skip-cert-verify: false
-  sni: tjplay.lxdxo.kdns.fr
-  type: trojan
-  ws-opts:
-    headers:
-      Host: tjplay.lxdxo.kdns.fr
-    path: /Telegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- alpn:
-  - http/1.1
-  name: '[🇨🇦]t.me/ConfigsHub #24'
+  name: '[🇨🇦]t.me/ConfigsHub #21'
   network: ws
   password: mitivpn
   port: 443
@@ -558,9 +492,49 @@ proxies:
     headers:
       Host: s2.mitivpn.nl.ssl.global.fastly.ir.iranpoems.ir
     path: '%2F%3Fmitivpn'
+- alpn:
+  - http/1.1
+  name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #2'
+  network: ws
+  password: MiTiVPN
+  port: 443
+  server: 104.254.140.62
+  skip-cert-verify: false
+  sni: ddp-MiTiVPN--MiTiVPN--MiTiVPN---MiTiVPN--MiTiVPN--MiTiVPN.kingnetwork.ir
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Dde1-MiTiVPN--MiTiVPN--MiTiVPN---MiTiVPN--MiTiVPN--MiTiVPN.kingnetwork.ir
+    path: '%2F---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN%2Fdde---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN'
+- name: '[1596]⭐ 🇨🇦 CAN [TR] ⭐ 📑 #094fd...'
+  network: ws
+  password: fde84658-f03b-430a-a86f-c32cb1a2cdad
+  port: 443
+  server: 141.193.213.60
+  skip-cert-verify: false
+  sni: hfaw9h34.bpca2026.top
+  type: trojan
+  ws-opts:
+    headers:
+      Host: hfaw9h34.bpca2026.top
+    path: /images
+- alpn:
+  - h2
+  name: '[1596]🎈 🇨🇦 CAN [TR] 🎈 🗺️ #6cb8...'
+  network: ws
+  password: MITIVPN
+  port: 443
+  server: 151.101.110.219
+  skip-cert-verify: true
+  sni: global.fastly.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: mitivpn--3.global.ssl.fastly.net
+    path: /ed%3Dmitivpn
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 12
+  name: 🇨🇦 加拿大 | vmess | 13
   network: tcp
   port: 22324
   server: 134.195.198.214
@@ -570,7 +544,7 @@ proxies:
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 13
+  name: 🇨🇦 加拿大 | vmess | 17
   network: ws
   port: 80
   server: 137.184.164.233
@@ -584,7 +558,20 @@ proxies:
     path: /vmess
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 18
+  name: 🇨🇦 加拿大 | vmess | 32
+  network: ws
+  port: 443
+  server: 134.195.198.147
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: inna.cfd
+    path: /linkvws
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 | vmess | 38
   network: ws
   port: 443
   server: 23.162.200.227
@@ -598,7 +585,7 @@ proxies:
     path: /linkvws
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 21
+  name: 🇨🇦 加拿大 | vmess | 42
   network: ws
   port: 443
   server: 158.51.121.36
@@ -612,34 +599,9 @@ proxies:
     path: /linkvws
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 30
-  network: ws
-  port: 443
-  server: 134.195.198.147
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: inna.cfd
-    path: /linkvws
-- name: 🇨🇦 加拿大 | trojan | 39
-  password: bc7593fe-0604-4fbe-a70bYWVzLTI1Ni1nY206Q1VuZFNabllzUEtjdTaclWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272
-  port: 443
-  server: ca-trojan.bonds.id
-  type: trojan
-- name: 🇨🇦 加拿大 | trojan | 53
-  password: your_password
-  port: 443
-  server: 35.183.238.42
-  skip-cert-verify: true
-  sni: aws-ca-central-1.f1rocketnode.com
-  type: trojan
-- alterId: 0
-  cipher: auto
   grpc-opts:
     grpc-service-name: api
-  name: 🇨🇦 加拿大 | vmess | 55
+  name: 🇨🇦 加拿大 | vmess | 49
   network: grpc
   port: '2096'
   server: ca.connfull.org
@@ -649,11 +611,11 @@ proxies:
   uuid: f2d7f0d2-9520-4d5c-9714-58cc138513a8
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 61
+  name: 🇨🇦 加拿大 | vmess | 50
   network: ws
-  port: '443'
+  port: 443
   server: mygptagent.org
-  servername: mygptagent.org
+  servername: null
   tls: true
   type: vmess
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
@@ -661,9 +623,15 @@ proxies:
     headers:
       Host: mygptagent.org
     path: /linkvws
-- cipher: aes-128-gcm
-  name: '🇨🇦[www.v2nodes.com] ss-CA-1588... #1'
-  password: 4efe1af272e7292139b889f6a63ee071
-  port: 18766
-  server: 64.74.163.69
-  type: ss
+- name: 🇨🇦 加拿大 | trojan | 55
+  password: bc7593fe-0604-4fbe-a70bYWVzLTI1Ni1nY206Q1VuZFNabllzUEtjdTaclWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272
+  port: 443
+  server: ca-trojan.bonds.id
+  type: trojan
+- name: 🇨🇦 加拿大 | trojan | 57
+  password: your_password
+  port: 443
+  server: 35.183.238.42
+  skip-cert-verify: true
+  sni: aws-ca-central-1.f1rocketnode.com
+  type: trojan
