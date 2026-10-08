@@ -165,7 +165,6 @@ proxies:
   port: 180
   server: 82.198.246.250
   skip-cert-verify: true
-  tls: true
   type: vmess
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
 - alterId: 0
@@ -175,7 +174,6 @@ proxies:
   port: 180
   server: 82.198.246.233
   skip-cert-verify: true
-  tls: true
   type: vmess
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
 - alterId: 0
@@ -195,7 +193,6 @@ proxies:
   port: 23326
   server: 31.76.11.83
   skip-cert-verify: true
-  tls: true
   type: vmess
   uuid: 3dff544a-379e-41f9-95d9-4b95a8e4026e
 - alterId: 0
@@ -233,6 +230,15 @@ proxies:
   port: 7001
   server: 94.156.250.148
   type: ss
+- alpn:
+  - http/1.1
+  name: 🌐 Anycast-IP | 🇦🇹 🇬🇧 | [*CIDR]
+  network: tcp
+  password: kxHw-Dk-e9dffgzYszMlEqLJ92AnY3Pi
+  port: 443
+  server: tr-at-pautina.unlimited-access.ru
+  sni: tr-at-pautina.unlimited-access.ru
+  type: trojan
 - name: 🇬🇧 英国 | trojan | 09
   network: ws
   password: 6884d714-d3c4-4b49-aa20-767ea92837d6
@@ -310,22 +316,24 @@ proxies:
     path: /vpnjantit
 - alterId: 0
   cipher: auto
-  name: 🇬🇧 英国 | vmess | 68
+  name: 未知12
   network: tcp
-  port: '20004'
+  port: 20004
   server: 82.152.197.167
   servername: ''
-  tls: false
+  skip-cert-verify: true
+  tls: true
   type: vmess
   uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
 - alterId: 0
   cipher: auto
-  name: 🇬🇧 英国 | vmess | 89
+  name: 未知105
   network: tcp
-  port: '20003'
+  port: 20003
   server: 82.152.197.167
   servername: ''
-  tls: false
+  skip-cert-verify: true
+  tls: true
   type: vmess
   uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
 - alterId: 0
@@ -378,11 +386,6 @@ proxies:
   tls: true
   type: vmess
   uuid: d8d43cb7-2c08-4e08-969b-a0766a34d59a
-- name: 🇬🇧 英国 | trojan | 139
-  password: 8697fe6b-1lWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272
-  port: 443
-  server: 185.44.76.188
-  type: trojan
 - name: 🇬🇧 英国 | trojan | 158
   network: ws
   password: '!!str 521314'
@@ -467,11 +470,12 @@ proxies:
   uuid: 6780b0c5-5222-423b-b172-205669048a27
 - alterId: 0
   cipher: auto
-  name: 🇬🇧 英国 | vmess | 286
+  name: 未知137
   network: tcp
-  port: '2053'
+  port: 2053
   server: node-uk.connectsuite.org
   servername: ''
+  skip-cert-verify: true
   tls: true
   type: vmess
   uuid: 72f2cbe4-2874-45b7-b6aa-b93077c10c72
