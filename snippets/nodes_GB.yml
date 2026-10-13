@@ -60,6 +60,7 @@ proxies:
   port: 180
   server: 82.198.246.233
   skip-cert-verify: true
+  tls: true
   type: vmess
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
 - alterId: 0
@@ -69,7 +70,6 @@ proxies:
   port: 180
   server: 82.198.246.37
   skip-cert-verify: true
-  tls: true
   type: vmess
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
 - alterId: 0
@@ -98,9 +98,7 @@ proxies:
   network: tcp
   port: 110
   server: 31.77.8.97
-  servername: ''
   skip-cert-verify: true
-  tls: false
   type: vmess
   uuid: d2d8601b-c14b-42c6-b8ea-33889bce152a
 - alterId: 64
@@ -243,13 +241,13 @@ proxies:
 - cipher: aes-256-gcm
   name: '🇬🇧[www.v2nodes.com] ss-GB-1292... #2'
   password: g5h5jleTRSyO3Rk4
-  port: 443
+  port: 80
   server: 149.102.132.184
   type: ss
 - cipher: aes-256-gcm
   name: '🇬🇧[www.v2nodes.com] ss-GB-1289... #2'
   password: LXchLsIwtCeUAUgu
-  port: 443
+  port: 80
   server: 149.102.149.207
   type: ss
 - cipher: aes-256-gcm
@@ -258,78 +256,89 @@ proxies:
   port: 7001
   server: 94.156.250.148
   type: ss
-- alpn:
-  - h2
-  - http/1.1
-  name: '🇬🇧 英国 | GBR #5'
-  password: dKn7hqgST668mj_8EgoMUd3_zPSxnTFQ
-  port: 8443
-  server: 194.55.239.121
-  skip-cert-verify: true
-  sni: api-v2.captaingold.app
-  type: trojan
-  udp: true
-- name: '🇬🇧 英国 | GBR #1 #2'
-  password: dKn7hqgST668mj_8EgoMUd3_zPSxnTFQ
-  port: 8443
-  server: 194.55.239.121
-  skip-cert-verify: true
-  sni: api-v2.captaingold.app
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: ProxyPool | 🇬🇧 英国 | GBR
+  name: 🇬🇧 英国 | GBR 5
   network: ws
   port: 443
-  server: 172.67.142.177
+  server: 172.67.142.142
   skip-cert-verify: true
   tls: true
   type: vmess
   udp: true
-  uuid: 7010447d-5f0f-47a4-ae88-328e3928eac9
+  uuid: 31c3e8e7-f600-436a-87d4-9716143b0b0c
   ws-opts:
     headers:
-      Host: uk.lovehk.xyz
-    path: /London3
-- alpn:
-  - ''
-  alterId: 2
+      Host: ukl.lovehk.xyz
+    path: /London31
+- alterId: 0
   cipher: auto
-  name: 🇬🇧 英国 | GBR 4
-  port: 30836
-  server: v36.hdacd.com
+  name: 🇬🇧 英国 | GBR 7
+  network: ws
+  port: 443
+  server: 172.67.137.209
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
   udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  uuid: 1c3fb1c0-1204-49db-b842-f72d50f014c1
+  ws-opts:
+    headers:
+      Host: ukl.lovehk.xyz
+    path: /London31
+- alterId: 0
+  cipher: auto
+  name: 🇬🇧 英国 | GBR 9
+  network: ws
+  port: 443
+  server: 172.67.137.209
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 31c3e8e7-f600-436a-87d4-9716143b0b0c
+  ws-opts:
+    headers:
+      Host: ukl.lovehk.xyz
+    path: /London31
 - cipher: aes-256-cfb
-  name: C🟠🇬🇧hos[🎬🤖📺🎭]_dokng.com_cadeee...
+  name: C🟠🇬🇧hos[🎬🤖🎭🎪]_dokng.com_cadeee...
   password: amazonskr05
   port: 443
   server: 13.135.199.253
   type: ss
   udp: true
-- alterId: 0
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: A🟢🇬🇧res[🎬🤖📺🎭]_dokng.com_b03ad1...
+- alpn:
+  - http/1.1
+  name: ➤@𝚜𝚒𝚗𝚐𝚋𝚘𝚡𝚡𝚡 | sᴇʀᴠᴇʀ ➠ 🇬🇧
   network: ws
+  password: humanity
   port: 443
-  server: 172.67.142.177
-  servername: uk.lovehk.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 31c3e8e7-f600-436a-87d4-9716143b0b0c
+  server: 5.10.214.53
+  skip-cert-verify: false
+  sni: www.calmloud.com
+  type: trojan
   ws-opts:
     headers:
-      HOST: uk.lovehk.xyz
-    path: /London3
+      Host: www.calmloud.com
+    path: '%2Fassignment'
 - alterId: 0
   cipher: auto
   name: 🇬🇧 英国 | vmess | 09
+  network: ws
+  port: 80
+  server: 51.75.160.126
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: b739a204-ea0d-428b-bbf5-a632ec05edcf
+  ws-opts:
+    headers:
+      Host: ''
+    path: /vmess
+- alterId: 0
+  cipher: auto
+  name: 🇬🇧 英国 | vmess | 10
   network: tcp
   port: '22324'
   server: 186.190.211.147
@@ -338,7 +347,7 @@ proxies:
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
 - alterId: 0
   cipher: auto
-  name: 🇬🇧 英国 | vmess | 17
+  name: 🇬🇧 英国 | vmess | 20
   network: ws
   port: 80
   server: 51.89.138.147
@@ -360,20 +369,6 @@ proxies:
   cipher: auto
   name: 🇬🇧 英国 | vmess | 26
   network: ws
-  port: 80
-  server: 51.75.160.126
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: b739a204-ea0d-428b-bbf5-a632ec05edcf
-  ws-opts:
-    headers:
-      Host: ''
-    path: /vmess
-- alterId: 0
-  cipher: auto
-  name: 🇬🇧 英国 | vmess | 32
-  network: ws
   port: '10000'
   server: 77.68.12.207
   servername: ''
@@ -386,21 +381,7 @@ proxies:
     path: /vpnjantit
 - alterId: 0
   cipher: auto
-  name: 🇬🇧 英国 | vmess | 44
-  network: ws
-  port: 80
-  server: 57.129.132.223
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: a25cbf11-2908-4a1b-a3a8-9a571777dca3
-  ws-opts:
-    headers:
-      Host: google.com
-    path: /vmess/
-- alterId: 0
-  cipher: auto
-  name: 🇬🇧 英国 | vmess | 88
+  name: 🇬🇧 英国 | vmess | 34
   network: tcp
   port: '20003'
   server: 82.152.197.167
@@ -410,7 +391,7 @@ proxies:
   uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
 - alterId: 0
   cipher: auto
-  name: 🇬🇧 英国 | vmess | 91
+  name: 🇬🇧 英国 | vmess | 64
   network: tcp
   port: '20004'
   server: 82.152.197.167
@@ -420,7 +401,7 @@ proxies:
   uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
 - alterId: 0
   cipher: auto
-  name: 🇬🇧 英国 | vmess | 111
+  name: 🇬🇧 英国 | vmess | 108
   network: ws
   port: 443
   server: 66.163.117.58
@@ -432,14 +413,28 @@ proxies:
     headers:
       Host: aksai.org
     path: /linkvws
-- name: 🇬🇧 英国 | trojan | 121
-  password: 8697fe6b-1lWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272
+- name: 🇬🇧 英国 | trojan | 113
+  network: ws
+  password: humanity
   port: 443
-  server: 185.44.76.188
+  server: 213.1.145.50
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇬🇧 英国 | trojan | 124
+  password: d150c8c3-a667-4d3e-843c-739f8558c7d2
+  port: 443
+  server: 198.244.190.189
+  type: trojan
+- name: 🇬🇧 英国 | trojan | 125
+  password: 02e653c9-7c93-46a9-999d-11834bd0c577
+  port: 443
+  server: 132.145.51.172
   type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇬🇧 英国 | vmess | 141
+  name: 🇬🇧 英国 | vmess | 126
   network: tcp
   port: '2053'
   server: 51.38.71.147
@@ -447,14 +442,14 @@ proxies:
   tls: true
   type: vmess
   uuid: 72f2cbe4-2874-45b7-b6aa-b93077c10c72
-- name: 🇬🇧 英国 | trojan | 144
-  password: d150c8c3-a667-4d3e-843c-739f8558c7d2
+- name: 🇬🇧 英国 | trojan | 135
+  password: 8697fe6b-1lWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272
   port: 443
-  server: 198.244.190.189
+  server: 185.44.76.188
   type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇬🇧 英国 | vmess | 145
+  name: 🇬🇧 英国 | vmess | 142
   network: ws
   port: '443'
   server: 185.92.74.108
@@ -468,22 +463,11 @@ proxies:
     path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
-  name: 未知60
-  network: tcp
-  port: 2053
-  server: uk.connfull.org
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 262ce956-68fd-48af-918e-bd829819030c
-- alterId: 0
-  cipher: auto
-  name: 🇬🇧 英国 | vmess | 158
+  name: 🇬🇧 英国 | vmess | 147
   network: ws
   port: '443'
   server: 185.137.223.71
-  servername: ''
+  servername: renderer-stream-2-62.mirra.now
   tls: true
   type: vmess
   uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
@@ -491,38 +475,42 @@ proxies:
     headers:
       Host: renderer-stream-2-62.mirra.now
     path: /api/v1/gpu-stream/socket
-- name: 🇬🇧 英国 | trojan | 164
+- alterId: 0
+  cipher: auto
+  name: 🇬🇧 英国 | vmess | 160
+  network: tcp
+  port: '2053'
+  server: uk.connfull.org
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 262ce956-68fd-48af-918e-bd829819030c
+- name: 🇬🇧 英国 | trojan | 161
   network: ws
-  password: humanity
-  port: 443
-  server: 213.1.145.50
-  sni: www.calmlunch.com
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: 81.102.249.85
+  sni: Koma-YT.PAGeS.Dev
   type: trojan
   ws-opts:
-    path: /assignment
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - alterId: 0
   cipher: auto
   name: 🇬🇧 英国 | vmess | 166
-  network: tcp
-  port: '47832'
-  server: 51.132.38.134
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 859cb52d-0a26-4b2f-a9b1-0eb83115c9d1
-- alterId: 0
-  cipher: auto
-  name: 🇬🇧 英国 | vmess | 178
-  network: tcp
-  port: '54978'
-  server: riga-nin.neninet.ir
-  servername: riga-nin.neninet.ir
+  network: ws
+  port: '443'
+  server: khasav.org
+  servername: khasav.org
   tls: true
   type: vmess
-  uuid: 475e7934-442f-40c5-972b-12f6e0a5a05d
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    path: /linkvws
 - alterId: 0
   cipher: auto
-  name: 🇬🇧 英国 | vmess | 183
+  name: 🇬🇧 英国 | vmess | 176
   network: tcp
   port: '2053'
   server: node-uk.connectsuite.org
@@ -530,17 +518,18 @@ proxies:
   tls: true
   type: vmess
   uuid: 72f2cbe4-2874-45b7-b6aa-b93077c10c72
-- name: 🇬🇧 英国 | trojan | 221
+- alterId: 0
+  cipher: auto
+  name: 🇬🇧 英国 | vmess | 203
+  network: tcp
+  port: '31074'
+  server: de-nin.neninet.ir
+  servername: de-nin.neninet.ir
+  tls: true
+  type: vmess
+  uuid: 475e7934-442f-40c5-972b-12f6e0a5a05d
+- name: 🇬🇧 英国 | trojan | 210
   password: 692650a0-3f10-11f0-8e35-1239d0255272
   port: 443
   server: uk1.test3.net
   type: trojan
-- alterId: 2
-  cipher: auto
-  name: GB29｜机房｜低风险
-  network: tcp
-  port: '30836'
-  server: v36.hdacd.com
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
