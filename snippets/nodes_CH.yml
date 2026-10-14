@@ -5,13 +5,6 @@ proxies:
   port: 8388
   server: 132.243.175.144
   type: ss
-- name: 🇨🇭 瑞士 | trojan | 53
-  password: '!!str 1234567890'
-  port: 443
-  server: 138.124.28.173
-  skip-cert-verify: false
-  sni: kfm-bn0.pages.dev
-  type: trojan
 - alpn:
   - h2
   - http/1.1
@@ -22,6 +15,25 @@ proxies:
   server: 82.163.7.43
   skip-cert-verify: false
   sni: node18.overcdn.ru
+  type: trojan
+- name: 🇨🇭 瑞士 | trojan | 41
+  network: ws
+  password: humanity
+  port: 2053
+  server: 91.245.225.79
+  skip-cert-verify: false
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: '%2Fassignment'
+- name: 🇨🇭 瑞士 | trojan | 53
+  password: '!!str 1234567890'
+  port: 443
+  server: 138.124.28.173
+  skip-cert-verify: false
+  sni: kfm-bn0.pages.dev
   type: trojan
 - name: 🇨🇭 瑞士 | trojan | 58
   password: '!!str 1234567890'

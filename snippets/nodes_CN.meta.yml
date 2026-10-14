@@ -140,22 +140,6 @@ proxies:
   type: vmess
   udp: true
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- alterId: 0
-  cipher: auto
-  name: '🇨🇳_CN_中国_1 #1'
-  network: ws
-  port: 10086
-  server: 120.48.133.162
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
-  ws-opts:
-    headers:
-      Host: ''
-    path: ''
 - alterId: 64
   cipher: auto
   name: 🇨🇳 中国 | vmess | 04
@@ -186,18 +170,20 @@ proxies:
     headers: {}
     path: /
   xudp: true
-- name: 🇸🇬 新加坡 | trojan | 58
+- alpn:
+  - http/1.1
+  name: '🇨🇳 [VL] Китай #11257 | РосТунн...'
   network: ws
-  password: humanity
   port: 443
-  server: 43.169.18.179
-  skip-cert-verify: true
-  sni: www.creationlong.org
-  type: trojan
+  server: 45.130.125.126
+  servername: BItter-CreDIT-61b8.b76EbA0aBb.wORkerS.dEv
+  tls: true
+  type: vless
+  uuid: b69b43d1-091d-4d7c-90b2-7a8bbad9d6a9
   ws-opts:
     headers:
-      Host: www.creationlong.org
-    path: '%2Fassignment'
+      Host: BItter-CreDIT-61b8.b76EbA0aBb.wORkerS.dEv
+    path: '%2FeyJqdW5rIjoiY0U2T212Y21yeEhUZHRKYSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0'
 - alterId: 0
   cipher: auto
   name: 🇨🇳 中国 | vmess | 02
@@ -231,6 +217,20 @@ proxies:
   servername: ''
   skip-cert-verify: true
   tls: true
+  type: vmess
+  uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
+  ws-opts:
+    headers:
+      Host: ''
+    path: ''
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳 中国 | vmess | 06
+  network: ws
+  port: '10086'
+  server: 120.48.133.162
+  servername: ''
+  tls: false
   type: vmess
   uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
   ws-opts:
@@ -276,15 +276,8 @@ proxies:
   server: 120.232.250.161
   type: ss
   udp: true
-- name: CN【机场推荐：https://a9a.xyz】15
+- name: CN【机场推荐：https://a9a.xyz】1
   network: tcp
-  port: 52683
-  server: jp.sofast.live
-  tls: false
-  type: vless
-  uuid: 399b6b23-cc40-4831-a494-61948e2df133
-- client-fingerprint: chrome
-  name: CN【机场推荐：https://a9a.xyz】17
   port: 58011
   server: us22.sofast.live
   tls: false
