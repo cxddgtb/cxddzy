@@ -1,12 +1,27 @@
 proxies:
 - alterId: 2
   cipher: auto
-  name: '🇭🇰_HK_中国香港->🇫🇷_FR_法国 #1'
-  port: 30835
-  server: v35.hdacd.com
+  name: '🇭🇰_HK_中国香港->🇬🇧_GB_英国 #1'
+  port: 30836
+  server: v36.hdacd.com
   skip-cert-verify: true
   tls: false
   type: vmess
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  xudp: true
+- alterId: 0
+  cipher: auto
+  name: '🇷🇺_RU_俄罗斯->🇩🇪_DE_德国 #1'
+  network: ws
+  port: 443
+  server: renderer-stream-2-114.mirra.now
+  servername: renderer-stream-2-114.mirra.now
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 8ffa41d4-e6b5-4af5-a8a9-69e26bec75f5
+  ws-opts:
+    headers:
+      Host: renderer-stream-2-114.mirra.now
+    path: /api/v1/gpu-stream/socket
