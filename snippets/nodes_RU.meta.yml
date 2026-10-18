@@ -180,7 +180,6 @@ proxies:
   tls: false
   type: hysteria2
 - client-fingerprint: random
-  encryption: none
   grpc-opts:
     grpc-service-name: grpc-ru
   name: '🇷🇺[www.v2nodes.com] vless-RU-1... #2'
@@ -208,13 +207,19 @@ proxies:
   port: 18443
   server: 194.87.196.107
   type: ss
-- name: 🇷🇺RU_1|1.7MB/s
+- cipher: chacha20-ietf-poly1305
+  name: '🇷🇺[www.v2nodes.com] ss-RU-1163... #2'
+  password: VVlAff77CnAU43Aoc5j15Y
+  port: 5112
+  server: 90.156.203.62
+  type: ss
+- name: D🔴🇷🇺hos[📺🎪✨📦]_dokng.com_cd0ee9...
   port: 1446
   server: 46.29.166.134
   skip-cert-verify: true
   tls: true
   type: http
-- name: D🔴🇷🇺hos[🎪✨]_dokng.com_76177e99
+- name: 🇷🇺RU_1|2.6MB/s
   port: 8443
   server: 87.242.85.187
   skip-cert-verify: true
@@ -1360,17 +1365,6 @@ proxies:
     headers:
       Host: 178.172.227.228
     path: '%2Fvlessfp=chrome'
-- name: '🇧🇾[www.v2nodes.com] vless-BY-1... #1'
-  network: ws
-  port: 14430
-  server: 178.172.227.124
-  tls: false
-  type: vless
-  uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
-  ws-opts:
-    headers:
-      Host: 178.172.227.124
-    path: /vless
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: 🇧🇾 白俄罗斯 | vless | 08
@@ -1603,7 +1597,7 @@ proxies:
     path: /api/v1/gpu-stream/socket
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇷🇺 俄罗斯 | vless | 32
+  name: '🇺🇸[www.v2nodes.com] vless-US-1... #10'
   network: tcp
   port: 9443
   reality-opts:
@@ -1611,7 +1605,7 @@ proxies:
     short-id: '!!str 649ab61e575fdbc9'
   server: 193.233.202.250
   servername: usa.edgeses.org
-  tls: false
+  tls: true
   type: vless
   uuid: c3db7657-88ce-42a6-b998-1e0364b277ac
 - alpn:
@@ -2528,7 +2522,7 @@ proxies:
 - client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: GunService
-  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #10'
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #9'
   network: grpc
   port: 8444
   server: 153.80.241.206
@@ -2902,16 +2896,11 @@ proxies:
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: '🇦🇹 奥地利 | AUT #1'
-  network: tcp
   port: 443
-  reality-opts:
-    public-key: r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs
-    short-id: '!!str a8'
   server: 189.74.115.16
   servername: api.mediakaskad.cc
   tls: true
   type: vless
-  udp: true
   uuid: 082f5694-9019-4110-b67b-8125dbb9bab8
 - name: 🇷🇺 俄罗斯 | hy2 | 236
   password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
@@ -3478,6 +3467,18 @@ proxies:
   uuid: f9613819-d2fe-4b3a-a2e6-40c184c6854c
   ws-opts:
     path: /fp=random
+- flow: xtls-rprx-vision
+  name: 🇷🇺 俄罗斯 | vless | 340
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: gLO2GRqV0iVDmVdytcJLqGyZEB5Swxb-NAOC9AL13UM
+    short-id: '!!str 344f1f56582dda0f'
+  server: 83.147.245.126
+  servername: assets-str-53.nexus-infinitus.com
+  tls: false
+  type: vless
+  uuid: 0cf8e402-e801-4aeb-9b7a-00a933f9f1c1
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇷🇺 俄罗斯 | vless | 341
@@ -6564,20 +6565,6 @@ proxies:
   tls: false
   type: vless
   uuid: 55ed97fc-77d1-4802-baf3-acef70776331
-- client-fingerprint: edge
-  flow: xtls-rprx-vision
-  name: '🇵🇱 波兰 | POL #1'
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs
-    short-id: '!!str a8'
-  server: api.mediapolyana.cc
-  servername: api.mediapolyana.cc
-  tls: true
-  type: vless
-  udp: true
-  uuid: 082f5694-9019-4110-b67b-8125dbb9bab8
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇷🇺 俄罗斯 | vless | 925
@@ -6612,6 +6599,21 @@ proxies:
   tls: false
   type: vless
   uuid: 3a02129b-0bf6-4e26-854a-e317d54b4fa9
+- alpn:
+  - h2
+  client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇷🇺RU_2|2.9MB/s
+  network: tcp
+  port: '8443'
+  server: rus.noooo.win
+  servername: id-6ad3c751.adhil.uk
+  tls: true
+  type: vless
+  udp: true
+  uuid: b3441cc7-1e5f-4eb6-8207-90788eeca21e
+  xudp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: RU2｜机房｜低风险
@@ -6655,9 +6657,3 @@ proxies:
   tls: false
   type: vless
   uuid: 95abaefc-7861-417a-81b7-166cb788ce1a
-- cipher: chacha20-ietf-poly1305
-  name: '🇷🇺[www.v2nodes.com] ss-RU-1163... #1'
-  password: VVlAff77CnAU43Aoc5j15Y
-  port: 5112
-  server: 90.156.203.62
-  type: ss
