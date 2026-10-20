@@ -1,24 +1,34 @@
 proxies:
 - name: '🇪🇪[www.v2nodes.com] trojan-EE-... #2'
-  network: tcp
   password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
   port: 449
   server: 109.206.241.10
-  skip-cert-verify: false
   sni: russiapower.accesscam.org
   type: trojan
 - alpn:
-  - h3
   - h2
   - http/1.1
-  name: 🇪🇪
+  name: 🇪🇪 Estonia [*CIDR]
   network: tcp
-  password: eZwp12tXna8-s_ysszXnXq25rv1c8w
-  port: 8443
-  server: ee.cheapgo.cc
-  sni: ee.cheapgo.cc
+  password: ymk9eBP4Ams3-ncYCV4kDAezUzBfkR8x
+  port: 443
+  server: 185.91.52.139
+  sni: isq.ichost.cloud
   type: trojan
-- name: 🇪🇪 爱沙尼亚 | trojan | 12
+- alterId: 0
+  cipher: auto
+  name: 🇪🇪 爱沙尼亚 | vmess | 16
+  network: ws
+  port: '443'
+  server: 5.101.122.59
+  tls: true
+  type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  ws-opts:
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
+- name: 🇪🇪 爱沙尼亚 | trojan | 21
   network: ws
   password: humanity
   port: 443
@@ -28,3 +38,13 @@ proxies:
   type: trojan
   ws-opts:
     path: '%2Fassignment'
+- alpn:
+  - h3
+  - h2
+  - http/1.1
+  name: 🇪🇪 爱沙尼亚 | trojan | 24
+  password: eZwp12tXna8-s_ysszXnXq25rv1c8w
+  port: 8443
+  server: ee.cheapgo.cc
+  sni: ee.cheapgo.cc
+  type: trojan
