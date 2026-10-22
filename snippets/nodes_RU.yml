@@ -13,7 +13,7 @@ proxies:
     path: /assignment
 - alterId: 0
   cipher: auto
-  name: '俄罗斯 006 #1'
+  name: '俄罗斯 007 #1'
   network: ws
   port: 16231
   server: 31.129.105.239
@@ -26,7 +26,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: '俄罗斯 007 #1'
+  name: '俄罗斯 008 #1'
   network: ws
   port: 80
   server: 195.54.174.18
@@ -39,7 +39,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: '俄罗斯 008 #1'
+  name: '俄罗斯 009 #1'
   network: http
   port: 26743
   server: 194.87.248.27
@@ -48,7 +48,7 @@ proxies:
   uuid: 59952a8e-b712-4190-d85e-f9aadd65faa0
 - alterId: 64
   cipher: auto
-  name: '俄罗斯 009 #1'
+  name: '俄罗斯 010 #1'
   network: http
   port: 37672
   server: 176.119.159.245
@@ -57,16 +57,17 @@ proxies:
   uuid: 86b4e35c-1061-47b3-8c6c-811d1853a477
 - alterId: 0
   cipher: auto
-  name: '俄罗斯 012 #1'
+  name: '俄罗斯 014 #1'
   network: tcp
   port: 22324
   server: 5.188.190.252
   skip-cert-verify: true
+  tls: true
   type: vmess
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
 - alterId: 0
   cipher: auto
-  name: '俄罗斯 013 #1'
+  name: '俄罗斯 015 #1'
   network: tcp
   port: 22324
   server: 89.223.95.77
@@ -75,7 +76,7 @@ proxies:
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
 - alterId: 0
   cipher: auto
-  name: '俄罗斯 014 #1'
+  name: '俄罗斯 016 #1'
   network: tcp
   port: 2083
   server: 188.130.154.174
@@ -83,16 +84,38 @@ proxies:
   tls: true
   type: vmess
   uuid: f6b808ed-0695-46af-9c00-812823225c4c
-- name: 🇷🇺 俄罗斯 | trojan | 05
+- name: '🇷🇺 #5'
+  password: 08QNE5JBq7kTV6b9Dd6e_w-y4WhjMLS9
+  port: 8443
+  server: ru.federal-usa.com
+  sni: ru.federal-usa.com
+  type: trojan
+- alpn:
+  - h3
+  - h2
+  - http/1.1
+  name: '🇷🇺 Russia | [*CIDR] #4'
+  network: tcp
+  password: 08QNE5JBq7kTV6b9Dd6e_w-y4WhjMLS9
+  port: 8443
+  server: ru.federal-usa.com
+  sni: ru.federal-usa.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ru.federal-usa.com
+    path: ''
+- name: 🇷🇺 俄罗斯 | trojan | 10
   network: ws
   password: '!!str 521314'
   port: 443
   server: 45.67.215.9
+  skip-cert-verify: false
   sni: tjplay.lxdxo.kdns.fr
   type: trojan
   ws-opts:
-    path: '%2FTelegram%2B%40VPNine1'
-- name: 🇷🇺 俄罗斯 | trojan | 08
+    path: /Telegram%2B%40WangCai2
+- name: 🇷🇺 俄罗斯 | trojan | 15
   network: ws
   password: 78defd88-d333-67a5-9c34-d3bcef5816eb
   port: 443
@@ -106,7 +129,7 @@ proxies:
     path: '%2F%40TirexNet'
 - alterId: 0
   cipher: auto
-  name: 🇷🇺 俄罗斯 | vmess | 21
+  name: 🇷🇺 俄罗斯 | vmess | 19
   network: ws
   port: '443'
   server: 147.45.125.231
@@ -120,7 +143,7 @@ proxies:
 - alpn:
   - h2
   - http/1.1
-  name: 🇷🇺 俄罗斯 | trojan | 78
+  name: 🇷🇺 俄罗斯 | trojan | 70
   password: dKn7hqgST668mj_8EgoMUd3_zPSxnTFQ
   port: 8449
   server: 87.242.95.164
@@ -130,24 +153,15 @@ proxies:
 - alpn:
   - h2
   - http/1.1
-  name: 🇷🇺 俄罗斯 | trojan | 86
+  name: 🇷🇺 俄罗斯 | trojan | 80
   password: kPCHGQd2HfUXgwkLFysGexRMwvX0PNop
   port: 6443
   server: 46.8.209.212
   sni: node102.ichost.cloud
   type: trojan
-- alpn:
-  - h2
-  - http/1.1
-  name: 🇷🇺 俄罗斯 | trojan | 288
-  password: ymk9eBP4Ams3-ncYCV4kDAezUzBfkR8x
-  port: 443
-  server: 185.91.52.139
-  sni: isq.ichost.cloud
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇷🇺 俄罗斯 | vmess | 520
+  name: 🇷🇺 俄罗斯 | vmess | 441
   network: ws
   port: '443'
   server: 195.19.20.80
@@ -159,7 +173,18 @@ proxies:
     headers:
       Host: renderer-stream-2-62.mirra.now
     path: /api/v1/gpu-stream/socket
-- name: 🇷🇺 俄罗斯 | trojan | 540
+- name: 🇷🇺 俄罗斯 | trojan | 498
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 2053
+  server: 45.95.203.214
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+- name: 🇷🇺 俄罗斯 | trojan | 552
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
@@ -170,7 +195,7 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
     path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-- name: 🇷🇺 俄罗斯 | trojan | 542
+- name: 🇷🇺 俄罗斯 | trojan | 576
   network: ws
   password: 8r<[9'l6hAO#8ZQi
   port: 8443
@@ -185,35 +210,15 @@ proxies:
 - alpn:
   - h2
   - http/1.1
-  name: 🇷🇺 俄罗斯 | trojan | 557
-  password: eZwp12tXna8-s_ysszXnXq25rv1c8w
-  port: 8443
-  server: 194.55.239.121
-  sni: api-v2.captaingold.app
-  type: trojan
-- alpn:
-  - h2
-  - http/1.1
-  name: 🇷🇺 俄罗斯 | trojan | 565
-  password: eZwp12tXna8-s_ysszXnXq25rv1c8w
+  name: 🇷🇺 俄罗斯 | trojan | 599
+  password: ymk9eBP4Ams3-ncYCV4kDAezUzBfkR8x
   port: 443
-  server: 194.55.239.108
-  sni: api-v2.captaingold.app
+  server: 185.91.52.139
+  sni: isq.ichost.cloud
   type: trojan
-- name: 🇷🇺 俄罗斯 | trojan | 596
-  network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 2053
-  server: 45.95.203.214
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-    path: /trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
 - alterId: 0
   cipher: auto
-  name: 🇷🇺 俄罗斯 | vmess | 613
+  name: 🇷🇺 俄罗斯 | vmess | 633
   network: ws
   port: '443'
   server: 80.240.252.241
@@ -227,23 +232,11 @@ proxies:
     path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
-  name: 🇷🇺 俄罗斯 | vmess | 627
+  name: 🇷🇺 俄罗斯 | vmess | 645
   network: ws
-  port: '443'
-  server: 2.27.54.132
-  tls: true
-  type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
-- alterId: 0
-  cipher: auto
-  name: 🇷🇺 俄罗斯 | vmess | 669
-  network: ws
-  port: '443'
+  port: 443
   server: renderer-stream-2-114.mirra.now
+  servername: renderer-stream-2-114.mirra.now
   tls: true
   type: vmess
   uuid: 8ffa41d4-e6b5-4af5-a8a9-69e26bec75f5
@@ -253,7 +246,7 @@ proxies:
     path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
-  name: 🇷🇺 俄罗斯 | vmess | 689
+  name: 🇷🇺 俄罗斯 | vmess | 650
   network: ws
   port: 443
   server: renderer-stream-1-832.mirra.now
@@ -265,3 +258,26 @@ proxies:
     headers:
       Host: renderer-stream-1-832.mirra.now
     path: /api/v1/gpu-stream/socket
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 俄罗斯 | vmess | 651
+  network: ws
+  port: '443'
+  server: 2.27.54.132
+  servername: renderer-stream-2-62.mirra.now
+  tls: true
+  type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  ws-opts:
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
+- alpn:
+  - h2
+  - http/1.1
+  name: 🇷🇺 俄罗斯 | trojan | 693
+  password: eZwp12tXna8-s_ysszXnXq25rv1c8w
+  port: 8443
+  server: 194.55.239.121
+  sni: api-v2.captaingold.app
+  type: trojan
