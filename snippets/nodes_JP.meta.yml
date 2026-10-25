@@ -49,7 +49,9 @@ proxies:
   network: ws
   port: 80
   server: 168.138.43.75
+  servername: ''
   skip-cert-verify: true
+  tls: false
   type: vmess
   uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
   ws-opts:
@@ -262,7 +264,7 @@ proxies:
     path: /
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡 | vless | 263
+  name: 🇸🇬 新加坡 | vless | 274
   network: tcp
   port: 56415
   reality-opts:
@@ -289,9 +291,12 @@ proxies:
   type: vless
   udp: true
   uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  ws-opts:
+    headers:
+      Host: www.apple.com
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡 | vless | 147
+  name: 🇸🇬 新加坡 | vless | 281
   network: tcp
   port: 30892
   reality-opts:
@@ -302,16 +307,16 @@ proxies:
   tls: false
   type: vless
   uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-- name: 🇯🇵_日本_16
+- name: '🇯🇵_日本_16 #1'
   network: tcp
   port: 47878
   server: 152.69.195.67
   tls: false
   type: vless
   uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
-- client-fingerprint: random
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 27
+  name: 🇯🇵 日本 | vless | 25
   network: tcp
   port: 10583
   reality-opts:
@@ -358,7 +363,7 @@ proxies:
   tls: false
   type: vless
   uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
-- client-fingerprint: ios
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: '🇻🇳[www.v2nodes.com] vless-VN-1... #2'
   network: tcp
@@ -372,7 +377,7 @@ proxies:
   type: vless
   uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
 - client-fingerprint: chrome
-  name: '🏳[www.v2nodes.com] trojan- #5 #2'
+  name: '🏳[www.v2nodes.com] trojan- #6 #2'
   network: tcp
   password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
   port: 8886
@@ -383,7 +388,7 @@ proxies:
   udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 63
+  name: 🇯🇵 日本 | vless | 61
   network: tcp
   port: 443
   reality-opts:
@@ -446,13 +451,13 @@ proxies:
       Host: ccc.010304.xyz
     path: /fp=chrome
 - cipher: aes-256-gcm
-  name: '🇯🇵[www.v2nodes.com] ss-JP-1598... #2'
+  name: 🇯🇵[www.v2nodes.com] ss-JP-1598...
   password: JuD6MNgtX3nVpCzFzXYVYjDTZ7nsmaTv
   port: 8388
   server: 191.223.221.53
   type: ss
 - cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #12 #1'
+  name: 🇯🇵[www.v2nodes.com] ss-JP-1544...
   password: 3eOFeNssde7PYYMv
   port: 80
   server: 84.247.155.196
@@ -467,7 +472,7 @@ proxies:
   udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇳🇱 荷兰 | vless | 548
+  name: 🇳🇱 荷兰 | vless | 638
   network: tcp
   port: 2090
   reality-opts:
@@ -480,8 +485,8 @@ proxies:
   udp: true
   uuid: c63487b1-2543-40b9-b39a-3f27a5a1f4cf
 - encryption: none
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 23
+  flow: xtls-rprx-vision-udp443
+  name: 🇯🇵 日本 | vless | 22
   network: tcp
   port: 50131
   server: 13.113.64.241
@@ -511,9 +516,52 @@ proxies:
   tls: true
   type: http
   username: null
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '🏳[www.v2nodes.com] vless- #17 #1'
+  network: tcp
+  port: 19645
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '!!str 48050fab'
+  server: 3.114.220.22
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  ws-opts:
+    path: '%2F'
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | vless | 28
+  network: tcp
+  port: 12683
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '!!str 48050fab'
+  server: 103.75.118.228
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: ''
+  name: 🇬🇧 英国 | vless | 122
+  network: tcp
+  port: 2053
+  reality-opts:
+    public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
+    short-id: '!!str 9922313fffed1c63'
+  server: 46.250.250.149
+  servername: www.apple.com
+  tls: false
+  type: vless
+  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
+  ws-opts:
+    headers:
+      Host: www.apple.com
 - client-fingerprint: edge
   flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 49
+  name: 🇯🇵 日本 | vless | 46
   network: tcp
   port: 28573
   reality-opts:
@@ -527,6 +575,32 @@ proxies:
   ws-opts:
     headers:
       Host: www.sony.com
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | vless | 53
+  network: tcp
+  port: 18007
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '!!str 48050fab'
+  server: 3.114.220.22
+  servername: www.apple.com
+  tls: false
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: chrome
+  name: '[OpenRay] 🇯🇵JP-85'
+  network: ws
+  port: 443
+  server: 152.69.200.216
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
 - alpn:
   - http/1.1
   client-fingerprint: chrome
@@ -543,20 +617,31 @@ proxies:
   type: vless
   uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '🏳[www.v2nodes.com] vless- #17 #1'
+  flow: xtls-rprx-vision-udp443-udp443
+  name: 🇭🇰 香港 | vless | 55
   network: tcp
-  port: 19645
+  port: 2090
   reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: '!!str 48050fab'
-  server: 3.114.220.22
+    public-key: qBobe6KSNkFLqTPCffcJo0nXgxy-3JKru9WRqY9rkjk
+    short-id: '!!str bb472a184677af64'
+  server: 66.90.115.130
   servername: www.apple.com
   tls: true
   type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  uuid: 3644635c-f8c4-449c-a665-fce1897a7bf3
+- client-fingerprint: firefox
+  name: '[OpenRay] 🇯🇵JP-103'
+  network: ws
+  port: 8443
+  server: 154.31.114.162
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   ws-opts:
-    path: '%2F'
+    headers:
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
 - alpn:
   - http%2f1.1
   client-fingerprint: random
@@ -577,87 +662,7 @@ proxies:
       Host: www.sony.com
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇭🇰 香港 | vless | 42
-  network: tcp
-  port: 2090
-  reality-opts:
-    public-key: qBobe6KSNkFLqTPCffcJo0nXgxy-3JKru9WRqY9rkjk
-    short-id: '!!str bb472a184677af64'
-  server: 66.90.115.124
-  servername: www.apple.com
-  tls: false
-  type: vless
-  uuid: 3644635c-f8c4-449c-a665-fce1897a7bf3
-  ws-opts:
-    headers:
-      Host: '%2F%3FTELEGRAM---MARAMBASHI---MARAMBASHI---MARAMBASHI---MARAMBASHI'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '🏳[www.v2nodes.com] vless- #16'
-  network: tcp
-  port: 12683
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: '!!str 48050fab'
-  server: 103.75.118.228
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision-udp443
-  name: 🇭🇰 香港 | vless | 40
-  network: tcp
-  port: 2090
-  reality-opts:
-    public-key: qBobe6KSNkFLqTPCffcJo0nXgxy-3JKru9WRqY9rkjk
-    short-id: '!!str bb472a184677af64'
-  server: 66.90.115.130
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: 3644635c-f8c4-449c-a665-fce1897a7bf3
-- client-fingerprint: chrome
-  name: '[OpenRay] 🇯🇵JP-19'
-  network: ws
-  port: 443
-  server: 152.69.200.216
-  servername: jp3.yohototo.top
-  tls: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    headers:
-      Host: jp3.yohototo.top
-    path: '%2Ftyxyws'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 48
-  network: tcp
-  port: 18007
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: '!!str 48050fab'
-  server: 3.114.220.22
-  servername: www.apple.com
-  tls: false
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
   name: 🇯🇵 日本 | vless | 03
-  port: 7587
-  reality-opts:
-    public-key: eIoCcSuOiE-N7TjMtBADLOoWLh7Fqi67GE-uX1ARhyI
-    short-id: '!!str 21e534fa0bd78697'
-  server: 216.23.82.107
-  servername: www.apple.com
-  tls: false
-  type: vless
-  uuid: 594b593d-f638-429f-ad68-4c2de2e27493
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 04
   port: 9559
   reality-opts:
     public-key: CQaaERP19MvGGrGrGUFVPZyC-Yfx2XsnobpDmBgh3gw
@@ -667,76 +672,16 @@ proxies:
   tls: false
   type: vless
   uuid: 594b593d-f638-429f-ad68-4c2de2e27493
-- name: 🇯🇵 日本 | vless | 05
-  network: ws
-  port: 24044
-  server: 45.192.248.34
-  servername: mug.support.gfw.hidns.co
-  tls: false
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  ws-opts:
-    headers:
-      Host: mug.support.gfw.hidns.co
-    path: '%2Fdanfeng%3Fed%3D2560fp=chromesecurity=tls'
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 06
-  port: 5226
-  reality-opts:
-    public-key: SO7FOs2Fz3mmISk01G4seBNUWFPgfutqIqkJn5dX0GE
-    short-id: '!!str a5f7966b85165587'
-  server: 85.149.218.28
-  servername: download-porter.hoyoverse.com
-  tls: false
-  type: vless
-  uuid: 594b593d-f638-429f-ad68-4c2de2e27493
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 07
-  port: 7222
-  reality-opts:
-    public-key: -y_sGlu-aD3MBve2LMP6ihYk7U3QUQn3ZUzxGOhu-RU
-    short-id: '!!str 1df922e6ef69fd9b'
-  server: 216.23.82.107
-  servername: www.microsoft.com
-  tls: false
-  type: vless
-  uuid: 594b593d-f638-429f-ad68-4c2de2e27493
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 09
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
   port: 11452
   server: 103.75.118.228
   servername: www.apple.com
   tls: true
   type: vless
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: 🇯🇵 日本 | vless | 10
-  network: ws
-  port: 4798
-  server: 107.191.53.86
-  servername: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
-  tls: false
-  type: vless
-  uuid: 86144bee-dc06-4058-a8fb-ca6f98472cb9
-  ws-opts:
-    headers:
-      Host: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
-    path: '%2F%40Marisa_kristifp=chromesecurity=tls'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 12
-  port: 7397
-  reality-opts:
-    public-key: alA-RnK0ssRMoKgDFmr4JndXCCojboQ-chXF5Xgvy0M
-    short-id: '!!str 1b1e8a3dccc86ccd'
-  server: 85.149.218.28
-  servername: www.apple.com
-  tls: false
-  type: vless
-  uuid: 594b593d-f638-429f-ad68-4c2de2e27493
-- name: 🇯🇵 日本 | vless | 14
+- name: 🇯🇵 日本 | vless | 06
   network: ws
   port: 26418
   server: 154.31.112.237
@@ -748,23 +693,42 @@ proxies:
     headers:
       Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
     path: '%2F%40Marisa_kristifp=chromesecurity=tls'
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 日本 | vmess | 15
-  network: ws
-  port: '8080'
-  server: 156.231.116.156
-  servername: images-na.ssl-images-amazon.com
-  tls: false
-  type: vmess
-  uuid: 9ebecf5e-b160-43bd-806e-54cd994fc4c3
-  ws-opts:
-    headers:
-      Host: images-na.ssl-images-amazon.com
-    path: /image
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 18
+  name: 🇯🇵 日本 | vless | 08
+  port: 7587
+  reality-opts:
+    public-key: eIoCcSuOiE-N7TjMtBADLOoWLh7Fqi67GE-uX1ARhyI
+    short-id: '!!str 21e534fa0bd78697'
+  server: 216.23.82.107
+  servername: www.apple.com
+  tls: false
+  type: vless
+  uuid: 594b593d-f638-429f-ad68-4c2de2e27493
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | vless | 09
+  port: 5226
+  reality-opts:
+    public-key: SO7FOs2Fz3mmISk01G4seBNUWFPgfutqIqkJn5dX0GE
+    short-id: '!!str a5f7966b85165587'
+  server: 85.149.218.28
+  servername: download-porter.hoyoverse.com
+  tls: false
+  type: vless
+  uuid: 594b593d-f638-429f-ad68-4c2de2e27493
+- name: 🇯🇵 日本 | vless | 10
+  network: ws
+  port: 80
+  server: 172.111.146.64
+  tls: false
+  type: vless
+  uuid: 904f8ffa-4652-4076-8f2f-e586807840ec
+  ws-opts:
+    path: /vless/
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | vless | 11
   port: 7185
   reality-opts:
     public-key: m0IRiI3EipRwvNHd1dJIm7iCxpz-ny-kaFNdPkTwtBI
@@ -774,18 +738,19 @@ proxies:
   tls: false
   type: vless
   uuid: 594b593d-f638-429f-ad68-4c2de2e27493
-- name: 🇯🇵 日本 | trojan | 20
-  network: ws
-  password: tg-dns68
-  port: 9710
-  server: 150.230.206.237
-  sni: vip.putata.eu.org
-  type: trojan
-  ws-opts:
-    headers:
-      Host: vip.putata.eu.org
-    path: /?ed=2560
-- name: 🇯🇵 日本 | vless | 21
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | vless | 13
+  port: 7397
+  reality-opts:
+    public-key: alA-RnK0ssRMoKgDFmr4JndXCCojboQ-chXF5Xgvy0M
+    short-id: '!!str 1b1e8a3dccc86ccd'
+  server: 85.149.218.28
+  servername: www.apple.com
+  tls: false
+  type: vless
+  uuid: 594b593d-f638-429f-ad68-4c2de2e27493
+- name: 🇯🇵 日本 | vless | 14
   network: ws
   port: 1916
   server: 172.105.241.119
@@ -797,7 +762,44 @@ proxies:
     headers:
       Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
     path: '%2F%40Marisa_kristifp=chromesecurity=tls'
-- name: 🇯🇵 日本 | vless | 22
+- name: 🇯🇵 日本 | vless | 15
+  network: ws
+  port: 4798
+  server: 107.191.53.86
+  servername: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+  tls: false
+  type: vless
+  uuid: 86144bee-dc06-4058-a8fb-ca6f98472cb9
+  ws-opts:
+    headers:
+      Host: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+    path: '%2F%40Marisa_kristifp=chromesecurity=tls'
+- name: 🇯🇵 日本 | trojan | 16
+  network: ws
+  password: tg-dns68
+  port: 9710
+  server: 150.230.206.237
+  sni: vip.putata.eu.org
+  type: trojan
+  ws-opts:
+    headers:
+      Host: vip.putata.eu.org
+    path: /?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵 日本 | vmess | 17
+  network: ws
+  port: '8080'
+  server: 156.231.116.156
+  servername: images-na.ssl-images-amazon.com
+  tls: false
+  type: vmess
+  uuid: 9ebecf5e-b160-43bd-806e-54cd994fc4c3
+  ws-opts:
+    headers:
+      Host: images-na.ssl-images-amazon.com
+    path: /image
+- name: 🇯🇵 日本 | vless | 18
   network: ws
   port: 16957
   server: 150.230.214.172
@@ -809,7 +811,24 @@ proxies:
     headers:
       Host: ynwta9.api-edge.fgfw.qzz.io
     path: '%2Fdanfeng%3Fed%3D2560fp%3Dchromesecurity=tls'
-- name: 🇯🇵 日本 | vless | 25
+- name: 🇯🇵 日本 | trojan | 19
+  password: a196faa4-403e-4a8b-987a-d1789f379685
+  port: 49755
+  server: 139.162.100.58
+  type: trojan
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | vless | 21
+  port: 7222
+  reality-opts:
+    public-key: -y_sGlu-aD3MBve2LMP6ihYk7U3QUQn3ZUzxGOhu-RU
+    short-id: '!!str 1df922e6ef69fd9b'
+  server: 216.23.82.107
+  servername: www.microsoft.com
+  tls: false
+  type: vless
+  uuid: 594b593d-f638-429f-ad68-4c2de2e27493
+- name: 🇯🇵 日本 | vless | 23
   network: ws
   port: 4443
   server: 54.178.110.17
@@ -821,33 +840,46 @@ proxies:
     headers:
       Host: sxyyvihkektlx4rjxsdj.pkc73phpweu4rbxbatm444.workers.dev
     path: /@Marisa_kristifp=chromesecurity=tls
-- name: 🇯🇵 日本 | trojan | 26
-  password: a196faa4-403e-4a8b-987a-d1789f379685
-  port: 49755
-  server: 139.162.100.58
-  type: trojan
-- name: 🇯🇵 日本 | vless | 30
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵 日本 | vmess | 24
   network: ws
   port: 80
   server: 172.111.146.64
+  servername: ''
   tls: false
-  type: vless
-  uuid: 904f8ffa-4652-4076-8f2f-e586807840ec
-  ws-opts:
-    path: /vless/
-- name: 🇯🇵 日本 | vless | 32
-  network: ws
-  port: 57554
-  server: 203.137.165.164
-  servername: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 91cf01c5-62c1-44cd-80e0-df6310025dab
+  type: vmess
+  uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
   ws-opts:
     headers:
-      Host: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
-    path: '%2F%40Marisa_kristifp=chromesecurity=tls'
+      Host: ''
+    path: /
+- name: 🇯🇵 日本 | vless | 26
+  network: ws
+  port: 24044
+  server: 45.192.248.34
+  servername: mug.support.gfw.hidns.co
+  tls: false
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: mug.support.gfw.hidns.co
+    path: '%2Fdanfeng%3Fed%3D2560fp=chromesecurity=tls'
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵 日本 | vmess | 32
+  network: ws
+  port: '13118'
+  server: 140.83.57.20
+  servername: sg.11160321.de5.net
+  tls: true
+  type: vmess
+  uuid: 1f01e389-fbcb-494c-e46a-210ec36329c2
+  ws-opts:
+    headers:
+      Host: sg.11160321.de5.net
+    path: /
 - name: 🇯🇵 日本 | vless | 33
   network: ws
   port: 11424
@@ -863,42 +895,18 @@ proxies:
     path: Telegram-WangCai2%F0%9F%87%A8%F0%9F%87%B3
 - alterId: 0
   cipher: auto
-  name: 🇯🇵 日本 | vmess | 35
+  name: 🇯🇵 日本 | vmess | 43
   network: ws
-  port: '13118'
-  server: 140.83.57.20
-  servername: sg.11160321.de5.net
-  tls: true
-  type: vmess
-  uuid: 1f01e389-fbcb-494c-e46a-210ec36329c2
-  ws-opts:
-    headers:
-      Host: sg.11160321.de5.net
-    path: /
-- name: 🇯🇵 日本 | vless | 37
-  network: ws
-  port: 15039
-  server: 152.69.201.51
-  servername: edtunnel-eiz.pages.dev
-  tls: true
-  type: vless
-  uuid: 42add63b-deda-4e71-aa48-ddd288181858
-  ws-opts:
-    headers:
-      Host: edtunnel-eiz.pages.dev
-- client-fingerprint: safari
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 42
-  port: 30058
-  reality-opts:
-    public-key: Iv0BYCcNWeUxk4m26bXXEM81je_IvyNsqGj3CiOF9Uo
-    short-id: '!!str e8cfbeb5d07bf120'
-  server: 103.72.5.57
-  servername: www.tesla.com
+  port: '8998'
+  server: cc28.goingside.site
   tls: false
-  type: vless
-  uuid: c752c174-41d2-41c3-ac2a-e4c0df9e5482
-- name: 🇯🇵 日本 | vless | 43
+  type: vmess
+  uuid: 4b019faa-38b0-473d-bc49-60bb68151c34
+  ws-opts:
+    headers:
+      Host: cc28.goingside.site
+    path: /
+- name: 🇯🇵 日本 | vless | 44
   network: ws
   port: 15052
   server: 193.111.30.215
@@ -912,7 +920,7 @@ proxies:
     path: '%2F193.111.30.215%3A15052fp=chromesecurity=tls'
 - client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 44
+  name: 🇯🇵 日本 | vless | 45
   port: 29654
   reality-opts:
     public-key: o2uLRBkgcAPCavo12l6VUzaSnSmxjUvod-NBSiUPdy8
@@ -923,7 +931,43 @@ proxies:
   tls: false
   type: vless
   uuid: 2064b432-a306-44d4-a432-8e3751a905b2
-- name: 🇯🇵 日本 | vless | 45
+- name: 🇯🇵 日本 | vless | 47
+  network: ws
+  port: 15039
+  server: 152.69.201.51
+  servername: edtunnel-eiz.pages.dev
+  tls: true
+  type: vless
+  uuid: 42add63b-deda-4e71-aa48-ddd288181858
+  ws-opts:
+    headers:
+      Host: edtunnel-eiz.pages.dev
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | vless | 48
+  port: 30058
+  reality-opts:
+    public-key: Iv0BYCcNWeUxk4m26bXXEM81je_IvyNsqGj3CiOF9Uo
+    short-id: '!!str e8cfbeb5d07bf120'
+  server: 103.72.5.57
+  servername: www.tesla.com
+  tls: false
+  type: vless
+  uuid: c752c174-41d2-41c3-ac2a-e4c0df9e5482
+- name: 🇯🇵 日本 | vless | 49
+  network: ws
+  port: 57554
+  server: 203.137.165.164
+  servername: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: 91cf01c5-62c1-44cd-80e0-df6310025dab
+  ws-opts:
+    headers:
+      Host: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
+    path: '%2F%40Marisa_kristifp=chromesecurity=tls'
+- name: 🇯🇵 日本 | vless | 51
   network: ws
   port: 16090
   server: 210.156.180.102
@@ -935,240 +979,19 @@ proxies:
     headers:
       Host: dcsrzh.ccwu.cc
     path: '%2Fsecurity=tls'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 50
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: qBtxq4RZxDLCJT8i48iaGMhacv8MOI0yhIFiuwYJm08
-    short-id: '!!str 825d392c67e4'
-  server: 2.27.27.64
-  servername: jp.musicwave.net
-  tls: false
-  type: vless
-  uuid: 94d2d711-76e5-4d82-a3c9-4f06fd5558c8
 - alterId: 0
   cipher: auto
   name: 🇯🇵 日本 | vmess | 52
-  network: ws
-  port: 80
-  server: 172.111.146.64
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
-  ws-opts:
-    headers:
-      Host: ''
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 日本 | vmess | 57
   network: tcp
-  port: '36011'
+  port: '20401'
   server: gz1.polymarket.party
   tls: false
   type: vmess
   uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: MapsYandexAPI
-  name: 🇯🇵 日本 | vless | 60
-  network: grpc
-  port: 2053
-  reality-opts:
-    public-key: w92oaftiqLJOMFy47hUWBixZEKwWJpHF4apaFTrh71w
-    short-id: '!!str '
-  server: 2.27.26.71
-  servername: api-maps.yandex.ru
-  tls: false
-  type: vless
-  uuid: bd44419a-02a9-4c03-9cb8-a7f8ffd3ae68
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 日本 | vmess | 61
-  network: ws
-  port: '23801'
-  server: gz1.polymarket.party
-  tls: true
-  type: vmess
-  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
-  ws-opts:
-    headers:
-      Host: us4.australiacaregroup.site
-    path: /vmess
-- name: 🇯🇵 日本 | vless | 66
-  network: ws
-  port: 443
-  server: 45.95.212.186
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffp=chromesecurity=tls'
-- client-fingerprint: firefox
-  name: 🇯🇵 日本 | vless | 67
-  port: 443
-  reality-opts:
-    public-key: aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU
-    short-id: '!!str '
-  server: 31.76.91.22
-  servername: example.org
-  tls: false
-  type: vless
-  uuid: 454431fc-71e2-42b1-b375-5b55dd06666a
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: grpc
-  name: 🇯🇵 日本 | vless | 69
-  network: grpc
-  port: 2087
-  reality-opts:
-    public-key: JfuItzJ81sJehx1PbxyliWSJvuBMKoa9ahNgPO3R7R4
-    short-id: '!!str c226283c4de5b1ad'
-  server: 31.76.91.138
-  servername: ads.x5.ru
-  tls: false
-  type: vless
-  uuid: 309b0ce3-09a8-4883-bfe4-bd56e215be44
-- name: 🇯🇵 日本 | trojan | 71
-  password: 7d0f1f83-0f2f-4b90-930e-de44ac233fef
-  port: 443
-  server: 20.210.234.145
-  sni: in.stablize.top
-  type: trojan
-- name: 🇯🇵 日本 | vless | 72
-  port: 8443
-  server: 178.249.213.177
-  servername: jp1.fromblancwithlove.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-- name: 🇯🇵 日本 | trojan | 73
-  password: an70aOaIjcCF43gOlSB6eKER53Z38DYDx8l9RCSCpYTwXS3pueyAqyFZx2zDNA
-  port: 443
-  server: 154.31.114.10
-  sni: plowman.meijireform.com
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 74
-  password: BxceQaOe
-  port: 443
-  server: 116.80.61.224
-  skip-cert-verify: true
-  sni: t.me%252Fripaojiedian
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 75
-  password: JA96378052
-  port: 443
-  server: 52.195.11.84
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 76
-  password: ND91608427
-  port: 443
-  server: 18.179.31.199
-  type: trojan
-- name: 🇯🇵 日本 | vless | 78
+- name: 🇯🇵 日本 | vless | 59
   network: ws
   port: 8443
-  server: 178.239.117.133
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chromesecurity=tls
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 79
-  network: ws
-  port: 443
-  server: 207.148.108.85
-  servername: t1s1.rittbo.kdns.fr
-  tls: true
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-- name: 🇯🇵 日本 | vless | 80
-  network: ws
-  port: 443
-  server: 104.105.128.249
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /fp=chromesecurity=tls
-- name: 🇯🇵 日本 | vless | 81
-  network: ws
-  port: 443
-  server: 45.8.173.253
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /fp=chromesecurity=tls
-- name: 🇯🇵 日本 | vless | 82
-  network: ws
-  port: 8443
-  server: 82.110.234.121
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffp=chromesecurity=tls'
-- name: 🇯🇵 日本 | vless | 83
-  network: ws
-  port: 443
-  server: 104.105.140.77
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chromesecurity=tls
-- name: 🇯🇵 日本 | vless | 84
-  network: ws
-  port: 443
-  server: 45.77.21.148
-  servername: t1s1.rittbo.kdns.fr
-  tls: false
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  ws-opts:
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-    path: '%2Ffp=chromesecurity=tls'
-- name: 🇯🇵 日本 | vless | 85
-  network: ws
-  port: 443
-  server: 45.8.173.20
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffp=chromesecurity=tls'
-- name: 🇯🇵 日本 | vless | 87
-  network: ws
-  port: 443
-  server: 141.147.174.243
+  server: 202.155.12.145
   servername: snip.edgeoneai.cc.cd
   tls: false
   type: vless
@@ -1177,10 +1000,21 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443fp=chromesecurity=tls'
-- name: 🇯🇵 日本 | vless | 88
+- flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | vless | 60
+  port: 443
+  reality-opts:
+    public-key: trN5x0amt2YuVzF2vZnK294YBAuh_zl5QkZjPyWz-TI
+    short-id: '!!str 8718c58d3d51db59'
+  server: 201.58.150.14
+  servername: jp1.wolffast.net
+  tls: false
+  type: vless
+  uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b
+- name: 🇯🇵 日本 | vless | 62
   network: ws
-  port: 8443
-  server: 45.77.131.33
+  port: 443
+  server: 172.104.77.231
   servername: snip.edgeoneai.cc.cd
   tls: false
   type: vless
@@ -1188,9 +1022,8 @@ proxies:
   ws-opts:
     headers:
       Host: snip.edgeoneai.cc.cd
-    path: '%2Ffp%3Dchromefp=chromesecurity=tls'
-- client-fingerprint: unsafe
-  name: 🇯🇵 日本 | vless | 90
+    path: '%2Ffp=chromesecurity=tls'
+- name: 🇯🇵 日本 | vless | 63
   network: ws
   port: 8443
   server: 154.31.114.162
@@ -1202,35 +1035,11 @@ proxies:
   ws-opts:
     headers:
       Host: jp3.yohototo.top
-    path: /tyxyws
-- name: 🇯🇵 日本 | vless | 92
+    path: '%2Ftyxywsfp=unsafe'
+- name: 🇯🇵 日本 | vless | 64
   network: ws
   port: 443
-  server: 66.42.37.41
-  servername: t1s1.rittbo.kdns.fr
-  tls: false
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  ws-opts:
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-    path: /fp=chromesecurity=tls
-- name: 🇯🇵 日本 | vless | 94
-  network: ws
-  port: 443
-  server: 3.113.232.245
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443fp%3Dchromesecurity=tls'
-- name: 🇯🇵 日本 | vless | 95
-  network: ws
-  port: 8443
-  server: 69.8.128.249
+  server: 172.104.81.253
   servername: snip.edgeoneai.cc.cd
   tls: false
   type: vless
@@ -1239,19 +1048,10 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: '%2Ffp=chromesecurity=tls'
-- client-fingerprint: firefox
-  name: 🇯🇵 日本 | vless | 97
-  network: ws
-  port: 8443
-  server: 167.179.110.68
-  servername: notls.lukongtou.eu.org
-  tls: true
-  type: vless
-  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
-- name: 🇯🇵 日本 | vless | 98
+- name: 🇯🇵 日本 | vless | 74
   network: ws
   port: 443
-  server: 13.158.39.80
+  server: 43.165.180.254
   servername: snip.edgeoneai.cc.cd
   tls: false
   type: vless
@@ -1260,123 +1060,21 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: /fp=chromesecurity=tls
-- name: 🇯🇵 日本 | vless | 100
-  network: ws
-  port: 443
-  server: 54.64.190.109
-  servername: snip.edgeoneai.cc.cd
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: grpc
+  name: 🇯🇵 日本 | vless | 76
+  network: grpc
+  port: 2087
+  reality-opts:
+    public-key: JfuItzJ81sJehx1PbxyliWSJvuBMKoa9ahNgPO3R7R4
+    short-id: '!!str c226283c4de5b1ad'
+  server: 31.76.91.138
+  servername: ads.x5.ru
   tls: false
   type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffp=chromesecurity=tls'
-- name: 🇯🇵 日本 | trojan | 101
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 2053
-  server: official.tokyometropolis.odessa.ua
-  type: trojan
-- name: 🇯🇵 日本 | vless | 102
-  network: ws
-  port: 443
-  server: 45.76.208.253
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffp%3Dchromesecurity=tls'
-- name: 🇯🇵 日本 | vless | 103
-  network: ws
-  port: 443
-  server: 154.19.187.5
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560fp=chromefp=chromefp=chromesecurity=tls
-- name: 🇯🇵 日本 | vless | 104
-  network: ws
-  port: 443
-  server: 45.192.243.25
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffp=chromesecurity=tls'
-- client-fingerprint: firefox
-  name: 🇯🇵 日本 | vless | 108
-  network: ws
-  port: 2053
-  server: 172.237.5.208
-  servername: notls.lukongtou.eu.org
-  tls: true
-  type: vless
-  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
-- name: 🇯🇵 日本 | trojan | 109
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 2053
-  server: official.tokyometropolis.kyiv.ua
-  type: trojan
-- name: 🇯🇵 日本 | vless | 110
-  network: ws
-  port: 443
-  server: 45.192.243.63
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chromesecurity=tls
-- name: 🇯🇵 日本 | vless | 111
-  network: ws
-  port: 443
-  server: 154.19.187.190
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443fp=chromesecurity=tls'
-- name: 🇯🇵 日本 | vless | 112
-  network: ws
-  port: 443
-  server: 35.74.79.196
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffp=chromesecurity=tls'
-- name: 🇯🇵 日本 | vless | 113
-  network: ws
-  port: 8443
-  server: 45.76.222.30
-  servername: rubifen.adaspoloandco.com
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
-  ws-opts:
-    headers:
-      Host: rubifen.adaspoloandco.com
-    path: '%2FGOrbEhfp=chromesecurity=tls'
-- name: 🇯🇵 日本 | vless | 115
+  uuid: 309b0ce3-09a8-4883-bfe4-bd56e215be44
+- name: 🇯🇵 日本 | vless | 82
   network: ws
   port: 8443
   server: 209.33.173.7
@@ -1389,58 +1087,54 @@ proxies:
     headers:
       Host: rubifen.adaspoloandco.com
     path: /GOrbEhfp=firefoxsecurity=tls
-- name: 🇯🇵 日本 | vless | 116
+- name: 🇯🇵 日本 | vless | 84
+  network: ws
+  port: 443
+  server: 35.74.79.196
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffp=chromesecurity=tls'
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵 日本 | vmess | 85
+  network: ws
+  port: '443'
+  server: 212.135.211.242
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 1c3fb1c0-1204-49db-b842-f72d50f014c1
+  ws-opts:
+    headers:
+      Host: aus.lovehk.xyz
+    path: /Sydney3
+- name: 🇯🇵 日本 | trojan | 86
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.kherson.ua
+  type: trojan
+- name: 🇯🇵 日本 | vless | 88
   network: ws
   port: 8443
-  server: 158.101.132.216
-  servername: t1s1.rittbo.kdns.fr
+  server: 45.76.222.30
+  servername: rubifen.adaspoloandco.com
+  skip-cert-verify: false
   tls: false
   type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
   ws-opts:
     headers:
-      Host: t1s1.rittbo.kdns.fr
-    path: '%2Ffp=chromesecurity=tls'
-- name: 🇯🇵 日本 | vless | 117
+      Host: rubifen.adaspoloandco.com
+    path: '%2FGOrbEhfp=chromesecurity=tls'
+- name: 🇯🇵 日本 | vless | 89
   network: ws
   port: 443
-  server: 3.112.67.101
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560fp=chromefp=chromesecurity=tls
-- name: 🇯🇵 日本 | trojan | 118
-  network: ws
-  password: 4c3164ee-abcf-4091-abea-d1cd4937a68d
-  port: 443
-  server: 207.148.108.85
-  skip-cert-verify: true
-  sni: jy.hhllfly.kdns.fr
-  type: trojan
-  ws-opts:
-    headers:
-      Host: jy.hhllfly.kdns.fr
-    path: '%2F%3Fed%3D2048'
-- name: 🇯🇵 日本 | vless | 120
-  network: ws
-  port: 443
-  server: 16.76.68.65
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443fp=chromesecurity=tls'
-- name: 🇯🇵 日本 | vless | 121
-  network: ws
-  port: 443
-  server: 207.148.115.152
+  server: 141.11.138.167
   servername: vlso5.1d.mom
   tls: false
   type: vless
@@ -1449,171 +1143,13 @@ proxies:
     headers:
       Host: vlso5.1d.mom
     path: '%2Fsocks5%3D888%3A888%40hkip.1d.mom%3A1080fp=chromesecurity=tls'
-- name: 🇯🇵 日本 | vless | 122
-  network: ws
+- name: 🇯🇵 日本 | trojan | 90
+  password: 7d0f1f83-0f2f-4b90-930e-de44ac233fef
   port: 443
-  server: 13.230.247.88
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /fp=chromesecurity=tls
-- name: 🇯🇵 日本 | vless | 123
-  network: ws
-  port: 443
-  server: 108.160.136.71
-  servername: 20664.pages.dev
-  tls: false
-  type: vless
-  uuid: 9784bb19-3833-43ad-83b0-27ef8fc04ef2
-  ws-opts:
-    headers:
-      Host: 20664.pages.dev
-    path: '%2F%3Fed%3D2048fp=randomsecurity=tls'
-- name: 🇯🇵 日本 | vless | 124
-  network: ws
-  port: 443
-  server: 52.197.219.243
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443fp=chromesecurity=tls'
-- name: 🇯🇵 日本 | vless | 126
-  network: ws
-  port: 443
-  server: 43.206.159.216
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffp=chromesecurity=tls'
-- name: 🇯🇵 日本 | vless | 127
-  network: ws
-  port: 443
-  server: 198.13.60.163
-  servername: t1s1.rittbo.kdns.fr
-  tls: true
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-- name: 🇯🇵 日本 | vless | 128
-  network: ws
-  port: 443
-  server: 212.135.212.211
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443%3Fed%3D2560fp%3Dchromefp%3Dchromefp=chromesecurity=tls'
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: grpc
-  name: 🇯🇵 日本 | vless | 129
-  network: grpc
-  port: 2087
-  reality-opts:
-    public-key: -ZTJcZ_UcqAB7LHgkUqhnlJsQs_oBafRgjsFtWZElmM
-    short-id: '!!str c226283c4de5b1ad'
-  server: 31.76.91.72
-  servername: ads.x5.ru
-  tls: false
-  type: vless
-  uuid: 524e00ce-ed89-481d-b4a4-6d7017f884e3
-- name: 🇯🇵 日本 | trojan | 130
-  password: 18844@zxcvbn
-  port: 443
-  server: 49.212.204.123
+  server: 20.210.234.145
+  sni: in.stablize.top
   type: trojan
-- name: 🇯🇵 日本 | vless | 131
-  network: ws
-  port: 443
-  server: 54.64.1.93
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffp=chromesecurity=tls'
-- client-fingerprint: chrome
-  name: 🇯🇵 日本 | vless | 132
-  network: ws
-  port: 443
-  server: 45.76.206.46
-  servername: t1s1.rittbo.kdns.fr
-  tls: true
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-- name: 🇯🇵 日本 | vless | 135
-  network: ws
-  port: 443
-  server: 13.231.172.130
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /fp=chromesecurity=tls
-- client-fingerprint: firefox
-  name: 🇯🇵 日本 | vless | 136
-  network: ws
-  port: 2053
-  server: 45.77.129.86
-  servername: t1s1.rittbo.kdns.fr
-  tls: true
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-- name: 🇯🇵 日本 | trojan | 137
-  network: ws
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  port: 443
-  server: 153.121.45.101
-  sni: tjsp.hhxaf.cc.cd
-  type: trojan
-  ws-opts:
-    headers:
-      Host: tjsp.hhxaf.cc.cd
-    path: /
-- name: 🇯🇵 日本 | vless | 141
-  network: ws
-  port: 443
-  server: 54.65.187.99
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffp=chromesecurity=tls'
-- name: 🇯🇵 日本 | vless | 142
-  network: ws
-  port: 443
-  server: 149.28.26.9
-  servername: t1s1.rittbo.kdns.fr
-  tls: false
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  ws-opts:
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-    path: /fp=chromesecurity=tls
-- name: 🇯🇵 日本 | vless | 144
+- name: 🇯🇵 日本 | vless | 94
   network: ws
   port: 443
   server: 64.176.34.130
@@ -1625,10 +1161,446 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: '%2Ffp=chromesecurity=tls'
+- name: 🇯🇵 日本 | vless | 95
+  network: ws
+  port: 443
+  server: 202.182.118.182
+  servername: t1s1.rittbo.kdns.fr
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  ws-opts:
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+    path: /fp=chromesecurity=tls
+- client-fingerprint: firefox
+  name: 🇯🇵 日本 | vless | 96
+  port: 443
+  reality-opts:
+    public-key: aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU
+    short-id: '!!str '
+  server: 31.76.91.22
+  servername: example.org
+  tls: false
+  type: vless
+  uuid: 454431fc-71e2-42b1-b375-5b55dd06666a
+- name: 🇯🇵 日本 | vless | 98
+  network: ws
+  port: 443
+  server: 152.69.200.216
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: '%2Ftyxywsfp=chrome'
+- name: 🇯🇵 日本 | trojan | 99
+  password: BxceQaOe
+  port: 443
+  server: 116.80.61.224
+  skip-cert-verify: true
+  sni: t.me%252Fripaojiedian
+  type: trojan
+- client-fingerprint: firefox
+  name: 🇯🇵 日本 | vless | 104
+  network: ws
+  port: 2053
+  server: 172.237.5.208
+  servername: notls.lukongtou.eu.org
+  tls: true
+  type: vless
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+- name: 🇯🇵 日本 | trojan | 105
+  password: 18844@zxcvbn
+  port: 443
+  server: 49.212.178.155
+  skip-cert-verify: true
+  sni: os13.cats22.net
+  type: trojan
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | vless | 106
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: d1LjsQHtTCj7kHx2LHFisVDPc_xOtKnugy5YRFKXqUs
+    short-id: '!!str 39'
+  server: 64.176.62.54
+  servername: www.amazon.com
+  tls: false
+  type: vless
+  uuid: 12e35bfe-1e79-4cf1-8a8e-22a242e97408
+- name: 🇯🇵 日本 | vless | 107
+  network: ws
+  port: 443
+  server: 13.231.172.130
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /fp=chromesecurity=tls
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #8'
+  network: ws
+  port: 443
+  server: 141.11.139.215
+  servername: ccc.010304.xyz
+  tls: false
+  type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  ws-opts:
+    headers:
+      Host: ccc.010304.xyz
+    path: /fp=chromesecurity=tls
+- name: 🇯🇵 日本 | trojan | 110
+  network: ws
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  port: 443
+  server: 153.121.45.101
+  sni: tjsp.hhxaf.cc.cd
+  type: trojan
+  ws-opts:
+    headers:
+      Host: tjsp.hhxaf.cc.cd
+    path: /
+- client-fingerprint: firefox
+  name: 🇯🇵 日本 | vless | 111
+  network: ws
+  port: 2053
+  server: 45.77.129.86
+  servername: t1s1.rittbo.kdns.fr
+  tls: true
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+- name: 🇯🇵 日本 | vless | 112
+  network: ws
+  port: 443
+  server: 54.65.187.99
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffp=chromesecurity=tls'
+- name: 🇯🇵 日本 | vless | 113
+  network: ws
+  port: 443
+  server: 207.148.115.152
+  servername: vlso5.1d.mom
+  tls: false
+  type: vless
+  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
+  ws-opts:
+    headers:
+      Host: vlso5.1d.mom
+    path: '%2Fsocks5%3D888%3A888%40hkip.1d.mom%3A1080fp=chromesecurity=tls'
+- name: 🇯🇵 日本 | vless | 114
+  port: 8443
+  server: 178.249.213.177
+  servername: jp1.fromblancwithlove.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+- name: 🇯🇵 日本 | trojan | 116
+  network: ws
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  port: 443
+  server: 207.65.189.9
+  sni: hhcm.hhxaf.cc.cd
+  type: trojan
+  ws-opts:
+    path: /
+- name: 🇯🇵 日本 | vless | 118
+  network: ws
+  port: 443
+  server: 154.19.187.190
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443fp=chromesecurity=tls'
+- name: 🇯🇵 日本 | vless | 121
+  network: ws
+  port: 443
+  server: 66.42.37.41
+  servername: t1s1.rittbo.kdns.fr
+  tls: false
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  ws-opts:
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+    path: /fp=chromesecurity=tls
+- name: 🇯🇵 日本 | vless | 122
+  network: ws
+  port: 8443
+  server: 45.77.131.33
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffp%3Dchromefp=chromesecurity=tls'
+- name: 🇯🇵 日本 | vless | 123
+  network: ws
+  port: 443
+  server: 45.192.243.63
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chromesecurity=tls
+- name: 🇯🇵 日本 | vless | 124
+  network: ws
+  port: 443
+  server: 45.95.212.186
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffp=chromesecurity=tls'
+- name: 🇯🇵 日本 | vless | 126
+  network: ws
+  port: 443
+  server: 45.8.173.20
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffp=chromesecurity=tls'
+- name: 🇯🇵 日本 | vless | 127
+  network: ws
+  port: 443
+  server: 60.130.209.253
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /fp=chromefp=chromesecurity=tls
+- name: 🇯🇵 日本 | vless | 128
+  network: ws
+  port: 443
+  server: 45.77.21.148
+  servername: t1s1.rittbo.kdns.fr
+  tls: false
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  ws-opts:
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+    path: '%2Ffp=chromesecurity=tls'
+- name: 🇯🇵 日本 | vless | 129
+  network: ws
+  port: 443
+  server: 45.192.243.25
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffp=chromesecurity=tls'
+- name: 🇯🇵 日本 | vless | 131
+  network: ws
+  port: 443
+  server: 104.105.140.77
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chromesecurity=tls
+- name: 🇯🇵 日本 | vless | 132
+  network: ws
+  port: 443
+  server: 54.64.1.93
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffp=chromesecurity=tls'
+- name: 🇯🇵 日本 | vless | 133
+  network: ws
+  port: 443
+  server: 154.19.187.5
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560fp=chromefp=chromefp=chromesecurity=tls
+- name: 🇯🇵 日本 | vless | 134
+  network: ws
+  port: 443
+  server: 66.245.220.243
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /fp=chromesecurity=tls
+- name: 🇯🇵 日本 | vless | 135
+  network: ws
+  port: 443
+  server: 45.76.208.253
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffp%3Dchromesecurity=tls'
+- name: 🇯🇵 日本 | vless | 136
+  network: ws
+  port: 8443
+  server: 82.110.234.121
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffp=chromesecurity=tls'
+- name: 🇯🇵 日本 | vless | 137
+  network: ws
+  port: 443
+  server: 54.64.190.109
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffp=chromesecurity=tls'
+- name: 🇯🇵 日本 | vless | 138
+  network: ws
+  port: 443
+  server: 45.8.173.253
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /fp=chromesecurity=tls
+- name: 🇯🇵 日本 | vless | 139
+  network: ws
+  port: 443
+  server: 13.158.39.80
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /fp=chromesecurity=tls
+- client-fingerprint: firefox
+  name: 🇯🇵 日本 | vless | 140
+  network: ws
+  port: 8443
+  server: 167.179.110.68
+  servername: notls.lukongtou.eu.org
+  tls: true
+  type: vless
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+- name: 🇯🇵 日本 | vless | 141
+  network: ws
+  port: 443
+  server: 104.105.128.249
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /fp=chromesecurity=tls
+- name: 🇯🇵 日本 | vless | 142
+  network: ws
+  port: 443
+  server: 64.176.60.226
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  ws-opts:
+    headers:
+      Host: cdn8848.776676.xyz
+    path: /documents?ed=2560fp=chromesecurity=tls
+- name: 🇯🇵 日本 | trojan | 143
+  password: 18844@zxcvbn
+  port: 443
+  server: 49.212.204.123
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 144
+  network: ws
+  password: 4c3164ee-abcf-4091-abea-d1cd4937a68d
+  port: 443
+  server: 64.176.44.23
+  skip-cert-verify: true
+  sni: jy.hhllfly.kdns.fr
+  type: trojan
+  ws-opts:
+    headers:
+      Host: jy.hhllfly.kdns.fr
+    path: '%2F%3Fed%3D2048'
 - name: 🇯🇵 日本 | vless | 145
   network: ws
   port: 8443
-  server: 216.238.54.114
+  server: 69.8.128.249
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffp=chromesecurity=tls'
+- name: 🇯🇵 日本 | vless | 146
+  network: ws
+  port: 443
+  server: 161.33.45.250
   servername: snip.edgeoneai.cc.cd
   tls: false
   type: vless
@@ -1638,6 +1610,18 @@ proxies:
       Host: snip.edgeoneai.cc.cd
     path: '%2Ffp=chromesecurity=tls'
 - name: 🇯🇵 日本 | vless | 147
+  network: ws
+  port: 443
+  server: 152.69.199.75
+  servername: proxy-1cu.pages.dev
+  tls: false
+  type: vless
+  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
+  ws-opts:
+    headers:
+      Host: proxy-1cu.pages.dev
+    path: '%2Ffp=androidsecurity=tls'
+- name: 🇯🇵 日本 | vless | 148
   network: ws
   port: 443
   server: 138.2.52.92
@@ -1652,7 +1636,7 @@ proxies:
 - name: 🇯🇵 日本 | vless | 149
   network: ws
   port: 443
-  server: 161.33.45.250
+  server: 3.113.232.245
   servername: snip.edgeoneai.cc.cd
   tls: false
   type: vless
@@ -1660,138 +1644,8 @@ proxies:
   ws-opts:
     headers:
       Host: snip.edgeoneai.cc.cd
-    path: '%2Ffp=chromesecurity=tls'
+    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443fp%3Dchromesecurity=tls'
 - name: 🇯🇵 日本 | vless | 150
-  network: ws
-  port: 443
-  server: 152.69.200.216
-  servername: jp3.yohototo.top
-  tls: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    headers:
-      Host: jp3.yohototo.top
-    path: '%2Ftyxywsfp=chrome'
-- name: 🇯🇵 日本 | vless | 151
-  network: ws
-  port: 443
-  server: 152.69.199.75
-  servername: proxy-1cu.pages.dev
-  tls: false
-  type: vless
-  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
-  ws-opts:
-    headers:
-      Host: proxy-1cu.pages.dev
-    path: '%2Ffp=androidsecurity=tls'
-- name: 🇯🇵 日本 | vless | 153
-  network: ws
-  port: 443
-  server: 66.245.220.243
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /fp=chromesecurity=tls
-- name: 🇯🇵 日本 | vless | 155
-  network: ws
-  port: 443
-  server: 172.104.81.253
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffp=chromesecurity=tls'
-- name: 🇯🇵 日本 | trojan | 156
-  password: 18844@zxcvbn
-  port: 443
-  server: 49.212.178.155
-  skip-cert-verify: true
-  sni: os13.cats22.net
-  type: trojan
-- name: 🇯🇵 日本 | vless | 157
-  network: ws
-  port: 443
-  server: 202.182.118.182
-  servername: t1s1.rittbo.kdns.fr
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  ws-opts:
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-    path: /fp=chromesecurity=tls
-- name: 🇯🇵 日本 | vless | 158
-  network: ws
-  port: 443
-  server: 141.11.138.167
-  servername: vlso5.1d.mom
-  tls: false
-  type: vless
-  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
-  ws-opts:
-    headers:
-      Host: vlso5.1d.mom
-    path: '%2Fsocks5%3D888%3A888%40hkip.1d.mom%3A1080fp=chromesecurity=tls'
-- name: 🇯🇵 日本 | vless | 159
-  network: ws
-  port: 443
-  server: 172.104.77.231
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffp=chromesecurity=tls'
-- name: 🇯🇵 日本 | trojan | 160
-  network: ws
-  password: 4c3164ee-abcf-4091-abea-d1cd4937a68d
-  port: 443
-  server: 64.176.44.23
-  skip-cert-verify: true
-  sni: jy.hhllfly.kdns.fr
-  type: trojan
-  ws-opts:
-    headers:
-      Host: jy.hhllfly.kdns.fr
-    path: '%2F%3Fed%3D2048'
-- name: 🇯🇵 日本 | vless | 161
-  network: ws
-  port: 443
-  server: 64.176.60.226
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /documents?ed=2560fp=chromesecurity=tls
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 162
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: d1LjsQHtTCj7kHx2LHFisVDPc_xOtKnugy5YRFKXqUs
-    short-id: '!!str 39'
-  server: 64.176.62.54
-  servername: www.amazon.com
-  tls: false
-  type: vless
-  uuid: 12e35bfe-1e79-4cf1-8a8e-22a242e97408
-- name: 🇯🇵 日本 | vless | 167
   network: ws
   port: 443
   server: 138.2.41.8
@@ -1803,7 +1657,56 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: '%2Ffp=chromesecurity=tls'
-- name: 🇯🇵 日本 | vless | 169
+- client-fingerprint: chrome
+  name: 🇯🇵 日本 | vless | 151
+  network: ws
+  port: 443
+  server: 207.148.108.85
+  servername: t1s1.rittbo.kdns.fr
+  tls: true
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+- name: 🇯🇵 日本 | vless | 152
+  network: ws
+  port: 8443
+  server: 178.239.117.133
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chromesecurity=tls
+- name: 🇯🇵 日本 | trojan | 153
+  password: JA96378052
+  port: 443
+  server: 52.195.11.84
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 154
+  password: an70aOaIjcCF43gOlSB6eKER53Z38DYDx8l9RCSCpYTwXS3pueyAqyFZx2zDNA
+  port: 443
+  server: 154.31.114.10
+  sni: plowman.meijireform.com
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 155
+  password: ND91608427
+  port: 443
+  server: 18.179.31.199
+  type: trojan
+- name: 🇯🇵 日本 | vless | 156
+  network: ws
+  port: 443
+  server: 16.76.68.65
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443fp=chromesecurity=tls'
+- name: 🇯🇵 日本 | vless | 157
   network: ws
   port: 8443
   server: 161.33.14.183
@@ -1815,30 +1718,22 @@ proxies:
     headers:
       Host: t1s1.rittbo.kdns.fr
     path: '%2Ffp=chromesecurity=tls'
-- name: 🇯🇵 日本 | trojan | 171
-  network: ws
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  port: 443
-  server: 207.65.189.9
-  sni: hhcm.hhxaf.cc.cd
-  type: trojan
-  ws-opts:
-    path: /
-- flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 173
-  port: 443
-  reality-opts:
-    public-key: trN5x0amt2YuVzF2vZnK294YBAuh_zl5QkZjPyWz-TI
-    short-id: '!!str 8718c58d3d51db59'
-  server: 201.58.150.14
-  servername: jp1.wolffast.net
-  tls: false
-  type: vless
-  uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b
-- name: 🇯🇵 日本 | vless | 174
+- name: 🇯🇵 日本 | vless | 158
   network: ws
   port: 8443
-  server: 202.155.12.145
+  server: 158.101.132.216
+  servername: t1s1.rittbo.kdns.fr
+  tls: false
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  ws-opts:
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+    path: '%2Ffp=chromesecurity=tls'
+- name: 🇯🇵 日本 | vless | 159
+  network: ws
+  port: 443
+  server: 141.147.174.243
   servername: snip.edgeoneai.cc.cd
   tls: false
   type: vless
@@ -1847,10 +1742,22 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443fp=chromesecurity=tls'
-- name: 🇯🇵 日本 | vless | 175
+- name: 🇯🇵 日本 | vless | 160
   network: ws
   port: 443
-  server: 60.130.209.253
+  server: 149.28.26.9
+  servername: t1s1.rittbo.kdns.fr
+  tls: false
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  ws-opts:
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+    path: /fp=chromesecurity=tls
+- name: 🇯🇵 日本 | vless | 161
+  network: ws
+  port: 443
+  server: 3.112.67.101
   servername: snip.edgeoneai.cc.cd
   tls: false
   type: vless
@@ -1858,20 +1765,151 @@ proxies:
   ws-opts:
     headers:
       Host: snip.edgeoneai.cc.cd
-    path: /fp=chromefp=chromesecurity=tls
-- name: 🇯🇵 日本 | trojan | 177
+    path: /fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560fp=chromefp=chromesecurity=tls
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: grpc
+  name: 🇯🇵 日本 | vless | 162
+  network: grpc
+  port: 2087
+  reality-opts:
+    public-key: -ZTJcZ_UcqAB7LHgkUqhnlJsQs_oBafRgjsFtWZElmM
+    short-id: '!!str c226283c4de5b1ad'
+  server: 31.76.91.72
+  servername: ads.x5.ru
+  tls: false
+  type: vless
+  uuid: 524e00ce-ed89-481d-b4a4-6d7017f884e3
+- name: 🇯🇵 日本 | vless | 165
+  network: ws
+  port: 443
+  server: 212.135.212.211
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443%3Fed%3D2560fp%3Dchromefp%3Dchromefp=chromesecurity=tls'
+- name: 🇯🇵 日本 | trojan | 166
+  network: ws
+  password: 4c3164ee-abcf-4091-abea-d1cd4937a68d
+  port: 443
+  server: 207.148.108.85
+  skip-cert-verify: true
+  sni: jy.hhllfly.kdns.fr
+  type: trojan
+  ws-opts:
+    headers:
+      Host: jy.hhllfly.kdns.fr
+    path: '%2F%3Fed%3D2048'
+- client-fingerprint: chrome
+  name: 🇯🇵 日本 | vless | 167
+  network: ws
+  port: 443
+  server: 45.76.206.46
+  servername: t1s1.rittbo.kdns.fr
+  tls: true
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+- name: 🇯🇵 日本 | vless | 168
+  network: ws
+  port: 8443
+  server: 216.238.54.114
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffp=chromesecurity=tls'
+- name: 🇯🇵 日本 | vless | 171
+  network: ws
+  port: 443
+  server: 108.160.136.71
+  servername: 20664.pages.dev
+  tls: false
+  type: vless
+  uuid: 9784bb19-3833-43ad-83b0-27ef8fc04ef2
+  ws-opts:
+    headers:
+      Host: 20664.pages.dev
+    path: '%2F%3Fed%3D2048fp=randomsecurity=tls'
+- name: 🇯🇵 日本 | vless | 172
+  network: ws
+  port: 443
+  server: 13.230.247.88
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /fp=chromesecurity=tls
+- name: 🇯🇵 日本 | vless | 173
+  network: ws
+  port: 443
+  server: 198.13.60.163
+  servername: t1s1.rittbo.kdns.fr
+  tls: true
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+- name: 🇯🇵 日本 | vless | 174
+  network: ws
+  port: 443
+  server: 43.206.159.216
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffp=chromesecurity=tls'
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | vless | 175
+  port: 443
+  reality-opts:
+    public-key: 3yorIs_psiYbIeESwMdne5mPe2JVzeNOpDa2IJxQ-Es
+    short-id: '!!str 21fa8a1ebf'
+  server: jp2.oh-node.com
+  servername: www.capcom.co.jp
+  tls: false
+  type: vless
+  uuid: 8c88c56d-5efb-4218-8753-0c2365dfe96a
+- name: 🇯🇵 日本 | vless | 176
+  network: ws
+  port: 443
+  server: 52.197.219.243
+  servername: snip.edgeoneai.cc.cd
+  tls: false
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443fp=chromesecurity=tls'
+- name: 🇯🇵 日本 | trojan | 179
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 2053
-  server: official.tokyometropolis.chernigov.ua
+  server: official.tokyometropolis.odesa.ua
   type: trojan
-- name: 🇯🇵 日本 | trojan | 178
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 2053
-  server: official.tokyometropolis.ivano-frankivsk.ua
-  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵 日本 | vmess | 180
+  network: tcp
+  port: '36011'
+  server: gz1.polymarket.party
+  tls: false
+  type: vmess
+  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
 - client-fingerprint: random
   flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 179
+  name: 🇯🇵 日本 | vless | 182
   port: 443
   reality-opts:
     public-key: CcQSK8MlTK613n1M4iXtMjkWwejRMWhAQp92tUvZXnk
@@ -1881,21 +1919,9 @@ proxies:
   tls: false
   type: vless
   uuid: ef4f4c3d-0b16-48ad-a8d8-2d22512b3b36
-- name: 🇯🇵 日本 | vless | 181
-  network: ws
-  port: 8443
-  server: 161.248.62.26
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffp=chromesecurity=tls'
 - alterId: 0
   cipher: auto
-  name: 🇯🇵 日本 | vmess | 182
+  name: 🇯🇵 日本 | vmess | 183
   network: ws
   port: '443'
   server: jp.vpn.taiaise.cn
@@ -1906,23 +1932,64 @@ proxies:
     headers:
       Host: jp.vpn.taiaise.cn
     path: /jp
-- name: 🇯🇵 日本 | trojan | 183
-  password: UX82473651
-  port: 443
-  server: 54.65.177.190
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 184
+- name: 🇯🇵 日本 | trojan | 185
   password: 9995cc0e-2e9d-4c80-8c81-4fdbb6322a3a
   port: 443
   server: 20.89.130.227
   sni: fscus.fscloud123456789.com
   type: trojan
-- name: 🇯🇵 日本 | trojan | 185
+- name: 🇯🇵 日本 | hy2 | 186
+  password: wvA0PtDIuFbSqooIC2goKzFr
+  port: 443
+  server: 38.175.202.26
+  skip-cert-verify: true
+  sni: bing.com
+  tls: false
+  type: hysteria2
+- name: 🇯🇵 日本 | trojan | 187
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.odessa.ua
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 188
   password: UX82473651
   port: 443
   server: 43.206.225.188
   type: trojan
-- name: 🇯🇵 日本 | vless | 187
+- name: 🇯🇵 日本 | trojan | 189
+  password: UX82473651
+  port: 443
+  server: 54.65.177.190
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 191
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.chernigov.ua
+  type: trojan
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | vless | 192
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: qBtxq4RZxDLCJT8i48iaGMhacv8MOI0yhIFiuwYJm08
+    short-id: '!!str 825d392c67e4'
+  server: 2.27.27.64
+  servername: jp.musicwave.net
+  tls: false
+  type: vless
+  uuid: 94d2d711-76e5-4d82-a3c9-4f06fd5558c8
+- name: 🇯🇵 日本 | trojan | 193
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.kharkov.ua
+  type: trojan
+- name: 🇯🇵 日本 | trojan | 194
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.kiev.ua
+  type: trojan
+- name: 🇯🇵 日本 | vless | 196
   network: ws
   port: 443
   server: 40.74.100.138
@@ -1934,40 +2001,33 @@ proxies:
     headers:
       Host: sebbb.azurewebsites.net
     path: /fp=chromesecurity=tls
-- alterId: 1
-  cipher: auto
-  name: 🇯🇵 日本 | vmess | 188
-  network: tcp
-  port: '449'
-  server: g06.jp04-1d-vm0.entry.fr0528.art
-  servername: ''
+- name: 🇯🇵 日本 | vless | 200
+  network: ws
+  port: 8443
+  server: 161.248.62.26
+  servername: snip.edgeoneai.cc.cd
   tls: false
-  type: vmess
-  uuid: 9c955dfc-c1d6-3de3-8230-deac3bd9c1a2
-- name: 🇯🇵 日本 | hy2 | 189
-  password: wvA0PtDIuFbSqooIC2goKzFr
-  port: 443
-  server: 38.175.202.26
-  skip-cert-verify: true
-  sni: bing.com
-  tls: false
-  type: hysteria2
-- alterId: 1
-  cipher: auto
-  name: 🇯🇵 日本 | vmess | 190
-  network: tcp
-  port: '21583'
-  server: g03.jp01-nn-vm0.entry.fr0528.art
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: a85150ba-dae3-3055-8984-700faca4d576
-- name: 🇯🇵 日本 | trojan | 191
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffp=chromesecurity=tls'
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: MapsYandexAPI
+  name: 🇯🇵 日本 | vless | 203
+  network: grpc
   port: 2053
-  server: official.tokyometropolis.kiev.ua
-  type: trojan
-- name: 🇯🇵 日本 | vless | 192
+  reality-opts:
+    public-key: w92oaftiqLJOMFy47hUWBixZEKwWJpHF4apaFTrh71w
+    short-id: '!!str '
+  server: 2.27.26.71
+  servername: api-maps.yandex.ru
+  tls: false
+  type: vless
+  uuid: bd44419a-02a9-4c03-9cb8-a7f8ffd3ae68
+- name: 🇯🇵 日本 | vless | 204
   network: ws
   port: 443
   server: 23.151.104.198
@@ -1979,36 +2039,12 @@ proxies:
     headers:
       Host: gogo.wknm.qzz.io
     path: /fp=chromesecurity=tls
-- client-fingerprint: edge
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 194
-  port: 8443
-  reality-opts:
-    public-key: 6rwYiIkFeAvFmuAZv8ZclWjn5SmTU1ex4U4KTRRQ2DI
-    short-id: '!!str 12206db5fe8b1dd4'
-  server: 45.202.254.53
-  servername: www.cloudflare.com
-  tls: false
-  type: vless
-  uuid: 601e4ca5-df0a-43a1-97c2-0b1f5c0ae413
-- name: 🇯🇵 日本 | vless | 195
-  network: ws
-  port: 443
-  server: 43.165.180.254
-  servername: snip.edgeoneai.cc.cd
-  tls: false
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /fp=chromesecurity=tls
-- name: 🇯🇵 日本 | trojan | 198
+- name: 🇯🇵 日本 | trojan | 205
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 2053
-  server: official.tokyometropolis.kharkov.ua
+  server: official.tokyometropolis.kyiv.ua
   type: trojan
-- name: 🇯🇵 日本 | vless | 199
+- name: 🇯🇵 日本 | vless | 206
   network: ws
   port: 443
   server: yakhbandan.info
@@ -2019,34 +2055,25 @@ proxies:
     headers:
       Host: varzesh3.com
     path: /msg.php
-- client-fingerprint: firefox
+- client-fingerprint: edge
   flow: xtls-rprx-vision
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #4'
-  port: 26518
-  server: 156.246.88.125
-  servername: github.com
-  tls: true
-  type: vless
-  uuid: e01fcb68-3112-49da-b85d-dffb799cfc9b
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 203
-  port: 443
+  name: 🇯🇵 日本 | vless | 207
+  port: 8443
   reality-opts:
-    public-key: 3yorIs_psiYbIeESwMdne5mPe2JVzeNOpDa2IJxQ-Es
-    short-id: '!!str 21fa8a1ebf'
-  server: jp2.oh-node.com
-  servername: www.capcom.co.jp
+    public-key: 6rwYiIkFeAvFmuAZv8ZclWjn5SmTU1ex4U4KTRRQ2DI
+    short-id: '!!str 12206db5fe8b1dd4'
+  server: 45.202.254.53
+  servername: www.cloudflare.com
   tls: false
   type: vless
-  uuid: 8c88c56d-5efb-4218-8753-0c2365dfe96a
-- name: 🇯🇵 日本 | trojan | 206
+  uuid: 601e4ca5-df0a-43a1-97c2-0b1f5c0ae413
+- name: 🇯🇵 日本 | trojan | 208
   password: ultra@kWZdAzt_IH593eGLRjdxnBZ0
   port: 10009
   server: z-jp2.1card.cc
   sni: www.cloudflare.com
   type: trojan
-- name: 🇯🇵 日本 | trojan | 207
+- name: 🇯🇵 日本 | trojan | 209
   network: ws
   password: 0400697c-b581-4575-9d2f-0bbd4659312d
   port: 20230
@@ -2055,49 +2082,12 @@ proxies:
   type: trojan
   ws-opts:
     path: /
-- name: 🇯🇵 日本 | trojan | 208
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 2053
-  server: official.tokyometropolis.odesa.ua
-  type: trojan
-- name: 🇯🇵 日本 | trojan | 209
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 2053
-  server: official.tokyometropolis.kherson.ua
-  type: trojan
-- name: 🇯🇵 日本 | vless | 210
+- name: 🇯🇵 日本 | vless | 211
   port: 20270
   server: jp-1.gsafevpnapi.com
   tls: false
   type: vless
   uuid: c80d9d87-0aa6-4b45-9673-7a9d1e5e4d6b
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 日本 | vmess | 211
-  network: ws
-  port: '8998'
-  server: cc28.goingside.site
-  tls: false
-  type: vmess
-  uuid: 4b019faa-38b0-473d-bc49-60bb68151c34
-  ws-opts:
-    headers:
-      Host: cc28.goingside.site
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 日本 | vmess | 212
-  network: tcp
-  port: '20401'
-  server: gz1.polymarket.party
-  tls: false
-  type: vmess
-  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
-- name: 🇯🇵 日本 | trojan | 213
-  password: d050aca3-9df2-4461-90ec-92373c1d7636
-  port: 44184
-  server: v2jp.k1.ssnss.live
-  type: trojan
 - alterId: 0
   cipher: auto
   name: '🇯🇵 日本3|@ripaojiedian #3'
@@ -2113,9 +2103,36 @@ proxies:
     headers:
       Host: kneNaKHeSXnZH259.v.3dns.vip
     path: /ws-vmess
+- name: 🇯🇵 日本 | trojan | 213
+  password: d050aca3-9df2-4461-90ec-92373c1d7636
+  port: 44184
+  server: v2jp.k1.ssnss.live
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵 日本 | vmess | 214
+  network: ws
+  port: '23801'
+  server: gz1.polymarket.party
+  tls: true
+  type: vmess
+  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
+  ws-opts:
+    headers:
+      Host: us4.australiacaregroup.site
+    path: /vmess
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #4'
+  port: 26518
+  server: 156.246.88.125
+  servername: github.com
+  tls: true
+  type: vless
+  uuid: e01fcb68-3112-49da-b85d-dffb799cfc9b
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇯🇵 日本 | vless | 215
+  name: 🇯🇵 日本 | vless | 216
   network: tcp
   port: 443
   reality-opts:
@@ -2199,18 +2216,12 @@ proxies:
   tls: false
   type: vless
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
-  network: ws
+- cipher: aes-256-gcm
+  name: '🇯🇵[www.v2nodes.com] ss-JP-1544... #2'
+  password: 3eOFeNssde7PYYMv
   port: 443
-  server: 141.11.139.215
-  servername: ccc.010304.xyz
-  tls: false
-  type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  ws-opts:
-    headers:
-      Host: ccc.010304.xyz
-    path: /fp=chromesecurity=tls
+  server: 84.247.155.196
+  type: ss
 - cipher: aes-128-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-5141... #1'
   password: shadowsocks
