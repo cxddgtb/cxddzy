@@ -74,10 +74,11 @@ proxies:
   type: trojan
 - alterId: 0
   cipher: auto
-  name: 中国 015
+  name: 🇸🇬 新加坡 | vmess | 215
   network: ws
   port: 443
   server: 8.219.185.204
+  servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -88,11 +89,10 @@ proxies:
     path: /sshocean
 - alterId: 0
   cipher: auto
-  name: 🇸🇬 新加坡 | vmess | 146
+  name: 中国 016
   network: ws
   port: 443
   server: 8.219.216.216
-  servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -131,7 +131,7 @@ proxies:
     path: /sshocean
 - alterId: 0
   cipher: auto
-  name: 🇸🇬 新加坡 | vmess | 236
+  name: 🇸🇬 新加坡 | vmess | 219
   network: ws
   port: 443
   server: 8.219.171.114
@@ -202,7 +202,7 @@ proxies:
     path: /path/120306182525
 - alterId: 0
   cipher: auto
-  name: 🇨🇳 中国 | vmess | 05
+  name: 🇨🇳 中国 | vmess | 07
   network: ws
   port: 443
   server: 113.31.124.147
@@ -215,14 +215,25 @@ proxies:
     headers:
       Host: lg30.cfcdn3.xyz
     path: /
-- alterId: 0
+- alpn:
+  - ''
+  alterId: 0
   cipher: auto
-  name: 中国 025
+  http-opts:
+    headers:
+      Host:
+      - openai.com
+    method: GET
+    path:
+    - /QQqun-737805443
+  name: '🇭🇰 香港 | HKG #8'
   network: http
-  port: 52080
+  port: '52080'
   server: 47.242.81.94
   skip-cert-verify: true
+  tls: false
   type: vmess
+  udp: true
   uuid: e47b9f77-60e4-4738-8d53-772b6002e146
 - alterId: 0
   cipher: auto
@@ -366,7 +377,7 @@ proxies:
   uuid: bb73d6fe-9700-4607-8dc1-eb9f15253e9d
 - alterId: 0
   cipher: auto
-  name: 🇭🇰 香港 | vmess | 61
+  name: 🇭🇰 香港 | vmess | 51
   network: ws
   port: 443
   server: fullaccesstohongkongnet.azurewebsites.net
@@ -845,54 +856,17 @@ proxies:
   skip-cert-verify: true
   type: vmess
   uuid: dba51a2e-a788-43b7-9ac4-9f7cc1255f15
-- name: 🇨🇳_中国
+- alterId: 0
+  cipher: auto
+  name: 未知152
   network: tcp
-  password: 4e7c56ed-68dc-358d-8b4b-fe5c2e74632d
-  port: 44027
-  server: 62.234.223.235
+  port: 50002
+  server: 112.132.215.108
+  servername: ''
   skip-cert-verify: true
-  sni: baidu.com
-  type: trojan
-- name: 🇨🇳_中国 (2)
-  network: tcp
-  password: 4e7c56ed-68dc-358d-8b4b-fe5c2e74632d
-  port: 44003
-  server: 62.234.223.235
-  skip-cert-verify: true
-  sni: baidu.com
-  type: trojan
-- name: 🇨🇳_中国 (3)
-  network: tcp
-  password: 4e7c56ed-68dc-358d-8b4b-fe5c2e74632d
-  port: 44056
-  server: 62.234.223.235
-  skip-cert-verify: true
-  sni: baidu.com
-  type: trojan
-- name: 🇨🇳_中国 (4)
-  network: tcp
-  password: 4e7c56ed-68dc-358d-8b4b-fe5c2e74632d
-  port: 44004
-  server: 62.234.223.235
-  skip-cert-verify: true
-  sni: baidu.com
-  type: trojan
-- name: 🇨🇳_中国 (5)
-  network: tcp
-  password: 4e7c56ed-68dc-358d-8b4b-fe5c2e74632d
-  port: 44054
-  server: 62.234.223.235
-  skip-cert-verify: true
-  sni: baidu.com
-  type: trojan
-- name: 🇨🇳_中国 (6)
-  network: tcp
-  password: 4e7c56ed-68dc-358d-8b4b-fe5c2e74632d
-  port: 44058
-  server: 62.234.223.235
-  skip-cert-verify: true
-  sni: baidu.com
-  type: trojan
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
 - alterId: 0
   cipher: auto
   name: 未知89
@@ -906,32 +880,14 @@ proxies:
   uuid: 279c2c58-2001-4f1a-8c12-fa9bd992f4ef
 - alterId: 0
   cipher: auto
-  name: 🇨🇳 中国 | vmess | 02
-  network: ws
-  port: '10086'
-  server: 39.108.113.127
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 4fc543d5-23ce-4556-ae2b-01685edd4397
-  ws-opts:
-    headers:
-      Host: ''
-    path: ''
-- alterId: 0
-  cipher: auto
   name: 🇨🇳 中国 | vmess | 03
-  network: ws
-  port: '10086'
-  server: 120.48.133.162
-  servername: ''
+  network: tcp
+  port: '10001'
+  server: 106.52.57.86
+  servername: 106.52.57.86
   tls: false
   type: vmess
-  uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
-  ws-opts:
-    headers:
-      Host: ''
-    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+  uuid: f56b9a92-47d4-4d6e-b828-1aa3e96dae65
 - alterId: 0
   cipher: auto
   name: 🇨🇳 中国 | vmess | 04
@@ -948,7 +904,35 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
+  name: 🇨🇳 中国 | vmess | 05
+  network: ws
+  port: '10086'
+  server: 39.108.113.127
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: b0253c6c-0b96-4950-bde1-669f13bc1a01
+  ws-opts:
+    headers:
+      Host: ''
+    path: ''
+- alterId: 0
+  cipher: auto
   name: 🇨🇳 中国 | vmess | 06
+  network: ws
+  port: '10086'
+  server: 120.48.133.162
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
+  ws-opts:
+    headers:
+      Host: ''
+    path: /?Telegram---MTMVPN---MTMVPN---MTMVPN---MTMVPN
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳 中国 | vmess | 08
   network: ws
   port: 443
   server: 106.75.104.152
@@ -960,27 +944,6 @@ proxies:
     headers:
       Host: lg30.cfcdn3.xyz
     path: /ray
-- alterId: 0
-  cipher: auto
-  name: 🇨🇳 中国 | vmess | 07
-  network: tcp
-  port: '10001'
-  server: 106.52.57.86
-  servername: 106.52.57.86
-  tls: false
-  type: vmess
-  uuid: f56b9a92-47d4-4d6e-b828-1aa3e96dae65
-- alterId: 0
-  cipher: auto
-  name: 未知152
-  network: tcp
-  port: 50002
-  server: 112.132.215.108
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
 - alterId: 64
   cipher: auto
   name: CN2｜家宽｜非常安全
