@@ -1,5 +1,6 @@
 proxies:
-- name: '🇭🇰HK_1|1.7MB/s #1'
+- client-fingerprint: chrome
+  name: '🇭🇰HK_1|4.4MB/s #1'
   password: 3b985d60-e252-4935-8e03-06afeb1144c9
   port: 18000
   server: 112.49.65.212
@@ -8,19 +9,7 @@ proxies:
   sni: www.biliimg.com
   tls: true
   type: trojan
-- alpn:
-  - h3
-  auth-str: dongtaiwang.com
-  down: '55'
-  name: '🇩🇪_DE_德国->🇳🇱_NL_荷兰_IPV4 #1'
-  password: dongtaiwang.com
-  port: 26691
-  server: 5.83.129.143
-  skip-cert-verify: true
-  tls: true
-  type: hysteria
-  up: '11'
-  x-toolall-mihomo: true
+  udp: true
 - name: '🇹🇼_TW_台湾->🇩🇪_DE_德国_IPV4 #1'
   password: 9b24e5d0-62be-41df-b967-9b670cf90ff8
   port: 2086
@@ -30,6 +19,7 @@ proxies:
   sni: de.gosthk.site
   tls: true
   type: anytls
+  udp: true
 - client-fingerprint: firefox
   grpc-opts:
     grpc-service-name: 204adda7e3da
@@ -67,10 +57,78 @@ proxies:
   sni: 109.70.74.213
   tls: false
   type: hysteria2
+- alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  down: '55'
+  name: 🇩🇪_DE_德国->🇳🇱_NL_荷兰_IPV4
+  password: dongtaiwang.com
+  port: 26691
+  server: 5.83.129.143
+  skip-cert-verify: true
+  tls: true
+  type: hysteria
+  up: '11'
+  x-toolall-mihomo: true
 - client-fingerprint: chrome
-  name: CF中转_110719961
+  name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #14'
   network: ws
   port: 443
+  server: 104.20.22.159
+  servername: cf.zhahui.de5.net
+  tls: true
+  type: vless
+  uuid: 2d4b819d-6fa6-4db2-8434-61e7db0fe93c
+  ws-opts:
+    headers:
+      Host: cf.zhahui.de5.net
+    path: '%2F'
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #6'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
+    short-id: '!!str b28db60d77c50b4f'
+  server: 193.163.203.170
+  servername: yandex.ru
+  tls: true
+  type: vless
+  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
+  ws-opts:
+    headers:
+      Host: '%2F%3Ftelegram--marambashi--marambashi'
+- client-fingerprint: unsafe
+  name: CF中转_1107196959 t.me/rjsxrd
+  network: ws
+  port: 443
+  server: 188.114.97.6
+  servername: all.speedtest03.ccwu.cc
+  tls: true
+  type: vless
+  uuid: 3ccba794-1c6d-48a8-acf2-f5caf0e69d86
+  ws-opts:
+    headers:
+      Host: all.speedtest03.ccwu.cc
+    path: '%2F'
+- client-fingerprint: unsafe
+  name: 🇩🇪[openproxylist.com
+  network: ws
+  port: 443
+  server: 104.18.51.110
+  servername: n.bitpulse.me
+  tls: true
+  type: vless
+  uuid: f27b6f65-6e59-4f89-b929-afa397ca587f
+  ws-opts:
+    headers:
+      Host: n.bitpulse.me
+    path: '%2F019bcbad-3813-7cce-8786-3ac0e418f128'
+- client-fingerprint: chrome
+  name: CF中转_1106051383 t.me/rjsxrd
+  network: ws
+  port: 2053
   server: 104.17.148.111
   servername: vpn-1fj.pages.dev
   tls: true
@@ -80,8 +138,73 @@ proxies:
     headers:
       Host: vpn-1fj.pages.dev
     path: '%2F'
+- client-fingerprint: unsafe
+  name: CF中转_1106052699 t.me/rjsxrd
+  network: ws
+  port: 443
+  server: 172.66.128.146
+  servername: n.bitpulse.me
+  tls: true
+  type: vless
+  uuid: f27b6f65-6e59-4f89-b929-afa397ca587f
+  ws-opts:
+    headers:
+      Host: n.bitpulse.me
+    path: '%2F019bcbad-3813-7cce-8786-3ac0e418f128%3Fed'
+- client-fingerprint: unsafe
+  name: CF中转_1106206347
+  network: ws
+  port: 443
+  server: 172.64.152.19
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
 - client-fingerprint: chrome
-  name: 🔥 megavpn (мега впн) в тг -> @...
+  name: CF中转_1106053170 t.me/rjsxrd
+  network: ws
+  port: 443
+  server: 104.17.3.81
+  servername: nautica-cff.kloningstrife002.workers.dev
+  tls: true
+  type: vless
+  uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
+  ws-opts:
+    headers:
+      Host: nautica-cff.kloningstrife002.workers.dev
+    path: '%2F138.2.74.219-28616'
+- client-fingerprint: chrome
+  name: CF中转_110719362
+  network: ws
+  port: 443
+  server: 172.64.147.85
+  servername: wallweb-4r0.pages.dev
+  tls: true
+  type: vless
+  uuid: e53eacb6-cd30-4964-a57c-febcb5151b98
+  ws-opts:
+    headers:
+      Host: wallweb-4r0.pages.dev
+    path: '%2Ffp%3Dchrome'
+- client-fingerprint: chrome
+  name: CF中转_1107196869 t.me/rjsxrd
+  network: ws
+  port: 443
+  server: 104.18.8.246
+  servername: wallweb11.wallwebc992h7.workers.dev
+  tls: true
+  type: vless
+  uuid: 66969b2e-5e49-4750-9419-167d4bb64c07
+  ws-opts:
+    headers:
+      Host: wallweb11.wallwebc992h7.workers.dev
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '🔥 megavpn (мега впн) в тг -> @... #1'
   network: ws
   port: 443
   server: 162.159.198.1
@@ -94,107 +217,88 @@ proxies:
     headers:
       Host: fs.qicai99.com
     path: '%2F%3FTELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM%3Fed%3D2560'
-- name: CF中转_1107198348
-  network: ws
-  port: 8443
-  server: 104.17.177.160
-  tls: true
-  type: vless
-  uuid: fceb3200-2516-47d2-8e28-d04ecde9427a
-  ws-opts:
-    headers:
-      Host: edge-fef90023.pages.dev
-    path: /fp=chrome
-- name: CF中转_1107046043 t.me/rjsxrd
-  network: ws
-  port: 2087
-  server: 188.114.97.6
-  servername: levikoconfig.levikogjgfdd.ir
-  tls: true
-  type: vless
-  uuid: 50414e45-4c5f-5a45-5553-6f51879c0594
-  ws-opts:
-    headers:
-      Host: levikoconfig.levikogjgfdd.ir
-    path: '%2Ffp%3Dchrome'
-- client-fingerprint: chrome
-  name: CF中转_1107197018
-  network: ws
-  port: 2053
-  server: 104.17.148.111
-  servername: vpn-1fj.pages.dev
-  tls: true
-  type: vless
-  uuid: 2b181a3a-c001-4145-845a-5d43a43837d5
-  ws-opts:
-    headers:
-      Host: vpn-1fj.pages.dev
-    path: '%2F'
-- name: CF中转_1107042957 t.me/rjsxrd
-  network: ws
-  port: 2083
-  server: 104.18.1.1
-  servername: vlsovip.1d.mom
-  tls: true
-  type: vless
-  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
-  ws-opts:
-    headers:
-      Host: vlsovip.1d.mom
-    path: '%2Fsocks5%3D888%3A888'
 - alpn:
   - http/1.1
   client-fingerprint: unsafe
-  name: CF中转_1106058304 t.me/rjsxrd
+  name: CF中转_1106058726 t.me/rjsxrd
   network: ws
   port: 443
   server: 188.114.98.0
-  servername: auth-api-8be4aa-gw.prod-relay-110934.workers.dev
+  servername: muddy-star-d195.aboumansour10313.workers.dev
   tls: true
   type: vless
-  uuid: c2f1f999-365f-42a7-87e7-726cbd0753ae
+  uuid: eaf76557-2219-4799-8171-d7020adfefd0
   ws-opts:
     headers:
-      Host: auth-api-8be4aa-gw.prod-relay-110934.workers.dev
-    path: '%2F294dd38929bdec5b%3Fed%3D2560'
-- client-fingerprint: chrome
-  name: CF中转_1107191032 t.me/rjsxrd
+      Host: muddy-star-d195.aboumansour10313.workers.dev
+    path: '%2Fws'
+- client-fingerprint: unsafe
+  name: CF中转_1106058083 t.me/rjsxrd
   network: ws
   port: 443
-  server: 172.67.167.179
-  servername: xstack.mahanfixe.workers.dev
+  server: 104.19.235.15
+  servername: n.bitpulse.me
   tls: true
   type: vless
-  uuid: a8b1d666-d3ba-4b17-90c4-ba7514c74f78
+  uuid: f27b6f65-6e59-4f89-b929-afa397ca587f
   ws-opts:
     headers:
-      Host: xstack.mahanfixe.workers.dev
-    path: '%2Fxiron'
-- client-fingerprint: chrome
-  name: CF中转_1107198645 t.me/rjsxrd
+      Host: n.bitpulse.me
+    path: '%2F019bcbad-3813-7cce-8786-3ac0e418f128'
+- alpn:
+  - h3
+  client-fingerprint: chrome
+  name: CF中转_1107194183
   network: ws
   port: 443
-  server: 172.67.145.14
-  servername: web-app-ji3j1z.app-wuuhuw.workers.dev
+  server: 162.159.153.194
+  servername: vlesss.xttd.eu.org
   tls: true
   type: vless
-  uuid: 50414e45-4c5f-5a45-5553-7bac159e3b40
+  uuid: 1e922b22-d169-4461-89c1-07e09ff2617c
   ws-opts:
     headers:
-      Host: web-app-ji3j1z.app-wuuhuw.workers.dev
-    path: '%2Fapi%2Fws'
-- client-fingerprint: chrome
-  name: CF中转_1107191023 t.me/rjsxrd
+      Host: vlesss.xttd.eu.org
+    path: /proxyip=proxyip.fxxk.dedyn.io
+- alpn:
+  - h3
+  client-fingerprint: random
+  name: CF中转_1107195568 t.me/rjsxrd
   network: ws
   port: 443
-  server: 172.67.184.45
-  servername: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
+  server: 104.17.100.185
+  servername: vlesss.xttd.eu.org
   tls: true
   type: vless
-  uuid: 82b279c6-5cba-3a96-f8bd-780a00000045
+  uuid: 1e922b22-d169-4461-89c1-07e09ff2617c
   ws-opts:
     headers:
-      Host: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
+      Host: vlesss.xttd.eu.org
+    path: '%2Fproxyip%3Dproxyip.fxxk.dedyn.io'
+- client-fingerprint: ios
+  flow: ''
+  grpc-opts:
+    grpc-service-name: 3e99d50d5740985d
+  name: 🇷🇺 俄罗斯 | vless | 114
+  network: grpc
+  port: 443
+  server: 189.74.114.116
+  servername: edge.mediastvor.cc
+  tls: true
+  type: vless
+  uuid: 27b9f6d7-1668-4b8a-acf1-11398febcfee
+- client-fingerprint: chrome
+  name: CF中转_1107196426
+  network: ws
+  port: 2053
+  server: 172.67.78.117
+  servername: helloapps.cc.cd
+  tls: true
+  type: vless
+  uuid: a21b9103-1693-49c1-8dc9-e8e8098ee969
+  ws-opts:
+    headers:
+      Host: helloapps.cc.cd
     path: '%2F'
 - alterId: 0
   cipher: auto
@@ -247,6 +351,19 @@ proxies:
   ws-opts:
     headers:
       Host: ld2.shabijichang.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇮🇳 _US_美国->🇮🇳_IN_印度_1
+  network: ws
+  port: '80'
+  server: 104.17.18.26
+  tls: false
+  type: vmess
+  uuid: 5180444a-4756-43b4-960b-49eb9052e4e8
+  ws-opts:
+    headers:
+      Host: a.109420.xyz
     path: /
 - alterId: 0
   cipher: auto
