@@ -103,26 +103,51 @@ proxies:
   server: 62.182.193.228
   type: ss
 - cipher: aes-256-gcm
+  name: '🇸🇪[www.v2nodes.com] ss-SE-1615... #2'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 138.199.55.243
+  type: ss
+- cipher: aes-256-gcm
   name: '🇸🇪[www.v2nodes.com] ss-SE-1560... #2'
   password: AxIYWtskJWIIaefW
   port: 8388
   server: 70.34.212.124
   type: ss
-- name: '🇸🇪[www.v2nodes.com] trojan-SE-... #2'
+- name: 🇸🇪 瑞典 | trojan | 48
   password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
   port: 443
   server: 95.143.196.97
+  type: trojan
+- name: '🇸🇪 #1'
+  network: tcp
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  port: 443
+  server: 95.143.196.97
+  skip-cert-verify: false
+  sni: connect-se.mimowhat.online
   type: trojan
 - alpn:
   - h2
   grpc-opts:
     grpc-service-name: TrojanGRPC
-  name: 🇸🇪 瑞典 | trojan | 75
+  name: 🇸🇪 瑞典 | trojan | 77
   network: grpc
   password: 8y67d7CY_RYwGrvc69NXhBV_4xz7ZpB3
   port: 448
-  server: bochum.gosgenarchive.com
-  sni: bochum.gosgenarchive.com
+  server: munich.gosgenarchive.com
+  sni: munich.gosgenarchive.com
+  type: trojan
+- alpn:
+  - h2
+  - http/1.1
+  name: '🇸🇪 #2'
+  network: tcp
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  port: 443
+  server: connect-se.mimowhat.online
+  skip-cert-verify: false
+  sni: connect-se.mimowhat.online
   type: trojan
 - name: 🇸🇪 瑞典 | trojan | 51
   network: ws
@@ -138,12 +163,12 @@ proxies:
   - h2
   grpc-opts:
     grpc-service-name: TrojanGRPC
-  name: 🇸🇪 瑞典 | trojan | 77
+  name: 🇸🇪 瑞典 | trojan | 75
   network: grpc
   password: 8y67d7CY_RYwGrvc69NXhBV_4xz7ZpB3
   port: 448
-  server: munich.gosgenarchive.com
-  sni: munich.gosgenarchive.com
+  server: bochum.gosgenarchive.com
+  sni: bochum.gosgenarchive.com
   type: trojan
 - alpn:
   - h2
