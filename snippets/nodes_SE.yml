@@ -1,7 +1,7 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: '瑞典 003 #1'
+  name: '瑞典 002 #1'
   network: tcp
   port: 80
   server: 217.142.138.61
@@ -107,12 +107,6 @@ proxies:
     headers:
       Host: www.68547476.xyz
     path: /path/191019072927
-- cipher: chacha20-ietf-poly1305
-  name: 🇸🇪[www.v2nodes.com] ss-SE-1620...
-  password: 2e555e46dbc421452416834962fd014f
-  port: 8388
-  server: 62.182.193.228
-  type: ss
 - cipher: aes-256-gcm
   name: '🇸🇪[www.v2nodes.com] ss-SE-1615... #2'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -121,9 +115,46 @@ proxies:
   type: ss
 - alpn:
   - h2
+  - http/1.1
+  name: '🇸🇪 瑞典 | SWE 8 #2'
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  port: 443
+  server: 95.143.196.32
+  skip-cert-verify: true
+  sni: connect-se.mimowhat.online
+  type: trojan
+  udp: true
+- name: '🇸🇪 瑞典 | SWE #8 #2'
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  port: 443
+  server: 95.143.196.32
+  skip-cert-verify: true
+  sni: connect-se.mimowhat.online
+  type: trojan
+- name: 'By #449'
+  network: tcp
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  port: 443
+  server: 95.143.196.97
+  skip-cert-verify: false
+  sni: connect-se.mimowhat.online
+  type: trojan
+- alpn:
+  - h2
+  - http/1.1
+  name: '🇸🇪 #2'
+  network: tcp
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  port: 443
+  server: connect-se.mimowhat.online
+  skip-cert-verify: false
+  sni: connect-se.mimowhat.online
+  type: trojan
+- alpn:
+  - h2
   grpc-opts:
     grpc-service-name: TrojanGRPC
-  name: 🇸🇪 瑞典 | trojan | 68
+  name: 🇸🇪 瑞典 | trojan | 28
   network: grpc
   password: 8y67d7CY_RYwGrvc69NXhBV_4xz7ZpB3
   port: 448
@@ -134,17 +165,10 @@ proxies:
   - h2
   grpc-opts:
     grpc-service-name: TrojanGRPC
-  name: 🇸🇪 瑞典 | trojan | 83
+  name: 🇸🇪 瑞典 | trojan | 92
   network: grpc
   password: 8y67d7CY_RYwGrvc69NXhBV_4xz7ZpB3
   port: 448
   server: magnitogorsk.gosgenarchive.com
   sni: magnitogorsk.gosgenarchive.com
-  type: trojan
-- name: '🇸🇪 瑞典 | SWE #6'
-  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
-  port: 443
-  server: 95.143.196.32
-  skip-cert-verify: true
-  sni: connect-se.mimowhat.online
   type: trojan

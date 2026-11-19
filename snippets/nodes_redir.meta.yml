@@ -1,5 +1,18 @@
 proxies:
 - client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: '🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 #1'
+  port: 443
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  server: 163.245.42.87
+  servername: mother-earth.fyi
+  skip-cert-verify: false
+  sni: mother-earth.fyi
+  tls: true
+  type: vless
+  uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+- client-fingerprint: firefox
   name: '🇺🇸_US_美国->🇩🇪_DE_德国_IPV4 #1'
   network: ws
   port: 443
@@ -22,7 +35,6 @@ proxies:
   skip-cert-verify: false
   tls: false
   type: ss
-  udp: true
 - client-fingerprint: firefox
   grpc-opts:
     grpc-service-name: 204adda7e3da
@@ -49,11 +61,24 @@ proxies:
   sni: 109.70.74.213
   tls: false
   type: hysteria2
-- client-fingerprint: chrome
-  name: CF中转_1107193937
+- client-fingerprint: firefox
+  name: ⚡ обход белых списков -> t.me/...
   network: ws
-  port: 2083
-  server: 172.67.69.86
+  port: 443
+  server: 31.43.179.0
+  servername: worker3.xomoh98816.workers.dev
+  tls: true
+  type: vless
+  uuid: 1bc29b34-0a7d-4252-97bb-1cc3514e7d42
+  ws-opts:
+    headers:
+      Host: worker3.xomoh98816.workers.dev
+    path: '%2FLF5LdoZelHLG07nl'
+- client-fingerprint: chrome
+  name: CF中转_1107196426 t.me/rjsxrd
+  network: ws
+  port: 2053
+  server: 172.67.78.117
   servername: helloapps.cc.cd
   tls: true
   type: vless
@@ -62,32 +87,62 @@ proxies:
     headers:
       Host: helloapps.cc.cd
     path: '%2F'
-- client-fingerprint: chrome
-  name: CF中转_1106055612 t.me/rjsxrd
+- name: 🔥 megavpn (мега впн) в тг -> @...
   network: ws
-  port: 2053
-  server: 104.26.15.138
-  servername: vp21.cc.cd
+  port: 443
+  server: 162.159.198.1
+  servername: fs.qicai99.com
+  skip-cert-verify: false
   tls: true
   type: vless
-  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   ws-opts:
     headers:
-      Host: vp21.cc.cd
-    path: '%2F'
-- client-fingerprint: chrome
-  name: CF中转_1107194901 t.me/rjsxrd
+      Host: fs.qicai99.com
+    path: '%2Ffp'
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: CF中转_1107194906 t.me/rjsxrd
+  network: ws
+  port: 2053
+  server: 172.64.80.1
+  servername: FaNs.livErpoOl.qZZ.io
+  tls: true
+  type: vless
+  uuid: 2b8738de-1af5-4267-b101-c05707769ed4
+  ws-opts:
+    headers:
+      Host: fans.liverpool.qzz.io
+    path: '%2FeyJqdW5rIjoiZXlpMnFWRURmWkp5ZCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0%3D'
+- alpn:
+  - h3
+  client-fingerprint: random
+  name: CF中转_1107195568 t.me/rjsxrd
+  network: ws
+  port: 443
+  server: 104.17.100.185
+  servername: vlesss.xttd.eu.org
+  tls: true
+  type: vless
+  uuid: 1e922b22-d169-4461-89c1-07e09ff2617c
+  ws-opts:
+    headers:
+      Host: vlesss.xttd.eu.org
+    path: '%2Fproxyip%3Dproxyip.fxxk.dedyn.io'
+- client-fingerprint: unsafe
+  name: CF中转_110704748 t.me/rjsxrd
   network: ws
   port: 443
   server: 188.114.97.6
-  servername: support.zoom.us.r3xxe.eu.cc
+  servername: all.speedtest03.ccwu.cc
   tls: true
   type: vless
-  uuid: bf9f5e8f-0777-4ee2-b509-efff28f6298a
+  uuid: 3ccba794-1c6d-48a8-acf2-f5caf0e69d86
   ws-opts:
     headers:
-      Host: support.zoom.us.r3xxe.eu.cc
-    path: '%2Fnl-tw'
+      Host: all.speedtest03.ccwu.cc
+    path: '%2F'
 - alpn:
   - http/1.1
   client-fingerprint: unsafe
@@ -104,18 +159,46 @@ proxies:
       Host: muddy-star-d195.aboumansour10313.workers.dev
     path: '%2Fws'
 - client-fingerprint: chrome
-  name: CF中转_1106051461 t.me/rjsxrd
+  name: CF中转_1107194354 t.me/rjsxrd
   network: ws
   port: 443
-  server: 104.19.55.100
-  servername: cfnode-11ivy8.pages.dev
+  server: 172.64.150.248
+  servername: powered-by-surena.configfarsi695fd01a94fe7.workers.dev
   tls: true
   type: vless
-  uuid: 2ea2719c-23e1-4cde-b192-c8652d55d9e5
+  uuid: 5dc15e15-f285-4a9d-959b-0e4fbdd77b63
   ws-opts:
     headers:
-      Host: cfnode-11ivy8.pages.dev
-    path: '%2Fws'
+      Host: powered-by-surena.configfarsi695fd01a94fe7.workers.dev
+    path: '%2F'
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: CF中转_1106057723 t.me/rjsxrd
+  network: ws
+  port: 443
+  server: 172.67.172.120
+  servername: node-link-ac43ef-gw.aareshayad.workers.dev
+  tls: true
+  type: vless
+  uuid: 0e7e81bd-759c-4f33-94a7-2c1b6b24c5ca
+  ws-opts:
+    headers:
+      Host: node-link-ac43ef-gw.aareshayad.workers.dev
+    path: '%2F44d863a24d2cc665%3Fed%3D2560'
+- client-fingerprint: chrome
+  name: CF中转_1107197018 t.me/rjsxrd
+  network: ws
+  port: 2053
+  server: 104.17.148.111
+  servername: vpn-1fj.pages.dev
+  tls: true
+  type: vless
+  uuid: 2b181a3a-c001-4145-845a-5d43a43837d5
+  ws-opts:
+    headers:
+      Host: vpn-1fj.pages.dev
+    path: '%2F'
 - client-fingerprint: chrome
   name: CF中转_1106053170 t.me/rjsxrd
   network: ws
@@ -129,108 +212,6 @@ proxies:
     headers:
       Host: nautica-cff.kloningstrife002.workers.dev
     path: '%2F138.2.74.219-28616'
-- client-fingerprint: chrome
-  name: CF中转_1107191397
-  network: ws
-  port: 443
-  server: 104.16.251.179
-  servername: edge-fef90023.pages.dev
-  tls: true
-  type: vless
-  uuid: fceb3200-2516-47d2-8e28-d04ecde9427a
-  ws-opts:
-    headers:
-      Host: edge-fef90023.pages.dev
-    path: '%2F'
-- client-fingerprint: chrome
-  name: CF中转_1107041495 t.me/rjsxrd
-  network: ws
-  port: 443
-  server: 162.159.153.4
-  servername: rAyAn-007.mAxImA.DpDnS.OrG
-  tls: true
-  type: vless
-  uuid: f2a73750-3087-48ff-a763-1348c15dce68
-  ws-opts:
-    headers:
-      Host: rAyAn-007.mAxImA.DpDnS.OrG
-    path: '%2F'
-- client-fingerprint: edge
-  flow: xtls-rprx-vision
-  name: 🇺🇸 美国 | vless | 586
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: PTIRbxzUvuwon8uDA2LjTtIJc9nItRvnGqQxS4K9pgg
-    short-id: '!!str '
-  server: 200.102.182.11
-  servername: 2veos3wvwtx8.cdn.cachefleet.com
-  tls: false
-  type: vless
-  uuid: 664f65f4-33b3-43a3-b9e5-68192d1d428e
-- name: 🔥 megavpn (мега впн) в тг -> @...
-  network: ws
-  port: 443
-  server: 162.159.198.1
-  servername: fs.qicai99.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  ws-opts:
-    headers:
-      Host: fs.qicai99.com
-    path: '%2Ffp'
-- client-fingerprint: unsafe
-  name: CF中转_1106052699 t.me/rjsxrd
-  network: ws
-  port: 443
-  server: 172.66.128.146
-  servername: n.bitpulse.me
-  tls: true
-  type: vless
-  uuid: f27b6f65-6e59-4f89-b929-afa397ca587f
-  ws-opts:
-    headers:
-      Host: n.bitpulse.me
-    path: '%2F019bcbad-3813-7cce-8786-3ac0e418f128%3Fed'
-- client-fingerprint: chrome
-  name: CF中转_1107196426
-  network: ws
-  port: 2053
-  server: 172.67.78.117
-  servername: helloapps.cc.cd
-  tls: true
-  type: vless
-  uuid: a21b9103-1693-49c1-8dc9-e8e8098ee969
-  ws-opts:
-    headers:
-      Host: helloapps.cc.cd
-    path: '%2F'
-- client-fingerprint: chrome
-  name: CF中转_1107042778 t.me/rjsxrd
-  network: ws
-  port: 443
-  server: 172.64.152.52
-  servername: cf.zhahui.de5.net
-  tls: true
-  type: vless
-  uuid: 2d4b819d-6fa6-4db2-8434-61e7db0fe93c
-  ws-opts:
-    headers:
-      Host: cf.zhahui.de5.net
-    path: '%2F'
-- name: CF中转_1107198360
-  network: ws
-  port: 8443
-  server: 104.19.52.70
-  tls: true
-  type: vless
-  uuid: fceb3200-2516-47d2-8e28-d04ecde9427a
-  ws-opts:
-    headers:
-      Host: edge-fef90023.pages.dev
-    path: /fp=firefox
 - alterId: 0
   cipher: auto
   name: 🇨🇳 _TW_台湾->🇺🇸_US_美国
@@ -289,19 +270,6 @@ proxies:
   network: ws
   port: '80'
   server: 104.17.18.26
-  tls: false
-  type: vmess
-  uuid: 5180444a-4756-43b4-960b-49eb9052e4e8
-  ws-opts:
-    headers:
-      Host: a.109420.xyz
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇮🇳 _US_美国->🇮🇳_IN_印度_2
-  network: ws
-  port: '80'
-  server: 104.26.8.44
   tls: false
   type: vmess
   uuid: 5180444a-4756-43b4-960b-49eb9052e4e8
