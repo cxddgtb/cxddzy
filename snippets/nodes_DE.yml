@@ -76,6 +76,7 @@ proxies:
   port: 443
   server: 46.183.187.73
   skip-cert-verify: true
+  tls: true
   type: vmess
   uuid: 92a048ec-a160-497e-8069-c2e902626d7a
 - alterId: 0
@@ -184,7 +185,6 @@ proxies:
   network: ws
   port: 443
   server: sgp.kapok.buzz
-  servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -402,39 +402,7 @@ proxies:
     headers:
       Host: germany-dusseldorf.mah3Hoet.com
     path: /ws
-- name: 🇩🇪 德国 | trojan | 308
-  network: tcp
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 193.108.119.193
-  skip-cert-verify: false
-  sni: resources.iloverussia2026.com
-  type: trojan
-- name: 🇩🇪 德国 | trojan | 297
-  network: tcp
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 193.108.119.29
-  skip-cert-verify: false
-  sni: blog.iloverussia2026.com
-  type: trojan
-- name: '🇩🇪[www.v2nodes.com] trojan-DE-... #6'
-  network: tcp
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 193.108.119.96
-  skip-cert-verify: true
-  sni: learn.iloverussia2026.com
-  type: trojan
-- name: '🇩🇪[www.v2nodes.com] trojan-DE-... #8'
-  network: tcp
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 193.108.119.15
-  skip-cert-verify: true
-  sni: courses.iloverussia2026.com
-  type: trojan
-- name: 🇩🇪 德国 | trojan | 313
+- name: 🇩🇪 德国 | trojan | 235
   network: tcp
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
@@ -442,25 +410,10 @@ proxies:
   skip-cert-verify: false
   sni: cdn.iloverussia2026.com
   type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪_德国 (14)
-  network: tcp
-  port: '443'
-  server: 45.131.153.149
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: f38e591d-d13a-4c30-9763-6be3ad65f3ec
-- name: 🇩🇪_德国 (15)
-  network: tcp
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 193.108.119.134
-  skip-cert-verify: true
-  sni: api.iloverussia2026.com
-  type: trojan
-- name: 🇩🇪 德国 | trojan | 262
+  ws-opts:
+    headers:
+      Host: '%2F'
+- name: 'By #344'
   network: tcp
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
@@ -471,54 +424,108 @@ proxies:
   ws-opts:
     headers:
       Host: '%2F'
+- name: 🇩🇪 德国 | trojan | 244
+  network: tcp
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 193.108.119.193
+  skip-cert-verify: false
+  sni: resources.iloverussia2026.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: '%2F'
+- name: '🏳[www.v2nodes.com] trojan- #3 #2'
+  network: tcp
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 193.108.119.15
+  skip-cert-verify: false
+  sni: courses.iloverussia2026.com
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 599
+  name: 🇩🇪 德国 | vmess | 598
   network: tcp
-  port: '443'
+  port: 443
   server: de.zhou-yufan.com
-  servername: de.zhou-yufan.com
+  servername: ''
   tls: true
   type: vmess
   uuid: f38e591d-d13a-4c30-9763-6be3ad65f3ec
+- name: 🇩🇪 德国 | trojan | 271
+  network: tcp
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 193.108.119.134
+  skip-cert-verify: false
+  sni: api.iloverussia2026.com
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪_德国 (26)
+  network: tcp
+  port: '443'
+  server: 45.131.153.149
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: f38e591d-d13a-4c30-9763-6be3ad65f3ec
+- alpn:
+  - h2
+  - http/1.1
+  name: '🇩🇪 德国 | DEU 14 #2'
+  network: tcp
+  password: poimnap
+  port: 443
+  server: alireza.karamoz1.ir
+  skip-cert-verify: true
+  sni: alireza.karamoz1.ir
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: '%2Fh2%2Chttp%2F1.1'
+- name: '🇩🇪 德国 | DEU #14 #1'
+  network: tcp
+  password: poimnap
+  port: 443
+  server: alireza.karamoz1.ir
+  skip-cert-verify: true
+  sni: alireza.karamoz1.ir
+  type: trojan
 - cipher: chacha20-ietf-poly1305
-  name: '🇩🇪[www.v2nodes.com] ss-DE-1621... #2'
+  name: '🏳[www.v2nodes.com] ss- #4 #2'
   password: zZMNTGpPl38ASlbI1EKOBJ
   port: 46303
   server: 135.220.178.46
   type: ss
 - cipher: aes-256-gcm
-  name: '🇩🇪[www.v2nodes.com] ss-DE-1615... #4'
+  name: '🇩🇪[www.v2nodes.com] ss-DE-1615... #6'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 23.157.88.43
   type: ss
 - cipher: aes-256-gcm
-  name: '🇩🇪[www.v2nodes.com] ss-DE-1615... #5'
+  name: '🇩🇪[www.v2nodes.com] ss-DE-1615... #7'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 193.108.119.2
   type: ss
-- name: '🇩🇪[www.v2nodes.com] trojan-DE-... #7'
+- name: '🇩🇪[www.v2nodes.com] trojan-DE-... #5'
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 193.108.119.96
+  sni: learn.iloverussia2026.com
+  type: trojan
+- name: '🇩🇪[www.v2nodes.com] trojan-DE-... #6'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 193.108.119.78
   type: trojan
-- alpn:
-  - h2
-  - http/1.1
-  name: 🇩🇪 德国 | trojan | 496
-  network: tcp
-  password: poimnap
-  port: 443
-  server: alireza.karamoz1.ir
-  skip-cert-verify: false
-  sni: alireza.karamoz1.ir
-  type: trojan
-  udp: true
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 13
+  name: 🇩🇪 德国 | vmess | 06
   network: tcp
   port: '110'
   server: 94.156.179.138
@@ -528,85 +535,7 @@ proxies:
   uuid: 8e9687fc-a3a7-414a-8676-8e2136797cfe
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 14
-  network: tcp
-  port: '1270'
-  server: 185.177.229.95
-  servername: xmfhlpy.com
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 15
-  network: tcp
-  port: '1270'
-  server: 193.108.117.61
-  servername: xmfhlpy.com
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: 未知43
-  network: tcp
-  port: 1270
-  server: 193.108.119.87
-  servername: xmfhlpy.com
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 32
-  network: raw
-  port: '2110'
-  server: 178.105.168.171
-  tls: false
-  type: vmess
-  uuid: 06d4d001-4168-4876-9416-7caecf578f40
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 33
-  network: ws
-  port: 80
-  server: 188.40.132.107
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 4ddd24d6-d901-5e5f-9a7c-080015c2e246
-  ws-opts:
-    headers:
-      Host: ''
-    path: /p3573l6m92h1ham3q23t
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 34
-  network: ws
-  port: '10000'
-  server: 51.75.74.253
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 678a8a2c-aca8-11f1-b342-afa6288e22f8
-  ws-opts:
-    headers:
-      Host: ''
-    path: /vpnjantit
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 50
-  network: tcp
-  port: '80'
-  server: 167.233.242.189
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 7209d7ee-cfd0-46c0-a580-d92e2f0c801c
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 51
+  name: 🇩🇪 德国 | vmess | 10
   network: ws
   port: 80
   server: 94.130.184.57
@@ -620,117 +549,7 @@ proxies:
     path: /graphql
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 53
-  network: ws
-  port: 80
-  server: 167.235.78.112
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 2aac77de-b3e4-4017-845c-ca1380f2e8d0
-  ws-opts:
-    headers:
-      Host: ''
-    path: /telegram-id-@privatevpns
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 55
-  network: ws
-  port: 80
-  server: 5.75.173.189
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 2aac77de-b3e4-4017-845c-ca1380f2e8d0
-  ws-opts:
-    headers:
-      Host: ''
-    path: /telegram-id-@privatevpns
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 56
-  network: httpupgrade
-  port: '80'
-  server: 91.107.169.224
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 78ed2c82-20d6-48ed-a76d-294065803259
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 60
-  network: ws
-  port: '80'
-  server: 167.235.199.179
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 2aac77de-b3e4-4017-845c-ca1380f2e8d0
-  ws-opts:
-    headers:
-      Host: ''
-    path: /telegram-id-privatevpns
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 62
-  network: tcp
-  port: '22324'
-  server: 216.106.187.60
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 66
-  network: tcp
-  port: '52080'
-  server: 23.165.200.150
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 672cdade-bb05-4c86-b578-e5d09b79524a
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 69
-  network: tcp
-  port: '80'
-  server: 178.105.210.96
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 78fb1a62-b276-4a13-ab57-f2b87d0f37a5
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 75
-  network: ws
-  port: 80
-  server: 162.55.174.135
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 4d9aa6db-705a-4bfa-b05b-8f442c839557
-  ws-opts:
-    headers:
-      Host: ''
-    path: /graphql
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 77
-  network: ws
-  port: '46277'
-  server: 136.243.83.105
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: aa8a26cd-94f4-4f11-a3b3-48f30a127627
-  ws-opts:
-    headers:
-      Host: 136.243.83.105
-    path: /Telegram=@VPNine1
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 80
+  name: 🇩🇪 德国 | vmess | 13
   network: ws
   port: 80
   server: 162.55.62.193
@@ -744,7 +563,208 @@ proxies:
     path: /telegram-id-@privatevpns
 - alterId: 0
   cipher: auto
+  name: 🇩🇪 德国 | vmess | 15
+  network: ws
+  port: 80
+  server: 167.235.78.112
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 2aac77de-b3e4-4017-845c-ca1380f2e8d0
+  ws-opts:
+    headers:
+      Host: ''
+    path: /telegram-id-@privatevpns
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 19
+  network: tcp
+  port: '1270'
+  server: 193.108.117.61
+  servername: xmfhlpy.com
+  tls: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 21
+  network: tcp
+  port: '80'
+  server: 167.233.242.189
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 7209d7ee-cfd0-46c0-a580-d92e2f0c801c
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 22
+  network: ws
+  port: 80
+  server: 5.75.173.189
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 2aac77de-b3e4-4017-845c-ca1380f2e8d0
+  ws-opts:
+    headers:
+      Host: ''
+    path: /telegram-id-@privatevpns
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 26
+  network: tcp
+  port: 1270
+  server: 193.108.119.87
+  servername: xmfhlpy.com
+  tls: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 28
+  network: tcp
+  port: 1270
+  server: 185.177.229.95
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 33
+  network: ws
+  port: '80'
+  server: 167.235.199.179
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 2aac77de-b3e4-4017-845c-ca1380f2e8d0
+  ws-opts:
+    headers:
+      Host: ''
+    path: /telegram-id-privatevpns
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 37
+  network: ws
+  port: 80
+  server: 188.40.132.107
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 4ddd24d6-d901-5e5f-9a7c-080015c2e246
+  ws-opts:
+    headers:
+      Host: ''
+    path: /p3573l6m92h1ham3q23t
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 39
+  network: tcp
+  port: '80'
+  server: 178.105.210.96
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 78fb1a62-b276-4a13-ab57-f2b87d0f37a5
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 41
+  network: httpupgrade
+  port: 80
+  server: 91.107.169.224
+  tls: false
+  type: vmess
+  uuid: 014f8bf6-9221-4f99-838f-4c16ca90334f
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 48
+  network: tcp
+  port: '22324'
+  server: 216.106.187.60
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 50
+  network: raw
+  port: '2110'
+  server: 178.105.168.171
+  tls: false
+  type: vmess
+  uuid: 06d4d001-4168-4876-9416-7caecf578f40
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 60
+  network: ws
+  port: 80
+  server: 162.55.174.135
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 4d9aa6db-705a-4bfa-b05b-8f442c839557
+  ws-opts:
+    headers:
+      Host: ''
+    path: /graphql
+- alterId: 0
+  cipher: auto
+  grpc-opts:
+    grpc-service-name: Telegram=@Net2ray
+  name: 🇩🇪 德国 | vmess | 69
+  network: grpc
+  port: '46277'
+  server: 136.243.83.105
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: aa8a26cd-94f4-4f11-a3b3-48f30a127627
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 80
+  network: ws
+  port: '10000'
+  server: 51.75.74.253
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 678a8a2c-aca8-11f1-b342-afa6288e22f8
+  ws-opts:
+    headers:
+      Host: ''
+    path: /vpnjantit
+- alterId: 0
+  cipher: auto
   name: 🇩🇪 德国 | vmess | 121
+  network: ws
+  port: '443'
+  server: 89.127.218.61
+  tls: true
+  type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  ws-opts:
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 129
+  network: ws
+  port: '443'
+  server: 9WEXvuEOsTlJWUrS.v.3dns.vip
+  servername: 9WEXvuEOsTlJWUrS.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: 9WEXvuEOsTlJWUrS.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 132
   network: ws
   port: '443'
   server: 8.211.1.139
@@ -756,240 +776,9 @@ proxies:
     headers:
       Host: bzqHefRtvpQyiUQb.v.3dns.vip
     path: /ws-vmess
-- grpc-opts:
-    grpc-service-name: trojangrpc
-  name: 🇩🇪 德国 | trojan | 127
-  network: grpc
-  password: mainssh-ddoejfv14
-  port: 443
-  server: 95.179.254.136
-  sni: frtgrpc.mainssh.xyz
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 128
-  network: ws
-  port: '443'
-  server: 89.127.218.61
-  servername: renderer-stream-2-62.mirra.now
-  tls: true
-  type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
   name: 🇩🇪 德国 | vmess | 142
-  network: ws
-  port: '443'
-  server: 194.87.71.141
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
-- grpc-opts:
-    grpc-service-name: trojangrpc
-  name: 🇩🇪 德国 | trojan | 150
-  network: grpc
-  password: mainssh-niwrhf87
-  port: 443
-  server: 95.179.246.122
-  sni: getgrpc.mainssh.xyz
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 152
-  network: httpupgrade
-  port: '443'
-  server: 185.204.170.130
-  servername: 185.204.170.130
-  tls: true
-  type: vmess
-  uuid: b8136e5f-8ece-4a06-99af-5a207c749bc4
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 162
-  network: ws
-  port: 443
-  server: 216.106.187.60
-  servername: kentspark.org
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: kentspark.org
-    path: /linkvws
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 187
-  network: ws
-  port: '443'
-  server: 193.108.117.54
-  servername: aidrivercat.org
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: aidrivercat.org
-    path: /linkvws
-- grpc-opts:
-    grpc-service-name: trojangrpc
-  name: 🇩🇪 德国 | trojan | 208
-  network: grpc
-  password: mainssh-niwrhf87
-  port: 443
-  server: 108.61.171.167
-  sni: getgrpc.mainssh.xyz
-  type: trojan
-- name: 🇩🇪 德国 | trojan | 209
-  network: tcp
-  password: I1vtf6pjYsAu-nFnraWAMjKTy90AHitdAz
-  port: 443
-  server: 91.233.8.25
-  skip-cert-verify: false
-  sni: fra34.tracker-ws.click
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 223
-  network: ws
-  port: '443'
-  server: 82.139.242.5
-  servername: renderer-stream-2-62.mirra.now
-  tls: true
-  type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 231
-  network: ws
-  port: '443'
-  server: 84.75.76.16
-  tls: true
-  type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 236
-  network: ws
-  port: '443'
-  server: 111.88.74.167
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
-- name: 🇩🇪 德国 | trojan | 248
-  network: ws
-  password: humanity
-  port: 443
-  server: 185.220.100.168
-  skip-cert-verify: true
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: '%2Fassignment'
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 257
-  network: ws
-  port: '443'
-  server: 13.140.28.46
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
-- name: 🇩🇪 德国 | trojan | 263
-  network: ws
-  password: 46d221fa-e9b4-748c-4eae-019a88e42991
-  port: 443
-  server: 191.44.112.170
-  sni: orbylume.my.to
-  type: trojan
-  ws-opts:
-    headers:
-      Host: orbylume.my.to
-    path: /tvpn-trojan/bg
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 279
-  network: ws
-  port: '443'
-  server: 85.215.41.19
-  tls: true
-  type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 287
-  network: ws
-  port: '443'
-  server: 108.165.236.142
-  servername: renderer-stream-2-62.mirra.now
-  tls: true
-  type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 288
-  network: ws
-  port: '443'
-  server: 194.164.192.16
-  servername: renderer-stream-2-62.mirra.now
-  tls: true
-  type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
-- name: 🇩🇪 德国 | trojan | 311
-  network: ws
-  password: humanity
-  port: 443
-  server: 108.165.236.229
-  sni: www.cordweave.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.cordweave.com
-    path: /assignment
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 329
   network: ws
   port: '443'
   server: KioltSO6ytDGm0Ja.v.3dns.vip
@@ -1003,104 +792,165 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 330
+  name: 🇩🇪 德国 | vmess | 148
   network: ws
   port: '443'
-  server: HXMarEzmv8TUfjNG.v.3dns.vip
-  servername: HXMarEzmv8TUfjNG.v.3dns.vip
+  server: 194.87.71.141
+  servername: ''
   tls: true
   type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   ws-opts:
     headers:
-      Host: HXMarEzmv8TUfjNG.v.3dns.vip
-    path: /ws-vmess
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 331
+  name: 🇩🇪 德国 | vmess | 158
   network: ws
   port: '443'
-  server: qexQourmGimzvkWY.v.3dns.vip
-  servername: qexQourmGimzvkWY.v.3dns.vip
+  server: 84.75.76.16
   tls: true
   type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   ws-opts:
     headers:
-      Host: qexQourmGimzvkWY.v.3dns.vip
-    path: /ws-vmess
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
+- name: 🇩🇪 德国 | trojan | 179
+  network: tcp
+  password: I1vtf6pjYsAu-nFnraWAMjKTy90AHitdAz
+  port: 443
+  server: 91.233.8.25
+  skip-cert-verify: false
+  sni: fra34.tracker-ws.click
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 332
+  name: 🇩🇪 德国 | vmess | 184
+  network: ws
+  port: 443
+  server: 216.106.187.60
+  servername: kentspark.org
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: kentspark.org
+    path: /linkvws
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 192
+  network: ws
+  port: 443
+  server: 193.108.117.54
+  servername: null
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: aidrivercat.org
+    path: /linkvws
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 202
   network: ws
   port: '443'
-  server: 5uF8VWjSdRbqQWiu.v.3dns.vip
-  servername: 5uF8VWjSdRbqQWiu.v.3dns.vip
+  server: 82.139.242.5
+  servername: renderer-stream-2-62.mirra.now
   tls: true
   type: vmess
-  uuid: a9f4de8b-68f1-44b6-b6a2-1db60940503a
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   ws-opts:
     headers:
-      Host: 5uF8VWjSdRbqQWiu.v.3dns.vip
-    path: /ws-vmess
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
+- grpc-opts:
+    grpc-service-name: trojangrpc
+  name: 🇩🇪 德国 | trojan | 209
+  network: grpc
+  password: mainssh-niwrhf87
+  port: 443
+  server: 95.179.246.122
+  sni: getgrpc.mainssh.xyz
+  type: trojan
+- grpc-opts:
+    grpc-service-name: trojangrpc
+  name: 🇩🇪 德国 | trojan | 212
+  network: grpc
+  password: mainssh-ddoejfv14
+  port: 443
+  server: 95.179.254.136
+  sni: frtgrpc.mainssh.xyz
+  type: trojan
+- grpc-opts:
+    grpc-service-name: trojangrpc
+  name: 🇩🇪 德国 | trojan | 213
+  network: grpc
+  password: mainssh-niwrhf87
+  port: 443
+  server: 108.61.171.167
+  sni: getgrpc.mainssh.xyz
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 333
+  name: 🇩🇪 德国 | vmess | 215
+  network: httpupgrade
+  port: '443'
+  server: 185.204.170.130
+  servername: 185.204.170.130
+  tls: true
+  type: vmess
+  uuid: b8136e5f-8ece-4a06-99af-5a207c749bc4
+- name: 🇩🇪 德国 | trojan | 250
+  network: tcp
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 193.108.119.29
+  skip-cert-verify: false
+  sni: blog.iloverussia2026.com
+  type: trojan
+- name: 🇩🇪 德国 | trojan | 262
+  network: ws
+  password: 46d221fa-e9b4-748c-4eae-019a88e42991
+  port: 443
+  server: 191.44.112.170
+  sni: orbylume.my.to
+  type: trojan
+  ws-opts:
+    headers:
+      Host: orbylume.my.to
+    path: /tvpn-trojan/bg
+- name: 🇩🇪 德国 | trojan | 269
+  network: ws
+  password: humanity
+  port: 443
+  server: 185.220.100.168
+  skip-cert-verify: true
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: '%2Fassignment'
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 278
   network: ws
   port: '443'
-  server: 4vJWBUhtW5vKHytB.v.3dns.vip
+  server: 85.215.41.19
   tls: true
   type: vmess
-  uuid: e4cfeb24-c58f-4813-b0c8-d2b6b52cd244
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   ws-opts:
     headers:
-      Host: 4vJWBUhtW5vKHytB.v.3dns.vip
-    path: /ws-vmess
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 334
-  network: ws
-  port: '443'
-  server: poeiLD4YbYshwTWI.v.3dns.vip
-  servername: poeiLD4YbYshwTWI.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: poeiLD4YbYshwTWI.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 335
-  network: ws
-  port: '443'
-  server: AUSbEb7vTjqR13wy.v.3dns.vip
-  servername: AUSbEb7vTjqR13wy.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: AUSbEb7vTjqR13wy.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 336
-  network: ws
-  port: '443'
-  server: wEh2vblW4uUWgvyF.v.3dns.vip
-  servername: wEh2vblW4uUWgvyF.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: wEh2vblW4uUWgvyF.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 338
+  name: 🇩🇪 德国 | vmess | 283
   network: ws
   port: '443'
   server: TsfZhJMBVTaKzhVE.v.3dns.vip
@@ -1114,7 +964,46 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 339
+  name: 🇩🇪 德国 | vmess | 284
+  network: ws
+  port: '443'
+  server: 194.164.192.16
+  servername: apjhdggyx.com
+  tls: true
+  type: vmess
+  uuid: 5f72f180-b21b-4b7a-8484-240759012604
+  ws-opts:
+    headers:
+      Host: apjhdggyx.com
+    path: /5f72f180-b21b-4b7a-8484-240759096785
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 286
+  network: ws
+  port: '443'
+  server: 13.140.28.46
+  servername: renderer-stream-2-62.mirra.now
+  tls: true
+  type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  ws-opts:
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
+- name: 🇩🇪 德国 | trojan | 287
+  network: ws
+  password: humanity
+  port: 443
+  server: 108.165.236.229
+  sni: www.cordweave.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.cordweave.com
+    path: /assignment
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 290
   network: ws
   port: '443'
   server: bzqHefRtvpQyiUQb.v.3dns.vip
@@ -1128,17 +1017,143 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 341
+  name: 🇩🇪 德国 | vmess | 291
   network: ws
   port: '443'
-  server: HN1XXWdhVZiVJLpD.v.3dns.vip
-  servername: HN1XXWdhVZiVJLpD.v.3dns.vip
+  server: phGp4YkSp9VKIe0t.v.3dns.vip
+  servername: phGp4YkSp9VKIe0t.v.3dns.vip
   tls: true
   type: vmess
   uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
     headers:
-      Host: HN1XXWdhVZiVJLpD.v.3dns.vip
+      Host: phGp4YkSp9VKIe0t.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 292
+  network: ws
+  port: '443'
+  server: xGqOpiiJLDgaedNQ.v.3dns.vip
+  servername: xGqOpiiJLDgaedNQ.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: xGqOpiiJLDgaedNQ.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 293
+  network: ws
+  port: '443'
+  server: UYwiPIGzUfZJVADg.v.3dns.vip
+  servername: UYwiPIGzUfZJVADg.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: UYwiPIGzUfZJVADg.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 303
+  network: ws
+  port: '443'
+  server: KE6QftcSZ9eiXgAS.v.3dns.vip
+  servername: KE6QftcSZ9eiXgAS.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: KE6QftcSZ9eiXgAS.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 305
+  network: ws
+  port: '443'
+  server: YRwKyh6wttX2T9tp.v.3dns.vip
+  servername: YRwKyh6wttX2T9tp.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: YRwKyh6wttX2T9tp.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 313
+  network: ws
+  port: '443'
+  server: kFi0YhSEtshZwAvJ.v.3dns.vip
+  servername: kFi0YhSEtshZwAvJ.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: kFi0YhSEtshZwAvJ.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 314
+  network: ws
+  port: '443'
+  server: 3E89CNW0HGtiFiDE.v.3dns.vip
+  servername: 3E89CNW0HGtiFiDE.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: 3E89CNW0HGtiFiDE.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 316
+  network: ws
+  port: '443'
+  server: 108.165.236.142
+  servername: renderer-stream-2-62.mirra.now
+  tls: true
+  type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  ws-opts:
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 317
+  network: ws
+  port: '443'
+  server: pMH11GC5OUVBikGm.v.3dns.vip
+  servername: pMH11GC5OUVBikGm.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: pMH11GC5OUVBikGm.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 326
+  network: ws
+  port: '443'
+  server: BxMzry7bu86yuvNb.v.3dns.vip
+  servername: BxMzry7bu86yuvNb.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: BxMzry7bu86yuvNb.v.3dns.vip
     path: /ws-vmess
 - alterId: 0
   cipher: auto
@@ -1156,108 +1171,21 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 345
+  name: 🇩🇪 德国 | vmess | 344
   network: ws
   port: '443'
-  server: 7GBCv94mFvb2N7Gv.v.3dns.vip
-  servername: 7GBCv94mFvb2N7Gv.v.3dns.vip
+  server: 5uF8VWjSdRbqQWiu.v.3dns.vip
+  servername: 5uF8VWjSdRbqQWiu.v.3dns.vip
   tls: true
   type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
+  uuid: a9f4de8b-68f1-44b6-b6a2-1db60940503a
   ws-opts:
     headers:
-      Host: 7GBCv94mFvb2N7Gv.v.3dns.vip
+      Host: 5uF8VWjSdRbqQWiu.v.3dns.vip
     path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 346
-  network: tcp
-  port: '46763'
-  server: sub.niggaishere.ir
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 4f07dc53-a0df-4507-b308-899aad841601
 - alterId: 0
   cipher: auto
   name: 🇩🇪 德国 | vmess | 347
-  network: ws
-  port: '443'
-  server: WaNwWDK0WcLQ15w0.v.3dns.vip
-  servername: WaNwWDK0WcLQ15w0.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: WaNwWDK0WcLQ15w0.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 350
-  network: ws
-  port: '443'
-  server: 3E89CNW0HGtiFiDE.v.3dns.vip
-  servername: 3E89CNW0HGtiFiDE.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: 3E89CNW0HGtiFiDE.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 352
-  network: ws
-  port: '443'
-  server: fYIVBOhD2JXOA4ds.v.3dns.vip
-  servername: fYIVBOhD2JXOA4ds.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: fYIVBOhD2JXOA4ds.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 356
-  network: tcp
-  port: '10916'
-  server: afshin.sub-daltoon.ir
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: c8622c6f-25e0-4a56-836f-9769af899017
-- alterId: 0
-  cipher: auto
-  name: 未知72
-  network: tcp
-  port: 54102
-  server: de2.pi10.ir
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 113ae61b-d6da-4d08-9221-48595cb8436c
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 364
-  network: ws
-  port: '443'
-  server: EwKrslzTlAZVqwb1.v.3dns.vip
-  servername: EwKrslzTlAZVqwb1.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: EwKrslzTlAZVqwb1.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 368
   network: ws
   port: '443'
   server: kRUXDIdk3hdiDOcf.v.3dns.vip
@@ -1271,80 +1199,7 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 370
-  network: ws
-  port: '443'
-  server: kFi0YhSEtshZwAvJ.v.3dns.vip
-  servername: kFi0YhSEtshZwAvJ.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: kFi0YhSEtshZwAvJ.v.3dns.vip
-    path: /ws-vmess
-- name: 🇩🇪 德国 | trojan | 374
-  password: sI0wl1bvYlSXu2RsMSAtAIMM
-  port: 443
-  server: starlink-de3.251313.xyz
-  sni: www.cloudflare.com
-  type: trojan
-- name: 🇩🇪 德国 | trojan | 375
-  password: xxoo
-  port: 443
-  server: us.blazeppn.info
-  sni: telewebion.com
-  type: trojan
-- name: 🇩🇪 德国 | trojan | 380
-  password: f8d19ba5-8684-45f2-8523-77dbea588955
-  port: 443
-  server: hgc.iamnotagoodman.com
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 384
-  network: ws
-  port: '443'
-  server: w12.luoli.de
-  servername: w12.luoli.de
-  tls: true
-  type: vmess
-  uuid: 42a99644-b90b-3627-8809-a2d6c4078b59
-  ws-opts:
-    headers:
-      Host: w12.luoli.de
-    path: /v2ws
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 386
-  network: ws
-  port: '443'
-  server: BxMzry7bu86yuvNb.v.3dns.vip
-  servername: BxMzry7bu86yuvNb.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: BxMzry7bu86yuvNb.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 391
-  network: ws
-  port: '443'
-  server: kP1x4LBZOLe08ASM.v.3dns.vip
-  servername: kP1x4LBZOLe08ASM.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: kP1x4LBZOLe08ASM.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 438
+  name: 🇩🇪 德国 | vmess | 351
   network: ws
   port: '443'
   server: dBcaeS0WKJRoAhsQ.v.3dns.vip
@@ -1358,143 +1213,7 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 444
-  network: tcp
-  port: '2053'
-  server: de.connfull.org
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: f2ff4ae6-cf2d-4d15-9f0d-b6d9980df9aa
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 460
-  network: ws
-  port: '443'
-  server: 9WEXvuEOsTlJWUrS.v.3dns.vip
-  servername: 9WEXvuEOsTlJWUrS.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: 9WEXvuEOsTlJWUrS.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 476
-  network: ws
-  port: '443'
-  server: WE8gwIzdpz5gX6eh.v.3dns.vip
-  servername: WE8gwIzdpz5gX6eh.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: WE8gwIzdpz5gX6eh.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 477
-  network: ws
-  port: '443'
-  server: z4dWee2304PZNpbC.v.3dns.vip
-  servername: z4dWee2304PZNpbC.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: z4dWee2304PZNpbC.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 478
-  network: ws
-  port: '443'
-  server: de.connfull.org
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 2131c089-4af5-4354-b01d-d833bbd06d0b
-  ws-opts:
-    headers:
-      Host: ''
-    path: /api/v1/connect
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 502
-  network: ws
-  port: '443'
-  server: lKFF2s0R9qZk1ZU8.v.3dns.vip
-  servername: lKFF2s0R9qZk1ZU8.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: lKFF2s0R9qZk1ZU8.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 506
-  network: ws
-  port: '443'
-  server: BDznVPKMo9RSXr1s.v.3dns.vip
-  servername: BDznVPKMo9RSXr1s.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: BDznVPKMo9RSXr1s.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 523
-  network: ws
-  port: '443'
-  server: Vydf6DgVXlN7TpRG.v.3dns.vip
-  servername: Vydf6DgVXlN7TpRG.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: Vydf6DgVXlN7TpRG.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 530
-  network: tcp
-  port: 1070
-  server: nlppanel.btcloud.rest
-  tls: false
-  type: vmess
-  uuid: 2eaa32ec-9215-4fb5-b29d-ea2cf6470ef8
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 534
-  network: tcp
-  port: '2110'
-  server: lucas.ehsanazizi-speed-server.com
-  tls: false
-  type: vmess
-  uuid: 06d4d001-4168-4876-9416-7caecf578f40
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 540
-  network: xhttp
-  port: '2111'
-  server: lucas.ehsanazizi-speed-server.com
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: a967bbce-11ed-4cbf-ad6d-9f82143d1aa8
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 548
+  name: 🇩🇪 德国 | vmess | 353
   network: ws
   port: '443'
   server: RwDPpwUUu6WYSFPU.v.3dns.vip
@@ -1508,102 +1227,35 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 549
+  name: 🇩🇪 德国 | vmess | 358
   network: ws
   port: '443'
-  server: phGp4YkSp9VKIe0t.v.3dns.vip
-  servername: phGp4YkSp9VKIe0t.v.3dns.vip
+  server: WE8gwIzdpz5gX6eh.v.3dns.vip
+  servername: WE8gwIzdpz5gX6eh.v.3dns.vip
   tls: true
   type: vmess
   uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
     headers:
-      Host: phGp4YkSp9VKIe0t.v.3dns.vip
+      Host: WE8gwIzdpz5gX6eh.v.3dns.vip
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 未知118
-  network: tcp
-  port: 6023
-  server: c3.www-fifaweb.com
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: a2082db2-7e9e-1da9-0a3f-216bdc8dbfac
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 554
+  name: 🇩🇪 德国 | vmess | 360
   network: ws
   port: '443'
-  server: CZE2OsD7QJH7t7ez.v.3dns.vip
-  servername: CZE2OsD7QJH7t7ez.v.3dns.vip
+  server: 111.88.74.167
+  servername: renderer-stream-2-62.mirra.now
   tls: true
   type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   ws-opts:
     headers:
-      Host: CZE2OsD7QJH7t7ez.v.3dns.vip
-    path: /ws-vmess
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 555
-  network: ws
-  port: '443'
-  server: 9FvMZovqvgV9O0xM.v.3dns.vip
-  servername: 9FvMZovqvgV9O0xM.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 10d6665f-10c9-4f03-9b83-ba45968f748d
-  ws-opts:
-    headers:
-      Host: 9FvMZovqvgV9O0xM.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 559
-  network: ws
-  port: '443'
-  server: LO7ioZK1FPYWR1t1.v.3dns.vip
-  servername: LO7ioZK1FPYWR1t1.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: LO7ioZK1FPYWR1t1.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 561
-  network: ws
-  port: '443'
-  server: z0PQNWn0HY2FExTr.v.3dns.vip
-  servername: z0PQNWn0HY2FExTr.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: z0PQNWn0HY2FExTr.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 565
-  network: ws
-  port: '443'
-  server: YRwKyh6wttX2T9tp.v.3dns.vip
-  servername: YRwKyh6wttX2T9tp.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: YRwKyh6wttX2T9tp.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | vmess | 566
+  name: 🇩🇪 德国 | vmess | 366
   network: ws
   port: '443'
   server: hgky2opr5Fr3nKjG.v.3dns.vip
@@ -1617,7 +1269,7 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 568
+  name: 🇩🇪 德国 | vmess | 372
   network: ws
   port: '443'
   server: 8A5OFFA2irOGAb3A.v.3dns.vip
@@ -1631,21 +1283,312 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 569
+  name: 🇩🇪 德国 | vmess | 389
   network: ws
   port: '443'
-  server: xGqOpiiJLDgaedNQ.v.3dns.vip
-  servername: xGqOpiiJLDgaedNQ.v.3dns.vip
+  server: LO7ioZK1FPYWR1t1.v.3dns.vip
+  servername: LO7ioZK1FPYWR1t1.v.3dns.vip
   tls: true
   type: vmess
   uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
     headers:
-      Host: xGqOpiiJLDgaedNQ.v.3dns.vip
+      Host: LO7ioZK1FPYWR1t1.v.3dns.vip
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 570
+  name: 🇩🇪 德国 | vmess | 395
+  network: tcp
+  port: '2053'
+  server: de.connfull.org
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: f2ff4ae6-cf2d-4d15-9f0d-b6d9980df9aa
+- name: 🇩🇪 德国 | trojan | 406
+  password: xxoo
+  port: 443
+  server: us.blazeppn.info
+  sni: telewebion.com
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 412
+  network: ws
+  port: '443'
+  server: EwKrslzTlAZVqwb1.v.3dns.vip
+  servername: EwKrslzTlAZVqwb1.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: EwKrslzTlAZVqwb1.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 416
+  network: ws
+  port: '443'
+  server: qexQourmGimzvkWY.v.3dns.vip
+  servername: qexQourmGimzvkWY.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: qexQourmGimzvkWY.v.3dns.vip
+    path: /ws-vmess
+- name: 🇩🇪 德国 | trojan | 428
+  password: 8aab51da-6b67-4bd2-b6e6-5ab3008cf53e
+  port: 443
+  server: jp.iamnotagoodman.com
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 470
+  network: tcp
+  port: '46763'
+  server: sub.niggaishere.ir
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 4f07dc53-a0df-4507-b308-899aad841601
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 472
+  network: tcp
+  port: '10916'
+  server: afshin.sub-daltoon.ir
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: c8622c6f-25e0-4a56-836f-9769af899017
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 476
+  network: tcp
+  port: 54102
+  server: de2.pi10.ir
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 113ae61b-d6da-4d08-9221-48595cb8436c
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 510
+  network: xhttp
+  port: '2111'
+  server: lucas.ehsanazizi-speed-server.com
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: a967bbce-11ed-4cbf-ad6d-9f82143d1aa8
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 514
+  network: tcp
+  port: '2110'
+  server: lucas.ehsanazizi-speed-server.com
+  tls: false
+  type: vmess
+  uuid: 06d4d001-4168-4876-9416-7caecf578f40
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 517
+  network: tcp
+  port: 1070
+  server: nlppanel.btcloud.rest
+  tls: false
+  type: vmess
+  uuid: 2eaa32ec-9215-4fb5-b29d-ea2cf6470ef8
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 527
+  network: tcp
+  port: 6023
+  server: c3.www-fifaweb.com
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: a2082db2-7e9e-1da9-0a3f-216bdc8dbfac
+- name: 🇩🇪 德国 | trojan | 538
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 443
+  server: starlink-de3.251313.xyz
+  sni: www.cloudflare.com
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 540
+  network: ws
+  port: '443'
+  server: HN1XXWdhVZiVJLpD.v.3dns.vip
+  servername: HN1XXWdhVZiVJLpD.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: HN1XXWdhVZiVJLpD.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 542
+  network: ws
+  port: '443'
+  server: CZE2OsD7QJH7t7ez.v.3dns.vip
+  servername: CZE2OsD7QJH7t7ez.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: CZE2OsD7QJH7t7ez.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 544
+  network: ws
+  port: '443'
+  server: Vydf6DgVXlN7TpRG.v.3dns.vip
+  servername: Vydf6DgVXlN7TpRG.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: Vydf6DgVXlN7TpRG.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 545
+  network: ws
+  port: '443'
+  server: WaNwWDK0WcLQ15w0.v.3dns.vip
+  servername: WaNwWDK0WcLQ15w0.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: WaNwWDK0WcLQ15w0.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 546
+  network: ws
+  port: '443'
+  server: HXMarEzmv8TUfjNG.v.3dns.vip
+  servername: HXMarEzmv8TUfjNG.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: HXMarEzmv8TUfjNG.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 547
+  network: ws
+  port: '443'
+  server: 9FvMZovqvgV9O0xM.v.3dns.vip
+  servername: 9FvMZovqvgV9O0xM.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 10d6665f-10c9-4f03-9b83-ba45968f748d
+  ws-opts:
+    headers:
+      Host: 9FvMZovqvgV9O0xM.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 552
+  network: ws
+  port: '443'
+  server: fYIVBOhD2JXOA4ds.v.3dns.vip
+  servername: fYIVBOhD2JXOA4ds.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: fYIVBOhD2JXOA4ds.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 554
+  network: ws
+  port: '443'
+  server: z0PQNWn0HY2FExTr.v.3dns.vip
+  servername: z0PQNWn0HY2FExTr.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: z0PQNWn0HY2FExTr.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 555
+  network: ws
+  port: '443'
+  server: AUSbEb7vTjqR13wy.v.3dns.vip
+  servername: AUSbEb7vTjqR13wy.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: AUSbEb7vTjqR13wy.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 556
+  network: ws
+  port: '443'
+  server: wEh2vblW4uUWgvyF.v.3dns.vip
+  servername: wEh2vblW4uUWgvyF.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: wEh2vblW4uUWgvyF.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 557
+  network: ws
+  port: '443'
+  server: kP1x4LBZOLe08ASM.v.3dns.vip
+  servername: kP1x4LBZOLe08ASM.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: kP1x4LBZOLe08ASM.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 559
+  network: ws
+  port: '443'
+  server: 7GBCv94mFvb2N7Gv.v.3dns.vip
+  servername: 7GBCv94mFvb2N7Gv.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: 7GBCv94mFvb2N7Gv.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 560
   network: ws
   port: '443'
   server: oDDJKX2OdVb0VnKF.v.3dns.vip
@@ -1659,7 +1602,90 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
+  name: 🇩🇪 德国 | vmess | 561
+  network: ws
+  port: '443'
+  server: 4vJWBUhtW5vKHytB.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: e4cfeb24-c58f-4813-b0c8-d2b6b52cd244
+  ws-opts:
+    headers:
+      Host: 4vJWBUhtW5vKHytB.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 563
+  network: ws
+  port: '443'
+  server: poeiLD4YbYshwTWI.v.3dns.vip
+  servername: poeiLD4YbYshwTWI.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: poeiLD4YbYshwTWI.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 564
+  network: ws
+  port: '443'
+  server: lKFF2s0R9qZk1ZU8.v.3dns.vip
+  servername: lKFF2s0R9qZk1ZU8.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: lKFF2s0R9qZk1ZU8.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 567
+  network: ws
+  port: '443'
+  server: BDznVPKMo9RSXr1s.v.3dns.vip
+  servername: BDznVPKMo9RSXr1s.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: BDznVPKMo9RSXr1s.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 568
+  network: ws
+  port: '443'
+  server: z4dWee2304PZNpbC.v.3dns.vip
+  servername: z4dWee2304PZNpbC.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: z4dWee2304PZNpbC.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
   name: 🇩🇪 德国 | vmess | 571
+  network: ws
+  port: '443'
+  server: de.connfull.org
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 2131c089-4af5-4354-b01d-d833bbd06d0b
+  ws-opts:
+    headers:
+      Host: ''
+    path: /api/v1/connect
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 574
   network: ws
   port: '443'
   server: Qmh49RE8c0DCqpFU.v.3dns.vip
@@ -1673,7 +1699,7 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 577
+  name: 🇩🇪 德国 | vmess | 575
   network: ws
   port: '443'
   server: kBd17k34BR3HAOJ2.v.3dns.vip
@@ -1684,14 +1710,9 @@ proxies:
     headers:
       Host: kBd17k34BR3HAOJ2.v.3dns.vip
     path: /ws-vmess
-- name: 🇩🇪 德国 | trojan | 581
-  password: 8aab51da-6b67-4bd2-b6e6-5ab3008cf53e
-  port: 443
-  server: jp.iamnotagoodman.com
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 591
+  name: 🇩🇪 德国 | vmess | 579
   network: ws
   port: '443'
   server: vOYM4rPWYVnQ5l7g.v.3dns.vip
@@ -1705,7 +1726,7 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 593
+  name: 🇩🇪 德国 | vmess | 587
   network: ws
   port: '443'
   server: BWkTc4i50kvHHerS.v.3dns.vip
@@ -1719,35 +1740,32 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | vmess | 595
+  name: 🇩🇪 德国 | vmess | 609
   network: ws
   port: '443'
-  server: UYwiPIGzUfZJVADg.v.3dns.vip
-  servername: UYwiPIGzUfZJVADg.v.3dns.vip
+  server: w12.luoli.de
+  servername: w12.luoli.de
   tls: true
   type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
+  uuid: 42a99644-b90b-3627-8809-a2d6c4078b59
   ws-opts:
     headers:
-      Host: UYwiPIGzUfZJVADg.v.3dns.vip
-    path: /ws-vmess
-- alpn:
-  - h3
-  client-fingerprint: randomized
-  name: 🇩🇪DE_10|2.6MB/s
-  network: ws
-  password: bpb-trojan
-  port: '443'
-  server: russia.com
-  skip-cert-verify: false
-  sni: kargar001.pages.dev
+      Host: w12.luoli.de
+    path: /v2ws
+- name: 🇩🇪 德国 | trojan | 620
+  password: f8d19ba5-8684-45f2-8523-77dbea588955
+  port: 443
+  server: hgc.iamnotagoodman.com
   type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/46.0.2490.80 Safari/537.36
-    path: /tr?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | vmess | 631
+  network: http
+  port: '52080'
+  server: 23.165.200.150
+  tls: false
+  type: vmess
+  uuid: 672cdade-bb05-4c86-b578-e5d09b79524a
 - name: DE30｜机房｜低风险
   network: ws
   password: 32497489-2052-4219-a0b5-43af86bfcd9b
@@ -1808,10 +1826,20 @@ proxies:
     headers:
       Host: 17692413634468.206353.xyz
     path: '%2Fagrbniuh'
-- name: '🇩🇪 德国 | DEU #11'
-  password: poimnap
+- alpn:
+  - h3
+  client-fingerprint: randomized
+  name: '🇩🇪DE_10|2.6MB/s #1'
+  network: ws
+  password: bpb-trojan
   port: 443
-  server: alireza.karamoz1.ir
-  skip-cert-verify: true
-  sni: alireza.karamoz1.ir
+  server: russia.com
+  skip-cert-verify: false
+  sni: kargar001.pages.dev
   type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/46.0.2490.80 Safari/537.36
+    path: /tr?ed=2560
