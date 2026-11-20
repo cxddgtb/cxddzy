@@ -1,12 +1,4 @@
 proxies:
-- name: 🇹🇼_台湾
-  network: tcp
-  password: '!!str 123456'
-  port: 443
-  server: 34.80.15.95
-  skip-cert-verify: false
-  sni: tw.ctt25.uk
-  type: trojan
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇭🇰[www.v2nodes.com] vless-HK-1...
@@ -18,6 +10,22 @@ proxies:
   server: free.fugui.lol
   servername: swdist.apple.com
   tls: true
+  type: vless
+  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
+  ws-opts:
+    headers:
+      Host: swdist.apple.com
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (2)
+  network: tcp
+  port: 62015
+  reality-opts:
+    public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ
+    short-id: '!!str fa514b83'
+  server: free.fugui.lol
+  servername: swdist.apple.com
+  tls: false
   type: vless
   uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
   ws-opts:
@@ -40,32 +48,6 @@ proxies:
     headers:
       Host: swdist.apple.com
   x-toolall-mihomo: true
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇹🇼 台湾 | vless | 02
-  network: tcp
-  port: 19482
-  reality-opts:
-    public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ
-    short-id: '!!str fa514b83'
-  server: free.fugui.lol
-  servername: swdist.apple.com
-  tls: false
-  type: vless
-  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
-- client-fingerprint: ios
-  flow: xtls-rprx-vision
-  name: 🇹🇼_台湾 (5)
-  network: tcp
-  port: 62015
-  reality-opts:
-    public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ
-    short-id: '!!str fa514b83'
-  server: free.fugui.lol
-  servername: swdist.apple.com
-  tls: false
-  type: vless
-  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇹🇼 台湾 | vless | 17
@@ -101,6 +83,18 @@ proxies:
   tls: false
   type: vless
   uuid: 4a923161-156f-4914-8cac-762fb2433bfb
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼 台湾 | vless | 02
+  port: 19482
+  reality-opts:
+    public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ
+    short-id: '!!str fa514b83'
+  server: free.fugui.lol
+  servername: swdist.apple.com
+  tls: false
+  type: vless
+  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
 - alterId: 0
   cipher: auto
   name: 🇹🇼 台湾 | vmess | 04
@@ -241,33 +235,9 @@ proxies:
 - alterId: 0
   cipher: auto
   name: TW
-  network: tcp
-  port: 794
-  server: 2.27.174.110
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: fd2c3c77-1984-4f7c-befe-efba034e1f3c
-- alterId: 0
-  cipher: auto
-  name: TW2
   network: ws
   port: 443
-  server: 24864168545164.oylfmxz.cn
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  ws-opts:
-    headers:
-      host: 24864168545164.oylfmxz.cn
-    path: /
-- alterId: 0
-  cipher: auto
-  name: TW3
-  network: ws
-  port: 443
-  server: dee2309db4se3g5sds35g4s3dg.oylfmxz.cn
+  server: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -291,17 +261,3 @@ proxies:
   skip-cert-verify: true
   sni: cntwbta.686911.xyz
   type: trojan
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇹🇼_TW_台湾_IPV4
-  port: 47396
-  reality-opts:
-    public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ
-    short-id: '!!str fa514b83'
-  server: free.fugui.lol
-  servername: swdist.apple.com
-  skip-cert-verify: false
-  sni: swdist.apple.com
-  tls: true
-  type: vless
-  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
