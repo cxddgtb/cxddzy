@@ -1,7 +1,7 @@
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇹🇼 台湾 | vless | 06
+  name: 🇹🇼 台湾 | vless | 28
   network: tcp
   port: 19482
   reality-opts:
@@ -9,12 +9,16 @@ proxies:
     short-id: '!!str fa514b83'
   server: free.fugui.lol
   servername: swdist.apple.com
+  skip-cert-verify: true
   tls: false
   type: vless
   uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
+  ws-opts:
+    headers:
+      Host: swdist.apple.com
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: TW【高速节点：https://vip.a3f.xyz】1
+  name: 节点日期：2026-11-22
   network: tcp
   port: 47396
   reality-opts:
@@ -28,9 +32,10 @@ proxies:
   ws-opts:
     headers:
       Host: swdist.apple.com
+    path: '%2F'
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: TW【高速节点：https://vip.a3f.xyz】8
+  name: 🇹🇼 台湾 | vless | 27
   network: tcp
   port: 51283
   reality-opts:
@@ -44,9 +49,10 @@ proxies:
   ws-opts:
     headers:
       Host: swdist.apple.com
+    path: /
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇹🇼 台湾 | vless | 05
+  name: 🇹🇼 台湾 | vless | 16
   network: tcp
   port: 62015
   reality-opts:
@@ -60,27 +66,29 @@ proxies:
   ws-opts:
     headers:
       Host: swdist.apple.com
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '🇹🇼_TW_台湾_IPV4 #1'
-  port: 47396
-  reality-opts:
-    public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ
-    short-id: '!!str fa514b83'
-  server: free.fugui.lol
-  servername: swdist.apple.com
-  skip-cert-verify: false
-  sni: swdist.apple.com
-  tls: true
-  type: vless
+- cipher: chacha20-ietf-poly1305
+  name: 🇹🇼 🇨🇳 台湾 | TWN
+  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
+  plugin: obfs
+  plugin-opts:
+    host: 16a89ef:154955
+    mode: tls
+  port: 2377
+  server: 60.248.221.27
+  type: ss
   udp: true
-  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
-  x-toolall-mihomo: true
-- client-fingerprint: android
-  name: 🇹🇼 Taiwan, Taoyuan | [BL]
+- name: 🇹🇼 🇨🇳 台湾 | TWN 2
+  password: 2902c46c8493
+  port: 443
+  server: rtifgjdr.df6h451rh.xin
+  skip-cert-verify: true
+  sni: docs.microsoft.com
+  type: anytls
+  udp: true
+- name: 🇹🇼 Taiwan, Taoyuan | [BL]
   network: ws
   port: 8443
-  server: n04.jinggai.online
+  server: 172.67.165.32
   servername: n04.jinggai.online
   tls: true
   type: vless
@@ -89,23 +97,8 @@ proxies:
     headers:
       Host: n04.jinggai.online
     path: '%2Fnvl-n04-ws%2Fe0577fe8fd7c8823'
-- alpn:
-  - h2
-  client-fingerprint: firefox
-  name: 12 🇹🇼 тайвань | Белые списки |...
-  network: xhttp
-  port: 8443
-  server: 95.129.234.113
-  servername: tansy-wharf.cdn.cachefleet.com
-  tls: true
-  type: vless
-  uuid: 88281d02-b387-4fe3-918e-26ed331e6d08
-  ws-opts:
-    headers:
-      Host: is-tw-relay.cdn.cachefleet.com
-    path: '%2Fccxf5snr06b8xxb6'
 - client-fingerprint: chrome
-  name: '🇹🇼 Taiwan, Taoyuan | [BL] #1'
+  name: '🇹🇼 Taiwan, Taoyuan | [BL] #2'
   network: ws
   port: 443
   server: 188.114.98.0
@@ -117,6 +110,16 @@ proxies:
     headers:
       Host: n04.jinggai.online
     path: '%2Fnvl-n04-ws%2Fe0577fe8fd7c8823'
+- alterId: 0
+  cipher: auto
+  name: 🇹🇼 台湾 | vmess | 01
+  network: tcp
+  port: '22222'
+  server: 103.160.180.26
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: a5206a55-d5bd-41b9-92a5-bd27a90355ff
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: 🇹🇼 台湾 | vless | 02
@@ -129,22 +132,17 @@ proxies:
   tls: false
   type: vless
   uuid: 4a923161-156f-4914-8cac-762fb2433bfb
-- alterId: 0
-  cipher: auto
-  name: 🇹🇼 台湾 | vmess | 04
-  network: tcp
-  port: '22222'
-  server: 103.160.180.26
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: a5206a55-d5bd-41b9-92a5-bd27a90355ff
-- name: 🇹🇼 台湾 | trojan | 07
+- name: 🇹🇼 台湾 | trojan | 04
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
-  server: official.taipeicitygovernment.kyiv.ua
+  server: official.taipeicitygovernment.ivano-frankivsk.ua
   type: trojan
-- name: 🇹🇼 台湾 | vless | 09
+- name: 🇹🇼 台湾 | trojan | 05
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.org.ua
+  type: trojan
+- name: 🇹🇼 台湾 | vless | 06
   network: ws
   port: 443
   server: 188.253.6.249
@@ -156,7 +154,7 @@ proxies:
     headers:
       Host: vlso5.1d.mom
     path: '%2Fsocks5%3D888%3A888%40hkip.1d.mom%3A1080fp%3Dchromesecurity=tls'
-- name: 🇹🇼 台湾 | vless | 11
+- name: 🇹🇼 台湾 | vless | 07
   network: ws
   port: 443
   server: 60.248.219.78
@@ -166,7 +164,7 @@ proxies:
   uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
   ws-opts:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-- name: 🇹🇼 台湾 | vless | 14
+- name: 🇹🇼 台湾 | vless | 08
   network: ws
   port: 443
   server: 59.125.69.23
@@ -188,19 +186,19 @@ proxies:
     headers:
       Host: ty986gfazs.cainiaohub.xyz
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530fp=chrome
-- name: 🇹🇼 台湾 | trojan | 16
+- name: 🇹🇼 台湾 | trojan | 13
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.kiev.ua
+  type: trojan
+- name: 🇹🇼 台湾 | trojan | 15
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
   server: official.taipeicitygovernment.com.ua
   type: trojan
-- name: 🇹🇼 台湾 | trojan | 17
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 8443
-  server: official.taipeicitygovernment.net.ua
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇹🇼 台湾 | vmess | 18
+  name: 🇹🇼 台湾 | vmess | 17
   network: ws
   port: '443'
   server: 9641684.sdf65h4.top
@@ -209,52 +207,45 @@ proxies:
   type: vmess
   uuid: 250c015d-bab0-4ed3-b638-b4eda48f5840
   ws-opts:
-    headers:
-      Host: 9641684.sdf65h4.top
     path: /
 - name: 🇹🇼 台湾 | trojan | 19
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
-  server: official.taipeicitygovernment.dp.ua
+  server: official.taipeicitygovernment.co.ua
   type: trojan
 - name: 🇹🇼 台湾 | trojan | 20
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
-  server: official.taipeicitygovernment.org.ua
+  server: official.taipeicitygovernment.if.ua
   type: trojan
 - name: 🇹🇼 台湾 | trojan | 21
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
-  server: official.taipeicitygovernment.co.ua
+  server: official.taipeicitygovernment.chernovtsy.ua
   type: trojan
 - name: 🇹🇼 台湾 | trojan | 22
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
-  server: official.taipeicitygovernment.cn.ua
+  server: official.taipeicitygovernment.net.ua
   type: trojan
 - name: 🇹🇼 台湾 | trojan | 23
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
-  server: official.taipeicitygovernment.ivano-frankivsk.ua
+  server: official.taipeicitygovernment.cn.ua
   type: trojan
 - name: 🇹🇼 台湾 | trojan | 24
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
-  server: official.taipeicitygovernment.chernovtsy.ua
+  server: official.taipeicitygovernment.dp.ua
   type: trojan
 - name: 🇹🇼 台湾 | trojan | 25
   password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
   port: 8443
-  server: official.taipeicitygovernment.if.ua
-  type: trojan
-- name: 🇹🇼 台湾 | trojan | 26
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 8443
-  server: official.taipeicitygovernment.kiev.ua
+  server: official.taipeicitygovernment.kyiv.ua
   type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇹🇼 台湾 | vmess | 27
+  name: 🇹🇼 台湾 | vmess | 26
   network: ws
   port: '80'
   server: mdk.mdmekjll.best
@@ -271,27 +262,29 @@ proxies:
   name: TW
   network: ws
   port: 443
-  server: 24864168545164.oylfmxz.cn
+  server: 654168416355441.oylfmxz.cn
   skip-cert-verify: true
   tls: true
   type: vmess
   uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
   ws-opts:
     headers:
-      host: 24864168545164.oylfmxz.cn
+      host: 654168416355441.oylfmxz.cn
     path: /
 - alterId: 0
   cipher: auto
   name: TW2
   network: ws
-  port: 52300
-  server: hi.northcluster.info
+  port: 443
+  server: fujrdt.d6f54hd1j.cc
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 6e571484-4166-4699-8f58-b34a1823691f
+  uuid: d877dc6f-7323-4b47-a7dd-14228cbae854
   ws-opts:
-    path: /video
+    headers:
+      host: fujrdt.d6f54hd1j.cc
+    path: /
 - client-fingerprint: chrome
   name: TW4｜商宽｜非常安全
   network: tcp
@@ -309,3 +302,19 @@ proxies:
   skip-cert-verify: true
   sni: cntwbta.686911.xyz
   type: trojan
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 台湾|@ripaojiedian
+  network: tcp
+  port: 11102
+  reality-opts:
+    public-key: oW6HMjniDmBJdjGKwhBAIS2zMS1VvHORubh9vdazqQ0
+    short-id: '!!str ed571d022f7bc3bf'
+  server: 116.213.43.43
+  servername: www.apple.com
+  skip-cert-verify: true
+  tfo: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 530d31fc-2690-49e4-bfc9-3f991e145008
