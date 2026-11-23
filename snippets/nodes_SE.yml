@@ -1,7 +1,7 @@
 proxies:
 - alterId: 64
   cipher: auto
-  name: '瑞典 011 #1'
+  name: '瑞典 012 #1'
   network: ws
   port: 443
   server: 148.135.38.107
@@ -15,7 +15,7 @@ proxies:
     path: /path/1704363182493
 - alterId: 64
   cipher: auto
-  name: '瑞典 012 #1'
+  name: '瑞典 013 #1'
   network: ws
   port: 443
   server: 148.135.9.156
@@ -29,7 +29,7 @@ proxies:
     path: /path/1704363182493
 - alterId: 64
   cipher: auto
-  name: '瑞典 013 #1'
+  name: '瑞典 014 #1'
   network: ws
   port: 443
   server: 148.135.14.99
@@ -43,7 +43,7 @@ proxies:
     path: /path/1704188270531
 - alterId: 64
   cipher: auto
-  name: '瑞典 014 #1'
+  name: '瑞典 015 #1'
   network: ws
   port: 443
   server: 148.135.31.171
@@ -57,7 +57,7 @@ proxies:
     path: /path/1703924658447
 - alterId: 64
   cipher: auto
-  name: '瑞典 015 #1'
+  name: '瑞典 016 #1'
   network: ws
   port: 443
   server: 148.135.33.140
@@ -71,7 +71,7 @@ proxies:
     path: /path/1704188270531
 - alterId: 0
   cipher: auto
-  name: '瑞典 016 #1'
+  name: '瑞典 017 #1'
   network: ws
   port: 80
   server: 185.146.173.25
@@ -84,7 +84,7 @@ proxies:
     path: /
 - alterId: 64
   cipher: auto
-  name: '瑞典 017 #1'
+  name: '瑞典 018 #1'
   network: ws
   port: 31002
   server: 37.120.209.126
@@ -96,31 +96,48 @@ proxies:
     headers:
       Host: www.68547476.xyz
     path: /path/191019072927
+- cipher: aes-256-gcm
+  name: '🇸🇪[www.v2nodes.com] ss-SE-1615... #2'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 138.199.55.243
+  type: ss
 - name: '🇸🇪[www.v2nodes.com] trojan-SE-... #2'
   password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
   port: 443
   server: 95.143.196.97
   type: trojan
-- name: 🇸🇪
-  network: tcp
-  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
-  port: 443
-  server: 95.143.196.97
-  skip-cert-verify: false
-  sni: connect-se.mimowhat.online
+- alpn:
+  - h2
+  grpc-opts:
+    grpc-service-name: TrojanGRPC
+  name: 🇸🇪 瑞典 | trojan | 96
+  network: grpc
+  password: 8y67d7CY_RYwGrvc69NXhBV_4xz7ZpB3
+  port: 448
+  server: ulyanovsk.gosgenarchive.com
+  sni: ulyanovsk.gosgenarchive.com
   type: trojan
 - alpn:
   - h2
   grpc-opts:
     grpc-service-name: TrojanGRPC
-  name: 🎪 خودکار - Sweden Trojan 4
+  name: 🇸🇪 瑞典 | trojan | 80
   network: grpc
   password: 8y67d7CY_RYwGrvc69NXhBV_4xz7ZpB3
   port: 448
   server: bochum.gosgenarchive.com
   sni: bochum.gosgenarchive.com
   type: trojan
-- name: 🇸🇪 瑞典 | trojan | 56
+- name: 🇸🇪 瑞典 | trojan | 59
+  network: ws
+  password: humanity
+  port: 2053
+  server: 83.147.254.59
+  skip-cert-verify: true
+  sni: www.cordweave.com
+  type: trojan
+- name: 🇸🇪 瑞典 | trojan | 64
   network: xhttp
   password: pu0149u56dhl4t43
   port: 8447
@@ -129,19 +146,21 @@ proxies:
   type: trojan
   ws-opts:
     path: /1d236330ba
-- name: 🇸🇪 瑞典 | trojan | 57
-  network: ws
-  password: humanity
-  port: 2053
-  server: 83.147.254.59
-  skip-cert-verify: true
-  sni: www.cordweave.com
-  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇸🇪 瑞典 | vmess | 68
+  network: tcp
+  port: '1270'
+  server: leviko-se4660.shopingggg.ir
+  servername: xmfhlpy.com
+  tls: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alpn:
   - h2
   grpc-opts:
     grpc-service-name: TrojanGRPC
-  name: 🇸🇪 瑞典 | trojan | 81
+  name: 🇸🇪 瑞典 | trojan | 91
   network: grpc
   password: 8y67d7CY_RYwGrvc69NXhBV_4xz7ZpB3
   port: 448
@@ -150,12 +169,14 @@ proxies:
   type: trojan
 - alpn:
   - h2
-  - http/1.1
-  name: 🇸🇪 瑞典 | trojan | 87
-  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
-  port: 443
-  server: connect-se.mimowhat.online
-  sni: connect-se.mimowhat.online
+  grpc-opts:
+    grpc-service-name: TrojanGRPC
+  name: 🇸🇪 瑞典 | trojan | 93
+  network: grpc
+  password: 8y67d7CY_RYwGrvc69NXhBV_4xz7ZpB3
+  port: 448
+  server: duisburg.gosgenarchive.com
+  sni: duisburg.gosgenarchive.com
   type: trojan
 - alpn:
   - h2
@@ -170,23 +191,10 @@ proxies:
   type: trojan
 - alpn:
   - h2
-  grpc-opts:
-    grpc-service-name: TrojanGRPC
-  name: 🇸🇪 瑞典 | trojan | 96
-  network: grpc
-  password: 8y67d7CY_RYwGrvc69NXhBV_4xz7ZpB3
-  port: 448
-  server: duisburg.gosgenarchive.com
-  sni: duisburg.gosgenarchive.com
-  type: trojan
-- alpn:
-  - h2
-  grpc-opts:
-    grpc-service-name: TrojanGRPC
-  name: 🇸🇪 瑞典 | trojan | 97
-  network: grpc
-  password: 8y67d7CY_RYwGrvc69NXhBV_4xz7ZpB3
-  port: 448
-  server: ulyanovsk.gosgenarchive.com
-  sni: ulyanovsk.gosgenarchive.com
+  - http/1.1
+  name: 🇸🇪 瑞典 | trojan | 100
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  port: 443
+  server: connect-se.mimowhat.online
+  sni: connect-se.mimowhat.online
   type: trojan
