@@ -20,6 +20,7 @@ proxies:
   server: 51.79.102.253
   servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
   skip-cert-verify: true
+  tls: false
   type: vmess
   uuid: 58fe1542-5290-40ad-815a-77707a81afe5
   ws-opts:
@@ -361,11 +362,23 @@ proxies:
   port: 5000
   server: 51.222.200.165
   type: ss
+- cipher: aes-256-gcm
+  name: '🇨🇦[www.v2nodes.com] ss-CA-1557... #2'
+  password: kDWvXYZoTBcGkC4
+  port: 8882
+  server: 51.222.136.236
+  type: ss
 - cipher: chacha20-ietf-poly1305
   name: '🇨🇦[www.v2nodes.com] ss-CA-1555... #2'
   password: 575hiopq2h28yao6
   port: 8080
   server: 15.235.121.109
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇨🇦[www.v2nodes.com] ss-CA-1546... #2'
+  password: g5MeD6Ft3CWlJId
+  port: 5003
+  server: 51.222.155.32
   type: ss
 - cipher: aes-256-gcm
   name: '🇨🇦[www.v2nodes.com] ss-CA-1545... #2'
@@ -382,28 +395,27 @@ proxies:
 - name: '🇨🇦[www.v2nodes.com] trojan-CA-... #8'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
+  server: 216.152.147.152
+  type: trojan
+- name: '🇨🇦[www.v2nodes.com] trojan-CA-... #9'
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
   server: 216.152.147.93
   sni: connectingpeoplewithgreatjobs.com
   type: trojan
-- name: '🇨🇦[www.v2nodes.com] trojan-CA-... #9'
-  network: tcp
+- name: '🇨🇦[www.v2nodes.com] trojan-CA-... #10'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 216.152.147.79
   skip-cert-verify: false
   sni: blog.connectingpeoplewithgreatjobs.com
   type: trojan
-- name: '🇨🇦[www.v2nodes.com] trojan-CA-... #10'
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.147.152
-  type: trojan
 - name: '🇨🇦[www.v2nodes.com] trojan-CA-... #11'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 216.152.147.74
   type: trojan
-- name: 🇨🇦CA_1|1.6MB/s|P002-260618
+- name: '🇨🇦CA_1|1.6MB/s|P002-260618 #1'
   port: 9443
   server: 198.44.142.27
   skip-cert-verify: true
@@ -427,9 +439,75 @@ proxies:
   type: http
   udp: true
   x-toolall-mihomo: true
+- client-fingerprint: chrome
+  name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #11'
+  network: ws
+  port: 443
+  server: 172.67.155.222
+  servername: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
+  tls: true
+  type: vless
+  uuid: 82b279c6-5cba-3a96-f8bd-780a00000035
+  ws-opts:
+    headers:
+      Host: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
+    path: '%2Fsync'
+- name: CA
+  network: ws
+  port: 443
+  server: fs.qicai99.com
+  servername: fs.qicai99.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  ws-opts:
+    headers:
+      Host: fs.qicai99.com
+    path: /?Telegram---@pirozi_ArGaP---@pirozi_ArGaP---@pirozi_ArGaP---@pirozi_ArGaP
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: 🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL]
+  network: ws
+  port: 2096
+  server: 104.25.0.1
+  servername: rainfall0705.cc.cd
+  tls: true
+  type: vless
+  uuid: 341832cc-ba98-425b-8225-b3db621a0da3
+  ws-opts:
+    headers:
+      Host: rainfall0705.cc.cd
+    path: '%2F'
+- client-fingerprint: chrome
+  name: 🇫🇷FR_100|1.2MB/s|C002-260622 [...
+  network: ws
+  port: 443
+  server: 104.18.40.171
+  servername: wallweb-boi.pages.dev
+  tls: true
+  type: vless
+  uuid: 8895be79-9817-4011-b81a-14a35a3d328e
+  ws-opts:
+    headers:
+      Host: wallweb-boi.pages.dev
+    path: '%2F'
+- name: '🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL] #13'
+  network: ws
+  port: 443
+  server: epam.com
+  servername: wallweb-4r0.pages.dev
+  tls: true
+  type: vless
+  uuid: e53eacb6-cd30-4964-a57c-febcb5151b98
+  ws-opts:
+    headers:
+      Host: wallweb-4r0.pages.dev
+    path: '%2F'
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
+  name: 🇨🇦[www.v2nodes.com] vless-CA-1...
   network: raw
   port: 443
   reality-opts:
@@ -440,57 +518,20 @@ proxies:
   tls: true
   type: vless
   uuid: ca52e2b6-fb9f-4dac-b6dc-49da9923f251
-- name: 🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL]
+- name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #3'
   network: ws
   port: 443
-  server: nuclear.us.kg
-  servername: nuclear.us.kg
+  server: 104.21.71.249
+  servername: oooyo.bi8bo.cyou
   tls: true
   type: vless
-  uuid: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
-  ws-opts:
-    path: '%2Ffree%2F1.226.227.169%3A50001'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇨🇦 加拿大 | vless | 05
-  network: tcp
-  port: 8080
-  reality-opts:
-    public-key: 2PYoIhSKvVE-DgFzPYGo4cD2b7_8Ul2Vm8QKGWH1sAo
-    short-id: '!!str 4b'
-  server: 198.100.154.175
-  servername: icloud.com
-  tls: false
-  type: vless
-  uuid: e17150a9-f949-467b-94ea-4d50e4c84186
-- client-fingerprint: firefox
-  name: '[OpenRay] 🌐XX-399'
-  network: ws
-  port: 443
-  server: 188.114.97.6
-  servername: jp3.yohototo.top
-  tls: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  uuid: 3de5a94c-aadc-4e40-ba1a-7d4b6545f8a3
   ws-opts:
     headers:
-      Host: jp3.yohototo.top
-    path: '%2Ftyxyws'
-- client-fingerprint: android
-  name: 🇨🇦
-  network: ws
-  port: 443
-  server: 172.67.183.149
-  servername: mao.kipfelmao.de5.net
-  tls: true
-  type: vless
-  uuid: 30610baf-4645-4c7b-9a22-0d0a0a79eab5
-  ws-opts:
-    headers:
-      Host: mao.kipfelmao.de5.net
-    path: '%2Fapi%2Fv1%2Fguests%2Fprofiles%2F5de14443985f%2F'
+      Host: oooyo.bi8bo.cyou
+    path: '%2F'
 - client-fingerprint: firefox
-  name: 🇨🇭 瑞士 | vless | 28
+  name: 🇨🇭 瑞士 | vless | 46
   network: tcp
   port: 2053
   reality-opts:
@@ -501,11 +542,148 @@ proxies:
   tls: true
   type: vless
   uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-- client-fingerprint: unsafe
-  name: '[OpenRay] 🌐XX-332'
+- client-fingerprint: chrome
+  name: 01 🇨🇦 канада | mega vpn @vpnsm...
   network: ws
   port: 443
-  server: 104.16.111.202
+  server: 162.159.198.1
+  servername: fs.qicai99.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  ws-opts:
+    headers:
+      Host: fs.qicai99.com
+    path: '%2F%3FTELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM%3Fed%3D2560'
+- client-fingerprint: unsafe
+  name: '[OpenRay] 🇨🇦CA-307'
+  network: ws
+  port: 443
+  server: 104.16.10.2
+  servername: jp3.yohototo.top
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws%23telegram--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI'
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇨🇦210041
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: FdZlh9FC4ay9OGnKG6K_iNqhz1I3tWDfNZhxrDYuQl8
+    short-id: '!!str 7da3ba09a037e956'
+  server: 212.69.135.27
+  servername: uk-room05.filesnap.tech
+  tls: false
+  type: vless
+  uuid: 857e5668-88b9-45cd-a600-79e55c04d8a8
+- name: 🇨🇦224603
+  network: tcp
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.147.89
+  skip-cert-verify: false
+  sni: www.connectingpeoplewithgreatjobs.com
+  type: trojan
+- name: '🇨🇦 #1'
+  network: ws
+  port: 443
+  server: www.speedtest.net
+  servername: wallweb5.pages.dev
+  tls: true
+  type: vless
+  uuid: 85550ebf-fd43-42dd-9801-bda528fea2fc
+  ws-opts:
+    headers:
+      Host: wallweb5.pages.dev
+    path: '%2F'
+- client-fingerprint: chrome
+  name: 07 🇨🇦 канада | mega vpn @vpnsm...
+  network: ws
+  port: 443
+  server: 173.245.58.75
+  servername: amoosamiii.net
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 4f013568-a58b-4b04-b5dd-4d52bf1c33a4
+  ws-opts:
+    headers:
+      Host: amoosamiii.net
+    path: '%2Fpoiuyws%40ThePackageCom'
+- name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #4'
+  network: ws
+  port: 443
+  server: nuclear.us.kg
+  tls: true
+  type: vless
+  uuid: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
+  ws-opts:
+    headers:
+      Host: nuclear.us.kg
+    path: '%2Ffree%2F103.101.153.32%3A443'
+- client-fingerprint: chrome
+  name: '🇨🇦 #2'
+  network: ws
+  port: 443
+  server: jdxl.cf.090227.xyz
+  servername: q7a223ydvpc5.hostc.app
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 11111111-2222-3333-4444-555555555555
+  ws-opts:
+    headers:
+      Host: q7a223ydvpc5.hostc.app
+    path: '%2Ftg-jiedianxielou'
+- client-fingerprint: chrome
+  name: 🌐 Anycast-IP | 🇨🇦 | [BL]
+  network: ws
+  port: 443
+  server: tn1r.eu.cc
+  servername: tn1r.eu.cc
+  tls: true
+  type: vless
+  uuid: 22424ee2-6fe3-42ca-9749-6d4c5a8acc82
+  ws-opts:
+    headers:
+      Host: tn1r.eu.cc
+    path: '%2Fid-pusat'
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇨🇦 加拿大 | vless | 10
+  network: tcp
+  port: 8080
+  reality-opts:
+    public-key: sQ_YHzotqhVJoUDAZl5kTzUqVN6ksh-MTikz_ixsZWc
+    short-id: '!!str 2b30'
+  server: 54.39.96.233
+  servername: icloud.com
+  tls: false
+  type: vless
+  uuid: 20b98028-53c9-4f76-9bc9-b6b16b8a9152
+- name: '🇨🇦 #3'
+  network: ws
+  port: 443
+  server: www.speedtest.net
+  servername: wallweb5.pages.dev
+  tls: true
+  type: vless
+  uuid: 85550ebf-fd43-42dd-9801-bda528fea2fc
+  ws-opts:
+    headers:
+      Host: wallweb5.pages.dev
+    path: /fp=chrome
+- name: '[OpenRay] 🌐XX-1448'
+  network: ws
+  port: 443
+  server: 104.19.33.25
   servername: jp3.yohototo.top
   tls: true
   type: vless
@@ -514,8 +692,193 @@ proxies:
     headers:
       Host: jp3.yohototo.top
     path: '%2Ftyxyws'
+- name: Server 8 Iran Special [CA]
+  network: ws
+  port: 443
+  server: 104.16.10.48
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
+- name: 'CA #1'
+  network: ws
+  port: 443
+  server: 172.64.155.33
+  servername: fs.qicai99.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  ws-opts:
+    headers:
+      Host: fs.qicai99.com
+    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
 - client-fingerprint: chrome
-  name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #1'
+  name: 🌐 Anycast-IP | 🇦🇷 🇨🇦 🇮🇪 🇵🇱 | [...
+  network: ws
+  port: 443
+  server: 43.174.193.1
+  servername: ccc.010304.xyz
+  tls: true
+  type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  ws-opts:
+    headers:
+      Host: ccc.010304.xyz
+    path: '%2F%3FTELEGRAM----ICV2RAY----%3Fed%3D2560fp%3Dchrome'
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: '[OpenRay] 🇨🇦CA-348'
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: FdZlh9FC4ay9OGnKG6K_iNqhz1I3tWDfNZhxrDYuQl8
+    short-id: '!!str 7da3ba09a037e956'
+  server: 212.69.135.27
+  servername: uk-room05.filesnap.tech
+  tls: false
+  type: vless
+  uuid: a941243b-4b25-465f-ba2c-1dc4e1d16217
+- client-fingerprint: chrome
+  name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #6'
+  network: ws
+  port: 2053
+  server: 104.18.28.234
+  servername: turbo-smart-628.pokfjfjfdjj.workers.dev
+  tls: true
+  type: vless
+  uuid: c7653db5-1fa9-9a64-331a-d80c00000050
+  ws-opts:
+    headers:
+      Host: turbo-smart-628.pokfjfjfdjj.workers.dev
+    path: '%2Fsync'
+- client-fingerprint: chrome
+  name: 🇨🇦 @MrMeshkyChannel 570398
+  network: ws
+  port: 443
+  server: 172.66.47.156
+  servername: wwW.oPEnsIGnAL.cOM.naynay09.Dynv6.nET
+  tls: true
+  type: vless
+  uuid: 89b3cbba-e6ac-485a-9481-976a0415eab9
+  ws-opts:
+    path: '%2F'
+- client-fingerprint: safari
+  name: '🇨🇦 #4'
+  network: ws
+  port: 443
+  server: 172.67.219.189
+  servername: cdn4.salamfox.ir
+  tls: true
+  type: vless
+  uuid: d027b485-4e11-4485-9d0f-2ef1f1129eff
+  ws-opts:
+    headers:
+      Host: cdn4.salamfox.ir
+    path: '%2Fd027b485-4e11-4485-9d0f-2ef1f1129eff'
+- client-fingerprint: chrome
+  name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #7'
+  network: ws
+  port: 443
+  server: yx.l110.us.ci
+  servername: fs.qicai99.com
+  tls: true
+  type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  ws-opts:
+    headers:
+      Host: fs.qicai99.com
+    path: '%2F'
+- name: Server 6 Iran Special [CA]
+  network: ws
+  port: 443
+  server: 104.16.10.22
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
+- client-fingerprint: firefox
+  name: '🇨🇦 #5'
+  network: ws
+  port: 443
+  server: 151.101.1.242
+  servername: fearfully-tilt.cdn-content.com
+  tls: true
+  type: vless
+  uuid: 3336bc2a-7979-4491-83c0-9475da868cd1
+  ws-opts:
+    headers:
+      Host: fearfully-tilt.cdn-content.com
+    path: '%2Fws'
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: 🔑 019 🇨🇦 Bounty VPN | @vless_b...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: zN5buqMK95hn0mv3vKlfoOAi99ehuvP73cUuyNbZNWc
+    short-id: '!!str dbd6b473c7038dd5'
+  server: ca1.japancase.site
+  servername: ca1.japancase.site
+  tls: false
+  type: vless
+  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
+- name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #8'
+  network: ws
+  port: 443
+  server: 104.18.0.1
+  servername: all.speedtest03.ccwu.cc
+  tls: true
+  type: vless
+  uuid: 3ccba794-1c6d-48a8-acf2-f5caf0e69d86
+  ws-opts:
+    headers:
+      Host: all.speedtest03.ccwu.cc
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #9'
+  network: ws
+  port: 443
+  server: 104.21.13.229
+  servername: 789156.xyz
+  tls: true
+  type: vless
+  uuid: 5f11c240-89df-494c-9c81-8b619023bb58
+  ws-opts:
+    headers:
+      Host: 789156.xyz
+- client-fingerprint: chrome
+  name: '🇨🇦 #6'
+  network: ws
+  port: 2096
+  server: 104.18.45.236
+  servername: mohammadhoseini4532.pages.dev
+  tls: true
+  type: vless
+  uuid: 51a0af77-a60c-4d9b-81a4-f50e1b38d90b
+  ws-opts:
+    headers:
+      Host: mohammadhoseini4532.pages.dev
+    path: '%2F'
+- name: Server 2 [CA]
+  network: ws
+  port: 8443
+  server: ov-canada1.09vpn.com
+  tls: true
+  type: vless
+  uuid: 08f96221-9b7b-4e6f-8ffe-aee8b9c9b504
+  ws-opts:
+    path: '%2Fvless%2F'
+- client-fingerprint: chrome
+  name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #10'
   network: ws
   port: 443
   server: 188.114.97.3
@@ -527,403 +890,52 @@ proxies:
     headers:
       Host: 63yw55ibrgt8rswbfnmhapuzux4p29favnxxslbjbnmqjzz7efh95h3nfdsfdsf.d2ha6.workers.Dev
     path: '%2FTelegram%2Bchannel%2B%3A%2B%40pandavpntc'
-- name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #2'
-  network: ws
-  port: 2087
-  server: 172.67.79.160
-  servername: cvhpyn.pages.dev
-  tls: true
-  type: vless
-  uuid: a4a951b9-901d-4db8-8a7d-6df82c4b5c23
-  ws-opts:
-    headers:
-      Host: cvhpyn.pages.dev
-    path: '%2Ffp%3Dchrome'
-- client-fingerprint: chrome
-  name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #3'
-  network: ws
-  port: 443
-  server: cfnode-11ivy8.pages.dev
-  servername: cfnode-11ivy8.pages.dev
-  tls: true
-  type: vless
-  uuid: 2ea2719c-23e1-4cde-b192-c8652d55d9e5
-  ws-opts:
-    headers:
-      Host: cfnode-11ivy8.pages.dev
-    path: '%2Fws'
-- alpn:
-  - http/1.1
-  client-fingerprint: unsafe
-  name: '[OpenRay] 🇨🇦CA-272 #1'
-  network: ws
-  port: 443
-  server: 188.114.97.6
-  servername: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
-  tls: true
-  type: vless
-  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
-  ws-opts:
-    headers:
-      Host: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
-    path: '%2F9BozNyvQ8VdRvsYX%3Fed%3D2560'
-- name: CA
-  network: ws
-  port: 443
-  server: 104.18.21.69
-  servername: fs.qicai99.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  ws-opts:
-    headers:
-      Host: fs.qicai99.com
-    path: '%2Ffp%3Dchrome'
-- client-fingerprint: chrome
-  name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #4'
-  network: ws
-  port: 443
-  server: epam.com
-  servername: wallweb-4r0.pages.dev
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: e53eacb6-cd30-4964-a57c-febcb5151b98
-  ws-opts:
-    headers:
-      Host: wallweb-4r0.pages.dev
-    path: '%2F'
-- client-fingerprint: chrome
-  name: Server 16 [CA]
-  network: ws
-  port: 8443
-  server: 148.113.196.75
-  servername: ov-canada1.09vpn.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 08f96221-9b7b-4e6f-8ffe-aee8b9c9b504
-  ws-opts:
-    path: '%2Fvless%2F'
-- name: '[OpenRay] 🇨🇦 CA-27979'
-  network: ws
-  port: 443
-  server: 104.16.118.43
-  servername: de-new.ariyuz.org
-  tls: true
-  type: vless
-  uuid: 03707fb7-0990-440f-88f6-b0e0f7242a38
-  ws-opts:
-    path: /
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: '[OpenRay] 🇨🇦 CA-24879'
-  network: ws
-  port: 443
-  server: 188.114.96.0
-  servername: plaiN-shadow-821f.pFEGeHeJRrjrjjrJ.wOrKeRs.DeV
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: fbca467d-cb8a-4dac-b513-efe5fdd5c591
-  ws-opts:
-    path: /eyJqdW5rIjoiNFJaNVlsWmZ6TFVZaEdmUyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
-- name: Шкатулка
-  network: ws
-  port: 443
-  server: nuclear.us.kg
-  servername: nuclear.us.kg
-  tls: true
-  type: vless
-  uuid: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
-  ws-opts:
-    headers:
-      Host: nuclear.us.kg
-    path: '%2Ffree%2F1.226.227.169%3A50001'
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: 06 🇨🇦 канада | mega vpn @vpnsm...
-  network: ws
-  port: 2083
-  server: www.speedtest.net
-  servername: www.dideman.com
-  tls: true
-  type: vless
-  uuid: 3475f5f7-9f35-4e8f-802b-df55a980b974
-  ws-opts:
-    headers:
-      Host: www.dideman.com
-    path: '%2F6nm73s0eyp%3Fed%3D2048'
-- client-fingerprint: chrome
-  name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #6'
-  network: ws
-  port: 443
-  server: edge-relay-c9db.edge-edge-relay-be8e.workers.dev
-  servername: edge-relay-c9db.edge-edge-relay-be8e.workers.dev
-  tls: true
-  type: vless
-  uuid: 8a540f3b-04c7-4e22-924a-51a0b6fad164
-  ws-opts:
-    headers:
-      Host: edge-relay-c9db.edge-edge-relay-be8e.workers.dev
-    path: '%2Fadmin%2Fproxyip%3Dundefined'
-- client-fingerprint: unsafe
-  name: Server 19 Iran Special [CA]
-  network: ws
-  port: 443
-  server: 104.21.219.160
-  servername: jp3.yohototo.top
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    headers:
-      Host: jp3.yohototo.top
-    path: '%2Ftyxyws'
-- client-fingerprint: chrome
-  name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #7'
-  network: ws
-  port: 443
-  server: edge-relay-c9db.edge-edge-relay-be8e.workers.dev
-  servername: edge-relay-c9db.edge-edge-relay-be8e.workers.dev
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 8a540f3b-04c7-4e22-924a-51a0b6fad164
-  ws-opts:
-    headers:
-      Host: edge-relay-c9db.edge-edge-relay-be8e.workers.dev
-    path: /admin/proxyip=undefined
-- client-fingerprint: chrome
-  name: 🌐 Anycast-IP | 🇨🇦 🇫🇮 🇳🇱 | [BL]
-  network: ws
-  port: 443
-  server: 172.67.184.45
-  servername: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
-  tls: true
-  type: vless
-  uuid: 82b279c6-5cba-3a96-f8bd-780a00000045
-  ws-opts:
-    headers:
-      Host: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
-    path: '%2F'
-- client-fingerprint: chrome
-  name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #8'
-  network: ws
-  port: 443
-  server: 172.67.74.177
-  servername: wallweb-4r0.pages.dev
-  tls: true
-  type: vless
-  uuid: e53eacb6-cd30-4964-a57c-febcb5151b98
-  ws-opts:
-    headers:
-      Host: wallweb-4r0.pages.dev
-    path: '%2F'
-- client-fingerprint: chrome
-  name: 🌐 Anycast-IP | 🇳🇱 🇸🇪 🇺🇸 | [BL]
-  network: ws
-  port: 443
-  server: 104.18.40.171
-  tls: true
-  type: vless
-  uuid: 8895be79-9817-4011-b81a-14a35a3d328e
-  ws-opts:
-    headers:
-      Host: wallweb-boi.pages.dev
-- client-fingerprint: chrome
-  name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #10'
-  network: ws
-  port: 2096
-  server: 104.18.40.127
-  tls: true
-  type: vless
-  uuid: 51a0af77-a60c-4d9b-81a4-f50e1b38d90b
-  ws-opts:
-    headers:
-      Host: hdradfjhtgfdjsrt.pages.dev
-- name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #11'
-  network: ws
-  port: 443
-  server: 104.27.56.173
-  servername: kwzu1yelu3ms.ouzrzee5u7rs.workers.dev
-  tls: true
-  type: vless
-  uuid: 50414e45-4c5f-5a45-5553-c67e6a7b76e9
-  ws-opts:
-    headers:
-      Host: kwzu1yelu3ms.ouzrzee5u7rs.workers.dev
-    path: '%2Fstream%2FPANEL_ZEUS%2Fc67e6a7b76e9'
-- client-fingerprint: chrome
-  name: 'CA #1'
-  network: ws
-  port: 443
-  server: 172.67.211.250
-  servername: liang92.dpdns.org
-  tls: true
-  type: vless
-  uuid: 0aab6adc-104c-4339-8d25-09755ffe2cbd
-  ws-opts:
-    path: '%2F'
-- client-fingerprint: chrome
-  name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #12'
-  network: ws
-  port: 443
-  server: 172.67.174.10
-  servername: blackshadow.dpdns.org
-  tls: true
-  type: vless
-  uuid: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
-  ws-opts:
-    headers:
-      Host: blackshadow.dpdns.org
-    path: '%2F44.209.52.7-443'
-- alpn:
-  - h3
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: 'By #391'
-  network: ws
-  port: 443
-  server: 104.21.60.73
-  servername: fs.qicai99.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  ws-opts:
-    headers:
-      Host: fs.qicai99.com
-    path: '%2F%3FTelegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET'
-- name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #13'
-  network: ws
-  port: 443
-  server: 162.159.198.1
-  servername: fs.qicai99.com
-  tls: true
-  type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  ws-opts:
-    headers:
-      Host: fs.qicai99.com
-    path: /fp=chrome
-- client-fingerprint: android
-  name: '🇨🇦 #1'
-  network: ws
-  port: 443
-  server: mao.kipfelmao.de5.net
-  servername: mao.kipfelmao.de5.net
-  tls: true
-  type: vless
-  uuid: 30610baf-4645-4c7b-9a22-0d0a0a79eab5
-  ws-opts:
-    headers:
-      Host: mao.kipfelmao.de5.net
-    path: '%2Fapi%2Fv1%2Fguests%2Fprofiles%2F5de14443985f%2F'
-- client-fingerprint: chrome
-  name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #14'
-  network: ws
-  port: 443
-  server: 188.114.96.3
-  servername: snc9ne2f7zclhn5uzth7hcfgsrnympmmrnej7w2uzdjtsyt2fssssssssssssss.n0xp4ed8mc.workers.Dev
-  tls: true
-  type: vless
-  uuid: 5b716e51-489e-4e97-b5c8-dd10803eff93
-  ws-opts:
-    headers:
-      Host: snc9ne2f7zclhn5uzth7hcfgsrnympmmrnej7w2uzdjtsyt2fssssssssssssss.n0xp4ed8mc.workers.Dev
-    path: Telegram+channel+%3A+%40pandavpntc
-- client-fingerprint: chrome
-  name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #15'
-  network: ws
-  port: 443
-  server: 172.67.141.182
-  servername: 6qwoom7kdrcoan3ui4ra5dy.pages.dev
-  tls: true
-  type: vless
-  uuid: ce440dcf-e570-4a50-af37-bf588ee8a988
-  ws-opts:
-    headers:
-      Host: 6qwoom7kdrcoan3ui4ra5dy.pages.dev
-    path: '%2Fvl%2FKSPdmco70dfoXFS292o2Nv6yPt%3Fed%3D2560%23Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET'
-- name: Server 7 Iran Special [CA]
-  network: ws
-  port: 443
-  server: 104.17.50.53
-  servername: jp3.yohototo.top
-  tls: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    headers:
-      Host: jp3.yohototo.top
-    path: '%2Ftyxyws'
-- client-fingerprint: chrome
-  name: '🇨🇦 #2'
-  network: ws
-  port: 443
-  server: ws137.mydosss.ccwu.cc
-  servername: ws137.mydosss.ccwu.cc
-  tls: true
-  type: vless
-  uuid: 44be961e-c60d-463c-86d6-50ce6d8866c5
-  ws-opts:
-    headers:
-      Host: ws137.mydosss.ccwu.cc
-    path: '%2F3b575ddc8596'
-- client-fingerprint: chrome
-  name: 🇷🇺 俄罗斯 | vless | 29
-  network: xhttp
-  port: 8008
-  server: 5.53.124.191
-  servername: 5.53.124.191
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 | vmess | 01
+  network: tcp
+  port: '22324'
+  server: 158.51.123.42
+  servername: ''
   tls: false
-  type: vless
-  uuid: b48e1596-e835-4547-bdae-31daadf9ea17
-- client-fingerprint: chrome
-  name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #16'
-  network: ws
-  port: 443
-  server: 188.114.97.9
-  servername: 63yw55ibrgt8rswbfnmhapuzux4p29favnxxslbjbnmqjzz7efh95h3nfdsfdsf.d2ha6.workers.Dev
-  tls: true
-  type: vless
-  uuid: 27135ee3-0829-4dbc-ae3e-b70e86e5d510
-  ws-opts:
-    headers:
-      Host: 63yw55ibrgt8rswbfnmhapuzux4p29favnxxslbjbnmqjzz7efh95h3nfdsfdsf.d2ha6.workers.Dev
-    path: Telegram+channel+%3A+%40pandavpntc
-- client-fingerprint: chrome
-  name: '🌐 Anycast-IP | 🇨🇦 🇫🇮 | [BL] #17'
-  network: ws
-  port: 443
-  server: 162.159.228.255
-  servername: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
-  tls: true
-  type: vless
-  uuid: b135a1e0-ebdb-4d46-b3fa-bd1e78580244
-  ws-opts:
-    headers:
-      Host: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
-    path: '%2F%40Marisa_kristi'
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
 - alterId: 0
   cipher: auto
   name: 🇨🇦 加拿大 | vmess | 04
   network: tcp
-  port: 1270
+  port: '1270'
   server: 134.195.196.154
-  servername: ''
+  servername: xmfhlpy.com
   tls: true
   type: vmess
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 06
+  name: 🇨🇦 加拿大 | vmess | 07
+  network: tcp
+  port: '1270'
+  server: 158.51.121.246
+  servername: xmfhlpy.com
+  tls: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇨🇦 加拿大 | vless | 14
+  network: tcp
+  port: 8080
+  reality-opts:
+    public-key: 2PYoIhSKvVE-DgFzPYGo4cD2b7_8Ul2Vm8QKGWH1sAo
+    short-id: '!!str 4b'
+  server: 198.100.154.175
+  servername: icloud.com
+  tls: false
+  type: vless
+  uuid: e17150a9-f949-467b-94ea-4d50e4c84186
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 | vmess | 19
   network: ws
   port: 80
   server: 137.184.164.233
@@ -935,55 +947,9 @@ proxies:
     headers:
       Host: ''
     path: /vmess
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 13
-  network: tcp
-  port: '1270'
-  server: 158.51.121.246
-  servername: xmfhlpy.com
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 17
-  network: ws
-  port: 80
-  server: 51.79.102.253
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
-  ws-opts:
-    headers:
-      Host: ''
-    path: /IOebhLMhl1CTbFHbL95myfRX2
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 21
-  network: tcp
-  port: '22324'
-  server: 158.51.123.42
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇦 加拿大 | vless | 22
-  port: 443
-  reality-opts:
-    public-key: oTsYnjjxzyoBI2rJn0TjihgaOcNMPa9bNwHhp4RdDkg
-    short-id: '!!str be7d0c9dda4dd4e6'
-  server: 185.218.17.172
-  servername: canwec.kramiliantha.sbs
-  tls: false
-  type: vless
-  uuid: ed1d539a-8507-45de-8253-cbc272161473
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇨🇦 加拿大 | vless | 23
+  name: 🇨🇦 加拿大 | vless | 24
   network: tcp
   port: 8443
   reality-opts:
@@ -997,26 +963,14 @@ proxies:
   uuid: e45b8261-88c9-4181-aab4-72093dfae6b9
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇨🇦 加拿大 | vless | 24
+  name: 🇨🇦 加拿大 | vless | 25
   port: 443
   server: 48.102.241.194
   servername: 48.102.241.194
   tls: true
   type: vless
   uuid: 2bba3b63-eb4c-470b-aa58-ae9d4a1430c8
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇨🇦 加拿大 | vless | 25
-  port: 443
-  reality-opts:
-    public-key: ohlUVAqq5MT6I7ozknXy0Mi5zW_uH94DV-lC7Ip2Ygk
-    short-id: '!!str 37f069d7ad'
-  server: 104.152.211.47
-  servername: ca1.gofizz.in
-  tls: false
-  type: vless
-  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
-- name: 🇨🇦 加拿大 | vless | 27
+- name: 🇨🇦 加拿大 | vless | 26
   network: ws
   port: 8443
   server: 148.113.196.75
@@ -1027,9 +981,21 @@ proxies:
   uuid: 08f96221-9b7b-4e6f-8ffe-aee8b9c9b504
   ws-opts:
     path: '%2Fvless%2Ffp=chrome'
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇨🇦 加拿大 | vless | 30
+  port: 443
+  reality-opts:
+    public-key: ohlUVAqq5MT6I7ozknXy0Mi5zW_uH94DV-lC7Ip2Ygk
+    short-id: '!!str 37f069d7ad'
+  server: 104.152.211.47
+  servername: ca1.gofizz.in
+  tls: false
+  type: vless
+  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
 - client-fingerprint: ''
   flow: xtls-rprx-vision
-  name: 🇨🇦 加拿大 | vless | 32
+  name: 🇨🇦 加拿大 | vless | 35
   port: 443
   reality-opts:
     public-key: rV2Qmjr31w2nxtnMcbwHJNY2wxJynjmxwbKPlfSgET4
@@ -1039,63 +1005,18 @@ proxies:
   tls: false
   type: vless
   uuid: 39826f32-f5ca-42a5-ab33-188f7d199478
-- flow: xtls-rprx-vision
-  name: 🇨🇦 加拿大 | vless | 33
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇨🇦 加拿大 | vless | 37
   network: tcp
   port: 443
   reality-opts:
-    public-key: HE1CGzI0QBqhMRUsHqq_9v4Mj3M5dkluFmfyMBH_7kM
-    short-id: '!!str 70f75668dc5914b3'
-  server: 23.155.44.105
-  servername: app.flyprotect.ca
+    public-key: DsGYbhtdeWbxzUKsy_Zx0uWSFK2wj7J0I_D64UISYkw
+  server: 51.222.15.234
+  servername: yahoo.com
   tls: false
   type: vless
-  uuid: 128ce9ab-63bc-48dc-92ca-1b5426a9eb46
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 54
-  network: ws
-  port: '443'
-  server: aidrivercat.org
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: aidrivercat.org
-    path: /linkvws
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 66
-  network: tcp
-  port: '1051'
-  server: free.ca.familysharing.ir
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 04cacf0a-46d5-81b3-874d-460d7a36c036
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 68
-  network: ws
-  port: '443'
-  server: khasav.org
-  servername: khasav.org
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    path: /linkvws
-- name: 🇨🇦 加拿大 | vless | 69
-  network: ws
-  port: 8443
-  server: ov-canada1.09vpn.com
-  tls: false
-  type: vless
-  uuid: 08f96221-9b7b-4e6f-8ffe-aee8b9c9b504
-  ws-opts:
-    path: '%2Fvless%2Fsecurity=tls'
+  uuid: 152b7531-5181-4277-9eda-c504b32e9a3e
 - alterId: 0
   cipher: auto
   name: 未知55
@@ -1109,21 +1030,28 @@ proxies:
   uuid: 3aea687d-c6c0-4609-8719-ed8a5614fc47
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 加拿大 | vmess | 71
-  network: ws
-  port: 443
-  server: kentspark.org
-  servername: kentspark.org
+  grpc-opts:
+    grpc-service-name: api
+  name: 🇨🇦 加拿大 | vmess | 54
+  network: grpc
+  port: '2096'
+  server: ca.connfull.org
+  servername: ''
   tls: true
   type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  uuid: f2d7f0d2-9520-4d5c-9714-58cc138513a8
+- name: 🇨🇦 加拿大 | vless | 66
+  network: ws
+  port: 8443
+  server: ov-canada1.09vpn.com
+  tls: false
+  type: vless
+  uuid: 08f96221-9b7b-4e6f-8ffe-aee8b9c9b504
   ws-opts:
-    headers:
-      Host: kentspark.org
-    path: /linkvws
+    path: '%2Fvless%2Fsecurity=tls'
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇦 加拿大 | vless | 73
+  name: 🇨🇦 加拿大 | vless | 68
   port: 443
   reality-opts:
     public-key: ce4LuJ4af5mZzrprtd7qh2fCXuzurE6KjQtG-DnVQyE
@@ -1133,14 +1061,38 @@ proxies:
   tls: false
   type: vless
   uuid: 31e407b3-6e1e-425f-98ea-fcf8f494c6a0
-- name: 🇨🇦 加拿大 | trojan | 75
+- name: 🇨🇦 加拿大 | trojan | 69
   network: tcp
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
-  server: 216.152.147.89
+  server: 216.152.147.201
   skip-cert-verify: false
-  sni: www.connectingpeoplewithgreatjobs.com
+  sni: resources.connectingpeoplewithgreatjobs.com
   type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 | vmess | 70
+  network: tcp
+  port: '1051'
+  server: free.ca.familysharing.ir
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 04cacf0a-46d5-81b3-874d-460d7a36c036
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: grpc
+  name: 🇨🇦 加拿大 | vless | 71
+  network: grpc
+  port: 8443
+  reality-opts:
+    public-key: NHhxrPoUGT0Wijle1ODvqOqGLMfetU7Px4K1S9FL-hE
+    short-id: '!!str 5b2e7a14c0d9f832'
+  server: ca.api.bzzzq.fun
+  servername: ca.api.bzzzq.fun
+  tls: false
+  type: vless
+  uuid: 7051be15-386d-4bb2-a35a-fd6085befc43
 - alterId: 0
   cipher: auto
   name: 🇨🇦 _CA_加拿大
@@ -1156,7 +1108,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: CA【高速节点：https://vip.a3f.xyz】37
+  name: CA【高速节点：https://vip.a3f.xyz】41
   network: ws
   port: '443'
   server: 172.64.145.93
